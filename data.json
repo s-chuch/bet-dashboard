@@ -72,12 +72,18 @@
         {
          "name": "Brazil",
          "abbr": "BRA",
+         "short": "Brazil",
+         "nick": "Brazil",
+         "location": "Brazil",
          "home": true,
          "score": "2"
         },
         {
          "name": "Argentina",
          "abbr": "ARG",
+         "short": "Argentina",
+         "nick": "Argentina",
+         "location": "Argentina",
          "home": false,
          "score": "2"
         }
@@ -104,12 +110,18 @@
         {
          "name": "Mexico",
          "abbr": "MEX",
+         "short": "Mexico",
+         "nick": "Mexico",
+         "location": "Mexico",
          "home": true,
          "score": "3"
         },
         {
          "name": "Jamaica",
          "abbr": "JAM",
+         "short": "Jamaica",
+         "nick": "Jamaica",
+         "location": "Jamaica",
          "home": false,
          "score": "1"
         }
@@ -165,12 +177,18 @@
       {
        "name": "Indiana Hoosiers",
        "abbr": "IU",
+       "short": "Indiana",
+       "nick": "Hoosiers",
+       "location": "Indiana",
        "home": true,
        "score": "0"
       },
       {
        "name": "Ohio State Buckeyes",
        "abbr": "OSU",
+       "short": "Ohio State",
+       "nick": "Buckeyes",
+       "location": "Ohio State",
        "home": false,
        "score": "0"
       }
@@ -220,12 +238,18 @@
       {
        "name": "BYU Cougars",
        "abbr": "BYU",
+       "short": "BYU",
+       "nick": "Cougars",
+       "location": "BYU",
        "home": true,
        "score": "0"
       },
       {
        "name": "Notre Dame Fighting Irish",
        "abbr": "ND",
+       "short": "Notre Dame",
+       "nick": "Fighting Irish",
+       "location": "Notre Dame",
        "home": false,
        "score": "0"
       }
@@ -271,17 +295,23 @@
      "date": "2026-10-15T23:30Z",
      "state": "in",
      "completed": false,
-     "detail": "13:04 - 1st",
+     "detail": "12:04 - 1st",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
        "abbr": "ODU",
+       "short": "Old Dominion",
+       "nick": "Monarchs",
+       "location": "Old Dominion",
        "home": true,
        "score": "0"
       },
       {
        "name": "Georgia Southern Eagles",
        "abbr": "GASO",
+       "short": "GA Southern",
+       "nick": "Eagles",
+       "location": "Georgia Southern",
        "home": false,
        "score": "0"
       }
@@ -325,19 +355,25 @@
      "date": "2026-10-15T23:30Z",
      "state": "in",
      "completed": false,
-     "detail": "12:37 - 1st",
+     "detail": "10:07 - 1st",
      "teams": [
       {
        "name": "UAB Blazers",
        "abbr": "UAB",
+       "short": "UAB",
+       "nick": "Blazers",
+       "location": "UAB",
        "home": true,
        "score": "0"
       },
       {
        "name": "East Carolina Pirates",
        "abbr": "ECU",
+       "short": "East Carolina",
+       "nick": "Pirates",
+       "location": "East Carolina",
        "home": false,
-       "score": "0"
+       "score": "6"
       }
      ]
     },
@@ -384,12 +420,18 @@
       {
        "name": "Texas State Bobcats",
        "abbr": "TXST",
+       "short": "Texas St",
+       "nick": "Bobcats",
+       "location": "Texas State",
        "home": true,
        "score": "0"
       },
       {
        "name": "Colorado State Rams",
        "abbr": "CSU",
+       "short": "Colorado St",
+       "nick": "Rams",
+       "location": "Colorado State",
        "home": false,
        "score": "0"
       }
@@ -434,17 +476,23 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "5:56 - 1st",
+     "detail": "2:41 - 1st",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
        "abbr": "TOR",
+       "short": "Maple Leafs",
+       "nick": "Maple Leafs",
+       "location": "Toronto",
        "home": true,
        "score": "2"
       },
       {
        "name": "Buffalo Sabres",
        "abbr": "BUF",
+       "short": "Sabres",
+       "nick": "Sabres",
+       "location": "Buffalo",
        "home": false,
        "score": "1"
       }
@@ -484,17 +532,23 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "4:07 - 1st",
+     "detail": "0:51 - 1st",
      "teams": [
       {
        "name": "Ottawa Senators",
        "abbr": "OTT",
+       "short": "Senators",
+       "nick": "Senators",
+       "location": "Ottawa",
        "home": true,
        "score": "0"
       },
       {
        "name": "New York Islanders",
        "abbr": "NYI",
+       "short": "Islanders",
+       "nick": "Islanders",
+       "location": "New York",
        "home": false,
        "score": "0"
       }
@@ -554,12 +608,18 @@
       {
        "name": "Denver Broncos",
        "abbr": "DEN",
+       "short": "Broncos",
+       "nick": "Broncos",
+       "location": "Denver",
        "home": true,
        "score": "0"
       },
       {
        "name": "Seattle Seahawks",
        "abbr": "SEA",
+       "short": "Seahawks",
+       "nick": "Seahawks",
+       "location": "Seattle",
        "home": false,
        "score": "0"
       }
@@ -609,12 +669,18 @@
       {
        "name": "Los Angeles Dodgers",
        "abbr": "LAD",
+       "short": "Dodgers",
+       "nick": "Dodgers",
+       "location": "Los Angeles",
        "home": true,
        "score": "0"
       },
       {
        "name": "Milwaukee Brewers",
        "abbr": "MIL",
+       "short": "Brewers",
+       "nick": "Brewers",
+       "location": "Milwaukee",
        "home": false,
        "score": "0"
       }
@@ -659,17 +725,23 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "3:52 - 1st",
+     "detail": "0:04 - 1st",
      "teams": [
       {
        "name": "New Jersey Devils",
        "abbr": "NJ",
+       "short": "Devils",
+       "nick": "Devils",
+       "location": "New Jersey",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "name": "New York Rangers",
        "abbr": "NYR",
+       "short": "Rangers",
+       "nick": "Rangers",
+       "location": "New York",
        "home": false,
        "score": "0"
       }
@@ -715,12 +787,18 @@
       {
        "name": "Texas State Bobcats",
        "abbr": "TXST",
+       "short": "Texas St",
+       "nick": "Bobcats",
+       "location": "Texas State",
        "home": true,
        "score": "0"
       },
       {
        "name": "Colorado State Rams",
        "abbr": "CSU",
+       "short": "Colorado St",
+       "nick": "Rams",
+       "location": "Colorado State",
        "home": false,
        "score": "0"
       }
@@ -882,6 +960,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "04a7fe0b50c2bfcad449061889fd4d92cf7a9ebb",
- "generated_at": "2026-10-15T19:40:37-04:00"
+ "hash": "be572c13cf5150b4259b0ed248e933559cfcd2ab",
+ "generated_at": "2026-10-15T19:45:18-04:00"
 }
