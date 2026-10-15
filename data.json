@@ -175,6 +175,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 48.5,
+     "away": 51.5
     }
    },
    "sport": "NCAAF"
@@ -226,6 +230,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 21.8,
+     "away": 78.2
     }
    },
    "sport": "NCAAF"
@@ -278,6 +286,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 32.7,
+     "away": 67.3
     }
    },
    "sport": "NCAAF"
@@ -328,6 +340,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 26.2,
+     "away": 73.9
     }
    },
    "sport": "NCAAF"
@@ -378,6 +394,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 75.4,
+     "away": 24.6
     }
    },
    "sport": "NCAAF"
@@ -414,7 +434,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "13:57 - 1st",
+     "detail": "7:34 - 1st",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
@@ -464,7 +484,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "12:06 - 1st",
+     "detail": "6:07 - 1st",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -544,6 +564,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 46.8,
+     "away": 52.9
     }
    },
    "sport": "NFL"
@@ -595,6 +619,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 53.2,
+     "away": 46.8
     }
    },
    "sport": "MLB"
@@ -631,7 +659,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "12:35 - 1st",
+     "detail": "5:50 - 1st",
      "teams": [
       {
        "name": "New Jersey Devils",
@@ -697,6 +725,10 @@
        "score": "0"
       }
      ]
+    },
+    "pregame": {
+     "home": 75.4,
+     "away": 24.6
     }
    },
    "sport": "NCAAF"
@@ -850,6 +882,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "240acc86d6d7f57d41ca1d8d65e4f38737e7f48b",
- "generated_at": "2026-10-15T19:21:38-04:00"
+ "hash": "3dbd3292a74417759662cfb405022d27c09cf97a",
+ "generated_at": "2026-10-15T19:35:39-04:00"
 }

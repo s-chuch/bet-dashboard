@@ -26,8 +26,11 @@ h1{font-size:18px;margin:4px 0 2px}h2{font-size:14px;color:var(--mut);text-trans
 .score .row{display:flex;justify-content:space-between}.score .det{color:var(--mut);font-size:12px;margin-top:2px}
 .score .live{color:var(--win);font-weight:700}
 .leg{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:5px 0;border-top:1px solid var(--line)}.leg:first-child{border-top:0}
-.leg .pill{font-size:10px;padding:2px 6px}
+.leg .pill{font-size:10px;padding:2px 6px;flex-shrink:0;align-self:flex-start}
 .set{font-size:13px;display:flex;justify-content:space-between;padding:6px 2px;border-bottom:1px solid var(--line)}
+.wp{margin-top:8px}.wp .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:3px}.wp .lbl b{color:var(--txt);font-size:13px}
+.wp .track{height:8px;background:#2a2f39;border-radius:99px;overflow:hidden}.wp .fill{height:100%;border-radius:99px;transition:width .8s ease,background .3s}
+.wp .note{font-size:11px;color:var(--mut);margin-top:2px}
 .pos{color:var(--win)}.neg{color:var(--lose)}
 </style></head><body>
 <h1>Live Bets</h1>
@@ -53,17 +56,66 @@ function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.comp
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
 function gameFor(m){if(!m)return null;return games[m.id]||m.snapshot}
 async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
-async function refreshScores(){
-  const ms=[];for(const b of DATA.open){if(b.match)ms.push(b.match);for(const L of b.legs)if(L.match)ms.push(L.match)}
-  const need={};for(const m of ms){const g=gameFor(m);if(g&&g.completed)continue;need[key(m)]=m}
+const PROB_PATHS=new Set(["football/nfl","football/college-football","baseball/mlb","basketball/nba","basketball/wnba","basketball/mens-college-basketball"]);
+const probs={}, probCount={}, pregameLive={};
+let espnErr=false;
+function allMatches(){const ms=[];for(const b of DATA.open){if(b.match)ms.push(b.match);for(const L of b.legs)if(L.match)ms.push(L.match)}return ms}
+const etDay=d=>new Date(d).toLocaleDateString("en-CA",{timeZone:TZ});
+function isActive(m){const g=gameFor(m);if(!g||g.completed)return false;if(g.state==="in")return true;
+  return g.date&&new Date(g.date).getTime()-Date.now()<20*60000}  // live, or starting within 20 min
+async function espn(u){try{const r=await fetch(u,{cache:"no-store"});if(r.status===429||r.status>=500){espnErr=true;return null}
+  if(!r.ok)return null;return await r.json()}catch(e){espnErr=true;return null}}
+const corePath=m=>{const[sp,lg]=m.path.split("/");return`https://sports.core.api.espn.com/v2/sports/${sp}/leagues/${lg}/events/${m.id}/competitions/${m.id}`};
+// full=true: every unfinished game (60s cycle); full=false: only live / about-to-start games (10s cycle)
+async function refreshScores(full){
+  const need={};for(const m of allMatches()){const g=gameFor(m);if(g&&g.completed)continue;if(!full&&!isActive(m))continue;need[key(m)]=m}
   await Promise.all(Object.values(need).map(async m=>{
-    try{let u=`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:"");
-      const d=await getJSON(u);for(const ev of d.events||[])games[ev.id]=fromEvent(ev)}catch(e){console.warn(e)}}));
-  // player props need the box score
+    const d=await espn(`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:""));
+    for(const ev of (d&&d.events)||[]){games[ev.id]=fromEvent(ev);
+      const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
+      if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
+  // player props need the box score (only in-progress SGPs with a prop leg)
   await Promise.all(DATA.open.filter(b=>b.match&&b.legs.some(L=>L.type==="prop")).map(async b=>{
     const g=gameFor(b.match);if(!g||g.state==="pre")return;if(summaries[b.match.id]&&summaries[b.match.id].done)return;
-    try{const d=await getJSON(`${ESPN}${b.match.path}/summary?event=${b.match.id}`);summaries[b.match.id]={d,done:g.completed}}catch(e){}}));
+    const d=await espn(`${ESPN}${b.match.path}/summary?event=${b.match.id}`);if(d)summaries[b.match.id]={d,done:g.completed}}));
 }
+// live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
+async function refreshProbs(){
+  const ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
+  await Promise.all(Object.values(ids).map(async m=>{const g=gameFor(m);
+    if(!g||g.state!=="in"||!PROB_PATHS.has(m.path))return;
+    if(probs[m.id]&&probs[m.id].src==="sb"&&Date.now()-probs[m.id].t<15000)return; // scoreboard already gave a fresh one
+    let page=probCount[m.id]||1;
+    let d=await espn(`${corePath(m)}/probabilities?limit=1&page=${page}`);if(!d||d.error)return;
+    if(d.count&&d.count!==page){probCount[m.id]=d.count;d=await espn(`${corePath(m)}/probabilities?limit=1&page=${d.count}`);if(!d||d.error)return}
+    const it=d.items&&d.items[0];if(it&&it.homeWinPercentage!=null)probs[m.id]={home:it.homeWinPercentage,away:it.awayWinPercentage,t:Date.now(),src:"core"}}));
+}
+// pregame predictor: refetch only for games starting later today (data.json carries a snapshot for the rest)
+async function refreshPregame(){
+  const today=etDay(Date.now()),ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
+  await Promise.all(Object.values(ids).map(async m=>{const g=gameFor(m);
+    if(!g||g.state!=="pre"||!PROB_PATHS.has(m.path)||etDay(g.date)!==today)return;
+    const d=await espn(`${corePath(m)}/predictor`);if(!d||d.error)return;
+    const gp=s=>((d[s]||{}).statistics||[]).find(x=>x.name==="gameProjection");const h=gp("homeTeam"),a=gp("awayTeam");
+    if(h&&a)pregameLive[m.id]={home:h.value,away:a.value}}));
+}
+// which game + team a bar can honestly describe
+function probTarget(b){
+  if(b.multi){if(!b.match)return null;const t=b.legs.filter(L=>L.team);return t.length===1?{m:b.match,leg:t[0]}:null}
+  const L=b.legs[0];if(!L||!L.team)return null;return{m:b.match||L.match,leg:L}}
+function probMatch(b){const t=probTarget(b);return t&&t.m}
+function probFor(b){const t=probTarget(b);if(!t||!t.m)return null;const g=gameFor(t.m);if(!g||g.completed)return null;
+  const i=sideIdx(g,t.leg.team);if(i<0)return null;const home=g.teams[i].home,name=g.teams[i].abbr||g.teams[i].name;
+  const ml=t.leg.type==="ml"&&!b.multi;
+  const lp=g.state==="in"&&probs[t.m.id];
+  if(lp){const v=home?lp.home:(lp.away!=null?lp.away:1-lp.home);return{pct:v*100,kind:"live",label:ml?`${name} live win chance`:`${name} team win chance (live)`,ml}}
+  const pg=pregameLive[t.m.id]||t.m.pregame;
+  if(pg){return{pct:home?pg.home:pg.away,kind:"pregame",label:ml?`${name} win chance · Pregame`:`${name} team win chance · Pregame`,ml}}
+  return null}
+function wpBar(b){const p=probFor(b);if(!p)return"";const v=Math.max(0,Math.min(100,p.pct));
+  const col=v>50?"var(--win)":v<50?"var(--lose)":"var(--push)";
+  const note=!p.ml?(b.multi?"Game-win chance for that team only, not the parlay's chance":"Chance to win the game, not to cover"):(p.kind==="pregame"?"ESPN pregame predictor":"ESPN live win probability");
+  return`<div class="wp"><div class="lbl"><span>${esc(p.label)}</span><b>${v.toFixed(1)}%</b></div><div class="track"><div class="fill" style="width:${v}%;background:${col}"></div></div><div class="note">${note}</div></div>`}
 function sideIdx(g,team){return g.teams.findIndex(t=>teamMatch(team,t))}
 function legStatus(L,g,sport,matchId){
   if(!g)return{s:"NO GAME",n:"Live score not found"};
@@ -113,15 +165,20 @@ function render(){
     if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${x.s}</span></div>`).join("")+`</div>`;
       if(g)html+=scoreBox(g)}
     else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x&&x.n)html+=`<div class="meta" style="margin-top:4px">${esc(x.n)}</div>`}
-    return html+`</div>`});
+    return html+wpBar(b)+`</div>`});
   $("bets").innerHTML=cards.join("")||'<div class="meta">No open bets.</div>';
   $("settled").innerHTML=(D.settled_recent||[]).map(s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${s.pnl==null?esc(s.result):((s.pnl>=0?"+":"")+money(s.pnl))}</b></div>`).join("");
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
-  $("meta").textContent=`Scores updated ${now} ET · refreshes every 60s · bets as of ${gen} ET`;
+  $("meta").textContent=`Scores updated ${now} ET · scores every ${FAST/1000|0}s · bets as of ${gen} ET`;
 }
-async function tick(){try{DATA=await getJSON("data.json?t="+Date.now())}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return}}
-  render();await refreshScores();render()}
-tick();setInterval(tick,60000);
-document.addEventListener("visibilitychange",()=>{if(!document.hidden)tick()});
+let FAST=10000, fastTimer=null, loading=false;
+async function loadData(){try{DATA=await getJSON("data.json?t="+Date.now())}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
+async function fastTick(full){clearTimeout(fastTimer);if(!DATA||loading)return schedule();loading=true;espnErr=false;
+  try{await refreshScores(full);await refreshProbs();if(full)await refreshPregame()}finally{loading=false}
+  FAST=espnErr?30000:10000;render();schedule()}
+function schedule(){clearTimeout(fastTimer);if(!document.hidden)fastTimer=setTimeout(()=>fastTick(false),FAST)}
+async function slowTick(){if(await loadData()){render();if(!document.hidden)fastTick(true)}}
+slowTick();setInterval(slowTick,60000);           // data.json every 60s
+document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(fastTimer);else fastTick(true)});
 </script></body></html>
