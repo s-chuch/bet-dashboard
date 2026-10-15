@@ -65,6 +65,8 @@
       "id": "401921413",
       "snapshot": {
        "date": "2026-10-13T23:30Z",
+       "period": 2,
+       "clock": 5400.0,
        "state": "post",
        "completed": true,
        "detail": "FT",
@@ -103,6 +105,8 @@
       "id": "401916245",
       "snapshot": {
        "date": "2026-10-14T01:00Z",
+       "period": 2,
+       "clock": 5400.0,
        "state": "post",
        "completed": true,
        "detail": "FT",
@@ -170,6 +174,8 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
+     "period": 0,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/17 - 12:00 PM EDT",
@@ -197,6 +203,15 @@
     "pregame": {
      "home": 48.5,
      "away": 51.5
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.386,
+     "spread_home_line": 3.5,
+     "spread_home_fair": 0.5158,
+     "total_line": 50.5,
+     "total_over_fair": 0.4911
     }
    },
    "sport": "NCAAF"
@@ -231,6 +246,8 @@
     "id": "401856809",
     "snapshot": {
      "date": "2026-10-17T23:30Z",
+     "period": 0,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/17 - 7:30 PM EDT",
@@ -258,6 +275,15 @@
     "pregame": {
      "home": 21.8,
      "away": 78.2
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.2203,
+     "spread_home_line": 10.5,
+     "spread_home_fair": 0.5,
+     "total_line": 46.0,
+     "total_over_fair": 0.5201
     }
    },
    "sport": "NCAAF"
@@ -293,9 +319,11 @@
     "id": "401869950",
     "snapshot": {
      "date": "2026-10-15T23:30Z",
+     "period": 1,
+     "clock": 478.0,
      "state": "in",
      "completed": false,
-     "detail": "12:04 - 1st",
+     "detail": "7:58 - 1st",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -304,7 +332,7 @@
        "nick": "Monarchs",
        "location": "Old Dominion",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "name": "Georgia Southern Eagles",
@@ -320,6 +348,15 @@
     "pregame": {
      "home": 32.7,
      "away": 67.3
+    },
+    "pin": {
+     "ml_home": 0.413,
+     "spread_home_line": 3.0,
+     "spread_home_fair": 0.4885,
+     "total_line": 45.5,
+     "total_over_fair": 0.5022,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-15 17:50 ET"
     }
    },
    "sport": "NCAAF"
@@ -353,9 +390,11 @@
     "id": "401862800",
     "snapshot": {
      "date": "2026-10-15T23:30Z",
+     "period": 1,
+     "clock": 514.0,
      "state": "in",
      "completed": false,
-     "detail": "10:07 - 1st",
+     "detail": "8:34 - 1st",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -373,13 +412,22 @@
        "nick": "Pirates",
        "location": "East Carolina",
        "home": false,
-       "score": "6"
+       "score": "7"
       }
      ]
     },
     "pregame": {
      "home": 26.2,
      "away": 73.9
+    },
+    "pin": {
+     "ml_home": 0.3538,
+     "spread_home_line": 4.5,
+     "spread_home_fair": 0.4885,
+     "total_line": 49.5,
+     "total_over_fair": 0.4933,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-15 17:50 ET"
     }
    },
    "sport": "NCAAF"
@@ -413,6 +461,8 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
+     "period": 0,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/15 - 8:00 PM EDT",
@@ -440,6 +490,15 @@
     "pregame": {
      "home": 75.4,
      "away": 24.6
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.8376,
+     "spread_home_line": -15.0,
+     "spread_home_fair": 0.5046,
+     "total_line": 70.5,
+     "total_over_fair": 0.4812
     }
    },
    "sport": "NCAAF"
@@ -474,9 +533,11 @@
     "id": "401892506",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
+     "period": 1,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
@@ -497,6 +558,15 @@
        "score": "1"
       }
      ]
+    },
+    "pin": {
+     "ml_home": 0.524,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.3155,
+     "total_line": 6.5,
+     "total_over_fair": 0.5437,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-15 17:50 ET"
     }
    },
    "sport": "NHL"
@@ -530,9 +600,11 @@
     "id": "401892507",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
+     "period": 1,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "0:51 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -550,9 +622,18 @@
        "nick": "Islanders",
        "location": "New York",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
+    },
+    "pin": {
+     "ml_home": 0.6018,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.3616,
+     "total_line": 5.5,
+     "total_over_fair": 0.492,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-15 17:50 ET"
     }
    },
    "sport": "NHL"
@@ -601,6 +682,8 @@
     "id": "401872995",
     "snapshot": {
      "date": "2026-10-16T00:15Z",
+     "period": 0,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/15 - 8:15 PM EDT",
@@ -628,6 +711,15 @@
     "pregame": {
      "home": 46.8,
      "away": 52.9
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.4313,
+     "spread_home_line": 2.5,
+     "spread_home_fair": 0.4954,
+     "total_line": 40.5,
+     "total_over_fair": 0.5023
     }
    },
    "sport": "NFL"
@@ -662,6 +754,8 @@
     "id": "401908033",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
+     "period": 1,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/15 - 8:00 PM EDT",
@@ -689,6 +783,15 @@
     "pregame": {
      "home": 53.2,
      "away": 46.8
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.5824,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.4061,
+     "total_line": 8.0,
+     "total_over_fair": 0.4898
     }
    },
    "sport": "MLB"
@@ -723,9 +826,11 @@
     "id": "401892511",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
+     "period": 1,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "0:04 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "name": "New Jersey Devils",
@@ -746,6 +851,15 @@
        "score": "0"
       }
      ]
+    },
+    "pin": {
+     "ml_home": 0.55,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.3387,
+     "total_line": 6.0,
+     "total_over_fair": 0.5193,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-15 17:50 ET"
     }
    },
    "sport": "NHL"
@@ -780,6 +894,8 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
+     "period": 0,
+     "clock": 0.0,
      "state": "pre",
      "completed": false,
      "detail": "10/15 - 8:00 PM EDT",
@@ -807,6 +923,15 @@
     "pregame": {
      "home": 75.4,
      "away": 24.6
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-15 19:54 ET",
+     "ml_home": 0.8376,
+     "spread_home_line": -15.0,
+     "spread_home_fair": 0.5046,
+     "total_line": 70.5,
+     "total_over_fair": 0.4812
     }
    },
    "sport": "NCAAF"
@@ -960,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "be572c13cf5150b4259b0ed248e933559cfcd2ab",
- "generated_at": "2026-10-15T19:45:18-04:00"
+ "hash": "e983270a5339973cf5142865cfaf6153ca0142b5",
+ "generated_at": "2026-10-15T19:54:55-04:00"
 }
