@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0f1115">
+<title>Live Bets</title>
+<style>
+:root{--bg:#0f1115;--card:#181b22;--line:#262a33;--txt:#e8eaed;--mut:#8b919c;--win:#22c55e;--lose:#ef4444;--push:#f59e0b;--pre:#64748b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:12px 12px calc(24px + env(safe-area-inset-bottom))}
+h1{font-size:18px;margin:4px 0 2px}h2{font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin:18px 2px 8px}
+.meta{color:var(--mut);font-size:12px}
+.bal{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
+.bal div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;justify-content:space-between}
+.bal .tot{grid-column:1/-1;font-weight:700;font-size:17px}
+.sum{display:flex;gap:6px;margin-top:6px}.sum div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:12px;color:var(--mut)}.sum b{display:block;color:var(--txt);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--pre);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.card.WINNING,.card.WON{border-left-color:var(--win)}.card.LOSING,.card.LOST{border-left-color:var(--lose)}.card.PUSH,.card.TIED{border-left-color:var(--push)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tag{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.pill{font-size:12px;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--pre);color:#fff;white-space:nowrap}
+.pill.WINNING,.pill.WON{background:var(--win)}.pill.LOSING,.pill.LOST{background:var(--lose)}.pill.PUSH,.pill.TIED{background:var(--push)}
+.pick{font-size:17px;font-weight:700;margin:4px 0 2px}.ev{color:var(--mut);font-size:13px}
+.nums{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin-top:6px}.nums span b{color:var(--txt)}.nums span{color:var(--mut)}
+.score{margin-top:8px;padding:8px;background:#11141a;border-radius:8px;font-variant-numeric:tabular-nums}
+.score .row{display:flex;justify-content:space-between}.score .det{color:var(--mut);font-size:12px;margin-top:2px}
+.score .live{color:var(--win);font-weight:700}
+.leg{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:5px 0;border-top:1px solid var(--line)}.leg:first-child{border-top:0}
+.leg .pill{font-size:10px;padding:2px 6px}
+.set{font-size:13px;display:flex;justify-content:space-between;padding:6px 2px;border-bottom:1px solid var(--line)}
+.pos{color:var(--win)}.neg{color:var(--lose)}
+</style></head><body>
+<h1>Live Bets</h1>
+<div class="meta" id="meta">Loading…</div>
+<div class="bal" id="bal"></div>
+<div class="sum" id="sum"></div>
+<h2>Open bets</h2><div id="bets"></div>
+<h2>Settled (last 2 days)</h2><div id="settled"></div>
+<script>
+const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
+const TZ="America/Toronto";
+let DATA=null, games={}, summaries={};
+const $=id=>document.getElementById(id);
+const money=v=>v==null?"?":"$"+Number(v).toFixed(2);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean);
+function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
+  for(const f of [t.name,t.abbr,t.short,t.location,t.nick]){const fn=norm(f);if(fn.length&&fn.join(" ")===qn.join(" "))return true}
+  const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
+function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
+  return {date:ev.date||c.date,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
+    teams:c.competitors.map(x=>({name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score}))}}
+const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
+function gameFor(m){if(!m)return null;return games[m.id]||m.snapshot}
+async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
+async function refreshScores(){
+  const ms=[];for(const b of DATA.open){if(b.match)ms.push(b.match);for(const L of b.legs)if(L.match)ms.push(L.match)}
+  const need={};for(const m of ms){const g=gameFor(m);if(g&&g.completed)continue;need[key(m)]=m}
+  await Promise.all(Object.values(need).map(async m=>{
+    try{let u=`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:"");
+      const d=await getJSON(u);for(const ev of d.events||[])games[ev.id]=fromEvent(ev)}catch(e){console.warn(e)}}));
+  // player props need the box score
+  await Promise.all(DATA.open.filter(b=>b.match&&b.legs.some(L=>L.type==="prop")).map(async b=>{
+    const g=gameFor(b.match);if(!g||g.state==="pre")return;if(summaries[b.match.id]&&summaries[b.match.id].done)return;
+    try{const d=await getJSON(`${ESPN}${b.match.path}/summary?event=${b.match.id}`);summaries[b.match.id]={d,done:g.completed}}catch(e){}}));
+}
+function sideIdx(g,team){return g.teams.findIndex(t=>teamMatch(team,t))}
+function legStatus(L,g,sport,matchId){
+  if(!g)return{s:"NO GAME",n:"Live score not found"};
+  if(g.state==="pre")return{s:"NOT STARTED",n:""};
+  const fin=g.completed, sc=g.teams.map(t=>Number(t.score||0)), W=fin?"WON":"WINNING", Lo=fin?"LOST":"LOSING";
+  if(L.type==="ml"||L.type==="spread"){const i=sideIdx(g,L.team);if(i<0)return{s:"?",n:"team not matched"};
+    const m=sc[i]-sc[1-i]+(L.type==="spread"?L.line:0);
+    if(m>0)return{s:W,n:L.type==="spread"?`covering by ${m}`:""};
+    if(m<0)return{s:Lo,n:L.type==="spread"?`short by ${-m}`:""};
+    if(L.type==="ml"&&sport==="Soccer")return{s:Lo,n:"draw loses a 3-way ML"};
+    return{s:fin?"PUSH":(L.type==="ml"?"TIED":"PUSH"),n:""}}
+  if(L.type==="total"){const t=sc[0]+sc[1],d=t-L.line;
+    if(d===0)return{s:"PUSH",n:`total ${t}`};
+    const over=L.side==="over";
+    if(over&&d>0)return{s:fin?"WON":"WON",n:`total ${t}, already over`};
+    if(!over&&d>0)return{s:"LOST",n:`total ${t}, already over`};
+    return{s:over?Lo:W,n:`total ${t}, ${(-d).toFixed(1)} under the line`}}
+  if(L.type==="prop"){const S=summaries[matchId];if(!S)return{s:"?",n:"waiting for box score"};
+    let v=null;for(const tm of (S.d.boxscore||{}).players||[])for(const cat of tm.statistics||[]){const k=(cat.keys||[]).indexOf(L.stat);if(k<0)continue;
+      for(const a of cat.athletes||[])if(norm(a.athlete.displayName).includes(norm(L.player)[0]))v=Number(a.stats[k])}
+    if(v==null)return{s:fin?"LOST":"LOSING",n:`${L.player}: no stats yet`};
+    if(v>=L.min)return{s:"WON",n:`${L.player}: ${v} pass TD`};
+    return{s:fin?"LOST":"LOSING",n:`${L.player}: ${v} pass TD, needs ${L.min}`}}
+  return{s:"?",n:"can't compute"}}
+function combine(st){if(st.some(s=>s==="LOST"))return"LOST";if(st.every(s=>s==="WON"))return"WON";
+  if(st.some(s=>s==="LOSING"))return"LOSING";if(st.every(s=>s==="NOT STARTED"))return"NOT STARTED";
+  if(st.every(s=>s==="WON"||s==="WINNING"))return"WINNING";if(st.every(s=>s==="WON"||s==="WINNING"||s==="NOT STARTED"))return"WINNING";
+  if(st.some(s=>s==="TIED"||s==="PUSH"))return"TIED";return"LIVE"}
+const cls=s=>s.replace(/\s/g,"_");
+function fmtStart(g,raw){if(g&&g.date){const d=new Date(g.date);return d.toLocaleString("en-CA",{timeZone:TZ,weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+" ET"}return raw}
+function scoreBox(g){if(!g)return"";const live=g.state==="in";
+  const order=[...g.teams].sort((a,b)=>a.home-b.home);
+  return `<div class="score">${order.map(t=>`<div class="row"><span>${esc(t.name)}</span><b>${g.state==="pre"?"":esc(t.score)}</b></div>`).join("")}
+    <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":esc(g.detail)}</div></div>`}
+function render(){
+  const D=DATA;$("bal").innerHTML=D.balances.map(b=>`<div><span>${esc(b.book)}</span><b>${money(b.balance)}</b></div>`).join("")+`<div class="tot"><span>Total</span><span>${money(D.total)}</span></div>`;
+  $("sum").innerHTML=`<div>Open bets<b>${D.open.length}</b></div><div>At risk<b>${money(D.open_stake)}</b></div><div>Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${D.pnl_total>=0?"+":""}${money(D.pnl_total)}</b></div>`;
+  const cards=D.open.map(b=>{
+    const legStats=b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}});
+    let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");
+    const g=b.match?gameFor(b.match):null;
+    const price=b.boosted_price&&b.boosted_price!==b.price?`${esc(b.price)} → ${esc(b.boosted_price)}`:esc(b.price);
+    const firstG=g||legStats.map(x=>x.g).find(Boolean);
+    let html=`<div class="card ${cls(status)}"><div class="top"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span><span class="pill ${cls(status)}">${status}</span></div>
+      <div class="pick">${esc(b.pick)}</div><div class="ev">${esc(b.event)} · ${esc(b.market)}</div>
+      <div class="nums"><span>Price <b>${price}</b></span><span>Stake <b>${money(b.stake)}</b>${b.stake_note?" (unconf.)":""}</span><span>To win <b>${b.to_win==null?"TBC":money(b.to_win)}</b></span><span>Start <b>${esc(fmtStart(firstG,b.start))}</b></span></div>`;
+    if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${x.s}</span></div>`).join("")+`</div>`;
+      if(g)html+=scoreBox(g)}
+    else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x&&x.n)html+=`<div class="meta" style="margin-top:4px">${esc(x.n)}</div>`}
+    return html+`</div>`});
+  $("bets").innerHTML=cards.join("")||'<div class="meta">No open bets.</div>';
+  $("settled").innerHTML=(D.settled_recent||[]).map(s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${s.pnl==null?esc(s.result):((s.pnl>=0?"+":"")+money(s.pnl))}</b></div>`).join("");
+  const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
+  const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
+  $("meta").textContent=`Scores updated ${now} ET · refreshes every 60s · bets as of ${gen} ET`;
+}
+async function tick(){try{DATA=await getJSON("data.json?t="+Date.now())}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return}}
+  render();await refreshScores();render()}
+tick();setInterval(tick,60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)tick()});
+</script></body></html>

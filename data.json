@@ -1,0 +1,855 @@
+{
+ "balances": [
+  {
+   "book": "FanDuel",
+   "balance": 157.29,
+   "updated": "2026-10-15"
+  },
+  {
+   "book": "Caesars",
+   "balance": 134.0,
+   "updated": "2026-10-15"
+  },
+  {
+   "book": "PointsBet",
+   "balance": 115.55,
+   "updated": "2026-10-15"
+  },
+  {
+   "book": "bet365",
+   "balance": 55.86,
+   "updated": "2026-10-15"
+  },
+  {
+   "book": "DraftKings",
+   "balance": 51.0,
+   "updated": "2026-10-14"
+  },
+  {
+   "book": "theScore",
+   "balance": 31.84,
+   "updated": "2026-10-15"
+  },
+  {
+   "book": "Hard Rock",
+   "balance": 13.0,
+   "updated": "2026-10-14"
+  }
+ ],
+ "total": 558.54,
+ "open": [
+  {
+   "date": "2026-10-13",
+   "book": "FanDuel",
+   "event": "Brazil W ML + Mexico W ML + Millonarios ML",
+   "market": "Parlay (Bet Reset token $10)",
+   "pick": "3-leg soccer parlay",
+   "start": "2026-10-13 19:30",
+   "price": "unconfirmed (~+170)",
+   "boosted_price": "",
+   "stake": 0.8,
+   "stake_note": "unconfirmed",
+   "to_win": null,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Brazil",
+     "women": false,
+     "text": "Brazil W ML",
+     "match": {
+      "path": "soccer/fifa.friendly.w",
+      "date": "20261013",
+      "groups": null,
+      "id": "401921413",
+      "snapshot": {
+       "date": "2026-10-13T23:30Z",
+       "state": "post",
+       "completed": true,
+       "detail": "FT",
+       "teams": [
+        {
+         "name": "Brazil",
+         "abbr": "BRA",
+         "home": true,
+         "score": "2"
+        },
+        {
+         "name": "Argentina",
+         "abbr": "ARG",
+         "home": false,
+         "score": "2"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "ml",
+     "team": "Mexico",
+     "women": false,
+     "text": "Mexico W ML",
+     "match": {
+      "path": "soccer/fifa.friendly.w",
+      "date": "20261013",
+      "groups": null,
+      "id": "401916245",
+      "snapshot": {
+       "date": "2026-10-14T01:00Z",
+       "state": "post",
+       "completed": true,
+       "detail": "FT",
+       "teams": [
+        {
+         "name": "Mexico",
+         "abbr": "MEX",
+         "home": true,
+         "score": "3"
+        },
+        {
+         "name": "Jamaica",
+         "abbr": "JAM",
+         "home": false,
+         "score": "1"
+        }
+       ]
+      }
+     }
+    },
+    {
+     "type": "ml",
+     "team": "Millonarios",
+     "women": false,
+     "text": "Millonarios ML",
+     "match": null
+    }
+   ],
+   "match": null,
+   "sport": "Soccer"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "Ohio State @ Indiana",
+   "market": "Moneyline (50% profit boost)",
+   "pick": "Indiana Hoosiers",
+   "start": "Sat Oct 17 12:00 PM ET",
+   "price": "+150",
+   "boosted_price": "+225",
+   "stake": 0.26,
+   "stake_note": "unconfirmed",
+   "to_win": 0.59,
+   "ev_pct": "24.3",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Indiana Hoosiers",
+     "women": false,
+     "text": "Indiana Hoosiers",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261017",
+    "groups": null,
+    "id": "401858488",
+    "snapshot": {
+     "date": "2026-10-17T16:00Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 12:00 PM EDT",
+     "teams": [
+      {
+       "name": "Indiana Hoosiers",
+       "abbr": "IU",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Ohio State Buckeyes",
+       "abbr": "OSU",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "Notre Dame @ BYU",
+   "market": "Moneyline (50% profit boost)",
+   "pick": "BYU Cougars",
+   "start": "Sat Oct 17 07:30 PM ET",
+   "price": "+310",
+   "boosted_price": "+465",
+   "stake": 0.26,
+   "stake_note": "unconfirmed",
+   "to_win": 1.21,
+   "ev_pct": "24.5",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "BYU Cougars",
+     "women": false,
+     "text": "BYU Cougars",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261017",
+    "groups": null,
+    "id": "401856809",
+    "snapshot": {
+     "date": "2026-10-17T23:30Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 7:30 PM EDT",
+     "teams": [
+      {
+       "name": "BYU Cougars",
+       "abbr": "BYU",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Notre Dame Fighting Irish",
+       "abbr": "ND",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Georgia Southern @ Old Dominion",
+   "market": "Spread (WELCOMEDM rollover)",
+   "pick": "Old Dominion +3.5",
+   "start": "Thu Oct 15 07:30 PM ET",
+   "price": "-108",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": 23.15,
+   "ev_pct": "-3.3",
+   "multi": false,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "Old Dominion",
+     "line": 3.5,
+     "women": false,
+     "text": "Old Dominion +3.5",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261015",
+    "groups": null,
+    "id": "401869950",
+    "snapshot": {
+     "date": "2026-10-15T23:30Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 7:30 PM EDT",
+     "teams": [
+      {
+       "name": "Old Dominion Monarchs",
+       "abbr": "ODU",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Georgia Southern Eagles",
+       "abbr": "GASO",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "East Carolina @ UAB",
+   "market": "Total (WELCOMEDM rollover)",
+   "pick": "Under 47.5",
+   "start": "Thu Oct 15 07:30 PM ET",
+   "price": "-112",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": 22.32,
+   "ev_pct": "-4.5",
+   "multi": false,
+   "legs": [
+    {
+     "type": "total",
+     "side": "under",
+     "line": 47.5,
+     "text": "Under 47.5"
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261015",
+    "groups": null,
+    "id": "401862800",
+    "snapshot": {
+     "date": "2026-10-15T23:30Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 7:30 PM EDT",
+     "teams": [
+      {
+       "name": "UAB Blazers",
+       "abbr": "UAB",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "East Carolina Pirates",
+       "abbr": "ECU",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Colorado State @ Texas State",
+   "market": "Total (WELCOMEDM rollover)",
+   "pick": "Under 70.5",
+   "start": "Thu Oct 15 08:00 PM ET",
+   "price": "-112",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": 22.32,
+   "ev_pct": "-4.1",
+   "multi": false,
+   "legs": [
+    {
+     "type": "total",
+     "side": "under",
+     "line": 70.5,
+     "text": "Under 70.5"
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261015",
+    "groups": null,
+    "id": "401860923",
+    "snapshot": {
+     "date": "2026-10-16T00:00Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 8:00 PM EDT",
+     "teams": [
+      {
+       "name": "Texas State Bobcats",
+       "abbr": "TXST",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Colorado State Rams",
+       "abbr": "CSU",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Buffalo Sabres @ Toronto Maple Leafs",
+   "market": "Moneyline (WELCOMEDM rollover)",
+   "pick": "Toronto Maple Leafs",
+   "start": "Thu Oct 15 07:00 PM ET",
+   "price": "unconfirmed",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": null,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Toronto Maple Leafs",
+     "women": false,
+     "text": "Toronto Maple Leafs",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261015",
+    "groups": null,
+    "id": "401892506",
+    "snapshot": {
+     "date": "2026-10-15T23:00Z",
+     "state": "in",
+     "completed": false,
+     "detail": "14:57 - 1st",
+     "teams": [
+      {
+       "name": "Toronto Maple Leafs",
+       "abbr": "TOR",
+       "home": true,
+       "score": "1"
+      },
+      {
+       "name": "Buffalo Sabres",
+       "abbr": "BUF",
+       "home": false,
+       "score": "1"
+      }
+     ]
+    }
+   },
+   "sport": "NHL"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "New York Islanders @ Ottawa Senators",
+   "market": "Total (WELCOMEDM rollover)",
+   "pick": "Under 5.5",
+   "start": "Thu Oct 15 07:00 PM ET",
+   "price": "-110",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": 22.73,
+   "ev_pct": "-0.4",
+   "multi": false,
+   "legs": [
+    {
+     "type": "total",
+     "side": "under",
+     "line": 5.5,
+     "text": "Under 5.5"
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261015",
+    "groups": null,
+    "id": "401892507",
+    "snapshot": {
+     "date": "2026-10-15T23:00Z",
+     "state": "in",
+     "completed": false,
+     "detail": "13:07 - 1st",
+     "teams": [
+      {
+       "name": "Ottawa Senators",
+       "abbr": "OTT",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "New York Islanders",
+       "abbr": "NYI",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NHL"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "FanDuel",
+   "event": "Seattle Seahawks @ Denver Broncos",
+   "market": "SGP 3-leg (50% profit boost)",
+   "pick": "SEA -2.5 + Over 40.5 + Darnold 1+ pass TD",
+   "start": "Thu Oct 15 08:15 PM ET",
+   "price": "+237",
+   "boosted_price": "+356",
+   "stake": 0.79,
+   "stake_note": "",
+   "to_win": 2.81,
+   "ev_pct": "1.5",
+   "multi": true,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "SEA",
+     "line": -2.5,
+     "women": false,
+     "text": "SEA -2.5",
+     "team_ok": true
+    },
+    {
+     "type": "total",
+     "side": "over",
+     "line": 40.5,
+     "text": "Over 40.5"
+    },
+    {
+     "type": "prop",
+     "player": "Darnold",
+     "stat": "passingTouchdowns",
+     "min": 1,
+     "text": "Darnold 1+ pass TD"
+    }
+   ],
+   "match": {
+    "path": "football/nfl",
+    "date": "20261015",
+    "groups": null,
+    "id": "401872995",
+    "snapshot": {
+     "date": "2026-10-16T00:15Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 8:15 PM EDT",
+     "teams": [
+      {
+       "name": "Denver Broncos",
+       "abbr": "DEN",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Seattle Seahawks",
+       "abbr": "SEA",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NFL"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "Caesars",
+   "event": "Milwaukee Brewers @ Los Angeles Dodgers",
+   "market": "ML (100% profit boost)",
+   "pick": "Milwaukee Brewers",
+   "start": "Thu Oct 15 08:00 PM ET",
+   "price": "unconfirmed",
+   "boosted_price": "unconfirmed",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": null,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Milwaukee Brewers",
+     "women": false,
+     "text": "Milwaukee Brewers",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "baseball/mlb",
+    "date": "20261015",
+    "groups": null,
+    "id": "401908033",
+    "snapshot": {
+     "date": "2026-10-16T00:00Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 8:00 PM EDT",
+     "teams": [
+      {
+       "name": "Los Angeles Dodgers",
+       "abbr": "LAD",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Milwaukee Brewers",
+       "abbr": "MIL",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "MLB"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "Caesars",
+   "event": "New York Rangers @ New Jersey Devils",
+   "market": "ML (100% profit boost)",
+   "pick": "New York Rangers",
+   "start": "Thu Oct 15 07:00 PM ET",
+   "price": "unconfirmed",
+   "boosted_price": "unconfirmed",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": null,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "New York Rangers",
+     "women": false,
+     "text": "New York Rangers",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261015",
+    "groups": null,
+    "id": "401892511",
+    "snapshot": {
+     "date": "2026-10-15T23:00Z",
+     "state": "in",
+     "completed": false,
+     "detail": "12:35 - 1st",
+     "teams": [
+      {
+       "name": "New Jersey Devils",
+       "abbr": "NJ",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "New York Rangers",
+       "abbr": "NYR",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NHL"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "theScore",
+   "event": "Colorado State Rams @ Texas State Bobcats",
+   "market": "ML",
+   "pick": "Colorado State Rams",
+   "start": "Thu Oct 15 08:00 PM ET",
+   "price": "+550",
+   "boosted_price": "",
+   "stake": 0.16,
+   "stake_note": "",
+   "to_win": 0.88,
+   "ev_pct": "7.18",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Colorado State Rams",
+     "women": false,
+     "text": "Colorado State Rams",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "football/college-football",
+    "date": "20261015",
+    "groups": null,
+    "id": "401860923",
+    "snapshot": {
+     "date": "2026-10-16T00:00Z",
+     "state": "pre",
+     "completed": false,
+     "detail": "10/15 - 8:00 PM EDT",
+     "teams": [
+      {
+       "name": "Texas State Bobcats",
+       "abbr": "TXST",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Colorado State Rams",
+       "abbr": "CSU",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "NCAAF"
+  }
+ ],
+ "settled_recent": [
+  {
+   "date": "2026-10-14",
+   "book": "FanDuel",
+   "event": "Phoenix Suns @ San Antonio Spurs",
+   "pick": "Phoenix Suns",
+   "result": "lost",
+   "pnl": -0.79
+  },
+  {
+   "date": "2026-10-14",
+   "book": "bet365",
+   "event": "Phoenix Suns @ San Antonio Spurs",
+   "pick": "Phoenix Suns",
+   "result": "lost",
+   "pnl": -0.17
+  },
+  {
+   "date": "2026-10-14",
+   "book": "bet365",
+   "event": "Dallas Stars @ Colorado Avalanche",
+   "pick": "Dallas Stars",
+   "result": "won",
+   "pnl": 11.5
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "New Orleans Pelicans @ Dallas Mavericks",
+   "pick": "Dallas Mavericks",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "Chicago Bulls @ Milwaukee Bucks",
+   "pick": "Milwaukee Bucks",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "Western Kentucky @ Sam Houston State",
+   "pick": "Western Kentucky Hilltoppers",
+   "result": "won",
+   "pnl": 20.0
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "New Orleans Pelicans @ Dallas Mavericks",
+   "pick": "New Orleans Pelicans",
+   "result": "won",
+   "pnl": 23.81
+  },
+  {
+   "date": "2026-10-14",
+   "book": "Caesars",
+   "event": "Kennesaw State @ Missouri State",
+   "pick": "Missouri State Bears",
+   "result": "won",
+   "pnl": 67.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "PointsBet",
+   "event": "Knicks @ Raptors",
+   "pick": "Over 219.5",
+   "result": "won",
+   "pnl": 21.74
+  },
+  {
+   "date": "2026-10-13",
+   "book": "PointsBet",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks +11.5",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks ML",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Pacers @ Thunder",
+   "pick": "Pacers ML",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Hard Rock",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks ML",
+   "result": "lost",
+   "pnl": 0.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Hard Rock",
+   "event": "FIU @ Jacksonville State",
+   "pick": "Jacksonville State ML",
+   "result": "won",
+   "pnl": 3.23
+  },
+  {
+   "date": "2026-10-13",
+   "book": "DraftKings",
+   "event": "FIU @ Jacksonville State",
+   "pick": "FIU ML",
+   "result": "lost",
+   "pnl": -0.5
+  },
+  {
+   "date": "2026-10-13",
+   "book": "DraftKings",
+   "event": "Napoli @ Villarreal",
+   "pick": "Villarreal ML",
+   "result": "won",
+   "pnl": 1.32
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Delaware @ Middle Tennessee",
+   "pick": "Delaware ML",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "FIU @ Jacksonville State",
+   "pick": "FIU ML",
+   "result": "lost",
+   "pnl": -25.0
+  }
+ ],
+ "pnl_total": 164.97,
+ "open_stake": 177.27,
+ "hash": "c1811f3c8d2f704b915b3f07aa81da88204d5051",
+ "generated_at": "2026-10-15T19:20:34-04:00"
+}
