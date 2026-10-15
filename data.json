@@ -414,7 +414,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "14:57 - 1st",
+     "detail": "13:57 - 1st",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
@@ -464,7 +464,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "13:07 - 1st",
+     "detail": "12:06 - 1st",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -850,6 +850,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "c1811f3c8d2f704b915b3f07aa81da88204d5051",
- "generated_at": "2026-10-15T19:20:34-04:00"
+ "hash": "240acc86d6d7f57d41ca1d8d65e4f38737e7f48b",
+ "generated_at": "2026-10-15T19:21:38-04:00"
 }
