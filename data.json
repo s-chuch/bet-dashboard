@@ -269,9 +269,9 @@
     "id": "401869950",
     "snapshot": {
      "date": "2026-10-15T23:30Z",
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/15 - 7:30 PM EDT",
+     "detail": "13:04 - 1st",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -323,9 +323,9 @@
     "id": "401862800",
     "snapshot": {
      "date": "2026-10-15T23:30Z",
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/15 - 7:30 PM EDT",
+     "detail": "12:37 - 1st",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -434,13 +434,13 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "7:34 - 1st",
+     "detail": "5:56 - 1st",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
        "abbr": "TOR",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "name": "Buffalo Sabres",
@@ -484,7 +484,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "6:07 - 1st",
+     "detail": "4:07 - 1st",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -659,7 +659,7 @@
      "date": "2026-10-15T23:00Z",
      "state": "in",
      "completed": false,
-     "detail": "5:50 - 1st",
+     "detail": "3:52 - 1st",
      "teams": [
       {
        "name": "New Jersey Devils",
@@ -882,6 +882,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "3dbd3292a74417759662cfb405022d27c09cf97a",
- "generated_at": "2026-10-15T19:35:39-04:00"
+ "hash": "04a7fe0b50c2bfcad449061889fd4d92cf7a9ebb",
+ "generated_at": "2026-10-15T19:40:37-04:00"
 }

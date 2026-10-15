@@ -31,14 +31,17 @@ h1{font-size:18px;margin:4px 0 2px}h2{font-size:14px;color:var(--mut);text-trans
 .wp{margin-top:8px}.wp .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:3px}.wp .lbl b{color:var(--txt);font-size:13px}
 .wp .track{height:8px;background:#2a2f39;border-radius:99px;overflow:hidden}.wp .fill{height:100%;border-radius:99px;transition:width .8s ease,background .3s}
 .wp .note{font-size:11px;color:var(--mut);margin-top:2px}
+h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .pos{color:var(--win)}.neg{color:var(--lose)}
 </style></head><body>
 <h1>Live Bets</h1>
 <div class="meta" id="meta">Loading…</div>
 <div class="bal" id="bal"></div>
 <div class="sum" id="sum"></div>
-<h2>Open bets</h2><div id="bets"></div>
-<h2>Settled (last 2 days)</h2><div id="settled"></div>
+<h2>Live now <span id="liveN"></span></h2><div id="live"></div>
+<h2>Upcoming <span id="upN"></span></h2><div id="bets"></div>
+<h2>Won / Push <span id="wonTot"></span></h2><div id="wonCards"></div><div id="won"></div>
+<h2>Lost <span id="lostTot"></span></h2><div id="lostCards"></div><div id="lost"></div>
 <script>
 const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
 const TZ="America/Toronto";
@@ -153,7 +156,8 @@ function scoreBox(g){if(!g)return"";const live=g.state==="in";
 function render(){
   const D=DATA;$("bal").innerHTML=D.balances.map(b=>`<div><span>${esc(b.book)}</span><b>${money(b.balance)}</b></div>`).join("")+`<div class="tot"><span>Total</span><span>${money(D.total)}</span></div>`;
   $("sum").innerHTML=`<div>Open bets<b>${D.open.length}</b></div><div>At risk<b>${money(D.open_stake)}</b></div><div>Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${D.pnl_total>=0?"+":""}${money(D.pnl_total)}</b></div>`;
-  const cards=D.open.map(b=>{
+  const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0;
+  D.open.forEach(b=>{
     const legStats=b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}});
     let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");
     const g=b.match?gameFor(b.match):null;
@@ -165,9 +169,27 @@ function render(){
     if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${x.s}</span></div>`).join("")+`</div>`;
       if(g)html+=scoreBox(g)}
     else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x&&x.n)html+=`<div class="meta" style="margin-top:4px">${esc(x.n)}</div>`}
-    return html+wpBar(b)+`</div>`});
-  $("bets").innerHTML=cards.join("")||'<div class="meta">No open bets.</div>';
-  $("settled").innerHTML=(D.settled_recent||[]).map(s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${s.pnl==null?esc(s.result):((s.pnl>=0?"+":"")+money(s.pnl))}</b></div>`).join("");
+    html+=wpBar(b)+`</div>`;
+    const gs=(b.match?[gameFor(b.match)]:b.legs.map(L=>gameFor(L.match))).filter(Boolean);
+    const t=Math.min(...gs.map(g=>g.date?new Date(g.date).getTime():Infinity),Infinity);
+    if(status==="LOST"){lostCards.push(html);lostPending+=b.stake||0}
+    else if(gs.some(g=>g.state==="in"))liveCards.push(html);
+    else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){wonCards.push(html);if(status==="WON")wonPending+=b.to_win||0}
+    else upCards.push({html,t})});
+  upCards.sort((a,b)=>a.t-b.t);
+  $("live").innerHTML=liveCards.join("")||'<div class="meta">Nothing live right now.</div>';
+  $("bets").innerHTML=upCards.map(x=>x.html).join("")||'<div class="meta">Nothing upcoming.</div>';
+  $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
+  $("wonCards").innerHTML=wonCards.length?`<div class="meta" style="margin:0 2px 6px">Final, not settled in the tracker yet</div>`+wonCards.join(""):"";
+  const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
+  const st=D.settled_recent||[], lostS=st.filter(s=>/lost|loss/i.test(s.result)), wonS=st.filter(s=>!/lost|loss/i.test(s.result));
+  const wonSum=wonS.reduce((a,s)=>a+(s.pnl||0),0), lostSum=lostS.reduce((a,s)=>a-(s.pnl||0),0);
+  $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+wonS.map(row).join("")||(wonCards.length?"":'<div class="meta">None in the last 2 days.</div>');
+  $("wonTot").textContent=wonS.length?`+${money(wonSum)}`:"";
+  $("lostCards").innerHTML=lostCards.length?`<div class="meta" style="margin:0 2px 6px">Graded LOST live, not settled in the tracker yet</div>`+lostCards.join(""):"";
+  $("lost").innerHTML=(lostS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+lostS.map(row).join("")||(lostCards.length?"":'<div class="meta">None in the last 2 days.</div>');
+  const lostTotal=lostSum+lostPending;
+  $("lostTot").textContent=lostTotal?`−${money(lostTotal)}`+(lostPending?` (incl. ${money(lostPending)} unsettled)`:""):"";
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
   $("meta").textContent=`Scores updated ${now} ET · scores every ${FAST/1000|0}s · bets as of ${gen} ET`;
