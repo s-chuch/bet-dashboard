@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:50 ET",
+     "pulled": "2026-10-15 22:57 ET",
      "ml_home": 0.3831,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5113,
@@ -862,7 +862,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:50 ET",
+     "pulled": "2026-10-15 22:57 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -1488,10 +1488,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 4,
-     "clock": 223.0,
+     "clock": 120.0,
      "state": "in",
      "completed": false,
-     "detail": "3:43 - 4th",
+     "detail": "2:00 - 4th",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -2143,10 +2143,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 4,
-     "clock": 64.0,
+     "clock": 35.0,
      "state": "in",
      "completed": false,
-     "detail": "1:04 - 4th",
+     "detail": "0:35 - 4th",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -2155,7 +2155,7 @@
        "nick": "Blazers",
        "location": "UAB",
        "home": true,
-       "score": "9"
+       "score": "15"
       },
       {
        "name": "East Carolina Pirates",
@@ -2797,11 +2797,11 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 3,
-     "clock": 16.0,
+     "period": 4,
+     "clock": 896.0,
      "state": "in",
      "completed": false,
-     "detail": "0:16 - 3rd",
+     "detail": "14:56 - 4th",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -3757,10 +3757,10 @@
     "snapshot": {
      "date": "2026-10-16T00:15Z",
      "period": 4,
-     "clock": 509.0,
+     "clock": 341.0,
      "state": "in",
      "completed": false,
-     "detail": "8:29 - 4th",
+     "detail": "5:41 - 4th",
      "teams": [
       {
        "name": "Denver Broncos",
@@ -3778,7 +3778,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": false,
-       "score": "3"
+       "score": "9"
       }
      ]
     },
@@ -4478,11 +4478,11 @@
     "id": "401908033",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 8,
+     "period": 9,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 8th",
+     "detail": "Top 9th",
      "teams": [
       {
        "name": "Los Angeles Dodgers",
@@ -4828,11 +4828,11 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 3,
-     "clock": 16.0,
+     "period": 4,
+     "clock": 896.0,
      "state": "in",
      "completed": false,
-     "detail": "0:16 - 3rd",
+     "detail": "14:56 - 4th",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -5757,6 +5757,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "c8259ee8f74f21bac820b94775ba6ad3616f8785",
- "generated_at": "2026-10-15T22:51:02-04:00"
+ "hash": "7aee0849cbdee34ac65828d4e5c1bfdbb49170b6",
+ "generated_at": "2026-10-15T22:57:29-04:00"
 }

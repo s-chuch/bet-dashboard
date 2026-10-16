@@ -57,6 +57,12 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .sec.settled:not(.open) .xall{display:none!important}
 .sec.settled .secbody{display:none}.sec.settled.open .secbody{display:block}
 .aln{font-size:12px;color:var(--mut);margin:6px 0 2px;font-variant-numeric:tabular-nums}.srcn{font-size:11px;color:var(--mut);margin-top:2px}
+.ldet{margin:8px 0 4px;font-size:12.5px}.need{font-weight:600;margin-bottom:6px;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;margin-bottom:6px;color:var(--fg,#ddd)}.chips>span{display:inline-flex;align-items:center;gap:5px}.chips small{color:var(--mut)}
+.rz{background:#b3261e;color:#fff;border-radius:4px;padding:0 5px;font-size:11px;font-weight:700}.dia{vertical-align:middle}.cnt{font-variant-numeric:tabular-nums}
+.lsc{border-collapse:collapse;font-size:11.5px;margin:2px 0 6px;font-variant-numeric:tabular-nums}.lsc th,.lsc td{padding:1px 6px;text-align:center;color:var(--mut)}.lsc td:first-child{text-align:left;color:inherit}.lsc td b{color:inherit}
+.lastp{color:var(--mut);font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.spkw{display:flex;flex-direction:column;margin:4px 0 2px}.spk-t{font-size:11px;color:var(--mut)}.spkw [data-spk]{display:flex;align-items:center;gap:8px}.spk-l,.spk-empty{font-size:11px;color:var(--mut)}
 </style></head><body>
 <h1>Live Bets</h1>
 <div class="meta" id="meta">Loading…</div>
@@ -79,7 +85,11 @@ function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
   const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
   return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,lastPlay:c.situation&&c.situation.lastPlay&&c.situation.lastPlay.text||"",longDetail:st.type.detail||"",state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
-    teams:c.competitors.map(x=>({name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score}))}}
+    sit:pickSit(c.situation),teams:c.competitors.map(x=>({id:x.team.id||x.id,name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score,ls:(x.linescores||[]).map(l=>l.displayValue!=null?l.displayValue:l.value),st:Object.fromEntries((x.statistics||[]).map(q=>[q.name,q.displayValue]))}))}}
+// keep only the small, flat situation fields (+ batter/pitcher names) from the scoreboard
+function pickSit(si){if(!si)return null;const o={};for(const[k,v]of Object.entries(si)){if(v==null||k==="lastPlay")continue;
+    if(typeof v!=="object")o[k]=v;else if((k==="batter"||k==="pitcher")&&v.athlete)o[k]={n:v.athlete.shortName||v.athlete.displayName,s:v.summary||""};
+    else if(/fouls|bonus/i.test(k))o[k]=v}return o}
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
 function gameFor(m){if(!m)return null;if(!games[m.id]&&m.snapshot)m.snapshot.id=m.id;return games[m.id]||m.snapshot}
 async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
@@ -404,11 +414,68 @@ function pillState(b,status,legStats){const v=betLive(b,status,legStats);
     sub:v.approx?`approx. product of legs`:(v.sub||"")}}
 function pillHTML(b,status,legStats){const q=pillState(b,status,legStats);
   return`<span class="pillw"><span class="pill ${cls(q.cls)}" data-pill>${q.txt}</span><small class="psub" data-psub>${esc(q.sub)}</small></span>`}
+
+// ---------- expanded-card live detail (data from the ESPN scoreboard we already poll) ----------
+const UNIT={"baseball/mlb":"runs","hockey/nhl":"goals"};
+const unitOf=m=>UNIT[m&&m.path]||"pts";
+const pl=(n,u)=>`${n} ${n===1?u.replace(/s$/,""):u}`;
+function needLine(L,m,g){if(!g||g.state!=="in")return"";const u=unitOf(m),sc=g.teams.map(t=>Number(t.score||0)),tot=sc[0]+sc[1];
+  if(L.type==="total"){const d=L.line-tot;
+    if(L.side==="under")return d>0?`Under ${L.line}: ${tot} so far, ${+d.toFixed(1)} to spare`:d===0?`Under ${L.line}: ${tot} so far, at the line (push)`:`Under ${L.line}: ${tot} so far, over by ${+(-d).toFixed(1)}`;
+    if(d<0)return`Over ${L.line}: ${tot} so far, already over`;const need=Math.floor(d)+1;return`Over ${L.line}: ${tot} so far, needs ${pl(need,u)} more`}
+  const pt=pickTeam(g,L);if(!pt)return"";const mine=Number(pt.T.score||0),th=Number(pt.O.score||0),mg=mine-th,nm=pt.T.abbr||pt.T.short;
+  if(L.type==="ml")return`ML: ${mg>0?`${nm} leading by ${mg}`:mg<0?`${nm} trailing by ${-mg}`:"tied"}`;
+  if(L.type==="spread"){const ln=L.line,cur=mg+ln,cs=(mg>0?"+":mg<0?"−":"")+Math.abs(mg);
+    const cond=ln>0?(Number.isInteger(ln)?`lose by <${ln} or win (${ln} = push)`:`lose by ≤${Math.floor(ln)} or win`):(Number.isInteger(-ln)?`win by ${-ln+1}+ (${-ln} = push)`:`win by ${Math.ceil(-ln)}+`);
+    const st=cur>0?`covering by ${+cur.toFixed(1)}`:cur===0?"push right now":`needs ${pl(Math.floor(-cur)+1,u)}`;
+    return`Needs ${nm} to ${cond}: currently ${cs} → ${st}`}
+  return""}
+function lineScore(g){const n=Math.max(...g.teams.map(t=>(t.ls||[]).length));if(!n)return"";const o=[...g.teams].sort((a,b)=>a.home-b.home);
+  const hd=Array.from({length:n},(_,i)=>`<th>${i+1}</th>`).join("");
+  return`<table class="lsc"><tr><th></th>${hd}<th>T</th></tr>${o.map(t=>`<tr><td>${esc(t.abbr)}</td>${Array.from({length:n},(_,i)=>`<td>${esc(t.ls[i]??"")}</td>`).join("")}<td><b>${esc(t.score)}</b></td></tr>`).join("")}</table>`}
+function diamond(si){const f=k=>si[k]?"#f5c542":"none";
+  return`<svg class="dia" viewBox="0 0 40 30" width="40" height="30"><g stroke="#aaa" stroke-width="1.5"><rect x="25" y="13" width="8" height="8" transform="rotate(45 29 17)" fill="${f("onFirst")}"/><rect x="16" y="4" width="8" height="8" transform="rotate(45 20 8)" fill="${f("onSecond")}"/><rect x="7" y="13" width="8" height="8" transform="rotate(45 11 17)" fill="${f("onThird")}"/></g></svg>`}
+function sportChips(m,g){const si=g.sit||{},T=g.teams,ab=id=>{const t=T.find(t=>String(t.id)===String(id));return t?t.abbr:""};
+  const H=T.find(t=>t.home),A=T.find(t=>!t.home),out=[];
+  if(/^football/.test(m.path)){
+    if(si.possession&&si.down>0)out.push(`<b>${esc(ab(si.possession))} ball</b> · ${esc(si.downDistanceText||si.shortDownDistanceText||"")}`);
+    else if(si.possessionText)out.push(esc(si.possessionText));
+    if(si.isRedZone&&si.down>0)out.push(`<span class="rz">RED ZONE</span>`);
+    if(si.homeTimeouts!=null)out.push(`TOs ${esc(A.abbr)} ${si.awayTimeouts} · ${esc(H.abbr)} ${si.homeTimeouts}`)}
+  else if(m.path==="baseball/mlb"){
+    if(si.balls!=null)out.push(`${diamond(si)}<span class="cnt">${si.balls}-${si.strikes}, ${si.outs} out${si.outs===1?"":"s"}</span>`);
+    if(si.batter||si.pitcher)out.push(`<span>AB ${esc(si.batter?si.batter.n:"?")}${si.batter&&si.batter.s?` <small>(${esc(si.batter.s)})</small>`:""} vs P ${esc(si.pitcher?si.pitcher.n:"?")}${si.pitcher&&si.pitcher.s?` <small>(${esc(si.pitcher.s)})</small>`:""}</span>`)}
+  else if(m.path==="hockey/nhl"){
+    const sog=t=>{const o=T.find(x=>x!==t);const sv=Number(o.st.saves),gl=Number(t.score||0);return isNaN(sv)?null:sv+gl};
+    if(sog(A)!=null)out.push(`SOG ${esc(A.abbr)} ${sog(A)} · ${esc(H.abbr)} ${sog(H)}`);
+    const pp=Object.entries(si).find(([k,v])=>/power ?play|strength/i.test(k)&&v);const lp=String(g.lastPlay||"");
+    if(pp)out.push(`<span class="rz">PP ${esc(typeof pp[1]==="string"?pp[1]:"")}</span>`);else if(/power play/i.test(lp))out.push(`<span class="rz">Power play</span>`);
+    if(Object.entries(si).some(([k,v])=>/empty/i.test(k)&&v)||/empty net/i.test(lp))out.push(`<span class="rz">Empty net</span>`)}
+  else if(m.path==="basketball/nba"){
+    if(si.homeTimeouts!=null)out.push(`TOs ${esc(A.abbr)} ${si.awayTimeouts} · ${esc(H.abbr)} ${si.homeTimeouts}`);
+    for(const[k,v]of Object.entries(si))if(/fouls|bonus/i.test(k))out.push(esc(`${k.replace(/([A-Z])/g," $1").toLowerCase()}: ${typeof v==="object"?(v.bonusState||v.teamFouls||JSON.stringify(v)):v}`))}
+  return out.length?`<div class="chips">${out.map(x=>`<span>${x}</span>`).join("")}</div>`:""}
+function liveDetail(b,legStats){const seen=new Set(),parts=[];
+  const legs=b.legs.map(L=>({L,m:matchOfLeg(b,L)})).filter(x=>x.m);
+  const needs=legs.map(({L,m})=>needLine(L,m,gameFor(m))).filter(Boolean);
+  if(needs.length)parts.push(`<div class="need">${needs.map(esc).join("<br>")}</div>`);
+  for(const{m}of legs){const g=gameFor(m);if(!g||g.state!=="in"||seen.has(g.id))continue;seen.add(g.id);
+    parts.push(sportChips(m,g)+lineScore(g)+(g.lastPlay?`<div class="lastp">Last: ${esc(g.lastPlay)}</div>`:""))}
+  return parts.length?`<div class="ldet">${parts.join("")}</div>`:""}
+// p history for the sparkline (client-side, since this page opened)
+const PHIST={};
+function recordP(k,p){if(p==null||isNaN(p))return;const h=PHIST[k]||(PHIST[k]=[]);const now=Date.now(),last=h[h.length-1];
+  if(last&&now-last.t<10000){if(h.length>1)last.p=p;return}h.push({t:now,p});if(h.length>400)h.shift()}
+function sparkSVG(k){const h=PHIST[k]||[];if(h.length<2)return`<span class="spk-empty">p history builds while this page is open</span>`;
+  const W=150,Hh=26,t0=h[0].t,t1=h[h.length-1].t||t0+1,pts=h.map(x=>`${((x.t-t0)/Math.max(1,t1-t0)*W).toFixed(1)},${((1-x.p)*Hh).toFixed(1)}`).join(" ");
+  const last=h[h.length-1].p,col=last>=0.5?"var(--win)":"var(--lose)";const mins=Math.round((t1-t0)/60000);
+  return`<svg viewBox="0 0 ${W} ${Hh}" width="${W}" height="${Hh}" class="spk"><line x1="0" x2="${W}" y1="${Hh/2}" y2="${Hh/2}" stroke="#555" stroke-dasharray="2 3"/><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6"/></svg><span class="spk-l">${Math.round(h[0].p*100)}% → ${Math.round(last*100)}% · ${mins?mins+" min":"<1 min"}</span>`}
 function legStatsFor(b){return b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}})}
 function tick1s(){if(!DATA||document.hidden)return;
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;const ls=legStatsFor(b);
     const st=LAST_STATUS[+c.dataset.bi]||"?",q=pillState(b,st,ls),pe=c.querySelector("[data-pill]");if(!pe)return;
     pe.textContent=q.txt;pe.className="pill "+cls(q.cls);c.querySelector("[data-psub]").textContent=q.sub;
+    const lv=betLive(b,st,ls);if(!lv.final&&!lv.upcoming&&lv.p!=null){recordP(c.dataset.k,lv.p);const sp=c.querySelector("[data-spk]");if(sp&&c.classList.contains("open"))sp.innerHTML=sparkSVG(c.dataset.k)}
     c.classList.remove("WINNING","LOSING","LIVE","TIED","PUSH","WON","LOST","NOT_STARTED");c.classList.add(cls(q.cls))});
   document.querySelectorAll("[data-clk]").forEach(el=>{const g=games[el.dataset.clk];if(g)el.textContent=clockText(g,el.dataset.sep||" ")});
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;let first=null;
@@ -448,11 +515,11 @@ function barsFor(b){const out=[];let mini=null;
         out.push(pmBar(L,m,g));out.push(booksBar(L,m,g));
         out.push(estOf(L,0,L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`));
         const src=legSources(b,L);if(src.length){mini=src[0].v*100;out.push(`<div class="note srcn">Pill &amp; payout use: <b data-src>${SRC_LBL[src[0].k]}</b></div>`)}}}
-    out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
   else{b.legs.forEach((L,i)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return;const ctx=` · ${esc(L.text)}`;
       out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
       out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
-    out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
   if(out.some(x=>x.includes('wp est')))out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">${EST_NOTE}</div>`);
   if(mini==null&&p)mini=p.pct;
   return{html:out.filter(Boolean).join(""),mini}}
@@ -517,6 +584,8 @@ function render(){
     if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${x.s}</span></div>`).join("")+`</div>`;
       if(g)html+=scoreBox(g)}
     else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x&&x.n)html+=`<div class="meta" style="margin-top:4px">${esc(x.n)}</div>`}
+    const anyLive=legStats.some(x=>x.g&&x.g.state==="in");
+    if(anyLive)html+=liveDetail(b,legStats)+`<div class="spkw"><span class="spk-t">Win chance since page opened</span><div data-spk>${sparkSVG(k)}</div></div>`;
     html+=BR.html+`</div></div>`;
     const gs=(b.match?[gameFor(b.match)]:b.legs.map(L=>gameFor(L.match))).filter(Boolean);
     const t=Math.min(...gs.map(g=>g.date?new Date(g.date).getTime():Infinity),Infinity);
