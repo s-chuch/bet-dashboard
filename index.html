@@ -34,6 +34,8 @@ h1{font-size:18px;margin:4px 0 2px}h2{font-size:14px;color:var(--mut);text-trans
 .wp .note{font-size:11px;color:var(--mut);margin-top:2px}
 h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .cd{font-style:normal;font-size:11px;font-weight:600;color:var(--mut);background:#1f232b;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-left:6px;letter-spacing:0;text-transform:none;font-variant-numeric:tabular-nums}.cd.busy{color:var(--win)}.cd.slow{color:var(--push)}
+.sti{font-style:normal;font-size:9px;margin-right:3px}.sti.run{color:var(--win)}.sti.pause{color:var(--push)}.sti.brk,.sti.mlb{color:var(--mut)}
+.stb{display:flex;align-items:center;gap:5px;font-size:12px;margin-top:4px}.stb .dot{width:7px;height:7px;border-radius:50%;background:var(--mut)}.stb.run .dot{background:var(--win)}.stb.pause .dot{background:var(--push)}.stb.pause{color:var(--push)}.stn{font-size:11px;color:var(--mut);margin-top:2px}
 .pos{color:var(--win)}.neg{color:var(--lose)}
 .card{padding:0;overflow:hidden;margin-bottom:6px;border-radius:10px}
 .crow{display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 10px 7px 8px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
@@ -73,12 +75,58 @@ function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
   for(const f of [t.name,t.abbr,t.short,t.location,t.nick]){const fn=norm(f);if(fn.length&&fn.join(" ")===qn.join(" "))return true}
   const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
-  return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
+  return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,lastPlay:c.situation&&c.situation.lastPlay&&c.situation.lastPlay.text||"",longDetail:st.type.detail||"",state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
     teams:c.competitors.map(x=>({name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score}))}}
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
 function gameFor(m){if(!m)return null;if(!games[m.id]&&m.snapshot)m.snapshot.id=m.id;return games[m.id]||m.snapshot}
 async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
-const CLK={};
+const CLK={}, RS={};
+// ---- game state (running / paused / between periods) tracked across fetches ----
+function pauseReason(t){t=String(t||"");
+  if(/official timeout|tv timeout|media timeout|commercial/i.test(t))return"TV timeout";
+  if(/two[- ]minute warning/i.test(t))return"Two-minute warning";
+  let m=t.match(/timeout\s*#?\d*\s*by\s+([A-Z]{2,4})/i);if(m)return`Timeout ${m[1].toUpperCase()}`;
+  if(/timeout/i.test(t))return"Timeout";
+  if(/review|challenge/i.test(t))return"Review";
+  if(/injur/i.test(t))return"Injury";
+  if(/penalty/i.test(t))return"Penalty";
+  m=t.match(/^(icing|offside|goal|puck out of play|hand pass|high stick|net off|stoppage|video review)/i);if(m)return m[1][0].toUpperCase()+m[1].slice(1).toLowerCase();
+  return"Clock stopped"}
+function breakLabel(path,d){if(/halftime/i.test(d))return"Halftime";const m=d.match(/end of (\d)(?:st|nd|rd|th)/i);
+  if(!m)return null;if(path==="hockey/nhl")return"Intermission";return`End of Q${m[1]}`}
+function observeRaw(path,old,nw,moving){
+  if(nw.completed)return{kind:"final",label:"Final"};
+  if(nw.state!=="in")return null;
+  const d=nw.longDetail||nw.detail||"";
+  if(path==="baseball/mlb"){
+    if(/pitching change|now pitching|relieved|pitching:/i.test(nw.lastPlay||""))return{kind:"mlb",label:"Pitching change"};
+    if(/^(mid|end)/i.test(nw.detail||""))return{kind:"mlb",label:"Between innings"};
+    return{kind:"mlb",label:`${nw.detail}${typeof nw.outs==="number"?` · ${nw.outs} out`:""}`}}
+  if(!CLOCK_SPORTS.has(path))return null;
+  const br=breakLabel(path,d)||(/end of|intermission/i.test(nw.detail||"")?"Intermission":null);
+  if(br)return{kind:"break",label:br};
+  if(!old||old.state!=="in"||old.period!==nw.period)return null; // no comparison possible yet
+  return moving?{kind:"run",label:"Running"}:{kind:"pause",label:"Paused",reason:pauseReason(nw.lastPlay)}}
+function observe(id,path,old,nw,moving){const o=observeRaw(path,old,nw,moving);if(!o)return;
+  const r=RS[id]||(RS[id]={conf:null,cand:null,n:0,candT:0,events:[]}),now=Date.now();
+  const same=(a,b)=>a&&b&&a.kind===b.kind&&(a.kind!=="break"||a.label===b.label);
+  if(r.conf&&same(o,r.conf)){r.conf.reason=o.reason;r.conf.label=o.label;r.cand=null;r.n=0;return}
+  if(r.cand&&same(o,r.cand)){r.n++;r.cand.reason=o.reason}else{r.cand=o;r.n=1;r.candT=now}
+  const need=(o.kind==="run"||o.kind==="pause")?2:1; // explicit ESPN states confirm at once; clock-based ones need 2 fetches
+  if(r.n>=need){const prev=r.conf;r.conf={...r.cand};r.cand=null;r.n=0;
+    if(prev&&o.kind!=="mlb"&&prev.kind!=="mlb"){const ev=o.kind==="run"?(prev.kind==="pause"?"resumed":"restarted"):o.kind==="pause"?"Paused"+(o.reason&&o.reason!=="Clock stopped"?` (${o.reason})`:""):o.label;
+      r.events.push({txt:ev,t:r.candT});r.events=r.events.slice(-4)}}}
+const tfmt=t=>new Date(t).toLocaleTimeString("en-US",{timeZone:TZ,hour:"numeric",minute:"2-digit"});
+function stInfo(g){const r=g&&RS[g.id];if(!r||!r.conf||g.state!=="in")return null;const c=r.conf;
+  if(c.kind==="run")return{cls:"run",icon:"▶",txt:"Running"};
+  if(c.kind==="pause")return{cls:"pause",icon:"⏸",txt:`Paused · ${c.reason||"Clock stopped"}`};
+  if(c.kind==="break")return{cls:"brk",icon:"◼",txt:c.label};
+  if(c.kind==="mlb")return{cls:/change|between/i.test(c.label)?"brk":"mlb",icon:/change|between/i.test(c.label)?"◼":"⚾",txt:c.label};
+  return null}
+function stIcon(g){const i=stInfo(g);return i?`<i class="sti ${i.cls}" title="${esc(i.txt)}">${i.icon}</i>`:""}
+function stBadge(g){const i=stInfo(g);if(!i)return"";const r=RS[g.id];
+  const evs=(r.events||[]).slice(-2).map((e,k)=>`${k===0?e.txt[0].toUpperCase()+e.txt.slice(1):e.txt} ${tfmt(e.t)}`).join(" · ");
+  return`<div class="stb ${i.cls}"><span class="dot"></span>${esc(i.txt)}</div>${evs?`<div class="stn">${esc(evs)}</div>`:""}`}
 const PROB_PATHS=new Set(["football/nfl","football/college-football","baseball/mlb","basketball/nba","basketball/wnba","basketball/mens-college-basketball"]);
 const probs={}, probCount={}, pregameLive={};
 let espnErr=false;
@@ -97,7 +145,7 @@ async function refreshScores(full){
     for(const ev of (d&&d.events)||[]){const old=games[ev.id],nw=fromEvent(ev);games[ev.id]=nw;
       // local clock: only run it if the last two fetches showed the clock moving (football clocks stop a lot)
       const moving=!!(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof nw.clock==="number"&&typeof old.clock==="number"&&nw.clock<old.clock&&nw.clock>0&&!/end|half|intermission|delay/i.test(nw.detail||""));
-      CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};
+      CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};observe(ev.id,m.path,old,nw,moving);
       const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
   // player props need the box score (only in-progress SGPs with a prop leg)
@@ -175,7 +223,7 @@ function fmtStart(g,raw){if(g&&g.date){const d=new Date(g.date);return d.toLocal
 function scoreBox(g){if(!g)return"";const live=g.state==="in";
   const order=[...g.teams].sort((a,b)=>a.home-b.home);
   return `<div class="score">${order.map(t=>`<div class="row"><span>${esc(t.name)}</span><b>${g.state==="pre"?"":esc(t.score)}</b></div>`).join("")}
-    <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":g.completed?esc(g.detail):`<span data-clk="${g.id}" data-sep=" - ">${esc(clockText(g," - "))}</span>`}</div></div>`}
+    <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":g.completed?esc(g.detail):`<span data-clk="${g.id}" data-sep=" - ">${esc(clockText(g," - "))}</span>`}</div>${g.completed?"":stBadge(g)}</div>`}
 
 // ===== Our estimate (NOT ESPN, NOT a sportsbook price): Pinnacle pregame no-vig inputs + live score/clock =====
 const SD={"football/nfl":[13.5,10],"football/college-football":[15,12],"basketball/nba":[12,18]};
@@ -241,12 +289,12 @@ function estLeg(L,m,g){const M=modelFor(m);if(!M||!g)return null;
 const CLOCK_SPORTS=new Set(["football/nfl","football/college-football","basketball/nba","hockey/nhl"]);
 // game with its clock run down locally since the last ESPN fetch (only when the clock was seen moving)
 function localGame(g,m){if(!g||g.state!=="in"||!m||!CLOCK_SPORTS.has(m.path))return g;const c=CLK[g.id];
-  if(!c||!c.moving||document.hidden)return g;const el=Math.min(25,(Date.now()-c.t)/1000);
+  const rs=RS[g.id];if(!c||!c.moving||document.hidden||(rs&&rs.conf&&(rs.conf.kind==="break")))return g;const el=Math.min(25,(Date.now()-c.t)/1000);
   return{...g,clock:Math.max(0,c.clock-el)}}
 const fmtClk=sec=>{sec=Math.max(0,Math.ceil(sec));return`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`};
 function clockText(g,sep){const per=String(g.detail||"").split(" - ")[1];const m={path:null};
   const c=CLK[g.id];if(!per||typeof g.clock!=="number")return String(g.detail||"").replace(" - ",sep);
-  let v=g.clock;if(c&&c.moving&&!document.hidden)v=Math.max(0,c.clock-Math.min(25,(Date.now()-c.t)/1000));
+  let v=g.clock;const rs=RS[g.id];if(c&&c.moving&&!document.hidden&&!(rs&&rs.conf&&rs.conf.kind==="break"))v=Math.max(0,c.clock-Math.min(25,(Date.now()-c.t)/1000));
   return`${fmtClk(v)}${sep}${per}`}
 function matchOfLeg(b,L){return b.match||L.match}
 // p for the expected-payout tile: Est., else ESPN (moneylines only), else pregame. null = excluded
@@ -340,7 +388,7 @@ function rowScore(b,g,legStats){
     return d.toLocaleString("en-US",{timeZone:TZ,...(today?{}:{weekday:"short"}),hour:"numeric",minute:"2-digit"})};
   const one=x=>{if(!x)return"";const aw=x.teams.find(t=>!t.home),hm=x.teams.find(t=>t.home);
     if(x.state==="pre")return `${start(x)}<small>${today(x)?"Today":"Starts"} ET</small>`;
-    return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small ${x.completed?"":`data-clk="${x.id}" data-sep=" "`}>${x.completed?"Final":esc(clockText(x," "))}</small>`};
+    return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small>${x.completed?"Final":`${stIcon(x)}<span data-clk="${x.id}" data-sep=" ">${esc(clockText(x," "))}</span>`}</small>`};
   const today=x=>etDay(Date.now())===etDay(x.date);
   if(g)return one(g);
   const gs=legStats.map(x=>x.g).filter(Boolean);if(!gs.length)return"";
