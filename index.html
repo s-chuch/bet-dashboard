@@ -69,7 +69,7 @@ function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
   for(const f of [t.name,t.abbr,t.short,t.location,t.nick]){const fn=norm(f);if(fn.length&&fn.join(" ")===qn.join(" "))return true}
   const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
-  return {date:ev.date||c.date,period:st.period,clock:st.clock,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
+  return {date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
     teams:c.competitors.map(x=>({name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score}))}}
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
 function gameFor(m){if(!m)return null;return games[m.id]||m.snapshot}
@@ -200,9 +200,10 @@ function remaining(m,g){
   if(g.state==="pre")return m.path==="baseball/mlb"?{a:9,h:9}:1;
   if(g.completed)return m.path==="baseball/mlb"?{a:0,h:0}:0;
   if(m.path==="baseball/mlb"){const k=g.period||1,d=String(g.detail||"");
-    if(/^Top/i.test(d))return{a:Math.max(0,9.5-k),h:Math.max(0,10-k)};
+    const left=typeof g.outs==="number"?(3-g.outs)/3:0.5; // share of the current half-inning still to play
+    if(/^Top/i.test(d))return{a:Math.max(0,9-k+left),h:Math.max(0,10-k)};
     if(/^Mid/i.test(d))return{a:Math.max(0,9-k),h:Math.max(0,10-k)};
-    if(/^Bot/i.test(d))return{a:Math.max(0,9-k),h:Math.max(0,9.5-k)};
+    if(/^Bot/i.test(d))return{a:Math.max(0,9-k),h:Math.max(0,9-k+left)};
     return{a:Math.max(0,9-k),h:Math.max(0,9-k)}}
   const[n,len]=PER[m.path]||[4,900];const p=g.period||1;if(p>n)return 0;
   const c=typeof g.clock==="number"?g.clock:len;return Math.max(0,Math.min(1,((n-p)*len+c)/(n*len)))}

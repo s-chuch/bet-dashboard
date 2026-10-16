@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 19:54 ET",
+     "pulled": "2026-10-15 20:10 ET",
      "ml_home": 0.386,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5158,
@@ -278,7 +278,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 19:54 ET",
+     "pulled": "2026-10-15 20:10 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -320,10 +320,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 1,
-     "clock": 478.0,
+     "clock": 70.0,
      "state": "in",
      "completed": false,
-     "detail": "7:58 - 1st",
+     "detail": "1:10 - 1st",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -341,7 +341,7 @@
        "nick": "Eagles",
        "location": "Georgia Southern",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -391,10 +391,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 1,
-     "clock": 514.0,
+     "clock": 130.0,
      "state": "in",
      "completed": false,
-     "detail": "8:34 - 1st",
+     "detail": "2:10 - 1st",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -461,11 +461,11 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 701.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/15 - 8:00 PM EDT",
+     "detail": "11:41 - 1st",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -533,11 +533,11 @@
     "id": "401892506",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 1119.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "18:39 - 2nd",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
@@ -600,11 +600,11 @@
     "id": "401892507",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 1069.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "17:49 - 2nd",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -714,12 +714,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 19:54 ET",
-     "ml_home": 0.4313,
+     "pulled": "2026-10-15 20:10 ET",
+     "ml_home": 0.4285,
      "spread_home_line": 2.5,
-     "spread_home_fair": 0.4954,
+     "spread_home_fair": 0.493,
      "total_line": 40.5,
-     "total_over_fair": 0.5023
+     "total_over_fair": 0.5046
     }
    },
    "sport": "NFL"
@@ -756,9 +756,9 @@
      "date": "2026-10-16T00:00Z",
      "period": 1,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/15 - 8:00 PM EDT",
+     "detail": "Top 1st",
      "teams": [
       {
        "name": "Los Angeles Dodgers",
@@ -826,11 +826,11 @@
     "id": "401892511",
     "snapshot": {
      "date": "2026-10-15T23:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 952.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "15:52 - 2nd",
      "teams": [
       {
        "name": "New Jersey Devils",
@@ -839,7 +839,7 @@
        "nick": "Devils",
        "location": "New Jersey",
        "home": true,
-       "score": "1"
+       "score": "3"
       },
       {
        "name": "New York Rangers",
@@ -894,11 +894,11 @@
     "id": "401860923",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 701.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/15 - 8:00 PM EDT",
+     "detail": "11:41 - 1st",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -1085,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "e983270a5339973cf5142865cfaf6153ca0142b5",
- "generated_at": "2026-10-15T19:54:55-04:00"
+ "hash": "bb9e585f5669a5cb205b035a50c121afee599245",
+ "generated_at": "2026-10-15T20:10:41-04:00"
 }
