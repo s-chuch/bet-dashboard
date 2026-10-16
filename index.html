@@ -56,6 +56,7 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .h2row h2 .hl{float:none;color:inherit;letter-spacing:inherit;text-transform:inherit}
 .sec.settled:not(.open) .xall{display:none!important}
 .sec.settled .secbody{display:none}.sec.settled.open .secbody{display:block}
+.aln{font-size:12px;color:var(--mut);margin:6px 0 2px;font-variant-numeric:tabular-nums}.srcn{font-size:11px;color:var(--mut);margin-top:2px}
 </style></head><body>
 <h1>Live Bets</h1>
 <div class="meta" id="meta">Loading…</div>
@@ -304,29 +305,95 @@ function clockText(g,sep){const per=String(g.detail||"").split(" - ")[1];const m
   let v=g.clock;const rs=RS[g.id];if(c&&c.moving&&!document.hidden&&!(rs&&rs.conf&&rs.conf.kind==="break"))v=Math.max(0,c.clock-Math.min(25,(Date.now()-c.t)/1000));
   return`${fmtClk(v)}${sep}${per}`}
 function matchOfLeg(b,L){return b.match||L.match}
+// ---------- Polymarket (CLOB mid) + Action Network live odds ----------
+const PMX={}, PMMID={}, ANG={}, pmTried={};let anAt=0, anOK=null, pmOK=null;
+const PM_PATHS=new Set(["football/nfl","football/college-football","hockey/nhl","baseball/mlb","basketball/nba"]);
+const AN_LG={"football/nfl":"nfl","football/college-football":"ncaaf","hockey/nhl":"nhl","baseball/mlb":"mlb","basketball/nba":"nba"};
+function pmOf(m){return m&&(m.pm||PMX[m.id])||null}
+function pickTeam(g,L){if(!g||!L.team)return null;const i=sideIdx(g,L.team);return i<0?null:{T:g.teams[i],O:g.teams[1-i]}}
+function pmIdx(outs,pt){const a=outs.map(o=>teamMatch(o,pt.T)&&!teamMatch(o,pt.O));return a.filter(Boolean).length===1?a.indexOf(true):-1}
+// token for the bet's own outcome; spreads/totals only when Polymarket has the exact same line
+function pmToken(L,m,g){const pm=pmOf(m);if(!pm||!g)return null;
+  if(L.type==="ml"){const pt=pickTeam(g,L);if(!pt||!pm.ml)return null;const i=pmIdx(pm.ml.outcomes,pt);return i<0?null:pm.ml.tokens[i]}
+  if(L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return null;
+    for(const x of pm.spreads||[]){const i=pmIdx(x.outcomes,pt);if(i===0&&x.line===L.line)return x.tokens[0];if(i===1&&x.line===-L.line)return x.tokens[1]}return null}
+  if(L.type==="total"){for(const x of pm.totals||[]){if(x.line!==L.line)continue;const i=x.outcomes.findIndex(o=>o.toLowerCase()===L.side);if(i>=0)return x.tokens[i]}return null}
+  return null}
+function pmVal(L,m,g){const t=pmToken(L,m,g);const q=t&&PMMID[t];if(!q||Date.now()-q.t>90000)return null;return q}
+async function pmLookup(m){pmTried[m.id]=1;const g=gameFor(m);if(!g)return;const A=g.teams.find(t=>!t.home),H=g.teams.find(t=>t.home);
+  try{for(const q of [`${A.location} ${H.location}`,`${A.nick} ${H.nick}`]){
+      const d=await getJSON("https://gamma-api.polymarket.com/public-search?limit_per_type=15&events_status=all&q="+encodeURIComponent(q));
+      for(const e of d.events||[]){if(!/^[a-z]+-[a-z0-9]+-[a-z0-9]+-\d{4}-\d{2}-\d{2}$/.test(e.slug||"")||!e.startTime)continue;
+        if(Math.abs(new Date(e.startTime)-new Date(g.date))>4*3600e3)continue;const pr=String(e.title||"").split(/\s+vs\.?\s+/);if(pr.length!==2)continue;
+        const ok=(teamMatch(pr[0],A)&&teamMatch(pr[1],H))||(teamMatch(pr[0],H)&&teamMatch(pr[1],A));if(!ok)continue;
+        const full=(await getJSON("https://gamma-api.polymarket.com/events?slug="+e.slug))[0]||e;const J=x=>{try{return typeof x==="string"?JSON.parse(x):(x||[])}catch(_){return[]}};
+        const pm={slug:e.slug,spreads:[],totals:[]};for(const mk of full.markets||[]){const t=mk.sportsMarketType,tk=J(mk.clobTokenIds),o=J(mk.outcomes);if(tk.length!==2||o.length!==2)continue;
+          if(t==="moneyline"&&!pm.ml)pm.ml={outcomes:o,tokens:tk};else if(t==="spreads"&&mk.line!=null)pm.spreads.push({line:+mk.line,outcomes:o,tokens:tk});else if(t==="totals"&&mk.line!=null)pm.totals.push({line:+mk.line,outcomes:o,tokens:tk})}
+        if(pm.ml){PMX[m.id]=pm;return}}}}catch(e){}}
+function pmWanted(m,g){return g&&!g.completed&&(g.state==="in"||new Date(g.date)-Date.now()<3*3600e3)}
+async function refreshPM(){const toks=new Set();
+  for(const b of DATA.open)for(const L of b.legs){const m=matchOfLeg(b,L),g=gameFor(m);if(!m||!PM_PATHS.has(m.path)||!pmWanted(m,g))continue;
+    if(!pmOf(m)&&!pmTried[m.id])await pmLookup(m);const t=pmToken(L,m,g);if(t)toks.add(t)}
+  if(!toks.size)return;const body=JSON.stringify([...toks].map(t=>({token_id:t})));
+  try{const [a,c]=await Promise.all(["midpoints","spreads"].map(e=>fetch("https://clob.polymarket.com/"+e,{method:"POST",body,cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})));
+    const now=Date.now();for(const t of toks)if(a[t]!=null)PMMID[t]={mid:+a[t],spread:c[t]!=null?+c[t]:null,t:now};pmOK=true}catch(e){pmOK=false}}
+async function refreshAN(){if(Date.now()-anAt<29000)return;anAt=Date.now();const ids=new Set();
+  for(const m of allMatches()){const g=gameFor(m);if(m.an&&g&&g.state==="in"&&!g.completed)ids.add(m.an.id)}
+  await Promise.all([...ids].map(async id=>{try{const d=await getJSON(`https://api.actionnetwork.com/web/v2/games/${id}/polling?bookIds=15,30,68,69,71,75,79,123,247`);ANG[id]={mk:d.markets||{},t:Date.now()};anOK=true}catch(e){anOK=false}}))}
+const ip=o=>o<0?-o/(-o+100):100/(o+100);
+const fmtO=o=>o>0?"+"+o:"−"+Math.abs(o);
+const BKN={15:"Consensus",68:"DK",69:"FD",79:"365",123:"CZR"};
+function anLive(m){const a=m&&m.an&&ANG[m.an.id];if(!a||Date.now()-a.t>120000)return null;return a.mk}
+// live entries for this leg's own side: [{book, odds, value, opp}] ; exact=true keeps only his line
+function anSide(L,m,g,book){const mk=anLive(m);if(!mk||!mk[book])return null;const ev=mk[book].event||{};
+  let side,arr;if(L.type==="total"){side=L.side;arr=(ev.total||[]).filter(x=>x.is_live)}
+  else{const pt=pickTeam(g,L);if(!pt)return null;side=pt.T.home?"home":"away";arr=(ev[L.type==="ml"?"moneyline":"spread"]||[]).filter(x=>x.is_live)}
+  const mine=arr.find(x=>x.side===side);if(!mine)return null;const opp=arr.find(x=>x.side!==side&&(L.type==="ml"||Math.abs(x.value)===Math.abs(mine.value)));
+  return{odds:mine.odds,value:mine.value,opp:opp&&opp.odds}}
+function nv(x){return x&&x.opp!=null?ip(x.odds)/(ip(x.odds)+ip(x.opp)):null}
+// Books (no-vig): consensus live line; spreads/totals only at his exact line
+function booksP(L,m,g){if(!["ml","spread","total"].includes(L.type))return null;
+  const exact=x=>L.type==="ml"||(x&&(L.type==="total"?x.value===L.line:x.value===L.line));
+  for(const bk of [15,68,69,123,79]){const x=anSide(L,m,g,bk);if(x&&exact(x)){const v=nv(x);if(v!=null)return{v,book:bk}}}return null}
+function anText(L,m,g){if(!["ml","spread","total"].includes(L.type))return"";const parts=[];
+  for(const bk of [68,69,79,123,15]){const x=anSide(L,m,g,bk);if(!x)continue;
+    const ln=L.type==="ml"?"":L.type==="spread"?fmtLine(x.value)+" ":(L.side==="over"?"O":"U")+x.value+" ";parts.push(`${BKN[bk]} ${ln}${fmtO(x.odds)}`)}
+  return parts.length?"Live: "+parts.join(" · "):""}
+// ordered probability sources for one leg (first = the one used for pill + payout)
+function legSources(b,L){const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return[];const out=[],live=g.state==="in";
+  const pmq=pmVal(L,m,g);
+  const pmOk=pmq&&(pmq.spread==null||pmq.spread<=0.1);
+  if(L.type==="ml"){
+    if(live&&pmOk)out.push({k:"pm",v:pmq.mid});
+    const bp=live&&booksP(L,m,g);if(bp)out.push({k:"books",v:bp.v,book:bp.book});
+    const e=estLeg(L,m,localGame(g,m));if(e!=null)out.push({k:"est",v:e});
+    if(live&&probs[m.id]){const pt=pickTeam(g,L);if(pt){const pr=probs[m.id];out.push({k:"espn",v:pt.T.home?pr.home:(pr.away!=null?pr.away:1-pr.home)})}}
+    if(!live){const pg=pregameLive[m.id]||m.pregame,pt=pickTeam(g,L);if(pg&&pt)out.push({k:"pre",v:(pt.T.home?pg.home:pg.away)/100})}}
+  else if(L.type==="spread"||L.type==="total"){
+    const bp=live&&booksP(L,m,g);if(bp)out.push({k:"books",v:bp.v,book:bp.book});
+    const e=estLeg(L,m,localGame(g,m));if(e!=null)out.push({k:"est",v:e})}
+  return out}
+const SRC_LBL={pm:"Polymarket",books:"Books (no-vig)",est:"Est.",espn:"ESPN",pre:"ESPN pregame"};
 // p for the expected-payout tile: Est., else ESPN (moneylines only), else pregame. null = excluded
 function payoutP(b,status){
   if(status==="WON")return 1;if(status==="LOST")return 0;
   if(b.multi)return null; // correlated legs: no honest single number
   const L=b.legs[0];if(!L)return null;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
   if(g.completed&&status==="PUSH")return "push";
-  const e=estLeg(L,m,localGame(g,m));if(e!=null)return e;
+  const src=legSources(b,L);if(src.length)return src[0].v;
   const p=probFor(b);if(p&&p.ml)return p.pct/100;return null}
 let LAST_STATUS={};
 // ---- bet-level live pill: from the bet's own win probability, not "cashes if it ended now" ----
 const SCORE_SUB={WINNING:"cashes at current score",LOSING:"needs more at current score",TIED:"tied at current score",PUSH:"push at current score"};
 function legP(b,L,st){if(st==="WON")return 1;if(st==="LOST")return 0;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
-  const e=estLeg(L,m,localGame(g,m));if(e!=null)return e;
   if(L.type==="prop")return 0.5;                       // no model for player props: coin flip
-  if(L.type==="ml"&&g.state==="in"&&probs[m.id]){const i=sideIdx(g,L.team);if(i<0)return null;const pr=probs[m.id];
-    return g.teams[i].home?pr.home:(pr.away!=null?pr.away:1-pr.home)}
-  return null}
+  const src=legSources(b,L).filter(x=>x.k!=="pre");return src.length?src[0].v:null}
 function betLive(b,status,legStats){
   const gs=legStats.map(x=>x.g).filter(Boolean);const allFinal=gs.length&&gs.length===b.legs.length&&gs.every(g=>g.completed);
   if(status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal)||allFinal)return{final:true};
   if(!gs.some(g=>g.state==="in"))return{upcoming:true};
   let p;if(b.multi){p=1;for(const x of legStats){const v=legP(b,x.L,x.s);if(v==null){p=null;break}p*=v}}
-  else{const x=legStats[0];p=x?legP(b,x.L,x.s):null;if(x&&x.L.type!=="ml"&&p!=null&&estLeg(x.L,matchOfLeg(b,x.L),gameFor(matchOfLeg(b,x.L)))==null)p=null}
+  else{const x=legStats[0];p=x?legP(b,x.L,x.s):null}
   return{p,approx:b.multi,sub:b.multi?null:SCORE_SUB[legStats[0]&&legStats[0].s]||null}}
 function pillState(b,status,legStats){const v=betLive(b,status,legStats);
   if(v.final)return{cls:status,txt:status,sub:""};
@@ -349,6 +416,7 @@ function tick1s(){if(!DATA||document.hidden)return;
       const v=estLeg(L,m,localGame(g,m));if(v==null)return;const pct=Math.max(0,Math.min(100,v*100));if(first==null)first=pct;
       const col=pct>50?"var(--win)":pct<50?"var(--lose)":"var(--push)";const f=w.querySelector(".fill");f.style.width=pct+"%";f.style.background=col;
       w.querySelector(".lbl b").textContent=pct.toFixed(1)+"%"});
+    if(!b.multi&&b.legs[0]){const src=legSources(b,b.legs[0]);first=src.length?src[0].v*100:null;const se=c.querySelector("[data-src]");if(se&&src.length)se.textContent=SRC_LBL[src[0].k]}
     const mini=c.querySelector(".mini");if(mini&&!b.multi&&first!=null){mini.style.width=first+"%";mini.style.background=first>50?"var(--win)":first<50?"var(--lose)":"var(--push)"}});
   // probability-weighted payout (estimate)
   let exp=0,maxp=0,stk=0,excl=0;
@@ -362,18 +430,32 @@ function bar(label,v,cls2,note,attr){v=Math.max(0,Math.min(100,v));const col=v>5
   return`<div class="wp ${cls2||""}" ${attr||""}><div class="lbl"><span>${label}</span><b>${v.toFixed(1)}%</b></div><div class="track"><div class="fill" style="width:${v}%;background:${col}"></div></div>${note?`<div class="note">${note}</div>`:""}</div>`}
 const EST_NOTE="Est. = our own estimate from Pinnacle pregame no-vig prices + the live score/clock. Not an ESPN or sportsbook number.";
 // all bars for a card + the single value used for the collapsed row
+function pmBar(L,m,g,ctx){const q=pmVal(L,m,g);if(!q)return"";const live=g.state==="in",wide=q.spread!=null&&q.spread>0.1;
+  const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:`${esc(L.text)} (same line)`;
+  const note=`Polymarket mid${q.spread!=null?` · spread ${(q.spread*100).toFixed(1)}¢`:""}${wide?" · thin market, not used":""}${!live?" · pregame":""}${L.type!=="ml"?" · display only":""}`;
+  return bar(`Polymarket${ctx||""} · ${what}`,q.mid*100,"pmb",note)}
+function booksBar(L,m,g,ctx){if(g.state!=="in")return"";const bp=booksP(L,m,g);if(!bp)return"";
+  const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:L.type==="spread"?`${esc(L.text)} covers`:`${esc(L.text)} hits`;
+  return bar(`Books (no-vig)${ctx||""} · ${what}`,bp.v*100,"bkb",`${bp.book===15?"Action Network consensus":BKN[bp.book]} live line, vig removed${L.type!=="ml"?" · at your exact line":""}`)}
+function liveLine(L,m,g){if(!g||g.state!=="in")return"";const t=anText(L,m,g);return t?`<div class="aln">${esc(t)}</div>`:""}
+// all bars for a card + the single value used for the collapsed row (top-priority source)
 function barsFor(b){const out=[];let mini=null;
   const p=probFor(b);
-  const g0=b.match?gameFor(b.match):null;
-  const legsEst=b.legs.map(L=>{const m=b.match||L.match,g=gameFor(m);if(!g||g.completed)return null;const v=estLeg(L,m,localGame(g,m));return v==null?null:{L,v}});
-  if(p)out.push(bar(`ESPN · ${esc(p.label)}`,p.pct,"",p.ml?(p.kind==="pregame"?"ESPN pregame predictor":"ESPN live win probability"):(b.multi?"ESPN game-win chance for that team only, not the parlay's chance":"ESPN chance to win the game, not to cover")));
-  if(!b.multi){const e=legsEst[0];if(e){const L=e.L;
-      const lbl=L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`;
-      out.push(bar(lbl,e.v*100,"est","",`data-leg="0"`));mini=e.v*100}}
-  else legsEst.forEach(e=>{if(!e)return;const L=e.L;out.push(bar(`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`,e.v*100,"est","",`data-leg="${b.legs.indexOf(L)}"`))});
+  const espnBar=()=>p?bar(`ESPN · ${esc(p.label)}`,p.pct,"",p.ml?(p.kind==="pregame"?"ESPN pregame predictor":"ESPN live win probability"):(b.multi?"ESPN game-win chance for that team only, not the parlay's chance":"ESPN chance to win the game, not to cover")):"";
+  const estOf=(L,i,lbl)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return"";const v=estLeg(L,m,localGame(g,m));return v==null?"":bar(lbl,v*100,"est","",`data-leg="${i}"`)};
+  if(!b.multi){const L=b.legs[0];if(L){const m=matchOfLeg(b,L),g=gameFor(m);
+      if(g&&!g.completed){out.push(liveLine(L,m,g));
+        out.push(pmBar(L,m,g));out.push(booksBar(L,m,g));
+        out.push(estOf(L,0,L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`));
+        const src=legSources(b,L);if(src.length){mini=src[0].v*100;out.push(`<div class="note srcn">Pill &amp; payout use: <b data-src>${SRC_LBL[src[0].k]}</b></div>`)}}}
+    out.push(espnBar())}
+  else{b.legs.forEach((L,i)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return;const ctx=` · ${esc(L.text)}`;
+      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
+      out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
+    out.push(espnBar())}
   if(out.some(x=>x.includes('wp est')))out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">${EST_NOTE}</div>`);
   if(mini==null&&p)mini=p.pct;
-  return{html:out.join(""),mini}}
+  return{html:out.filter(Boolean).join(""),mini}}
 const BOOKS={PointsBet:"PB",Caesars:"CZR",FanDuel:"FD",DraftKings:"DK",bet365:"365",theScore:"SCORE","Hard Rock":"HR",BetMGM:"MGM"};
 const bookTag=b=>BOOKS[b]||b;
 const cardKey=b=>[b.date,b.book,b.event,b.pick].join("|");
@@ -474,7 +556,7 @@ function render(){
 let FAST=10000, fastTimer=null, loading=false;
 async function loadData(){try{DATA=await getJSON("data.json?t="+Date.now())}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
 async function fastTick(full){clearTimeout(fastTimer);if(!DATA||loading)return schedule();loading=true;espnErr=false;tickCD();
-  try{await refreshScores(full);await refreshProbs();if(full)await refreshPregame()}finally{loading=false}
+  try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
   FAST=espnErr?30000:10000;render();schedule()}
 let nextAt=0;
 function schedule(){clearTimeout(fastTimer);if(!document.hidden){nextAt=Date.now()+FAST;fastTimer=setTimeout(()=>fastTick(false),FAST)}tickCD()}
