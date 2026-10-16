@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:12 ET",
+     "pulled": "2026-10-15 22:13 ET",
      "ml_home": 0.3831,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5113,
@@ -278,7 +278,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:12 ET",
+     "pulled": "2026-10-15 22:13 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -391,10 +391,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 4,
-     "clock": 778.0,
+     "clock": 737.0,
      "state": "in",
      "completed": false,
-     "detail": "12:58 - 4th",
+     "detail": "12:17 - 4th",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -462,10 +462,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 815.0,
+     "clock": 809.0,
      "state": "in",
      "completed": false,
-     "detail": "13:35 - 3rd",
+     "detail": "13:29 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -483,7 +483,7 @@
        "nick": "Rams",
        "location": "Colorado State",
        "home": false,
-       "score": "21"
+       "score": "27"
       }
      ]
     },
@@ -510,11 +510,11 @@
    "market": "Moneyline (WELCOMEDM rollover)",
    "pick": "Toronto Maple Leafs",
    "start": "Thu Oct 15 07:00 PM ET",
-   "price": "unconfirmed",
+   "price": "-125",
    "boosted_price": "",
    "stake": 25.0,
    "stake_note": "",
-   "to_win": null,
+   "to_win": 20.0,
    "ev_pct": "",
    "multi": false,
    "legs": [
@@ -895,10 +895,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 815.0,
+     "clock": 809.0,
      "state": "in",
      "completed": false,
-     "detail": "13:35 - 3rd",
+     "detail": "13:29 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -916,7 +916,7 @@
        "nick": "Rams",
        "location": "Colorado State",
        "home": false,
-       "score": "21"
+       "score": "27"
       }
      ]
     },
@@ -1085,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "dba2363cd7ae93b429b20148e9dfbcf66eb1d330",
- "generated_at": "2026-10-15T22:12:33-04:00"
+ "hash": "24efe5319413d1785a60462e3c48703a1a99d29a",
+ "generated_at": "2026-10-15T22:13:20-04:00"
 }
