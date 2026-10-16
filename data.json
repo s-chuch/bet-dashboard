@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:10 ET",
+     "pulled": "2026-10-15 22:12 ET",
      "ml_home": 0.3831,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5113,
@@ -278,7 +278,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:10 ET",
+     "pulled": "2026-10-15 22:12 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -320,10 +320,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 3,
-     "clock": 80.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "1:20 - 3rd",
+     "detail": "End of 3rd",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -391,10 +391,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 4,
-     "clock": 861.0,
+     "clock": 778.0,
      "state": "in",
      "completed": false,
-     "detail": "14:21 - 4th",
+     "detail": "12:58 - 4th",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -462,10 +462,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 891.0,
+     "clock": 815.0,
      "state": "in",
      "completed": false,
-     "detail": "14:51 - 3rd",
+     "detail": "13:35 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -758,7 +758,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 6th",
+     "detail": "Mid 6th",
      "teams": [
       {
        "name": "Los Angeles Dodgers",
@@ -803,11 +803,11 @@
    "market": "ML (100% profit boost)",
    "pick": "New York Rangers",
    "start": "Thu Oct 15 07:00 PM ET",
-   "price": "unconfirmed",
-   "boosted_price": "unconfirmed",
+   "price": "+112",
+   "boosted_price": "+224",
    "stake": 25.0,
    "stake_note": "",
-   "to_win": null,
+   "to_win": 56.0,
    "ev_pct": "",
    "multi": false,
    "legs": [
@@ -895,10 +895,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 891.0,
+     "clock": 815.0,
      "state": "in",
      "completed": false,
-     "detail": "14:51 - 3rd",
+     "detail": "13:35 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -1085,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "185b9224d22bedbc793b12772abf4e2b9d04455a",
- "generated_at": "2026-10-15T22:10:59-04:00"
+ "hash": "dba2363cd7ae93b429b20148e9dfbcf66eb1d330",
+ "generated_at": "2026-10-15T22:12:33-04:00"
 }
