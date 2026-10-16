@@ -53,6 +53,8 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .h2row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:18px 2px 8px}.h2row h2{margin:0;flex:1}
 .h2row h2.sechead{cursor:pointer}.h2row h2 .chev{display:inline-block;margin-right:4px}.sec.open .h2row h2 .chev{transform:rotate(90deg)}
 .xall{background:none;border:1px solid var(--line);color:var(--mut);border-radius:999px;font-size:11px;padding:4px 10px;flex-shrink:0}
+.h2row h2 .hl{float:none;color:inherit;letter-spacing:inherit;text-transform:inherit}
+.sec.settled:not(.open) .xall{display:none!important}
 .sec.settled .secbody{display:none}.sec.settled.open .secbody{display:block}
 </style></head><body>
 <h1>Live Bets</h1>
@@ -61,8 +63,8 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 <div class="sum" id="sum"></div>
 <div class="sec" id="sec-live"><div class="h2row"><h2>Live now <span id="liveN"></span> <em id="cd" class="cd"></em></h2><button class="xall" data-sec="sec-live"></button></div><div class="secbody"><div id="live"></div></div></div>
 <div class="sec" id="sec-up"><div class="h2row"><h2>Upcoming <span id="upN"></span></h2><button class="xall" data-sec="sec-up"></button></div><div class="secbody"><div id="bets"></div></div></div>
-<div class="sec settled" id="sec-won"><div class="h2row"><h2 class="sechead" data-sec="sec-won"><span class="chev">›</span>Won / Push <span id="wonTot"></span></h2><button class="xall" data-sec="sec-won"></button></div><div class="secbody"><div id="wonCards"></div><div id="won"></div></div></div>
-<div class="sec settled" id="sec-lost"><div class="h2row"><h2 class="sechead" data-sec="sec-lost"><span class="chev">›</span>Lost <span id="lostTot"></span></h2><button class="xall" data-sec="sec-lost"></button></div><div class="secbody"><div id="lostCards"></div><div id="lost"></div></div></div>
+<div class="sec settled" id="sec-won"><div class="h2row"><h2 class="sechead" data-sec="sec-won"><span class="chev">›</span><span class="hl" id="wonHead">Won / Push</span></h2><button class="xall" data-sec="sec-won"></button></div><div class="secbody"><div id="wonCards"></div><div id="won"></div></div></div>
+<div class="sec settled" id="sec-lost"><div class="h2row"><h2 class="sechead" data-sec="sec-lost"><span class="chev">›</span><span class="hl" id="lostHead">Lost</span></h2><button class="xall" data-sec="sec-lost"></button></div><div class="secbody"><div id="lostCards"></div><div id="lost"></div></div></div>
 <script>
 const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
 const TZ="America/Toronto";
@@ -375,9 +377,9 @@ function barsFor(b){const out=[];let mini=null;
 const BOOKS={PointsBet:"PB",Caesars:"CZR",FanDuel:"FD",DraftKings:"DK",bet365:"365",theScore:"SCORE","Hard Rock":"HR",BetMGM:"MGM"};
 const bookTag=b=>BOOKS[b]||b;
 const cardKey=b=>[b.date,b.book,b.event,b.pick].join("|");
-let OPEN=new Set(), SECS=new Set();
-try{OPEN=new Set(JSON.parse(localStorage.getItem("bd_open")||"[]"));SECS=new Set(JSON.parse(localStorage.getItem("bd_secs")||"[]"))}catch(e){}
-const saveUI=()=>{try{localStorage.setItem("bd_open",JSON.stringify([...OPEN]));localStorage.setItem("bd_secs",JSON.stringify([...SECS]))}catch(e){}};
+let OPEN=new Set(), SECS=new Set(), FINSEEN=new Set();
+try{OPEN=new Set(JSON.parse(localStorage.getItem("bd_open")||"[]"));SECS=new Set(JSON.parse(localStorage.getItem("bd_secs")||"[]"));FINSEEN=new Set(JSON.parse(localStorage.getItem("bd_fin")||"[]"))}catch(e){}
+const saveUI=()=>{try{localStorage.setItem("bd_open",JSON.stringify([...OPEN]));localStorage.setItem("bd_secs",JSON.stringify([...SECS]));localStorage.setItem("bd_fin",JSON.stringify([...FINSEEN].slice(-200)))}catch(e){}};
 const fmtLine=v=>(v>0?"+":"")+v;
 function shortLabel(b,g){
   const team=t=>{if(!g)return null;const i=sideIdx(g,t);return i<0?null:g.teams[i]};
@@ -440,9 +442,10 @@ function render(){
     const graded=status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal);
     if(!graded){openN++;atRisk+=b.stake||0;if(b.to_win!=null)potPay+=(b.stake||0)+b.to_win;else potTBC++}
     else if(b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
-    if(status==="LOST"){lostCards.push(html);lostPending+=b.stake||0}
+    const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
+    if(status==="LOST"){toFinal();lostCards.push(html);lostPending+=b.stake||0}
     else if(gs.some(g=>g.state==="in"))liveCards.push(html);
-    else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){wonCards.push(html);if(status==="WON")wonPending+=b.to_win||0}
+    else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){toFinal();wonCards.push(html);if(status==="WON")wonPending+=b.to_win||0}
     else upCards.push({html,t})});
   upCards.sort((a,b)=>a.t-b.t);
   for(const x of D.settled_recent||[])if(x.date===TODAY&&x.pnl!=null)tonight+=x.pnl;
@@ -456,11 +459,13 @@ function render(){
   const st=D.settled_recent||[], lostS=st.filter(s=>/lost|loss/i.test(s.result)), wonS=st.filter(s=>!/lost|loss/i.test(s.result));
   const wonSum=wonS.reduce((a,s)=>a+(s.pnl||0),0), lostSum=lostS.reduce((a,s)=>a-(s.pnl||0),0);
   $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+wonS.map(row).join("")||(wonCards.length?"":'<div class="meta">None in the last 2 days.</div>');
-  $("wonTot").textContent=wonS.length?`+${money(wonSum)}`:"";
+  const wonN=wonCards.length+wonS.length,wonAll=wonSum+wonPending;
+  $("wonHead").textContent=`Won / Push · ${wonN} · +${money(wonAll)}`;
   $("lostCards").innerHTML=lostCards.length?`<div class="meta" style="margin:0 2px 6px">Graded LOST live, not settled in the tracker yet</div>`+lostCards.join(""):"";
   $("lost").innerHTML=(lostS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+lostS.map(row).join("")||(lostCards.length?"":'<div class="meta">None in the last 2 days.</div>');
   const lostTotal=lostSum+lostPending;
-  $("lostTot").textContent=lostTotal?`−${money(lostTotal)}`+(lostPending?` (incl. ${money(lostPending)} unsettled)`:""):"";
+  $("lostHead").textContent=`Lost · ${lostCards.length+lostS.length} · −${money(lostTotal)}`;
+  $("lostHead").title=lostPending?`incl. ${money(lostPending)} not yet settled in the tracker`:"";
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
   syncUI();tick1s();
