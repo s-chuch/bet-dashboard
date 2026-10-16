@@ -21,6 +21,11 @@
    "updated": "2026-10-15"
   },
   {
+   "book": "BetGuard",
+   "balance": 54.83,
+   "updated": "2026-10-16"
+  },
+  {
    "book": "DraftKings",
    "balance": 50.41,
    "updated": "2026-10-16"
@@ -36,7 +41,7 @@
    "updated": "2026-10-14"
   }
  ],
- "total": 717.57,
+ "total": 772.4,
  "open": [
   {
    "date": "2026-10-13",
@@ -206,7 +211,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.4185,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.509,
@@ -862,7 +867,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.2193,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1518,7 +1523,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.8876,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5169,
@@ -2394,7 +2399,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.8876,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5169,
@@ -3270,7 +3275,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.8841,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.491,
@@ -4146,7 +4151,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.8978,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5030,7 +5035,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.657,
      "spread_home_line": -5.0,
      "spread_home_fair": 0.5146,
@@ -5814,7 +5819,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.5,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.7049,
@@ -5948,11 +5953,11 @@
     "id": "401862801",
     "snapshot": {
      "date": "2026-10-16T23:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 822.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/16 - 7:30 PM EDT",
+     "detail": "13:42 - 1st",
      "teams": [
       {
        "name": "Tulane Green Wave",
@@ -6666,7 +6671,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.4185,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.509,
@@ -7332,7 +7337,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
+     "pulled": "2026-10-16 19:38 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -8033,11 +8038,11 @@
     "id": "401862801",
     "snapshot": {
      "date": "2026-10-16T23:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 822.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/16 - 7:30 PM EDT",
+     "detail": "13:42 - 1st",
      "teams": [
       {
        "name": "Tulane Green Wave",
@@ -8717,12 +8722,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
-     "ml_home": 0.5499,
+     "pulled": "2026-10-16 19:38 ET",
+     "ml_home": 0.5564,
      "spread_home_line": -2.0,
-     "spread_home_fair": 0.5087,
+     "spread_home_fair": 0.5152,
      "total_line": 228.5,
-     "total_over_fair": 0.514
+     "total_over_fair": 0.5152
     },
     "pm": {
      "slug": "nba-cha-mem-2026-10-16",
@@ -8827,6 +8832,316 @@
    ],
    "match": null,
    "sport": null
+  },
+  {
+   "date": "2026-10-16",
+   "book": "BetGuard",
+   "event": "Man City vs Ipswich Town",
+   "market": "SGP 3-leg (50% profit boost)",
+   "pick": "Haaland AGS + Man City ML + Cherki score or assist",
+   "start": "Sat Oct 17 10:00 AM ET",
+   "price": "+110",
+   "boosted_price": "+165",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.33,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Haaland AGS"
+    },
+    {
+     "type": "ml",
+     "team": "Man City",
+     "women": false,
+     "text": "Man City ML"
+    },
+    {
+     "type": "unknown",
+     "text": "Cherki score or assist"
+    }
+   ],
+   "match": null,
+   "sport": null
+  },
+  {
+   "date": "2026-10-16",
+   "book": "BetGuard",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "market": "SGP 3-leg (50% profit boost)",
+   "pick": "Over 4.5 runs + Guardians +2.5 + Yandy Diaz U0.5 doubles",
+   "start": "Fri Oct 16 08:00 PM ET",
+   "price": "+105",
+   "boosted_price": "+155",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.31,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Over 4.5 runs"
+    },
+    {
+     "type": "spread",
+     "team": "Guardians",
+     "line": 2.5,
+     "women": false,
+     "text": "Guardians +2.5",
+     "team_ok": true
+    },
+    {
+     "type": "unknown",
+     "text": "Yandy Diaz U0.5 doubles"
+    }
+   ],
+   "match": {
+    "path": "baseball/mlb",
+    "date": "20261016",
+    "groups": null,
+    "id": "401908026",
+    "snapshot": {
+     "date": "2026-10-17T00:00Z",
+     "period": 1,
+     "clock": 0.0,
+     "state": "in",
+     "completed": false,
+     "detail": "Delayed, Top 1st",
+     "teams": [
+      {
+       "name": "Cleveland Guardians",
+       "abbr": "CLE",
+       "short": "Guardians",
+       "nick": "Guardians",
+       "location": "Cleveland",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Tampa Bay Rays",
+       "abbr": "TB",
+       "short": "Rays",
+       "nick": "Rays",
+       "location": "Tampa Bay",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    },
+    "pregame": {
+     "home": 53.1,
+     "away": 46.9
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-16 18:18 ET",
+     "ml_home": 0.4882,
+     "spread_home_line": 1.5,
+     "spread_home_fair": 0.6363,
+     "total_line": 6.5,
+     "total_over_fair": 0.4875
+    },
+    "pm": {
+     "slug": "mlb-tb-cle-2026-10-16",
+     "title": "Tampa Bay Rays vs. Cleveland Guardians",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Tampa Bay Rays",
+        "Cleveland Guardians"
+       ],
+       "tokens": [
+        "101867079552829009546135859751922260332480365245008305067088407720019685440649",
+        "105151207919204185360670045296299780840738350071958873819070538199461949376292"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "50824091753291927896608461590664729764622122887104717582516860127025566121702",
+        "58145089060579268006312975943537519346796193820160434129465985874901730671869"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Tampa Bay Rays",
+       "Cleveland Guardians"
+      ],
+      "tokens": [
+       "91683183963257916680594532559326295765393957646687893681765316288063853356557",
+       "99570794046264010626030442529177831454269863205377409076937872789021409019328"
+      ]
+     }
+    },
+    "an": {
+     "id": 303428,
+     "home_team_id": 193,
+     "away_team_id": 189
+    }
+   },
+   "sport": "MLB"
+  },
+  {
+   "date": "2026-10-16",
+   "book": "BetGuard",
+   "event": "Pittsburgh Penguins @ Colorado Avalanche",
+   "market": "SGP 3-leg (30% profit boost)",
+   "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
+   "start": "Fri Oct 16 09:07 PM ET",
+   "price": "+105",
+   "boosted_price": "+137",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.27,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Makar 1+ pts"
+    },
+    {
+     "type": "unknown",
+     "text": "MacKinnon 2+ pts"
+    },
+    {
+     "type": "unknown",
+     "text": "Kadri 1+ pts"
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261016",
+    "groups": null,
+    "id": "401892517",
+    "snapshot": {
+     "date": "2026-10-17T01:00Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/16 - 9:00 PM EDT",
+     "teams": [
+      {
+       "name": "Colorado Avalanche",
+       "abbr": "COL",
+       "short": "Avalanche",
+       "nick": "Avalanche",
+       "location": "Colorado",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "name": "Pittsburgh Penguins",
+       "abbr": "PIT",
+       "short": "Penguins",
+       "nick": "Penguins",
+       "location": "Pittsburgh",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-16 19:38 ET",
+     "ml_home": 0.6495,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.4335,
+     "total_line": 6.5,
+     "total_over_fair": 0.5437
+    },
+    "pm": {
+     "slug": "nhl-pit-col-2026-10-16",
+     "title": "Penguins vs. Avalanche",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Avalanche",
+        "Penguins"
+       ],
+       "tokens": [
+        "54016772602102979933493206293130148209795486008278946060468997064628381614635",
+        "15253462418351599386442072361961471458940528609177788434329203700097286152740"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 4.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "86055566919111167995083014289648341482809230108791295130316535566770605410046",
+        "2837870765390334599650906875962477953004335728503666330050266114276678699614"
+       ]
+      },
+      {
+       "line": 5.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "49024099639487435518364531439722490907656541470311111727653534579939346739086",
+        "94104042785715783845536560182296859443801143493415880020435730077457961618007"
+       ]
+      },
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "49571576369408560779463400848309292388205105218539071205777551758094448043677",
+        "47105123518192148713560550453255711543833438593571082100359596138915136527276"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "81042701402588946706604267234272872553134105890233068312959361287410125468094",
+        "57560764544291816900830932183362989484050587862619590096901398216907710299845"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Penguins",
+       "Avalanche"
+      ],
+      "tokens": [
+       "18641740125891299262832159812080265362994506616882287396794855563483563930956",
+       "83078350177187999027684476436069896002803028439032540133799192324515265579018"
+      ]
+     }
+    },
+    "an": {
+     "id": 293417,
+     "home_team_id": 225,
+     "away_team_id": 246
+    }
+   },
+   "sport": "NHL"
   }
  ],
  "settled_recent": [
@@ -8968,7 +9283,7 @@
   }
  ],
  "pnl_total": 176.07,
- "open_stake": 26.4,
- "hash": "75cc5007b5a0d524eaab1940c81e73062442fe51",
- "generated_at": "2026-10-16T19:28:09-04:00"
+ "open_stake": 27.0,
+ "hash": "c0d2012aba23a05b860187b3a16431edfc7c2432",
+ "generated_at": "2026-10-16T19:38:50-04:00"
 }
