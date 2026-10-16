@@ -2,7 +2,7 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 226.0,
+   "balance": 227.36,
    "updated": "2026-10-16"
   },
   {
@@ -36,7 +36,7 @@
    "updated": "2026-10-14"
   }
  ],
- "total": 697.99,
+ "total": 699.35,
  "open": [
   {
    "date": "2026-10-13",
@@ -201,15 +201,15 @@
      ]
     },
     "pregame": {
-     "home": 48.5,
-     "away": 51.5
+     "home": 48.6,
+     "away": 51.4
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 00:57 ET",
-     "ml_home": 0.3831,
+     "pulled": "2026-10-16 09:34 ET",
+     "ml_home": 0.3845,
      "spread_home_line": 3.5,
-     "spread_home_fair": 0.5113,
+     "spread_home_fair": 0.5146,
      "total_line": 50.5,
      "total_over_fair": 0.4911
     },
@@ -857,12 +857,12 @@
      ]
     },
     "pregame": {
-     "home": 21.8,
-     "away": 78.2
+     "home": 20.8,
+     "away": 79.2
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 00:57 ET",
+     "pulled": "2026-10-16 09:34 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -1597,6 +1597,6 @@
  ],
  "pnl_total": 176.07,
  "open_stake": 1.32,
- "hash": "f792066533057649eff1839263946c44b77b0d9b",
- "generated_at": "2026-10-16T00:57:21-04:00"
+ "hash": "ad3eba33a11c2b709be37bbd689858d5a94d7432",
+ "generated_at": "2026-10-16T09:35:00-04:00"
 }
