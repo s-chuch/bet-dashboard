@@ -22,8 +22,8 @@
   },
   {
    "book": "DraftKings",
-   "balance": 51.0,
-   "updated": "2026-10-14"
+   "balance": 50.41,
+   "updated": "2026-10-16"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-14"
   }
  ],
- "total": 718.16,
+ "total": 717.57,
  "open": [
   {
    "date": "2026-10-13",
@@ -153,9 +153,9 @@
    "start": "Sat Oct 17 12:00 PM ET",
    "price": "+150",
    "boosted_price": "+225",
-   "stake": 0.26,
-   "stake_note": "unconfirmed",
-   "to_win": 0.59,
+   "stake": 0.3,
+   "stake_note": "",
+   "to_win": 0.67,
    "ev_pct": "24.3",
    "multi": false,
    "legs": [
@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.4185,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.509,
@@ -809,9 +809,9 @@
    "start": "Sat Oct 17 07:30 PM ET",
    "price": "+310",
    "boosted_price": "+465",
-   "stake": 0.26,
-   "stake_note": "unconfirmed",
-   "to_win": 1.21,
+   "stake": 0.3,
+   "stake_note": "",
+   "to_win": 1.39,
    "ev_pct": "24.5",
    "multi": false,
    "legs": [
@@ -862,7 +862,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.2193,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1518,7 +1518,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.8876,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5169,
@@ -2394,7 +2394,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.8876,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5169,
@@ -3270,7 +3270,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.8841,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.491,
@@ -4146,7 +4146,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.8978,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5030,10 +5030,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.652,
+     "pulled": "2026-10-16 19:27 ET",
+     "ml_home": 0.657,
      "spread_home_line": -5.0,
-     "spread_home_fair": 0.509,
+     "spread_home_fair": 0.5146,
      "total_line": 56.0,
      "total_over_fair": 0.4955
     },
@@ -5661,9 +5661,9 @@
      "date": "2026-10-17T00:00Z",
      "period": 1,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/16 - 8:00 PM EDT",
+     "detail": "Delayed, Top 1st",
      "teams": [
       {
        "name": "Cleveland Guardians",
@@ -5814,10 +5814,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.493,
+     "pulled": "2026-10-16 19:27 ET",
+     "ml_home": 0.5,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.701,
+     "spread_home_fair": 0.7049,
      "total_line": 6.5,
      "total_over_fair": 0.4977
     },
@@ -5980,12 +5980,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.3133,
+     "pulled": "2026-10-16 19:27 ET",
+     "ml_home": 0.3121,
      "spread_home_line": 6.5,
      "spread_home_fair": 0.4908,
-     "total_line": 56.0,
-     "total_over_fair": 0.4866
+     "total_line": 55.5,
+     "total_over_fair": 0.5089
     },
     "pm": {
      "slug": "cfb-mphs-tulane-2026-10-16",
@@ -6666,7 +6666,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.4185,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.509,
@@ -7332,7 +7332,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
+     "pulled": "2026-10-16 19:27 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -8065,12 +8065,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.3133,
+     "pulled": "2026-10-16 19:27 ET",
+     "ml_home": 0.3121,
      "spread_home_line": 6.5,
      "spread_home_fair": 0.4908,
-     "total_line": 56.0,
-     "total_over_fair": 0.4866
+     "total_line": 55.5,
+     "total_over_fair": 0.5089
     },
     "pm": {
      "slug": "cfb-mphs-tulane-2026-10-16",
@@ -8717,12 +8717,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.527,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.5065,
+     "pulled": "2026-10-16 19:27 ET",
+     "ml_home": 0.5499,
+     "spread_home_line": -2.0,
+     "spread_home_fair": 0.5087,
      "total_line": 228.5,
-     "total_over_fair": 0.5087
+     "total_over_fair": 0.514
     },
     "pm": {
      "slug": "nba-cha-mem-2026-10-16",
@@ -8804,6 +8804,29 @@
     }
    },
    "sport": "NBA"
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "NBA Cup 2026",
+   "market": "Futures (30% profit boost)",
+   "pick": "OKC Thunder to win NBA Cup",
+   "start": "Fri Dec 11 07:00 PM ET",
+   "price": "+290",
+   "boosted_price": "+377",
+   "stake": 0.1,
+   "stake_note": "",
+   "to_win": 0.37,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "OKC Thunder to win NBA Cup"
+    }
+   ],
+   "match": null,
+   "sport": null
   }
  ],
  "settled_recent": [
@@ -8945,7 +8968,7 @@
   }
  ],
  "pnl_total": 176.07,
- "open_stake": 26.22,
- "hash": "965c6747886e6b57db115c72633396b8a4ab8087",
- "generated_at": "2026-10-16T18:18:25-04:00"
+ "open_stake": 26.4,
+ "hash": "75cc5007b5a0d524eaab1940c81e73062442fe51",
+ "generated_at": "2026-10-16T19:28:09-04:00"
 }
