@@ -1,6 +1,11 @@
 {
  "balances": [
   {
+   "book": "PointsBet",
+   "balance": 163.0,
+   "updated": "2026-10-15"
+  },
+  {
    "book": "FanDuel",
    "balance": 157.29,
    "updated": "2026-10-15"
@@ -8,11 +13,6 @@
   {
    "book": "Caesars",
    "balance": 134.0,
-   "updated": "2026-10-15"
-  },
-  {
-   "book": "PointsBet",
-   "balance": 115.55,
    "updated": "2026-10-15"
   },
   {
@@ -36,7 +36,7 @@
    "updated": "2026-10-14"
   }
  ],
- "total": 558.54,
+ "total": 605.99,
  "open": [
   {
    "date": "2026-10-13",
@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:13 ET",
+     "pulled": "2026-10-15 22:20 ET",
      "ml_home": 0.3831,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5113,
@@ -278,7 +278,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 22:13 ET",
+     "pulled": "2026-10-15 22:20 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -319,11 +319,11 @@
     "id": "401869950",
     "snapshot": {
      "date": "2026-10-15T23:30Z",
-     "period": 3,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 795.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 3rd",
+     "detail": "13:15 - 4th",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -391,10 +391,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 4,
-     "clock": 737.0,
+     "clock": 564.0,
      "state": "in",
      "completed": false,
-     "detail": "12:17 - 4th",
+     "detail": "9:24 - 4th",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -412,7 +412,7 @@
        "nick": "Pirates",
        "location": "East Carolina",
        "home": false,
-       "score": "14"
+       "score": "17"
       }
      ]
     },
@@ -462,10 +462,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 809.0,
+     "clock": 690.0,
      "state": "in",
      "completed": false,
-     "detail": "13:29 - 3rd",
+     "detail": "11:30 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -474,7 +474,7 @@
        "nick": "Bobcats",
        "location": "Texas State",
        "home": true,
-       "score": "45"
+       "score": "52"
       },
       {
        "name": "Colorado State Rams",
@@ -683,10 +683,10 @@
     "snapshot": {
      "date": "2026-10-16T00:15Z",
      "period": 3,
-     "clock": 466.0,
+     "clock": 210.0,
      "state": "in",
      "completed": false,
-     "detail": "7:46 - 3rd",
+     "detail": "3:30 - 3rd",
      "teams": [
       {
        "name": "Denver Broncos",
@@ -758,7 +758,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 6th",
+     "detail": "Bot 6th",
      "teams": [
       {
        "name": "Los Angeles Dodgers",
@@ -895,10 +895,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 3,
-     "clock": 809.0,
+     "clock": 690.0,
      "state": "in",
      "completed": false,
-     "detail": "13:29 - 3rd",
+     "detail": "11:30 - 3rd",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -907,7 +907,7 @@
        "nick": "Bobcats",
        "location": "Texas State",
        "home": true,
-       "score": "45"
+       "score": "52"
       },
       {
        "name": "Colorado State Rams",
@@ -1085,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "24efe5319413d1785a60462e3c48703a1a99d29a",
- "generated_at": "2026-10-15T22:13:20-04:00"
+ "hash": "f3c4b2e985afa7909156ec2b76705f9b7011e60a",
+ "generated_at": "2026-10-15T22:20:38-04:00"
 }
