@@ -206,7 +206,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 20:27 ET",
+     "pulled": "2026-10-15 20:46 ET",
      "ml_home": 0.386,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5158,
@@ -278,7 +278,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-15 20:27 ET",
+     "pulled": "2026-10-15 20:46 ET",
      "ml_home": 0.2203,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.5,
@@ -320,10 +320,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 2,
-     "clock": 762.0,
+     "clock": 351.0,
      "state": "in",
      "completed": false,
-     "detail": "12:42 - 2nd",
+     "detail": "5:51 - 2nd",
      "teams": [
       {
        "name": "Old Dominion Monarchs",
@@ -391,10 +391,10 @@
     "snapshot": {
      "date": "2026-10-15T23:30Z",
      "period": 2,
-     "clock": 839.0,
+     "clock": 360.0,
      "state": "in",
      "completed": false,
-     "detail": "13:59 - 2nd",
+     "detail": "6:00 - 2nd",
      "teams": [
       {
        "name": "UAB Blazers",
@@ -403,7 +403,7 @@
        "nick": "Blazers",
        "location": "UAB",
        "home": true,
-       "score": "0"
+       "score": "3"
       },
       {
        "name": "East Carolina Pirates",
@@ -462,10 +462,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 1,
-     "clock": 407.0,
+     "clock": 15.0,
      "state": "in",
      "completed": false,
-     "detail": "6:47 - 1st",
+     "detail": "0:15 - 1st",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -474,7 +474,7 @@
        "nick": "Bobcats",
        "location": "Texas State",
        "home": true,
-       "score": "14"
+       "score": "21"
       },
       {
        "name": "Colorado State Rams",
@@ -534,10 +534,10 @@
     "snapshot": {
      "date": "2026-10-15T23:00Z",
      "period": 2,
-     "clock": 468.0,
+     "clock": 101.0,
      "state": "in",
      "completed": false,
-     "detail": "7:48 - 2nd",
+     "detail": "1:41 - 2nd",
      "teams": [
       {
        "name": "Toronto Maple Leafs",
@@ -546,7 +546,7 @@
        "nick": "Maple Leafs",
        "location": "Toronto",
        "home": true,
-       "score": "3"
+       "score": "4"
       },
       {
        "name": "Buffalo Sabres",
@@ -601,10 +601,10 @@
     "snapshot": {
      "date": "2026-10-15T23:00Z",
      "period": 2,
-     "clock": 424.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "7:04 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "name": "Ottawa Senators",
@@ -613,7 +613,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "name": "New York Islanders",
@@ -683,10 +683,10 @@
     "snapshot": {
      "date": "2026-10-16T00:15Z",
      "period": 1,
-     "clock": 509.0,
+     "clock": 152.0,
      "state": "in",
      "completed": false,
-     "detail": "8:29 - 1st",
+     "detail": "2:32 - 1st",
      "teams": [
       {
        "name": "Denver Broncos",
@@ -704,7 +704,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": false,
-       "score": "0"
+       "score": "3"
       }
      ]
     },
@@ -754,11 +754,11 @@
     "id": "401908033",
     "snapshot": {
      "date": "2026-10-16T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "End 1st",
+     "detail": "Bot 2nd",
      "teams": [
       {
        "name": "Los Angeles Dodgers",
@@ -767,7 +767,7 @@
        "nick": "Dodgers",
        "location": "Los Angeles",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "name": "Milwaukee Brewers",
@@ -827,10 +827,10 @@
     "snapshot": {
      "date": "2026-10-15T23:00Z",
      "period": 2,
-     "clock": 415.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "6:55 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "name": "New Jersey Devils",
@@ -839,7 +839,7 @@
        "nick": "Devils",
        "location": "New Jersey",
        "home": true,
-       "score": "4"
+       "score": "5"
       },
       {
        "name": "New York Rangers",
@@ -895,10 +895,10 @@
     "snapshot": {
      "date": "2026-10-16T00:00Z",
      "period": 1,
-     "clock": 407.0,
+     "clock": 15.0,
      "state": "in",
      "completed": false,
-     "detail": "6:47 - 1st",
+     "detail": "0:15 - 1st",
      "teams": [
       {
        "name": "Texas State Bobcats",
@@ -907,7 +907,7 @@
        "nick": "Bobcats",
        "location": "Texas State",
        "home": true,
-       "score": "14"
+       "score": "21"
       },
       {
        "name": "Colorado State Rams",
@@ -1085,6 +1085,6 @@
  ],
  "pnl_total": 164.97,
  "open_stake": 177.27,
- "hash": "a6ee19ebac515cc1ed42fe10837fe7dad4a2b578",
- "generated_at": "2026-10-15T20:27:44-04:00"
+ "hash": "020714b5b0068cbddc3d5b04805980f9eefa5d4c",
+ "generated_at": "2026-10-15T20:46:03-04:00"
 }

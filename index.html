@@ -37,7 +37,9 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .pos{color:var(--win)}.neg{color:var(--lose)}
 .card{padding:0;overflow:hidden;margin-bottom:6px;border-radius:10px}
 .crow{display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 10px 7px 8px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
-.crow .pill{font-size:10px;padding:3px 6px;min-width:62px;text-align:center;flex-shrink:0}
+.crow .pill{font-size:10px;padding:3px 6px;min-width:84px;text-align:center;display:block}
+.pillw{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:92px;gap:2px}.psub{font-size:8.5px;line-height:1.1;color:var(--mut);text-align:center;max-width:92px}.psub:empty{display:none}
+.pill.LIVE{background:#475569}.card.LIVE{border-left-color:#94a3b8}
 .cmid{flex:1;min-width:0}.clbl{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .csub{font-size:11px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
 .cright{text-align:right;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;max-width:42%;overflow:hidden;text-overflow:ellipsis}.cright small{display:block;font-size:11px;color:var(--mut)}
@@ -256,7 +258,36 @@ function payoutP(b,status){
   const e=estLeg(L,m,localGame(g,m));if(e!=null)return e;
   const p=probFor(b);if(p&&p.ml)return p.pct/100;return null}
 let LAST_STATUS={};
+// ---- bet-level live pill: from the bet's own win probability, not "cashes if it ended now" ----
+const SCORE_SUB={WINNING:"cashes at current score",LOSING:"needs more at current score",TIED:"tied at current score",PUSH:"push at current score"};
+function legP(b,L,st){if(st==="WON")return 1;if(st==="LOST")return 0;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
+  const e=estLeg(L,m,localGame(g,m));if(e!=null)return e;
+  if(L.type==="prop")return 0.5;                       // no model for player props: coin flip
+  if(L.type==="ml"&&g.state==="in"&&probs[m.id]){const i=sideIdx(g,L.team);if(i<0)return null;const pr=probs[m.id];
+    return g.teams[i].home?pr.home:(pr.away!=null?pr.away:1-pr.home)}
+  return null}
+function betLive(b,status,legStats){
+  const gs=legStats.map(x=>x.g).filter(Boolean);const allFinal=gs.length&&gs.length===b.legs.length&&gs.every(g=>g.completed);
+  if(status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal)||allFinal)return{final:true};
+  if(!gs.some(g=>g.state==="in"))return{upcoming:true};
+  let p;if(b.multi){p=1;for(const x of legStats){const v=legP(b,x.L,x.s);if(v==null){p=null;break}p*=v}}
+  else{const x=legStats[0];p=x?legP(b,x.L,x.s):null;if(x&&x.L.type!=="ml"&&p!=null&&estLeg(x.L,matchOfLeg(b,x.L),gameFor(matchOfLeg(b,x.L)))==null)p=null}
+  return{p,approx:b.multi,sub:b.multi?null:SCORE_SUB[legStats[0]&&legStats[0].s]||null}}
+function pillState(b,status,legStats){const v=betLive(b,status,legStats);
+  if(v.final)return{cls:status,txt:status,sub:""};
+  if(v.upcoming)return{cls:"NOT_STARTED",txt:"UPCOMING",sub:""};
+  if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||(b.multi?"legs: "+legStats.map(x=>x.s.toLowerCase()).join(" / "):"")};
+  const w=v.p>=0.5,pct=Math.round(v.p*100);
+  return{cls:w?"WINNING":"LOSING",txt:`${w?"WINNING":"LOSING"} ${v.approx?"≈":""}${pct}%`,
+    sub:v.approx?`approx. product of legs`:(v.sub||"")}}
+function pillHTML(b,status,legStats){const q=pillState(b,status,legStats);
+  return`<span class="pillw"><span class="pill ${cls(q.cls)}" data-pill>${q.txt}</span><small class="psub" data-psub>${esc(q.sub)}</small></span>`}
+function legStatsFor(b){return b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}})}
 function tick1s(){if(!DATA||document.hidden)return;
+  document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;const ls=legStatsFor(b);
+    const st=LAST_STATUS[+c.dataset.bi]||"?",q=pillState(b,st,ls),pe=c.querySelector("[data-pill]");if(!pe)return;
+    pe.textContent=q.txt;pe.className="pill "+cls(q.cls);c.querySelector("[data-psub]").textContent=q.sub;
+    c.classList.remove("WINNING","LOSING","LIVE","TIED","PUSH","WON","LOST","NOT_STARTED");c.classList.add(cls(q.cls))});
   document.querySelectorAll("[data-clk]").forEach(el=>{const g=games[el.dataset.clk];if(g)el.textContent=clockText(g,el.dataset.sep||" ")});
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;let first=null;
     c.querySelectorAll(".wp.est[data-leg]").forEach(w=>{const L=b.legs[+w.dataset.leg],m=matchOfLeg(b,L),g=gameFor(m);if(!g)return;
@@ -340,7 +371,7 @@ function render(){
     const k=cardKey(b), isOpen=OPEN.has(k), BR=barsFor(b), mv=BR.mini;
     const mini=mv!=null?`<div class="mini" style="width:${Math.max(0,Math.min(100,mv))}%;background:${mv>50?"var(--win)":mv<50?"var(--lose)":"var(--push)"}"></div>`:"";
     const rs=rowScore(b,g,legStats);
-    let html=`<div class="card ${cls(status)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow"><span class="pill ${cls(status)}">${status==="NOT STARTED"?"UPCOMING":status}</span>
+    let html=`<div class="card ${cls(pillState(b,status,legStats).cls)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow">${pillHTML(b,status,legStats)}
       <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}</div></div>
       <div class="cright">${rs}</div><span class="chev">›</span>${mini}</div><div class="cbody">
       <div class="top" style="margin-top:8px"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span></div>
