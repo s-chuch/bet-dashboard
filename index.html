@@ -42,7 +42,9 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .csub{font-size:11px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
 .cright{text-align:right;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;max-width:42%;overflow:hidden;text-overflow:ellipsis}.cright small{display:block;font-size:11px;color:var(--mut)}
 .chev{color:var(--mut);font-size:16px;transition:transform .2s;flex-shrink:0}.card.open .chev{transform:rotate(90deg)}
-.mini{position:absolute;left:0;bottom:0;height:3px;border-radius:0 2px 2px 0}
+.mini{position:absolute;left:0;bottom:0;height:3px;border-radius:0 2px 2px 0;transition:width .9s linear,background .3s}
+.wp.est .fill{transition:width .9s linear,background .3s}
+.sum .wide{grid-column:1/-1}
 .cbody{display:none;padding:2px 12px 10px;border-top:1px solid var(--line)}.card.open .cbody{display:block}
 .h2row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:18px 2px 8px}.h2row h2{margin:0;flex:1}
 .h2row h2.sechead{cursor:pointer}.h2row h2 .chev{display:inline-block;margin-right:4px}.sec.open .h2row h2 .chev{transform:rotate(90deg)}
@@ -69,11 +71,12 @@ function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
   for(const f of [t.name,t.abbr,t.short,t.location,t.nick]){const fn=norm(f);if(fn.length&&fn.join(" ")===qn.join(" "))return true}
   const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
-  return {date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
+  return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
     teams:c.competitors.map(x=>({name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score}))}}
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
-function gameFor(m){if(!m)return null;return games[m.id]||m.snapshot}
+function gameFor(m){if(!m)return null;if(!games[m.id]&&m.snapshot)m.snapshot.id=m.id;return games[m.id]||m.snapshot}
 async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
+const CLK={};
 const PROB_PATHS=new Set(["football/nfl","football/college-football","baseball/mlb","basketball/nba","basketball/wnba","basketball/mens-college-basketball"]);
 const probs={}, probCount={}, pregameLive={};
 let espnErr=false;
@@ -89,7 +92,10 @@ async function refreshScores(full){
   const need={};for(const m of allMatches()){const g=gameFor(m);if(g&&g.completed)continue;if(!full&&!isActive(m))continue;need[key(m)]=m}
   await Promise.all(Object.values(need).map(async m=>{
     const d=await espn(`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:""));
-    for(const ev of (d&&d.events)||[]){games[ev.id]=fromEvent(ev);
+    for(const ev of (d&&d.events)||[]){const old=games[ev.id],nw=fromEvent(ev);games[ev.id]=nw;
+      // local clock: only run it if the last two fetches showed the clock moving (football clocks stop a lot)
+      const moving=!!(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof nw.clock==="number"&&typeof old.clock==="number"&&nw.clock<old.clock&&nw.clock>0&&!/end|half|intermission|delay/i.test(nw.detail||""));
+      CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};
       const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
   // player props need the box score (only in-progress SGPs with a prop leg)
@@ -167,7 +173,7 @@ function fmtStart(g,raw){if(g&&g.date){const d=new Date(g.date);return d.toLocal
 function scoreBox(g){if(!g)return"";const live=g.state==="in";
   const order=[...g.teams].sort((a,b)=>a.home-b.home);
   return `<div class="score">${order.map(t=>`<div class="row"><span>${esc(t.name)}</span><b>${g.state==="pre"?"":esc(t.score)}</b></div>`).join("")}
-    <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":esc(g.detail)}</div></div>`}
+    <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":g.completed?esc(g.detail):`<span data-clk="${g.id}" data-sep=" - ">${esc(clockText(g," - "))}</span>`}</div></div>`}
 
 // ===== Our estimate (NOT ESPN, NOT a sportsbook price): Pinnacle pregame no-vig inputs + live score/clock =====
 const SD={"football/nfl":[13.5,10],"football/college-football":[15,12],"basketball/nba":[12,18]};
@@ -230,19 +236,55 @@ function estLeg(L,m,g){const M=modelFor(m);if(!M||!g)return null;
     const need=L.line-S;let po;if(need<0)po=1;else po=Number.isInteger(need)?pOverPois(lr,need):pOverPois(lr,Math.floor(need)+0.5);
     return L.side==="over"?po:1-po}
   return null}
-function bar(label,v,cls2,note){v=Math.max(0,Math.min(100,v));const col=v>50?"var(--win)":v<50?"var(--lose)":"var(--push)";
-  return`<div class="wp ${cls2||""}"><div class="lbl"><span>${label}</span><b>${v.toFixed(1)}%</b></div><div class="track"><div class="fill" style="width:${v}%;background:${col}"></div></div>${note?`<div class="note">${note}</div>`:""}</div>`}
+const CLOCK_SPORTS=new Set(["football/nfl","football/college-football","basketball/nba","hockey/nhl"]);
+// game with its clock run down locally since the last ESPN fetch (only when the clock was seen moving)
+function localGame(g,m){if(!g||g.state!=="in"||!m||!CLOCK_SPORTS.has(m.path))return g;const c=CLK[g.id];
+  if(!c||!c.moving||document.hidden)return g;const el=Math.min(25,(Date.now()-c.t)/1000);
+  return{...g,clock:Math.max(0,c.clock-el)}}
+const fmtClk=sec=>{sec=Math.max(0,Math.ceil(sec));return`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`};
+function clockText(g,sep){const per=String(g.detail||"").split(" - ")[1];const m={path:null};
+  const c=CLK[g.id];if(!per||typeof g.clock!=="number")return String(g.detail||"").replace(" - ",sep);
+  let v=g.clock;if(c&&c.moving&&!document.hidden)v=Math.max(0,c.clock-Math.min(25,(Date.now()-c.t)/1000));
+  return`${fmtClk(v)}${sep}${per}`}
+function matchOfLeg(b,L){return b.match||L.match}
+// p for the expected-payout tile: Est., else ESPN (moneylines only), else pregame. null = excluded
+function payoutP(b,status){
+  if(status==="WON")return 1;if(status==="LOST")return 0;
+  if(b.multi)return null; // correlated legs: no honest single number
+  const L=b.legs[0];if(!L)return null;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
+  if(g.completed&&status==="PUSH")return "push";
+  const e=estLeg(L,m,localGame(g,m));if(e!=null)return e;
+  const p=probFor(b);if(p&&p.ml)return p.pct/100;return null}
+let LAST_STATUS={};
+function tick1s(){if(!DATA||document.hidden)return;
+  document.querySelectorAll("[data-clk]").forEach(el=>{const g=games[el.dataset.clk];if(g)el.textContent=clockText(g,el.dataset.sep||" ")});
+  document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;let first=null;
+    c.querySelectorAll(".wp.est[data-leg]").forEach(w=>{const L=b.legs[+w.dataset.leg],m=matchOfLeg(b,L),g=gameFor(m);if(!g)return;
+      const v=estLeg(L,m,localGame(g,m));if(v==null)return;const pct=Math.max(0,Math.min(100,v*100));if(first==null)first=pct;
+      const col=pct>50?"var(--win)":pct<50?"var(--lose)":"var(--push)";const f=w.querySelector(".fill");f.style.width=pct+"%";f.style.background=col;
+      w.querySelector(".lbl b").textContent=pct.toFixed(1)+"%"});
+    const mini=c.querySelector(".mini");if(mini&&!b.multi&&first!=null){mini.style.width=first+"%";mini.style.background=first>50?"var(--win)":first<50?"var(--lose)":"var(--push)"}});
+  // probability-weighted payout (estimate)
+  let exp=0,maxp=0,stk=0,excl=0;
+  DATA.open.forEach((b,i)=>{const st=LAST_STATUS[i];if(b.to_win==null||b.stake==null){excl++;return}
+    const pay=b.stake+b.to_win,p=payoutP(b,st);if(p==null){excl++;return}
+    const v=p==="push"?b.stake:pay*p;exp+=v;stk+=b.stake;if(st!=="LOST")maxp+=p==="push"?b.stake:pay});
+  const ep=$("expPay"),el=$("expPL");if(ep){ep.textContent=money(exp);$("expSub").textContent=`max ${money(maxp)} · ${excl} excluded · estimate`}
+  if(el){const v=exp-stk;el.textContent=(v>=0?"+":"−")+money(Math.abs(v));el.className=v>=0?"pos":"neg"}}
+setInterval(tick1s,1000);
+function bar(label,v,cls2,note,attr){v=Math.max(0,Math.min(100,v));const col=v>50?"var(--win)":v<50?"var(--lose)":"var(--push)";
+  return`<div class="wp ${cls2||""}" ${attr||""}><div class="lbl"><span>${label}</span><b>${v.toFixed(1)}%</b></div><div class="track"><div class="fill" style="width:${v}%;background:${col}"></div></div>${note?`<div class="note">${note}</div>`:""}</div>`}
 const EST_NOTE="Est. = our own estimate from Pinnacle pregame no-vig prices + the live score/clock. Not an ESPN or sportsbook number.";
 // all bars for a card + the single value used for the collapsed row
 function barsFor(b){const out=[];let mini=null;
   const p=probFor(b);
   const g0=b.match?gameFor(b.match):null;
-  const legsEst=b.legs.map(L=>{const m=b.match||L.match,g=gameFor(m);if(!g||g.completed)return null;const v=estLeg(L,m,g);return v==null?null:{L,v}});
+  const legsEst=b.legs.map(L=>{const m=b.match||L.match,g=gameFor(m);if(!g||g.completed)return null;const v=estLeg(L,m,localGame(g,m));return v==null?null:{L,v}});
   if(p)out.push(bar(`ESPN · ${esc(p.label)}`,p.pct,"",p.ml?(p.kind==="pregame"?"ESPN pregame predictor":"ESPN live win probability"):(b.multi?"ESPN game-win chance for that team only, not the parlay's chance":"ESPN chance to win the game, not to cover")));
   if(!b.multi){const e=legsEst[0];if(e){const L=e.L;
       const lbl=L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`;
-      out.push(bar(lbl,e.v*100,"est"));mini=e.v*100}}
-  else legsEst.forEach(e=>{if(!e)return;const L=e.L;out.push(bar(`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`,e.v*100,"est"))});
+      out.push(bar(lbl,e.v*100,"est","",`data-leg="0"`));mini=e.v*100}}
+  else legsEst.forEach(e=>{if(!e)return;const L=e.L;out.push(bar(`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`,e.v*100,"est","",`data-leg="${b.legs.indexOf(L)}"`))});
   if(out.some(x=>x.includes('wp est')))out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">${EST_NOTE}</div>`);
   if(mini==null&&p)mini=p.pct;
   return{html:out.join(""),mini}}
@@ -267,7 +309,7 @@ function rowScore(b,g,legStats){
     return d.toLocaleString("en-US",{timeZone:TZ,...(today?{}:{weekday:"short"}),hour:"numeric",minute:"2-digit"})};
   const one=x=>{if(!x)return"";const aw=x.teams.find(t=>!t.home),hm=x.teams.find(t=>t.home);
     if(x.state==="pre")return `${start(x)}<small>${today(x)?"Today":"Starts"} ET</small>`;
-    return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small>${x.completed?"Final":esc(x.detail.replace(" - "," "))}</small>`};
+    return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small ${x.completed?"":`data-clk="${x.id}" data-sep=" "`}>${x.completed?"Final":esc(clockText(x," "))}</small>`};
   const today=x=>etDay(Date.now())===etDay(x.date);
   if(g)return one(g);
   const gs=legStats.map(x=>x.g).filter(Boolean);if(!gs.length)return"";
@@ -291,14 +333,14 @@ function render(){
   const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0,atRisk=0,potPay=0,potTBC=0,tonight=0,tonightTBC=0,openN=0;const TODAY=etDay(Date.now());
   D.open.forEach(b=>{
     const legStats=b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}});
-    let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");
+    let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");LAST_STATUS[D.open.indexOf(b)]=status;
     const g=b.match?gameFor(b.match):null;
     const price=b.boosted_price&&b.boosted_price!==b.price?`${esc(b.price)} → ${esc(b.boosted_price)}`:esc(b.price);
     const firstG=g||legStats.map(x=>x.g).find(Boolean);
     const k=cardKey(b), isOpen=OPEN.has(k), BR=barsFor(b), mv=BR.mini;
     const mini=mv!=null?`<div class="mini" style="width:${Math.max(0,Math.min(100,mv))}%;background:${mv>50?"var(--win)":mv<50?"var(--lose)":"var(--push)"}"></div>`:"";
     const rs=rowScore(b,g,legStats);
-    let html=`<div class="card ${cls(status)}${isOpen?" open":""}" data-k="${esc(k)}"><div class="crow"><span class="pill ${cls(status)}">${status==="NOT STARTED"?"UPCOMING":status}</span>
+    let html=`<div class="card ${cls(status)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow"><span class="pill ${cls(status)}">${status==="NOT STARTED"?"UPCOMING":status}</span>
       <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}</div></div>
       <div class="cright">${rs}</div><span class="chev">›</span>${mini}</div><div class="cbody">
       <div class="top" style="margin-top:8px"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span></div>
@@ -321,7 +363,7 @@ function render(){
   upCards.sort((a,b)=>a.t-b.t);
   for(const x of D.settled_recent||[])if(x.date===TODAY&&x.pnl!=null)tonight+=x.pnl;
   const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
-  $("sum").innerHTML=`<div>At risk<b>${money(atRisk)}</b><small>${openN} not final</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout<b>${money(potPay)}</b><small>${potTBC?`+ ${potTBC} TBC price`:"if all open win"}</small></div><div>Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
+  $("sum").innerHTML=`<div>At risk<b>${money(D.open_stake)}</b><small>${D.open.length} open bets</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout (est.)<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
   $("live").innerHTML=liveCards.join("")||'<div class="meta">Nothing live right now.</div>';
   $("bets").innerHTML=upCards.map(x=>x.html).join("")||'<div class="meta">Nothing upcoming.</div>';
   $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
@@ -337,7 +379,7 @@ function render(){
   $("lostTot").textContent=lostTotal?`−${money(lostTotal)}`+(lostPending?` (incl. ${money(lostPending)} unsettled)`:""):"";
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
-  syncUI();
+  syncUI();tick1s();
   $("meta").textContent=`Scores updated ${now} ET · scores every ${FAST/1000|0}s · bets as of ${gen} ET`;
 }
 let FAST=10000, fastTimer=null, loading=false;
@@ -354,5 +396,5 @@ function tickCD(){const el=$("cd");if(!el)return;
 setInterval(tickCD,250);
 async function slowTick(){if(await loadData()){render();if(!document.hidden)fastTick(true)}}
 slowTick();setInterval(slowTick,60000);           // data.json every 60s
-document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(fastTimer);else fastTick(true)});
+document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(fastTimer);else{tick1s();fastTick(true)}});
 </script></body></html>
