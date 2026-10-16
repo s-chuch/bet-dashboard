@@ -142,7 +142,12 @@ async function refreshScores(full){
   const need={};for(const m of allMatches()){const g=gameFor(m);if(g&&g.completed)continue;if(!full&&!isActive(m))continue;need[key(m)]=m}
   await Promise.all(Object.values(need).map(async m=>{
     const d=await espn(`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:""));
-    for(const ev of (d&&d.events)||[]){const old=games[ev.id],nw=fromEvent(ev);games[ev.id]=nw;
+    for(const ev of (d&&d.events)||[]){const old=games[ev.id],nw=fromEvent(ev);
+      // ESPN's CDN sometimes serves an older copy: same period, clock higher, same score -> ignore it
+      if(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof old.clock==="number"&&typeof nw.clock==="number"&&nw.clock>old.clock+0.5&&
+         old.teams.map(t=>t.score).join()===nw.teams.map(t=>t.score).join()&&CLOCK_SPORTS.has(m.path))continue;
+      if(old&&old.state==="post"&&nw.state!=="post")continue;
+      games[ev.id]=nw;
       // local clock: only run it if the last two fetches showed the clock moving (football clocks stop a lot)
       const moving=!!(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof nw.clock==="number"&&typeof old.clock==="number"&&nw.clock<old.clock&&nw.clock>0&&!/end|half|intermission|delay/i.test(nw.detail||""));
       CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};observe(ev.id,m.path,old,nw,moving);
