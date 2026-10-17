@@ -212,12 +212,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
-     "ml_home": 0.2202,
+     "pulled": "2026-10-17 19:38 ET",
+     "ml_home": 0.2186,
      "spread_home_line": 10.5,
-     "spread_home_fair": 0.4954,
+     "spread_home_fair": 0.4931,
      "total_line": 47.0,
-     "total_over_fair": 0.4978
+     "total_over_fair": 0.5179
     },
     "pm": {
      "slug": "cfb-nd-byu-2026-10-17",
@@ -837,10 +837,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 1,
-     "clock": 205.0,
+     "clock": 110.0,
      "state": "in",
      "completed": false,
-     "detail": "3:25 - 1st",
+     "detail": "1:50 - 1st",
      "teams": [
       {
        "id": "58",
@@ -850,7 +850,7 @@
        "nick": "Bulls",
        "location": "South Florida",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "2309",
@@ -1715,10 +1715,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 1,
-     "clock": 205.0,
+     "clock": 110.0,
      "state": "in",
      "completed": false,
-     "detail": "3:25 - 1st",
+     "detail": "1:50 - 1st",
      "teams": [
       {
        "id": "58",
@@ -1728,7 +1728,7 @@
        "nick": "Bulls",
        "location": "South Florida",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "2309",
@@ -2593,10 +2593,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 1,
-     "clock": 368.0,
+     "clock": 120.0,
      "state": "in",
      "completed": false,
-     "detail": "6:08 - 1st",
+     "detail": "2:00 - 1st",
      "teams": [
       {
        "id": "2390",
@@ -3627,7 +3627,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -4391,8 +4391,8 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 19:28 ET",
-       "ml_home": 0.7538,
+       "pulled": "2026-10-17 19:38 ET",
+       "ml_home": 0.7544,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4718,
        "total_line": 43.5,
@@ -5097,7 +5097,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 19:28 ET",
+       "pulled": "2026-10-17 19:38 ET",
        "ml_home": 0.7804,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4604,
@@ -5927,8 +5927,8 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
-     "ml_home": 0.7538,
+     "pulled": "2026-10-17 19:38 ET",
+     "ml_home": 0.7544,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4718,
      "total_line": 43.5,
@@ -6652,7 +6652,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.5092,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -7584,10 +7584,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
-     "ml_home": 0.4354,
+     "pulled": "2026-10-17 19:38 ET",
+     "ml_home": 0.4274,
      "spread_home_line": 2.5,
-     "spread_home_fair": 0.4908,
+     "spread_home_fair": 0.4829,
      "total_line": 39.5,
      "total_over_fair": 0.4721
     },
@@ -8527,7 +8527,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.39,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5396,
@@ -9503,7 +9503,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -10260,7 +10260,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -10462,8 +10462,8 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
-     "ml_home": 0.7538,
+     "pulled": "2026-10-17 19:38 ET",
+     "ml_home": 0.7544,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4718,
      "total_line": 43.5,
@@ -11183,7 +11183,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -11328,7 +11328,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -11458,12 +11458,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
-     "ml_home": 0.2202,
+     "pulled": "2026-10-17 19:38 ET",
+     "ml_home": 0.2186,
      "spread_home_line": 10.5,
-     "spread_home_fair": 0.4954,
+     "spread_home_fair": 0.4931,
      "total_line": 47.0,
-     "total_over_fair": 0.4978
+     "total_over_fair": 0.5179
     },
     "pm": {
      "slug": "cfb-nd-byu-2026-10-17",
@@ -12175,7 +12175,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -12956,7 +12956,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -13184,7 +13184,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -13296,10 +13296,10 @@
     "snapshot": {
      "date": "2026-10-17T22:00Z",
      "period": 2,
-     "clock": 453.0,
+     "clock": 221.0,
      "state": "in",
      "completed": false,
-     "detail": "7:33 - 2nd",
+     "detail": "3:41 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -13309,7 +13309,7 @@
        "nick": "Panthers",
        "location": "Florida",
        "home": true,
-       "score": "5"
+       "score": "6"
       },
       {
        "id": "124292",
@@ -13378,6 +13378,17 @@
        "tokens": [
         "62148421922084362813311857832991905200161380702421623113872968979359617830637",
         "25894121636699033722629423722197153505802511715820011358412253996651184133226"
+       ]
+      },
+      {
+       "line": -5.5,
+       "outcomes": [
+        "Panthers",
+        "Kraken"
+       ],
+       "tokens": [
+        "60669837518676465392170906883607788830191123130765548852409821820049920570607",
+        "85966955197289265093521700131685936324341442046029409332418385065107911872486"
        ]
       }
      ],
@@ -13529,7 +13540,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -13639,10 +13650,10 @@
     "snapshot": {
      "date": "2026-10-17T22:00Z",
      "period": 2,
-     "clock": 153.0,
+     "clock": 42.0,
      "state": "in",
      "completed": false,
-     "detail": "2:33 - 2nd",
+     "detail": "0:42 - 2nd",
      "teams": [
       {
        "id": "204",
@@ -13662,7 +13673,7 @@
        "nick": "Cougars",
        "location": "Washington State",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -14537,7 +14548,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4906,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6311,
@@ -14660,7 +14671,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.5092,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -15641,7 +15652,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 19:28 ET",
+     "pulled": "2026-10-17 19:38 ET",
      "ml_home": 0.4908,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5115,
@@ -16974,6 +16985,6 @@
  "pnl_total": 170.57,
  "open_stake": 115.3,
  "open_live_n": 37,
- "hash": "1112d6cc7eac5c195f5c4ff6ce4d40cc096b9508",
- "generated_at": "2026-10-17T19:28:14-04:00"
+ "hash": "8ab0ac591513180c55229ebd0e43c1e4b7d70d75",
+ "generated_at": "2026-10-17T19:38:28-04:00"
 }
