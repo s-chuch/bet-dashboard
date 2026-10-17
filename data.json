@@ -7,8 +7,8 @@
   },
   {
    "book": "FanDuel",
-   "balance": 155.71,
-   "updated": "2026-10-16"
+   "balance": 154.71,
+   "updated": "2026-10-17"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-16"
   }
  ],
- "total": 589.37,
+ "total": 588.37,
  "open": [
   {
    "date": "2026-10-13",
@@ -212,11 +212,11 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
-     "ml_home": 0.4292,
+     "pulled": "2026-10-17 11:51 ET",
+     "ml_home": 0.438,
      "spread_home_line": 2.5,
-     "spread_home_fair": 0.4862,
-     "total_line": 50.0,
+     "spread_home_fair": 0.4954,
+     "total_line": 49.5,
      "total_over_fair": 0.4955
     },
     "pm": {
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.2302,
      "spread_home_line": 10.0,
      "spread_home_fair": 0.4931,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.885,
      "spread_home_line": -19.0,
      "spread_home_fair": 0.5069,
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.8872,
      "spread_home_line": -19.5,
      "spread_home_fair": 0.4978,
@@ -5054,7 +5054,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.6526,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.4852,
@@ -5990,10 +5990,10 @@
     "snapshot": {
      "date": "2026-10-17T14:00Z",
      "period": 2,
-     "clock": 3900.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "65'",
+     "detail": "90'+1'",
      "teams": [
       {
        "id": "382",
@@ -6003,7 +6003,7 @@
        "nick": "Manchester City",
        "location": "Manchester City",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "373",
@@ -6013,7 +6013,7 @@
        "nick": "Ipswich Town",
        "location": "Ipswich Town",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     }
@@ -6088,11 +6088,11 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
-     "ml_home": 0.4292,
+     "pulled": "2026-10-17 11:51 ET",
+     "ml_home": 0.438,
      "spread_home_line": 2.5,
-     "spread_home_fair": 0.4862,
-     "total_line": 50.0,
+     "spread_home_fair": 0.4954,
+     "total_line": 49.5,
      "total_over_fair": 0.4955
     },
     "pm": {
@@ -6763,7 +6763,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7580,10 +7580,10 @@
     "snapshot": {
      "date": "2026-10-17T14:00Z",
      "period": 2,
-     "clock": 3900.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "65'",
+     "detail": "90'+1'",
      "teams": [
       {
        "id": "382",
@@ -7593,7 +7593,7 @@
        "nick": "Manchester City",
        "location": "Manchester City",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "373",
@@ -7603,7 +7603,7 @@
        "nick": "Ipswich Town",
        "location": "Ipswich Town",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     }
@@ -7778,7 +7778,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 11:25 ET",
+       "pulled": "2026-10-17 11:51 ET",
        "ml_home": 0.7493,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4807,
@@ -8484,7 +8484,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 11:25 ET",
+       "pulled": "2026-10-17 11:51 ET",
        "ml_home": 0.7698,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4817,
@@ -9547,7 +9547,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.7493,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4807,
@@ -10272,7 +10272,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.6526,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.4852,
@@ -10931,7 +10931,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.5138,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4954,
@@ -11861,7 +11861,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.7641,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4604,
@@ -12023,7 +12023,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -12966,7 +12966,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:25 ET",
+     "pulled": "2026-10-17 11:51 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13834,6 +13834,49 @@
     }
    },
    "sport": "NFL"
+  },
+  {
+   "date": "2026-10-17",
+   "book": "FanDuel",
+   "event": "NHL Sat Oct 17 parlay",
+   "market": "Parlay 3-leg (Bet Reset $10 token)",
+   "pick": "Penguins @ Golden Knights Over 6.5 + Senators @ Flyers Over 5.5 + Kraken @ Panthers Over 6.5",
+   "start": "Sat Oct 17 06:00 PM ET",
+   "price": "+693 (unconfirmed)",
+   "boosted_price": "",
+   "stake": 1.0,
+   "stake_note": "",
+   "to_win": 6.93,
+   "ev_pct": "-4.8",
+   "multi": true,
+   "legs": [
+    {
+     "type": "prop",
+     "player": "Penguins @ Golden Knights",
+     "stat": null,
+     "op": "over",
+     "line": 6.5,
+     "text": "Penguins @ Golden Knights Over 6.5"
+    },
+    {
+     "type": "prop",
+     "player": "Senators @ Flyers",
+     "stat": null,
+     "op": "over",
+     "line": 5.5,
+     "text": "Senators @ Flyers Over 5.5"
+    },
+    {
+     "type": "prop",
+     "player": "Kraken @ Panthers",
+     "stat": null,
+     "op": "over",
+     "line": 6.5,
+     "text": "Kraken @ Panthers Over 6.5"
+    }
+   ],
+   "match": null,
+   "sport": null
   }
  ],
  "settled_recent": [
@@ -13935,7 +13978,7 @@
   }
  ],
  "pnl_total": 176.24,
- "open_stake": 152.48,
- "hash": "a22163268f5619396d9958614e607bb019a3c80f",
- "generated_at": "2026-10-17T11:25:19-04:00"
+ "open_stake": 153.48,
+ "hash": "acc7d34edd52e4c2d81d0560d2e7833d2978aad0",
+ "generated_at": "2026-10-17T11:52:10-04:00"
 }
