@@ -179,10 +179,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 1,
-     "clock": 712.0,
+     "clock": 266.0,
      "state": "in",
      "completed": false,
-     "detail": "11:52 - 1st",
+     "detail": "4:26 - 1st",
      "teams": [
       {
        "id": "84",
@@ -870,12 +870,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.2302,
-     "spread_home_line": 10.0,
-     "spread_home_fair": 0.4931,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.2206,
+     "spread_home_line": 10.5,
+     "spread_home_fair": 0.4954,
      "total_line": 47.0,
-     "total_over_fair": 0.4978
+     "total_over_fair": 0.5
     },
     "pm": {
      "slug": "cfb-nd-byu-2026-10-17",
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.8875,
      "spread_home_line": -19.0,
      "spread_home_fair": 0.5092,
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.8872,
      "spread_home_line": -19.5,
      "spread_home_fair": 0.4978,
@@ -5020,11 +5020,11 @@
     "id": "401858489",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 641.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/17 - 12:30 PM EDT",
+     "detail": "10:41 - 1st",
      "teams": [
       {
        "id": "120",
@@ -6055,10 +6055,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 1,
-     "clock": 712.0,
+     "clock": 266.0,
      "state": "in",
      "completed": false,
-     "detail": "11:52 - 1st",
+     "detail": "4:26 - 1st",
      "teams": [
       {
        "id": "84",
@@ -6763,7 +6763,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7778,10 +7778,10 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:23 ET",
-       "ml_home": 0.7493,
+       "pulled": "2026-10-17 12:48 ET",
+       "ml_home": 0.7594,
        "spread_home_line": -7.5,
-       "spread_home_fair": 0.4807,
+       "spread_home_fair": 0.4829,
        "total_line": 43.5,
        "total_over_fair": 0.5023
       },
@@ -8484,12 +8484,12 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:23 ET",
-       "ml_home": 0.7698,
+       "pulled": "2026-10-17 12:48 ET",
+       "ml_home": 0.7909,
        "spread_home_line": -8.0,
-       "spread_home_fair": 0.4817,
+       "spread_home_fair": 0.4931,
        "total_line": 40.5,
-       "total_over_fair": 0.5203
+       "total_over_fair": 0.5213
       },
       "pm": {
        "slug": "nfl-lac-kc-2026-10-18",
@@ -9166,7 +9166,8 @@
      "type": "ml",
      "team": "Valkyries",
      "women": false,
-     "text": "Valkyries ML"
+     "text": "Valkyries ML",
+     "team_ok": true
     },
     {
      "type": "prop",
@@ -9187,8 +9188,43 @@
      "stat_raw": "team pts"
     }
    ],
-   "match": null,
-   "sport": null
+   "match": {
+    "path": "basketball/wnba",
+    "date": "20261017",
+    "groups": null,
+    "id": "401918305",
+    "snapshot": {
+     "date": "2026-10-17T19:30Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 3:30 PM EDT",
+     "teams": [
+      {
+       "id": "129689",
+       "name": "Golden State Valkyries",
+       "abbr": "GS",
+       "short": "Valkyries",
+       "nick": "Valkyries",
+       "location": "Golden State",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "20",
+       "name": "Atlanta Dream",
+       "abbr": "ATL",
+       "short": "Dream",
+       "nick": "Dream",
+       "location": "Atlanta",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "WNBA"
   },
   {
    "date": "2026-10-16",
@@ -9547,10 +9583,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.7493,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.7594,
      "spread_home_line": -7.5,
-     "spread_home_fair": 0.4807,
+     "spread_home_fair": 0.4829,
      "total_line": 43.5,
      "total_over_fair": 0.5023
     },
@@ -10238,11 +10274,11 @@
     "id": "401858489",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 641.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/17 - 12:30 PM EDT",
+     "detail": "10:41 - 1st",
      "teams": [
       {
        "id": "120",
@@ -10931,7 +10967,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.5138,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4954,
@@ -11861,7 +11897,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.7641,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4604,
@@ -12023,7 +12059,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -12966,7 +13002,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13942,7 +13978,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14632,11 +14668,47 @@
      "type": "ml",
      "team": "Valkyries",
      "women": false,
-     "text": "Valkyries ML"
+     "text": "Valkyries ML",
+     "team_ok": true
     }
    ],
-   "match": null,
-   "sport": null
+   "match": {
+    "path": "basketball/wnba",
+    "date": "20261017",
+    "groups": null,
+    "id": "401918305",
+    "snapshot": {
+     "date": "2026-10-17T19:30Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 3:30 PM EDT",
+     "teams": [
+      {
+       "id": "129689",
+       "name": "Golden State Valkyries",
+       "abbr": "GS",
+       "short": "Valkyries",
+       "nick": "Valkyries",
+       "location": "Golden State",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "20",
+       "name": "Atlanta Dream",
+       "abbr": "ATL",
+       "short": "Dream",
+       "nick": "Dream",
+       "location": "Atlanta",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "WNBA"
   },
   {
    "date": "2026-10-17",
@@ -14761,10 +14833,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.4906,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6354,
+     "spread_home_fair": 0.6333,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -14846,10 +14918,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 1,
-     "clock": 712.0,
+     "clock": 266.0,
      "state": "in",
      "completed": false,
-     "detail": "11:52 - 1st",
+     "detail": "4:26 - 1st",
      "teams": [
       {
        "id": "84",
@@ -15522,11 +15594,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1080.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "18'",
      "teams": [
       {
        "id": "361",
@@ -15700,10 +15772,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.7493,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.7594,
      "spread_home_line": -7.5,
-     "spread_home_fair": 0.4807,
+     "spread_home_fair": 0.4829,
      "total_line": 43.5,
      "total_over_fair": 0.5023
     },
@@ -16421,10 +16493,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.4906,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6354,
+     "spread_home_fair": 0.6333,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16566,10 +16638,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.4906,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6354,
+     "spread_home_fair": 0.6333,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16696,12 +16768,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.2302,
-     "spread_home_line": 10.0,
-     "spread_home_fair": 0.4931,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.2206,
+     "spread_home_line": 10.5,
+     "spread_home_fair": 0.4954,
      "total_line": 47.0,
-     "total_over_fair": 0.4978
+     "total_over_fair": 0.5
     },
     "pm": {
      "slug": "cfb-nd-byu-2026-10-17",
@@ -17341,11 +17413,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1080.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "18'",
      "teams": [
       {
        "id": "361",
@@ -17495,7 +17567,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18245,11 +18317,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1080.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "18'",
      "teams": [
       {
        "id": "361",
@@ -18363,10 +18435,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.4906,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6354,
+     "spread_home_fair": 0.6333,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18590,10 +18662,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.4906,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6354,
+     "spread_home_fair": 0.6333,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18666,7 +18738,10 @@
      "stat": "assists",
      "op": "min",
      "min": 5,
-     "text": "Jordin Canada 5+ assists"
+     "text": "Jordin Canada 5+ assists",
+     "pteam": "ATL",
+     "pname": "Jordin Canada",
+     "pid": "3142250"
     },
     {
      "type": "prop",
@@ -18674,7 +18749,10 @@
      "stat": "reb",
      "op": "min",
      "min": 10,
-     "text": "Angel Reese 10+ rebounds"
+     "text": "Angel Reese 10+ rebounds",
+     "pteam": "ATL",
+     "pname": "Angel Reese",
+     "pid": "4433402"
     },
     {
      "type": "prop",
@@ -18682,11 +18760,49 @@
      "stat": "reb",
      "op": "min",
      "min": 7,
-     "text": "Kiah Stokes 7+ rebounds"
+     "text": "Kiah Stokes 7+ rebounds",
+     "pteam": "GS",
+     "pname": "Kiah Stokes",
+     "pid": "2590093"
     }
    ],
-   "match": null,
-   "sport": null
+   "match": {
+    "path": "basketball/wnba",
+    "date": "20261017",
+    "groups": null,
+    "id": "401918305",
+    "snapshot": {
+     "date": "2026-10-17T19:30Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 3:30 PM EDT",
+     "teams": [
+      {
+       "id": "129689",
+       "name": "Golden State Valkyries",
+       "abbr": "GS",
+       "short": "Valkyries",
+       "nick": "Valkyries",
+       "location": "Golden State",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "20",
+       "name": "Atlanta Dream",
+       "abbr": "ATL",
+       "short": "Dream",
+       "nick": "Dream",
+       "location": "Atlanta",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "WNBA"
   },
   {
    "date": "2026-10-17",
@@ -18861,7 +18977,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.6367,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4114,
@@ -19035,7 +19151,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.7641,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4604,
@@ -19220,7 +19336,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
+     "pulled": "2026-10-17 12:48 ET",
      "ml_home": 0.3505,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.5796,
@@ -19394,12 +19510,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.5208,
+     "pulled": "2026-10-17 12:48 ET",
+     "ml_home": 0.5196,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.7084,
+     "spread_home_fair": 0.7082,
      "total_line": 6.0,
-     "total_over_fair": 0.5092
+     "total_over_fair": 0.5023
     },
     "pm": {
      "slug": "nhl-nj-wsh-2026-10-17",
@@ -19529,10 +19645,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 1,
-     "clock": 486.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "8:06 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "251",
@@ -19542,7 +19658,7 @@
        "nick": "Longhorns",
        "location": "Texas",
        "home": true,
-       "score": "7"
+       "score": "10"
       },
       {
        "id": "57",
@@ -20248,6 +20364,6 @@
  ],
  "pnl_total": 176.24,
  "open_stake": 171.18,
- "hash": "2770d99da227becc8461addda56318e2e53a9f98",
- "generated_at": "2026-10-17T12:23:32-04:00"
+ "hash": "2d22d7bbb7185b793a4170417993aae506873e03",
+ "generated_at": "2026-10-17T12:48:45-04:00"
 }

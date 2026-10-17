@@ -608,6 +608,11 @@ function shortLabel(b,g){
   if(L.type==="spread"){const t=team(L.team);return `${t?t.abbr:L.team} ${fmtLine(L.line)}`}
   if(L.type==="total")return `${L.side==="under"?"U":"O"} ${L.line} ${matchup}`;
   return b.pick}
+// fallback when no ESPN game is linked: show the logged start time ("Sat Oct 17 03:30 PM ET")
+function rawStart(raw){if(!raw)return"";const m=String(raw).match(/^(\w{3}) (\w{3}) (\d{1,2}) 0?(\d{1,2}:\d{2}) ?([AP]M)/);
+  if(!m)return `${esc(raw)}`;const now=new Date().toLocaleString("en-US",{timeZone:TZ,weekday:"short",month:"short",day:"numeric"});
+  const today=now.startsWith(m[1])&&now.includes(m[2]+" "+m[3]);
+  return `${today?"":m[1]+" "}${m[4]} ${m[5]}<small>${today?"Today":"Starts"} ET</small>`}
 function rowScore(b,g,legStats){
   const start=x=>{const d=new Date(x.date),today=etDay(Date.now())===etDay(x.date);
     return d.toLocaleString("en-US",{timeZone:TZ,...(today?{}:{weekday:"short"}),hour:"numeric",minute:"2-digit"})};
@@ -616,11 +621,11 @@ function rowScore(b,g,legStats){
     return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small>${x.completed?"Final":`${stIcon(x)}<span data-clk="${x.id}" data-sep=" ">${esc(clockText(x," "))}</span>`}</small>`};
   const today=x=>etDay(Date.now())===etDay(x.date);
   if(g)return one(g);
-  const gs=legStats.map(x=>x.g).filter(Boolean);if(!gs.length)return"";
+  const gs=legStats.map(x=>x.g).filter(Boolean);if(!gs.length)return rawStart(b.start);
   const live=gs.find(x=>x.state==="in");if(live)return one(live);
   const fin=gs.filter(x=>x.completed).length;
   if(fin===gs.length)return `${fin}/${b.legs.length} final<small>${legStats.filter(x=>x.s==="WON").length} won</small>`;
-  const nx=gs.filter(x=>x.state==="pre").sort((a,c)=>new Date(a.date)-new Date(c.date))[0];return nx?one(nx):""}
+  const nx=gs.filter(x=>x.state==="pre").sort((a,c)=>new Date(a.date)-new Date(c.date))[0];return nx?one(nx):rawStart(b.start)}
 function syncUI(){
   document.querySelectorAll(".card[data-k]").forEach(c=>c.classList.toggle("open",OPEN.has(c.dataset.k)));
   document.querySelectorAll(".sec.settled").forEach(s=>s.classList.toggle("open",SECS.has(s.id)));
