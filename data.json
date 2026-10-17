@@ -151,76 +151,6 @@
   {
    "date": "2026-10-15",
    "book": "DraftKings",
-   "event": "Ohio State @ Indiana",
-   "market": "Moneyline (50% profit boost)",
-   "pick": "Indiana Hoosiers",
-   "start": "Sat Oct 17 12:00 PM ET",
-   "price": "+150",
-   "boosted_price": "+225",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 0.67,
-   "ev_pct": "24.3",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Indiana Hoosiers",
-     "women": false,
-     "text": "Indiana Hoosiers",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401858488",
-    "snapshot": {
-     "date": "2026-10-17T16:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "84",
-       "name": "Indiana Hoosiers",
-       "abbr": "IU",
-       "short": "Indiana",
-       "nick": "Hoosiers",
-       "location": "Indiana",
-       "home": true,
-       "score": "15"
-      },
-      {
-       "id": "194",
-       "name": "Ohio State Buckeyes",
-       "abbr": "OSU",
-       "short": "Ohio State",
-       "nick": "Buckeyes",
-       "location": "Ohio State",
-       "home": false,
-       "score": "19"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:51 ET",
-     "ml_home": 0.438,
-     "spread_home_line": 2.5,
-     "spread_home_fair": 0.4954,
-     "total_line": 49.5,
-     "total_over_fair": 0.4955
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-15",
-   "book": "DraftKings",
    "event": "Notre Dame @ BYU",
    "market": "Moneyline (50% profit boost)",
    "pick": "BYU Cougars",
@@ -282,10 +212,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.2274,
-     "spread_home_line": 10.0,
-     "spread_home_fair": 0.4875,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.2223,
+     "spread_home_line": 10.5,
+     "spread_home_fair": 0.5,
      "total_line": 47.0,
      "total_over_fair": 0.4978
     },
@@ -940,10 +870,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.8912,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.8909,
      "spread_home_line": -21.0,
-     "spread_home_fair": 0.4862,
+     "spread_home_fair": 0.4817,
      "total_line": 45.5,
      "total_over_fair": 0.5156
     },
@@ -1818,10 +1748,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.8912,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.8909,
      "spread_home_line": -21.0,
-     "spread_home_fair": 0.4862,
+     "spread_home_fair": 0.4817,
      "total_line": 45.5,
      "total_over_fair": 0.5156
     },
@@ -2663,10 +2593,10 @@
     "snapshot": {
      "date": "2026-10-17T19:30Z",
      "period": 2,
-     "clock": 586.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "9:46 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "61",
@@ -2686,7 +2616,7 @@
        "nick": "Tigers",
        "location": "Auburn",
        "home": false,
-       "score": "7"
+       "score": "17"
       }
      ]
     },
@@ -3574,12 +3504,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.889,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.8897,
      "spread_home_line": -19.5,
-     "spread_home_fair": 0.5087,
-     "total_line": 56.0,
-     "total_over_fair": 0.5162
+     "spread_home_fair": 0.513,
+     "total_line": 56.5,
+     "total_over_fair": 0.5065
     },
     "pm": {
      "slug": "cfb-flst-mia-2026-10-17",
@@ -4391,90 +4321,6 @@
   {
    "date": "2026-10-16",
    "book": "Caesars",
-   "event": "Rutgers @ Maryland",
-   "market": "SGP 3-leg (50% boost)",
-   "pick": "Rutgers ML + U56.5 + A. Raymond 50+ rush yds",
-   "start": "Sat Oct 17 12:35 PM ET",
-   "price": "+425",
-   "boosted_price": "+638",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 6.38,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Rutgers",
-     "women": false,
-     "text": "Rutgers ML",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "under",
-     "line": 56.5,
-     "text": "U56.5"
-    },
-    {
-     "type": "prop",
-     "player": "A. Raymond",
-     "stat": "rushYds",
-     "op": "min",
-     "min": 50,
-     "text": "A. Raymond 50+ rush yds"
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401858489",
-    "snapshot": {
-     "date": "2026-10-17T16:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "120",
-       "name": "Maryland Terrapins",
-       "abbr": "MD",
-       "short": "Maryland",
-       "nick": "Terrapins",
-       "location": "Maryland",
-       "home": true,
-       "score": "30"
-      },
-      {
-       "id": "164",
-       "name": "Rutgers Scarlet Knights",
-       "abbr": "RUTG",
-       "short": "Rutgers",
-       "nick": "Scarlet Knights",
-       "location": "Rutgers",
-       "home": false,
-       "score": "37"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.6462,
-     "spread_home_line": -5.0,
-     "spread_home_fair": 0.5046,
-     "total_line": 56.0,
-     "total_over_fair": 0.4933
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "Caesars",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
    "market": "SGP 3-leg (boosted)",
    "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
@@ -4581,263 +4427,6 @@
   {
    "date": "2026-10-16",
    "book": "Caesars",
-   "event": "Boston Bruins @ Anaheim Ducks",
-   "market": "SGP 3-leg (boosted)",
-   "pick": "Under 6.5 + Ducks ML + B. Sennecke 2+ SOG",
-   "start": "Fri Oct 16 10:00 PM ET",
-   "price": "+325",
-   "boosted_price": "+423",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 4.23,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "under",
-     "line": 6.5,
-     "text": "Under 6.5"
-    },
-    {
-     "type": "ml",
-     "team": "Ducks",
-     "women": false,
-     "text": "Ducks ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "B. Sennecke",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "B. Sennecke 2+ SOG",
-     "pteam": "ANA",
-     "pname": "Beckett Sennecke",
-     "pid": "5216858"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261016",
-    "groups": null,
-    "id": "401892518",
-    "snapshot": {
-     "date": "2026-10-17T02:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "25",
-       "name": "Anaheim Ducks",
-       "abbr": "ANA",
-       "short": "Ducks",
-       "nick": "Ducks",
-       "location": "Anaheim",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "1",
-       "name": "Boston Bruins",
-       "abbr": "BOS",
-       "short": "Bruins",
-       "nick": "Bruins",
-       "location": "Boston",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
-     "ml_home": 0.4954,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.703,
-     "total_line": 6.5,
-     "total_over_fair": 0.4931
-    }
-   },
-   "sport": "NHL"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "Caesars",
-   "event": "Memphis @ Tulane",
-   "market": "SGP 3-leg (boosted)",
-   "pick": "J. Carter TD + J. Daniels TD + M. Stokes 220+ pass yds",
-   "start": "Fri Oct 16 07:35 PM ET",
-   "price": "+325",
-   "boosted_price": "+423",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 4.23,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "J. Carter",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "J. Carter TD",
-     "pteam": "MEM",
-     "pname": "Jaylin Carter",
-     "pid": "5222671"
-    },
-    {
-     "type": "prop",
-     "player": "J. Daniels",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "J. Daniels TD",
-     "pteam": "TULN",
-     "pname": "Johnnie Daniels",
-     "pid": "5218820"
-    },
-    {
-     "type": "prop",
-     "player": "M. Stokes",
-     "stat": "passYds",
-     "op": "min",
-     "min": 220,
-     "text": "M. Stokes 220+ pass yds",
-     "pteam": "MEM",
-     "pname": "Marcus Stokes",
-     "pid": "5165807"
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261016",
-    "groups": null,
-    "id": "401862801",
-    "snapshot": {
-     "date": "2026-10-16T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "2655",
-       "name": "Tulane Green Wave",
-       "abbr": "TULN",
-       "short": "Tulane",
-       "nick": "Green Wave",
-       "location": "Tulane",
-       "home": true,
-       "score": "31"
-      },
-      {
-       "id": "235",
-       "name": "Memphis Tigers",
-       "abbr": "MEM",
-       "short": "Memphis",
-       "nick": "Tigers",
-       "location": "Memphis",
-       "home": false,
-       "score": "17"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
-     "ml_home": 0.3121,
-     "spread_home_line": 6.5,
-     "spread_home_fair": 0.4908,
-     "total_line": 55.5,
-     "total_over_fair": 0.5089
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "Caesars",
-   "event": "Ohio State @ Indiana",
-   "market": "Player prop (boosted)",
-   "pick": "Josh Hoover 2+ passing TDs",
-   "start": "Sat Oct 17 12:10 PM ET",
-   "price": "+100",
-   "boosted_price": "+125",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 1.25,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Josh Hoover",
-     "stat": "passTD",
-     "op": "min",
-     "min": 2,
-     "text": "Josh Hoover 2+ passing TDs",
-     "pteam": "IU",
-     "pname": "Josh Hoover",
-     "pid": "4685401"
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401858488",
-    "snapshot": {
-     "date": "2026-10-17T16:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "84",
-       "name": "Indiana Hoosiers",
-       "abbr": "IU",
-       "short": "Indiana",
-       "nick": "Hoosiers",
-       "location": "Indiana",
-       "home": true,
-       "score": "15"
-      },
-      {
-       "id": "194",
-       "name": "Ohio State Buckeyes",
-       "abbr": "OSU",
-       "short": "Ohio State",
-       "nick": "Buckeyes",
-       "location": "Ohio State",
-       "home": false,
-       "score": "19"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:51 ET",
-     "ml_home": 0.438,
-     "spread_home_line": 2.5,
-     "spread_home_fair": 0.4954,
-     "total_line": 49.5,
-     "total_over_fair": 0.4955
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "Caesars",
    "event": "Houston Texans @ Jacksonville Jaguars",
    "market": "SGP 3-leg (boosted)",
    "pick": "Under 42.5 + Jaguars ML + C.J. Stroud 200+ pass yds",
@@ -4916,10 +4505,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.5761,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.5719,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.5171,
+     "spread_home_fair": 0.5115,
      "total_line": 42.5,
      "total_over_fair": 0.4933
     },
@@ -5588,76 +5177,6 @@
    "sport": "NFL"
   },
   {
-   "date": "2026-10-16",
-   "book": "FanDuel",
-   "event": "Charlotte Hornets @ Memphis Grizzlies",
-   "market": "Moneyline",
-   "pick": "Hornets ML",
-   "start": "Fri Oct 16 08:00 PM ET",
-   "price": "+116",
-   "boosted_price": "",
-   "stake": 0.78,
-   "stake_note": "",
-   "to_win": 0.9,
-   "ev_pct": "2.17",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Hornets",
-     "women": false,
-     "text": "Hornets ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261016",
-    "groups": null,
-    "id": "401901822",
-    "snapshot": {
-     "date": "2026-10-17T00:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "29",
-       "name": "Memphis Grizzlies",
-       "abbr": "MEM",
-       "short": "Grizzlies",
-       "nick": "Grizzlies",
-       "location": "Memphis",
-       "home": true,
-       "score": "117"
-      },
-      {
-       "id": "30",
-       "name": "Charlotte Hornets",
-       "abbr": "CHA",
-       "short": "Hornets",
-       "nick": "Hornets",
-       "location": "Charlotte",
-       "home": false,
-       "score": "98"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:38 ET",
-     "ml_home": 0.5564,
-     "spread_home_line": -2.0,
-     "spread_home_fair": 0.5152,
-     "total_line": 228.5,
-     "total_over_fair": 0.5152
-    }
-   },
-   "sport": "NBA"
-  },
-  {
    "date": "2026-10-15",
    "book": "DraftKings",
    "event": "NBA Cup 2026",
@@ -5679,104 +5198,6 @@
    ],
    "match": null,
    "sport": null
-  },
-  {
-   "date": "2026-10-16",
-   "book": "bet365",
-   "event": "Pittsburgh Penguins @ Colorado Avalanche",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
-   "start": "Fri Oct 16 09:07 PM ET",
-   "price": "+105",
-   "boosted_price": "+137",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.27,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Makar",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Makar 1+ pts",
-     "pteam": "COL",
-     "pcands": [
-      "Taylor Makar",
-      "Cale Makar"
-     ]
-    },
-    {
-     "type": "prop",
-     "player": "MacKinnon",
-     "stat": "pts",
-     "op": "min",
-     "min": 2,
-     "text": "MacKinnon 2+ pts",
-     "pteam": "COL",
-     "pname": "Nathan MacKinnon",
-     "pid": "3041969"
-    },
-    {
-     "type": "prop",
-     "player": "Kadri",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Kadri 1+ pts",
-     "pteam": "COL",
-     "pname": "Nazem Kadri",
-     "pid": "5349"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261016",
-    "groups": null,
-    "id": "401892517",
-    "snapshot": {
-     "date": "2026-10-17T01:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "17",
-       "name": "Colorado Avalanche",
-       "abbr": "COL",
-       "short": "Avalanche",
-       "nick": "Avalanche",
-       "location": "Colorado",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "16",
-       "name": "Pittsburgh Penguins",
-       "abbr": "PIT",
-       "short": "Penguins",
-       "nick": "Penguins",
-       "location": "Pittsburgh",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:38 ET",
-     "ml_home": 0.6495,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.4335,
-     "total_line": 6.5,
-     "total_over_fair": 0.5437
-    }
-   },
-   "sport": "NHL"
   },
   {
    "date": "2026-10-16",
@@ -5848,12 +5269,12 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 16:35 ET",
+       "pulled": "2026-10-17 17:23 ET",
        "ml_home": 0.7538,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4718,
        "total_line": 43.5,
-       "total_over_fair": 0.5023
+       "total_over_fair": 0.4842
       },
       "pm": {
        "slug": "nfl-nyj-ne-2026-10-18",
@@ -6554,7 +5975,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 16:35 ET",
+       "pulled": "2026-10-17 17:23 ET",
        "ml_home": 0.7804,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4604,
@@ -7267,11 +6688,11 @@
     "id": "401918305",
     "snapshot": {
      "date": "2026-10-17T19:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 502.0,
      "state": "in",
      "completed": false,
-     "detail": "0.0 - 2nd",
+     "detail": "8:22 - 4th",
      "teams": [
       {
        "id": "129689",
@@ -7281,7 +6702,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "42"
+       "score": "55"
       },
       {
        "id": "20",
@@ -7291,7 +6712,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "39"
+       "score": "58"
       }
      ]
     }
@@ -7401,196 +6822,6 @@
    "sport": "MLB"
   },
   {
-   "date": "2026-10-16",
-   "book": "theScore",
-   "event": "Boston Bruins @ Anaheim Ducks",
-   "market": "SGP 3-leg (20% profit boost)",
-   "pick": "D. Pastrnak U0.5 goals + C. Gauthier U0.5 goals + Over 6.5",
-   "start": "Fri Oct 16 10:00 PM ET",
-   "price": "+312",
-   "boosted_price": "+370",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.74,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "D. Pastrnak",
-     "stat": "goals",
-     "op": "under",
-     "line": 0.5,
-     "text": "D. Pastrnak U0.5 goals",
-     "pteam": "BOS",
-     "pname": "David Pastrnak",
-     "pid": "3114778"
-    },
-    {
-     "type": "prop",
-     "player": "C. Gauthier",
-     "stat": "goals",
-     "op": "under",
-     "line": 0.5,
-     "text": "C. Gauthier U0.5 goals",
-     "pteam": "ANA",
-     "pname": "Cutter Gauthier",
-     "pid": "5080145"
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 6.5,
-     "text": "Over 6.5"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261016",
-    "groups": null,
-    "id": "401892518",
-    "snapshot": {
-     "date": "2026-10-17T02:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "25",
-       "name": "Anaheim Ducks",
-       "abbr": "ANA",
-       "short": "Ducks",
-       "nick": "Ducks",
-       "location": "Anaheim",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "1",
-       "name": "Boston Bruins",
-       "abbr": "BOS",
-       "short": "Bruins",
-       "nick": "Bruins",
-       "location": "Boston",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
-     "ml_home": 0.4954,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.703,
-     "total_line": 6.5,
-     "total_over_fair": 0.4931
-    }
-   },
-   "sport": "NHL"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "theScore",
-   "event": "Boston Bruins @ Anaheim Ducks",
-   "market": "SGP 4-leg (30% profit boost)",
-   "pick": "Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG",
-   "start": "Fri Oct 16 10:00 PM ET",
-   "price": "+432",
-   "boosted_price": "+560",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.12,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Ducks",
-     "line": 1.5,
-     "women": false,
-     "text": "Ducks +1.5",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 5.5,
-     "text": "Over 5.5"
-    },
-    {
-     "type": "prop",
-     "player": "D. Pastrnak",
-     "stat": "goals",
-     "op": "under",
-     "line": 0.5,
-     "text": "D. Pastrnak U0.5 goals",
-     "pteam": "BOS",
-     "pname": "David Pastrnak",
-     "pid": "3114778"
-    },
-    {
-     "type": "prop",
-     "player": "C. Gauthier",
-     "stat": "sog",
-     "op": "min",
-     "min": 4,
-     "text": "C. Gauthier 4+ SOG",
-     "pteam": "ANA",
-     "pname": "Cutter Gauthier",
-     "pid": "5080145"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261016",
-    "groups": null,
-    "id": "401892518",
-    "snapshot": {
-     "date": "2026-10-17T02:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "25",
-       "name": "Anaheim Ducks",
-       "abbr": "ANA",
-       "short": "Ducks",
-       "nick": "Ducks",
-       "location": "Anaheim",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "1",
-       "name": "Boston Bruins",
-       "abbr": "BOS",
-       "short": "Bruins",
-       "nick": "Bruins",
-       "location": "Boston",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
-     "ml_home": 0.4954,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.703,
-     "total_line": 6.5,
-     "total_over_fair": 0.4931
-    }
-   },
-   "sport": "NHL"
-  },
-  {
    "date": "2026-10-17",
    "book": "PointsBet",
    "event": "New York Jets @ New England Patriots",
@@ -7655,12 +6886,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.7538,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4718,
      "total_line": 43.5,
-     "total_over_fair": 0.5023
+     "total_over_fair": 0.4842
     },
     "pm": {
      "slug": "nfl-nyj-ne-2026-10-18",
@@ -8318,77 +7549,6 @@
   {
    "date": "2026-10-17",
    "book": "PointsBet",
-   "event": "Rutgers @ Maryland",
-   "market": "Spread (WELCOMEDM rollover)",
-   "pick": "Maryland Terrapins -5",
-   "start": "Sat Oct 17 12:30 PM ET",
-   "price": "-112",
-   "boosted_price": "",
-   "stake": 25.0,
-   "stake_note": "",
-   "to_win": 22.32,
-   "ev_pct": "0.8",
-   "multi": false,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Maryland Terrapins",
-     "line": -5.0,
-     "women": false,
-     "text": "Maryland Terrapins -5",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401858489",
-    "snapshot": {
-     "date": "2026-10-17T16:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "120",
-       "name": "Maryland Terrapins",
-       "abbr": "MD",
-       "short": "Maryland",
-       "nick": "Terrapins",
-       "location": "Maryland",
-       "home": true,
-       "score": "30"
-      },
-      {
-       "id": "164",
-       "name": "Rutgers Scarlet Knights",
-       "abbr": "RUTG",
-       "short": "Rutgers",
-       "nick": "Scarlet Knights",
-       "location": "Rutgers",
-       "home": false,
-       "score": "37"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:23 ET",
-     "ml_home": 0.6462,
-     "spread_home_line": -5.0,
-     "spread_home_fair": 0.5046,
-     "total_line": 56.0,
-     "total_over_fair": 0.4933
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "PointsBet",
    "event": "Dallas Cowboys @ Green Bay Packers",
    "market": "Alt Spread (WELCOMEDM rollover)",
    "pick": "Dallas Cowboys +3.5",
@@ -8451,12 +7611,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.508,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
      "total_line": 53.0,
-     "total_over_fair": 0.5158
+     "total_over_fair": 0.5235
     },
     "pm": {
      "slug": "nfl-dal-gb-2026-10-19",
@@ -9351,11 +8511,11 @@
     "id": "401892521",
     "snapshot": {
      "date": "2026-10-17T20:00Z",
-     "period": 1,
-     "clock": 325.0,
+     "period": 2,
+     "clock": 519.0,
      "state": "in",
      "completed": false,
-     "detail": "5:25 - 1st",
+     "detail": "8:39 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -9365,7 +8525,7 @@
        "nick": "Lightning",
        "location": "Tampa Bay",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "22",
@@ -9375,7 +8535,7 @@
        "nick": "Canucks",
        "location": "Vancouver",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -9412,6 +8572,17 @@
        "tokens": [
         "113547882149418850255056015263097244066715476324537115066020675103581233764187",
         "29166028013173530774204863173293156373531253211279246830720382017492525089923"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Canucks",
+        "Lightning"
+       ],
+       "tokens": [
+        "22617091421007669045831603518114308623261217187934681077144111577604093022535",
+        "94401525672676807671227733483279913055691588285542987930572839675592441626496"
        ]
       }
      ],
@@ -9543,12 +8714,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
      "total_line": 39.5,
-     "total_over_fair": 0.4809
+     "total_over_fair": 0.4721
     },
     "pm": {
      "slug": "nfl-pit-tb-2026-10-18",
@@ -10486,7 +9657,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.3846,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5303,
@@ -11462,10 +10633,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.5761,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.5719,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.5171,
+     "spread_home_fair": 0.5115,
      "total_line": 42.5,
      "total_over_fair": 0.4933
     },
@@ -12163,11 +11334,11 @@
     "id": "401918305",
     "snapshot": {
      "date": "2026-10-17T19:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 502.0,
      "state": "in",
      "completed": false,
-     "detail": "0.0 - 2nd",
+     "detail": "8:22 - 4th",
      "teams": [
       {
        "id": "129689",
@@ -12177,7 +11348,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "42"
+       "score": "55"
       },
       {
        "id": "20",
@@ -12187,7 +11358,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "39"
+       "score": "58"
       }
      ]
     }
@@ -12317,12 +11488,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
      "total_line": 6.5,
-     "total_over_fair": 0.5069
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-cle-2026-10-16",
@@ -12371,155 +11542,6 @@
     }
    },
    "sport": "MLB"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "DraftKings",
-   "event": "Ohio State @ Indiana",
-   "market": "Alt Total (50% profit boost)",
-   "pick": "Over 44.5",
-   "start": "Sat Oct 17 12:00 PM ET",
-   "price": "-191",
-   "boosted_price": "-127",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.15,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "total",
-     "side": "over",
-     "line": 44.5,
-     "text": "Over 44.5"
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401858488",
-    "snapshot": {
-     "date": "2026-10-17T16:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "84",
-       "name": "Indiana Hoosiers",
-       "abbr": "IU",
-       "short": "Indiana",
-       "nick": "Hoosiers",
-       "location": "Indiana",
-       "home": true,
-       "score": "15"
-      },
-      {
-       "id": "194",
-       "name": "Ohio State Buckeyes",
-       "abbr": "OSU",
-       "short": "Ohio State",
-       "nick": "Buckeyes",
-       "location": "Ohio State",
-       "home": false,
-       "score": "19"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 11:51 ET",
-     "ml_home": 0.438,
-     "spread_home_line": 2.5,
-     "spread_home_fair": 0.4954,
-     "total_line": 49.5,
-     "total_over_fair": 0.4955
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "DraftKings",
-   "event": "Newcastle vs Aston Villa",
-   "market": "SGP 3-leg (30% parlay boost)",
-   "pick": "Harvey Barnes 1+ SOT + Yoane Wissa 3+ shots + Over 10.5 corners",
-   "start": "Sat Oct 17 12:30 PM ET",
-   "price": "+320",
-   "boosted_price": "+416",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.83,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Harvey Barnes 1+ SOT",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    },
-    {
-     "type": "prop",
-     "player": "Yoane Wissa",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Yoane Wissa 3+ shots",
-     "pteam": "NEW",
-     "pname": "Yoane Wissa",
-     "pid": "224077"
-    },
-    {
-     "type": "unknown",
-     "text": "Over 10.5 corners"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261017",
-    "groups": null,
-    "id": "401879258",
-    "snapshot": {
-     "date": "2026-10-17T16:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "361",
-       "name": "Newcastle United",
-       "abbr": "NEW",
-       "short": "Newcastle",
-       "nick": "Newcastle United",
-       "location": "Newcastle United",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "362",
-       "name": "Aston Villa",
-       "abbr": "AVL",
-       "short": "Aston Villa",
-       "nick": "Aston Villa",
-       "location": "Aston Villa",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer"
   },
   {
    "date": "2026-10-17",
@@ -12668,12 +11690,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.7538,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4718,
      "total_line": 43.5,
-     "total_over_fair": 0.5023
+     "total_over_fair": 0.4842
     },
     "pm": {
      "slug": "nfl-nyj-ne-2026-10-18",
@@ -13389,12 +12411,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
      "total_line": 6.5,
-     "total_over_fair": 0.5069
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-cle-2026-10-16",
@@ -13534,12 +12556,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
      "total_line": 6.5,
-     "total_over_fair": 0.5069
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-cle-2026-10-16",
@@ -13664,10 +12686,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.2274,
-     "spread_home_line": 10.0,
-     "spread_home_fair": 0.4875,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.2223,
+     "spread_home_line": 10.5,
+     "spread_home_fair": 0.5,
      "total_line": 47.0,
      "total_over_fair": 0.4978
     },
@@ -14261,88 +13283,6 @@
   {
    "date": "2026-10-17",
    "book": "FanDuel",
-   "event": "Newcastle vs Aston Villa",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Over 1.5 goals + Harvey Barnes 1+ SOT + Harvey Barnes 3+ shots",
-   "start": "Sat Oct 17 12:30 PM ET",
-   "price": "+117",
-   "boosted_price": "+175",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.88,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "over",
-     "line": 1.5,
-     "text": "Over 1.5 goals"
-    },
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Harvey Barnes 1+ SOT",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    },
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Harvey Barnes 3+ shots",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261017",
-    "groups": null,
-    "id": "401879258",
-    "snapshot": {
-     "date": "2026-10-17T16:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "361",
-       "name": "Newcastle United",
-       "abbr": "NEW",
-       "short": "Newcastle",
-       "nick": "Newcastle United",
-       "location": "Newcastle United",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "362",
-       "name": "Aston Villa",
-       "abbr": "AVL",
-       "short": "Aston Villa",
-       "nick": "Aston Villa",
-       "location": "Aston Villa",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "FanDuel",
    "event": "Houston Texans @ Jacksonville Jaguars",
    "market": "SGP 6-leg (bonus bet $2)",
    "pick": "T. Lawrence 150+ pass yds + C.J. Stroud 175+ pass yds + Parker Washington 20+ rec yds + Nico Collins 30+ rec yds + Bhayshul Tuten 30+ rush yds + Woody Marks 20+ rush yds",
@@ -14463,10 +13403,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.5761,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.5719,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.5171,
+     "spread_home_fair": 0.5115,
      "total_line": 42.5,
      "total_over_fair": 0.4933
     },
@@ -15160,93 +14100,6 @@
   {
    "date": "2026-10-17",
    "book": "theScore",
-   "event": "Newcastle vs Aston Villa",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Harvey Barnes AGS + Harvey Barnes 1+ SOT + Harvey Barnes 4+ shots",
-   "start": "Sat Oct 17 12:30 PM ET",
-   "price": "+350",
-   "boosted_price": "+455",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.91,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Harvey Barnes AGS",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    },
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Harvey Barnes 1+ SOT",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    },
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "shots",
-     "op": "min",
-     "min": 4,
-     "text": "Harvey Barnes 4+ shots",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261017",
-    "groups": null,
-    "id": "401879258",
-    "snapshot": {
-     "date": "2026-10-17T16:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "361",
-       "name": "Newcastle United",
-       "abbr": "NEW",
-       "short": "Newcastle",
-       "nick": "Newcastle United",
-       "location": "Newcastle United",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "362",
-       "name": "Aston Villa",
-       "abbr": "AVL",
-       "short": "Aston Villa",
-       "nick": "Aston Villa",
-       "location": "Aston Villa",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "theScore",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
    "market": "SGP 3-leg (50% profit boost)",
    "pick": "N. Martinez 2+ K + Rays -1.5 + Jose Ramirez 1+ hits",
@@ -15331,12 +14184,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
      "total_line": 6.5,
-     "total_over_fair": 0.5069
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-cle-2026-10-16",
@@ -15559,12 +14412,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
-     "ml_home": 0.4941,
+     "pulled": "2026-10-17 17:23 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
      "total_line": 6.5,
-     "total_over_fair": 0.5069
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-cle-2026-10-16",
@@ -15670,11 +14523,11 @@
     "id": "401918305",
     "snapshot": {
      "date": "2026-10-17T19:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 502.0,
      "state": "in",
      "completed": false,
-     "detail": "0.0 - 2nd",
+     "detail": "8:22 - 4th",
      "teams": [
       {
        "id": "129689",
@@ -15684,7 +14537,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "42"
+       "score": "55"
       },
       {
        "id": "20",
@@ -15694,99 +14547,12 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "39"
+       "score": "58"
       }
      ]
     }
    },
    "sport": "WNBA"
-  },
-  {
-   "date": "2026-10-17",
-   "book": "bet365",
-   "event": "Philadelphia Union vs Charlotte FC",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Milan Iloski score or assist + Bruno Damiani score or assist + Milan Iloski 3+ shots",
-   "start": "Sat Oct 17 02:30 PM ET",
-   "price": "+100",
-   "boosted_price": "+130",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.26,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Milan Iloski",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Milan Iloski score or assist",
-     "pteam": "PHI",
-     "pname": "Milan Iloski",
-     "pid": "263585"
-    },
-    {
-     "type": "prop",
-     "player": "Bruno Damiani",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Bruno Damiani score or assist",
-     "pteam": "PHI",
-     "pname": "Bruno Damiani",
-     "pid": "322680"
-    },
-    {
-     "type": "prop",
-     "player": "Milan Iloski",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Milan Iloski 3+ shots",
-     "pteam": "PHI",
-     "pname": "Milan Iloski",
-     "pid": "263585"
-    }
-   ],
-   "match": {
-    "path": "soccer/usa.1",
-    "date": "20261017",
-    "groups": null,
-    "id": "761875",
-    "snapshot": {
-     "date": "2026-10-17T18:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+6'",
-     "teams": [
-      {
-       "id": "10739",
-       "name": "Philadelphia Union",
-       "abbr": "PHI",
-       "short": "Philadelphia",
-       "nick": "Philadelphia Union",
-       "location": "Philadelphia Union",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "21300",
-       "name": "Charlotte FC",
-       "abbr": "CLT",
-       "short": "Charlotte",
-       "nick": "Charlotte FC",
-       "location": "Charlotte FC",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer"
   },
   {
    "date": "2026-10-17",
@@ -15874,7 +14640,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 16:35 ET",
+     "pulled": "2026-10-17 17:23 ET",
      "ml_home": 0.6363,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.413,
@@ -16018,11 +14784,11 @@
     "id": "401892521",
     "snapshot": {
      "date": "2026-10-17T20:00Z",
-     "period": 1,
-     "clock": 325.0,
+     "period": 2,
+     "clock": 519.0,
      "state": "in",
      "completed": false,
-     "detail": "5:25 - 1st",
+     "detail": "8:39 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -16032,7 +14798,7 @@
        "nick": "Lightning",
        "location": "Tampa Bay",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "22",
@@ -16042,7 +14808,7 @@
        "nick": "Canucks",
        "location": "Vancouver",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -16079,6 +14845,17 @@
        "tokens": [
         "113547882149418850255056015263097244066715476324537115066020675103581233764187",
         "29166028013173530774204863173293156373531253211279246830720382017492525089923"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Canucks",
+        "Lightning"
+       ],
+       "tokens": [
+        "22617091421007669045831603518114308623261217187934681077144111577604093022535",
+        "94401525672676807671227733483279913055691588285542987930572839675592441626496"
        ]
       }
      ],
@@ -16203,11 +14980,11 @@
     "id": "401892520",
     "snapshot": {
      "date": "2026-10-17T19:30Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 172.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "2:52 - 2nd",
      "teams": [
       {
        "id": "28",
@@ -16217,7 +14994,7 @@
        "nick": "Jets",
        "location": "Winnipeg",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "7",
@@ -16227,7 +15004,7 @@
        "nick": "Hurricanes",
        "location": "Carolina",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -16253,6 +15030,17 @@
        "tokens": [
         "29927321755564108004939910604109437210808192512836972868826812588177804583611",
         "37023155114219614464352678280702756345409941063282420099432779800996384725858"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Jets",
+        "Hurricanes"
+       ],
+       "tokens": [
+        "41543197393881368119861870275177218023929254977479582386817425656504404631521",
+        "107345042332827730728121491247242393223590365187528123463592914928856255662376"
        ]
       }
      ],
@@ -16300,6 +15088,17 @@
         "25906130320871808926646286586279898317830203359311530233544209657973424907404",
         "100575993058605966450515145520383473230218877732230530703428128315922784260282"
        ]
+      },
+      {
+       "line": 3.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "113138059359224106165012656537089374150919860338947869512306330093341939780267",
+        "57452595027956649470112799563079209610377382124448181185942323751987507577182"
+       ]
       }
      ],
      "ml": {
@@ -16320,182 +15119,89 @@
     }
    },
    "sport": "NHL"
+  }
+ ],
+ "settled_recent": [
+  {
+   "date": "2026-10-17",
+   "book": "bet365",
+   "event": "Florida @ Texas",
+   "pick": "Jadan Baugh ATTD + Cam Coleman 30+ rec yds + Ryan Wingo 30+ rec yds",
+   "result": "lost",
+   "pnl": -0.2
   },
   {
    "date": "2026-10-17",
    "book": "bet365",
    "event": "New Jersey Devils @ Washington Capitals",
-   "market": "SGP 3-leg (25% profit boost)",
    "pick": "Jack Hughes 1+ pts + Timo Meier 2+ SOG + Jack Hughes 3+ SOG",
-   "start": "Sat Oct 17 01:07 PM ET",
-   "price": "+115",
-   "boosted_price": "+144",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.28,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Jack Hughes",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Jack Hughes 1+ pts",
-     "pteam": "NJ",
-     "pname": "Jack Hughes",
-     "pid": "4565222"
-    },
-    {
-     "type": "prop",
-     "player": "Timo Meier",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Timo Meier 2+ SOG",
-     "pteam": "NJ",
-     "pname": "Timo Meier",
-     "pid": "3899978"
-    },
-    {
-     "type": "prop",
-     "player": "Jack Hughes",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Jack Hughes 3+ SOG",
-     "pteam": "NJ",
-     "pname": "Jack Hughes",
-     "pid": "4565222"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261017",
-    "groups": null,
-    "id": "401892519",
-    "snapshot": {
-     "date": "2026-10-17T17:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "23",
-       "name": "Washington Capitals",
-       "abbr": "WSH",
-       "short": "Capitals",
-       "nick": "Capitals",
-       "location": "Washington",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "11",
-       "name": "New Jersey Devils",
-       "abbr": "NJ",
-       "short": "Devils",
-       "nick": "Devils",
-       "location": "New Jersey",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.5196,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.7082,
-     "total_line": 6.0,
-     "total_over_fair": 0.5023
-    }
-   },
-   "sport": "NHL"
+   "result": "lost",
+   "pnl": -0.2
   },
   {
    "date": "2026-10-17",
    "book": "bet365",
-   "event": "Florida @ Texas",
-   "market": "SGP 3-leg (boost unconfirmed)",
-   "pick": "Jadan Baugh ATTD + Cam Coleman 30+ rec yds + Ryan Wingo 30+ rec yds",
-   "start": "Sat Oct 17 12:00 PM ET",
-   "price": "+105",
-   "boosted_price": "+155 (unconfirmed)",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.31,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Jadan Baugh ATTD"
-    },
-    {
-     "type": "prop",
-     "player": "Cam Coleman",
-     "stat": "recYds",
-     "op": "min",
-     "min": 30,
-     "text": "Cam Coleman 30+ rec yds",
-     "pteam": "TEX",
-     "pname": "Cam Coleman",
-     "pid": "5079376"
-    },
-    {
-     "type": "prop",
-     "player": "Ryan Wingo",
-     "stat": "recYds",
-     "op": "min",
-     "min": 30,
-     "text": "Ryan Wingo 30+ rec yds"
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261017",
-    "groups": null,
-    "id": "401856724",
-    "snapshot": {
-     "date": "2026-10-17T16:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "251",
-       "name": "Texas Longhorns",
-       "abbr": "TEX",
-       "short": "Texas",
-       "nick": "Longhorns",
-       "location": "Texas",
-       "home": true,
-       "score": "24"
-      },
-      {
-       "id": "57",
-       "name": "Florida Gators",
-       "abbr": "FLA",
-       "short": "Florida",
-       "nick": "Gators",
-       "location": "Florida",
-       "home": false,
-       "score": "27"
-      }
-     ]
-    }
-   },
-   "sport": "NCAAF"
-  }
- ],
- "settled_recent": [
+   "event": "Philadelphia Union vs Charlotte FC",
+   "pick": "Milan Iloski score or assist + Bruno Damiani score or assist + Milan Iloski 3+ shots",
+   "result": "won",
+   "pnl": 0.26
+  },
+  {
+   "date": "2026-10-17",
+   "book": "theScore",
+   "event": "Newcastle vs Aston Villa",
+   "pick": "Harvey Barnes AGS + Harvey Barnes 1+ SOT + Harvey Barnes 4+ shots",
+   "result": "lost",
+   "pnl": -0.2
+  },
+  {
+   "date": "2026-10-17",
+   "book": "FanDuel",
+   "event": "Newcastle vs Aston Villa",
+   "pick": "Over 1.5 goals + Harvey Barnes 1+ SOT + Harvey Barnes 3+ shots",
+   "result": "lost",
+   "pnl": -0.5
+  },
+  {
+   "date": "2026-10-17",
+   "book": "DraftKings",
+   "event": "Newcastle vs Aston Villa",
+   "pick": "Harvey Barnes 1+ SOT + Yoane Wissa 3+ shots + Over 10.5 corners",
+   "result": "lost",
+   "pnl": -0.2
+  },
+  {
+   "date": "2026-10-17",
+   "book": "DraftKings",
+   "event": "Ohio State @ Indiana",
+   "pick": "Over 44.5",
+   "result": "lost",
+   "pnl": -0.2
+  },
+  {
+   "date": "2026-10-17",
+   "book": "PointsBet",
+   "event": "Rutgers @ Maryland",
+   "pick": "Maryland Terrapins -5",
+   "result": "lost",
+   "pnl": -25.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Boston Bruins @ Anaheim Ducks",
+   "pick": "Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG",
+   "result": "lost",
+   "pnl": -0.2
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Boston Bruins @ Anaheim Ducks",
+   "pick": "D. Pastrnak U0.5 goals + C. Gauthier U0.5 goals + Over 6.5",
+   "result": "lost",
+   "pnl": -0.2
+  },
   {
    "date": "2026-10-16",
    "book": "theScore",
@@ -16503,6 +15209,14 @@
    "pick": "Avalanche ML + Penguins +2.5 + Over 5.5 + Kadri 1+ pts",
    "result": "lost",
    "pnl": -0.2
+  },
+  {
+   "date": "2026-10-16",
+   "book": "bet365",
+   "event": "Pittsburgh Penguins @ Colorado Avalanche",
+   "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
+   "result": "won",
+   "pnl": 0.27
   },
   {
    "date": "2026-10-16",
@@ -16522,6 +15236,14 @@
   },
   {
    "date": "2026-10-16",
+   "book": "FanDuel",
+   "event": "Charlotte Hornets @ Memphis Grizzlies",
+   "pick": "Hornets ML",
+   "result": "lost",
+   "pnl": -0.78
+  },
+  {
+   "date": "2026-10-16",
    "book": "theScore",
    "event": "Memphis @ Tulane",
    "pick": "Tulane ML",
@@ -16531,8 +15253,40 @@
   {
    "date": "2026-10-16",
    "book": "Caesars",
+   "event": "Ohio State @ Indiana",
+   "pick": "Josh Hoover 2+ passing TDs",
+   "result": "lost",
+   "pnl": -1.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "Caesars",
    "event": "Man City vs Ipswich Town",
    "pick": "Man City ML + Haaland AGS + Semenyo AGS",
+   "result": "lost",
+   "pnl": -1.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "Caesars",
+   "event": "Memphis @ Tulane",
+   "pick": "J. Carter TD + J. Daniels TD + M. Stokes 220+ pass yds",
+   "result": "lost",
+   "pnl": -1.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "Caesars",
+   "event": "Boston Bruins @ Anaheim Ducks",
+   "pick": "Under 6.5 + Ducks ML + B. Sennecke 2+ SOG",
+   "result": "lost",
+   "pnl": -1.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "Caesars",
+   "event": "Rutgers @ Maryland",
+   "pick": "Rutgers ML + U56.5 + A. Raymond 50+ rush yds",
    "result": "lost",
    "pnl": -1.0
   },
@@ -16607,10 +15361,19 @@
    "pick": "Old Dominion +3.5",
    "result": "lost",
    "pnl": -25.0
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "Ohio State @ Indiana",
+   "pick": "Indiana Hoosiers",
+   "result": "lost",
+   "pnl": -0.3
   }
  ],
- "pnl_total": 175.42,
- "open_stake": 169.98,
- "hash": "2b44459587441571491cc54fccb8d1f8ce8592c0",
- "generated_at": "2026-10-17T16:36:02-04:00"
+ "pnl_total": 143.97,
+ "open_stake": 137.6,
+ "open_live_n": 36,
+ "hash": "99520ca1e55370314cce65dfba6a79f522968992",
+ "generated_at": "2026-10-17T17:23:26-04:00"
 }

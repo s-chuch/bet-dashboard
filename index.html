@@ -576,7 +576,7 @@ function tick1s(){if(!DATA||document.hidden)return;
     const mini=c.querySelector(".mini");if(mini&&!b.multi&&first!=null){mini.style.width=first+"%";mini.style.background=first>50?"var(--win)":first<50?"var(--lose)":"var(--push)"}});
   // probability-weighted payout (estimate)
   let exp=0,maxp=0,stk=0,excl=0;
-  DATA.open.forEach((b,i)=>{const st=LAST_STATUS[i];if(b.to_win==null||b.stake==null){excl++;return}
+  DATA.open.forEach((b,i)=>{const st=LAST_STATUS[i];if(FINAL_BI.has(i))return;if(b.to_win==null||b.stake==null){excl++;return}
     const pay=b.stake+b.to_win,p=payoutP(b,st);if(p==null){excl++;return}
     const v=p==="push"?b.stake:pay*p;exp+=v;stk+=b.stake;if(st!=="LOST")maxp+=p==="push"?b.stake:pay});
   const ep=$("expPay"),el=$("expPL");if(ep){ep.textContent=money(exp);$("expSub").textContent=`max ${money(maxp)} · ${excl} excluded · estimate`}
@@ -615,7 +615,7 @@ function barsFor(b){const out=[];let mini=null;
 const BOOKS={PointsBet:"PB",Caesars:"CZR",FanDuel:"FD",DraftKings:"DK",bet365:"365",theScore:"SCORE","Hard Rock":"HR",BetMGM:"MGM"};
 const bookTag=b=>BOOKS[b]||b;
 const cardKey=b=>[b.date,b.book,b.event,b.pick].join("|");
-let OPEN=new Set(), SECS=new Set(), FINSEEN=new Set();
+let OPEN=new Set(), SECS=new Set(), FINSEEN=new Set(), FINAL_BI=new Set();
 try{OPEN=new Set(JSON.parse(localStorage.getItem("bd_open")||"[]"));SECS=new Set(JSON.parse(localStorage.getItem("bd_secs")||"[]"));FINSEEN=new Set(JSON.parse(localStorage.getItem("bd_fin")||"[]"))}catch(e){}
 const saveUI=()=>{try{localStorage.setItem("bd_open",JSON.stringify([...OPEN]));localStorage.setItem("bd_secs",JSON.stringify([...SECS]));localStorage.setItem("bd_fin",JSON.stringify([...FINSEEN].slice(-200)))}catch(e){}};
 const fmtLine=v=>(v>0?"+":"")+v;
@@ -671,6 +671,7 @@ document.addEventListener("click",e=>{
 function render(){
   const D=DATA;$("bal").innerHTML=D.balances.map(b=>`<div><span>${esc(b.book)}</span><b>${money(b.balance)}</b></div>`).join("")+`<div class="tot"><span>Total</span><span>${money(D.total)}</span></div>`;
   const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0,atRisk=0,potPay=0,potTBC=0,tonight=0,tonightTBC=0,openN=0;const TODAY=etDay(Date.now());
+  FINAL_BI=new Set();
   D.open.forEach(b=>{
     const legStats=b.legs.map(L=>{const g=b.match?gameFor(b.match):gameFor(L.match);return{L,g,...legStatus(L,g,b.sport,b.match&&b.match.id)}});
     let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");LAST_STATUS[D.open.indexOf(b)]=status;
@@ -696,8 +697,10 @@ function render(){
     const t=Math.min(...gs.map(g=>g.date?new Date(g.date).getTime():Infinity),Infinity);
     const allFinal=gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed);
     const graded=status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal);
-    if(!graded){openN++;atRisk+=b.stake||0;if(b.to_win!=null)potPay+=(b.stake||0)+b.to_win;else potTBC++}
-    else if(b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
+    // At risk = every bet with at least one game not final yet (futures / unmatched legs count). Final games never count, even if unsettled in the tracker.
+    if(allFinal)FINAL_BI.add(D.open.indexOf(b));
+    else{openN++;atRisk+=b.stake||0;if(b.to_win!=null)potPay+=(b.stake||0)+b.to_win;else potTBC++}
+    if(graded&&b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
     const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
     if(status==="LOST"){toFinal();lostCards.push(html);lostPending+=b.stake||0}
     else if(gs.some(g=>g.state==="in"))liveCards.push(html);
@@ -706,7 +709,7 @@ function render(){
   upCards.sort((a,b)=>a.t-b.t);
   for(const x of D.settled_recent||[])if(x.date===TODAY&&x.pnl!=null)tonight+=x.pnl;
   const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
-  $("sum").innerHTML=`<div>At risk<b>${money(D.open_stake)}</b><small>${D.open.length} open bets</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout (est.)<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
+  $("sum").innerHTML=`<div>At risk<b>${money(atRisk)}</b><small>${openN} bet${openN===1?"":"s"} not final${FINAL_BI.size?` · ${FINAL_BI.size} final, unsettled`:""}</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout (est.)<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
   $("live").innerHTML=liveCards.join("")||'<div class="meta">Nothing live right now.</div>';
   $("bets").innerHTML=upCards.map(x=>x.html).join("")||'<div class="meta">Nothing upcoming.</div>';
   $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
