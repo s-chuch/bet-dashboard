@@ -167,9 +167,12 @@ async function refreshScores(full){
       const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
   // player props need the box score (only in-progress SGPs with a prop leg)
-  await Promise.all(DATA.open.filter(b=>b.match&&b.legs.some(L=>L.type==="prop")).map(async b=>{
-    const g=gameFor(b.match);if(!g||g.state==="pre")return;if(summaries[b.match.id]&&summaries[b.match.id].done)return;
-    const d=await espn(`${ESPN}${b.match.path}/summary?event=${b.match.id}`);if(d)summaries[b.match.id]={d,done:g.completed}}));
+  const sm={};for(const b of DATA.open)if(b.match&&b.legs.some(L=>L.type==="prop"))sm[b.match.id]=b.match;
+  await Promise.all(Object.values(sm).map(async m=>{
+    const g=gameFor(m);if(!g||g.state==="pre")return;const S=summaries[m.id];
+    if(S&&S.done)return;if(S&&Date.now()-S.t<20000)return;   // live: box score at most every 20s
+    const d=await espn(`${ESPN}${m.path}/summary?event=${m.id}`);if(!d||!d.boxscore)return;
+    const fin=(S&&S.fin||0)+(g.completed?1:0);summaries[m.id]={d,t:Date.now(),path:m.path,fin,done:fin>=3}}));
 }
 // live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
 async function refreshProbs(){
@@ -212,6 +215,7 @@ function sideIdx(g,team){return g.teams.findIndex(t=>teamMatch(team,t))}
 function legStatus(L,g,sport,matchId){
   if(!g)return{s:"NO GAME",n:"Live score not found"};
   if(g.state==="pre")return{s:"NOT STARTED",n:""};
+  if(g.state==="post"&&!g.completed)return{s:"NOT STARTED",n:g.detail||"postponed"};
   const fin=g.completed, sc=g.teams.map(t=>Number(t.score||0)), W=fin?"WON":"WINNING", Lo=fin?"LOST":"LOSING";
   if(L.type==="ml"||L.type==="spread"){const i=sideIdx(g,L.team);if(i<0)return{s:"?",n:"team not matched"};
     const m=sc[i]-sc[1-i]+(L.type==="spread"?L.line:0);
@@ -225,13 +229,75 @@ function legStatus(L,g,sport,matchId){
     if(over&&d>0)return{s:fin?"WON":"WON",n:`total ${t}, already over`};
     if(!over&&d>0)return{s:"LOST",n:`total ${t}, already over`};
     return{s:over?Lo:W,n:`total ${t}, ${(-d).toFixed(1)} under the line`}}
-  if(L.type==="prop"){const S=summaries[matchId];if(!S)return{s:"?",n:"waiting for box score"};
-    let v=null;for(const tm of (S.d.boxscore||{}).players||[])for(const cat of tm.statistics||[]){const k=(cat.keys||[]).indexOf(L.stat);if(k<0)continue;
-      for(const a of cat.athletes||[])if(norm(a.athlete.displayName).includes(norm(L.player)[0]))v=Number(a.stats[k])}
-    if(v==null)return{s:fin?"LOST":"LOSING",n:`${L.player}: no stats yet`};
-    if(v>=L.min)return{s:"WON",n:`${L.player}: ${v} pass TD`};
-    return{s:fin?"LOST":"LOSING",n:`${L.player}: ${v} pass TD, needs ${L.min}`}}
+  if(L.type==="prop")return propStatus(L,g,matchId);
   return{s:"?",n:"can't compute"}}
+// ---------- player props, graded from the ESPN game summary (box score, rosters, plays, scoring plays) ----------
+const SFX=new Set(["jr","sr","ii","iii","iv","v"]);
+const nameW=s=>norm(s).filter(x=>!SFX.has(x));
+function playerMatch(bet,full){const b=nameW(bet),w=nameW(full);if(!b.length||!w.length)return false;const last=b[b.length-1],fi=b.length>1?b[0][0]:null;
+  if(w[w.length-1]!==last&&!w.slice(1).includes(last))return false;return!fi||w[0][0]===fi}
+function athletesOf(S){if(S._ath)return S._ath;const d=S.d,by={},list=[];
+  const get=(id,name,team)=>{const k=id?"i"+id:name+"|"+team;if(!by[k]){by[k]={id,name,team,s:{},inBox:false};list.push(by[k])}return by[k]};
+  for(const tm of (d.boxscore||{}).players||[]){const ta=tm.team&&tm.team.abbreviation;
+    for(const cat of tm.statistics||[]){const pre=(cat.type||cat.name)==="pitching"?"p_":"";const keys=cat.keys||[];
+      for(const a of cat.athletes||[]){if(!a.athlete)continue;const A=get(a.athlete.id,a.athlete.displayName,ta);A.inBox=true;
+        keys.forEach((k,i)=>{const v=String((a.stats||[])[i]??"");const ks=k.split(/[-\/]/),vs=v.split(/[-\/]/);
+          if(ks.length>1){if(vs.length===ks.length)ks.forEach((kk,j)=>{if(A.s[pre+kk]==null&&!isNaN(Number(vs[j])))A.s[pre+kk]=Number(vs[j])})}
+          else if(A.s[pre+k]==null&&v!==""&&!isNaN(Number(v)))A.s[pre+k]=Number(v)})}}}
+  for(const t of d.rosters||[]){const ta=t.team&&t.team.abbreviation;
+    for(const r of t.roster||[]){if(!r.athlete)continue;const A=get(r.athlete.id,r.athlete.displayName,ta);
+      const st=r.stats||[];if(st.length&&(r.starter||r.subbedIn||st.some(x=>x.name==="appearances"&&x.value>0)))A.inBox=true;
+      for(const x of st)if(A.s[x.name]==null&&x.value!=null)A.s[x.name]=Number(x.value)}}
+  // MLB: hit types from the play-by-play (the box score has no doubles/triples column)
+  const pl=d.plays||[];S._plays=pl.some(p=>p.type&&/play-result|single|double|triple|home-run/.test(p.type.type||""));const seen=new Set();
+  for(const p of pl){const at=(p.alternativeType&&p.alternativeType.type)||(p.type&&p.type.type);if(!/^(single|double|triple|home-run)$/.test(at||""))continue;
+    const k=(p.atBatId||p.id)+at;if(seen.has(k))continue;seen.add(k);const bt=(p.participants||[]).find(x=>x.type==="batter");if(!bt||!bt.athlete)continue;
+    const A=list.find(a=>String(a.id)===String(bt.athlete.id));if(A)A.s["_"+at]=(A.s["_"+at]||0)+1}
+  return S._ath=list}
+// football TDs from the scoring-play text: "M. Stokes pass to S. Burnside for 76 yds, for a TD", "J. Carter 5 Yd Run", "..., TJ Smith return for 76 yds"
+function tdScorer(t){t=String(t||"");let m=t.match(/pass to (.+?) for /i);if(m&&!/intercept/i.test(t))return m[1];
+  m=t.match(/(?:intercepted|fumble|blocked|punt|kickoff|kick)[^,]*,\s*([A-Z][\w.'\- ]+?)\s+(?:return|recover|run)/i);if(m)return m[1];
+  m=t.match(/^([A-Z][\w.'\-]*(?: [A-Z][\w.'\-]*)*?)\s+(?:\d+\s*y(?:ar)?ds?\s+)?(?:run|rush|pass from|fumble|punt|kick|interception|blocked)/i);return m?m[1]:null}
+function tdPlays(S,L){let n=0;for(const p of S.d.scoringPlays||[]){const ty=p.type||{};if(ty.abbreviation!=="TD"&&!/touchdown/i.test(ty.text||""))continue;
+    const who=tdScorer(p.text);const ta=p.team&&p.team.abbreviation;if(who&&playerMatch(L.pname||L.player,who)&&(!L.pteam||!ta||ta===L.pteam))n++}return n}
+const sumK=(s,...ks)=>{let t=null;for(const k of ks)if(s[k]!=null)t=(t||0)+s[k];return t};
+const HOCKEY=p=>p==="hockey/nhl",SOCCER=p=>/^soccer/.test(p||"");
+const PROP={ // stat -> [value(stats, ctx), unit]
+  td:[(s)=>sumK(s,"rushingTouchdowns","receivingTouchdowns","kickReturnTouchdowns","puntReturnTouchdowns","interceptionTouchdowns"),"TD"],
+  passYds:[s=>s.passingYards,"pass yds"],passTD:[s=>s.passingTouchdowns,"pass TD"],rushYds:[s=>s.rushingYards,"rush yds"],rushTD:[s=>s.rushingTouchdowns,"rush TD"],
+  recYds:[s=>s.receivingYards,"rec yds"],recTD:[s=>s.receivingTouchdowns,"rec TD"],receptions:[s=>s.receptions,"rec"],rushRecYds:[s=>sumK(s,"rushingYards","receivingYards"),"rush+rec yds"],
+  pts:[(s,c)=>HOCKEY(c.path)?sumK(s,"goals","assists"):s.points,"pts"],
+  goals:[(s,c)=>SOCCER(c.path)?s.totalGoals:s.goals,"goals"],goal:[s=>s.totalGoals,"goal"],
+  assists:[(s,c)=>SOCCER(c.path)?s.goalAssists:s.assists,"ast"],goalOrAssist:[s=>sumK(s,"totalGoals","goalAssists"),"G+A"],
+  sog:[(s,c)=>SOCCER(c.path)?s.shotsOnTarget:s.shotsTotal,"SOG"],shots:[(s,c)=>SOCCER(c.path)?s.totalShots:s.shotsTotal,"shots"],sot:[s=>s.shotsOnTarget,"SOT"],
+  reb:[s=>s.rebounds,"reb"],threes:[s=>s.threePointFieldGoalsMade,"3PM"],saves:[s=>s.saves,"saves"],
+  hits:[s=>s.hits,"hits"],hr:[s=>s.homeRuns,"HR"],rbi:[s=>s.RBIs,"RBI"],runs:[s=>s.runs,"runs"],walks:[s=>s.walks,"BB"],sb:[s=>s.stolenBases,"SB"],
+  k:[s=>s.p_strikeouts!=null?s.p_strikeouts:s.strikeouts,"K"],hrr:[s=>sumK(s,"hits","runs","RBIs"),"H+R+RBI"],
+  doubles:[(s,c)=>s._double!=null?s._double:(c.plays&&s.hits!=null?0:null),"2B"],triples:[(s,c)=>s._triple!=null?s._triple:(c.plays&&s.hits!=null?0:null),"3B"],
+  singles:[(s,c)=>s._single!=null?s._single:(c.plays&&s.hits!=null?0:null),"1B"],
+  tb:[(s,c)=>c.plays&&s.hits!=null?(s._single||0)+2*(s._double||0)+3*(s._triple||0)+4*(s["_home-run"]||0):null,"TB"]};
+function propStatus(L,g,matchId){
+  if(!L.player)return{s:"?",lbl:"?",n:"stat not found (player not named in the bet log)"};
+  const who=(String(L.player).trim().split(/\s+/).pop()||L.player);
+  if(!L.stat||!PROP[L.stat])return{s:"?",lbl:"?",n:`stat not found (log doesn't say which ${who} stat${L.stat_raw?": "+L.stat_raw:""})`};
+  const S=summaries[matchId];if(!S)return{s:"LIVE",lbl:"LIVE",n:"loading box score…"};
+  const ath=athletesOf(S),ctx={path:S.path,plays:S._plays},[fn,unit]=PROP[L.stat];
+  let c=L.pid?ath.filter(a=>String(a.id)===String(L.pid)):[];
+  if(!c.length)c=ath.filter(a=>playerMatch(L.pname||L.player,a.name)&&(!L.pteam||!a.team||a.team===L.pteam));
+  if(c.length>1){const ib=c.filter(a=>a.inBox);if(ib.length)c=ib}
+  if(c.length>1){const wv=c.filter(a=>fn(a.s,ctx)!=null);if(wv.length)c=wv}
+  const A=c[0],supported=ath.some(a=>fn(a.s,ctx)!=null)||(L.stat==="td"&&(S.d.scoringPlays||[]).length>0);
+  let v=A?fn(A.s,ctx):null;
+  if(L.stat==="td"){const tp=tdPlays(S,L);if(tp>0||v!=null||A||L.pteam)v=Math.max(v||0,tp)}
+  if(v==null){if((A||L.pteam)&&supported)v=0;else return{s:"?",lbl:"?",n:`stat not found (${who} ${unit})`}}
+  const fin=g.completed,none=!A||!A.inBox?" (no stats yet)":"";
+  const HIT={s:"WON",lbl:"HIT"},MISS={s:"LOST",lbl:"MISSED"},LV={s:"LIVE",lbl:"LIVE"};
+  if(L.op==="under"){const n=`${who} ${v} ${unit} (needs under ${L.line})`;
+    if(v>L.line)return{...MISS,n};return{...(fin?HIT:LV),n:fin?n:n+" · on track"}}
+  const tgt=L.op==="over"?Math.floor(L.line)+1:L.min;
+  if(L.stat==="td"&&tgt===1){if(v>=1)return{...HIT,n:`${who}: TD scored${v>1?` (${v})`:""}`};return{...(fin?MISS:LV),n:fin?`${who}: no TD`:`${who}: no TD yet`}}
+  const n=`${who} ${v}/${tgt} ${unit}${none}`;
+  if(v>=tgt)return{...HIT,n};return{...(fin?MISS:LV),n:fin?n:n+` · needs ${tgt-v} more`}}
 function combine(st){if(st.some(s=>s==="LOST"))return"LOST";if(st.every(s=>s==="WON"))return"WON";
   if(st.some(s=>s==="LOSING"))return"LOSING";if(st.every(s=>s==="NOT STARTED"))return"NOT STARTED";
   if(st.every(s=>s==="WON"||s==="WINNING"))return"WINNING";if(st.every(s=>s==="WON"||s==="WINNING"||s==="NOT STARTED"))return"WINNING";
@@ -396,7 +462,7 @@ let LAST_STATUS={};
 // ---- bet-level live pill: from the bet's own win probability, not "cashes if it ended now" ----
 const SCORE_SUB={WINNING:"cashes at current score",LOSING:"needs more at current score",TIED:"tied at current score",PUSH:"push at current score"};
 function legP(b,L,st){if(st==="WON")return 1;if(st==="LOST")return 0;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
-  if(L.type==="prop")return 0.5;                       // no model for player props: coin flip
+  if(L.type==="prop")return st==="?"?null:0.5;                       // no model for player props: coin flip
   const src=legSources(b,L).filter(x=>x.k!=="pre");return src.length?src[0].v:null}
 function betLive(b,status,legStats){
   const gs=legStats.map(x=>x.g).filter(Boolean);const allFinal=gs.length&&gs.length===b.legs.length&&gs.every(g=>g.completed);
@@ -408,10 +474,13 @@ function betLive(b,status,legStats){
 function pillState(b,status,legStats){const v=betLive(b,status,legStats);
   if(v.final)return{cls:status,txt:status,sub:""};
   if(v.upcoming)return{cls:"NOT_STARTED",txt:"UPCOMING",sub:""};
-  if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||(b.multi?"legs: "+legStats.map(x=>x.s.toLowerCase()).join(" / "):"")};
+  const hitTxt=b.multi?legsHit(legStats):"";
+  if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||hitTxt};
   const w=v.p>=0.5,pct=Math.round(v.p*100);
   return{cls:w?"WINNING":"LOSING",txt:`${w?"WINNING":"LOSING"} ${v.approx?"≈":""}${pct}%`,
-    sub:v.approx?`approx. product of legs`:(v.sub||"")}}
+    sub:v.approx?`${hitTxt} · approx.`:(v.sub||"")}}
+function legsHit(ls){const h=ls.filter(x=>x.s==="WON").length,lv=ls.filter(x=>x.s!=="WON"&&x.s!=="LOST").length;
+  return`${h}/${ls.length} legs hit${lv&&h<ls.length?` · ${lv} live`:""}`}
 function pillHTML(b,status,legStats){const q=pillState(b,status,legStats);
   return`<span class="pillw"><span class="pill ${cls(q.cls)}" data-pill>${q.txt}</span><small class="psub" data-psub>${esc(q.sub)}</small></span>`}
 
@@ -446,7 +515,7 @@ function sportChips(m,g){const si=g.sit||{},T=g.teams,ab=id=>{const t=T.find(t=>
     if(si.balls!=null)out.push(`${diamond(si)}<span class="cnt">${si.balls}-${si.strikes}, ${si.outs} out${si.outs===1?"":"s"}</span>`);
     if(si.batter||si.pitcher)out.push(`<span>AB ${esc(si.batter?si.batter.n:"?")}${si.batter&&si.batter.s?` <small>(${esc(si.batter.s)})</small>`:""} vs P ${esc(si.pitcher?si.pitcher.n:"?")}${si.pitcher&&si.pitcher.s?` <small>(${esc(si.pitcher.s)})</small>`:""}</span>`)}
   else if(m.path==="hockey/nhl"){
-    const sog=t=>{const o=T.find(x=>x!==t);const sv=Number(o.st.saves),gl=Number(t.score||0);return isNaN(sv)?null:sv+gl};
+    const sog=t=>{const o=T.find(x=>x!==t);const sv=Number((o.st||{}).saves),gl=Number(t.score||0);return isNaN(sv)?null:sv+gl};
     if(sog(A)!=null)out.push(`SOG ${esc(A.abbr)} ${sog(A)} · ${esc(H.abbr)} ${sog(H)}`);
     const pp=Object.entries(si).find(([k,v])=>/power ?play|strength/i.test(k)&&v);const lp=String(g.lastPlay||"");
     if(pp)out.push(`<span class="rz">PP ${esc(typeof pp[1]==="string"?pp[1]:"")}</span>`);else if(/power play/i.test(lp))out.push(`<span class="rz">Power play</span>`);
@@ -581,7 +650,7 @@ function render(){
       <div class="top" style="margin-top:8px"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span></div>
       <div class="pick">${esc(b.pick)}</div><div class="ev">${esc(b.event)} · ${esc(b.market)}</div>
       <div class="nums"><span>Price <b>${price}</b></span><span>Stake <b>${money(b.stake)}</b>${b.stake_note?" (unconf.)":""}</span><span>To win <b>${b.to_win==null?"TBC":money(b.to_win)}</b></span><span>Start <b>${esc(fmtStart(firstG,b.start))}</b></span></div>`;
-    if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${x.s}</span></div>`).join("")+`</div>`;
+    if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${esc(x.lbl||x.s)}</span></div>`).join("")+`</div>`;
       if(g)html+=scoreBox(g)}
     else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x&&x.n)html+=`<div class="meta" style="margin-top:4px">${esc(x.n)}</div>`}
     const anyLive=legStats.some(x=>x.g&&x.g.state==="in");
@@ -606,12 +675,12 @@ function render(){
   $("bets").innerHTML=upCards.map(x=>x.html).join("")||'<div class="meta">Nothing upcoming.</div>';
   $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
   $("wonCards").innerHTML=wonCards.length?`<div class="meta" style="margin:0 2px 6px">Final, not settled in the tracker yet</div>`+wonCards.join(""):"";
-  const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
+  const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${/void/i.test(s.result)?"Void · stake back":s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
   const st=D.settled_recent||[], lostS=st.filter(s=>/lost|loss/i.test(s.result)), wonS=st.filter(s=>!/lost|loss/i.test(s.result));
   const wonSum=wonS.reduce((a,s)=>a+(s.pnl||0),0), lostSum=lostS.reduce((a,s)=>a-(s.pnl||0),0);
   $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+wonS.map(row).join("")||(wonCards.length?"":'<div class="meta">None in the last 2 days.</div>');
   const wonN=wonCards.length+wonS.length,wonAll=wonSum+wonPending;
-  $("wonHead").textContent=`Won / Push · ${wonN} · +${money(wonAll)}`;
+  $("wonHead").textContent=`Won / Push / Void · ${wonN} · +${money(wonAll)}`;
   $("lostCards").innerHTML=lostCards.length?`<div class="meta" style="margin:0 2px 6px">Graded LOST live, not settled in the tracker yet</div>`+lostCards.join(""):"";
   $("lost").innerHTML=(lostS.length?`<div class="meta" style="margin:8px 2px 2px">Settled, last 2 days</div>`:"")+lostS.map(row).join("")||(lostCards.length?"":'<div class="meta">None in the last 2 days.</div>');
   const lostTotal=lostSum+lostPending;
