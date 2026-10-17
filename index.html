@@ -59,6 +59,7 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .xall{background:none;border:1px solid var(--line);color:var(--mut);border-radius:999px;font-size:11px;padding:4px 10px;flex-shrink:0}
 .h2row h2 .hl{float:none;color:inherit;letter-spacing:inherit;text-transform:inherit}
 .sec.settled:not(.open) .xall{display:none!important}
+.sec.fold .chev{transform:rotate(90deg)}.sec.fold.shut .chev{transform:none}.sec.fold.shut .secbody{display:none}.sec.fold.shut .xall{display:none!important}
 .sec.settled .secbody{display:none}.sec.settled.open .secbody{display:block}
 .aln{font-size:12px;color:var(--mut);margin:6px 0 2px;font-variant-numeric:tabular-nums}.srcn{font-size:11px;color:var(--mut);margin-top:2px}
 .ldet{margin:8px 0 4px;font-size:12.5px}.need{font-weight:600;margin-bottom:6px;line-height:1.35}
@@ -73,7 +74,7 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 <div class="bal" id="bal"></div>
 <div class="sum" id="sum"></div>
 <div class="sec" id="sec-live"><div class="h2row"><h2>Live now <span id="liveN"></span> <em id="cd" class="cd"></em></h2><button class="xall" data-sec="sec-live"></button></div><div class="secbody"><div id="live"></div></div></div>
-<div class="sec" id="sec-up"><div class="h2row"><h2>Upcoming <span id="upN"></span></h2><button class="xall" data-sec="sec-up"></button></div><div class="secbody"><div id="bets"></div></div></div>
+<div class="sec fold" id="sec-up"><div class="h2row"><h2 class="sechead" data-sec="sec-up"><span class="chev">›</span>Upcoming <span id="upN"></span></h2><button class="xall" data-sec="sec-up"></button></div><div class="secbody"><div id="bets"></div></div></div>
 <div class="sec settled" id="sec-won"><div class="h2row"><h2 class="sechead" data-sec="sec-won"><span class="chev">›</span><span class="hl" id="wonHead">Won / Push</span></h2><button class="xall" data-sec="sec-won"></button></div><div class="secbody"><div id="wonCards"></div><div id="won"></div></div></div>
 <div class="sec settled" id="sec-lost"><div class="h2row"><h2 class="sechead" data-sec="sec-lost"><span class="chev">›</span><span class="hl" id="lostHead">Lost</span></h2><button class="xall" data-sec="sec-lost"></button></div><div class="secbody"><div id="lostCards"></div><div id="lost"></div></div></div>
 <script>
@@ -641,14 +642,14 @@ function rowScore(b,g,legStats){
   const nx=gs.filter(x=>x.state==="pre").sort((a,c)=>new Date(a.date)-new Date(c.date))[0];return nx?one(nx):rawStart(b.start)}
 function syncUI(){
   document.querySelectorAll(".card[data-k]").forEach(c=>c.classList.toggle("open",OPEN.has(c.dataset.k)));
-  document.querySelectorAll(".sec.settled").forEach(s=>s.classList.toggle("open",SECS.has(s.id)));
+  document.querySelectorAll(".sec.settled").forEach(s=>s.classList.toggle("open",SECS.has(s.id)));document.querySelectorAll(".sec.fold").forEach(s=>s.classList.toggle("shut",SECS.has("x-"+s.id)));
   document.querySelectorAll(".xall").forEach(bt=>{const cs=[...document.querySelectorAll(`#${bt.dataset.sec} .card[data-k]`)];
     bt.style.display=cs.length?"":"none";bt.textContent=cs.length&&cs.every(c=>OPEN.has(c.dataset.k))?"Collapse all":"Expand all"})}
 document.addEventListener("click",e=>{
   const bt=e.target.closest(".xall");if(bt){const cs=[...document.querySelectorAll(`#${bt.dataset.sec} .card[data-k]`)];
     const all=cs.every(c=>OPEN.has(c.dataset.k));cs.forEach(c=>all?OPEN.delete(c.dataset.k):OPEN.add(c.dataset.k));
     if(!all&&bt.closest(".sec.settled"))SECS.add(bt.dataset.sec);saveUI();syncUI();return}
-  const sh=e.target.closest(".sechead");if(sh){SECS.has(sh.dataset.sec)?SECS.delete(sh.dataset.sec):SECS.add(sh.dataset.sec);saveUI();syncUI();return}
+  const sh=e.target.closest(".sechead");if(sh&&sh.closest(".sec.fold")){const k="x-"+sh.dataset.sec;SECS.has(k)?SECS.delete(k):SECS.add(k);saveUI();syncUI();return}if(sh){SECS.has(sh.dataset.sec)?SECS.delete(sh.dataset.sec):SECS.add(sh.dataset.sec);saveUI();syncUI();return}
   const row=e.target.closest(".crow");if(row){const k=row.parentElement.dataset.k;OPEN.has(k)?OPEN.delete(k):OPEN.add(k);saveUI();syncUI()}});
 function render(){
   const D=DATA;$("bal").innerHTML=D.balances.map(b=>`<div><span>${esc(b.book)}</span><b>${money(b.balance)}</b></div>`).join("")+`<div class="tot"><span>Total</span><span>${money(D.total)}</span></div>`;
