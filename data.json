@@ -178,11 +178,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 2,
-     "clock": 46.0,
+     "period": 3,
+     "clock": 786.0,
      "state": "in",
      "completed": false,
-     "detail": "0:46 - 2nd",
+     "detail": "13:06 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -202,7 +202,7 @@
        "nick": "Buckeyes",
        "location": "Ohio State",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -3284,12 +3284,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.8904,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.8885,
      "spread_home_line": -20.0,
-     "spread_home_fair": 0.4931,
+     "spread_home_fair": 0.4807,
      "total_line": 49.5,
-     "total_over_fair": 0.5156
+     "total_over_fair": 0.5134
     },
     "pm": {
      "slug": "cfb-aubrn-ga-2026-10-17",
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.889,
      "spread_home_line": -19.5,
      "spread_home_fair": 0.5087,
@@ -5021,10 +5021,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 2,
-     "clock": 251.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:11 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "120",
@@ -5034,7 +5034,7 @@
        "nick": "Terrapins",
        "location": "Maryland",
        "home": true,
-       "score": "16"
+       "score": "23"
       },
       {
        "id": "164",
@@ -6054,11 +6054,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 2,
-     "clock": 46.0,
+     "period": 3,
+     "clock": 786.0,
      "state": "in",
      "completed": false,
-     "detail": "0:46 - 2nd",
+     "detail": "13:06 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -6078,7 +6078,7 @@
        "nick": "Buckeyes",
        "location": "Ohio State",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -6763,7 +6763,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7530,89 +7530,6 @@
   {
    "date": "2026-10-16",
    "book": "bet365",
-   "event": "Man City vs Ipswich Town",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Haaland AGS + Man City ML + Cherki score or assist",
-   "start": "Sat Oct 17 10:00 AM ET",
-   "price": "+110",
-   "boosted_price": "+165",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.33,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Haaland",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Haaland AGS",
-     "pteam": "MNC",
-     "pname": "Erling Haaland",
-     "pid": "253989"
-    },
-    {
-     "type": "ml",
-     "team": "Man City",
-     "women": false,
-     "text": "Man City ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Cherki",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Cherki score or assist",
-     "pteam": "MNC",
-     "pname": "Rayan Cherki",
-     "pid": "298008"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261017",
-    "groups": null,
-    "id": "401879259",
-    "snapshot": {
-     "date": "2026-10-17T14:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "382",
-       "name": "Manchester City",
-       "abbr": "MNC",
-       "short": "Man City",
-       "nick": "Manchester City",
-       "location": "Manchester City",
-       "home": true,
-       "score": "3"
-      },
-      {
-       "id": "373",
-       "name": "Ipswich Town",
-       "abbr": "IPS",
-       "short": "Ipswich",
-       "nick": "Ipswich Town",
-       "location": "Ipswich Town",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer"
-  },
-  {
-   "date": "2026-10-16",
-   "book": "bet365",
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "market": "SGP 3-leg (30% profit boost)",
    "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
@@ -7778,7 +7695,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 13:45 ET",
+       "pulled": "2026-10-17 14:22 ET",
        "ml_home": 0.7594,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4829,
@@ -8484,10 +8401,10 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 13:45 ET",
-       "ml_home": 0.7886,
+       "pulled": "2026-10-17 14:22 ET",
+       "ml_home": 0.7891,
        "spread_home_line": -8.0,
-       "spread_home_fair": 0.4807,
+       "spread_home_fair": 0.4817,
        "total_line": 40.5,
        "total_over_fair": 0.5191
       },
@@ -9583,7 +9500,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -10275,10 +10192,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 2,
-     "clock": 251.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:11 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "120",
@@ -10288,7 +10205,7 @@
        "nick": "Terrapins",
        "location": "Maryland",
        "home": true,
-       "score": "16"
+       "score": "23"
       },
       {
        "id": "164",
@@ -10967,7 +10884,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.508,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -11897,10 +11814,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.764,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.7629,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.4583,
+     "spread_home_fair": 0.4563,
      "total_line": 6.5,
      "total_over_fair": 0.5138
     },
@@ -12059,7 +11976,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -13002,7 +12919,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13978,7 +13895,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14833,10 +14750,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.4953,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
+     "spread_home_fair": 0.635,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -14917,11 +14834,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 2,
-     "clock": 46.0,
+     "period": 3,
+     "clock": 786.0,
      "state": "in",
      "completed": false,
-     "detail": "0:46 - 2nd",
+     "detail": "13:06 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -14941,7 +14858,7 @@
        "nick": "Buckeyes",
        "location": "Ohio State",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -15595,10 +15512,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 2,
-     "clock": 3420.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "57'",
+     "detail": "90'+5'",
      "teams": [
       {
        "id": "361",
@@ -15772,7 +15689,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -16493,10 +16410,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.4953,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
+     "spread_home_fair": 0.635,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16638,10 +16555,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.4953,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
+     "spread_home_fair": 0.635,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16768,7 +16685,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -17414,10 +17331,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 2,
-     "clock": 3420.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "57'",
+     "detail": "90'+5'",
      "teams": [
       {
        "id": "361",
@@ -17567,7 +17484,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18318,10 +18235,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 2,
-     "clock": 3420.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "57'",
+     "detail": "90'+5'",
      "teams": [
       {
        "id": "361",
@@ -18435,10 +18352,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.4953,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
+     "spread_home_fair": 0.635,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18662,10 +18579,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.4953,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.4929,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
+     "spread_home_fair": 0.635,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18977,12 +18894,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.6367,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.6333,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.4114,
+     "spread_home_fair": 0.4081,
      "total_line": 6.0,
-     "total_over_fair": 0.5171
+     "total_over_fair": 0.5161
     },
     "pm": {
      "slug": "nhl-sea-fla-2026-10-17",
@@ -19151,10 +19068,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
-     "ml_home": 0.764,
+     "pulled": "2026-10-17 14:22 ET",
+     "ml_home": 0.7629,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.4583,
+     "spread_home_fair": 0.4563,
      "total_line": 6.5,
      "total_over_fair": 0.5138
     },
@@ -19336,7 +19253,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 13:45 ET",
+     "pulled": "2026-10-17 14:22 ET",
      "ml_home": 0.3582,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.5836,
@@ -19480,11 +19397,11 @@
     "id": "401892519",
     "snapshot": {
      "date": "2026-10-17T17:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 437.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "7:17 - 2nd",
      "teams": [
       {
        "id": "23",
@@ -19494,7 +19411,7 @@
        "nick": "Capitals",
        "location": "Washington",
        "home": true,
-       "score": "1"
+       "score": "4"
       },
       {
        "id": "11",
@@ -19541,6 +19458,17 @@
        "tokens": [
         "70391868112410814511452263414463180736380222040564235643369827367141589315102",
         "14228441195315557903990936728316801205775027115946610564341477688651351808093"
+       ]
+      },
+      {
+       "line": -2.5,
+       "outcomes": [
+        "Capitals",
+        "Devils"
+       ],
+       "tokens": [
+        "100238076201470231897504250949127637374373707272391633117082697581880627337013",
+        "38657391200438047286697435097546520139075030600943575104692816141679366345989"
        ]
       }
      ],
@@ -19655,11 +19583,11 @@
     "id": "401856724",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 328.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "5:28 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -19679,7 +19607,7 @@
        "nick": "Gators",
        "location": "Florida",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -20294,6 +20222,14 @@
   },
   {
    "date": "2026-10-16",
+   "book": "bet365",
+   "event": "Man City vs Ipswich Town",
+   "pick": "Haaland AGS + Man City ML + Cherki score or assist (VOID leg)",
+   "result": "won",
+   "pnl": 0.18
+  },
+  {
+   "date": "2026-10-16",
    "book": "theScore",
    "event": "Memphis @ Tulane",
    "pick": "Tulane ML",
@@ -20373,8 +20309,8 @@
    "pnl": -25.0
   }
  ],
- "pnl_total": 176.24,
- "open_stake": 171.18,
- "hash": "aa8b423e3a47fa25398e342be637d0dcac055f36",
- "generated_at": "2026-10-17T13:45:40-04:00"
+ "pnl_total": 176.42,
+ "open_stake": 170.98,
+ "hash": "776a8aa793ca856a4761a135a54b6a60f31e829e",
+ "generated_at": "2026-10-17T14:23:03-04:00"
 }
