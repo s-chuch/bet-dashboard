@@ -850,7 +850,7 @@
        "nick": "Bulls",
        "location": "South Florida",
        "home": true,
-       "score": "2"
+       "score": "0"
       },
       {
        "id": "2309",
@@ -860,7 +860,7 @@
        "nick": "Golden Flashes",
        "location": "Kent State",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -1728,7 +1728,7 @@
        "nick": "Bulls",
        "location": "South Florida",
        "home": true,
-       "score": "2"
+       "score": "0"
       },
       {
        "id": "2309",
@@ -1738,7 +1738,7 @@
        "nick": "Golden Flashes",
        "location": "Kent State",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -2593,10 +2593,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 1,
-     "clock": 120.0,
+     "clock": 114.0,
      "state": "in",
      "completed": false,
-     "detail": "2:00 - 1st",
+     "detail": "1:54 - 1st",
      "teams": [
       {
        "id": "2390",
@@ -13650,10 +13650,10 @@
     "snapshot": {
      "date": "2026-10-17T22:00Z",
      "period": 2,
-     "clock": 42.0,
+     "clock": 37.0,
      "state": "in",
      "completed": false,
-     "detail": "0:42 - 2nd",
+     "detail": "0:37 - 2nd",
      "teams": [
       {
        "id": "204",
@@ -16659,7 +16659,8 @@
    "event": "Alabama @ Tennessee / Missouri @ Ole Miss / Auburn @ Georgia",
    "pick": "Alabama ML (-209) + Mizzou/Ole Miss Under 45.5 (-120) + Georgia ML (-162)",
    "result": "lost",
-   "pnl": -0.5
+   "pnl": -0.5,
+   "stake": 0.5
   },
   {
    "date": "2026-10-17",
@@ -16667,7 +16668,8 @@
    "event": "Alabama @ Tennessee",
    "pick": "Alabama Crimson Tide ML",
    "result": "lost",
-   "pnl": -0.3
+   "pnl": -0.3,
+   "stake": 0.3
   },
   {
    "date": "2026-10-17",
@@ -16675,7 +16677,8 @@
    "event": "Florida @ Texas",
    "pick": "Jadan Baugh ATTD + Cam Coleman 30+ rec yds + Ryan Wingo 30+ rec yds",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16683,7 +16686,8 @@
    "event": "New Jersey Devils @ Washington Capitals",
    "pick": "Jack Hughes 1+ pts + Timo Meier 2+ SOG + Jack Hughes 3+ SOG",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16691,7 +16695,8 @@
    "event": "Carolina Hurricanes @ Winnipeg Jets",
    "pick": "Sebastian Aho 1+ pts + Kyle Connor 2+ SOG + Andrei Svechnikov 2+ SOG",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16699,7 +16704,8 @@
    "event": "Vancouver Canucks @ Tampa Bay Lightning",
    "pick": "Nikita Kucherov 1+ pts + Nikita Kucherov 2+ SOG + Brandon Hagel 3+ SOG",
    "result": "won",
-   "pnl": 0.27
+   "pnl": 0.27,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16707,7 +16713,8 @@
    "event": "Philadelphia Union vs Charlotte FC",
    "pick": "Milan Iloski score or assist + Bruno Damiani score or assist + Milan Iloski 3+ shots",
    "result": "won",
-   "pnl": 0.26
+   "pnl": 0.26,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16715,7 +16722,8 @@
    "event": "Atlanta Dream @ Golden State Valkyries",
    "pick": "Jordin Canada 5+ assists + Angel Reese 10+ rebounds + Kiah Stokes 7+ rebounds",
    "result": "won",
-   "pnl": 0.32
+   "pnl": 0.32,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16723,7 +16731,8 @@
    "event": "Newcastle vs Aston Villa",
    "pick": "Harvey Barnes AGS + Harvey Barnes 1+ SOT + Harvey Barnes 4+ shots",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16731,7 +16740,8 @@
    "event": "Newcastle vs Aston Villa",
    "pick": "Over 1.5 goals + Harvey Barnes 1+ SOT + Harvey Barnes 3+ shots",
    "result": "lost",
-   "pnl": -0.5
+   "pnl": -0.5,
+   "stake": 0.5
   },
   {
    "date": "2026-10-17",
@@ -16739,7 +16749,8 @@
    "event": "Newcastle vs Aston Villa",
    "pick": "Harvey Barnes 1+ SOT + Yoane Wissa 3+ shots + Over 10.5 corners",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16747,7 +16758,8 @@
    "event": "Ohio State @ Indiana",
    "pick": "Over 44.5",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16755,7 +16767,8 @@
    "event": "Montreal Alouettes @ Saskatchewan Roughriders",
    "pick": "Roughriders ML + Roughriders 1st Quarter ML + Roughriders 1st Half ML",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16763,7 +16776,8 @@
    "event": "Atlanta Dream @ Golden State Valkyries",
    "pick": "Valkyries ML",
    "result": "won",
-   "pnl": 0.18
+   "pnl": 0.18,
+   "stake": 0.2
   },
   {
    "date": "2026-10-17",
@@ -16771,7 +16785,8 @@
    "event": "Vancouver Canucks @ Tampa Bay Lightning",
    "pick": "Vancouver Canucks +2.5",
    "result": "won",
-   "pnl": 19.23
+   "pnl": 19.23,
+   "stake": 25.0
   },
   {
    "date": "2026-10-17",
@@ -16779,7 +16794,8 @@
    "event": "Rutgers @ Maryland",
    "pick": "Maryland Terrapins -5",
    "result": "lost",
-   "pnl": -25.0
+   "pnl": -25.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-16",
@@ -16787,7 +16803,8 @@
    "event": "Boston Bruins @ Anaheim Ducks",
    "pick": "Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16795,7 +16812,8 @@
    "event": "Boston Bruins @ Anaheim Ducks",
    "pick": "D. Pastrnak U0.5 goals + C. Gauthier U0.5 goals + Over 6.5",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16803,7 +16821,8 @@
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "pick": "Avalanche ML + Penguins +2.5 + Over 5.5 + Kadri 1+ pts",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16811,7 +16830,8 @@
    "event": "Atlanta Dream @ Golden State Valkyries",
    "pick": "Valkyries ML + Valkyries O78.5 team pts + Dream O75.5 team pts",
    "result": "lost",
-   "pnl": -0.2
+   "pnl": -0.2,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16819,7 +16839,8 @@
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
    "result": "won",
-   "pnl": 0.27
+   "pnl": 0.27,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16827,7 +16848,8 @@
    "event": "Tampa Bay Rays @ Cleveland Guardians",
    "pick": "Over 4.5 runs + Guardians +2.5 + Yandy Diaz U0.5 doubles",
    "result": "void",
-   "pnl": 0.0
+   "pnl": 0.0,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16835,7 +16857,8 @@
    "event": "Man City vs Ipswich Town",
    "pick": "Haaland AGS + Man City ML + Cherki score or assist (VOID leg)",
    "result": "won",
-   "pnl": 0.18
+   "pnl": 0.18,
+   "stake": 0.2
   },
   {
    "date": "2026-10-16",
@@ -16843,7 +16866,8 @@
    "event": "Charlotte Hornets @ Memphis Grizzlies",
    "pick": "Hornets ML",
    "result": "lost",
-   "pnl": -0.78
+   "pnl": -0.78,
+   "stake": 0.78
   },
   {
    "date": "2026-10-16",
@@ -16851,7 +16875,8 @@
    "event": "Memphis @ Tulane",
    "pick": "Tulane ML",
    "result": "won",
-   "pnl": 0.37
+   "pnl": 0.37,
+   "stake": 0.16
   },
   {
    "date": "2026-10-16",
@@ -16859,7 +16884,8 @@
    "event": "Ohio State @ Indiana",
    "pick": "Josh Hoover 2+ passing TDs",
    "result": "lost",
-   "pnl": -1.0
+   "pnl": -1.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-16",
@@ -16867,7 +16893,8 @@
    "event": "Man City vs Ipswich Town",
    "pick": "Man City ML + Haaland AGS + Semenyo AGS",
    "result": "lost",
-   "pnl": -1.0
+   "pnl": -1.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-16",
@@ -16875,7 +16902,8 @@
    "event": "Memphis @ Tulane",
    "pick": "J. Carter TD + J. Daniels TD + M. Stokes 220+ pass yds",
    "result": "lost",
-   "pnl": -1.0
+   "pnl": -1.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-16",
@@ -16883,7 +16911,8 @@
    "event": "Boston Bruins @ Anaheim Ducks",
    "pick": "Under 6.5 + Ducks ML + B. Sennecke 2+ SOG",
    "result": "lost",
-   "pnl": -1.0
+   "pnl": -1.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-16",
@@ -16891,7 +16920,8 @@
    "event": "Rutgers @ Maryland",
    "pick": "Rutgers ML + U56.5 + A. Raymond 50+ rush yds",
    "result": "lost",
-   "pnl": -1.0
+   "pnl": -1.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-16",
@@ -16899,7 +16929,8 @@
    "event": "Auburn @ Georgia",
    "pick": "Auburn ML",
    "result": "won",
-   "pnl": 8.0
+   "pnl": 8.0,
+   "stake": 1.0
   },
   {
    "date": "2026-10-15",
@@ -16907,7 +16938,8 @@
    "event": "Colorado State Rams @ Texas State Bobcats",
    "pick": "Colorado State Rams",
    "result": "lost",
-   "pnl": -0.16
+   "pnl": -0.16,
+   "stake": 0.16
   },
   {
    "date": "2026-10-15",
@@ -16915,7 +16947,8 @@
    "event": "New York Rangers @ New Jersey Devils",
    "pick": "New York Rangers",
    "result": "lost",
-   "pnl": -25.0
+   "pnl": -25.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16923,7 +16956,8 @@
    "event": "Milwaukee Brewers @ Los Angeles Dodgers",
    "pick": "Milwaukee Brewers",
    "result": "won",
-   "pnl": 67.0
+   "pnl": 67.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16931,7 +16965,8 @@
    "event": "Seattle Seahawks @ Denver Broncos",
    "pick": "SEA -2.5 + Over 40.5 + Darnold 1+ pass TD",
    "result": "lost",
-   "pnl": -0.79
+   "pnl": -0.79,
+   "stake": 0.79
   },
   {
    "date": "2026-10-15",
@@ -16939,7 +16974,8 @@
    "event": "New York Islanders @ Ottawa Senators",
    "pick": "Under 5.5",
    "result": "won",
-   "pnl": 22.73
+   "pnl": 22.73,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16947,7 +16983,8 @@
    "event": "Buffalo Sabres @ Toronto Maple Leafs",
    "pick": "Toronto Maple Leafs",
    "result": "lost",
-   "pnl": -25.0
+   "pnl": -25.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16955,7 +16992,8 @@
    "event": "Colorado State @ Texas State",
    "pick": "Under 70.5",
    "result": "lost",
-   "pnl": -25.0
+   "pnl": -25.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16963,7 +17001,8 @@
    "event": "East Carolina @ UAB",
    "pick": "Under 47.5",
    "result": "won",
-   "pnl": 22.32
+   "pnl": 22.32,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16971,7 +17010,8 @@
    "event": "Georgia Southern @ Old Dominion",
    "pick": "Old Dominion +3.5",
    "result": "lost",
-   "pnl": -25.0
+   "pnl": -25.0,
+   "stake": 25.0
   },
   {
    "date": "2026-10-15",
@@ -16979,12 +17019,13 @@
    "event": "Ohio State @ Indiana",
    "pick": "Indiana Hoosiers",
    "result": "lost",
-   "pnl": -0.3
+   "pnl": -0.3,
+   "stake": 0.3
   }
  ],
  "pnl_total": 170.57,
  "open_stake": 115.3,
  "open_live_n": 37,
- "hash": "8ab0ac591513180c55229ebd0e43c1e4b7d70d75",
- "generated_at": "2026-10-17T19:38:28-04:00"
+ "hash": "db42ed81875ac6b80529098d7274667257bde972",
+ "generated_at": "2026-10-17T19:38:56-04:00"
 }
