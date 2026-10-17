@@ -5807,10 +5807,10 @@
     "snapshot": {
      "date": "2026-10-17T02:00Z",
      "period": 2,
-     "clock": 1171.0,
+     "clock": 1145.0,
      "state": "in",
      "completed": false,
-     "detail": "19:31 - 2nd",
+     "detail": "19:05 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -5992,10 +5992,10 @@
     "snapshot": {
      "date": "2026-10-16T23:30Z",
      "period": 4,
-     "clock": 40.0,
+     "clock": 34.0,
      "state": "in",
      "completed": false,
-     "detail": "0:40 - 4th",
+     "detail": "0:34 - 4th",
      "teams": [
       {
        "id": "2655",
@@ -8105,10 +8105,10 @@
     "snapshot": {
      "date": "2026-10-16T23:30Z",
      "period": 4,
-     "clock": 40.0,
+     "clock": 34.0,
      "state": "in",
      "completed": false,
-     "detail": "0:40 - 4th",
+     "detail": "0:34 - 4th",
      "teams": [
       {
        "id": "2655",
@@ -9191,6 +9191,6 @@
  ],
  "pnl_total": 176.07,
  "open_stake": 26.8,
- "hash": "da88973e4e3eba7e3aa542e7cd9de188bb686a4f",
- "generated_at": "2026-10-16T23:05:23-04:00"
+ "hash": "b887f1d1de03dc018709368ffe5be58b081aa5c9",
+ "generated_at": "2026-10-16T23:05:58-04:00"
 }
