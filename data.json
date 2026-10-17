@@ -178,11 +178,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 1,
-     "clock": 266.0,
+     "period": 2,
+     "clock": 132.0,
      "state": "in",
      "completed": false,
-     "detail": "4:26 - 1st",
+     "detail": "2:12 - 2nd",
      "teams": [
       {
        "id": "84",
@@ -192,7 +192,7 @@
        "nick": "Hoosiers",
        "location": "Indiana",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "194",
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -1528,11 +1528,11 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.8887,
-     "spread_home_line": -20.5,
-     "spread_home_fair": 0.5069,
-     "total_line": 45.0,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.8931,
+     "spread_home_line": -21.0,
+     "spread_home_fair": 0.4954,
+     "total_line": 45.5,
      "total_over_fair": 0.5122
     },
     "pm": {
@@ -2406,11 +2406,11 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.8887,
-     "spread_home_line": -20.5,
-     "spread_home_fair": 0.5069,
-     "total_line": 45.0,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.8931,
+     "spread_home_line": -21.0,
+     "spread_home_fair": 0.4954,
+     "total_line": 45.5,
      "total_over_fair": 0.5122
     },
     "pm": {
@@ -3284,12 +3284,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.8875,
-     "spread_home_line": -19.0,
-     "spread_home_fair": 0.5092,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.8904,
+     "spread_home_line": -20.0,
+     "spread_home_fair": 0.4931,
      "total_line": 49.5,
-     "total_over_fair": 0.5134
+     "total_over_fair": 0.5156
     },
     "pm": {
      "slug": "cfb-aubrn-ga-2026-10-17",
@@ -4162,12 +4162,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.8872,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.889,
      "spread_home_line": -19.5,
-     "spread_home_fair": 0.4978,
+     "spread_home_fair": 0.5087,
      "total_line": 56.0,
-     "total_over_fair": 0.513
+     "total_over_fair": 0.5162
     },
     "pm": {
      "slug": "cfb-flst-mia-2026-10-17",
@@ -5020,11 +5020,11 @@
     "id": "401858489",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 1,
-     "clock": 641.0,
+     "period": 2,
+     "clock": 380.0,
      "state": "in",
      "completed": false,
-     "detail": "10:41 - 1st",
+     "detail": "6:20 - 2nd",
      "teams": [
       {
        "id": "120",
@@ -5034,7 +5034,7 @@
        "nick": "Terrapins",
        "location": "Maryland",
        "home": true,
-       "score": "0"
+       "score": "14"
       },
       {
        "id": "164",
@@ -5044,7 +5044,7 @@
        "nick": "Scarlet Knights",
        "location": "Rutgers",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -6054,11 +6054,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 1,
-     "clock": 266.0,
+     "period": 2,
+     "clock": 132.0,
      "state": "in",
      "completed": false,
-     "detail": "4:26 - 1st",
+     "detail": "2:12 - 2nd",
      "teams": [
       {
        "id": "84",
@@ -6068,7 +6068,7 @@
        "nick": "Hoosiers",
        "location": "Indiana",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "194",
@@ -6763,7 +6763,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7778,7 +7778,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:48 ET",
+       "pulled": "2026-10-17 13:37 ET",
        "ml_home": 0.7594,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4829,
@@ -8484,12 +8484,12 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:48 ET",
-       "ml_home": 0.7909,
+       "pulled": "2026-10-17 13:37 ET",
+       "ml_home": 0.7886,
        "spread_home_line": -8.0,
-       "spread_home_fair": 0.4931,
+       "spread_home_fair": 0.4807,
        "total_line": 40.5,
-       "total_over_fair": 0.5213
+       "total_over_fair": 0.5191
       },
       "pm": {
        "slug": "nfl-lac-kc-2026-10-18",
@@ -9583,7 +9583,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -10274,11 +10274,11 @@
     "id": "401858489",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 1,
-     "clock": 641.0,
+     "period": 2,
+     "clock": 380.0,
      "state": "in",
      "completed": false,
-     "detail": "10:41 - 1st",
+     "detail": "6:20 - 2nd",
      "teams": [
       {
        "id": "120",
@@ -10288,7 +10288,7 @@
        "nick": "Terrapins",
        "location": "Maryland",
        "home": true,
-       "score": "0"
+       "score": "14"
       },
       {
        "id": "164",
@@ -10298,7 +10298,7 @@
        "nick": "Scarlet Knights",
        "location": "Rutgers",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -10967,10 +10967,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.5138,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.508,
      "spread_home_line": -1.0,
-     "spread_home_fair": 0.4954,
+     "spread_home_fair": 0.4908,
      "total_line": 53.0,
      "total_over_fair": 0.5158
     },
@@ -11897,10 +11897,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.7641,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.764,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.4604,
+     "spread_home_fair": 0.4583,
      "total_line": 6.5,
      "total_over_fair": 0.5138
     },
@@ -12059,7 +12059,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -13002,7 +13002,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13978,7 +13978,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14833,10 +14833,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.4906,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.4953,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6333,
+     "spread_home_fair": 0.6363,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -14917,11 +14917,11 @@
     "id": "401858488",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 1,
-     "clock": 266.0,
+     "period": 2,
+     "clock": 132.0,
      "state": "in",
      "completed": false,
-     "detail": "4:26 - 1st",
+     "detail": "2:12 - 2nd",
      "teams": [
       {
        "id": "84",
@@ -14931,7 +14931,7 @@
        "nick": "Hoosiers",
        "location": "Indiana",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "194",
@@ -15594,11 +15594,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 1,
-     "clock": 1080.0,
+     "period": 2,
+     "clock": 2940.0,
      "state": "in",
      "completed": false,
-     "detail": "18'",
+     "detail": "49'",
      "teams": [
       {
        "id": "361",
@@ -15618,7 +15618,7 @@
        "nick": "Aston Villa",
        "location": "Aston Villa",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -15772,7 +15772,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -16493,10 +16493,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.4906,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.4953,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6333,
+     "spread_home_fair": 0.6363,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16638,10 +16638,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.4906,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.4953,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6333,
+     "spread_home_fair": 0.6363,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -16768,7 +16768,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -17413,11 +17413,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 1,
-     "clock": 1080.0,
+     "period": 2,
+     "clock": 2940.0,
      "state": "in",
      "completed": false,
-     "detail": "18'",
+     "detail": "49'",
      "teams": [
       {
        "id": "361",
@@ -17437,7 +17437,7 @@
        "nick": "Aston Villa",
        "location": "Aston Villa",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -17567,7 +17567,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18317,11 +18317,11 @@
     "id": "401879258",
     "snapshot": {
      "date": "2026-10-17T16:30Z",
-     "period": 1,
-     "clock": 1080.0,
+     "period": 2,
+     "clock": 2940.0,
      "state": "in",
      "completed": false,
-     "detail": "18'",
+     "detail": "49'",
      "teams": [
       {
        "id": "361",
@@ -18341,7 +18341,7 @@
        "nick": "Aston Villa",
        "location": "Aston Villa",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -18435,10 +18435,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.4906,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.4953,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6333,
+     "spread_home_fair": 0.6363,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18662,10 +18662,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.4906,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.4953,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.6333,
+     "spread_home_fair": 0.6363,
      "total_line": 6.5,
      "total_over_fair": 0.5069
     },
@@ -18977,7 +18977,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
+     "pulled": "2026-10-17 13:37 ET",
      "ml_home": 0.6367,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4114,
@@ -19151,10 +19151,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.7641,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.764,
      "spread_home_line": -2.5,
-     "spread_home_fair": 0.4604,
+     "spread_home_fair": 0.4583,
      "total_line": 6.5,
      "total_over_fair": 0.5138
     },
@@ -19336,12 +19336,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:48 ET",
-     "ml_home": 0.3505,
+     "pulled": "2026-10-17 13:37 ET",
+     "ml_home": 0.3582,
      "spread_home_line": 1.5,
-     "spread_home_fair": 0.5796,
+     "spread_home_fair": 0.5836,
      "total_line": 6.0,
-     "total_over_fair": 0.5228
+     "total_over_fair": 0.5238
     },
     "pm": {
      "slug": "nhl-car-wpg-2026-10-17",
@@ -19480,11 +19480,11 @@
     "id": "401892519",
     "snapshot": {
      "date": "2026-10-17T17:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 198.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/17 - 1:00 PM EDT",
+     "detail": "3:18 - 1st",
      "teams": [
       {
        "id": "23",
@@ -19494,7 +19494,7 @@
        "nick": "Capitals",
        "location": "Washington",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "11",
@@ -19504,7 +19504,7 @@
        "nick": "Devils",
        "location": "New Jersey",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     },
@@ -19530,6 +19530,17 @@
        "tokens": [
         "2650370230795645043457427682598372307726219435472551113999839496467316612382",
         "37010364897070414499405018832517746254862651196587695822541117946496753851284"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Devils",
+        "Capitals"
+       ],
+       "tokens": [
+        "70391868112410814511452263414463180736380222040564235643369827367141589315102",
+        "14228441195315557903990936728316801205775027115946610564341477688651351808093"
        ]
       }
      ],
@@ -19644,11 +19655,11 @@
     "id": "401856724",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 18.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "0:18 - 2nd",
      "teams": [
       {
        "id": "251",
@@ -19658,7 +19669,7 @@
        "nick": "Longhorns",
        "location": "Texas",
        "home": true,
-       "score": "10"
+       "score": "17"
       },
       {
        "id": "57",
@@ -19668,7 +19679,7 @@
        "nick": "Gators",
        "location": "Florida",
        "home": false,
-       "score": "0"
+       "score": "10"
       }
      ]
     },
@@ -20364,6 +20375,6 @@
  ],
  "pnl_total": 176.24,
  "open_stake": 171.18,
- "hash": "2d22d7bbb7185b793a4170417993aae506873e03",
- "generated_at": "2026-10-17T12:48:45-04:00"
+ "hash": "9a9eaeb0ead852076309b18e5f58d0c3db5d2982",
+ "generated_at": "2026-10-17T13:37:37-04:00"
 }
