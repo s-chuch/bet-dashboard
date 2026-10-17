@@ -12,7 +12,7 @@
   },
   {
    "book": "PointsBet",
-   "balance": 130.71,
+   "balance": 105.71,
    "updated": "2026-10-17"
   },
   {
@@ -36,7 +36,7 @@
    "updated": "2026-10-16"
   }
  ],
- "total": 634.37,
+ "total": 609.37,
  "open": [
   {
    "date": "2026-10-13",
@@ -212,7 +212,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.2188,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.8834,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.4864,
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.898,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5054,7 +5054,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.6654,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.5045,
@@ -5802,10 +5802,10 @@
     "snapshot": {
      "date": "2026-10-17T02:00Z",
      "period": 3,
-     "clock": 205.0,
+     "clock": 137.0,
      "state": "in",
      "completed": false,
-     "detail": "3:25 - 3rd",
+     "detail": "2:17 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -6135,7 +6135,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -6810,7 +6810,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7783,7 +7783,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 00:32 ET",
+       "pulled": "2026-10-17 00:36 ET",
        "ml_home": 0.7432,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4675,
@@ -8489,7 +8489,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 00:32 ET",
+       "pulled": "2026-10-17 00:36 ET",
        "ml_home": 0.7682,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4794,
@@ -9349,10 +9349,10 @@
     "snapshot": {
      "date": "2026-10-17T02:00Z",
      "period": 3,
-     "clock": 205.0,
+     "clock": 137.0,
      "state": "in",
      "completed": false,
-     "detail": "3:25 - 3rd",
+     "detail": "2:17 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -9537,10 +9537,10 @@
     "snapshot": {
      "date": "2026-10-17T02:00Z",
      "period": 3,
-     "clock": 205.0,
+     "clock": 137.0,
      "state": "in",
      "completed": false,
-     "detail": "3:25 - 3rd",
+     "detail": "2:17 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -9730,7 +9730,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.7432,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4675,
@@ -10455,7 +10455,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.6654,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.5045,
@@ -11114,7 +11114,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 00:32 ET",
+     "pulled": "2026-10-17 00:36 ET",
      "ml_home": 0.5125,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4954,
@@ -11982,6 +11982,155 @@
     }
    },
    "sport": "NFL"
+  },
+  {
+   "date": "2026-10-17",
+   "book": "PointsBet",
+   "event": "Vancouver Canucks @ Tampa Bay Lightning",
+   "market": "Puck Line (WELCOMEDM rollover)",
+   "pick": "Vancouver Canucks +2.5",
+   "start": "Sat Oct 17 04:00 PM ET",
+   "price": "-130",
+   "boosted_price": "",
+   "stake": 25.0,
+   "stake_note": "",
+   "to_win": 19.23,
+   "ev_pct": "0.59",
+   "multi": false,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "Vancouver Canucks",
+     "line": 2.5,
+     "women": false,
+     "text": "Vancouver Canucks +2.5",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261017",
+    "groups": null,
+    "id": "401892521",
+    "snapshot": {
+     "date": "2026-10-17T20:00Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/17 - 4:00 PM EDT",
+     "teams": [
+      {
+       "id": "20",
+       "name": "Tampa Bay Lightning",
+       "abbr": "TB",
+       "short": "Lightning",
+       "nick": "Lightning",
+       "location": "Tampa Bay",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "22",
+       "name": "Vancouver Canucks",
+       "abbr": "VAN",
+       "short": "Canucks",
+       "nick": "Canucks",
+       "location": "Vancouver",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-17 00:36 ET",
+     "ml_home": 0.7653,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.5624,
+     "total_line": 6.5,
+     "total_over_fair": 0.4887
+    },
+    "pm": {
+     "slug": "nhl-van-tb-2026-10-17",
+     "title": "Canucks vs. Lightning",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Lightning",
+        "Canucks"
+       ],
+       "tokens": [
+        "54515572042414455917058207142868901463343827774132859634090246051791588274722",
+        "17502697309892124695615760220738096402984747419593730801600472320131630806475"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 4.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "45293386785977558222651255426463892645947126240376537797645863722890239861070",
+        "60316502594599769936265560343982221547327208379166910755117653551340921428665"
+       ]
+      },
+      {
+       "line": 5.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "48684445515727917701087731124686655731429035357210082687884925921832804598004",
+        "62263822258508588125693134835694326163316907781441473811990656797668557035801"
+       ]
+      },
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "75164420437379404379299814266356744463027963378470443414132973456744135680728",
+        "76350977990411128547365367550289074476349027262970158740042229857242746088530"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "26568858728542916495657900694402157868865970291722744664952812560120064759533",
+        "1956910440787836559544843050797805541516430873708029270138257992245338109168"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Canucks",
+       "Lightning"
+      ],
+      "tokens": [
+       "39037328711750616491684777532467306929713507425475015350564592614981742305888",
+       "54186559459867846558093554783574500120645127301676538015479159189159345533632"
+      ]
+     }
+    },
+    "an": {
+     "id": 293421,
+     "home_team_id": 237,
+     "away_team_id": 220
+    }
+   },
+   "sport": "NHL"
   }
  ],
  "settled_recent": [
@@ -12083,7 +12232,7 @@
   }
  ],
  "pnl_total": 176.24,
- "open_stake": 107.48,
- "hash": "8a838467b3cdc026e0560ed894574c4261702bae",
- "generated_at": "2026-10-17T00:32:54-04:00"
+ "open_stake": 132.48,
+ "hash": "b0395db011b8dbad08d937f7827453f9d0a9c23a",
+ "generated_at": "2026-10-17T00:36:17-04:00"
 }
