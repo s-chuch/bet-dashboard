@@ -17,11 +17,6 @@
   },
   {
    "book": "bet365",
-   "balance": 55.86,
-   "updated": "2026-10-15"
-  },
-  {
-   "book": "BetGuard",
    "balance": 55.03,
    "updated": "2026-10-16"
   },
@@ -41,7 +36,7 @@
    "updated": "2026-10-16"
   }
  ],
- "total": 767.23,
+ "total": 711.37,
  "open": [
   {
    "date": "2026-10-13",
@@ -217,7 +212,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -875,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.2188,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1533,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -2411,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -3289,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.8834,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.4864,
@@ -4167,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.8978,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5059,7 +5054,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.6654,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.5045,
@@ -5806,11 +5801,11 @@
     "id": "401892518",
     "snapshot": {
      "date": "2026-10-17T02:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -6140,7 +6135,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -6815,7 +6810,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:41 ET",
+     "pulled": "2026-10-16 23:58 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7581,7 +7576,7 @@
   },
   {
    "date": "2026-10-16",
-   "book": "BetGuard",
+   "book": "bet365",
    "event": "Man City vs Ipswich Town",
    "market": "SGP 3-leg (50% profit boost)",
    "pick": "Haaland AGS + Man City ML + Cherki score or assist",
@@ -7622,7 +7617,7 @@
   },
   {
    "date": "2026-10-16",
-   "book": "BetGuard",
+   "book": "bet365",
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "market": "SGP 3-leg (30% profit boost)",
    "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
@@ -7788,7 +7783,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-16 23:41 ET",
+       "pulled": "2026-10-16 23:58 ET",
        "ml_home": 0.7432,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4675,
@@ -8494,7 +8489,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-16 23:41 ET",
+       "pulled": "2026-10-16 23:58 ET",
        "ml_home": 0.7682,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4794,
@@ -9353,11 +9348,11 @@
     "id": "401892518",
     "snapshot": {
      "date": "2026-10-17T02:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -9541,11 +9536,11 @@
     "id": "401892518",
     "snapshot": {
      "date": "2026-10-17T02:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -9682,7 +9677,7 @@
   },
   {
    "date": "2026-10-16",
-   "book": "BetGuard",
+   "book": "bet365",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
    "pick": "Over 4.5 runs + Guardians +2.5 + Yandy Diaz U0.5 doubles",
    "result": "void",
@@ -9835,6 +9830,6 @@
  ],
  "pnl_total": 176.24,
  "open_stake": 32.48,
- "hash": "d83856393e15d6edf9e3df61d235b8665a85f87d",
- "generated_at": "2026-10-16T23:41:56-04:00"
+ "hash": "cd59923eb0367496744ced3eb751b89e6d2b6285",
+ "generated_at": "2026-10-16T23:59:05-04:00"
 }
