@@ -32,7 +32,7 @@
   },
   {
    "book": "theScore",
-   "balance": 31.52,
+   "balance": 31.15,
    "updated": "2026-10-16"
   },
   {
@@ -41,7 +41,7 @@
    "updated": "2026-10-16"
   }
  ],
- "total": 767.6,
+ "total": 767.23,
  "open": [
   {
    "date": "2026-10-13",
@@ -217,7 +217,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -875,7 +875,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.2188,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1478,9 +1478,9 @@
    "start": "Sat Oct 17 07:00 PM ET",
    "price": "+1000",
    "boosted_price": "",
-   "stake": 0.16,
+   "stake": 0.2,
    "stake_note": "",
-   "to_win": 1.6,
+   "to_win": 2.0,
    "ev_pct": "23.6",
    "multi": false,
    "legs": [
@@ -1533,7 +1533,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -2411,7 +2411,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -3289,7 +3289,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.8834,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.4864,
@@ -4167,7 +4167,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.8978,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5059,7 +5059,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.6654,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.5045,
@@ -5807,10 +5807,10 @@
     "snapshot": {
      "date": "2026-10-17T02:00Z",
      "period": 2,
-     "clock": 282.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:42 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "25",
@@ -6140,7 +6140,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.4161,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5045,
@@ -6815,7 +6815,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 23:31 ET",
+     "pulled": "2026-10-16 23:41 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7488,76 +7488,6 @@
   },
   {
    "date": "2026-10-16",
-   "book": "theScore",
-   "event": "Memphis @ Tulane",
-   "market": "Moneyline",
-   "pick": "Tulane ML",
-   "start": "Fri Oct 16 07:30 PM ET",
-   "price": "+230",
-   "boosted_price": "",
-   "stake": 0.16,
-   "stake_note": "",
-   "to_win": 0.37,
-   "ev_pct": "2.68",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Tulane",
-     "women": false,
-     "text": "Tulane ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261016",
-    "groups": null,
-    "id": "401862801",
-    "snapshot": {
-     "date": "2026-10-16T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "2655",
-       "name": "Tulane Green Wave",
-       "abbr": "TULN",
-       "short": "Tulane",
-       "nick": "Green Wave",
-       "location": "Tulane",
-       "home": true,
-       "score": "31"
-      },
-      {
-       "id": "235",
-       "name": "Memphis Tigers",
-       "abbr": "MEM",
-       "short": "Memphis",
-       "nick": "Tigers",
-       "location": "Memphis",
-       "home": false,
-       "score": "17"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 19:27 ET",
-     "ml_home": 0.3121,
-     "spread_home_line": 6.5,
-     "spread_home_fair": 0.4908,
-     "total_line": 55.5,
-     "total_over_fair": 0.5089
-    }
-   },
-   "sport": "NCAAF"
-  },
-  {
-   "date": "2026-10-16",
    "book": "FanDuel",
    "event": "Charlotte Hornets @ Memphis Grizzlies",
    "market": "Moneyline",
@@ -7749,10 +7679,10 @@
     "snapshot": {
      "date": "2026-10-17T01:00Z",
      "period": 3,
-     "clock": 294.0,
-     "state": "in",
-     "completed": false,
-     "detail": "4:54 - 3rd",
+     "clock": 0.0,
+     "state": "post",
+     "completed": true,
+     "detail": "Final",
      "teams": [
       {
        "id": "17",
@@ -7784,84 +7714,6 @@
      "spread_home_fair": 0.4335,
      "total_line": 6.5,
      "total_over_fair": 0.5437
-    },
-    "pm": {
-     "slug": "nhl-pit-col-2026-10-16",
-     "title": "Penguins vs. Avalanche",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Avalanche",
-        "Penguins"
-       ],
-       "tokens": [
-        "54016772602102979933493206293130148209795486008278946060468997064628381614635",
-        "15253462418351599386442072361961471458940528609177788434329203700097286152740"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "86055566919111167995083014289648341482809230108791295130316535566770605410046",
-        "2837870765390334599650906875962477953004335728503666330050266114276678699614"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "49024099639487435518364531439722490907656541470311111727653534579939346739086",
-        "94104042785715783845536560182296859443801143493415880020435730077457961618007"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "49571576369408560779463400848309292388205105218539071205777551758094448043677",
-        "47105123518192148713560550453255711543833438593571082100359596138915136527276"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "81042701402588946706604267234272872553134105890233068312959361287410125468094",
-        "57560764544291816900830932183362989484050587862619590096901398216907710299845"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Penguins",
-       "Avalanche"
-      ],
-      "tokens": [
-       "18641740125891299262832159812080265362994506616882287396794855563483563930956",
-       "83078350177187999027684476436069896002803028439032540133799192324515265579018"
-      ]
-     }
-    },
-    "an": {
-     "id": 293417,
-     "home_team_id": 225,
-     "away_team_id": 246
     }
    },
    "sport": "NHL"
@@ -7936,7 +7788,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-16 23:31 ET",
+       "pulled": "2026-10-16 23:41 ET",
        "ml_home": 0.7432,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4675,
@@ -8642,7 +8494,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-16 23:31 ET",
+       "pulled": "2026-10-16 23:41 ET",
        "ml_home": 0.7682,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4794,
@@ -9304,9 +9156,530 @@
    ],
    "match": null,
    "sport": "NFL"
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Atlanta Dream @ Golden State Valkyries",
+   "market": "SGP 3-leg (30% profit boost)",
+   "pick": "Valkyries ML + Valkyries O78.5 team pts + Dream O75.5 team pts",
+   "start": "Sat Oct 17 03:30 PM ET",
+   "price": "+320",
+   "boosted_price": "+415",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.83,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Valkyries",
+     "women": false,
+     "text": "Valkyries ML"
+    },
+    {
+     "type": "prop",
+     "player": "Valkyries",
+     "stat": null,
+     "op": "over",
+     "line": 78.5,
+     "text": "Valkyries O78.5 team pts",
+     "stat_raw": "team pts"
+    },
+    {
+     "type": "prop",
+     "player": "Dream",
+     "stat": null,
+     "op": "over",
+     "line": 75.5,
+     "text": "Dream O75.5 team pts",
+     "stat_raw": "team pts"
+    }
+   ],
+   "match": null,
+   "sport": null
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "market": "SGP 3-leg (50% profit boost)",
+   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+   "start": "Fri Oct 16 08:00 PM ET",
+   "price": "+429",
+   "boosted_price": "+645",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 1.29,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Guardians",
+     "women": false,
+     "text": "Guardians ML",
+     "team_ok": true
+    },
+    {
+     "type": "prop",
+     "player": "N. Martinez",
+     "stat": "k",
+     "op": "min",
+     "min": 3,
+     "text": "N. Martinez 3+ K",
+     "pteam": "TB",
+     "pname": "Nick Martinez",
+     "pid": "33372"
+    },
+    {
+     "type": "prop",
+     "player": "C. Simpson",
+     "stat": "tb",
+     "op": "min",
+     "min": 1,
+     "text": "C. Simpson 1+ total bases",
+     "pteam": "TB",
+     "pname": "Chandler Simpson",
+     "pid": "4679983"
+    }
+   ],
+   "match": {
+    "path": "baseball/mlb",
+    "date": "20261016",
+    "groups": null,
+    "id": "401908026",
+    "snapshot": {
+     "date": "2026-10-17T00:00Z",
+     "period": 1,
+     "clock": 0.0,
+     "state": "post",
+     "completed": false,
+     "detail": "Postponed",
+     "teams": [
+      {
+       "id": "5",
+       "name": "Cleveland Guardians",
+       "abbr": "CLE",
+       "short": "Guardians",
+       "nick": "Guardians",
+       "location": "Cleveland",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "30",
+       "name": "Tampa Bay Rays",
+       "abbr": "TB",
+       "short": "Rays",
+       "nick": "Rays",
+       "location": "Tampa Bay",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    },
+    "pregame": {
+     "home": 53.1,
+     "away": 46.9
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-16 18:18 ET",
+     "ml_home": 0.4882,
+     "spread_home_line": 1.5,
+     "spread_home_fair": 0.6363,
+     "total_line": 6.5,
+     "total_over_fair": 0.4875
+    },
+    "pm": null,
+    "an": {
+     "id": 303428,
+     "home_team_id": 193,
+     "away_team_id": 189
+    }
+   },
+   "sport": "MLB"
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Boston Bruins @ Anaheim Ducks",
+   "market": "SGP 3-leg (20% profit boost)",
+   "pick": "D. Pastrnak U0.5 goals + C. Gauthier U0.5 goals + Over 6.5",
+   "start": "Fri Oct 16 10:00 PM ET",
+   "price": "+312",
+   "boosted_price": "+370",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.74,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "prop",
+     "player": "D. Pastrnak",
+     "stat": "goals",
+     "op": "under",
+     "line": 0.5,
+     "text": "D. Pastrnak U0.5 goals",
+     "pteam": "BOS",
+     "pname": "David Pastrnak",
+     "pid": "3114778"
+    },
+    {
+     "type": "prop",
+     "player": "C. Gauthier",
+     "stat": "goals",
+     "op": "under",
+     "line": 0.5,
+     "text": "C. Gauthier U0.5 goals",
+     "pteam": "ANA",
+     "pname": "Cutter Gauthier",
+     "pid": "5080145"
+    },
+    {
+     "type": "total",
+     "side": "over",
+     "line": 6.5,
+     "text": "Over 6.5"
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261016",
+    "groups": null,
+    "id": "401892518",
+    "snapshot": {
+     "date": "2026-10-17T02:00Z",
+     "period": 2,
+     "clock": 0.0,
+     "state": "in",
+     "completed": false,
+     "detail": "End of 2nd",
+     "teams": [
+      {
+       "id": "25",
+       "name": "Anaheim Ducks",
+       "abbr": "ANA",
+       "short": "Ducks",
+       "nick": "Ducks",
+       "location": "Anaheim",
+       "home": true,
+       "score": "2"
+      },
+      {
+       "id": "1",
+       "name": "Boston Bruins",
+       "abbr": "BOS",
+       "short": "Bruins",
+       "nick": "Bruins",
+       "location": "Boston",
+       "home": false,
+       "score": "1"
+      }
+     ]
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-16 21:50 ET",
+     "ml_home": 0.4954,
+     "spread_home_line": 1.5,
+     "spread_home_fair": 0.703,
+     "total_line": 6.5,
+     "total_over_fair": 0.4931
+    },
+    "pm": {
+     "slug": "nhl-bos-ana-2026-10-16",
+     "title": "Bruins vs. Ducks",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Bruins",
+        "Ducks"
+       ],
+       "tokens": [
+        "18978918048090870089942494730706305031189956703665151326394141874379485001206",
+        "4927996187148870629783786653747807272914991066932540974812533132337585544316"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Ducks",
+        "Bruins"
+       ],
+       "tokens": [
+        "66851074628120477832015677231710781995201941825146923277701922218842416306961",
+        "1180620346953715899524129983524922621744730562637003292223766593884500122832"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 4.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "74175242876935015034459965212062243107660953161604422629768102702189598766453",
+        "85365655050672198664934022822721241973878400631180101716973405023664384660392"
+       ]
+      },
+      {
+       "line": 5.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "5375136004049773328640477204034991784936722924868027970547074162116120105588",
+        "13343777283325110040042694936370155820378971684963802694079599153935597115649"
+       ]
+      },
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "107944985425155759495721484809190739458201512274493249405249331635701026716398",
+        "84611067739732464040975402748636092997158338873786736323061762502443719434002"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "72164007352573568151372644845912284186777261353297860378109625699890629003452",
+        "110491328239736920246087637875397433322578560445419532851435223544918454304049"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Bruins",
+       "Ducks"
+      ],
+      "tokens": [
+       "74689626926090438088388928859072696143043535361373192870214612911658135370782",
+       "88006208816399753577219003402194170252762870441532132063244199459338202466966"
+      ]
+     }
+    },
+    "an": {
+     "id": 293418,
+     "home_team_id": 223,
+     "away_team_id": 233
+    }
+   },
+   "sport": "NHL"
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Boston Bruins @ Anaheim Ducks",
+   "market": "SGP 4-leg (30% profit boost)",
+   "pick": "Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG",
+   "start": "Fri Oct 16 10:00 PM ET",
+   "price": "+432",
+   "boosted_price": "+560",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 1.12,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "Ducks",
+     "line": 1.5,
+     "women": false,
+     "text": "Ducks +1.5",
+     "team_ok": true
+    },
+    {
+     "type": "total",
+     "side": "over",
+     "line": 5.5,
+     "text": "Over 5.5"
+    },
+    {
+     "type": "prop",
+     "player": "D. Pastrnak",
+     "stat": "goals",
+     "op": "under",
+     "line": 0.5,
+     "text": "D. Pastrnak U0.5 goals",
+     "pteam": "BOS",
+     "pname": "David Pastrnak",
+     "pid": "3114778"
+    },
+    {
+     "type": "prop",
+     "player": "C. Gauthier",
+     "stat": "sog",
+     "op": "min",
+     "min": 4,
+     "text": "C. Gauthier 4+ SOG",
+     "pteam": "ANA",
+     "pname": "Cutter Gauthier",
+     "pid": "5080145"
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261016",
+    "groups": null,
+    "id": "401892518",
+    "snapshot": {
+     "date": "2026-10-17T02:00Z",
+     "period": 2,
+     "clock": 0.0,
+     "state": "in",
+     "completed": false,
+     "detail": "End of 2nd",
+     "teams": [
+      {
+       "id": "25",
+       "name": "Anaheim Ducks",
+       "abbr": "ANA",
+       "short": "Ducks",
+       "nick": "Ducks",
+       "location": "Anaheim",
+       "home": true,
+       "score": "2"
+      },
+      {
+       "id": "1",
+       "name": "Boston Bruins",
+       "abbr": "BOS",
+       "short": "Bruins",
+       "nick": "Bruins",
+       "location": "Boston",
+       "home": false,
+       "score": "1"
+      }
+     ]
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-16 21:50 ET",
+     "ml_home": 0.4954,
+     "spread_home_line": 1.5,
+     "spread_home_fair": 0.703,
+     "total_line": 6.5,
+     "total_over_fair": 0.4931
+    },
+    "pm": {
+     "slug": "nhl-bos-ana-2026-10-16",
+     "title": "Bruins vs. Ducks",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Bruins",
+        "Ducks"
+       ],
+       "tokens": [
+        "18978918048090870089942494730706305031189956703665151326394141874379485001206",
+        "4927996187148870629783786653747807272914991066932540974812533132337585544316"
+       ]
+      },
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Ducks",
+        "Bruins"
+       ],
+       "tokens": [
+        "66851074628120477832015677231710781995201941825146923277701922218842416306961",
+        "1180620346953715899524129983524922621744730562637003292223766593884500122832"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 4.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "74175242876935015034459965212062243107660953161604422629768102702189598766453",
+        "85365655050672198664934022822721241973878400631180101716973405023664384660392"
+       ]
+      },
+      {
+       "line": 5.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "5375136004049773328640477204034991784936722924868027970547074162116120105588",
+        "13343777283325110040042694936370155820378971684963802694079599153935597115649"
+       ]
+      },
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "107944985425155759495721484809190739458201512274493249405249331635701026716398",
+        "84611067739732464040975402748636092997158338873786736323061762502443719434002"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "72164007352573568151372644845912284186777261353297860378109625699890629003452",
+        "110491328239736920246087637875397433322578560445419532851435223544918454304049"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Bruins",
+       "Ducks"
+      ],
+      "tokens": [
+       "74689626926090438088388928859072696143043535361373192870214612911658135370782",
+       "88006208816399753577219003402194170252762870441532132063244199459338202466966"
+      ]
+     }
+    },
+    "an": {
+     "id": 293418,
+     "home_team_id": 223,
+     "away_team_id": 233
+    }
+   },
+   "sport": "NHL"
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Pittsburgh Penguins @ Colorado Avalanche",
+   "pick": "Avalanche ML + Penguins +2.5 + Over 5.5 + Kadri 1+ pts",
+   "result": "lost",
+   "pnl": -0.2
+  },
   {
    "date": "2026-10-16",
    "book": "BetGuard",
@@ -9314,6 +9687,14 @@
    "pick": "Over 4.5 runs + Guardians +2.5 + Yandy Diaz U0.5 doubles",
    "result": "void",
    "pnl": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
+   "event": "Memphis @ Tulane",
+   "pick": "Tulane ML",
+   "result": "won",
+   "pnl": 0.37
   },
   {
    "date": "2026-10-15",
@@ -9452,8 +9833,8 @@
    "pnl": 67.0
   }
  ],
- "pnl_total": 176.07,
- "open_stake": 31.8,
- "hash": "c36916b933afb786515baae2b03169f33d0083a9",
- "generated_at": "2026-10-16T23:31:47-04:00"
+ "pnl_total": 176.24,
+ "open_stake": 32.48,
+ "hash": "d83856393e15d6edf9e3df61d235b8665a85f87d",
+ "generated_at": "2026-10-16T23:41:56-04:00"
 }
