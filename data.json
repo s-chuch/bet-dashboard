@@ -7,7 +7,7 @@
   },
   {
    "book": "FanDuel",
-   "balance": 154.71,
+   "balance": 154.44,
    "updated": "2026-10-17"
   },
   {
@@ -17,18 +17,18 @@
   },
   {
    "book": "bet365",
-   "balance": 55.03,
-   "updated": "2026-10-16"
+   "balance": 54.09,
+   "updated": "2026-10-17"
   },
   {
    "book": "DraftKings",
-   "balance": 50.41,
-   "updated": "2026-10-16"
+   "balance": 39.07,
+   "updated": "2026-10-17"
   },
   {
    "book": "theScore",
-   "balance": 31.15,
-   "updated": "2026-10-16"
+   "balance": 30.75,
+   "updated": "2026-10-17"
   },
   {
    "book": "Hard Rock",
@@ -36,7 +36,7 @@
    "updated": "2026-10-16"
   }
  ],
- "total": 588.37,
+ "total": 575.42,
  "open": [
   {
    "date": "2026-10-13",
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.2302,
      "spread_home_line": 10.0,
      "spread_home_fair": 0.4931,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.8887,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5069,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.8875,
      "spread_home_line": -19.0,
      "spread_home_fair": 0.5092,
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.8872,
      "spread_home_line": -19.5,
      "spread_home_fair": 0.4978,
@@ -5054,7 +5054,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.6462,
      "spread_home_line": -5.0,
      "spread_home_fair": 0.5046,
@@ -6763,7 +6763,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7778,7 +7778,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:21 ET",
+       "pulled": "2026-10-17 12:23 ET",
        "ml_home": 0.7493,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4807,
@@ -8484,7 +8484,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 12:21 ET",
+       "pulled": "2026-10-17 12:23 ET",
        "ml_home": 0.7698,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4817,
@@ -9547,7 +9547,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.7493,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4807,
@@ -10272,7 +10272,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.6462,
      "spread_home_line": -5.0,
      "spread_home_fair": 0.5046,
@@ -10931,7 +10931,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.5138,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4954,
@@ -11861,7 +11861,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.7641,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4604,
@@ -12023,7 +12023,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -12966,7 +12966,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13942,7 +13942,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14761,7 +14761,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4941,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6354,
@@ -15700,7 +15700,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.7493,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4807,
@@ -16421,7 +16421,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4941,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6354,
@@ -16566,7 +16566,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4941,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6354,
@@ -16696,7 +16696,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.2302,
      "spread_home_line": 10.0,
      "spread_home_fair": 0.4931,
@@ -17495,7 +17495,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18363,7 +18363,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4941,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6354,
@@ -18590,7 +18590,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.4941,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6354,
@@ -18861,7 +18861,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.6367,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4114,
@@ -19035,7 +19035,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.7641,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4604,
@@ -19220,7 +19220,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.3505,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.5796,
@@ -19394,7 +19394,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 12:21 ET",
+     "pulled": "2026-10-17 12:23 ET",
      "ml_home": 0.5208,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.7084,
@@ -19529,10 +19529,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 1,
-     "clock": 566.0,
+     "clock": 486.0,
      "state": "in",
      "completed": false,
-     "detail": "9:26 - 1st",
+     "detail": "8:06 - 1st",
      "teams": [
       {
        "id": "251",
@@ -20248,6 +20248,6 @@
  ],
  "pnl_total": 176.24,
  "open_stake": 171.18,
- "hash": "819bc91778b5d7bc5ddb4c844aa1d65bf92690d5",
- "generated_at": "2026-10-17T12:21:30-04:00"
+ "hash": "2770d99da227becc8461addda56318e2e53a9f98",
+ "generated_at": "2026-10-17T12:23:32-04:00"
 }
