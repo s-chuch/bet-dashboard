@@ -37,18 +37,18 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .sti{font-style:normal;font-size:9px;margin-right:3px}.sti.run{color:var(--win)}.sti.pause{color:var(--push)}.sti.brk,.sti.mlb{color:var(--mut)}
 .stb{display:flex;align-items:center;gap:5px;font-size:12px;margin-top:4px}.stb .dot{width:7px;height:7px;border-radius:50%;background:var(--mut)}.stb.run .dot{background:var(--win)}.stb.pause .dot{background:var(--push)}.stb.pause{color:var(--push)}.stn{font-size:11px;color:var(--mut);margin-top:2px}
 .pos{color:var(--win)}.neg{color:var(--lose)}
-.card{padding:0;overflow:hidden;margin-bottom:6px;border-radius:10px}
-.crow{display:flex;align-items:center;gap:8px;min-height:50px;padding:6px 10px 7px 8px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.card{padding:0;overflow:hidden;margin-bottom:5px;border-radius:10px}
+.crow{display:flex;align-items:center;gap:7px;min-height:40px;padding:4px 9px 5px 7px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
 .crow .pill{font-size:10px;padding:3px 6px;min-width:84px;text-align:center;display:block}
 .pillw{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:92px;gap:2px}.psub{font-size:8.5px;line-height:1.1;color:var(--mut);text-align:center;max-width:92px}.psub:empty{display:none}
 .pill.LIVE{background:#475569}.card.LIVE{border-left-color:#94a3b8}
-.cmid{flex:1;min-width:0}.clbl{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.csub{font-size:11px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
-.cneed{font-size:13px;font-weight:600;color:#ffd166;margin-top:3px;line-height:1.3;white-space:normal}
+.cmid{flex:1;min-width:0}.clbl{font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.csub{font-size:10px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
+.cneed{font-size:11.5px;font-weight:600;color:#ffd166;margin-top:1px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .needbox{background:rgba(255,209,102,.10);border:1px solid rgba(255,209,102,.45);border-radius:8px;padding:8px 10px;margin:8px 0 4px}
 .needbox .nh{font-size:11px;font-weight:700;letter-spacing:.06em;color:#ffd166;text-transform:uppercase;margin-bottom:3px}
 .needbox div.nl{font-size:15px;font-weight:700;color:var(--txt);margin:2px 0}
-.cright{text-align:right;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;max-width:42%;overflow:hidden;text-overflow:ellipsis}.cright small{display:block;font-size:11px;color:var(--mut)}
+.cright{text-align:right;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;max-width:42%;overflow:hidden;text-overflow:ellipsis}.cright small{display:block;font-size:10px;color:var(--mut)}
 .chev{color:var(--mut);font-size:16px;transition:transform .2s;flex-shrink:0}.card.open .chev{transform:rotate(90deg)}
 .mini{position:absolute;left:0;bottom:0;height:3px;border-radius:0 2px 2px 0;transition:width .9s linear,background .3s}
 .wp.est .fill{transition:width .9s linear,background .3s}
@@ -666,7 +666,7 @@ function render(){
       <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}</div><div class="cneed">🎯 ${needLines(b).map(esc).join(" &nbsp;•&nbsp; ")}</div></div>
       <div class="cright">${rs}</div><span class="chev">›</span>${mini}</div><div class="cbody">
       <div class="top" style="margin-top:8px"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span></div>
-      <div class="needbox"><div class="nh">Wins if</div>${needLines(b).map(x=>`<div class="nl">${esc(x)}</div>`).join("")}</div><div class="pick" style="font-size:13px;font-weight:600;color:var(--mut)">${esc(b.pick)}</div><div class="ev">${esc(b.event)} · ${esc(b.market)}</div>
+      <div class="ev">${esc(b.event)} · ${esc(b.market)}</div>
       <div class="nums"><span>Price <b>${price}</b></span><span>Stake <b>${money(b.stake)}</b>${b.stake_note?" (unconf.)":""}</span><span>To win <b>${b.to_win==null?"TBC":money(b.to_win)}</b></span><span>Start <b>${esc(fmtStart(firstG,b.start))}</b></span></div>`;
     if(b.multi){html+=`<div class="score">`+legStats.map(x=>`<div class="leg"><span>${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}</span><span class="pill ${cls(x.s)}">${esc(x.lbl||x.s)}</span></div>`).join("")+`</div>`;
       if(g)html+=scoreBox(g)}
