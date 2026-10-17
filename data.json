@@ -179,10 +179,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 632.0,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "10:32 - 3rd",
+     "detail": "9:05 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.8885,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.4807,
@@ -4162,7 +4162,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.889,
      "spread_home_line": -19.5,
      "spread_home_fair": 0.5087,
@@ -5021,10 +5021,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 3,
-     "clock": 894.0,
+     "clock": 724.0,
      "state": "in",
      "completed": false,
-     "detail": "14:54 - 3rd",
+     "detail": "12:04 - 3rd",
      "teams": [
       {
        "id": "120",
@@ -5972,10 +5972,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 632.0,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "10:32 - 3rd",
+     "detail": "9:05 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -6680,7 +6680,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7612,7 +7612,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 14:28 ET",
+       "pulled": "2026-10-17 14:32 ET",
        "ml_home": 0.7594,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4829,
@@ -8318,7 +8318,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 14:28 ET",
+       "pulled": "2026-10-17 14:32 ET",
        "ml_home": 0.7891,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4817,
@@ -9417,7 +9417,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -10109,10 +10109,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 3,
-     "clock": 894.0,
+     "clock": 724.0,
      "state": "in",
      "completed": false,
-     "detail": "14:54 - 3rd",
+     "detail": "12:04 - 3rd",
      "teams": [
       {
        "id": "120",
@@ -10801,7 +10801,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.508,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -11731,7 +11731,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.7629,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4563,
@@ -11893,7 +11893,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -12836,7 +12836,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13812,7 +13812,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14667,7 +14667,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -14752,10 +14752,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 632.0,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "10:32 - 3rd",
+     "detail": "9:05 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -15606,7 +15606,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -16327,7 +16327,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -16472,7 +16472,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -16602,7 +16602,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -17401,7 +17401,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18269,7 +18269,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -18496,7 +18496,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -18811,7 +18811,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.6333,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4081,
@@ -18985,7 +18985,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.7629,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4563,
@@ -19170,7 +19170,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:28 ET",
+     "pulled": "2026-10-17 14:32 ET",
      "ml_home": 0.3582,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.5836,
@@ -19315,10 +19315,10 @@
     "snapshot": {
      "date": "2026-10-17T17:00Z",
      "period": 2,
-     "clock": 288.0,
+     "clock": 194.0,
      "state": "in",
      "completed": false,
-     "detail": "4:48 - 2nd",
+     "detail": "3:14 - 2nd",
      "teams": [
       {
        "id": "23",
@@ -19512,10 +19512,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 246.0,
+     "clock": 77.0,
      "state": "in",
      "completed": false,
-     "detail": "4:06 - 3rd",
+     "detail": "1:17 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -20247,6 +20247,6 @@
  ],
  "pnl_total": 175.42,
  "open_stake": 169.98,
- "hash": "0e03763f98c6c7f5d60db5304fe93e4185f6c218",
- "generated_at": "2026-10-17T14:28:41-04:00"
+ "hash": "e54d21b4cface132ea83c361b78eae1e8addda9d",
+ "generated_at": "2026-10-17T14:32:57-04:00"
 }
