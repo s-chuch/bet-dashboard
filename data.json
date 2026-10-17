@@ -217,10 +217,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
-     "ml_home": 0.4185,
+     "pulled": "2026-10-16 23:05 ET",
+     "ml_home": 0.4161,
      "spread_home_line": 3.0,
-     "spread_home_fair": 0.509,
+     "spread_home_fair": 0.5045,
      "total_line": 50.5,
      "total_over_fair": 0.4889
     },
@@ -875,7 +875,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.2188,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4977,
@@ -1533,7 +1533,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -2411,7 +2411,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.8852,
      "spread_home_line": -20.5,
      "spread_home_fair": 0.5045,
@@ -3289,7 +3289,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.8841,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.491,
@@ -4167,7 +4167,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.8978,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5191,
@@ -5059,7 +5059,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.6654,
      "spread_home_line": -6.0,
      "spread_home_fair": 0.5045,
@@ -5750,46 +5750,7 @@
      "total_line": 6.5,
      "total_over_fair": 0.4875
     },
-    "pm": {
-     "slug": "mlb-tb-cle-2026-10-16",
-     "title": "Tampa Bay Rays vs. Cleveland Guardians",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "101867079552829009546135859751922260332480365245008305067088407720019685440649",
-        "105151207919204185360670045296299780840738350071958873819070538199461949376292"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "50824091753291927896608461590664729764622122887104717582516860127025566121702",
-        "58145089060579268006312975943537519346796193820160434129465985874901730671869"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Tampa Bay Rays",
-       "Cleveland Guardians"
-      ],
-      "tokens": [
-       "91683183963257916680594532559326295765393957646687893681765316288063853356557",
-       "99570794046264010626030442529177831454269863205377409076937872789021409019328"
-      ]
-     }
-    },
+    "pm": null,
     "an": {
      "id": 303428,
      "home_team_id": 193,
@@ -5803,7 +5764,7 @@
    "book": "Caesars",
    "event": "Boston Bruins @ Anaheim Ducks",
    "market": "SGP 3-leg (boosted)",
-   "pick": "Under 6.5 + Ducks ML + player 2+",
+   "pick": "Under 6.5 + Ducks ML + B. Sennecke 2+ SOG",
    "start": "Fri Oct 16 10:00 PM ET",
    "price": "+325",
    "boosted_price": "+423",
@@ -5828,11 +5789,14 @@
     },
     {
      "type": "prop",
-     "player": null,
-     "stat": null,
+     "player": "B. Sennecke",
+     "stat": "sog",
      "op": "min",
      "min": 2,
-     "text": "player 2+"
+     "text": "B. Sennecke 2+ SOG",
+     "pteam": "ANA",
+     "pname": "Beckett Sennecke",
+     "pid": "5216858"
     }
    ],
    "match": {
@@ -5842,11 +5806,11 @@
     "id": "401892518",
     "snapshot": {
      "date": "2026-10-17T02:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 1171.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/16 - 10:00 PM EDT",
+     "detail": "19:31 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -5856,7 +5820,7 @@
        "nick": "Ducks",
        "location": "Anaheim",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "1",
@@ -6027,11 +5991,11 @@
     "id": "401862801",
     "snapshot": {
      "date": "2026-10-16T23:30Z",
-     "period": 3,
-     "clock": 496.0,
+     "period": 4,
+     "clock": 40.0,
      "state": "in",
      "completed": false,
-     "detail": "8:16 - 3rd",
+     "detail": "0:40 - 4th",
      "teams": [
       {
        "id": "2655",
@@ -6041,7 +6005,7 @@
        "nick": "Green Wave",
        "location": "Tulane",
        "home": true,
-       "score": "23"
+       "score": "31"
       },
       {
        "id": "235",
@@ -6051,7 +6015,7 @@
        "nick": "Tigers",
        "location": "Memphis",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -6764,10 +6728,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
-     "ml_home": 0.4185,
+     "pulled": "2026-10-16 23:05 ET",
+     "ml_home": 0.4161,
      "spread_home_line": 3.0,
-     "spread_home_fair": 0.509,
+     "spread_home_fair": 0.5045,
      "total_line": 50.5,
      "total_over_fair": 0.4889
     },
@@ -7439,12 +7403,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 21:50 ET",
+     "pulled": "2026-10-16 23:05 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
      "total_line": 42.5,
-     "total_over_fair": 0.4955
+     "total_over_fair": 0.4933
     },
     "pm": {
      "slug": "nfl-hou-jax-2026-10-18",
@@ -8140,11 +8104,11 @@
     "id": "401862801",
     "snapshot": {
      "date": "2026-10-16T23:30Z",
-     "period": 3,
-     "clock": 496.0,
+     "period": 4,
+     "clock": 40.0,
      "state": "in",
      "completed": false,
-     "detail": "8:16 - 3rd",
+     "detail": "0:40 - 4th",
      "teams": [
       {
        "id": "2655",
@@ -8154,7 +8118,7 @@
        "nick": "Green Wave",
        "location": "Tulane",
        "home": true,
-       "score": "23"
+       "score": "31"
       },
       {
        "id": "235",
@@ -8164,7 +8128,7 @@
        "nick": "Tigers",
        "location": "Memphis",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -8798,11 +8762,11 @@
     "id": "401901822",
     "snapshot": {
      "date": "2026-10-17T00:00Z",
-     "period": 3,
-     "clock": 447.0,
-     "state": "in",
-     "completed": false,
-     "detail": "7:27 - 3rd",
+     "period": 4,
+     "clock": 0.0,
+     "state": "post",
+     "completed": true,
+     "detail": "Final",
      "teams": [
       {
        "id": "29",
@@ -8812,7 +8776,7 @@
        "nick": "Grizzlies",
        "location": "Memphis",
        "home": true,
-       "score": "70"
+       "score": "117"
       },
       {
        "id": "30",
@@ -8822,7 +8786,7 @@
        "nick": "Hornets",
        "location": "Charlotte",
        "home": false,
-       "score": "56"
+       "score": "98"
       }
      ]
     },
@@ -8834,84 +8798,6 @@
      "spread_home_fair": 0.5152,
      "total_line": 228.5,
      "total_over_fair": 0.5152
-    },
-    "pm": {
-     "slug": "nba-cha-mem-2026-10-16",
-     "title": "Hornets vs. Grizzlies",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Grizzlies",
-        "Hornets"
-       ],
-       "tokens": [
-        "23324263248408348661895482043547270270946344289817927031702932885929535734774",
-        "13378769204520406669952630382483958181862834207151556032184696978832482743096"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Grizzlies",
-        "Hornets"
-       ],
-       "tokens": [
-        "91548366559011875306729898972010404427957571000118581155454006508172059985724",
-        "73789001627829848052327887928205604661371111904498738373209810908962451603084"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 229.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "107535794749685411615516562136783471550418730629595149542016750564381547799668",
-        "24572759649448513102699354539340419164232470484162578494354626926334218018645"
-       ]
-      },
-      {
-       "line": 231.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "93628236364905141260050796762808409015497512798558407976127996067502971042803",
-        "51409509744061194268610275868514018677063565615550640229486804808557518487459"
-       ]
-      },
-      {
-       "line": 230.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "12702103178008861765568829961135740546104498991730806618977810676571990055223",
-        "43728307368945136463640026400078847664605295626742720131628771692363014175590"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Hornets",
-       "Grizzlies"
-      ],
-      "tokens": [
-       "29890286881836025209617699555826442715176306203343333057604414447968652662953",
-       "79906575169371397030522596495444001423525685502249757149775433036704890949866"
-      ]
-     }
-    },
-    "an": {
-     "id": 295991,
-     "home_team_id": 177,
-     "away_team_id": 158
     }
    },
    "sport": "NBA"
@@ -9038,11 +8924,11 @@
     "id": "401892517",
     "snapshot": {
      "date": "2026-10-17T01:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "17",
@@ -9052,7 +8938,7 @@
        "nick": "Avalanche",
        "location": "Colorado",
        "home": true,
-       "score": "1"
+       "score": "4"
       },
       {
        "id": "16",
@@ -9305,6 +9191,6 @@
  ],
  "pnl_total": 176.07,
  "open_stake": 26.8,
- "hash": "d1e26b7518ccb1e50aa2c467086b26fa46c5f351",
- "generated_at": "2026-10-16T21:50:38-04:00"
+ "hash": "da88973e4e3eba7e3aa542e7cd9de188bb686a4f",
+ "generated_at": "2026-10-16T23:05:23-04:00"
 }
