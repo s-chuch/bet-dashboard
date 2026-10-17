@@ -179,10 +179,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 545.0,
+     "clock": 121.0,
      "state": "in",
      "completed": false,
-     "detail": "9:05 - 3rd",
+     "detail": "2:01 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -870,7 +870,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -1528,7 +1528,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -2406,7 +2406,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.8931,
      "spread_home_line": -21.0,
      "spread_home_fair": 0.4954,
@@ -3284,7 +3284,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.8885,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.4807,
@@ -4162,12 +4162,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
-     "ml_home": 0.889,
+     "pulled": "2026-10-17 14:48 ET",
+     "ml_home": 0.8883,
      "spread_home_line": -19.5,
-     "spread_home_fair": 0.5087,
+     "spread_home_fair": 0.5043,
      "total_line": 56.0,
-     "total_over_fair": 0.5162
+     "total_over_fair": 0.5152
     },
     "pm": {
      "slug": "cfb-flst-mia-2026-10-17",
@@ -5021,10 +5021,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 3,
-     "clock": 724.0,
+     "clock": 361.0,
      "state": "in",
      "completed": false,
-     "detail": "12:04 - 3rd",
+     "detail": "6:01 - 3rd",
      "teams": [
       {
        "id": "120",
@@ -5044,7 +5044,7 @@
        "nick": "Scarlet Knights",
        "location": "Rutgers",
        "home": false,
-       "score": "13"
+       "score": "16"
       }
      ]
     },
@@ -5972,10 +5972,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 545.0,
+     "clock": 121.0,
      "state": "in",
      "completed": false,
-     "detail": "9:05 - 3rd",
+     "detail": "2:01 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -6680,7 +6680,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -7612,7 +7612,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 14:32 ET",
+       "pulled": "2026-10-17 14:48 ET",
        "ml_home": 0.7594,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4829,
@@ -8318,10 +8318,10 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 14:32 ET",
-       "ml_home": 0.7891,
+       "pulled": "2026-10-17 14:48 ET",
+       "ml_home": 0.7914,
        "spread_home_line": -8.0,
-       "spread_home_fair": 0.4817,
+       "spread_home_fair": 0.4829,
        "total_line": 40.5,
        "total_over_fair": 0.5191
       },
@@ -9417,7 +9417,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -10109,10 +10109,10 @@
     "snapshot": {
      "date": "2026-10-17T16:30Z",
      "period": 3,
-     "clock": 724.0,
+     "clock": 361.0,
      "state": "in",
      "completed": false,
-     "detail": "12:04 - 3rd",
+     "detail": "6:01 - 3rd",
      "teams": [
       {
        "id": "120",
@@ -10132,7 +10132,7 @@
        "nick": "Scarlet Knights",
        "location": "Rutgers",
        "home": false,
-       "score": "13"
+       "score": "16"
       }
      ]
     },
@@ -10801,7 +10801,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.508,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -11731,7 +11731,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.7629,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4563,
@@ -11893,7 +11893,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4354,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4908,
@@ -12836,7 +12836,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.388,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5355,
@@ -13812,7 +13812,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -14667,7 +14667,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -14752,10 +14752,10 @@
     "snapshot": {
      "date": "2026-10-17T16:00Z",
      "period": 3,
-     "clock": 545.0,
+     "clock": 121.0,
      "state": "in",
      "completed": false,
-     "detail": "9:05 - 3rd",
+     "detail": "2:01 - 3rd",
      "teams": [
       {
        "id": "84",
@@ -15606,7 +15606,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.7594,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4829,
@@ -16327,7 +16327,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -16472,7 +16472,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -16602,7 +16602,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.2206,
      "spread_home_line": 10.5,
      "spread_home_fair": 0.4954,
@@ -17401,7 +17401,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.5737,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5148,
@@ -18269,7 +18269,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -18496,7 +18496,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.4929,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.635,
@@ -18694,11 +18694,11 @@
     "id": "761875",
     "snapshot": {
      "date": "2026-10-17T18:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 420.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "7'",
      "teams": [
       {
        "id": "10739",
@@ -18811,7 +18811,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.6333,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4081,
@@ -18985,7 +18985,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.7629,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.4563,
@@ -19170,7 +19170,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 14:32 ET",
+     "pulled": "2026-10-17 14:48 ET",
      "ml_home": 0.3582,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.5836,
@@ -19315,10 +19315,10 @@
     "snapshot": {
      "date": "2026-10-17T17:00Z",
      "period": 2,
-     "clock": 194.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "3:14 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "23",
@@ -19511,11 +19511,11 @@
     "id": "401856724",
     "snapshot": {
      "date": "2026-10-17T16:00Z",
-     "period": 3,
-     "clock": 77.0,
+     "period": 4,
+     "clock": 640.0,
      "state": "in",
      "completed": false,
-     "detail": "1:17 - 3rd",
+     "detail": "10:40 - 4th",
      "teams": [
       {
        "id": "251",
@@ -19535,7 +19535,7 @@
        "nick": "Gators",
        "location": "Florida",
        "home": false,
-       "score": "17"
+       "score": "20"
       }
      ]
     },
@@ -20247,6 +20247,6 @@
  ],
  "pnl_total": 175.42,
  "open_stake": 169.98,
- "hash": "e54d21b4cface132ea83c361b78eae1e8addda9d",
- "generated_at": "2026-10-17T14:32:57-04:00"
+ "hash": "5677a55a92534c18c34917729ddf4ebfd731cdd4",
+ "generated_at": "2026-10-17T14:48:22-04:00"
 }
