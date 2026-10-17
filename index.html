@@ -43,7 +43,7 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .crow .pill{font-size:10px;padding:3px 6px;min-width:84px;text-align:center;display:block}
 .pillw{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:92px;gap:2px}.psub{font-size:8.5px;line-height:1.1;color:var(--mut);text-align:center;max-width:92px}.psub:empty{display:none}
 .pill.LIVE{background:#475569}.card.LIVE{border-left-color:#94a3b8}
-.pill.EVEN{background:var(--push)}.card.EVEN{border-left-color:var(--push)}
+.pill.NEUTRAL{background:var(--push)}.card.NEUTRAL{border-left-color:var(--push)}
 .lgt{flex:1;min-width:0}.lbar{display:flex;align-items:center;gap:6px;margin-top:4px}.lbar .lt{flex:1;height:6px;border-radius:3px;background:#2a2f39;overflow:hidden}.lbar .lf{height:100%;border-radius:3px;transition:width .6s}.lbar small{font-size:11px;color:var(--mut);white-space:nowrap;font-variant-numeric:tabular-nums}
 .cmid{flex:1;min-width:0}.clbl{font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .csub{font-size:10px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
@@ -530,7 +530,7 @@ function pillState(b,status,legStats){const v=betLive(b,status,legStats);
   if(v.upcoming)return{cls:"NOT_STARTED",txt:"UPCOMING",sub:""};
   const hitTxt=b.multi?legsHit(legStats):"";
   if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||hitTxt};
-  const pct=Math.round(v.p*100),k=v.p>=0.55?"WINNING":v.p<=0.45?"LOSING":"EVEN";
+  const pct=Math.round(v.p*100),k=v.p>=0.55?"WINNING":v.p<=0.45?"LOSING":"NEUTRAL";
   return{cls:k,txt:`${k} ${v.approx?"≈":""}${pct}%`,
     sub:v.approx?`${hitTxt} · approx.`:(v.sub||"")}}
 function legsHit(ls){const h=ls.filter(x=>x.s==="WON").length,lv=ls.filter(x=>x.s!=="WON"&&x.s!=="LOST").length;
@@ -607,7 +607,7 @@ function legBar(b,x,p){const L=x.L,g=x.g;if(!g||g.state==="pre"||(g.state==="pos
   const lab=done===1?"✓":done===0?"✗":p!=null?`${Math.round(p*100)}% to hit`:"";
   return`<div class="lbar" title="${esc(txt)}"><div class="lt"><div class="lf" style="width:${(fill*100).toFixed(1)}%;background:${col}"></div></div><small>${esc(lab)}</small></div>`}
 function legChip(b,x){const g=x.g,live=g&&g.state==="in";let lbl=x.lbl||x.s,p=null;
-  if(live&&!["WON","LOST"].includes(x.s)){p=legP(b,x.L,x.s,x);if(p!=null&&x.s!=="PUSH")lbl=p>=0.55?"WINNING":p<=0.45?"LOSING":"EVEN"}
+  if(live&&!["WON","LOST"].includes(x.s)){p=legP(b,x.L,x.s,x);if(p!=null&&x.s!=="PUSH")lbl=p>=0.55?"WINNING":p<=0.45?"LOSING":"NEUTRAL"}
   const c=lbl==="HIT"?"WON":lbl==="MISSED"?"LOST":lbl;return{lbl,c,p}}
 function legRowInner(b,x){const ch=legChip(b,x);
   return`<span class="lgt">${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}${legBar(b,x,ch.p)}</span><span class="pill ${cls(ch.c)}">${esc(ch.lbl)}</span>`}
@@ -630,7 +630,7 @@ function tick1s(){if(!DATA||document.hidden)return;refreshLegs();
     const st=LAST_STATUS[+c.dataset.bi]||"?",q=pillState(b,st,ls),pe=c.querySelector("[data-pill]");if(!pe)return;
     pe.textContent=q.txt;pe.className="pill "+cls(q.cls);c.querySelector("[data-psub]").textContent=q.sub;
     const lv=betLive(b,st,ls);if(!lv.final&&!lv.upcoming&&lv.p!=null){recordP(c.dataset.k,lv.p);const sp=c.querySelector("[data-spk]");if(sp&&c.classList.contains("open"))sp.innerHTML=sparkSVG(c.dataset.k)}
-    c.classList.remove("WINNING","LOSING","EVEN","LIVE","TIED","PUSH","WON","LOST","NOT_STARTED");c.classList.add(cls(q.cls))});
+    c.classList.remove("WINNING","LOSING","NEUTRAL","LIVE","TIED","PUSH","WON","LOST","NOT_STARTED");c.classList.add(cls(q.cls))});
   document.querySelectorAll("[data-clk]").forEach(el=>{const g=games[el.dataset.clk];if(g)el.textContent=clockText(g,el.dataset.sep||" ")});
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;let first=null;
     c.querySelectorAll(".wp.est[data-leg]").forEach(w=>{const L=b.legs[+w.dataset.leg],m=matchOfLeg(b,L),g=gameFor(m);if(!g)return;
