@@ -201,8 +201,8 @@ async function refreshPregame(){
 }
 // which game + team a bar can honestly describe
 function probTarget(b){
-  if(b.multi){if(!b.match)return null;const t=b.legs.filter(L=>L.team);return t.length===1?{m:b.match,leg:t[0]}:null}
-  const L=b.legs[0];if(!L||!L.team)return null;return{m:b.match||L.match,leg:L}}
+  if(b.multi){if(!b.match)return null;const t=b.legs.filter(L=>L.team&&L.type!=="teamtotal");return t.length===1?{m:b.match,leg:t[0]}:null}
+  const L=b.legs[0];if(!L||!L.team||L.type==="teamtotal")return null;return{m:b.match||L.match,leg:L}}
 function probMatch(b){const t=probTarget(b);return t&&t.m}
 function probFor(b){const t=probTarget(b);if(!t||!t.m)return null;const g=gameFor(t.m);if(!g||g.completed)return null;
   const i=sideIdx(g,t.leg.team);if(i<0)return null;const home=g.teams[i].home,name=g.teams[i].abbr||g.teams[i].name;
@@ -235,7 +235,19 @@ function legStatus(L,g,sport,matchId){
     if(!over&&d>0)return{s:"LOST",n:`total ${t}, already over`};
     return{s:over?Lo:W,n:`total ${t}, ${(-d).toFixed(1)} under the line`}}
   if(L.type==="prop")return propStatus(L,g,matchId);
+  if(L.type==="teamtotal")return teamTotalStatus(L,g,sport);
   return{s:"?",n:"can't compute"}}
+// team totals ("Valkyries O78.5 team pts"): graded from that team's own score
+const ttUnit=(L,sport)=>({NHL:"goals",MLB:"runs",Soccer:"goals"}[sport]||"pts");
+const ttName=(L,g)=>{const i=g?sideIdx(g,L.team):-1;return i<0?L.team:(g.teams[i].nick||g.teams[i].short||g.teams[i].name)};
+function teamTotalStatus(L,g,sport){const i=sideIdx(g,L.team);if(i<0)return{s:"?",lbl:"?",n:"team not matched"};
+  const v=Number(g.teams[i].score||0),fin=g.completed,u=ttUnit(L,sport),nm=ttName(L,g),ln=L.line;
+  const HIT={s:"WON",lbl:"HIT"},MISS={s:"LOST",lbl:"MISSED"},LV={s:"LIVE",lbl:"LIVE"};
+  if(v===ln)return fin?{s:"PUSH",lbl:"PUSH",n:`${nm} ${v} ${u} (line ${ln})`}:{...LV,n:`${nm} ${v} ${u} · at the line${L.side==="under"?" (push if it ends here)":", needs 1 more"}`};
+  if(L.side==="under"){const n=`${nm} ${v} ${u} (needs under ${ln})`;
+    if(v>ln)return{...MISS,n};const sp=Math.ceil(ln)-1-v;return{...(fin?HIT:LV),n:fin?n:`${n} · ${sp} to spare`}}
+  const tgt=Math.floor(ln)+1,n=`${nm} ${v}/${tgt} ${u}`;
+  if(v>ln)return{...HIT,n};return{...(fin?MISS:LV),n:fin?n:`${n} · needs ${tgt-v} more`}}
 // ---------- player props, graded from the ESPN game summary (box score, rosters, plays, scoring plays) ----------
 const SFX=new Set(["jr","sr","ii","iii","iv","v"]);
 const nameW=s=>norm(s).filter(x=>!SFX.has(x));
@@ -467,7 +479,7 @@ let LAST_STATUS={};
 // ---- bet-level live pill: from the bet's own win probability, not "cashes if it ended now" ----
 const SCORE_SUB={WINNING:"cashes at current score",LOSING:"needs more at current score",TIED:"tied at current score",PUSH:"push at current score"};
 function legP(b,L,st){if(st==="WON")return 1;if(st==="LOST")return 0;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
-  if(L.type==="prop")return st==="?"?null:0.5;                       // no model for player props: coin flip
+  if(L.type==="prop"||L.type==="teamtotal")return st==="?"?null:0.5;                       // no model for player props: coin flip
   const src=legSources(b,L).filter(x=>x.k!=="pre");return src.length?src[0].v:null}
 function betLive(b,status,legStats){
   const gs=legStats.map(x=>x.g).filter(Boolean);const allFinal=gs.length&&gs.length===b.legs.length&&gs.every(g=>g.completed);
@@ -497,6 +509,9 @@ function needLine(L,m,g){if(!g||g.state!=="in")return"";const u=unitOf(m),sc=g.t
   if(L.type==="total"){const d=L.line-tot;
     if(L.side==="under")return d>0?`Under ${L.line}: ${tot} so far, ${+d.toFixed(1)} to spare`:d===0?`Under ${L.line}: ${tot} so far, at the line (push)`:`Under ${L.line}: ${tot} so far, over by ${+(-d).toFixed(1)}`;
     if(d<0)return`Over ${L.line}: ${tot} so far, already over`;const need=Math.floor(d)+1;return`Over ${L.line}: ${tot} so far, needs ${pl(need,u)} more`}
+  if(L.type==="teamtotal"){const pt=pickTeam(g,L);if(!pt)return"";const v=Number(pt.T.score||0),nm=pt.T.nick||pt.T.short||pt.T.abbr;
+    if(L.side==="under")return v>L.line?`${nm} under ${L.line}: ${v} so far, over by ${+(v-L.line).toFixed(1)}`:`${nm} under ${L.line}: ${v} so far, ${Math.ceil(L.line)-1-v} to spare`;
+    return v>L.line?`${nm} over ${L.line}: ${v} so far, already over`:`${nm} over ${L.line}: ${v} so far, needs ${pl(Math.floor(L.line)+1-v,u)} more`}
   const pt=pickTeam(g,L);if(!pt)return"";const mine=Number(pt.T.score||0),th=Number(pt.O.score||0),mg=mine-th,nm=pt.T.abbr||pt.T.short;
   if(L.type==="ml")return`ML: ${mg>0?`${nm} leading by ${mg}`:mg<0?`${nm} trailing by ${-mg}`:"tied"}`;
   if(L.type==="spread"){const ln=L.line,cur=mg+ln,cs=(mg>0?"+":mg<0?"−":"")+Math.abs(mg);
@@ -612,6 +627,7 @@ function shortLabel(b,g){
   if(L.type==="ml"){const t=team(L.team);return `${t?(t.nick||t.short||t.name):L.team} ML`}
   if(L.type==="spread"){const t=team(L.team);return `${t?t.abbr:L.team} ${fmtLine(L.line)}`}
   if(L.type==="total")return `${L.side==="under"?"U":"O"} ${L.line} ${matchup}`;
+  if(L.type==="teamtotal"){const t=team(L.team);return `${t?t.abbr:L.team} TT ${L.side==="under"?"U":"O"}${L.line}`}
   return b.pick}
 // fallback when no ESPN game is linked: show the logged start time ("Sat Oct 17 03:30 PM ET")
 function rawStart(raw){if(!raw)return"";const m=String(raw).match(/^(\w{3}) (\w{3}) (\d{1,2}) 0?(\d{1,2}:\d{2}) ?([AP]M)/);
@@ -625,6 +641,7 @@ function needLeg(L,sport){if(!L)return"";const u=unitFor(sport),t=L.team;
   if(L.type==="spread"&&L.line!=null){if(L.line>0){const k=Math.ceil(L.line)-1;return k<=0?`${t} win or tie`:`${t} win, or lose by ${k} or fewer`}
     return `${t} win by ${Math.floor(-L.line)+1}+`}
   if(L.type==="total"&&L.line!=null){return L.side==="under"?`${Math.ceil(L.line)-1} or fewer total ${u}`:`${Math.floor(L.line)+1}+ total ${u}`}
+  if(L.type==="teamtotal"&&L.line!=null){const tu=u==="points"?"pts":u;return L.side==="under"?`${t} ${Math.ceil(L.line)-1} or fewer ${tu}`:`${t} ${Math.floor(L.line)+1}+ ${tu}`}
   return L.text||""}
 function needLines(b){const ls=b.legs.map(L=>needLeg(L,b.sport)).filter(Boolean);return ls.length?ls:[b.pick]}
 function rowScore(b,g,legStats){
