@@ -10,6 +10,8 @@ function money(n,sign){n=num(n);var a=Math.abs(n).toFixed(2).replace(/\B(?=(\d{3
 function cls(n){return n>0?'pos':n<0?'neg':'muted'}
 function arr(v){return Array.isArray(v)?v:[]}
 function safeGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function safeSet(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}
+function safeDel(k){try{localStorage.removeItem(k)}catch(e){}}
 
 var dtf=new Intl.DateTimeFormat('en-US',{timeZone:TZ,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 var dayf=new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'});
@@ -31,8 +33,8 @@ function fmtDate(d){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(d||'');return m?MON[+m
 
 /* ---------- state ---------- */
 var S={tab:'archive',arch:null,log:null,bets:[],q:'',book:'all',res:'all',month:'all',sort:'new',shown:PAGE,
-  collapsed:{},types:Object.create(null),archErr:null,logErr:null,runs:null,runsErr:null,runsAt:0,rawA:'',rawL:'',filtered:[]};
-var TABS=['archive','activity','runs'];
+  collapsed:{},types:Object.create(null),archErr:null,logErr:null,runs:null,runsErr:null,runsAt:0,rawA:'',rawL:'',rawD:'',recs:null,recOpen:Object.create(null),filtered:[],open:[],openLoaded:false,dataErr:null,st:Object.create(null),token:'',tokenBad:false,tokenDraft:'',tokenMsg:''};
+var TABS=['archive','activity','picks','runs'];
 
 /* ---------- tabs ---------- */
 function setTab(t,focus){if(TABS.indexOf(t)<0)t='archive';S.tab=t;
@@ -42,7 +44,7 @@ function setTab(t,focus){if(TABS.indexOf(t)<0)t='archive';S.tab=t;
 document.querySelector('[role=tablist]').addEventListener('click',function(e){var b=e.target.closest('[data-tab]');if(b)setTab(b.dataset.tab)});
 document.querySelector('[role=tablist]').addEventListener('keydown',function(e){
   var i=TABS.indexOf(S.tab),k=e.key;
-  if(k==='ArrowRight')i=(i+1)%3;else if(k==='ArrowLeft')i=(i+2)%3;else if(k==='Home')i=0;else if(k==='End')i=2;else return;
+  if(k==='ArrowRight')i=(i+1)%TABS.length;else if(k==='ArrowLeft')i=(i+TABS.length-1)%TABS.length;else if(k==='Home')i=0;else if(k==='End')i=TABS.length-1;else return;
   e.preventDefault();setTab(TABS[i],true)});
 window.addEventListener('hashchange',function(){var t=location.hash.slice(1);if(TABS.indexOf(t)>=0&&t!==S.tab)setTab(t)});
 
@@ -51,7 +53,8 @@ function getJSON(url){return fetch(url+'?t='+Date.now(),{cache:'no-store'}).then
 function loadAll(){
   var pa=getJSON('archive.json').then(function(t){S.archErr=null;if(t!==S.rawA){var j=JSON.parse(t);S.rawA=t;S.arch=j&&typeof j==='object'?j:{};prepBets();return true}return false}).catch(function(e){S.archErr=e.message||'error';return true});
   var pl=getJSON('log.json').then(function(t){S.logErr=null;if(t!==S.rawL){var j=JSON.parse(t);S.rawL=t;S.log=j&&typeof j==='object'?j:{};return true}return false}).catch(function(e){S.logErr=e.message||'error';return true});
-  return Promise.all([pa,pl]).then(function(r){if(r[0]){buildArchiveControls();renderArchive()}if(r[1])renderActivity();renderSub()})}
+  var pd_=getJSON('data.json').then(function(t){S.dataErr=null;if(t!==S.rawD){var j=JSON.parse(t);S.rawD=t;prepOpen(j&&typeof j==='object'?j:{});return true}return false}).catch(function(e){S.dataErr=e.message||'error';return !S.openLoaded});
+  return Promise.all([pa,pl,pd_]).then(function(r){if(r[0]){buildArchiveControls();renderArchive()}if(r[1])renderActivity();if(r[2]){renderSettle();renderPicks()}reconcile();renderSub()})}
 function prepBets(){
   S.bets=arr(S.arch&&S.arch.bets).map(function(b,i){b=b||{};var res=String(b.result||'').toLowerCase();
     if(res==='push'||res==='voided'||res==='void')res='void';else if(res==='win')res='won';else if(res==='loss')res='lost';
@@ -174,6 +177,199 @@ function renderActivity(){
       (has?'<span class="amt '+cls(amt)+'">'+esc(money(amt,true))+'</span>':'')+'</div>'+(e.label||e.note?'<div class="nt">'+esc([e.label,e.note].filter(Boolean).join(' \u2014 '))+'</div>':'')+'</li>'}).join('')+'</ul>'}).join('')}
 $('type-chips').addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(!b)return;var t=b.dataset.t;S.types[t]=S.types[t]===false;renderActivity();
   Array.prototype.some.call($('type-chips').querySelectorAll('[data-t]'),function(n){if(n.dataset.t===t){n.focus();return true}})});
+
+/* ---------- awaiting result (manual settle) ---------- */
+var REPO_API='https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/manual-settle.yml';
+var TOKEN_KEY='bt.gh.settle',ID_RE=/^[0-9a-f]{8}(-[0-9]{1,3})?$/,PROFIT_RE=/^[0-9]+(\.[0-9]{1,2})?$/,TOKEN_RE=/^[A-Za-z0-9_\-]{20,255}$/;
+var POLL_MS=8000,POLL_MAX=240000,RES_API={win:'won',void:'void',loss:'lost'},RES_LBL={win:'WIN',void:'VOID',loss:'LOSS'};
+S.token=safeGet(TOKEN_KEY)||'';if(!TOKEN_RE.test(S.token))S.token='';
+function startMs(b){var m=/(\w{3})\s+(\d{1,2})\s+(\d{1,2}):(\d{2})\s*([AP]M)/i.exec(b.start||'');if(!m)return Infinity;
+  var mi=MON.indexOf(m[1].charAt(0).toUpperCase()+m[1].slice(1).toLowerCase());if(mi<0)return Infinity;
+  var dm=/^(\d{4})-(\d{2})/.exec(b.date||''),y=dm?+dm[1]:new Date().getFullYear();if(dm&&mi<+dm[2]-1)y++;
+  var h=+m[3]%12+(/p/i.test(m[5])?12:0);return Date.UTC(y,mi,+m[2],h,+m[4])}
+function revKey(b){return [b.book,b.event,b.pick,num(b.stake).toFixed(2)].join('|')}
+function prepOpen(d){
+  S.recs=d.recs&&typeof d.recs==='object'?d.recs:null;
+  var nr=arr(d.auto&&d.auto.needs_review).filter(function(x){return x&&typeof x==='object'}),byId={},byKey={};
+  nr.forEach(function(x){if(x.bet_id)byId[x.bet_id]=x;byKey[revKey(x)]=x});
+  S.open=arr(d.open).filter(function(b){return b&&typeof b==='object'}).map(function(b,i){
+    var id=ID_RE.test(String(b.bet_id||''))?String(b.bet_id):'';
+    var r=(id&&byId[id])||byKey[revKey(b)]||null;
+    return {i:i,id:id,book:String(b.book||''),event:String(b.event||''),market:String(b.market||''),pick:String(b.pick||''),stake:num(b.stake),
+      toWin:(typeof b.to_win==='number'&&b.to_win>0)?b.to_win:null,price:b.price,bprice:b.boosted_price,start:String(b.start||''),sk:startMs(b),
+      review:!!r,reason:r?String(r.reason||'Needs review'):''}});
+  S.open.sort(function(a,b){return (b.review-a.review)||(a.sk===b.sk?a.i-b.i:a.sk<b.sk?-1:1)});
+  S.openLoaded=true}
+function betById(id){for(var i=0;i<S.open.length;i++)if(S.open[i].id===id)return S.open[i];return null}
+function stOf(id){return S.st[id]||(S.st[id]={mode:'idle'})}
+function busy(st){return st&&(st.mode==='sending'||st.mode==='queued')}
+function focusKey(el){return el?(el.id||((el.dataset.act||'')+'|'+(el.dataset.id||''))):''}
+function stateLine(st){
+  if(st.mode==='sending')return ['run','Sending to GitHub…'];
+  if(st.mode==='queued'){var t=st.runState==='in_progress'?'Running…':st.runState==='success'?'Run finished — waiting for the site to update…':st.runState==='queued'?'Queued — updating…':'Queued — updating…';return ['run',t]}
+  if(st.mode==='done')return ['ok','Settled'];return null}
+function actionsHtml(b,st,off){
+  var dis=off?' disabled':'';
+  return '<div class="sact">'+['win','void','loss'].map(function(k){var l=k==='win'?'Win':k==='void'?'Void':'Loss';
+    return '<button type="button" class="sbtn '+k+'" data-act="pick" data-r="'+k+'" data-id="'+esc(b.id)+'" aria-label="Mark '+l+': '+esc(b.pick)+'"'+dis+'>'+l+'</button>'}).join('')+'</div>'}
+function confirmHtml(b,st){
+  var needP=st.result==='win'&&b.toWin==null,id=esc(b.id);
+  return '<div class="sconf" role="group" aria-label="Confirm result">'+
+    '<div class="q">Mark <b class="r-'+esc(st.result)+'">'+esc(RES_LBL[st.result])+'</b> for '+esc(b.pick)+' ('+esc(money(b.stake))+')?</div>'+
+    (needP?'<label class="pf"><span class="lbl">Profit ($)</span><input type="text" inputmode="decimal" id="pf-'+id+'" data-profit="'+id+'" value="'+esc(st.profit||'')+'" placeholder="e.g. 12.50" autocomplete="off" required aria-required="true"'+(st.perr?' aria-invalid="true"':'')+'></label>'+
+      (st.perr?'<div class="serr" role="alert">'+esc(st.perr)+'</div>':'<div class="shint">This bet has no known to-win amount, so enter the profit (net winnings, not the payout).</div>'):'')+
+    '<div class="srow"><button type="button" class="btn sgo '+esc(st.result)+'" data-act="confirm" data-id="'+id+'">Confirm</button><button type="button" class="btn" data-act="cancel" data-id="'+id+'">Cancel</button></div></div>'}
+function settleCard(b){
+  var st=S.st[b.id]||{mode:'idle'},bits=[];
+  bits.push('<span><span class="k">Stake</span> '+esc(money(b.stake))+'</span>');
+  bits.push('<span><span class="k">To win</span> '+(b.toWin!=null?esc(money(b.toWin)):'—')+'</span>');
+  bits.push('<span class="k2">'+priceHtml({price:b.price,bprice:b.bprice})+'</span>');
+  if(b.start)bits.push('<span><span class="k">Start</span> '+esc(b.start)+'</span>');
+  var h='<article class="scard'+(b.review?' review':'')+(st.mode==='done'?' done':'')+'" data-card="'+esc(b.id||('i'+b.i))+'"><div class="l1"><span class="pick">'+esc(b.pick||'(no pick)')+'</span>'+(b.review?'<span class="chip warn">Needs review</span>':'')+'</div>'+
+    '<div class="ev">'+esc(b.book)+(b.event?' · '+esc(b.event):'')+(b.market?' · '+esc(b.market):'')+'</div><div class="smeta">'+bits.join('')+'</div>'+
+    (b.review?'<div class="sreason">'+esc(b.reason)+'</div>':'');
+  if(!b.id){return h+'<div class="snote">Settle buttons unavailable: this bet has no id in data.json yet. It appears after the next build.</div></article>'}
+  var sl=stateLine(st);
+  if(sl)h+='<div class="sstat '+sl[0]+'" role="status"><span class="dot '+sl[0]+'" aria-hidden="true"></span><span>'+esc(sl[1])+'</span></div>';
+  if(st.mode==='confirm')h+=confirmHtml(b,st);
+  else if(st.mode!=='done'){
+    if(st.err)h+='<div class="serr" role="alert">'+esc(st.err)+(st.runId?' <a href="https://github.com/s-chuch/bet-dashboard/actions/runs/'+esc(st.runId)+'" target="_blank" rel="noopener noreferrer">View run</a>':'')+'</div>';
+    h+=actionsHtml(b,st,busy(st)||!S.token)}
+  return h+'</article>'}
+function connectHtml(){
+  var bad=S.tokenBad;
+  return '<div class="sconnect"><div class="ct">'+(bad?'GitHub token rejected':'Connect GitHub')+'</div>'+
+    (bad?'<div class="serr" role="alert">'+esc(S.tokenMsg||'The saved token was rejected (bad or expired). Paste a new one.')+'</div>':'<p class="muted" style="margin:4px 0 8px;font-size:13px">One-time setup so the Win / Void / Loss buttons can run the settle workflow.</p>')+
+    '<ol><li>On GitHub: Settings → Developer settings → Fine-grained tokens → Generate new token.</li>'+
+    '<li>Repository access: <b>Only select repositories</b> → s-chuch/bet-dashboard. Permissions: <b>Actions: Read and write</b> and <b>Metadata: Read-only</b>, nothing else.</li>'+
+    '<li>Paste the token here. It stays in this browser only and is sent only to api.github.com.</li></ol>'+
+    '<div class="trow"><input type="password" id="tok-in" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub fine-grained token" value="'+esc(S.tokenDraft)+'"><button type="button" class="btn pri" data-act="savetok">Save</button></div>'+
+    (S.tokenMsg&&!bad?'<div class="serr" role="alert">'+esc(S.tokenMsg)+'</div>':'')+'</div>'}
+function renderSettle(){
+  var box=$('settle-box');if(!box)return;
+  var ae=document.activeElement,fk=ae&&box.contains(ae)?focusKey(ae):'',ss=null,se=null;
+  if(fk&&ae.tagName==='INPUT'){try{ss=ae.selectionStart;se=ae.selectionEnd}catch(e){}}
+  var h='<section class="panel settle" aria-labelledby="settle-h"><div class="shead"><h3 id="settle-h">Awaiting result'+(S.openLoaded?' <span class="chip">'+S.open.length+'</span>':'')+'</h3>'+
+    (S.token?'<button type="button" class="btn sm" data-act="disconnect">Disconnect</button>':'')+'</div>';
+  if(!S.token||S.tokenBad)h+=connectHtml();
+  if(!S.openLoaded)h+=S.dataErr?'<div class="empty">Open bets unavailable ('+esc(S.dataErr)+').</div>':'<div class="skeleton" style="height:70px"></div>';
+  else{var list=S.open.slice();Object.keys(S.st).forEach(function(id){var q=S.st[id];if(q.mode==='done'&&q.bet&&!betById(id))list.push(q.bet)});
+    if(!list.length)h+='<div class="empty">No unsettled bets \ud83c\udf89</div>';else h+='<div class="slist">'+list.map(settleCard).join('')+'</div>'}
+  box.innerHTML=h+'</section>';
+  if(fk){var els=box.querySelectorAll('button,input'),i,t=null;for(i=0;i<els.length;i++)if(focusKey(els[i])===fk){t=els[i];break}
+    if(t&&!t.disabled){t.focus();if(ss!=null){try{t.setSelectionRange(ss,se)}catch(e){}}}}}
+function focusEl(sel){var e=$('settle-box').querySelector(sel);if(e)e.focus()}
+function reconcile(){
+  var changed=false;
+  Object.keys(S.st).forEach(function(id){var st=S.st[id],here=!!betById(id);
+    if(!here&&S.openLoaded){if(st.mode==='queued'||st.mode==='sending'){if(st.mode==='queued'){st.mode='done';changed=true;setTimeout(function(){delete S.st[id];renderSettle()},2500)}}
+      else if(st.mode!=='done'){delete S.st[id];changed=true}}});
+  if(changed)renderSettle()}
+function ghHeaders(){return {'Authorization':'Bearer '+S.token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}}
+function apiMsg(r,fallback){return r.json().then(function(j){return j&&typeof j.message==='string'?j.message:fallback},function(){return fallback})}
+function sendSettle(id){
+  var st=stOf(id),b=betById(id);
+  if(!b||busy(st))return;
+  if(!ID_RE.test(id)){st.mode='idle';st.err='Invalid bet id; not sent.';renderSettle();return}
+  if(!S.token){st.mode='idle';st.err='Connect GitHub first.';renderSettle();return}
+  var profit='';
+  if(st.result==='win'&&b.toWin==null){profit=String(st.profit||'').trim();
+    if(!PROFIT_RE.test(profit)||!(parseFloat(profit)>0)){st.perr='Enter the profit as a positive amount, like 12 or 12.50.';renderSettle();focusEl('#pf-'+id);return}}
+  st.bet=b;st.perr='';st.err='';st.runId='';st.runState='';st.mode='sending';renderSettle();
+  var body=JSON.stringify({ref:'main',inputs:{bet_id:id,result:RES_API[st.result],profit:profit}});
+  fetch(REPO_API+'/dispatches',{method:'POST',headers:Object.assign({'Content-Type':'application/json'},ghHeaders()),body:body,cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'}).then(function(r){
+    if(r.status===204){st.mode='queued';st.at=Date.now();st.deadline=st.at+POLL_MAX;st.runState='queued';renderSettle();startPoll();return}
+    return apiMsg(r,'HTTP '+r.status).then(function(m){
+      st.mode='idle';
+      if(r.status===401){S.tokenBad=true;S.tokenMsg='GitHub rejected the token (bad or expired). Paste a new one below.';st.err='Not sent: token rejected.'}
+      else if(r.status===403){st.err=/rate limit/i.test(m)?'GitHub rate limit reached. Try again in a few minutes.':'Not allowed: the token lacks permission. It needs Actions: Read and write on s-chuch/bet-dashboard.'}
+      else if(r.status===404)st.err='GitHub could not find the workflow, or the token has no access to s-chuch/bet-dashboard.';
+      else if(r.status===422)st.err='GitHub rejected the request (422): '+m;
+      else st.err='GitHub returned HTTP '+r.status+': '+m;
+      renderSettle()})
+  }).catch(function(){st.mode='idle';st.err='Network error: could not reach GitHub. Nothing was sent.';renderSettle()})}
+var pollT=0,polling=false;
+function startPoll(){if(!pollT)pollT=setInterval(tick,POLL_MS)}
+function tracked(){return Object.keys(S.st).filter(function(id){return S.st[id].mode==='queued'})}
+function tick(){
+  if(document.hidden||polling)return;
+  var ids=tracked();if(!ids.length){clearInterval(pollT);pollT=0;return}
+  polling=true;var now=Date.now(),dirty=false;
+  ids.forEach(function(id){var st=S.st[id];if(now>st.deadline&&st.runState!=='success'||now>st.deadline+POLL_MAX){st.mode='idle';st.err='Still not settled after 4 minutes. Check the run on GitHub, then refresh.';dirty=true}});
+  var p=S.token?fetch(REPO_API+'/runs?per_page=5',{headers:ghHeaders(),cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'}).then(function(r){if(!r.ok){if(r.status===401){S.tokenBad=true;S.tokenMsg='GitHub rejected the token while checking the run.';dirty=true}return null}return r.json()}).catch(function(){return null}):Promise.resolve(null);
+  p.then(function(j){
+    var runs=arr(j&&j.workflow_runs).filter(function(r){return r&&/^\d+$/.test(String(r.id))&&r.event==='workflow_dispatch'}).sort(function(a,b){return Date.parse(a.created_at)-Date.parse(b.created_at)});
+    var claimed={};ids.forEach(function(id){if(S.st[id].runId)claimed[S.st[id].runId]=1});
+    ids.sort(function(a,b){return S.st[a].at-S.st[b].at}).forEach(function(id){var st=S.st[id];if(st.mode!=='queued')return;
+      if(!st.runId){var r=runs.filter(function(r){return !claimed[r.id]&&Date.parse(r.created_at)>=st.at-60000})[0];if(r){st.runId=String(r.id);claimed[r.id]=1}}
+      var run=st.runId&&runs.filter(function(r){return String(r.id)===st.runId})[0];
+      if(run){var ns=run.status==='completed'?(run.conclusion==='success'?'success':'failed'):(run.status==='in_progress'?'in_progress':'queued');
+        if(ns!==st.runState){st.runState=ns;dirty=true}
+        if(ns==='failed'){st.mode='idle';st.err='The settle run failed ('+String(run.conclusion||'error')+'). The bet was not settled.';dirty=true}}});
+    if(dirty)renderSettle();
+    return loadAll()}).then(function(){polling=false},function(){polling=false})}
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&tracked().length)tick()});
+$('settle-box').addEventListener('click',function(e){
+  var t=e.target.closest('[data-act]');if(!t||t.disabled)return;var a=t.dataset.act,id=t.dataset.id;
+  if(a==='pick'){var st=stOf(id);if(busy(st))return;st.mode='confirm';st.result=t.dataset.r;st.err='';st.perr='';st.runId='';renderSettle();
+    focusEl(st.result==='win'&&betById(id)&&betById(id).toWin==null?'#pf-'+id:'[data-act=confirm][data-id="'+id+'"]')}
+  else if(a==='cancel'){var s2=stOf(id);s2.mode='idle';s2.perr='';renderSettle();focusEl('[data-act=pick][data-id="'+id+'"]')}
+  else if(a==='confirm')sendSettle(id);
+  else if(a==='savetok'){var v=($('tok-in').value||'').trim();
+    if(!TOKEN_RE.test(v)){S.tokenDraft=v;S.tokenMsg='That does not look like a GitHub token. Paste the whole token.';renderSettle();focusEl('#tok-in');return}
+    S.token=v;S.tokenDraft='';S.tokenBad=false;S.tokenMsg='';if(!safeSet(TOKEN_KEY,v))S.tokenMsg='';renderSettle()}
+  else if(a==='disconnect'){S.token='';S.tokenBad=false;S.tokenMsg='';S.tokenDraft='';safeDel(TOKEN_KEY);renderSettle()}});
+$('settle-box').addEventListener('input',function(e){var t=e.target;
+  if(t.dataset&&t.dataset.profit){var st=stOf(t.dataset.profit);st.profit=t.value;if(st.perr){st.perr='';t.removeAttribute('aria-invalid');var er=t.closest('.sconf').querySelector('.serr');if(er)er.remove()}}
+  else if(t.id==='tok-in')S.tokenDraft=t.value});
+$('settle-box').addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='tok-in'){e.preventDefault();var b=$('settle-box').querySelector('[data-act=savetok]');if(b)b.click()}
+  else if(e.key==='Enter'&&e.target.dataset&&e.target.dataset.profit){e.preventDefault();sendSettle(e.target.dataset.profit)}
+  else if(e.key==='Escape'){var c=e.target.closest&&e.target.closest('.sconf');if(c){var cb=c.querySelector('[data-act=cancel]');if(cb)cb.click()}}});
+renderSettle();
+
+/* ---------- picks (recommendation log) ---------- */
+function pct(v){v=parseFloat(v);return isFinite(v)?(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+'%':'–'}
+function recRec(a){a=a||{};return (+a.w||0)+'–'+(+a.l||0)+(a.p?'–'+(+a.p||0):'')}
+function splitHtml(obj){return Object.keys(obj||{}).filter(function(k){var a=obj[k]||{};return (+a.w||0)+(+a.l||0)>0}).sort(function(x,y){var a=obj[x],b=obj[y];return ((+b.w||0)+(+b.l||0))-((+a.w||0)+(+a.l||0))}).map(function(k){var a=obj[k];
+  return '<span class="sp"><span>'+esc(k)+'</span> <b>'+esc(recRec(a))+'</b>'+(a.roi_pct!=null?' <span class="muted">('+esc(pct(a.roi_pct))+')</span>':'')+'</span>'}).join('')}
+function recRow(r){
+  var res=String(r.result||'pending').toLowerCase(),k='rec|'+r.rec_id,open=!!S.recOpen[k],id='rb-'+safeCls(r.rec_id)+'-'+r.__i;
+  var lab=res==='won'?'W':res==='lost'?'L':res==='pending'?'Pending':res==='void'||res==='push'?'Void':res;
+  var cc=res==='won'?'won':res==='lost'?'lost':res==='pending'?'':'void';
+  var un=r.units==null?'':num(r.units),u=un===''?'':(un>=0?'+':'−')+Math.abs(un).toFixed(2)+'u';
+  var sel=String(r.selection||''),ev=String(r.event||'').replace(/\s*\([^)]*\)/g,'');
+  var px=r.eff_price&&r.eff_price!==r.rec_price?esc(r.rec_price)+' → '+esc(r.eff_price):esc(r.rec_price||'?');
+  return '<div class="rrow'+(open?' open':'')+'"><button type="button" class="rhead" data-rk="'+esc(k)+'" aria-expanded="'+open+'" aria-controls="'+esc(id)+'">'+
+    '<span class="rl"><span class="chip '+cc+'">'+esc(lab)+'</span><span class="rd">'+esc(String(r.rec_date||'').slice(5))+'</span></span>'+
+    '<span class="rm"><span class="rt">'+esc(/^(Draw|Over|Under)\b/i.test(sel)?sel+' · '+ev:sel)+'</span>'+
+    '<span class="rs">'+esc(r.sport||'?')+' · '+esc(r.book||'')+' · <b>'+px+'</b>'+(r.ev_pct?' · EV '+esc(r.ev_pct)+'%':'')+(r.placed==='yes'?' · placed':'')+'</span></span>'+
+    '<span class="rr">'+(u?'<b class="'+(un>=0?'pos':'neg')+'">'+esc(u)+'</b>':'')+'<small>'+esc(r.promo||'')+'</small></span><span class="caret" aria-hidden="true"></span></button>'+
+    '<div class="rbody" id="'+esc(id)+'"'+(open?'':' hidden')+'><div class="ev">'+esc(r.event)+' · '+esc(r.market)+'</div>'+
+    '<div class="rnums"><span>Rec <b>'+esc(r.rec_date)+' '+esc(r.rec_time_et||'')+'</b></span><span>Fair <b>'+(r.fair_pct?esc(r.fair_pct)+'%':'–')+'</b></span><span>Stake <b>'+esc(r.stake||'–')+'</b></span><span>Placed <b>'+esc(r.placed||'')+'</b></span>'+(r.friend==='yes'?'<span><b>Friend</b></span>':'')+'</div>'+
+    (r.final_score?'<div class="rn">Final: '+esc(r.final_score)+'</div>':'')+(r.notes?'<div class="rn">'+esc(r.notes)+'</div>':'')+'<div class="rn">Source: '+esc(r.source||'')+'</div></div></div>'}
+function renderPicks(){
+  var box=$('picks-box'),R=S.recs;if(!box)return;
+  if(!S.openLoaded){box.innerHTML=S.dataErr?'<div class="panel empty">Picks unavailable ('+esc(S.dataErr)+').</div>':'<div class="skeleton" style="height:120px"></div>';return}
+  var recent=arr(R&&R.recent).filter(function(r){return r&&typeof r==='object'});
+  if(!R||!R.stats||!R.stats.overall||!recent.length&&!num(R.stats.overall.n)){box.innerHTML='<div class="panel empty">No picks logged yet</div>';return}
+  var o=R.stats.overall,pl=R.stats.by_placed||{},y=pl.yes||{},n=pl.no||{};
+  var tiles=[['Win rate',o.win_pct==null?'–':(+o.win_pct||0)+'%',(+o.pending||0)+' pending',''],
+    ['ROI, flat $1',pct(o.roi_pct),(num(o.units)>=0?'+':'−')+Math.abs(num(o.units)).toFixed(2)+'u on '+(+o.roi_n||0)+' picks',num(o.roi_pct)>=0?'pos':'neg'],
+    ['Expected ROI (EV)',pct(o.exp_roi_pct),'what the prices promised',''],
+    ['Wins vs expected',(o.wins_with_fair==null?'–':String(o.wins_with_fair))+' vs '+(o.exp_wins==null?'–':String(o.exp_wins)),'from Pinnacle fair %','']];
+  var h='<div class="kpis psum">'+tiles.map(function(t){return '<div class="kpi"><div class="l">'+esc(t[0])+'</div><div class="v '+t[3]+'">'+esc(t[1])+'</div><div class="s">'+esc(t[2])+'</div></div>'}).join('')+'</div>';
+  h+='<div class="panel psplit"><div class="srow2"><span class="sp"><span>Placed</span> <b>'+esc(recRec(y))+'</b> <span class="muted">('+esc(pct(y.roi_pct))+')</span></span><span class="sp"><span>Not placed</span> <b>'+esc(recRec(n))+'</b> <span class="muted">('+esc(pct(n.roi_pct))+')</span></span></div>'+
+    '<div class="srow2">'+splitHtml(R.stats.by_promo)+'</div><div class="srow2">'+splitHtml(R.stats.by_sport)+'</div>'+
+    '<div class="rn">Small sample ('+((+o.w||0)+(+o.l||0))+' graded): compare actual with expected. ROI excludes bonus bets.</div></div>';
+  var shown=recent.slice(0,25);shown.forEach(function(r,i){r.__i=i});
+  h+='<h2 class="day">Recent picks</h2><div class="rlist">'+shown.map(recRow).join('')+'</div>';
+  if(recent.length>25)h+='<p class="foot">Showing the latest 25 of '+recent.length+'. Full log: recommendations.csv</p>';
+  var ae=document.activeElement,fk=ae&&box.contains(ae)?ae.dataset.rk:'';
+  box.innerHTML=h;
+  if(fk){var els=box.querySelectorAll('[data-rk]');for(var i=0;i<els.length;i++)if(els[i].dataset.rk===fk){els[i].focus();break}}}
+$('picks-box').addEventListener('click',function(e){var b=e.target.closest('[data-rk]');if(!b)return;var k=b.dataset.rk,open=b.getAttribute('aria-expanded')==='true';
+  S.recOpen[k]=!open;b.setAttribute('aria-expanded',!open);b.parentNode.classList.toggle('open',!open);var body=$(b.getAttribute('aria-controls'));if(body)body.hidden=open});
+renderPicks();
 
 /* ---------- runs ---------- */
 function loadRuns(force){

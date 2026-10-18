@@ -100,3 +100,8 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right;font-w
 .foot{margin-top:26px}
 /* picks/bet rows: long subtitles truncate instead of running under the right-hand label */
 .cmid{overflow:hidden}.csub{overflow:hidden;text-overflow:ellipsis}.cright{min-width:0}
+.titlerow{display:flex;align-items:center;justify-content:space-between;gap:10px}.titlerow .page-title{margin-right:auto}
+#refresh{flex-shrink:0;padding:6px 13px}#refresh .ri{display:inline-block}#refresh.busy .ri{animation:rspin .8s linear infinite}#refresh:disabled{opacity:.7;cursor:default}
+@keyframes rspin{to{transform:rotate(360deg)}}
+.autoh:empty{display:none}
+.review .rvlink{display:block;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.45);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--push);text-decoration:none}

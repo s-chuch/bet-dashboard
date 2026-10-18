@@ -651,28 +651,7 @@ document.addEventListener("click",e=>{
   const sh=e.target.closest(".sechead");if(sh&&sh.closest(".sec.fold")){const k="x-"+sh.dataset.sec;SECS.has(k)?SECS.delete(k):SECS.add(k);saveUI();syncUI();return}if(sh){SECS.has(sh.dataset.sec)?SECS.delete(sh.dataset.sec):SECS.add(sh.dataset.sec);saveUI();syncUI();return}
   const row=e.target.closest(".crow");if(row){const k=row.parentElement.dataset.k;OPEN.has(k)?OPEN.delete(k):OPEN.add(k);saveUI();syncUI()}});
 
-// "My picks": recommendation log (rec.py) — headline record, splits, recent recs as tap-to-expand rows
-function recsHTML(R){if(!R||!R.stats)return{head:"",html:'<div class="meta">No recommendation log yet.</div>'};
-  const o=R.stats.overall,pc=v=>v==null?"–":(v>0?"+":"")+v.toFixed(1)+"%",rec=a=>`${+a.w||0}–${+a.l||0}${a.p?"–"+(+a.p||0):""}`;
-  const sp=(obj)=>Object.entries(obj).filter(([,a])=>a.w+a.l>0).sort((x,y)=>(y[1].w+y[1].l)-(x[1].w+x[1].l)).map(([k,a])=>`${esc(k)} <b>${rec(a)}</b>${a.roi_pct!=null?` (${pc(a.roi_pct)})`:""}`).join(" · ");
-  let h=`<div class="rsum"><div>Win rate<b>${o.win_pct==null?"–":(+o.win_pct||0)+"%"}</b>${+o.pending||0} pending</div><div>ROI, flat $1<b class="${o.roi_pct>=0?"pos":"neg"}">${pc(o.roi_pct)}</b>${o.units>=0?"+":""}${o.units.toFixed(2)}u on ${+o.roi_n||0} picks</div>
-    <div>Expected ROI (EV)<b>${pc(o.exp_roi_pct)}</b>what the prices promised</div><div>Wins vs expected<b>${esc(o.wins_with_fair)} vs ${esc(o.exp_wins)}</b>from Pinnacle fair %</div></div>`;
-  const pl=R.stats.by_placed;
-  h+=`<div class="rspl">Placed <b>${rec(pl.yes)}</b> (${pc(pl.yes.roi_pct)}) · Not placed <b>${rec(pl.no)}</b> (${pc(pl.no.roi_pct)})</div><div class="rspl">${sp(R.stats.by_promo)}</div><div class="rspl">${sp(R.stats.by_sport)}</div>
-    <div class="rnote">Small sample (${(+o.w||0)+(+o.l||0)} graded): compare actual with expected. ROI excludes bonus bets.</div>`;
-  const recent=(R.recent||[]).slice(0,25);
-  h+=recent.map(r=>{const st=cls((r.result||"pending").toUpperCase()),k="rec|"+r.rec_id,lab=r.result==="won"?"W":r.result==="lost"?"L":r.result==="pending"?"PENDING":st;
-    const u=r.units==null?"":(r.units>=0?"+":"−")+Math.abs(r.units).toFixed(2)+"u";
-    const px=r.eff_price&&r.eff_price!==r.rec_price?`${esc(r.rec_price)}→${esc(r.eff_price)}`:esc(r.rec_price||"?");
-    return `<div class="card ${st}${OPEN.has(k)?" open":""}" data-k="${esc(k)}"><div class="crow"><div class="pillw"><span class="pill ${st}">${esc(lab)}</span><span class="psub">${esc(r.rec_date.slice(5))}</span></div>
-      <div class="cmid"><div class="clbl">${esc(/^(Draw|Over|Under)\b/i.test(r.selection)?r.selection+" · "+r.event.replace(/\s*\([^)]*\)/g,""):r.selection)}</div><div class="csub">${esc(r.sport||"?")} · ${esc(bookTag(r.book))} · <b>${px}</b>${r.ev_pct?` · EV ${esc(r.ev_pct)}%`:""}${r.placed==="yes"?" · placed":""}</div></div>
-      <div class="cright">${u?`<b class="${r.units>=0?"pos":"neg"}">${u}</b>`:""}<small>${esc(r.promo)}</small></div><span class="chev">›</span></div><div class="cbody">
-      <div class="ev" style="margin-top:8px">${esc(r.event)} · ${esc(r.market)}</div>
-      <div class="nums"><span>Rec <b>${esc(r.rec_date)} ${esc(r.rec_time_et||"")}</b></span><span>Fair <b>${r.fair_pct?esc(r.fair_pct)+"%":"–"}</b></span><span>Stake <b>${esc(r.stake||"–")}</b></span><span>Placed <b>${esc(r.placed)}</b></span>${r.friend==="yes"?"<span><b>Friend</b></span>":""}</div>
-      ${r.final_score?`<div class="meta" style="margin-top:4px">Final: ${esc(r.final_score)}</div>`:""}${r.notes?`<div class="srcn">${esc(r.notes)}</div>`:""}<div class="srcn">Source: ${esc(r.source)}</div></div></div>`}).join("");
-  if((R.recent||[]).length>25)h+=`<div class="rnote">Showing the latest 25 of ${R.recent.length}. Full log: recommendations.csv</div>`;
-  return{head:`${rec(o)} · ${o.win_pct==null?"–":(+o.win_pct||0)+"%"}`,html:h}}
-function render(){
+function render(){try{renderReview()}catch(e){}
   const D=DATA;
   const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0,atRisk=0,potPay=0,potTBC=0,tonight=0,tonightTBC=0,openN=0;const TODAY=etDay(Date.now());
   FINAL_BI=new Set();
@@ -733,7 +712,6 @@ function render(){
   const lostTotal=lostSum+lostPending;
   $("lostHead").textContent=`Lost · ${lostCards.length+lostS.length} · −${money(lostTotal)}`;
   $("lostHead").title=lostPending?`incl. ${money(lostPending)} not yet settled in the tracker`:"";
-  {const RH=recsHTML(D.recs);setHTML($("recs"),RH.html);$("recN").textContent=RH.head}
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
   syncUI();tick1s();if(Math.abs(window.scrollY-sy)>2)window.scrollTo(0,sy);
@@ -759,20 +737,27 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeou
 // ---- auto-run health: last GitHub Actions run of autorun.yml (public API, no token) + needs_review from data.json
 const GH_RUNS="https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/autorun.yml/runs?per_page=10";
 let AUTO_RUNS=null,AUTO_AT=0;
+function renderReview(){
+  const rv=(DATA&&DATA.auto&&DATA.auto.needs_review)||[];
+  {const re_=$("review"),h=rv.length?`<a class="rvlink" href="log.html#activity">${rv.length} bet${rv.length>1?"s":""} need your OK (not auto-settled) · settle in Logs ›</a>`:"";if(re_._h!==h){re_._h=h;re_.innerHTML=h}}
+}
 async function autoHealth(){
+  renderReview();
   if(!AUTO_RUNS||Date.now()-AUTO_AT>240000){try{const j=await getJSON(GH_RUNS);AUTO_RUNS=j.workflow_runs||[];AUTO_AT=Date.now()}catch(e){}}
   const el=$("autoh");if(!el)return;
   const fmt=d=>new Date(d).toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit"});
-  if(!AUTO_RUNS){el.className="autoh";el.textContent="Auto-update status unavailable";return}
+  if(!AUTO_RUNS){el.className="autoh";el.textContent="";return}
   const done=AUTO_RUNS.filter(r=>r.status==="completed"&&r.conclusion!=="cancelled"&&r.conclusion!=="skipped");
   const ok=done.find(r=>r.conclusion==="success"),last=done[0];
   const age=ok?(Date.now()-new Date(ok.updated_at))/60000:1e9;
   let txt=ok?`Auto-updated ${fmt(ok.updated_at)} ET`:"No successful auto-run yet",bad=false;
   if(last&&last.conclusion!=="success"){bad=true;txt=`⚠ Auto-update FAILED at ${fmt(last.updated_at)} ET · `+txt}
   else if(age>30){bad=true;txt=`⚠ Auto-update stale (${Math.round(age)} min) · `+txt}
-  el.className="autoh"+(bad?" bad":"");el.textContent=txt;
-  const rv=(DATA&&DATA.auto&&DATA.auto.needs_review)||[];
-  {const re_=$("review"),h=rv.length?`<details><summary>${rv.length} bet${rv.length>1?"s":""} need your OK (not auto-settled)</summary>${rv.map(r=>`<div class="ri"><b>${esc(r.book)}</b> · ${esc(r.pick)} <small>${esc(r.event)} · $${esc(String(r.stake))}</small><small>Why: ${esc(r.reason)}</small></div>`).join("")}</details>`:"";if(re_._h!==h){re_._h=h;re_.innerHTML=h}}
+  el.className="autoh"+(bad?" bad":"");el.textContent=bad?txt:"";
 }
 setInterval(autoHealth,60000);
 
+
+// manual refresh: reload data.json + force a full live refresh
+{const btn=$("refresh");if(btn)btn.addEventListener("click",async()=>{if(btn.disabled)return;btn.disabled=true;btn.classList.add("busy");
+  try{await slowTick();autoHealth()}finally{btn.disabled=false;btn.classList.remove("busy")}})}

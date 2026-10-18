@@ -19,6 +19,7 @@
   <div class="tabbar"><div class="seg" role="tablist" aria-label="Log sections">
     <button role="tab" id="tab-archive" aria-controls="pane-archive" aria-selected="true" data-tab="archive">Archive</button>
     <button role="tab" id="tab-activity" aria-controls="pane-activity" aria-selected="false" tabindex="-1" data-tab="activity">Activity</button>
+    <button role="tab" id="tab-picks" aria-controls="pane-picks" aria-selected="false" tabindex="-1" data-tab="picks">Picks</button>
     <button role="tab" id="tab-runs" aria-controls="pane-runs" aria-selected="false" tabindex="-1" data-tab="runs">Auto-runs</button>
   </div></div>
 
@@ -43,10 +44,15 @@
   </section>
 
   <section id="pane-activity" role="tabpanel" aria-labelledby="tab-activity" hidden>
+    <div id="settle-box"></div>
     <div id="auto-box"></div>
     <div id="runs-box"></div>
     <div class="chips" id="type-chips" role="group" aria-label="Filter event types"></div>
     <div id="ev-list"></div>
+  </section>
+
+  <section id="pane-picks" role="tabpanel" aria-labelledby="tab-picks" hidden>
+    <div id="picks-box"></div>
   </section>
 
   <section id="pane-runs" role="tabpanel" aria-labelledby="tab-runs" hidden>
