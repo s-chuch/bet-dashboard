@@ -8,7 +8,7 @@ name: autorun
 # trips. If the repo goes quiet for 60 days, re-enable it from the Actions tab (or push anything).
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "2-59/5 * * * *"   # every 5 min, offset from :00 (GitHub drops/delays top-of-hour schedules)
   workflow_dispatch:
 
 # Deny everything by default; the job grants only what it needs.
