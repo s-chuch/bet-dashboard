@@ -7,8 +7,8 @@
   },
   {
    "book": "PointsBet",
-   "balance": 185.95,
-   "updated": "2026-10-18 18:30"
+   "balance": 190.21,
+   "updated": "2026-10-18 18:32"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 703.87,
+ "total": 708.13,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -3021,30 +3021,6 @@
    "sport": null
   },
   {
-   "bet_id": "4eece662",
-   "date": "2026-10-17",
-   "book": "PointsBet",
-   "event": "Houston Texans @ Jacksonville Jaguars",
-   "market": "SGP 3-leg (profit boost; legs not visible)",
-   "pick": "SGP 3-leg A (legs not shown in screenshot)",
-   "start": "Sun Oct 18 09:30 AM ET",
-   "price": "+300",
-   "boosted_price": "+326",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 3.26,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Houston Texans @ Jacksonville Jaguars"
-    }
-   ],
-   "match": null,
-   "sport": null
-  },
-  {
    "bet_id": "2311eef1",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -3120,6 +3096,16 @@
    "pick": "SGP 3-leg B (legs not shown in screenshot)",
    "result": "lost",
    "pnl": -1.0,
+   "stake": 1.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-17",
+   "book": "PointsBet",
+   "event": "Houston Texans @ Jacksonville Jaguars",
+   "pick": "SGP 3-leg A (legs not shown in screenshot)",
+   "result": "won",
+   "pnl": 3.26,
    "stake": 1.0,
    "auto": false
   },
@@ -3984,8 +3970,8 @@
    "auto": false
   }
  ],
- "pnl_total": 172.56,
- "open_stake": 42.4,
+ "pnl_total": 175.82,
+ "open_stake": 41.4,
  "recs": {
   "stats": {
    "overall": {
@@ -6080,30 +6066,21 @@
       "result": "won"
      }
     ]
-   },
-   {
-    "bet_id": "4eece662",
-    "book": "PointsBet",
-    "event": "Houston Texans @ Jacksonville Jaguars (London)",
-    "pick": "SGP 3-leg A (legs not shown in screenshot)",
-    "stake": "1.00",
-    "reason": "parlay legs not listed in the pick text",
-    "legs": []
    }
   ],
   "last_settled": [],
-  "last_change_at": "2026-10-18 18:31 ET"
+  "last_change_at": "2026-10-18 18:32 ET"
  },
- "open_live_n": 9,
+ "open_live_n": 8,
  "open_stake_by_book": {
   "bet365": 0,
   "Caesars": 1.0,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
   "Hard Rock": 5.0,
-  "PointsBet": 36.0,
+  "PointsBet": 35.0,
   "theScore": 0.2
  },
- "hash": "01ac67703e2611e7a8bd9b1dd75941c6f1e0b242",
- "generated_at": "2026-10-18T18:31:32-04:00"
+ "hash": "07264555db23a130dba6e7aaa340b647348c1b4d",
+ "generated_at": "2026-10-18T18:32:15-04:00"
 }

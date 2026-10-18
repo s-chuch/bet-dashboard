@@ -30,18 +30,9 @@
      "result": "won"
     }
    ]
-  },
-  {
-   "bet_id": "4eece662",
-   "book": "PointsBet",
-   "event": "Houston Texans @ Jacksonville Jaguars (London)",
-   "pick": "SGP 3-leg A (legs not shown in screenshot)",
-   "stake": "1.00",
-   "reason": "parlay legs not listed in the pick text",
-   "legs": []
   }
  ],
  "last_settled": [],
  "errors": [],
- "last_change_at": "2026-10-18 18:31 ET"
+ "last_change_at": "2026-10-18 18:32 ET"
 }
