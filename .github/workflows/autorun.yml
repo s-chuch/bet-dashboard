@@ -2,6 +2,7 @@ name: autorun
 # Unattended bet tracker: settle finished bets from ESPN, archive settled bets older than 5 days,
 # update ledger balances / Tracker P&L / picks grading, rebuild data.json + stats/archive/log JSON.
 # Commits only when data changed. Scheduled runs can lag 5-20 min on GitHub.
+# Workflow-file commits must be authored by a repo collaborator (s-chuch) or GitHub may not fire the schedule.
 #
 # Keep-alive: GitHub auto-disables scheduled workflows after 60 days without repository activity.
 # The bot's own commits to main count as activity, so as long as data keeps changing this never
