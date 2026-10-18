@@ -34,6 +34,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "cdd1e058",
+   "book": "bet365",
+   "pick": "Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions",
+   "result": "won",
+   "pnl": 0.33,
+   "final": "HOU 34-31 JAX",
+   "at": "2026-10-18 19:44"
+  },
+  {
    "bet_id": "c1c7958e",
    "book": "Hard Rock",
    "pick": "Ravens @ Browns Under 40.5 + Jets +7.5 + Chargers +8",
@@ -44,5 +53,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 19:42 ET"
+ "last_change_at": "2026-10-18 19:44 ET"
 }
