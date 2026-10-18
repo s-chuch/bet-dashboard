@@ -39,113 +39,6 @@
  "total": 702.81,
  "open": [
   {
-   "bet_id": "5242e6b7",
-   "date": "2026-10-16",
-   "book": "Caesars",
-   "event": "Tampa Bay Rays @ Cleveland Guardians",
-   "market": "SGP 3-leg (boosted)",
-   "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
-   "start": "Fri Oct 16 08:00 PM ET",
-   "price": "+334",
-   "boosted_price": "+418",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 4.18,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Caminero",
-     "stat": null,
-     "op": "under",
-     "line": 1.5,
-     "text": "Caminero U1.5",
-     "pteam": "TB",
-     "pname": "Junior Caminero",
-     "pid": "4905921"
-    },
-    {
-     "type": "prop",
-     "player": "Y. Diaz",
-     "stat": null,
-     "op": "under",
-     "line": 1.5,
-     "text": "Y. Diaz U1.5",
-     "pteam": "TB",
-     "pname": "Yandy Diaz",
-     "pid": "33481"
-    },
-    {
-     "type": "prop",
-     "player": "C. Simpson",
-     "stat": null,
-     "op": "over",
-     "line": 1.5,
-     "text": "C. Simpson O1.5",
-     "pteam": "TB",
-     "pname": "Chandler Simpson",
-     "pid": "4679983"
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261016",
-    "groups": null,
-    "id": "401908026",
-    "snapshot": {
-     "date": "2026-10-17T00:00Z",
-     "period": 1,
-     "clock": 0.0,
-     "state": "post",
-     "completed": false,
-     "detail": "Postponed",
-     "teams": [
-      {
-       "id": "5",
-       "name": "Cleveland Guardians",
-       "abbr": "CLE",
-       "short": "Guardians",
-       "nick": "Guardians",
-       "location": "Cleveland",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    },
-    "pregame": {
-     "home": 53.1,
-     "away": 46.9
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.4882,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
-     "total_line": 6.5,
-     "total_over_fair": 0.4875
-    },
-    "pm": null,
-    "an": {
-     "id": 303428,
-     "home_team_id": 193,
-     "away_team_id": 189
-    }
-   },
-   "sport": "MLB"
-  },
-  {
    "bet_id": "9c0f1d9f",
    "date": "2026-10-15",
    "book": "DraftKings",
@@ -296,11 +189,11 @@
       "id": "401873006",
       "snapshot": {
        "date": "2026-10-18T20:25Z",
-       "period": 2,
-       "clock": 25.0,
+       "period": 3,
+       "clock": 264.0,
        "state": "in",
        "completed": false,
-       "detail": "0:25 - 2nd",
+       "detail": "4:24 - 3rd",
        "teams": [
         {
          "id": "12",
@@ -310,7 +203,7 @@
          "nick": "Chiefs",
          "location": "Kansas City",
          "home": true,
-         "score": "16"
+         "score": "19"
         },
         {
          "id": "24",
@@ -320,7 +213,7 @@
          "nick": "Chargers",
          "location": "Los Angeles",
          "home": false,
-         "score": "3"
+         "score": "6"
         }
        ]
       },
@@ -3761,6 +3654,16 @@
   {
    "date": "2026-10-16",
    "book": "Caesars",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
+   "result": "lost",
+   "pnl": -1.0,
+   "stake": 1.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-16",
+   "book": "Caesars",
    "event": "Rutgers @ Maryland",
    "pick": "Rutgers ML + U56.5 + A. Raymond 50+ rush yds",
    "result": "lost",
@@ -4109,8 +4012,8 @@
    "auto": false
   }
  ],
- "pnl_total": 174.0,
- "open_stake": 44.9,
+ "pnl_total": 173.0,
+ "open_stake": 43.9,
  "recs": {
   "stats": {
    "overall": {
@@ -6176,15 +6079,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "5242e6b7",
-    "book": "Caesars",
-    "event": "Tampa Bay Rays @ Cleveland Guardians",
-    "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
-    "stake": "1.00",
-    "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
-    "legs": []
-   },
-   {
     "bet_id": "c2582df3",
     "book": "theScore",
     "event": "Tampa Bay Rays @ Cleveland Guardians",
@@ -6244,18 +6138,18 @@
    }
   ],
   "last_settled": [],
-  "last_change_at": "2026-10-18 17:12 ET"
+  "last_change_at": "2026-10-18 18:29 ET"
  },
- "open_live_n": 12,
+ "open_live_n": 11,
  "open_stake_by_book": {
   "bet365": 0,
-  "Caesars": 2.0,
+  "Caesars": 1.0,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
   "Hard Rock": 5.0,
   "PointsBet": 37.5,
   "theScore": 0.2
  },
- "hash": "87c337b7a28f188b6f3e4c25cf2852d26429b0e8",
- "generated_at": "2026-10-18T21:44:41+00:00"
+ "hash": "64dfa5ffc8d361c657013a96b26ada76b5013510",
+ "generated_at": "2026-10-18T18:29:21-04:00"
 }

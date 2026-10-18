@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "5242e6b7",
-   "book": "Caesars",
-   "event": "Tampa Bay Rays @ Cleveland Guardians",
-   "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
-   "stake": "1.00",
-   "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
-   "legs": []
-  },
-  {
    "bet_id": "c2582df3",
    "book": "theScore",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
@@ -70,5 +61,5 @@
  ],
  "last_settled": [],
  "errors": [],
- "last_change_at": "2026-10-18 17:12 ET"
+ "last_change_at": "2026-10-18 18:29 ET"
 }

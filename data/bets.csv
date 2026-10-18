@@ -34,7 +34,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-16,PointsBet,Auburn @ Georgia,Sat Oct 17 03:30 PM ET,Moneyline,Auburn ML,+800,,1.00,8.00,11.59,4.3,won,8.00,97924b77,2026-10-17 19:27,
 2026-10-16,Caesars,Florida State @ Miami,Sat Oct 17 07:00 PM ET,Moneyline,Florida State ML (Bet Reset $15),+1000,,15.00,150.00,9.51,4.6,lost,-15.00,11597721,2026-10-18 16:55,
 2026-10-16,Caesars,Rutgers @ Maryland,Sat Oct 17 12:35 PM ET,SGP 3-leg (50% boost),Rutgers ML + U56.5 + A. Raymond 50+ rush yds,+425,+638,1.00,6.38,,,lost,-1.00,1722ef48,pre-ledger,
-2026-10-16,Caesars,Tampa Bay Rays @ Cleveland Guardians,Fri Oct 16 08:00 PM ET,SGP 3-leg (boosted),Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5,+334,+418,1.00,4.18,,,open,,5242e6b7,,
+2026-10-16,Caesars,Tampa Bay Rays @ Cleveland Guardians,Fri Oct 16 08:00 PM ET,SGP 3-leg (boosted),Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5,+334,+418,1.00,4.18,,,lost,-1.00,5242e6b7,2026-10-18 18:29,manual
 2026-10-16,Caesars,Boston Bruins @ Anaheim Ducks,Fri Oct 16 10:00 PM ET,SGP 3-leg (boosted),Under 6.5 + Ducks ML + B. Sennecke 2+ SOG,+325,+423,1.00,4.23,,,lost,-1.00,f79131f2,pre-ledger,
 2026-10-16,Caesars,Memphis @ Tulane,Fri Oct 16 07:35 PM ET,SGP 3-leg (boosted),J. Carter TD + J. Daniels TD + M. Stokes 220+ pass yds,+325,+423,1.00,4.23,,,lost,-1.00,49236af6,pre-ledger,
 2026-10-16,Caesars,Man City vs Ipswich Town,Sat Oct 17 10:00 AM ET,SGP 3-leg (boosted),Man City ML + Haaland AGS + Semenyo AGS,+300,+390,1.00,3.90,,,lost,-1.00,d6ae8282,pre-ledger,
