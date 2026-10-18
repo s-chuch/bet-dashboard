@@ -9,7 +9,7 @@ Archive files keep bets.csv columns, are sorted by date and deduped by bet_id; e
 One line per run that moved something is appended to data/archive/archive_log.csv (ts_et,moved,bet_ids,cutoff).
 Readers needing full history use common.all_bets().
 """
-import csv, os, sys, datetime
+import csv, os, re, sys, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from common import BETS, ARCHIVE_DIR, ARCHIVE_LOG, ARCHIVE_DAYS, read_csv, now_et, lock
 
@@ -26,7 +26,12 @@ def archive(dry=False, days=ARCHIVE_DAYS):
     if not rows: return []
     cutoff = (now_et().date() - datetime.timedelta(days=days)).isoformat()
     move = [r for r in rows if (r.get("result") or "").strip().lower() not in ("open", "")
-            and (r.get("date") or "") and r["date"] < cutoff and r.get("bet_id")]
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", r.get("date") or "") and r["date"] < cutoff and r.get("bet_id")
+            and (r.get("settled_at") or "").strip()]   # un-synced hand edits (no ledger return yet) stay until ledger sync settles them
+    ids_seen = {}
+    for r in rows:
+        ids_seen[r.get("bet_id")] = ids_seen.get(r.get("bet_id"), 0) + 1
+    move = [r for r in move if ids_seen[r["bet_id"]] == 1]   # never move one of several rows sharing an id (would drop the rest)
     if not move: return []
     if dry: return [r["bet_id"] for r in move]
     by_month = {}

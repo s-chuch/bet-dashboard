@@ -655,11 +655,11 @@ document.addEventListener("click",e=>{
 function recsHTML(R){if(!R||!R.stats)return{head:"",html:'<div class="meta">No recommendation log yet.</div>'};
   const o=R.stats.overall,pc=v=>v==null?"–":(v>0?"+":"")+v.toFixed(1)+"%",rec=a=>`${+a.w||0}–${+a.l||0}${a.p?"–"+(+a.p||0):""}`;
   const sp=(obj)=>Object.entries(obj).filter(([,a])=>a.w+a.l>0).sort((x,y)=>(y[1].w+y[1].l)-(x[1].w+x[1].l)).map(([k,a])=>`${esc(k)} <b>${rec(a)}</b>${a.roi_pct!=null?` (${pc(a.roi_pct)})`:""}`).join(" · ");
-  let h=`<div class="rsum"><div>Record<b>${rec(o)} · ${o.win_pct==null?"–":(+o.win_pct||0)+"%"}</b>${+o.pending||0} pending</div><div>ROI, flat $1<b class="${o.roi_pct>=0?"pos":"neg"}">${pc(o.roi_pct)}</b>${o.units>=0?"+":""}${o.units.toFixed(2)}u on ${+o.roi_n||0} picks</div>
+  let h=`<div class="rsum"><div>Win rate<b>${o.win_pct==null?"–":(+o.win_pct||0)+"%"}</b>${+o.pending||0} pending</div><div>ROI, flat $1<b class="${o.roi_pct>=0?"pos":"neg"}">${pc(o.roi_pct)}</b>${o.units>=0?"+":""}${o.units.toFixed(2)}u on ${+o.roi_n||0} picks</div>
     <div>Expected ROI (EV)<b>${pc(o.exp_roi_pct)}</b>what the prices promised</div><div>Wins vs expected<b>${esc(o.wins_with_fair)} vs ${esc(o.exp_wins)}</b>from Pinnacle fair %</div></div>`;
   const pl=R.stats.by_placed;
   h+=`<div class="rspl">Placed <b>${rec(pl.yes)}</b> (${pc(pl.yes.roi_pct)}) · Not placed <b>${rec(pl.no)}</b> (${pc(pl.no.roi_pct)})</div><div class="rspl">${sp(R.stats.by_promo)}</div><div class="rspl">${sp(R.stats.by_sport)}</div>
-    <div class="rnote">Small sample (${(+o.w||0)+(+o.l||0)} graded) — results swing a lot; expected vs actual is the fairer read. ROI excludes bonus bets. No closing-line data yet.</div>`;
+    <div class="rnote">Small sample (${(+o.w||0)+(+o.l||0)} graded): compare actual with expected. ROI excludes bonus bets.</div>`;
   const recent=(R.recent||[]).slice(0,25);
   h+=recent.map(r=>{const st=cls((r.result||"pending").toUpperCase()),k="rec|"+r.rec_id,lab=r.result==="won"?"W":r.result==="lost"?"L":r.result==="pending"?"PENDING":st;
     const u=r.units==null?"":(r.units>=0?"+":"−")+Math.abs(r.units).toFixed(2)+"u";
@@ -740,7 +740,7 @@ function render(){
   $("meta").textContent=`Scores updated ${now} ET · scores every ${FAST/1000|0}s · bets as of ${gen} ET`;
 }
 let FAST=10000, fastTimer=null, loading=false;
-async function loadData(){try{DATA=await getJSON("data.json?t="+Date.now())}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
+async function loadData(){try{const d=await getJSON("data.json?t="+Date.now());if(!d||typeof d!=="object"||!Array.isArray(d.open)||!Array.isArray(d.settled_recent)||!d.balances||typeof d.balances!=="object")throw new Error("bad data");DATA=d}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
 let loadingAt=0;
 async function fastTick(full){clearTimeout(fastTimer);if(loading&&Date.now()-loadingAt>30000)loading=false;if(!DATA||loading)return schedule();loading=true;loadingAt=Date.now();espnErr=false;tickCD();
   try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}

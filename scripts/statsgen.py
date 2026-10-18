@@ -5,18 +5,20 @@ Each file is rewritten only when its content (ignoring generated_at) changed, li
 Full history = data/bets.csv + data/archive/*.csv (common.all_bets()).
 Called from build.build() and standalone: python3 scripts/build.py --static
 """
-import csv, json, os, re, sys, datetime
+import csv, json, math, os, re, sys, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from common import REPO, DATA, LEDGER, RECS, AUTO, ARCHIVE_LOG, ARCHIVE_DAYS, all_bets, archive_rows, read_csv
 
 def num(s):
-    m = re.search(r"-?\d+(?:\.\d+)?", str(s or "")); return float(m[0]) if m else 0.0
+    m = re.search(r"-?\d+(?:\.\d+)?", str(s or "").replace(",", "")); return float(m[0]) if m else 0.0
 def r2(x): return round(float(x), 2)
 def is_settled(r): return (r.get("result") or "").strip().lower() not in ("open", "")
 def is_bonus(r): return "bonus" in (r.get("stake") or "").lower() or bool(re.search(r"bonus bet|free bet|no sweat token", r.get("market") or "", re.I))
 def cash_stake(r): return 0.0 if is_bonus(r) else num(r.get("stake"))
 def american(s):
-    m = re.search(r"[+-]?\d+", str(s or "").replace("−", "-")); 
+    s = str(s or "").replace("−", "-")
+    if re.search(r"\bx\d", s, re.I): return None   # "boosted x2 profit" is a label, not a price
+    m = re.search(r"[+-]?\d{3,}", s) or re.search(r"[+-]\d+", s)
     return int(m[0]) if m else None
 def now_iso(): return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
 
@@ -24,7 +26,8 @@ def now_iso(): return datetime.datetime.now().astimezone().isoformat(timespec="s
 def agg(rows):
     won = [r for r in rows if r["result"].strip().lower() == "won"]
     lost = [r for r in rows if r["result"].strip().lower() == "lost"]
-    staked = sum(cash_stake(r) for r in rows); pnl = sum(num(r["pnl"]) for r in rows)
+    # push/void/cashout-less refunds: stake comes back, so it is not capital at risk for ROI
+    staked = sum(cash_stake(r) for r in rows if r["result"].strip().lower() not in ("push", "void")); pnl = sum(num(r["pnl"]) for r in rows)
     return {"bets": len(rows), "won": len(won), "lost": len(lost), "staked": r2(staked), "pnl": r2(pnl),
             "roi": r2(pnl / staked * 100) if staked else 0.0,
             "win_rate": r2(len(won) / (len(won) + len(lost)) * 100) if (won or lost) else 0.0}
@@ -54,7 +57,8 @@ def market_bucket(r):
     return "Other"
 
 def odds_bucket(r):
-    a = american(r.get("boosted_price") or r.get("price"))
+    a = american(r.get("boosted_price"))
+    if a is None: a = american(r.get("price"))
     if a is None: return None
     if a < 100: return "Favourites (<+100)"
     if a < 300: return "+100 to +299"
@@ -71,6 +75,7 @@ def bankroll(led, cap=400):
         b = e["book"]
         try: a = float(e["amount"])
         except Exception: continue
+        if not math.isfinite(a): continue
         if e["event_type"] == "anchor": bal[b] = a
         elif b in bal: bal[b] += a
         else: continue
@@ -148,6 +153,7 @@ def build_log(rows, led):
     for e in reversed(led[-600:]):
         try: amt = float(e["amount"])
         except Exception: amt = None
+        if amt is not None and not math.isfinite(amt): amt = None
         t = e["event_type"]; b = byid.get(e["bet_id"]); pick = (b["pick"][:60] if b else "")
         if t == "anchor": label = f"Balance set to ${amt:.2f} · {e['book']}" if amt is not None else f"Balance anchor · {e['book']}"
         elif t == "adjust": label = f"Adjustment {money(amt or 0)} · {e['book']}"
@@ -174,7 +180,7 @@ def _write_if_changed(name, data):
     strip = lambda d: {k: v for k, v in (d or {}).items() if k != "generated_at"}
     if old is not None and strip(old) == strip(data): return False
     tmp = path + ".tmp"
-    with open(tmp, "w") as f: json.dump(data, f, separators=(",", ":"), ensure_ascii=False)
+    with open(tmp, "w") as f: json.dump(data, f, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
     os.replace(tmp, path); return True
 
 def build_static(verbose=True):

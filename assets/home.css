@@ -47,7 +47,7 @@ h2{font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;lett
 .crow .pill{font-size:10px;padding:3px 6px;min-width:84px;text-align:center;display:block}
 .pillw{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:92px;gap:2px}.psub{font-size:8.5px;line-height:1.1;color:var(--mut);text-align:center;max-width:92px}.psub:empty{display:none}
 .cmid{flex:1;min-width:0}.clbl{font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.csub{font-size:10px;color:var(--mut);white-space:nowrap}.csub b{color:var(--txt);font-weight:600}
+.csub{font-size:10px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.csub b{color:var(--txt);font-weight:600}
 .cneed{font-size:11.5px;font-weight:600;color:var(--amber);margin-top:1px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cright{text-align:right;font-size:12px;white-space:nowrap;flex-shrink:0;max-width:42%;overflow:hidden;text-overflow:ellipsis}.cright small{display:block;font-size:10px;color:var(--mut)}
 .chev{color:var(--dim);font-size:16px;transition:transform .2s,color .15s;flex-shrink:0}.card.open .chev{transform:rotate(90deg);color:var(--accent2)}
@@ -98,3 +98,5 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right;font-w
 .spkw{display:flex;flex-direction:column;margin:4px 0 2px}.spk-t{font-size:11px;color:var(--mut)}.spk{background:rgba(255,255,255,.05);border-radius:4px}.spkw [data-spk]{display:flex;align-items:center;gap:8px}.spk-l,.spk-empty{font-size:11px;color:var(--mut)}
 .rspl{font-size:11.5px;color:var(--mut);margin:2px 2px 4px;line-height:1.45}.rspl b{color:var(--txt);font-weight:600}.rnote{font-size:10.5px;color:var(--mut);margin:2px 2px 8px}
 .foot{margin-top:26px}
+/* picks/bet rows: long subtitles truncate instead of running under the right-hand label */
+.cmid{overflow:hidden}.csub{overflow:hidden;text-overflow:ellipsis}.cright{min-width:0}

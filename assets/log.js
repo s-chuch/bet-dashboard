@@ -31,7 +31,7 @@ function fmtDate(d){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(d||'');return m?MON[+m
 
 /* ---------- state ---------- */
 var S={tab:'archive',arch:null,log:null,bets:[],q:'',book:'all',res:'all',month:'all',sort:'new',shown:PAGE,
-  collapsed:{},types:{},archErr:null,logErr:null,runs:null,runsErr:null,runsAt:0,rawA:'',rawL:'',filtered:[]};
+  collapsed:{},types:Object.create(null),archErr:null,logErr:null,runs:null,runsErr:null,runsAt:0,rawA:'',rawL:'',filtered:[]};
 var TABS=['archive','activity','runs'];
 
 /* ---------- tabs ---------- */
@@ -49,8 +49,8 @@ window.addEventListener('hashchange',function(){var t=location.hash.slice(1);if(
 /* ---------- data ---------- */
 function getJSON(url){return fetch(url+'?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text()})}
 function loadAll(){
-  var pa=getJSON('archive.json').then(function(t){S.archErr=null;if(t!==S.rawA){S.rawA=t;var j=JSON.parse(t);S.arch=j&&typeof j==='object'?j:{};prepBets();return true}return false}).catch(function(e){S.archErr=e.message||'error';return true});
-  var pl=getJSON('log.json').then(function(t){S.logErr=null;if(t!==S.rawL){S.rawL=t;var j=JSON.parse(t);S.log=j&&typeof j==='object'?j:{};return true}return false}).catch(function(e){S.logErr=e.message||'error';return true});
+  var pa=getJSON('archive.json').then(function(t){S.archErr=null;if(t!==S.rawA){var j=JSON.parse(t);S.rawA=t;S.arch=j&&typeof j==='object'?j:{};prepBets();return true}return false}).catch(function(e){S.archErr=e.message||'error';return true});
+  var pl=getJSON('log.json').then(function(t){S.logErr=null;if(t!==S.rawL){var j=JSON.parse(t);S.rawL=t;S.log=j&&typeof j==='object'?j:{};return true}return false}).catch(function(e){S.logErr=e.message||'error';return true});
   return Promise.all([pa,pl]).then(function(r){if(r[0]){buildArchiveControls();renderArchive()}if(r[1])renderActivity();renderSub()})}
 function prepBets(){
   S.bets=arr(S.arch&&S.arch.bets).map(function(b,i){b=b||{};var res=String(b.result||'').toLowerCase();
@@ -131,7 +131,7 @@ $('more').addEventListener('click',function(){S.shown+=PAGE;renderArchive()});
 var qt;$('q').addEventListener('input',function(){clearTimeout(qt);qt=setTimeout(function(){S.q=$('q').value;S.shown=PAGE;renderArchive()},120)});
 [['fbook','book'],['fres','res'],['fmonth','month'],['fsort','sort']].forEach(function(p){$(p[0]).addEventListener('change',function(){S[p[1]]=this.value;S.shown=PAGE;renderArchive()})});
 $('reset').addEventListener('click',function(){S.q='';S.book=S.res=S.month='all';S.sort='new';S.shown=PAGE;$('q').value='';$('fbook').value=$('fres').value=$('fmonth').value='all';$('fsort').value='new';renderArchive()});
-function csvCell(v){var s=String(v==null?'':v);if(/^[=+\-@\t\r]/.test(s))s="'"+s;return /[",\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
+function csvCell(v){var s=String(v==null?'':v);if(typeof v!=='number'&&/^[=+\-@\t\r]/.test(s))s="'"+s;return /[",\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
 $('csv').addEventListener('click',function(){
   var f=S.filtered;if(!f.length){return}
   var head=['bet_id','date','book','event','market','pick','price','boosted_price','stake','to_win','result','pnl','settled_at','settled_by'];
@@ -143,7 +143,7 @@ $('csv').addEventListener('click',function(){
 
 /* ---------- activity ---------- */
 var TYPE_NAMES={stake:'Stakes','return':'Returns',anchor:'Anchors',adjust:'Adjustments',adjustment:'Adjustments',settle:'Settles',settled:'Settled',archive:'Archive runs'};
-function typeName(t){return TYPE_NAMES[t]||(t?t.charAt(0).toUpperCase()+t.slice(1):'Other')}
+function typeName(t){return Object.prototype.hasOwnProperty.call(TYPE_NAMES,t)?TYPE_NAMES[t]:(t?t.charAt(0).toUpperCase()+t.slice(1):'Other')}
 function safeCls(t){return String(t||'').toLowerCase().replace(/[^a-z0-9_-]/g,'')}
 function renderActivity(){
   var l=S.log,ab=$('auto-box'),rb=$('runs-box');
@@ -160,7 +160,7 @@ function renderActivity(){
   if(runs.length){rb.innerHTML='<div class="panel"><h3>Archive runs</h3><ul class="tl">'+runs.slice(0,5).map(function(r){var n=num(r.moved);
     return '<li class="t-archive"><div class="top"><span class="chip">archive</span><span class="tm">'+esc(fmtDT(r.ts))+'</span></div><div class="nt">Archived '+n+' bet'+(n===1?'':'s')+' older than '+esc(num(S.arch&&S.arch.cutoff_days)||5)+' days</div></li>'}).join('')+'</ul></div>'}else rb.innerHTML='';
   var evs=arr(l.events).filter(function(e){return e&&typeof e==='object'});
-  var types={};evs.forEach(function(e){var t=String(e.type||'other');types[t]=(types[t]||0)+1});
+  var types=Object.create(null);evs.forEach(function(e){var t=String(e.type||'other');types[t]=(types[t]||0)+1});
   var tk=Object.keys(types).sort();
   $('type-chips').innerHTML=tk.map(function(t){var on=S.types[t]!==false;return '<button type="button" class="chip" data-t="'+esc(t)+'" aria-pressed="'+on+'">'+esc(typeName(t))+' '+types[t]+'</button>'}).join('');
   var list=evs.filter(function(e){return S.types[String(e.type||'other')]!==false});
@@ -173,7 +173,7 @@ function renderActivity(){
     return '<li class="t-'+safeCls(t)+'"><div class="top"><span class="chip">'+esc(typeName(t).replace(/s$/,''))+'</span>'+(e.book?'<span class="bk">'+esc(e.book)+'</span>':'')+'<span class="tm">'+esc(fmtTime(e.ts))+'</span>'+
       (has?'<span class="amt '+cls(amt)+'">'+esc(money(amt,true))+'</span>':'')+'</div>'+(e.label||e.note?'<div class="nt">'+esc([e.label,e.note].filter(Boolean).join(' \u2014 '))+'</div>':'')+'</li>'}).join('')+'</ul>'}).join('')}
 $('type-chips').addEventListener('click',function(e){var b=e.target.closest('[data-t]');if(!b)return;var t=b.dataset.t;S.types[t]=S.types[t]===false;renderActivity();
-  var n=document.querySelector('#type-chips [data-t="'+t.replace(/["\\]/g,'')+'"]');if(n)n.focus()});
+  Array.prototype.some.call($('type-chips').querySelectorAll('[data-t]'),function(n){if(n.dataset.t===t){n.focus();return true}})});
 
 /* ---------- runs ---------- */
 function loadRuns(force){

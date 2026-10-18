@@ -20,8 +20,9 @@ import ledger as LG, settle as S
 def log(*a): print(f"[{now_et():%Y-%m-%d %H:%M:%S} ET]", *a, flush=True)
 
 def regrade(day):
-    rows, _ = LG.load_bets(); agree = dis = rev = 0
+    rows = all_bets(); agree = dis = rev = 0
     for r in rows:
+        r.setdefault("settled_at", "")
         if not (r.get("settled_at") or "").startswith(day): continue
         if r["result"] not in LG.SETTLED: continue
         g = S.grade_row({**r, "result": "open", "settled_at": ""})

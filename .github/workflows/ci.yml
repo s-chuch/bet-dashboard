@@ -45,7 +45,7 @@ jobs:
                   return list(r)
           BET_COLS = ["date", "book", "event", "stake", "result", "pnl", "bet_id"]
           ids = {}
-          paths = (["data/bets.csv"] if os.path.exists("data/bets.csv") else []) + sorted(glob.glob("data/archive/*.csv"))
+          paths = (["data/bets.csv"] if os.path.exists("data/bets.csv") else []) + sorted(glob.glob("data/archive/bets-*.csv"))  # archive_log.csv has its own schema
           for p in paths:
               for i, row in enumerate(rows(p, BET_COLS), start=2):
                   b = row["bet_id"]
@@ -72,9 +72,9 @@ jobs:
       - name: Secret scan
         run: |
           set -euo pipefail
-          pat='ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY|xox[bp]-[A-Za-z0-9-]{10,}|sk-ant-[A-Za-z0-9_-]{10,}'
-          # scan tracked files except this workflow (it contains the patterns)
-          if git grep -nIE -e "$pat" -- . ':!.github/workflows/ci.yml'; then
+          # bracketed first letters keep this file from matching its own patterns, so it is scanned too
+          pat='gh[p]_[A-Za-z0-9]{20,}|github_pa[t]_[A-Za-z0-9_]{20,}|AKI[A][0-9A-Z]{16}|-----BEGI[N] [A-Z ]*PRIVATE KEY|xo[x][bp]-[A-Za-z0-9-]{10,}|sk-an[t]-[A-Za-z0-9_-]{10,}'
+          if git grep -nIE -e "$pat"; then
             echo "::error::possible secret committed (see matches above)"; exit 1
           fi
           echo "no secret patterns found"

@@ -1,17 +1,24 @@
 # bet-dashboard — Shawn's bet tracker (runs itself on GitHub)
 
-Live page: https://s-chuch.github.io/bet-dashboard/ (GitHub Pages, branch `main`, root).
+Live site: https://s-chuch.github.io/bet-dashboard/ (GitHub Pages, branch `main`, root). Three static pages, all
+vanilla JS from `assets/`, all reading the generated JSON in the repo root:
+| Page | Shows | Reads |
+|---|---|---|
+| `index.html` (Live) | open bets with live scores, balances, needs-review, settled in the last 5 days, picks, health badge | `data.json` + live ESPN/Polymarket/Action Network + GitHub Actions API |
+| `stats.html` (Stats) | totals, streaks, daily P&L, by book/market/odds/weekday, boosted vs regular, bankroll replay, picks record | `stats.json` |
+| `log.html` (Logs) | archived bets, ledger activity, autorun run history | `archive.json`, `log.json`, GitHub Actions API |
 **This repo is the source of truth.** Nothing runs on a schedule anywhere else (no box cron/systemd).
 
 ## What runs where
 | What | Where | How often |
 |---|---|---|
-| `scripts/autorun.py` (settle → balances → Tracker P&L → picks grading → rebuild `data.json`) | GitHub Actions, `.github/workflows/autorun.yml` | cron `*/5 * * * *` (GitHub may delay scheduled runs 5–20 min) + manual "Run workflow" |
+| `scripts/autorun.py` (settle → archive → balances → Tracker P&L → picks grading → rebuild `data.json`, `stats.json`, `archive.json`, `log.json`) | GitHub Actions, `.github/workflows/autorun.yml` | cron `*/5 * * * *` (GitHub may delay scheduled runs 5–20 min) + manual "Run workflow" |
 | Live scores, WINNING/LOSING pills, leg bars, wagered brackets | the browser (`index.html`) | every 10 s while the page is open |
 | Logging new bets, app-balance anchors, Drive screenshots | box (agent) via the wrappers below | when Shawn sends a bet / balance |
 
-Runs never overlap (workflow `concurrency: autorun`). A run commits **only** when `data/` or `data.json` changed
-(live-volatile fields like scores/clock are excluded from the change hash), using the workflow's `GITHUB_TOKEN`
+Runs never overlap (workflow `concurrency: autorun`). A run commits **only** when `data/`, `data.json`, `stats.json`, `archive.json` or `log.json` changed
+(live-volatile fields like scores/clock are excluded from the change hash; a failed `autorun.py` still commits whatever
+data it produced, then the run is marked failed), using the workflow's `GITHUB_TOKEN`
 (`contents: write`). No credentials are stored in the repo.
 
 ## Auto-settle rules (`scripts/settle.py`)
@@ -35,7 +42,7 @@ run failed or the last successful run is more than 30 minutes old. Run logs: Act
 ## Data (`data/`)
 `bets.csv` (every bet, `bet_id`, `settled_at`, `settled_by=auto` for automatic settles), `ledger.csv` (append-only:
 anchors, stakes, returns), `balances.csv` (generated), `recommendations.csv` (My picks log), `pregame_cache.json`,
-`autorun.json` (needs_review + last auto settles). **The repo is public, so all of this is publicly readable.**
+`autorun.json` (needs_review + last auto settles + errors), `archive/` (see below). **The repo is public, so all of this is publicly readable.**
 
 **Archive:** settled bets whose `date` is more than 5 days old (date < today ET - 5) move out of `bets.csv` into
 `data/archive/bets-YYYY-MM.csv` (same columns, sorted, deduped by `bet_id`; open bets are never archived). Each run that
@@ -43,7 +50,7 @@ moves rows appends to `data/archive/archive_log.csv`. `scripts/archive.py` runs 
 before the build (a failure is reported in `errors` but never stops the build). Anything needing full history
 (totals, stats, rec grading) reads `common.all_bets()` = `bets.csv` + archive. The ledger is untouched, so balances don't change.
 
-**Generated JSON (repo root):** `data.json` (live page; `settled_recent` = last 5 days, `pnl_total` over all history),
+**Generated JSON (repo root):** `data.json` (live page; `settled_recent` = bets dated in the last 5 days, `pnl_total` over all history),
 `stats.json` (totals, streaks, daily, by book/market/odds/weekday, boosted vs regular, bankroll replay, picks record),
 `archive.json` (archived bets, newest first), `log.json` (last 600 ledger events with labels, archive runs, autorun status).
 The last three need no network: `python3 scripts/build.py --static`. Each file is rewritten only when its content changed.
@@ -58,16 +65,17 @@ and `/workspace/sportsbets/dashboard/index.html` are symlinks into this checkout
 - hand edits: `flock /tmp/bet-tracker.lock python3 /workspace/bet-dashboard/scripts/repo_sync.py pull`, edit, then
   `... repo_sync.py push "msg"`.
 
-Manual dry checks: `python3 scripts/autorun.py --dry-run`, `python3 scripts/autorun.py --regrade 2026-10-18`.
+Manual commands: `python3 scripts/autorun.py --dry-run` (writes nothing), `python3 scripts/autorun.py --regrade 2026-10-18`
+(re-grade bets settled that day), `python3 scripts/archive.py [--dry-run]`, `python3 scripts/build.py --static`.
 
 ## Security & automation
 **What is hardened.** `autorun.yml` runs only on `s-chuch/bet-dashboard` (not forks), denies all token permissions
-at the top level and grants `contents: write` + `pages: write` to the one job, pins every action to a commit SHA
+at the top level and grants `contents: write` + `pages: write` to the one job (which only runs on `main`), pins every action to a commit SHA
 (Dependabot bumps them weekly), uses a 15-minute timeout, passes values through `env` rather than `${{ }}` in scripts,
 commits only `data/`, `data.json`, `stats.json`, `archive.json`, `log.json`, and ends with a step that fails the run
 if anything went wrong (which also turns the page's health badge red). Bot commits count as repo activity, so the
 5-minute schedule is not auto-disabled after 60 days. `ci.yml` (PRs and non-main pushes, read-only token) compiles
-the scripts, validates CSV headers / unique `bet_id`s / JSON files, scans for secret patterns, and enforces the
+the scripts, validates bet CSV headers / unique `bet_id`s across `bets.csv` + `data/archive/bets-*.csv` / JSON files, scans for secret patterns, and enforces the
 page rule below. See `SECURITY.md` for reporting.
 
 **Pages must not use inline script.** The pages declare a CSP via `<meta http-equiv="Content-Security-Policy">` with
@@ -85,3 +93,12 @@ custom HTTP headers, so CSP works only via meta tags and `frame-ancestors` (clic
 - [ ] Actions -> General: **Require approval for all outside collaborators**.
 - [ ] Actions -> General: Workflow permissions = **Read repository contents** (read-only default); allow only GitHub-owned, verified-creator or SHA-pinned actions.
 - [ ] Pages: tick **Enforce HTTPS**.
+
+## Manual settle from the Logs page
+`manual-settle.yml` (`workflow_dispatch` only, so only people with repo write access can run it) settles one open bet:
+inputs `bet_id`, `result` (won/lost/void) and optional `profit` (CAD, used only for a win whose `to_win` is unknown).
+It runs `scripts/manual_settle.py` (refuses unknown, already settled or archived bets), then a normal `autorun.py` pass,
+commits `manual settle <id> <result>` and pushes. It shares the `autorun` concurrency group. The page calls
+`POST https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/manual-settle.yml/dispatches` with
+`{"ref":"main","inputs":{"bet_id":"...","result":"won","profit":""}}` using a fine-grained token limited to this repo
+(Actions: read and write, Metadata: read). Never add other triggers to that workflow.

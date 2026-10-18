@@ -24,8 +24,8 @@ defaults:
 
 jobs:
   run:
-    # forks must not run the bot
-    if: github.repository == 's-chuch/bet-dashboard'
+    # forks must not run the bot; manual runs from other branches must not push to main
+    if: github.repository == 's-chuch/bet-dashboard' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -35,7 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          fetch-depth: 0
+          fetch-depth: 1   # history is not needed; the loop fetches origin/main itself
           persist-credentials: true   # required: the retry loop below pushes with this token
 
       - name: Set up Python

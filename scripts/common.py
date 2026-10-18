@@ -66,8 +66,12 @@ def archive_files():
 
 def archive_rows():
     """Every archived (old, settled) bet row, oldest file first."""
-    out = []
-    for p in archive_files(): out += read_csv(p)[0]
+    out, seen = [], set()
+    for p in archive_files():
+        for r in read_csv(p)[0]:
+            b = r.get("bet_id")
+            if b in seen: continue          # same id in two files (crash/month edit): count once
+            seen.add(b); out.append(r)
     return out
 
 def all_bets():

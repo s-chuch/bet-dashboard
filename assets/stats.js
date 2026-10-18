@@ -53,11 +53,16 @@
     if (isNaN(dt)) return String(d);
     return dt.toLocaleDateString('en-US', long ? { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' } : { month: 'short', day: 'numeric', timeZone: 'UTC' });
   }
-  function fmtTs(t) {
-    var d = new Date(t);
-    if (isNaN(d)) return String(t || '');
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  // Timestamps without an offset ("2026-10-18 08:34") are Eastern wall-clock; others are real instants. Always shown in Toronto time.
+  var TZ = 'America/Toronto';
+  function tsFmt(t, o) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?$/.exec(String(t || '').trim()), d, opts = { month: 'short', day: 'numeric' };
+    for (var k in o) opts[k] = o[k];
+    if (m) { d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +(m[6] || 0))); opts.timeZone = 'UTC'; }
+    else { d = new Date(t); opts.timeZone = TZ; }
+    return isNaN(d) ? String(t || '') : d.toLocaleString('en-US', opts);
   }
+  function fmtTs(t) { return tsFmt(t, {}); }
   function empty(node, msg) { clear(node); node.appendChild(el('div', { class: 'empty chart-empty', text: msg })); }
   function niceAxis(min, max, n) {
     if (min === max) { min -= 1; max += 1; }
@@ -159,7 +164,7 @@
     // x labels
     var maxL = Math.max(2, Math.floor(iw / 62)), step = Math.max(1, Math.ceil(n / maxL));
     for (var i = 0; i < n; i += step) {
-      sv('text', { x: sx(i), y: H - 5, 'text-anchor': i === 0 && n > 1 ? 'start' : 'middle', text: pts[i].label }, svg);
+      sv('text', { x: sx(i), y: H - 5, 'text-anchor': i === 0 && n > 1 ? 'start' : sx(i) > W - padR - 24 ? 'end' : 'middle', text: pts[i].label }, svg);
     }
     var hl = sv('g', {}, svg), marker;
     if (o.kind === 'bars') {
@@ -245,7 +250,7 @@
     k1.appendChild(kpi('Staked', money(ST), ranged ? label : 'Avg ' + money(t.avg_stake) + ' / bet'));
     var wl = el('div', { class: 'kpi' }, [el('div', { class: 'l', text: 'Avg win / loss' }),
       el('div', { class: 'v sm' }, [el('span', { class: 'pos', text: pnl(t.avg_win) }), el('span', { class: 'dim', text: ' / ' }), el('span', { class: 'neg', text: pnl(-Math.abs(num(t.avg_loss))) })]),
-      el('div', { class: 's', text: 'per settled bet' })]);
+      el('div', { class: 's', text: ranged ? 'per settled bet · all time' : 'per settled bet' })]);
     k1.appendChild(wl);
     var st = obj(state.data).streak ? obj(obj(state.data).streak) : {}, cu = st.current;
     var sTxt = cu && cu.n ? (cu.type === 'won' ? 'W' : 'L') + cu.n : '–';
@@ -305,18 +310,21 @@
     var pts = [];
     bk.forEach(function (b) {
       var v = state.bank === 'Total' ? b.total : obj(b.books)[state.bank];
-      if (has(v)) pts.push({ label: fmtTs(b.ts), y: num(v), title: new Date(b.ts).toString() === 'Invalid Date' ? String(b.ts) : new Date(b.ts).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) });
+      if (has(v)) pts.push({ label: fmtTs(b.ts), y: num(v), title: tsFmt(b.ts, { hour: 'numeric', minute: '2-digit' }) + ' ET' });
     });
     drawChart($('c-bank'), pts, { kind: 'line', zero: false, color: '#818cf8', fmt: money, aria: 'Bankroll over time for ' + state.bank, emptyMsg: 'No bankroll snapshots yet' });
   }
 
-  function breakdown(title, rows, key, extra) {
+  function breakdown(title, rows, key, keepOrder) {
     var panel = el('section', { class: 'panel', 'aria-label': title });
     panel.appendChild(el('h3', { text: title }));
     rows = arr(rows).filter(function (r) { return r && r[key] != null; });
     if (!rows.length) { panel.appendChild(el('div', { class: 'empty', text: 'No data yet' })); return panel; }
     var m = state.metric;
-    rows = rows.slice().sort(function (a, b) { return num(b[m]) - num(a[m]); });
+    if (keepOrder) {
+      var wo = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+      rows = rows.slice().sort(function (a, b) { return wo.indexOf(String(a[key]).slice(0, 3).toLowerCase()) - wo.indexOf(String(b[key]).slice(0, 3).toLowerCase()); });
+    } else rows = rows.slice().sort(function (a, b) { return num(b[m]) - num(a[m]); });
     var vals = rows.map(function (r) { return num(r[m]); });
     var lo = Math.min.apply(null, vals.concat([0])), hi = Math.max.apply(null, vals.concat([0])), span = (hi - lo) || 1;
     var zp = -lo / span * 100;
@@ -349,7 +357,7 @@
     // weekday keeps calendar order
     var order = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
     var wk = arr(d.by_weekday);
-    var wp = breakdown('By weekday', wk, 'day');
+    var wp = breakdown('By weekday', wk, 'day', true);
     host.appendChild(wp);
     var bo = obj(d.boosted), br = [];
     if (bo.boosted) br.push(Object.assign({ kind: 'Boosted' }, obj(bo.boosted)));
@@ -385,7 +393,7 @@
     renderBreakdowns();
     renderPicks();
     var g = obj(state.data).generated_at, d = g ? new Date(g) : null;
-    $('updated').textContent = d && !isNaN(d) ? 'Updated ' + d.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : 'Updated recently';
+    $('updated').textContent = d && !isNaN(d) ? 'Updated ' + tsFmt(g, { hour: 'numeric', minute: '2-digit' }) + ' ET' : 'Updated recently';
   }
 
   function renderRange() {
@@ -395,8 +403,13 @@
   // ---------- load ----------
   function load() {
     fetch('stats.json?t=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (j) { state.data = obj(j); $('err').hidden = true; renderAll(); })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (t) {
+        var j = JSON.parse(t);
+        $('err').hidden = true;
+        if (t === state.raw && state.data) return; // unchanged: keep focus, tooltips and scroll state
+        state.raw = t; state.data = obj(j); renderAll();
+      })
       .catch(function (e) {
         var er = $('err');
         if (state.data) { er.textContent = 'Could not refresh stats; showing last loaded data.'; er.hidden = false; }
@@ -407,9 +420,10 @@
         }
       });
   }
-  var rt;
-  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (state.data) { renderCharts(filteredDaily()); renderBank(); } }, 150); });
+  var rt, lastW = window.innerWidth;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (window.innerWidth === lastW) return; lastW = window.innerWidth; if (state.data) { renderCharts(filteredDaily()); renderBank(); } }, 150); });
   renderRange();
   load();
-  setInterval(load, 60000);
+  setInterval(function () { if (!document.hidden) load(); }, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) load(); });
 })();
