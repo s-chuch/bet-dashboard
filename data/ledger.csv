@@ -106,3 +106,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-18 18:32,PointsBet,4eece662,return,4.26,won
 2026-10-18 19:42,Hard Rock,c1c7958e,settled,0.00,"lost, no return"
 2026-10-18 19:42,PointsBet,a0031feb,stake,-10.00,stake
+2026-10-18 19:42,PointsBet,b54671c7,stake,-25.00,stake
