@@ -179,10 +179,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 110.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:50 - 2nd",
+     "detail": "1:32 - 2nd",
      "teams": [
       {
        "id": "252",
@@ -192,7 +192,7 @@
        "nick": "Cougars",
        "location": "BYU",
        "home": true,
-       "score": "14"
+       "score": "20"
       },
       {
        "id": "87",
@@ -837,10 +837,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 3,
-     "clock": 729.0,
+     "clock": 719.0,
      "state": "in",
      "completed": false,
-     "detail": "12:09 - 3rd",
+     "detail": "11:59 - 3rd",
      "teams": [
       {
        "id": "58",
@@ -1715,10 +1715,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 3,
-     "clock": 729.0,
+     "clock": 719.0,
      "state": "in",
      "completed": false,
-     "detail": "12:09 - 3rd",
+     "detail": "11:59 - 3rd",
      "teams": [
       {
        "id": "58",
@@ -3627,7 +3627,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -4391,7 +4391,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 21:00 ET",
+       "pulled": "2026-10-17 21:04 ET",
        "ml_home": 0.7551,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.474,
@@ -5097,7 +5097,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 21:00 ET",
+       "pulled": "2026-10-17 21:04 ET",
        "ml_home": 0.7872,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4654,
@@ -5927,7 +5927,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.7551,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.474,
@@ -6652,7 +6652,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.5092,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -7584,7 +7584,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.4274,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4829,
@@ -8527,7 +8527,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.3914,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5417,
@@ -9503,7 +9503,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -10230,7 +10230,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -10484,7 +10484,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.7551,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.474,
@@ -11175,7 +11175,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -11342,7 +11342,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -11491,10 +11491,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 110.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:50 - 2nd",
+     "detail": "1:32 - 2nd",
      "teams": [
       {
        "id": "252",
@@ -11504,7 +11504,7 @@
        "nick": "Cougars",
        "location": "BYU",
        "home": true,
-       "score": "14"
+       "score": "20"
       },
       {
        "id": "87",
@@ -12241,7 +12241,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -12992,7 +12992,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -13242,7 +13242,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -13476,7 +13476,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -13638,10 +13638,10 @@
     "snapshot": {
      "date": "2026-10-17T22:00Z",
      "period": 4,
-     "clock": 695.0,
+     "clock": 585.0,
      "state": "in",
      "completed": false,
-     "detail": "11:35 - 4th",
+     "detail": "9:45 - 4th",
      "teams": [
       {
        "id": "204",
@@ -14506,7 +14506,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 4th",
+     "detail": "Mid 4th",
      "teams": [
       {
        "id": "5",
@@ -14681,7 +14681,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.5092,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4908,
@@ -15662,7 +15662,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:00 ET",
+     "pulled": "2026-10-17 21:04 ET",
      "ml_home": 0.4852,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5046,
@@ -16585,10 +16585,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 3480.0,
+     "clock": 3720.0,
      "state": "in",
      "completed": false,
-     "detail": "58'",
+     "detail": "62'",
      "teams": [
       {
        "id": "18418",
@@ -16608,7 +16608,7 @@
        "nick": "Inter Miami CF",
        "location": "Inter Miami CF",
        "home": false,
-       "score": "2"
+       "score": "3"
       }
      ]
     }
@@ -17045,6 +17045,6 @@
   "PointsBet": 72.0,
   "theScore": 0.6
  },
- "hash": "1cd1c3fae0ec43eafa43baecfbcf92ef33df6843",
- "generated_at": "2026-10-17T21:00:58-04:00"
+ "hash": "c5142ef3d3a26170659cc7d73e4d156da0ffd0df",
+ "generated_at": "2026-10-17T21:04:48-04:00"
 }
