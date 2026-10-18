@@ -582,10 +582,10 @@
     "snapshot": {
      "date": "2026-10-18T13:30Z",
      "period": 1,
-     "clock": 894.0,
+     "clock": 807.0,
      "state": "in",
      "completed": false,
-     "detail": "14:54 - 1st",
+     "detail": "13:27 - 1st",
      "teams": [
       {
        "id": "30",
@@ -1379,7 +1379,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-18 09:34 ET",
+       "pulled": "2026-10-18 09:36 ET",
        "ml_home": 0.7524,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.4738,
@@ -2085,7 +2085,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-18 09:34 ET",
+       "pulled": "2026-10-18 09:36 ET",
        "ml_home": 0.7883,
        "spread_home_line": -8.0,
        "spread_home_fair": 0.4621,
@@ -2915,7 +2915,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.7524,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4738,
@@ -3640,7 +3640,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.5093,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4907,
@@ -4572,7 +4572,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.452,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.5116,
@@ -5515,7 +5515,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.3982,
      "spread_home_line": 3.0,
      "spread_home_fair": 0.5,
@@ -6458,10 +6458,10 @@
     "snapshot": {
      "date": "2026-10-18T13:30Z",
      "period": 1,
-     "clock": 847.0,
+     "clock": 807.0,
      "state": "in",
      "completed": false,
-     "detail": "14:07 - 1st",
+     "detail": "13:27 - 1st",
      "teams": [
       {
        "id": "30",
@@ -7307,10 +7307,10 @@
     "snapshot": {
      "date": "2026-10-18T13:00Z",
      "period": 1,
-     "clock": 2040.0,
+     "clock": 2160.0,
      "state": "in",
      "completed": false,
-     "detail": "34'",
+     "detail": "36'",
      "teams": [
       {
        "id": "331",
@@ -7401,7 +7401,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.7524,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4738,
@@ -8395,10 +8395,10 @@
     "snapshot": {
      "date": "2026-10-18T13:30Z",
      "period": 1,
-     "clock": 847.0,
+     "clock": 807.0,
      "state": "in",
      "completed": false,
-     "detail": "14:07 - 1st",
+     "detail": "13:27 - 1st",
      "teams": [
       {
        "id": "30",
@@ -9274,10 +9274,10 @@
     "snapshot": {
      "date": "2026-10-18T12:00Z",
      "period": 2,
-     "clock": 4440.0,
+     "clock": 4560.0,
      "state": "in",
      "completed": false,
-     "detail": "74'",
+     "detail": "76'",
      "teams": [
       {
        "id": "97",
@@ -9798,7 +9798,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.5093,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.4907,
@@ -10779,7 +10779,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.485,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5046,
@@ -11843,7 +11843,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 09:34 ET",
+     "pulled": "2026-10-18 09:36 ET",
      "ml_home": 0.7308,
      "spread_home_line": -6.5,
      "spread_home_fair": 0.493,
@@ -13123,11 +13123,11 @@
     }
    },
    "friend": {
-    "n": 0,
+    "n": 4,
     "w": 0,
     "l": 0,
     "p": 0,
-    "pending": 0,
+    "pending": 4,
     "win_pct": null,
     "units": 0,
     "roi_pct": null,
@@ -13140,6 +13140,98 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "5d595bd9",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "09:30",
+    "sport": "NHL",
+    "event": "Columbus Blue Jackets @ Minnesota Wild",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Columbus Blue Jackets ML",
+    "book": "Caesars",
+    "rec_price": "+160",
+    "eff_price": "+320",
+    "fair_pct": "37.21",
+    "ev_pct": "56.3",
+    "stake": "25.00",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "friend's Caesars; price = Caesars ON feed estimate",
+    "units": null
+   },
+   {
+    "rec_id": "69071343",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "09:30",
+    "sport": "NFL",
+    "event": "Buffalo Bills @ Las Vegas Raiders",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Las Vegas Raiders ML",
+    "book": "Caesars",
+    "rec_price": "+195",
+    "eff_price": "+390",
+    "fair_pct": "32.78",
+    "ev_pct": "60.6",
+    "stake": "25.00",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "friend's Caesars; price = Caesars ON feed estimate",
+    "units": null
+   },
+   {
+    "rec_id": "e8246770",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "09:30",
+    "sport": "NFL",
+    "event": "Pittsburgh Steelers @ Tampa Bay Buccaneers",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Tampa Bay Buccaneers ML",
+    "book": "Caesars",
+    "rec_price": "+118",
+    "eff_price": "+236",
+    "fair_pct": "45.20",
+    "ev_pct": "51.9",
+    "stake": "25.00",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "friend's Caesars; price = Caesars ON feed estimate",
+    "units": null
+   },
+   {
+    "rec_id": "ea043cc2",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "09:30",
+    "sport": "NFL",
+    "event": "Carolina Panthers @ Philadelphia Eagles",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Philadelphia Eagles ML",
+    "book": "Caesars",
+    "rec_price": "+142",
+    "eff_price": "+284",
+    "fair_pct": "39.82",
+    "ev_pct": "52.9",
+    "stake": "25.00",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "friend's Caesars; price = Caesars ON feed estimate",
+    "units": null
+   },
    {
     "rec_id": "241fe07f",
     "rec_date": "2026-10-18",
@@ -14762,6 +14854,6 @@
   "PointsBet": 127.5,
   "theScore": 0.2
  },
- "hash": "1ee55382c874aef045a71dd97561bed514fe2666",
- "generated_at": "2026-10-18T09:34:58-04:00"
+ "hash": "bbb13055fa2632fcaaa05e9db874e7742b06c176",
+ "generated_at": "2026-10-18T09:36:36-04:00"
 }
