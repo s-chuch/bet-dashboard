@@ -63,176 +63,6 @@
    "sport": null
   },
   {
-   "bet_id": "c1c7958e",
-   "date": "2026-10-16",
-   "book": "Hard Rock",
-   "event": "NFL Sun Oct 18 parlay",
-   "market": "Parlay 3-leg (No Sweat $5)",
-   "pick": "Ravens @ Browns Under 40.5 + Jets +7.5 + Chargers +8",
-   "start": "Sun Oct 18 01:00 PM ET",
-   "price": "unconfirmed",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": null,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "under",
-     "line": 40.5,
-     "game": [
-      "Ravens",
-      "Browns"
-     ],
-     "text": "Ravens @ Browns Under 40.5",
-     "match": {
-      "path": "football/nfl",
-      "date": "20261018",
-      "groups": null,
-      "id": "401872997",
-      "snapshot": {
-       "date": "2026-10-18T17:00Z",
-       "period": 4,
-       "clock": 0.0,
-       "state": "post",
-       "completed": true,
-       "detail": "Final",
-       "teams": [
-        {
-         "id": "5",
-         "name": "Cleveland Browns",
-         "abbr": "CLE",
-         "short": "Browns",
-         "nick": "Browns",
-         "location": "Cleveland",
-         "home": true,
-         "score": "13"
-        },
-        {
-         "id": "33",
-         "name": "Baltimore Ravens",
-         "abbr": "BAL",
-         "short": "Ravens",
-         "nick": "Ravens",
-         "location": "Baltimore",
-         "home": false,
-         "score": "10"
-        }
-       ]
-      }
-     }
-    },
-    {
-     "type": "spread",
-     "team": "Jets",
-     "line": 7.5,
-     "women": false,
-     "text": "Jets +7.5",
-     "match": {
-      "path": "football/nfl",
-      "date": "20261018",
-      "groups": null,
-      "id": "401873001",
-      "snapshot": {
-       "date": "2026-10-18T17:00Z",
-       "period": 4,
-       "clock": 0.0,
-       "state": "post",
-       "completed": true,
-       "detail": "Final",
-       "teams": [
-        {
-         "id": "17",
-         "name": "New England Patriots",
-         "abbr": "NE",
-         "short": "Patriots",
-         "nick": "Patriots",
-         "location": "New England",
-         "home": true,
-         "score": "26"
-        },
-        {
-         "id": "20",
-         "name": "New York Jets",
-         "abbr": "NYJ",
-         "short": "Jets",
-         "nick": "Jets",
-         "location": "New York",
-         "home": false,
-         "score": "19"
-        }
-       ]
-      },
-      "pin": {
-       "src": "Pinnacle no-vig",
-       "pulled": "2026-10-18 09:36 ET",
-       "ml_home": 0.7524,
-       "spread_home_line": -7.5,
-       "spread_home_fair": 0.4738,
-       "total_line": 43.5,
-       "total_over_fair": 0.4839
-      }
-     }
-    },
-    {
-     "type": "spread",
-     "team": "Chargers",
-     "line": 8.0,
-     "women": false,
-     "text": "Chargers +8",
-     "match": {
-      "path": "football/nfl",
-      "date": "20261018",
-      "groups": null,
-      "id": "401873006",
-      "snapshot": {
-       "date": "2026-10-18T20:25Z",
-       "period": 4,
-       "clock": 0.0,
-       "state": "post",
-       "completed": true,
-       "detail": "Final",
-       "teams": [
-        {
-         "id": "12",
-         "name": "Kansas City Chiefs",
-         "abbr": "KC",
-         "short": "Chiefs",
-         "nick": "Chiefs",
-         "location": "Kansas City",
-         "home": true,
-         "score": "22"
-        },
-        {
-         "id": "24",
-         "name": "Los Angeles Chargers",
-         "abbr": "LAC",
-         "short": "Chargers",
-         "nick": "Chargers",
-         "location": "Los Angeles",
-         "home": false,
-         "score": "6"
-        }
-       ]
-      },
-      "pin": {
-       "src": "Pinnacle no-vig",
-       "pulled": "2026-10-18 09:36 ET",
-       "ml_home": 0.7883,
-       "spread_home_line": -8.0,
-       "spread_home_fair": 0.4621,
-       "total_line": 41.5,
-       "total_over_fair": 0.4977
-      }
-     }
-    }
-   ],
-   "match": null,
-   "sport": "NFL"
-  },
-  {
    "bet_id": "c2582df3",
    "date": "2026-10-16",
    "book": "theScore",
@@ -2398,10 +2228,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 1,
-     "clock": 1920.0,
+     "clock": 2040.0,
      "state": "in",
      "completed": false,
-     "detail": "32'",
+     "detail": "34'",
      "teams": [
       {
        "id": "15360",
@@ -2892,6 +2722,16 @@
   },
   {
    "date": "2026-10-16",
+   "book": "Hard Rock",
+   "event": "NFL Sun Oct 18 parlay",
+   "pick": "Ravens @ Browns Under 40.5 + Jets +7.5 + Chargers +8",
+   "result": "lost",
+   "pnl": -5.0,
+   "stake": 5.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-16",
    "book": "bet365",
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
@@ -3351,39 +3191,39 @@
    "auto": false
   }
  ],
- "pnl_total": 175.82,
+ "pnl_total": 170.82,
  "open_stake": 36.4,
  "recs": {
   "stats": {
    "overall": {
     "n": 80,
     "w": 27,
-    "l": 38,
+    "l": 39,
     "p": 0,
-    "pending": 15,
-    "win_pct": 41.5,
+    "pending": 14,
+    "win_pct": 40.9,
     "units": 18.47,
     "roi_pct": 31.8,
     "roi_n": 58,
     "exp_roi_pct": 12.9,
-    "exp_wins": 23.6,
-    "exp_wins_n": 65,
+    "exp_wins": 23.8,
+    "exp_wins_n": 66,
     "wins_with_fair": 27
    },
    "by_promo": {
     "No Sweat": {
      "n": 7,
      "w": 1,
-     "l": 5,
+     "l": 6,
      "p": 0,
-     "pending": 1,
-     "win_pct": 16.7,
+     "pending": 0,
+     "win_pct": 14.3,
      "units": -3.85,
      "roi_pct": -64.2,
      "roi_n": 6,
      "exp_roi_pct": 8.2,
-     "exp_wins": 1.5,
-     "exp_wins_n": 6,
+     "exp_wins": 1.7,
+     "exp_wins_n": 7,
      "wins_with_fair": 1
     },
     "bonus bet": {
@@ -3526,16 +3366,16 @@
     "NFL": {
      "n": 13,
      "w": 4,
-     "l": 6,
+     "l": 7,
      "p": 0,
-     "pending": 3,
-     "win_pct": 40.0,
+     "pending": 2,
+     "win_pct": 36.4,
      "units": -2.34,
      "roi_pct": -26.0,
      "roi_n": 9,
      "exp_roi_pct": 11.4,
-     "exp_wins": 3.6,
-     "exp_wins_n": 10,
+     "exp_wins": 3.8,
+     "exp_wins_n": 11,
      "wins_with_fair": 4
     },
     "NHL": {
@@ -3588,16 +3428,16 @@
     "yes": {
      "n": 54,
      "w": 22,
-     "l": 29,
+     "l": 30,
      "p": 0,
-     "pending": 3,
-     "win_pct": 43.1,
+     "pending": 2,
+     "win_pct": 42.3,
      "units": 23.23,
      "roi_pct": 48.4,
      "roi_n": 48,
      "exp_roi_pct": 14.5,
-     "exp_wins": 19.3,
-     "exp_wins_n": 51,
+     "exp_wins": 19.4,
+     "exp_wins_n": 52,
      "wins_with_fair": 22
     },
     "no": {
@@ -3619,16 +3459,16 @@
    "friend": {
     "n": 8,
     "w": 0,
-    "l": 2,
+    "l": 3,
     "p": 0,
-    "pending": 6,
+    "pending": 5,
     "win_pct": 0.0,
-    "units": -2.0,
+    "units": -3.0,
     "roi_pct": -100.0,
-    "roi_n": 2,
-    "exp_roi_pct": 52.4,
-    "exp_wins": 0.9,
-    "exp_wins_n": 2,
+    "roi_n": 3,
+    "exp_roi_pct": 55.1,
+    "exp_wins": 1.2,
+    "exp_wins_n": 3,
     "wins_with_fair": 0
    },
    "clv": "not available: no closing Pinnacle prices are stored"
@@ -3996,11 +3836,11 @@
     "promo": "profit boost",
     "friend": "yes",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "BUF 33-30 LV (Final)",
     "source": "rec.py add",
     "notes": "friend's Caesars; price = Caesars ON feed estimate",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "e8246770",
@@ -4617,7 +4457,7 @@
     "promo": "No Sweat",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "bets.csv (priced pick he placed)",
     "notes": "",
@@ -5694,8 +5534,18 @@
     ]
    }
   ],
-  "last_settled": [],
-  "last_change_at": "2026-10-18 18:32 ET"
+  "last_settled": [
+   {
+    "bet_id": "c1c7958e",
+    "book": "Hard Rock",
+    "pick": "Ravens @ Browns Under 40.5 + Jets +7.5 + Chargers +8",
+    "result": "lost",
+    "pnl": -5.0,
+    "final": "BAL 10-13 CLE; NYJ 19-26 NE; LAC 6-22 KC",
+    "at": "2026-10-18 19:42"
+   }
+  ],
+  "last_change_at": "2026-10-18 19:42 ET"
  },
  "open_live_n": 7,
  "open_stake_by_book": {
@@ -5703,10 +5553,9 @@
   "Caesars": 1.0,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
-  "Hard Rock": 0,
   "PointsBet": 35.0,
   "theScore": 0.2
  },
- "hash": "fec5b1a66c1fe06dab595dcc65ddbbd7da6b5aff",
- "generated_at": "2026-10-18T23:41:21+00:00"
+ "hash": "733c30edad2062ad223352206734bdcadd2226ad",
+ "generated_at": "2026-10-18T19:42:36-04:00"
 }

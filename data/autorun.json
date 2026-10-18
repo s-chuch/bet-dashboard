@@ -32,7 +32,17 @@
    ]
   }
  ],
- "last_settled": [],
+ "last_settled": [
+  {
+   "bet_id": "c1c7958e",
+   "book": "Hard Rock",
+   "pick": "Ravens @ Browns Under 40.5 + Jets +7.5 + Chargers +8",
+   "result": "lost",
+   "pnl": -5.0,
+   "final": "BAL 10-13 CLE; NYJ 19-26 NE; LAC 6-22 KC",
+   "at": "2026-10-18 19:42"
+  }
+ ],
  "errors": [],
- "last_change_at": "2026-10-18 18:32 ET"
+ "last_change_at": "2026-10-18 19:42 ET"
 }
