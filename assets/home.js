@@ -764,6 +764,18 @@ async function autoHealth(){
 setInterval(autoHealth,60000);
 
 
-// manual refresh: reload data.json + force a full live refresh
-{const btn=$("refresh");if(btn)btn.addEventListener("click",async()=>{if(btn.disabled)return;btn.disabled=true;btn.classList.add("busy");
-  try{await slowTick();autoHealth()}finally{btn.disabled=false;btn.classList.remove("busy")}})}
+// manual refresh: reload data.json + force a full live refresh; with a connected GitHub token also request a
+// fresh settle/build run (the GitHub cron is best-effort) and reload the data when it should be done
+{const btn=$("refresh"),AR_DISPATCH="https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/autorun.yml/dispatches";let lastReq=0;
+  const label=t=>{const l=btn.querySelector(".rl");if(l)l.textContent=t};
+  async function requestRun(){
+    let tok="";try{tok=localStorage.getItem("bt.gh.settle")||""}catch(e){}
+    if(!/^[A-Za-z0-9_\-]{20,255}$/.test(tok)||Date.now()-lastReq<120000)return null;
+    try{const r=await tfetch(AR_DISPATCH,{method:"POST",cache:"no-store",credentials:"omit",referrerPolicy:"no-referrer",
+        headers:{"Accept":"application/vnd.github+json","Authorization":"Bearer "+tok,"X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"},body:JSON.stringify({ref:"main"})});
+      if(r.status===204){lastReq=Date.now();return "Update requested";}
+      return r.status===401||r.status===403||r.status===404?"Token can't start runs":"Request failed"}catch(e){return "Request failed"}}
+  if(btn)btn.addEventListener("click",async()=>{if(btn.disabled)return;btn.disabled=true;btn.classList.add("busy");
+    try{const msg=await requestRun();await slowTick();autoHealth();
+      if(msg){label(msg);if(msg==="Update requested"){setTimeout(slowTick,45000);setTimeout(slowTick,90000)}await new Promise(r=>setTimeout(r,2500))}}
+    finally{label("Refresh");btn.disabled=false;btn.classList.remove("busy")}})}
