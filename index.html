@@ -73,6 +73,9 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 .lsc{border-collapse:collapse;font-size:11.5px;margin:2px 0 6px;font-variant-numeric:tabular-nums}.lsc th,.lsc td{padding:1px 6px;text-align:center;color:var(--mut)}.lsc td:first-child{text-align:left;color:inherit}.lsc td b{color:inherit}
 .lastp{color:var(--mut);font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .spkw{display:flex;flex-direction:column;margin:4px 0 2px}.spk-t{font-size:11px;color:var(--mut)}.spk{background:rgba(255,255,255,.05);border-radius:4px}.spkw [data-spk]{display:flex;align-items:center;gap:8px}.spk-l,.spk-empty{font-size:11px;color:var(--mut)}
+.rsum{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin:2px 0 6px}.rsum div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:11px;color:var(--mut)}.rsum b{display:block;color:var(--txt);font-size:15px}
+.rspl{font-size:11.5px;color:var(--mut);margin:2px 2px 4px;line-height:1.45}.rspl b{color:var(--txt);font-weight:600}.rnote{font-size:10.5px;color:var(--mut);margin:2px 2px 8px}
+.pill.PENDING{background:#475569}.card.PENDING{border-left-color:#94a3b8}
 </style></head><body>
 <h1>Live Bets</h1>
 <div class="meta" id="meta">Loading…</div>
@@ -82,6 +85,7 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right}
 <div class="sec fold" id="sec-up"><div class="h2row"><h2 class="sechead" data-sec="sec-up">Upcoming<span class="chev">›</span><span id="upN"></span></h2><button class="xall" data-sec="sec-up"></button></div><div class="secbody"><div id="bets"></div></div></div>
 <div class="sec settled" id="sec-won"><div class="h2row"><h2 class="sechead" data-sec="sec-won"><span class="hl" id="wonHead">Won / Push</span><span class="chev">›</span></h2><button class="xall" data-sec="sec-won"></button></div><div class="secbody"><div id="wonCards"></div><div id="won"></div></div></div>
 <div class="sec settled" id="sec-lost"><div class="h2row"><h2 class="sechead" data-sec="sec-lost"><span class="hl" id="lostHead">Lost</span><span class="chev">›</span></h2><button class="xall" data-sec="sec-lost"></button></div><div class="secbody"><div id="lostCards"></div><div id="lost"></div></div></div>
+<div class="sec settled" id="sec-recs"><div class="h2row"><h2 class="sechead" data-sec="sec-recs">My picks<span class="chev">›</span><span id="recN"></span></h2><button class="xall" data-sec="sec-recs"></button></div><div class="secbody"><div id="recs"></div></div></div>
 <script>
 const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
 const TZ="America/Toronto";
@@ -735,6 +739,28 @@ document.addEventListener("click",e=>{
     if(!all&&bt.closest(".sec.settled"))SECS.add(bt.dataset.sec);saveUI();syncUI();return}
   const sh=e.target.closest(".sechead");if(sh&&sh.closest(".sec.fold")){const k="x-"+sh.dataset.sec;SECS.has(k)?SECS.delete(k):SECS.add(k);saveUI();syncUI();return}if(sh){SECS.has(sh.dataset.sec)?SECS.delete(sh.dataset.sec):SECS.add(sh.dataset.sec);saveUI();syncUI();return}
   const row=e.target.closest(".crow");if(row){const k=row.parentElement.dataset.k;OPEN.has(k)?OPEN.delete(k):OPEN.add(k);saveUI();syncUI()}});
+
+// "My picks": recommendation log (rec.py) — headline record, splits, recent recs as tap-to-expand rows
+function recsHTML(R){if(!R||!R.stats)return{head:"",html:'<div class="meta">No recommendation log yet.</div>'};
+  const o=R.stats.overall,pc=v=>v==null?"–":(v>0?"+":"")+v.toFixed(1)+"%",rec=a=>`${a.w}–${a.l}${a.p?"–"+a.p:""}`;
+  const sp=(obj)=>Object.entries(obj).filter(([,a])=>a.w+a.l>0).sort((x,y)=>(y[1].w+y[1].l)-(x[1].w+x[1].l)).map(([k,a])=>`${esc(k)} <b>${rec(a)}</b>${a.roi_pct!=null?` (${pc(a.roi_pct)})`:""}`).join(" · ");
+  let h=`<div class="rsum"><div>Record<b>${rec(o)} · ${o.win_pct==null?"–":o.win_pct+"%"}</b>${o.pending} pending</div><div>ROI, flat $1<b class="${o.roi_pct>=0?"pos":"neg"}">${pc(o.roi_pct)}</b>${o.units>=0?"+":""}${o.units.toFixed(2)}u on ${o.roi_n} picks</div>
+    <div>Expected ROI (EV)<b>${pc(o.exp_roi_pct)}</b>what the prices promised</div><div>Wins vs expected<b>${o.wins_with_fair} vs ${o.exp_wins}</b>from Pinnacle fair %</div></div>`;
+  const pl=R.stats.by_placed;
+  h+=`<div class="rspl">Placed <b>${rec(pl.yes)}</b> (${pc(pl.yes.roi_pct)}) · Not placed <b>${rec(pl.no)}</b> (${pc(pl.no.roi_pct)})</div><div class="rspl">${sp(R.stats.by_promo)}</div><div class="rspl">${sp(R.stats.by_sport)}</div>
+    <div class="rnote">Small sample (${o.w+o.l} graded) — results swing a lot; expected vs actual is the fairer read. ROI excludes bonus bets. No closing-line data yet.</div>`;
+  const recent=(R.recent||[]).slice(0,25);
+  h+=recent.map(r=>{const st=(r.result||"pending").toUpperCase(),k="rec|"+r.rec_id,lab=r.result==="won"?"W":r.result==="lost"?"L":r.result==="pending"?"PENDING":st;
+    const u=r.units==null?"":(r.units>=0?"+":"−")+Math.abs(r.units).toFixed(2)+"u";
+    const px=r.eff_price&&r.eff_price!==r.rec_price?`${esc(r.rec_price)}→${esc(r.eff_price)}`:esc(r.rec_price||"?");
+    return `<div class="card ${st}${OPEN.has(k)?" open":""}" data-k="${esc(k)}"><div class="crow"><div class="pillw"><span class="pill ${st}">${esc(lab)}</span><span class="psub">${esc(r.rec_date.slice(5))}</span></div>
+      <div class="cmid"><div class="clbl">${esc(/^(Draw|Over|Under)\b/i.test(r.selection)?r.selection+" · "+r.event.replace(/\s*\([^)]*\)/g,""):r.selection)}</div><div class="csub">${esc(r.sport||"?")} · ${esc(bookTag(r.book))} · <b>${px}</b>${r.ev_pct?` · EV ${esc(r.ev_pct)}%`:""}${r.placed==="yes"?" · placed":""}</div></div>
+      <div class="cright">${u?`<b class="${r.units>=0?"pos":"neg"}">${u}</b>`:""}<small>${esc(r.promo)}</small></div><span class="chev">›</span></div><div class="cbody">
+      <div class="ev" style="margin-top:8px">${esc(r.event)} · ${esc(r.market)}</div>
+      <div class="nums"><span>Rec <b>${esc(r.rec_date)} ${esc(r.rec_time_et||"")}</b></span><span>Fair <b>${r.fair_pct?esc(r.fair_pct)+"%":"–"}</b></span><span>Stake <b>${esc(r.stake||"–")}</b></span><span>Placed <b>${esc(r.placed)}</b></span>${r.friend==="yes"?"<span><b>Friend</b></span>":""}</div>
+      ${r.final_score?`<div class="meta" style="margin-top:4px">Final: ${esc(r.final_score)}</div>`:""}${r.notes?`<div class="srcn">${esc(r.notes)}</div>`:""}<div class="srcn">Source: ${esc(r.source)}</div></div></div>`}).join("");
+  if((R.recent||[]).length>25)h+=`<div class="rnote">Showing the latest 25 of ${R.recent.length}. Full log: recommendations.csv</div>`;
+  return{head:`${rec(o)} · ${o.win_pct==null?"–":o.win_pct+"%"}`,html:h}}
 function render(){
   const D=DATA;
   const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0,atRisk=0,potPay=0,potTBC=0,tonight=0,tonightTBC=0,openN=0;const TODAY=etDay(Date.now());
@@ -796,6 +822,7 @@ function render(){
   const lostTotal=lostSum+lostPending;
   $("lostHead").textContent=`Lost · ${lostCards.length+lostS.length} · −${money(lostTotal)}`;
   $("lostHead").title=lostPending?`incl. ${money(lostPending)} not yet settled in the tracker`:"";
+  {const RH=recsHTML(D.recs);setHTML($("recs"),RH.html);$("recN").textContent=RH.head}
   const now=new Date().toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit",second:"2-digit"});
   const gen=D.generated_at?new Date(D.generated_at).toLocaleString("en-CA",{timeZone:TZ,month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}):"?";
   syncUI();tick1s();if(Math.abs(window.scrollY-sy)>2)window.scrollTo(0,sy);
