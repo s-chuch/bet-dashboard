@@ -101,3 +101,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-18 16:55,DraftKings,3c3918c1,settled,0.00,"lost, no return"
 2026-10-18 16:55,PointsBet,43fe2d05,settled,0.00,"lost, no return"
 2026-10-18 18:29,Caesars,5242e6b7,settled,0.00,"lost, no return"
+2026-10-18 18:30,PointsBet,c8ff18d0,return,1.06,won
