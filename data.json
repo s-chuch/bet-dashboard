@@ -231,12 +231,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 16:55 ET",
-     "ml_home": 0.5023,
-     "spread_home_line": -1.0,
-     "spread_home_fair": 0.4838,
+     "pulled": "2026-10-18 19:46 ET",
+     "ml_home": 0.4907,
+     "spread_home_line": 1.0,
+     "spread_home_fair": 0.5093,
      "total_line": 53.5,
-     "total_over_fair": 0.5092
+     "total_over_fair": 0.5161
     },
     "pm": {
      "slug": "nfl-dal-gb-2026-10-19",
@@ -1283,12 +1283,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 16:55 ET",
-     "ml_home": 0.5023,
-     "spread_home_line": -1.0,
-     "spread_home_fair": 0.4838,
+     "pulled": "2026-10-18 19:46 ET",
+     "ml_home": 0.4907,
+     "spread_home_line": 1.0,
+     "spread_home_fair": 0.5093,
      "total_line": 53.5,
-     "total_over_fair": 0.5092
+     "total_over_fair": 0.5161
     },
     "pm": {
      "slug": "nfl-dal-gb-2026-10-19",
@@ -2228,10 +2228,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 1,
-     "clock": 2100.0,
+     "clock": 2220.0,
      "state": "in",
      "completed": false,
-     "detail": "35'",
+     "detail": "37'",
      "teams": [
       {
        "id": "15360",
@@ -2552,6 +2552,15 @@
     "pregame": {
      "home": 86.3,
      "away": 13.6
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-18 19:46 ET",
+     "ml_home": 0.7752,
+     "spread_home_line": -7.5,
+     "spread_home_fair": 0.4954,
+     "total_line": 52.5,
+     "total_over_fair": 0.491
     },
     "pm": {
      "slug": "nfl-was-sf-2026-10-20",
@@ -3499,6 +3508,15 @@
        "score": "1"
       }
      ]
+    },
+    "pin": {
+     "ml_home": 0.6363,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.4204,
+     "total_line": 6.5,
+     "total_over_fair": 0.4829,
+     "src": "Pinnacle no-vig (saved scan)",
+     "pulled": "2026-10-18 17:52 ET"
     },
     "pm": {
      "slug": "nhl-cbj-min-2026-10-18",
@@ -6909,6 +6927,6 @@
   "PointsBet": 155.0,
   "theScore": 0.2
  },
- "hash": "f7588db22b28c42beb3d62f350c2684a7a954afd",
- "generated_at": "2026-10-18T19:44:10-04:00"
+ "hash": "715cbd6736c2cbde328e37fb6fcdf3b18f0ffac5",
+ "generated_at": "2026-10-18T19:46:35-04:00"
 }
