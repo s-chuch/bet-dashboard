@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0d12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Stats · Bet Tracker</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/stats.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html" aria-current="page">Stats</a><a href="log.html">Logs</a></div></div></nav>
+<main class="wrap" id="app">
+  <div class="head">
+    <div>
+      <h1 class="page-title">Stats</h1>
+      <p class="page-sub" id="updated" aria-live="polite">Loading…</p>
+    </div>
+    <div class="seg" role="tablist" aria-label="Time range" id="range"></div>
+  </div>
+  <div id="err" class="err" role="alert" hidden></div>
+
+  <section aria-label="Key figures">
+    <div class="hero panel" id="hero"><div class="skeleton" style="height:90px"></div></div>
+    <div class="kpis" id="kpis1"></div>
+    
+    <div class="grid2 bw" id="bw"></div>
+  </section>
+
+  <h2 class="sec-title">Performance</h2>
+  <section class="panel" aria-labelledby="t-cum">
+    <div class="row sb"><h3 id="t-cum">Cumulative P&amp;L</h3><span class="muted small" id="cum-sum"></span></div>
+    <div class="chart" id="c-cum"></div>
+  </section>
+  <section class="panel" aria-labelledby="t-day">
+    <div class="row sb"><h3 id="t-day">Daily P&amp;L</h3><span class="muted small" id="day-sum"></span></div>
+    <div class="chart" id="c-day"></div>
+  </section>
+  <section class="panel" aria-labelledby="t-bank">
+    <div class="row sb wrapr"><h3 id="t-bank">Bankroll</h3><div class="seg" role="tablist" aria-label="Bankroll series" id="bank-seg"></div></div>
+    <div class="chart" id="c-bank"></div>
+  </section>
+  <section class="panel" aria-labelledby="t-heat">
+    <div class="row sb"><h3 id="t-heat">Recent settled days</h3><span class="muted small">W = profit · L = loss</span></div>
+    <div class="heat" id="heat" role="list"></div>
+  </section>
+
+  <div class="row sb sec-row">
+    <h2 class="sec-title">Breakdowns</h2>
+    <div class="seg" role="tablist" aria-label="Breakdown metric" id="metric-seg"></div>
+  </div>
+  <div class="grid2" id="breakdowns"></div>
+
+  <h2 class="sec-title">My picks</h2>
+  <section class="panel" aria-labelledby="t-picks"><h3 id="t-picks">Pick accuracy</h3><div id="picks"></div></section>
+
+  <p class="foot">Hover or tap charts for details · refreshes every 60s</p>
+</main>
+<script src="assets/stats.js"></script>
+</body>
+</html>

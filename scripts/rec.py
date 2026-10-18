@@ -13,7 +13,7 @@ import csv, json, os, re, sys, datetime, hashlib, argparse
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import build as P   # reuse ESPN matching (find_game, team_match, norm, parse_date)
-from common import RECS, BETS, lock, now_et
+from common import RECS, BETS, lock, now_et, all_bets
 
 COLS = ["rec_id", "rec_date", "rec_time_et", "sport", "event", "game_start_et", "market", "selection", "book",
         "rec_price", "eff_price", "fair_pct", "ev_pct", "stake", "promo", "friend", "placed", "bet_ids",
@@ -140,7 +140,7 @@ def grade_one(r, snap):
     return "won" if me > op else "lost"   # ML: a soccer draw loses a 3-way ML
 
 def grade(rows, verbose=True):
-    bets = {b["bet_id"]: b for b in csv.DictReader(open(BETS))}
+    bets = {b["bet_id"]: b for b in all_bets()}
     n = 0
     for r in rows:
         if r["result"] in ("won", "lost", "push", "void"): continue
@@ -247,7 +247,7 @@ def add(rows, r, quiet=False):
 
 def link_placed(rows):
     """mark recs that match a bet in bets.csv (same selection & game day) as placed"""
-    for b in csv.DictReader(open(BETS)):
+    for b in all_bets():
         d = P.parse_date(b)
         if not d: continue
         cand = {"game_start_et": d.strftime("%Y-%m-%d %H:%M"), "market": b["market"], "selection": b["pick"], "event": b["event"]}
@@ -324,7 +324,7 @@ def sport_of(text):
 
 def backfill():
     rows = []
-    for b in csv.DictReader(open(BETS)):
+    for b in all_bets():
         if not b["fair_pct"].strip(): continue          # unpriced bets (his own SGPs, screenshots) are not my recommendations
         if b["bet_id"] == "43fe2d05": continue          # Alaves ML: Shawn's substitute for the recommended Celta-Alaves draw
         d = P.parse_date(b); bp = am(b["boosted_price"]); pr = am(b["price"]); note = []
@@ -348,7 +348,7 @@ def backfill():
         if not r["sport"]: find(r)
         if not r["sport"]: r["sport"] = sport_of(r["event"] + " " + r["market"] + " " + r["selection"])
     merged = {}
-    for b in csv.DictReader(open(BETS)): merged[b["bet_id"]] = b
+    for b in all_bets(): merged[b["bet_id"]] = b
     for r in rows:
         ids = [x for x in r["bet_ids"].split(";") if x]
         if len(ids) > 1:

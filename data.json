@@ -183,12 +183,50 @@
    "multi": true,
    "legs": [
     {
-     "type": "prop",
-     "player": "Ravens @ Browns",
-     "stat": null,
-     "op": "under",
+     "type": "total",
+     "side": "under",
      "line": 40.5,
-     "text": "Ravens @ Browns Under 40.5"
+     "game": [
+      "Ravens",
+      "Browns"
+     ],
+     "text": "Ravens @ Browns Under 40.5",
+     "match": {
+      "path": "football/nfl",
+      "date": "20261018",
+      "groups": null,
+      "id": "401872997",
+      "snapshot": {
+       "date": "2026-10-18T17:00Z",
+       "period": 4,
+       "clock": 0.0,
+       "state": "post",
+       "completed": true,
+       "detail": "Final",
+       "teams": [
+        {
+         "id": "5",
+         "name": "Cleveland Browns",
+         "abbr": "CLE",
+         "short": "Browns",
+         "nick": "Browns",
+         "location": "Cleveland",
+         "home": true,
+         "score": "13"
+        },
+        {
+         "id": "33",
+         "name": "Baltimore Ravens",
+         "abbr": "BAL",
+         "short": "Ravens",
+         "nick": "Ravens",
+         "location": "Baltimore",
+         "home": false,
+         "score": "10"
+        }
+       ]
+      }
+     }
     },
     {
      "type": "spread",
@@ -256,10 +294,10 @@
       "snapshot": {
        "date": "2026-10-18T20:25Z",
        "period": 2,
-       "clock": 658.0,
+       "clock": 329.0,
        "state": "in",
        "completed": false,
-       "detail": "10:58 - 2nd",
+       "detail": "5:29 - 2nd",
        "teams": [
         {
          "id": "12",
@@ -3756,6 +3794,306 @@
    "pnl": -0.2,
    "stake": 0.2,
    "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "theScore",
+   "event": "Colorado State Rams @ Texas State Bobcats",
+   "pick": "Colorado State Rams",
+   "result": "lost",
+   "pnl": -0.16,
+   "stake": 0.16,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "Caesars",
+   "event": "New York Rangers @ New Jersey Devils",
+   "pick": "New York Rangers",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "Caesars",
+   "event": "Milwaukee Brewers @ Los Angeles Dodgers",
+   "pick": "Milwaukee Brewers",
+   "result": "won",
+   "pnl": 67.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "FanDuel",
+   "event": "Seattle Seahawks @ Denver Broncos",
+   "pick": "SEA -2.5 + Over 40.5 + Darnold 1+ pass TD",
+   "result": "lost",
+   "pnl": -0.79,
+   "stake": 0.79,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "New York Islanders @ Ottawa Senators",
+   "pick": "Under 5.5",
+   "result": "won",
+   "pnl": 22.73,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Buffalo Sabres @ Toronto Maple Leafs",
+   "pick": "Toronto Maple Leafs",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Colorado State @ Texas State",
+   "pick": "Under 70.5",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "East Carolina @ UAB",
+   "pick": "Under 47.5",
+   "result": "won",
+   "pnl": 22.32,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "PointsBet",
+   "event": "Georgia Southern @ Old Dominion",
+   "pick": "Old Dominion +3.5",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "Notre Dame @ BYU",
+   "pick": "BYU Cougars",
+   "result": "won",
+   "pnl": 1.39,
+   "stake": 0.3,
+   "auto": false
+  },
+  {
+   "date": "2026-10-15",
+   "book": "DraftKings",
+   "event": "Ohio State @ Indiana",
+   "pick": "Indiana Hoosiers",
+   "result": "lost",
+   "pnl": -0.3,
+   "stake": 0.3,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "FanDuel",
+   "event": "Phoenix Suns @ San Antonio Spurs",
+   "pick": "Phoenix Suns",
+   "result": "lost",
+   "pnl": -0.79,
+   "stake": 0.79,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "bet365",
+   "event": "Phoenix Suns @ San Antonio Spurs",
+   "pick": "Phoenix Suns",
+   "result": "lost",
+   "pnl": -0.17,
+   "stake": 0.17,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "bet365",
+   "event": "Dallas Stars @ Colorado Avalanche",
+   "pick": "Dallas Stars",
+   "result": "won",
+   "pnl": 11.5,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "New Orleans Pelicans @ Dallas Mavericks",
+   "pick": "Dallas Mavericks",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "Chicago Bulls @ Milwaukee Bucks",
+   "pick": "Milwaukee Bucks",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "Western Kentucky @ Sam Houston State",
+   "pick": "Western Kentucky Hilltoppers",
+   "result": "won",
+   "pnl": 20.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "PointsBet",
+   "event": "New Orleans Pelicans @ Dallas Mavericks",
+   "pick": "New Orleans Pelicans",
+   "result": "won",
+   "pnl": 23.81,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-14",
+   "book": "Caesars",
+   "event": "Kennesaw State @ Missouri State",
+   "pick": "Missouri State Bears",
+   "result": "won",
+   "pnl": 67.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "PointsBet",
+   "event": "Knicks @ Raptors",
+   "pick": "Over 219.5",
+   "result": "won",
+   "pnl": 21.74,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "PointsBet",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks +11.5",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "FanDuel",
+   "event": "Brazil W ML + Mexico W ML + Millonarios ML",
+   "pick": "3-leg soccer parlay",
+   "result": "lost",
+   "pnl": -0.8,
+   "stake": 0.8,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks ML",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Pacers @ Thunder",
+   "pick": "Pacers ML",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Hard Rock",
+   "event": "Knicks @ Raptors",
+   "pick": "Knicks ML",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 20.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Hard Rock",
+   "event": "FIU @ Jacksonville State",
+   "pick": "Jacksonville State ML",
+   "result": "won",
+   "pnl": 3.23,
+   "stake": 5.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "DraftKings",
+   "event": "FIU @ Jacksonville State",
+   "pick": "FIU ML",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "DraftKings",
+   "event": "Napoli @ Villarreal",
+   "pick": "Villarreal ML",
+   "result": "won",
+   "pnl": 1.32,
+   "stake": 0.96,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "Delaware @ Middle Tennessee",
+   "pick": "Delaware ML",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-13",
+   "book": "Caesars",
+   "event": "FIU @ Jacksonville State",
+   "pick": "FIU ML",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
   }
  ],
  "pnl_total": 174.0,
@@ -5813,6 +6151,6 @@
   "PointsBet": 37.5,
   "theScore": 0.2
  },
- "hash": "ac36b6a01fd90db4dd13dfc005ccb0725cda671e",
- "generated_at": "2026-10-18T17:12:11-04:00"
+ "hash": "87aaa3647d1de643e6655e0311d65711785f00f6",
+ "generated_at": "2026-10-18T21:30:18+00:00"
 }

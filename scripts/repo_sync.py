@@ -2,7 +2,7 @@
 """Box-side helper: the box is only an editor of the repo. Every box writer runs
     with lock(): pre(); <change data/>; post("msg")
 pre(): commit any hand edits under data/ (or index.html), then git pull --rebase from origin/main.
-post(): commit data/, data.json, index.html if they changed and push (rebasing on a race, 3 tries).
+post(): commit data/, data.json, stats.json, archive.json, log.json, index.html if they changed and push (rebasing on a race, 3 tries).
 GitHub Actions (autorun.yml) does the same from its side, so neither side overwrites the other.
 
   python3 scripts/repo_sync.py pull            # just bring the box copy up to date
@@ -11,7 +11,7 @@ GitHub Actions (autorun.yml) does the same from its side, so neither side overwr
 import subprocess, sys, os, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from common import REPO, lock
-PATHS = ["data", "data.json", "index.html"]
+PATHS = ["data", "data.json", "stats.json", "archive.json", "log.json", "index.html"]
 
 def g(*a, check=False):
     r = subprocess.run(["git", "-C", REPO, *a], capture_output=True, text=True)

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0d12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+<title>Logs · Bet Tracker</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/log.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html" aria-current="page">Logs</a></div></div></nav>
+<main class="wrap">
+  <h1 class="page-title">Logs &amp; Archive</h1>
+  <p class="page-sub" id="sub">Loading…</p>
+  <div class="tabbar"><div class="seg" role="tablist" aria-label="Log sections">
+    <button role="tab" id="tab-archive" aria-controls="pane-archive" aria-selected="true" data-tab="archive">Archive</button>
+    <button role="tab" id="tab-activity" aria-controls="pane-activity" aria-selected="false" tabindex="-1" data-tab="activity">Activity</button>
+    <button role="tab" id="tab-runs" aria-controls="pane-runs" aria-selected="false" tabindex="-1" data-tab="runs">Auto-runs</button>
+  </div></div>
+
+  <section id="pane-archive" role="tabpanel" aria-labelledby="tab-archive">
+    <div class="panel filters">
+      <div class="f-row">
+        <input type="search" id="q" placeholder="Search pick, event or book" aria-label="Search archive" autocomplete="off">
+      </div>
+      <div class="f-row f-sel">
+        <label><span class="lbl">Book</span><select id="fbook" aria-label="Book"></select></label>
+        <label><span class="lbl">Result</span><select id="fres" aria-label="Result">
+          <option value="all">All</option><option value="won">Won</option><option value="lost">Lost</option><option value="void">Void</option></select></label>
+        <label><span class="lbl">Month</span><select id="fmonth" aria-label="Month"></select></label>
+        <label><span class="lbl">Sort</span><select id="fsort" aria-label="Sort">
+          <option value="new">Newest</option><option value="old">Oldest</option><option value="win">Biggest win</option><option value="loss">Biggest loss</option></select></label>
+      </div>
+      <div class="f-row f-act"><button class="btn" id="reset" type="button">Reset</button><button class="btn" id="csv" type="button">Export CSV</button></div>
+    </div>
+    <div class="kpis sumstrip" id="sum" aria-live="polite"></div>
+    <div id="arch-list"></div>
+    <div class="more"><button class="btn" id="more" type="button" hidden>Load more</button></div>
+  </section>
+
+  <section id="pane-activity" role="tabpanel" aria-labelledby="tab-activity" hidden>
+    <div id="auto-box"></div>
+    <div id="runs-box"></div>
+    <div class="chips" id="type-chips" role="group" aria-label="Filter event types"></div>
+    <div id="ev-list"></div>
+  </section>
+
+  <section id="pane-runs" role="tabpanel" aria-labelledby="tab-runs" hidden>
+    <div id="health"></div>
+    <div id="run-list"></div>
+    <p class="foot"><a id="runs-all" href="https://github.com/s-chuch/bet-dashboard/actions" rel="noopener noreferrer" target="_blank">All workflow runs on GitHub</a></p>
+  </section>
+  <p class="foot" id="foot"></p>
+</main>
+<script src="assets/log.js"></script>
+</body>
+</html>

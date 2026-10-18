@@ -37,6 +37,17 @@ run failed or the last successful run is more than 30 minutes old. Run logs: Act
 anchors, stakes, returns), `balances.csv` (generated), `recommendations.csv` (My picks log), `pregame_cache.json`,
 `autorun.json` (needs_review + last auto settles). **The repo is public, so all of this is publicly readable.**
 
+**Archive:** settled bets whose `date` is more than 5 days old (date < today ET - 5) move out of `bets.csv` into
+`data/archive/bets-YYYY-MM.csv` (same columns, sorted, deduped by `bet_id`; open bets are never archived). Each run that
+moves rows appends to `data/archive/archive_log.csv`. `scripts/archive.py` runs in every autorun pass after settling and
+before the build (a failure is reported in `errors` but never stops the build). Anything needing full history
+(totals, stats, rec grading) reads `common.all_bets()` = `bets.csv` + archive. The ledger is untouched, so balances don't change.
+
+**Generated JSON (repo root):** `data.json` (live page; `settled_recent` = last 5 days, `pnl_total` over all history),
+`stats.json` (totals, streaks, daily, by book/market/odds/weekday, boosted vs regular, bankroll replay, picks record),
+`archive.json` (archived bets, newest first), `log.json` (last 600 ledger events with labels, archive runs, autorun status).
+The last three need no network: `python3 scripts/build.py --static`. Each file is rewritten only when its content changed.
+
 ## Box = editor only
 `/workspace/sportsbets/{bets.csv,recommendations.csv,pregame_cache.json}`, `/workspace/sportsbook-balances/{ledger.csv,balances.csv}`
 and `/workspace/sportsbets/dashboard/index.html` are symlinks into this checkout. Box writers take a flock
@@ -48,3 +59,29 @@ and `/workspace/sportsbets/dashboard/index.html` are symlinks into this checkout
   `... repo_sync.py push "msg"`.
 
 Manual dry checks: `python3 scripts/autorun.py --dry-run`, `python3 scripts/autorun.py --regrade 2026-10-18`.
+
+## Security & automation
+**What is hardened.** `autorun.yml` runs only on `s-chuch/bet-dashboard` (not forks), denies all token permissions
+at the top level and grants `contents: write` + `pages: write` to the one job, pins every action to a commit SHA
+(Dependabot bumps them weekly), uses a 15-minute timeout, passes values through `env` rather than `${{ }}` in scripts,
+commits only `data/`, `data.json`, `stats.json`, `archive.json`, `log.json`, and ends with a step that fails the run
+if anything went wrong (which also turns the page's health badge red). Bot commits count as repo activity, so the
+5-minute schedule is not auto-disabled after 60 days. `ci.yml` (PRs and non-main pushes, read-only token) compiles
+the scripts, validates CSV headers / unique `bet_id`s / JSON files, scans for secret patterns, and enforces the
+page rule below. See `SECURITY.md` for reporting.
+
+**Pages must not use inline script.** The pages declare a CSP via `<meta http-equiv="Content-Security-Policy">` with
+`script-src 'self'`: put JS in files under `assets/`, no inline `<script>` bodies, no `onclick=` style attributes,
+no `javascript:` URLs. CI fails on violations.
+
+**Limits, honestly.** Data in a public repo is world-readable, including stakes and balances. GitHub Pages cannot send
+custom HTTP headers, so CSP works only via meta tags and `frame-ancestors` (clickjacking protection) cannot be enforced.
+
+**Repo settings to enable manually (Settings):**
+- [ ] Branches / Rulesets: protect `main` (block force-push and deletion) but allow `github-actions[bot]` to push, or add the bot as a ruleset bypass actor.
+- [ ] Code security: enable **Secret scanning** and **Push protection**.
+- [ ] Code security: enable **Private vulnerability reporting**.
+- [ ] Code security: enable **Dependabot alerts** (and security updates).
+- [ ] Actions -> General: **Require approval for all outside collaborators**.
+- [ ] Actions -> General: Workflow permissions = **Read repository contents** (read-only default); allow only GitHub-owned, verified-creator or SHA-pinned actions.
+- [ ] Pages: tick **Enforce HTTPS**.

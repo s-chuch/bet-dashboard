@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Build data.json for the live bet dashboard (no git here; autorun.py / the box wrapper commit + push).
 
-  python3 scripts/build.py        # rebuild data.json from data/*.csv
+  python3 scripts/build.py        # rebuild data.json (+ stats/archive/log json) from data/*.csv
+  python3 scripts/build.py --static  # only stats.json / archive.json / log.json (no network)
 
 Reads data/bets.csv (open bets) and data/balances.csv, matches each bet/leg to an ESPN game (stored as
 sport path + date + event id so the browser can refresh it). data.json is only rewritten when its
@@ -12,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from common import BETS, BAL, REPO, PIN_CACHE, AUTO, CI, now_et
+from common import BETS, BAL, REPO, PIN_CACHE, AUTO, CI, now_et, all_bets
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/"
 
 TAGS = {"NCAAF": ["football/college-football"], "NFL": ["football/nfl"], "NBA": ["basketball/nba"],
@@ -126,6 +127,11 @@ def parse_leg(text, market):
     if m:
         side = "over" if m[1].lower().startswith("o") else "under"
         return {"type": "total", "side": side, "line": float(m[2]), "text": t}
+    # game total for a named game in a multi-game parlay: "Ravens @ Browns Under 40.5"
+    m = re.match(r"^(.+?)\s+(?:@|vs\.?|v)\s+(.+?)\s+(Over|Under|O|U)\s*([\d.]+)(?:\s+(?:runs|goals|points|pts|total))?$", t, re.I)
+    if m:
+        return {"type": "total", "side": "over" if m[3].lower().startswith("o") else "under", "line": float(m[4]),
+                "game": [m[1].strip(), m[2].strip()], "text": t}
     # team totals: "Valkyries O78.5 team pts", "Dream Over 75.5 team points", "Rangers team total over 3.5",
     # "NYY TT U4.5 runs", "Valkyries 79+ team pts"
     if re.search(r"\bteam\b|\bTT\b", t, re.I):
@@ -324,6 +330,7 @@ def build_bet(row):
     else:
         for L in legs:
             if L.get("team"): L["match"] = find_game([L["team"]], paths, date, L.get("women", False))
+            elif L.get("game"): L["match"] = find_game(L["game"], paths, date)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
     if m: bet["sport"] = "Soccer" if m["path"].startswith("soccer") else SPORT_LABEL.get(m["path"], m["path"])
     elif "soccer" in (ev_raw + market).lower(): bet["sport"] = "Soccer"
@@ -520,13 +527,17 @@ def _stable(x):
     if isinstance(x, list): return [_stable(v) for v in x]
     return x
 
+def build_static(verbose=True):
+    """stats.json / archive.json / log.json (no network)."""
+    import statsgen; return statsgen.build_static(verbose)
+
 def build(verbose=True):
     """Rebuild data.json. Returns True if it changed."""
     try:
         import importlib; R = importlib.import_module("rec"); recs = R.dash_payload(R.load())
     except Exception as e:
         print("REC PAYLOAD FAILED:", e); recs = None
-    rows = list(csv.DictReader(open(BETS)))
+    rows = all_bets()   # live bets.csv + archive (full history for totals)
     open_rows = [r for r in rows if r["result"].strip().lower() == "open"]
     with ThreadPoolExecutor(8) as ex: bets = list(ex.map(build_bet, open_rows))
     attach_pregame(bets)
@@ -536,7 +547,7 @@ def build(verbose=True):
                  "updated": b["updated_et"]} for b in bal]
     balances.sort(key=lambda b: -(b["balance"] or 0))
     total = round(sum(b["balance"] or 0 for b in balances), 2)
-    recent_cut = (now_et().date() - datetime.timedelta(days=2)).isoformat()
+    recent_cut = (now_et().date() - datetime.timedelta(days=5)).isoformat()
     settled = [{"date": r["date"], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r["event"]),
                 "pick": r["pick"], "result": r["result"], "pnl": num(r["pnl"]), "stake": num(r["stake"]),
                 "auto": "auto" in (r.get("settled_by") or "")}
@@ -559,6 +570,8 @@ def build(verbose=True):
         data["hash"] = h
         data["generated_at"] = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
         json.dump(data, open(out, "w"), indent=1)
+    try: build_static(verbose)
+    except Exception as e: print("STATIC FILES FAILED:", e)
     if verbose:
         unmatched = []
         for b in bets:
@@ -570,4 +583,4 @@ def build(verbose=True):
 
 if __name__ == "__main__":
     from common import lock
-    with lock(): build()
+    with lock(): build_static() if "--static" in sys.argv else build()

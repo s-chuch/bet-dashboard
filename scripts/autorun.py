@@ -8,13 +8,13 @@
 
 Steps: ledger sync -> auto-settle every open bet whose games are ALL final and whose legs all grade
 unambiguously (settle.py) through ledger.settle (idempotent, refuses double settles) -> rec.py grade ->
-build data.json (only rewritten when content changed). Ambiguous bets go to data/autorun.json
+archive old settled bets (archive.py) -> build data.json + stats/archive/log json (only rewritten when content changed). Ambiguous bets go to data/autorun.json
 needs_review (shown on the dashboard) and are never settled automatically.
 Exit code 1 if a step raised (the dashboard turns red).
 """
 import sys, os, json, csv, traceback
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-from common import lock, AUTO, now_et
+from common import lock, AUTO, now_et, all_bets
 import ledger as LG, settle as S
 
 def log(*a): print(f"[{now_et():%Y-%m-%d %H:%M:%S} ET]", *a, flush=True)
@@ -70,6 +70,12 @@ def run(dry=False):
         rr = R.load(); R.link_placed(rr); R.grade(rr, verbose=False); R.save(rr)
     except Exception as e:
         errors.append(f"rec grade: {e}"); traceback.print_exc()
+    try:
+        import archive as A
+        moved = A.archive()
+        if moved: log(f"archived {len(moved)} old settled bets")
+    except Exception as e:
+        errors.append(f"archive: {e}"); traceback.print_exc()
     old = json.load(open(AUTO)) if os.path.exists(AUTO) else {}
     last = (settled + old.get("last_settled", []))[:25]
     new = {"needs_review": review, "last_settled": last, "errors": errors}
@@ -80,7 +86,7 @@ def run(dry=False):
         import build as B; B.build()
     except Exception as e:
         errors.append(f"build: {e}"); traceback.print_exc()
-    pnl = round(sum(LG.num(r["pnl"]) for r in rows if r["result"] in LG.SETTLED), 2)
+    pnl = round(sum(LG.num(r["pnl"]) for r in all_bets() if r["result"] in LG.SETTLED), 2)
     log(f"done: settled {len(settled)} (P&L {sum(x['pnl'] for x in settled):+.2f}), needs_review {len(review)}, "
         f"tracker P&L {pnl:+.2f}, errors {len(errors)}")
     for e in errors: log("ERROR", e)

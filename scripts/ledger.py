@@ -18,7 +18,7 @@ import csv, sys, os, re, hashlib, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from common import LEDGER, BAL, BETS, lock, now_et
+from common import LEDGER, BAL, BETS, lock, now_et, all_bets, archive_rows
 LCOLS = ["ts_et", "book", "bet_id", "event_type", "amount", "note"]
 BASE = ["date", "book", "event", "start_et", "market", "pick", "price", "boosted_price", "stake", "to_win",
         "fair_pct", "ev_pct", "result", "pnl"]
@@ -51,7 +51,7 @@ def make_id(r):
     return hashlib.sha1(key.encode()).hexdigest()[:8]
 
 def assign_ids(rows):
-    used = {r["bet_id"] for r in rows if r["bet_id"]}; n = 0
+    used = {r["bet_id"] for r in rows if r["bet_id"]} | {r["bet_id"] for r in archive_rows()}; n = 0
     for r in rows:
         if r["bet_id"]: continue
         base = make_id(r); bid = base; k = 2
@@ -190,7 +190,7 @@ def main(a):
         canon = next((e["book"] for e in led if e["book"].lower() == book.lower()), book)
         apply_event(led, canon, "", cmd, amt, note); write_balances(led); show(); return
     if cmd == "dupes":
-        rows, _ = load_bets(); seen = {}
+        rows = all_bets(); seen = {}
         for i, r in enumerate(rows, 2):
             seen.setdefault(dup_key(r), []).append(i)
         d = [v for v in seen.values() if len(v) > 1]
@@ -207,7 +207,7 @@ def main(a):
     elif cmd == "log":
         kv = dict(x.split("=", 1) for x in a[1:] if "=" in x)
         r = {c: "" for c in cols}; r.update(kv); r.setdefault("result", "open"); r["result"] = r["result"] or "open"
-        k = dup_key(r); clash = [x for x in rows if dup_key(x) == k]
+        k = dup_key(r); clash = [x for x in all_bets() if dup_key(x) == k]
         if clash and "--force" not in a:
             print(f"REJECTED duplicate: matches {clash[0]['bet_id']} ({clash[0]['book']} | {clash[0]['event']} | "
                   f"{clash[0]['pick']} | ${clash[0]['stake']}). Re-run with --force if it really is a second bet."); sys.exit(2)

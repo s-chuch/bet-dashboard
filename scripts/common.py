@@ -5,7 +5,7 @@ Writers (autorun, ledger log/settle/anchor/sync, rec add/grade, build) take LOCK
 processes on the same machine never write at once. On GitHub Actions the workflow's concurrency group
 does the same across runs. The lock is re-entrant for child processes via BETS_LOCK_HELD=1.
 """
-import os, fcntl, time, contextlib, datetime
+import os, fcntl, time, contextlib, datetime, csv, glob
 try:
     from zoneinfo import ZoneInfo
     ET = ZoneInfo("America/Toronto")
@@ -20,6 +20,9 @@ BAL = os.path.join(DATA, "balances.csv")
 RECS = os.path.join(DATA, "recommendations.csv")
 PIN_CACHE = os.path.join(DATA, "pregame_cache.json")
 AUTO = os.path.join(DATA, "autorun.json")
+ARCHIVE_DIR = os.path.join(DATA, "archive")
+ARCHIVE_LOG = os.path.join(ARCHIVE_DIR, "archive_log.csv")
+ARCHIVE_DAYS = 5
 LOCKFILE = os.environ.get("BETS_LOCK", "/tmp/bet-tracker.lock")
 CI = os.environ.get("GITHUB_ACTIONS") == "true"
 
@@ -47,3 +50,28 @@ def lock(timeout=180):
     finally:
         os.environ.pop("BETS_LOCK_HELD", None)
         fcntl.flock(f, fcntl.LOCK_UN); f.close()
+
+def read_csv(path):
+    """(rows, fieldnames) of a CSV; ([], []) when missing/empty. None values become ''."""
+    if not os.path.exists(path): return [], []
+    with open(path, newline="") as f:
+        rd = csv.DictReader(f); rows = list(rd); cols = list(rd.fieldnames or [])
+    for r in rows:
+        for k in list(r):
+            if r[k] is None: r[k] = ""
+    return rows, cols
+
+def archive_files():
+    return sorted(glob.glob(os.path.join(ARCHIVE_DIR, "bets-????-??.csv")))
+
+def archive_rows():
+    """Every archived (old, settled) bet row, oldest file first."""
+    out = []
+    for p in archive_files(): out += read_csv(p)[0]
+    return out
+
+def all_bets():
+    """Full history: live bets.csv rows + archived rows (deduped by bet_id; bets.csv wins)."""
+    live = read_csv(BETS)[0]
+    seen = {r.get("bet_id") for r in live if r.get("bet_id")}
+    return live + [r for r in archive_rows() if r.get("bet_id") not in seen]
