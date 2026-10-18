@@ -1,0 +1,74 @@
+{
+ "needs_review": [
+  {
+   "bet_id": "5242e6b7",
+   "book": "Caesars",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
+   "stake": "1.00",
+   "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
+   "legs": []
+  },
+  {
+   "bet_id": "c2582df3",
+   "book": "theScore",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+   "stake": "0.20",
+   "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
+   "legs": []
+  },
+  {
+   "bet_id": "10edceb9",
+   "book": "bet365",
+   "event": "Osasuna vs Racing Santander",
+   "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
+   "stake": "0.20",
+   "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
+   "legs": [
+    {
+     "leg": "Ante Budimir score or assist",
+     "result": "won"
+    },
+    {
+     "leg": "Raul Garcia 2+ shots",
+     "result": "void"
+    },
+    {
+     "leg": "Jonathan Dubasin 1+ shots",
+     "result": "won"
+    }
+   ]
+  },
+  {
+   "bet_id": "4eece662",
+   "book": "PointsBet",
+   "event": "Houston Texans @ Jacksonville Jaguars (London)",
+   "pick": "SGP 3-leg A (legs not shown in screenshot)",
+   "stake": "1.00",
+   "reason": "parlay legs not listed in the pick text",
+   "legs": []
+  },
+  {
+   "bet_id": "2ddad0a7",
+   "book": "PointsBet",
+   "event": "Houston Texans @ Jacksonville Jaguars (London)",
+   "pick": "SGP 3-leg B (legs not shown in screenshot)",
+   "stake": "1.00",
+   "reason": "parlay legs not listed in the pick text",
+   "legs": []
+  },
+  {
+   "bet_id": "c8ff18d0",
+   "book": "PointsBet",
+   "event": "Houston Texans @ Jacksonville Jaguars (London)",
+   "pick": "SGP 3-leg C $0.50 (legs not shown in screenshot)",
+   "stake": "0.50",
+   "reason": "parlay legs not listed in the pick text",
+   "legs": []
+  }
+ ],
+ "last_settled": [],
+ "errors": [],
+ "last_change_at": "2026-10-18 17:12 ET"
+}

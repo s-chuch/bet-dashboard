@@ -255,11 +255,11 @@
       "id": "401873006",
       "snapshot": {
        "date": "2026-10-18T20:25Z",
-       "period": 1,
-       "clock": 50.0,
+       "period": 2,
+       "clock": 658.0,
        "state": "in",
        "completed": false,
-       "detail": "0:50 - 1st",
+       "detail": "10:58 - 2nd",
        "teams": [
         {
          "id": "12",
@@ -3184,7 +3184,8 @@
    "pick": "Draw",
    "result": "won",
    "pnl": 22.5,
-   "stake": 10.0
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-18",
@@ -3193,7 +3194,8 @@
    "pick": "Alaves",
    "result": "lost",
    "pnl": -10.0,
-   "stake": 10.0
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-18",
@@ -3202,7 +3204,8 @@
    "pick": "Tennessee Titans +14.5",
    "result": "won",
    "pnl": 8.33,
-   "stake": 25.0
+   "stake": 25.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3211,7 +3214,8 @@
    "pick": "Messi AGS + Messi 7+ shots + Inter Miami -0.5",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3220,7 +3224,8 @@
    "pick": "Bijan Robinson ATTD + D'Andre Swift ATTD + Drake London ATTD",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3229,7 +3234,8 @@
    "pick": "Alabama ML (-209) + Mizzou/Ole Miss Under 45.5 (-120) + Georgia ML (-162)",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3238,7 +3244,8 @@
    "pick": "Under 7.5 + Guardians +1.5 + Over 2.5 total doubles",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3247,7 +3254,8 @@
    "pick": "Oregon State -13.5 + Over 52 + Under 57.5 + Braden Atkinson 310+ pass yds",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3256,7 +3264,8 @@
    "pick": "Junior Caminero to hit a HR",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3265,7 +3274,8 @@
    "pick": "Alabama Crimson Tide ML",
    "result": "lost",
    "pnl": -0.3,
-   "stake": 0.3
+   "stake": 0.3,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3274,7 +3284,8 @@
    "pick": "Jadan Baugh ATTD + Cam Coleman 30+ rec yds + Ryan Wingo 30+ rec yds",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3283,7 +3294,8 @@
    "pick": "Jack Hughes 1+ pts + Timo Meier 2+ SOG + Jack Hughes 3+ SOG",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3292,7 +3304,8 @@
    "pick": "Sebastian Aho 1+ pts + Kyle Connor 2+ SOG + Andrei Svechnikov 2+ SOG",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3301,7 +3314,8 @@
    "pick": "Nikita Kucherov 1+ pts + Nikita Kucherov 2+ SOG + Brandon Hagel 3+ SOG",
    "result": "won",
    "pnl": 0.27,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3310,7 +3324,8 @@
    "pick": "Matthew Tkachuk 1+ pts + Matthew Tkachuk 2+ SOG + Carter Verhaeghe 2+ SOG",
    "result": "won",
    "pnl": 0.3,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3319,7 +3334,8 @@
    "pick": "Milan Iloski score or assist + Bruno Damiani score or assist + Milan Iloski 3+ shots",
    "result": "won",
    "pnl": 0.26,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3328,7 +3344,8 @@
    "pick": "Jordin Canada 5+ assists + Angel Reese 10+ rebounds + Kiah Stokes 7+ rebounds",
    "result": "won",
    "pnl": 0.32,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3337,7 +3354,8 @@
    "pick": "Over 4.5 runs + Yandy Diaz 1+ hits + Guardians U5.5 team runs",
    "result": "won",
    "pnl": 0.26,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3346,7 +3364,8 @@
    "pick": "N. Martinez 2+ K + Rays -1.5 + Jose Ramirez 1+ hits",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3355,7 +3374,8 @@
    "pick": "Harvey Barnes AGS + Harvey Barnes 1+ SOT + Harvey Barnes 4+ shots",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3364,7 +3384,8 @@
    "pick": "T. Lawrence 150+ pass yds + C.J. Stroud 175+ pass yds + Parker Washington 20+ rec yds + Nico Collins 30+ rec yds + Bhayshul Tuten 30+ rush yds + Woody Marks 20+ rush yds",
    "result": "won",
    "pnl": 1.63,
-   "stake": 2.0
+   "stake": 2.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3373,7 +3394,8 @@
    "pick": "Over 1.5 goals + Harvey Barnes 1+ SOT + Harvey Barnes 3+ shots",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3382,7 +3404,8 @@
    "pick": "Notre Dame ML + CJ Carr 225+ pass yds",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3391,7 +3414,8 @@
    "pick": "Chandler Simpson 1+ hit + Yandy Diaz 1+ hit + Jonathan Aranda U0.5 HR",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3400,7 +3424,8 @@
    "pick": "Jonathan Aranda to hit a HR",
    "result": "lost",
    "pnl": -0.5,
-   "stake": 0.5
+   "stake": 0.5,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3409,7 +3434,8 @@
    "pick": "New York Jets ML",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3418,7 +3444,8 @@
    "pick": "Brighton ML + Maxim De Cuyper 1+ SOT + Pascal Gross 2+ shots",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3427,7 +3454,8 @@
    "pick": "Harvey Barnes 1+ SOT + Yoane Wissa 3+ shots + Over 10.5 corners",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3436,7 +3464,8 @@
    "pick": "Over 44.5",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3445,7 +3474,8 @@
    "pick": "Guardians ML + Yandy Diaz 1+ hits + Chandler Simpson 1+ hits",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3454,7 +3484,8 @@
    "pick": "Roughriders ML + Roughriders 1st Quarter ML + Roughriders 1st Half ML",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3463,7 +3494,8 @@
    "pick": "Valkyries ML",
    "result": "won",
    "pnl": 0.18,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3472,7 +3504,8 @@
    "pick": "Houston Texans ML",
    "result": "won",
    "pnl": 12.4,
-   "stake": 10.0
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3481,7 +3514,8 @@
    "pick": "Penguins @ Golden Knights Over 6.5 + Senators @ Flyers Over 5.5 + Kraken @ Panthers Over 6.5",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3490,7 +3524,8 @@
    "pick": "Under 32.5",
    "result": "lost",
    "pnl": -10.0,
-   "stake": 10.0
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3499,7 +3534,8 @@
    "pick": "Under 32.5",
    "result": "lost",
    "pnl": -10.0,
-   "stake": 10.0
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3508,7 +3544,8 @@
    "pick": "Vancouver Canucks +2.5",
    "result": "won",
    "pnl": 19.23,
-   "stake": 25.0
+   "stake": 25.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3517,7 +3554,8 @@
    "pick": "Maryland Terrapins -5",
    "result": "lost",
    "pnl": -25.0,
-   "stake": 25.0
+   "stake": 25.0,
+   "auto": false
   },
   {
    "date": "2026-10-17",
@@ -3526,7 +3564,8 @@
    "pick": "New York Jets +14.5",
    "result": "won",
    "pnl": 9.62,
-   "stake": 25.0
+   "stake": 25.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3535,7 +3574,8 @@
    "pick": "Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3544,7 +3584,8 @@
    "pick": "D. Pastrnak U0.5 goals + C. Gauthier U0.5 goals + Over 6.5",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3553,7 +3594,8 @@
    "pick": "Avalanche ML + Penguins +2.5 + Over 5.5 + Kadri 1+ pts",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3562,7 +3604,8 @@
    "pick": "Valkyries ML + Valkyries O78.5 team pts + Dream O75.5 team pts",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3571,7 +3614,8 @@
    "pick": "Makar 1+ pts + MacKinnon 2+ pts + Kadri 1+ pts",
    "result": "won",
    "pnl": 0.27,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3580,7 +3624,8 @@
    "pick": "Over 4.5 runs + Guardians +2.5 + Yandy Diaz U0.5 doubles",
    "result": "void",
    "pnl": 0.0,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3589,7 +3634,8 @@
    "pick": "Haaland AGS + Man City ML + Cherki score or assist (VOID leg)",
    "result": "won",
    "pnl": 0.18,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3598,7 +3644,8 @@
    "pick": "Hornets ML",
    "result": "lost",
    "pnl": -0.78,
-   "stake": 0.78
+   "stake": 0.78,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3607,7 +3654,8 @@
    "pick": "Tulane ML",
    "result": "won",
    "pnl": 0.37,
-   "stake": 0.16
+   "stake": 0.16,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3616,7 +3664,8 @@
    "pick": "Under 42.5 + Jaguars ML + C.J. Stroud 200+ pass yds",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3625,7 +3674,8 @@
    "pick": "Josh Hoover 2+ passing TDs",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3634,7 +3684,8 @@
    "pick": "Man City ML + Haaland AGS + Semenyo AGS",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3643,7 +3694,8 @@
    "pick": "J. Carter TD + J. Daniels TD + M. Stokes 220+ pass yds",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3652,7 +3704,8 @@
    "pick": "Under 6.5 + Ducks ML + B. Sennecke 2+ SOG",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3661,7 +3714,8 @@
    "pick": "Rutgers ML + U56.5 + A. Raymond 50+ rush yds",
    "result": "lost",
    "pnl": -1.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3670,7 +3724,8 @@
    "pick": "Florida State ML (Bet Reset $15)",
    "result": "lost",
    "pnl": -15.0,
-   "stake": 15.0
+   "stake": 15.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3679,7 +3734,8 @@
    "pick": "Auburn ML",
    "result": "won",
    "pnl": 8.0,
-   "stake": 1.0
+   "stake": 1.0,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3688,7 +3744,8 @@
    "pick": "Kent State ML",
    "result": "lost",
    "pnl": -0.8,
-   "stake": 0.8
+   "stake": 0.8,
+   "auto": false
   },
   {
    "date": "2026-10-16",
@@ -3697,7 +3754,8 @@
    "pick": "Kent State ML",
    "result": "lost",
    "pnl": -0.2,
-   "stake": 0.2
+   "stake": 0.2,
+   "auto": false
   }
  ],
  "pnl_total": 174.0,
@@ -3707,16 +3765,16 @@
    "overall": {
     "n": 70,
     "w": 26,
-    "l": 37,
+    "l": 38,
     "p": 0,
-    "pending": 7,
-    "win_pct": 41.3,
-    "units": 19.47,
-    "roi_pct": 34.2,
-    "roi_n": 57,
-    "exp_roi_pct": 13.1,
-    "exp_wins": 23.2,
-    "exp_wins_n": 63,
+    "pending": 6,
+    "win_pct": 40.6,
+    "units": 18.47,
+    "roi_pct": 31.8,
+    "roi_n": 58,
+    "exp_roi_pct": 12.9,
+    "exp_wins": 23.5,
+    "exp_wins_n": 64,
     "wins_with_fair": 26
    },
    "by_promo": {
@@ -3798,16 +3856,16 @@
     "rollover": {
      "n": 22,
      "w": 8,
-     "l": 10,
+     "l": 11,
      "p": 0,
-     "pending": 4,
-     "win_pct": 44.4,
-     "units": -0.71,
-     "roi_pct": -4.4,
-     "roi_n": 16,
-     "exp_roi_pct": -1.0,
-     "exp_wins": 8.9,
-     "exp_wins_n": 18,
+     "pending": 3,
+     "win_pct": 42.1,
+     "units": -1.71,
+     "roi_pct": -10.0,
+     "roi_n": 17,
+     "exp_roi_pct": -0.9,
+     "exp_wins": 9.2,
+     "exp_wins_n": 19,
      "wins_with_fair": 8
     }
    },
@@ -3890,16 +3948,16 @@
     "Soccer": {
      "n": 11,
      "w": 4,
-     "l": 3,
+     "l": 4,
      "p": 0,
-     "pending": 4,
-     "win_pct": 57.1,
-     "units": 1.62,
-     "roi_pct": 40.5,
-     "roi_n": 4,
-     "exp_roi_pct": -2.5,
-     "exp_wins": 1.8,
-     "exp_wins_n": 7,
+     "pending": 3,
+     "win_pct": 50.0,
+     "units": 0.62,
+     "roi_pct": 12.4,
+     "roi_n": 5,
+     "exp_roi_pct": -1.8,
+     "exp_wins": 2.1,
+     "exp_wins_n": 8,
      "wins_with_fair": 4
     },
     "WNBA": {
@@ -3937,16 +3995,16 @@
     "no": {
      "n": 16,
      "w": 4,
-     "l": 8,
+     "l": 9,
      "p": 0,
-     "pending": 4,
-     "win_pct": 33.3,
-     "units": -3.76,
-     "roi_pct": -41.7,
-     "roi_n": 9,
-     "exp_roi_pct": 5.7,
-     "exp_wins": 3.9,
-     "exp_wins_n": 12,
+     "pending": 3,
+     "win_pct": 30.8,
+     "units": -4.76,
+     "roi_pct": -47.6,
+     "roi_n": 10,
+     "exp_roi_pct": 5.2,
+     "exp_wins": 4.2,
+     "exp_wins_n": 13,
      "wins_with_fair": 4
     }
    },
@@ -4192,11 +4250,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "TOL 1-2 AGD (FT)",
     "source": "chat (Find pb bets) / pb/sun/out.txt",
     "notes": "rollover pick (0%+ EV rule), below the +2% cash bar",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "adc6224c",
@@ -5672,6 +5730,79 @@
    }
   ]
  },
+ "auto": {
+  "needs_review": [
+   {
+    "bet_id": "5242e6b7",
+    "book": "Caesars",
+    "event": "Tampa Bay Rays @ Cleveland Guardians",
+    "pick": "Caminero U1.5 + Y. Diaz U1.5 + C. Simpson O1.5",
+    "stake": "1.00",
+    "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
+    "legs": []
+   },
+   {
+    "bet_id": "c2582df3",
+    "book": "theScore",
+    "event": "Tampa Bay Rays @ Cleveland Guardians",
+    "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+    "stake": "0.20",
+    "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
+    "legs": []
+   },
+   {
+    "bet_id": "10edceb9",
+    "book": "bet365",
+    "event": "Osasuna vs Racing Santander",
+    "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
+    "stake": "0.20",
+    "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
+    "legs": [
+     {
+      "leg": "Ante Budimir score or assist",
+      "result": "won"
+     },
+     {
+      "leg": "Raul Garcia 2+ shots",
+      "result": "void"
+     },
+     {
+      "leg": "Jonathan Dubasin 1+ shots",
+      "result": "won"
+     }
+    ]
+   },
+   {
+    "bet_id": "4eece662",
+    "book": "PointsBet",
+    "event": "Houston Texans @ Jacksonville Jaguars (London)",
+    "pick": "SGP 3-leg A (legs not shown in screenshot)",
+    "stake": "1.00",
+    "reason": "parlay legs not listed in the pick text",
+    "legs": []
+   },
+   {
+    "bet_id": "2ddad0a7",
+    "book": "PointsBet",
+    "event": "Houston Texans @ Jacksonville Jaguars (London)",
+    "pick": "SGP 3-leg B (legs not shown in screenshot)",
+    "stake": "1.00",
+    "reason": "parlay legs not listed in the pick text",
+    "legs": []
+   },
+   {
+    "bet_id": "c8ff18d0",
+    "book": "PointsBet",
+    "event": "Houston Texans @ Jacksonville Jaguars (London)",
+    "pick": "SGP 3-leg C $0.50 (legs not shown in screenshot)",
+    "stake": "0.50",
+    "reason": "parlay legs not listed in the pick text",
+    "legs": []
+   }
+  ],
+  "last_settled": [],
+  "last_change_at": "2026-10-18 17:12 ET"
+ },
  "open_live_n": 12,
  "open_stake_by_book": {
   "bet365": 0,
@@ -5682,6 +5813,6 @@
   "PointsBet": 37.5,
   "theScore": 0.2
  },
- "hash": "311909e31089b2eff1330dadb875b77f525a7f97",
- "generated_at": "2026-10-18T16:55:58-04:00"
+ "hash": "ac36b6a01fd90db4dd13dfc005ccb0725cda671e",
+ "generated_at": "2026-10-18T17:12:11-04:00"
 }
