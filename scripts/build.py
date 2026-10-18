@@ -312,7 +312,7 @@ def build_bet(row):
     if is_multi and len(leg_texts) < 2:
         leg_texts = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]; same_game = False
     legs = [parse_leg(t, market) for t in leg_texts]
-    bet = {"date": row["date"], "book": row["book"], "event": ev_clean, "market": market, "pick": pick,
+    bet = {"bet_id": row.get("bet_id", ""), "date": row["date"], "book": row["book"], "event": ev_clean, "market": market, "pick": pick,
            "start": row["start_et"], "price": row["price"], "boosted_price": row["boosted_price"],
            "stake": num(row["stake"]), "stake_note": "unconfirmed" if "unconfirmed" in row["stake"] else "",
            "to_win": num(row["to_win"]), "ev_pct": row["ev_pct"], "multi": is_multi, "legs": legs, "match": None,

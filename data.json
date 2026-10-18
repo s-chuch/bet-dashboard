@@ -39,6 +39,7 @@
  "total": 702.81,
  "open": [
   {
+   "bet_id": "5242e6b7",
    "date": "2026-10-16",
    "book": "Caesars",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
@@ -145,6 +146,7 @@
    "sport": "MLB"
   },
   {
+   "bet_id": "9c0f1d9f",
    "date": "2026-10-15",
    "book": "DraftKings",
    "event": "NBA Cup 2026",
@@ -168,6 +170,7 @@
    "sport": null
   },
   {
+   "bet_id": "c1c7958e",
    "date": "2026-10-16",
    "book": "Hard Rock",
    "event": "NFL Sun Oct 18 parlay",
@@ -294,10 +297,10 @@
       "snapshot": {
        "date": "2026-10-18T20:25Z",
        "period": 2,
-       "clock": 329.0,
+       "clock": 25.0,
        "state": "in",
        "completed": false,
-       "detail": "5:29 - 2nd",
+       "detail": "0:25 - 2nd",
        "teams": [
         {
          "id": "12",
@@ -307,7 +310,7 @@
          "nick": "Chiefs",
          "location": "Kansas City",
          "home": true,
-         "score": "9"
+         "score": "16"
         },
         {
          "id": "24",
@@ -991,6 +994,7 @@
    "sport": "NFL"
   },
   {
+   "bet_id": "c2582df3",
    "date": "2026-10-16",
    "book": "theScore",
    "event": "Tampa Bay Rays @ Cleveland Guardians",
@@ -1093,6 +1097,7 @@
    "sport": "MLB"
   },
   {
+   "bet_id": "99db10eb",
    "date": "2026-10-17",
    "book": "PointsBet",
    "event": "Dallas Cowboys @ Green Bay Packers",
@@ -2027,6 +2032,7 @@
    "sport": "NFL"
   },
   {
+   "bet_id": "d46d9fcb",
    "date": "2026-10-17",
    "book": "FanDuel",
    "event": "EPL 2026/27 Outrights",
@@ -2050,6 +2056,7 @@
    "sport": null
   },
   {
+   "bet_id": "10edceb9",
    "date": "2026-10-17",
    "book": "bet365",
    "event": "Osasuna vs Racing Santander",
@@ -2139,6 +2146,7 @@
    "sport": "Soccer"
   },
   {
+   "bet_id": "f6d731b5",
    "date": "2026-10-17",
    "book": "Caesars",
    "event": "Dallas Cowboys @ Green Bay Packers",
@@ -3076,6 +3084,7 @@
    "sport": "NFL"
   },
   {
+   "bet_id": "2146f957",
    "date": "2026-10-17",
    "book": "Caesars",
    "event": "NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL",
@@ -3119,6 +3128,7 @@
    "sport": null
   },
   {
+   "bet_id": "4eece662",
    "date": "2026-10-17",
    "book": "PointsBet",
    "event": "Houston Texans @ Jacksonville Jaguars",
@@ -3142,6 +3152,7 @@
    "sport": null
   },
   {
+   "bet_id": "2ddad0a7",
    "date": "2026-10-17",
    "book": "PointsBet",
    "event": "Houston Texans @ Jacksonville Jaguars",
@@ -3165,6 +3176,7 @@
    "sport": null
   },
   {
+   "bet_id": "2311eef1",
    "date": "2026-10-18",
    "book": "PointsBet",
    "event": "Chicago Red Stars Women v Seattle Reign Women",
@@ -3191,6 +3203,7 @@
    "sport": null
   },
   {
+   "bet_id": "c8ff18d0",
    "date": "2026-10-18",
    "book": "PointsBet",
    "event": "Houston Texans @ Jacksonville Jaguars",
@@ -4347,11 +4360,11 @@
     }
    },
    "friend": {
-    "n": 4,
+    "n": 8,
     "w": 0,
     "l": 2,
     "p": 0,
-    "pending": 2,
+    "pending": 6,
     "win_pct": 0.0,
     "units": -2.0,
     "roi_pct": -100.0,
@@ -4364,6 +4377,98 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "0a8551b8",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "17:36",
+    "sport": "NBA",
+    "event": "Milwaukee Bucks @ Washington Wizards",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Milwaukee Bucks",
+    "book": "Caesars",
+    "rec_price": "+180",
+    "eff_price": "+360",
+    "fair_pct": "34.48",
+    "ev_pct": "58.6",
+    "stake": "25",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
+    "units": null
+   },
+   {
+    "rec_id": "a3b22018",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "17:36",
+    "sport": "NBA",
+    "event": "Sacramento Kings @ Los Angeles Clippers",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Sacramento Kings",
+    "book": "Caesars",
+    "rec_price": "+150",
+    "eff_price": "+300",
+    "fair_pct": "38.31",
+    "ev_pct": "53.2",
+    "stake": "25",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
+    "units": null
+   },
+   {
+    "rec_id": "abc39b7c",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "17:36",
+    "sport": "NHL",
+    "event": "Carolina Hurricanes @ Calgary Flames",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Calgary Flames",
+    "book": "Caesars",
+    "rec_price": "+182",
+    "eff_price": "+364",
+    "fair_pct": "33.02",
+    "ev_pct": "53.2",
+    "stake": "25",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
+    "units": null
+   },
+   {
+    "rec_id": "daaea44d",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "17:36",
+    "sport": "NHL",
+    "event": "Colorado Avalanche @ Philadelphia Flyers",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Philadelphia Flyers",
+    "book": "Caesars",
+    "rec_price": "+178",
+    "eff_price": "+356",
+    "fair_pct": "33.69",
+    "ev_pct": "53.6",
+    "stake": "25",
+    "promo": "profit boost",
+    "friend": "yes",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
+    "units": null
+   },
    {
     "rec_id": "5d595bd9",
     "rec_date": "2026-10-18",
@@ -6151,6 +6256,6 @@
   "PointsBet": 37.5,
   "theScore": 0.2
  },
- "hash": "87aaa3647d1de643e6655e0311d65711785f00f6",
- "generated_at": "2026-10-18T21:30:18+00:00"
+ "hash": "87c337b7a28f188b6f3e4c25cf2852d26429b0e8",
+ "generated_at": "2026-10-18T21:44:41+00:00"
 }
