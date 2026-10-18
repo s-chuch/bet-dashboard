@@ -86,13 +86,13 @@ no `javascript:` URLs. CI fails on violations.
 custom HTTP headers, so CSP works only via meta tags and `frame-ancestors` (clickjacking protection) cannot be enforced.
 
 **Repo settings to enable manually (Settings):**
-- [ ] Branches / Rulesets: protect `main` (block force-push and deletion) but allow `github-actions[bot]` to push, or add the bot as a ruleset bypass actor.
-- [ ] Code security: enable **Secret scanning** and **Push protection**.
-- [ ] Code security: enable **Private vulnerability reporting**.
-- [ ] Code security: enable **Dependabot alerts** (and security updates).
-- [ ] Actions -> General: **Require approval for all outside collaborators**.
-- [ ] Actions -> General: Workflow permissions = **Read repository contents** (read-only default); allow only GitHub-owned, verified-creator or SHA-pinned actions.
-- [ ] Pages (only while still on GitHub Pages): tick **Enforce HTTPS**.
+- [ ] [Branches / Rulesets](https://github.com/s-chuch/bet-dashboard/settings/rules): protect `main` (block force-push and deletion) but allow `github-actions[bot]` to push, or add the bot as a ruleset bypass actor.
+- [ ] [Code security](https://github.com/s-chuch/bet-dashboard/settings/security_analysis): enable **Secret scanning** and **Push protection**.
+- [ ] [Code security](https://github.com/s-chuch/bet-dashboard/settings/security_analysis): enable **Private vulnerability reporting**.
+- [ ] [Code security](https://github.com/s-chuch/bet-dashboard/settings/security_analysis): enable **Dependabot alerts** (and security updates).
+- [ ] [Actions -> General](https://github.com/s-chuch/bet-dashboard/settings/actions): **Require approval for all outside collaborators**.
+- [ ] [Actions -> General](https://github.com/s-chuch/bet-dashboard/settings/actions): Workflow permissions = **Read repository contents** (read-only default); allow only GitHub-owned, verified-creator or SHA-pinned actions.
+- [ ] [Pages](https://github.com/s-chuch/bet-dashboard/settings/pages) (only while still on GitHub Pages): tick **Enforce HTTPS**.
 
 ## Manual settle from the Logs page
 `manual-settle.yml` (`workflow_dispatch` only, so only people with repo write access can run it) settles one open bet:
@@ -107,11 +107,11 @@ commits `manual settle <id> <result>` and pushes. It shares the `autorun` concur
 GitHub Pages is always public on free plans, so to put a login in front of the site the repo goes **private** and the
 site is served by **Cloudflare Pages**, protected by **Cloudflare Access** (free plan, up to 50 users). Nothing else changes:
 GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on every push to `main`.
-1. **Cloudflare account** (free): dash.cloudflare.com -> sign up. Then *Zero Trust* (left menu), pick a team name, choose the **Free** plan (it may ask for a card to verify; the free plan is not charged).
+1. **Cloudflare account** (free): [dash.cloudflare.com](https://dash.cloudflare.com/sign-up) -> sign up. Then *Zero Trust* (left menu), pick a team name, choose the **Free** plan (it may ask for a card to verify; the free plan is not charged).
 2. **Pages project**: *Workers & Pages -> Create -> Pages -> Connect to Git* -> authorise the Cloudflare GitHub app for `s-chuch/bet-dashboard` (works for private repos) -> project name e.g. `bet-tracker`, production branch `main`, **no build command, output directory `/`** -> Save and Deploy. The site is now at `https://bet-tracker.pages.dev`.
 3. **Login**: *Zero Trust -> Access -> Applications -> Add -> Self-hosted* -> application domain `bet-tracker.pages.dev` (also add `*.bet-tracker.pages.dev` so preview URLs are covered) -> policy **Allow**, include **Emails** = your email -> identity provider **One-time PIN** (default) -> Save. Visiting the site now asks for an emailed code (session length is configurable, e.g. 30 days, so the phone rarely asks).
 4. **Check** in a private/incognito window that `https://bet-tracker.pages.dev/data.json` shows the login page, not JSON.
-5. **Make the repo private**: GitHub -> Settings -> General -> Danger Zone -> Change visibility -> Private. GitHub Pages is switched off automatically. Re-check *Settings -> Actions -> General* still allows workflows, and that the Cloudflare app keeps access.
+5. **Make the repo private**: GitHub -> Settings -> General -> Danger Zone -> [Change visibility](https://github.com/s-chuch/bet-dashboard/settings#danger-zone) -> Private. GitHub Pages is switched off automatically. Re-check *Settings -> Actions -> General* still allows workflows, and that the Cloudflare app keeps access.
 6. **Actions minutes**: private repos on the free plan get 2,000 min/month. **Change the `cron` line in `.github/workflows/autorun.yml` to `"7,37 11-23,0-5 * * *"`** (every 30 min, 07:00-01:59 ET, about 1,150 min/month; minutes 7/37 because GitHub drops top-of-hour schedules). The current 5-minute schedule would use ~8,600+ min/month and exhaust the free allowance. Watch *Settings -> Billing -> Actions usage* the first week; tighten or loosen the `cron` line as needed. Bots' scheduled runs stop after 60 days of repo inactivity only if data stops changing.
-7. **The Logs page** needs a GitHub token to read Actions runs and to settle bets (the repo is private): create a fine-grained token for this repo only (Actions: Read and write, Metadata: Read) and paste it into *Logs -> Activity -> Connect GitHub*. It is stored only in that browser.
+7. **The Logs page** needs a GitHub token to read Actions runs and to settle bets (the repo is private): create a [fine-grained token](https://github.com/settings/personal-access-tokens/new?name=bet-tracker&target_name=s-chuch&expires_in=90&actions=write&metadata=read) for this repo only (Actions: Read and write, Metadata: Read; the link pre-fills them) and paste it into *Logs -> Activity -> Connect GitHub*. It is stored only in that browser.
 **Honest limits:** anything that was public before stays in whatever copies, forks or caches already exist, so treat past data as seen. Cloudflare can serve a single page but the repo/Actions logs are private to you. Never print bet data in workflow logs on a public repo.

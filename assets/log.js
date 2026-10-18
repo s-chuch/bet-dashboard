@@ -240,8 +240,8 @@ function connectHtml(){
   var bad=S.tokenBad;
   return '<div class="sconnect"><div class="ct">'+(bad?'GitHub token rejected':'Connect GitHub')+'</div>'+
     (bad?'<div class="serr" role="alert">'+esc(S.tokenMsg||'The saved token was rejected (bad or expired). Paste a new one.')+'</div>':'<p class="muted" style="margin:4px 0 8px;font-size:13px">One-time setup so the Win / Void / Loss buttons can run the settle workflow.</p>')+
-    '<ol><li>On GitHub: Settings → Developer settings → Fine-grained tokens → Generate new token.</li>'+
-    '<li>Repository access: <b>Only select repositories</b> → s-chuch/bet-dashboard. Permissions: <b>Actions: Read and write</b> and <b>Metadata: Read-only</b>, nothing else.</li>'+
+    '<ol><li><a class="tlink" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens/new?name=bet-tracker&amp;description=Bet+tracker+page%3A+settle+bets+and+read+Actions+runs&amp;target_name=s-chuch&amp;expires_in=90&amp;actions=write&amp;metadata=read">Open GitHub token page ↗</a> (name, owner and permissions are pre-filled; you only pick the repository and generate).</li>'+
+    '<li>Repository access: <b>Only select repositories</b> → s-chuch/bet-dashboard. Check Permissions shows <b>Actions: Read and write</b> and <b>Metadata: Read-only</b>, nothing else. Manage or revoke later in <a class="tlink" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens">your tokens ↗</a>.</li>'+
     '<li>Paste the token here. It stays in this browser only and is sent only to api.github.com.</li></ol>'+
     '<div class="trow"><input type="password" id="tok-in" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub fine-grained token" value="'+esc(S.tokenDraft)+'"><button type="button" class="btn pri" data-act="savetok">Save</button></div>'+
     (S.tokenMsg&&!bad?'<div class="serr" role="alert">'+esc(S.tokenMsg)+'</div>':'')+'</div>'}
