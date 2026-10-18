@@ -1,0 +1,102 @@
+ts_et,book,bet_id,event_type,amount,note
+2026-10-17 19:27,DraftKings,,anchor,39.07,init: app 12:06 PM Sat (before $0.30 Alabama live ML)
+2026-10-17 19:27,FanDuel,,anchor,154.44,init: app 12:08 PM Sat (2026-10-17)
+2026-10-17 19:27,Caesars,,anchor,203.36,init: Caesars app Oct 16 4:20 PM (2026-10-16)
+2026-10-17 19:27,PointsBet,,anchor,86.71,init: app 6:2x PM Sat (Drive screenshot) (2026-10-17)
+2026-10-17 19:27,theScore,,anchor,30.75,init: app 12:09 PM Sat (2026-10-17)
+2026-10-17 19:27,bet365,,anchor,54.09,init: app 12:09 PM Sat (2026-10-17)
+2026-10-17 19:27,Hard Rock,,anchor,8.00,init: after $5 No Sweat NFL parlay (2026-10-16)
+2026-10-17 19:27,FanDuel,628b6fe8,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,76ac7eed,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,theScore,d764a01e,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,14bfbcf9,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,97924b77,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,11597721,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,5242e6b7,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,03ed941d,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,9c0f1d9f,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Hard Rock,c1c7958e,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,theScore,9c541f38,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,theScore,c2582df3,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,117ab8f0,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,99db10eb,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,ea9d0f46,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,090012ce,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,2aeaa37c,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,6d9e7dad,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,954e549b,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,55b1c74b,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,8f065e78,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,775f777d,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,f6a067c2,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,ebfff120,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,f810ac6f,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,44b49618,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,2470af24,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,be110818,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,FanDuel,d46d9fcb,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,theScore,51bcc500,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,10edceb9,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,09aa79c2,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,f3eaee86,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,88965461,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,88965461,return,0.46,won (settled after 12:09 PM bet365 snapshot)
+2026-10-17 19:27,bet365,c1efdf82,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,a2d983f8,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,bet365,8f12435e,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,8cd215df,stake,-0.30,stake (placed after 12:06 PM DK snapshot)
+2026-10-17 19:27,Caesars,b174ee37,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,f104ae9e,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,762a175b,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,f6d731b5,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,2c5c0e3d,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,2146f957,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,Caesars,31523b92,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,DraftKings,3c3918c1,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,4eece662,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,2ddad0a7,stake,0.00,"pre-anchor, already reflected"
+2026-10-17 19:27,PointsBet,97924b77,return,9.00,won
+2026-10-17 19:27,PointsBet,ea9d0f46,return,44.23,won
+2026-10-17 19:27,DraftKings,8cd215df,settled,0.00,"lost, no return"
+2026-10-17 19:27,Caesars,2c5c0e3d,settled,0.00,"lost, no return"
+2026-10-17 19:27,theScore,9c541f38,settled,0.00,"lost, no return"
+2026-10-17 19:27,DraftKings,55b1c74b,return,0.38,won
+2026-10-17 19:27,bet365,f3eaee86,return,0.52,won
+2026-10-17 19:27,bet365,a2d983f8,return,0.47,won
+2026-10-17 19:27,bet365,8f12435e,settled,0.00,"lost, no return"
+2026-10-17 19:27,DraftKings,8f065e78,settled,0.00,"lost, no return"
+2026-10-18 08:34,PointsBet,05760e74,stake,-25.00,stake
+2026-10-18 08:34,PointsBet,2311eef1,stake,-10.00,stake
+2026-10-18 08:34,PointsBet,43fe2d05,stake,-10.00,stake
+2026-10-18 08:34,PointsBet,55dd52df,stake,-10.00,stake
+2026-10-18 08:34,PointsBet,c8ff18d0,stake,-0.50,stake
+2026-10-18 08:34,PointsBet,,anchor,84.44,app My Bets 8:29 AM Sun Oct 18 (Drive IMG_2887-2891)
+2026-10-18 16:55,DraftKings,76ac7eed,return,1.69,won
+2026-10-18 16:55,DraftKings,954e549b,return,22.40,won
+2026-10-18 16:55,PointsBet,117ab8f0,return,34.62,won
+2026-10-18 16:55,PointsBet,05760e74,return,33.33,won
+2026-10-18 16:55,PointsBet,55dd52df,return,32.50,won
+2026-10-18 16:55,bet365,09aa79c2,return,0.46,won
+2026-10-18 16:55,bet365,c1efdf82,return,0.50,won
+2026-10-18 16:55,FanDuel,be110818,return,1.63,won
+2026-10-18 16:55,FanDuel,628b6fe8,settled,0.00,"lost, no return"
+2026-10-18 16:55,theScore,d764a01e,settled,0.00,"lost, no return"
+2026-10-18 16:55,FanDuel,14bfbcf9,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,11597721,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,03ed941d,settled,0.00,"lost, no return"
+2026-10-18 16:55,PointsBet,090012ce,settled,0.00,"lost, no return"
+2026-10-18 16:55,PointsBet,2aeaa37c,settled,0.00,"lost, no return"
+2026-10-18 16:55,FanDuel,6d9e7dad,settled,0.00,"lost, no return"
+2026-10-18 16:55,DraftKings,775f777d,settled,0.00,"lost, no return"
+2026-10-18 16:55,DraftKings,f6a067c2,settled,0.00,"lost, no return"
+2026-10-18 16:55,DraftKings,ebfff120,settled,0.00,"lost, no return"
+2026-10-18 16:55,FanDuel,f810ac6f,settled,0.00,"lost, no return"
+2026-10-18 16:55,FanDuel,44b49618,settled,0.00,"lost, no return"
+2026-10-18 16:55,FanDuel,2470af24,settled,0.00,"lost, no return"
+2026-10-18 16:55,theScore,51bcc500,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,b174ee37,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,f104ae9e,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,762a175b,settled,0.00,"lost, no return"
+2026-10-18 16:55,Caesars,31523b92,settled,0.00,"lost, no return"
+2026-10-18 16:55,DraftKings,3c3918c1,settled,0.00,"lost, no return"
+2026-10-18 16:55,PointsBet,43fe2d05,settled,0.00,"lost, no return"
