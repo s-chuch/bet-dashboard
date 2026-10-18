@@ -7,14 +7,14 @@ repository **Security** tab -> **Report a vulnerability**. Do not open a public 
 
 ## What is public (by design)
 
-This repository and its GitHub Pages site are public. Everything committed here is world-readable, including
+While the repository is public (and on GitHub Pages), everything committed here is world-readable, including
 bets, stakes, results, P&L, ledger entries and book balances (`data/`, `data.json`, `stats.json`, `archive.json`,
-`log.json`). Do not treat that data as confidential, and do not commit anything you would not publish.
+`log.json`). Do not treat that data as confidential while the repo is public. After moving to a private repo behind Cloudflare Access (README, *Private hosting*) it is visible only to the repo owner and anyone allowed by the Access policy; still never commit credentials.
 
 ## Credentials
 
 No credentials, API keys or personal accounts are stored in the repository. The automation runs on GitHub Actions
-with the built-in short-lived `GITHUB_TOKEN` only (contents: write, pages: write), and fetches public ESPN data.
+with the built-in short-lived `GITHUB_TOKEN` only (contents: write only), and fetches public ESPN data.
 CI scans tracked files for common token and private-key patterns.
 
 ## Scope

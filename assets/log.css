@@ -181,3 +181,5 @@
 .rbody{padding:0 12px 12px;display:grid;gap:6px;border-top:1px solid var(--line);padding-top:10px}
 .rnums{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--mut)}
 .rnums b{color:var(--txt)}
+
+a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;text-decoration:none;box-sizing:border-box}

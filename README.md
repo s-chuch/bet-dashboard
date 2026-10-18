@@ -1,6 +1,6 @@
 # bet-dashboard — Shawn's bet tracker (runs itself on GitHub)
 
-Live site: https://s-chuch.github.io/bet-dashboard/ (GitHub Pages, branch `main`, root). Three static pages, all
+Live site: hosted on Cloudflare Pages behind a login (see **Private hosting** below; before that, https://s-chuch.github.io/bet-dashboard/ on GitHub Pages). Three static pages, all
 vanilla JS from `assets/`, all reading the generated JSON in the repo root:
 | Page | Shows | Reads |
 |---|---|---|
@@ -12,7 +12,7 @@ vanilla JS from `assets/`, all reading the generated JSON in the repo root:
 ## What runs where
 | What | Where | How often |
 |---|---|---|
-| `scripts/autorun.py` (settle → archive → balances → Tracker P&L → picks grading → rebuild `data.json`, `stats.json`, `archive.json`, `log.json`) | GitHub Actions, `.github/workflows/autorun.yml` | cron `*/5 * * * *` (GitHub may delay scheduled runs 5–20 min) + manual "Run workflow" |
+| `scripts/autorun.py` (settle → archive → balances → Tracker P&L → picks grading → rebuild `data.json`, `stats.json`, `archive.json`, `log.json`) | GitHub Actions, `.github/workflows/autorun.yml` | cron every 5 min while public (every 30 min once private, see **Private hosting**); GitHub may delay scheduled runs + manual "Run workflow" |
 | Live scores, WINNING/LOSING pills, leg bars, wagered brackets | the browser (`index.html`) | every 10 s while the page is open |
 | Logging new bets, app-balance anchors, Drive screenshots | box (agent) via the wrappers below | when Shawn sends a bet / balance |
 
@@ -70,11 +70,11 @@ Manual commands: `python3 scripts/autorun.py --dry-run` (writes nothing), `pytho
 
 ## Security & automation
 **What is hardened.** `autorun.yml` runs only on `s-chuch/bet-dashboard` (not forks), denies all token permissions
-at the top level and grants `contents: write` + `pages: write` to the one job (which only runs on `main`), pins every action to a commit SHA
+at the top level and grants only `contents: write` to the one job (which only runs on `main`), pins every action to a commit SHA
 (Dependabot bumps them weekly), uses a 15-minute timeout, passes values through `env` rather than `${{ }}` in scripts,
 commits only `data/`, `data.json`, `stats.json`, `archive.json`, `log.json`, and ends with a step that fails the run
 if anything went wrong (which also turns the page's health badge red). Bot commits count as repo activity, so the
-5-minute schedule is not auto-disabled after 60 days. `ci.yml` (PRs and non-main pushes, read-only token) compiles
+schedule is not auto-disabled after 60 days. `ci.yml` (PRs and non-main pushes, read-only token) compiles
 the scripts, validates bet CSV headers / unique `bet_id`s across `bets.csv` + `data/archive/bets-*.csv` / JSON files, scans for secret patterns, and enforces the
 page rule below. See `SECURITY.md` for reporting.
 
@@ -92,7 +92,7 @@ custom HTTP headers, so CSP works only via meta tags and `frame-ancestors` (clic
 - [ ] Code security: enable **Dependabot alerts** (and security updates).
 - [ ] Actions -> General: **Require approval for all outside collaborators**.
 - [ ] Actions -> General: Workflow permissions = **Read repository contents** (read-only default); allow only GitHub-owned, verified-creator or SHA-pinned actions.
-- [ ] Pages: tick **Enforce HTTPS**.
+- [ ] Pages (only while still on GitHub Pages): tick **Enforce HTTPS**.
 
 ## Manual settle from the Logs page
 `manual-settle.yml` (`workflow_dispatch` only, so only people with repo write access can run it) settles one open bet:
@@ -102,3 +102,16 @@ commits `manual settle <id> <result>` and pushes. It shares the `autorun` concur
 `POST https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/manual-settle.yml/dispatches` with
 `{"ref":"main","inputs":{"bet_id":"...","result":"won","profit":""}}` using a fine-grained token limited to this repo
 (Actions: read and write, Metadata: read). Never add other triggers to that workflow.
+
+## Private hosting (free): private repo + Cloudflare Pages + Cloudflare Access
+GitHub Pages is always public on free plans, so to put a login in front of the site the repo goes **private** and the
+site is served by **Cloudflare Pages**, protected by **Cloudflare Access** (free plan, up to 50 users). Nothing else changes:
+GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on every push to `main`.
+1. **Cloudflare account** (free): dash.cloudflare.com -> sign up. Then *Zero Trust* (left menu), pick a team name, choose the **Free** plan (it may ask for a card to verify; the free plan is not charged).
+2. **Pages project**: *Workers & Pages -> Create -> Pages -> Connect to Git* -> authorise the Cloudflare GitHub app for `s-chuch/bet-dashboard` (works for private repos) -> project name e.g. `bet-tracker`, production branch `main`, **no build command, output directory `/`** -> Save and Deploy. The site is now at `https://bet-tracker.pages.dev`.
+3. **Login**: *Zero Trust -> Access -> Applications -> Add -> Self-hosted* -> application domain `bet-tracker.pages.dev` (also add `*.bet-tracker.pages.dev` so preview URLs are covered) -> policy **Allow**, include **Emails** = your email -> identity provider **One-time PIN** (default) -> Save. Visiting the site now asks for an emailed code (session length is configurable, e.g. 30 days, so the phone rarely asks).
+4. **Check** in a private/incognito window that `https://bet-tracker.pages.dev/data.json` shows the login page, not JSON.
+5. **Make the repo private**: GitHub -> Settings -> General -> Danger Zone -> Change visibility -> Private. GitHub Pages is switched off automatically. Re-check *Settings -> Actions -> General* still allows workflows, and that the Cloudflare app keeps access.
+6. **Actions minutes**: private repos on the free plan get 2,000 min/month. **Change the `cron` line in `.github/workflows/autorun.yml` to `"7,37 11-23,0-5 * * *"`** (every 30 min, 07:00-01:59 ET, about 1,150 min/month; minutes 7/37 because GitHub drops top-of-hour schedules). The current 5-minute schedule would use ~8,600+ min/month and exhaust the free allowance. Watch *Settings -> Billing -> Actions usage* the first week; tighten or loosen the `cron` line as needed. Bots' scheduled runs stop after 60 days of repo inactivity only if data stops changing.
+7. **The Logs page** needs a GitHub token to read Actions runs and to settle bets (the repo is private): create a fine-grained token for this repo only (Actions: Read and write, Metadata: Read) and paste it into *Logs -> Activity -> Connect GitHub*. It is stored only in that browser.
+**Honest limits:** anything that was public before stays in whatever copies, forks or caches already exist, so treat past data as seen. Cloudflare can serve a single page but the repo/Actions logs are private to you. Never print bet data in workflow logs on a public repo.

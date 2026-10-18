@@ -317,8 +317,8 @@ $('settle-box').addEventListener('click',function(e){
   else if(a==='confirm')sendSettle(id);
   else if(a==='savetok'){var v=($('tok-in').value||'').trim();
     if(!TOKEN_RE.test(v)){S.tokenDraft=v;S.tokenMsg='That does not look like a GitHub token. Paste the whole token.';renderSettle();focusEl('#tok-in');return}
-    S.token=v;S.tokenDraft='';S.tokenBad=false;S.tokenMsg='';if(!safeSet(TOKEN_KEY,v))S.tokenMsg='';renderSettle()}
-  else if(a==='disconnect'){S.token='';S.tokenBad=false;S.tokenMsg='';S.tokenDraft='';safeDel(TOKEN_KEY);renderSettle()}});
+    S.token=v;S.tokenDraft='';S.tokenBad=false;S.tokenMsg='';S.runs=null;S.runsErr=null;S.runsAuth=null;S.runsAt=0;if(!safeSet(TOKEN_KEY,v))S.tokenMsg='';renderSettle()}
+  else if(a==='disconnect'){S.token='';S.tokenBad=false;S.tokenMsg='';S.tokenDraft='';S.runs=null;S.runsErr=null;S.runsAuth=null;S.runsAt=0;safeDel(TOKEN_KEY);renderSettle()}});
 $('settle-box').addEventListener('input',function(e){var t=e.target;
   if(t.dataset&&t.dataset.profit){var st=stOf(t.dataset.profit);st.profit=t.value;if(st.perr){st.perr='';t.removeAttribute('aria-invalid');var er=t.closest('.sconf').querySelector('.serr');if(er)er.remove()}}
   else if(t.id==='tok-in')S.tokenDraft=t.value});
@@ -373,16 +373,26 @@ renderPicks();
 
 /* ---------- runs ---------- */
 function loadRuns(force){
+  if(!S.token){S.runs=null;S.runsErr=null;S.runsAuth='none';renderRuns();return}
   if(!force&&S.runsAt&&Date.now()-S.runsAt<RUNS_REFRESH)return;
-  if(!S.runs&&!S.runsErr)$('run-list').innerHTML='<div class="skeleton" style="height:140px"></div>';
+  if(!S.runs&&!S.runsErr&&!S.runsAuth)$('run-list').innerHTML='<div class="skeleton" style="height:140px"></div>';
   S.runsAt=Date.now();
-  fetch(RUNS_URL,{cache:'no-store',headers:{'Accept':'application/vnd.github+json'}}).then(function(r){
-    if(r.status===403||r.status===429)throw new Error('GitHub rate limit reached. Try again in a few minutes.');
-    if(!r.ok)throw new Error('GitHub API returned HTTP '+r.status);return r.json()}).then(function(j){S.runs=arr(j&&j.workflow_runs);S.runsErr=null;renderRuns()}).catch(function(e){
+  fetch(RUNS_URL,{cache:'no-store',headers:ghHeaders(),credentials:'omit',referrerPolicy:'no-referrer'}).then(function(r){
+    if(r.status===401||r.status===403||r.status===404){var e=new Error('auth');e.auth=r.status;throw e}
+    if(r.status===429)throw new Error('GitHub rate limit reached. Try again in a few minutes.');
+    if(!r.ok)throw new Error('GitHub API returned HTTP '+r.status);return r.json()}).then(function(j){S.runs=arr(j&&j.workflow_runs);S.runsErr=null;S.runsAuth=null;renderRuns()}).catch(function(e){
+    if(e&&e.auth){S.runs=null;S.runsErr=null;S.runsAuth=e.auth;S.runsAt=Date.now()-RUNS_REFRESH+30000;renderRuns();return}
     S.runsErr=(e&&e.message&&e.message.indexOf('GitHub')===0)?e.message:'Could not reach GitHub.';S.runsAt=Date.now()-RUNS_REFRESH+30000;renderRuns()})}
+function runsAuthHtml(code){
+  var why=code==='none'?'Auto-run history is read from the GitHub Actions API, which needs your GitHub token because the repository is private.':
+    code===404?'GitHub could not find the workflow with this token. The token must have access to s-chuch/bet-dashboard with <b>Actions: Read</b> (and Metadata: Read) permission.':
+    'GitHub rejected the saved token (HTTP '+code+'). It may be expired or lack <b>Actions: Read</b> access to s-chuch/bet-dashboard.';
+  return '<div class="sconnect" id="runs-connect"><div class="ct">Connect GitHub to see runs</div><p class="muted" style="margin:4px 0 8px;font-size:13px">'+why+'</p>'+
+    '<a class="btn pri" href="#activity" data-go="activity">'+(code==='none'?'Connect GitHub':'Update token')+' in Activity \u203a</a></div>'}
 function dur(a,b){var s=Math.round((pd(b)-pd(a))/1000);if(!isFinite(s)||s<0)return '';return s>=60?Math.floor(s/60)+'m '+(s%60)+'s':s+'s'}
 function renderRuns(){
   var h=$('health'),rl=$('run-list');
+  if(!S.runs&&S.runsAuth){h.innerHTML='';rl.innerHTML=runsAuthHtml(S.runsAuth);return}
   if(!S.runs){h.innerHTML='';rl.innerHTML='<div class="errbox"><strong>Runs unavailable.</strong><div class="muted" style="margin-top:4px">'+esc(S.runsErr||'')+'</div><p><button class="btn" id="retry" type="button">Retry</button></p></div>';return}
   var runs=S.runs.filter(function(r){return r&&/^\d+$/.test(String(r.id))});
   if(!runs.length){h.innerHTML='';rl.innerHTML='<div class="panel empty">No runs found.</div>';return}
@@ -400,7 +410,8 @@ function renderRuns(){
     var sha=String(r.head_sha||'').slice(0,7);
     return '<div class="runrow"><span class="dot '+st+'" aria-hidden="true"></span><div class="main"><div class="t1"><a href="https://github.com/s-chuch/bet-dashboard/actions/runs/'+r.id+'" target="_blank" rel="noopener noreferrer">Run #'+esc(r.run_number!=null?r.run_number:r.id)+'</a> <span class="chip '+(st==='ok'?'won':st==='bad'?'lost':'')+'">'+esc(label)+'</span></div>'+
       '<div class="t2">'+esc(fmtDT(r.created_at))+(d?' \u00b7 '+esc(d):'')+(sha&&/^[0-9a-f]+$/i.test(sha)?' \u00b7 <span class="mono">'+esc(sha)+'</span>':'')+'</div></div><div class="side">'+esc(r.event||'')+'<br>'+esc(ago(r.created_at))+'</div></div>'}).join('')+'</div>'}
-$('run-list').addEventListener('click',function(e){if(e.target.id==='retry'){S.runsErr=null;loadRuns(true)}});
+$('run-list').addEventListener('click',function(e){if(e.target.id==='retry'){S.runsErr=null;loadRuns(true)}
+  var g=e.target.closest&&e.target.closest('[data-go]');if(g){e.preventDefault();setTab(g.dataset.go);var sb=$('settle-box');if(sb&&sb.scrollIntoView)sb.scrollIntoView({block:'start'})}});
 
 /* ---------- boot ---------- */
 setTab(TABS.indexOf(location.hash.slice(1))>=0?location.hash.slice(1):(function(){var v=safeGet('log.tab');return TABS.indexOf(v)>=0?v:'archive'})());

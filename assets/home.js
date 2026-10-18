@@ -734,7 +734,7 @@ async function slowTick(){if(await loadData()){render();if(!document.hidden)fast
 slowTick().then(autoHealth);setInterval(slowTick,60000);           // data.json every 60s
 document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeout(fastTimer);else{tick1s();fastTick(true)}});
 
-// ---- auto-run health: last GitHub Actions run of autorun.yml (public API, no token) + needs_review from data.json
+// ---- auto-run health: last GitHub Actions run of autorun.yml (GitHub API; needs the optional token from Logs, else banner stays hidden) + needs_review from data.json
 const GH_RUNS="https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/autorun.yml/runs?per_page=10";
 let AUTO_RUNS=null,AUTO_AT=0;
 function renderReview(){
@@ -743,7 +743,13 @@ function renderReview(){
 }
 async function autoHealth(){
   renderReview();
-  if(!AUTO_RUNS||Date.now()-AUTO_AT>240000){try{const j=await getJSON(GH_RUNS);AUTO_RUNS=j.workflow_runs||[];AUTO_AT=Date.now()}catch(e){}}
+  let tok="";try{tok=localStorage.getItem("bt.gh.settle")||""}catch(e){}
+  if(!/^[A-Za-z0-9_\-]{20,255}$/.test(tok)){AUTO_RUNS=null;tok=""}
+  else if(!AUTO_RUNS||Date.now()-AUTO_AT>240000){try{
+    const r=await tfetch(GH_RUNS,{cache:"no-store",credentials:"omit",referrerPolicy:"no-referrer",headers:{"Accept":"application/vnd.github+json","Authorization":"Bearer "+tok,"X-GitHub-Api-Version":"2022-11-28"}});
+    if(r.status===401||r.status===403||r.status===404)AUTO_RUNS=null; // private repo / no access: stay silent
+    else if(r.ok){const j=await r.json();AUTO_RUNS=j.workflow_runs||[];AUTO_AT=Date.now()}
+  }catch(e){}}
   const el=$("autoh");if(!el)return;
   const fmt=d=>new Date(d).toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit"});
   if(!AUTO_RUNS){el.className="autoh";el.textContent="";return}

@@ -40,7 +40,6 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: write   # push the data commit to main
-      pages: write      # request a Pages build after pushing
     steps:
       - name: Validate inputs
         env:
@@ -91,7 +90,6 @@ jobs:
             git commit -qm "manual settle ${BET_ID} ${RESULT}"
             if git push -q origin HEAD:main; then
               echo "pushed"; pushed=1
-              gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null && echo "pages build requested" || echo "pages build request failed (non-fatal)"
               break
             fi
             echo "push rejected (box pushed meanwhile) - redoing on fresh main"; sleep 5
