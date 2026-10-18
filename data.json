@@ -179,10 +179,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 92.0,
+     "clock": 44.0,
      "state": "in",
      "completed": false,
-     "detail": "1:32 - 2nd",
+     "detail": "0:44 - 2nd",
      "teams": [
       {
        "id": "252",
@@ -192,7 +192,7 @@
        "nick": "Cougars",
        "location": "BYU",
        "home": true,
-       "score": "20"
+       "score": "21"
       },
       {
        "id": "87",
@@ -837,10 +837,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 3,
-     "clock": 719.0,
+     "clock": 564.0,
      "state": "in",
      "completed": false,
-     "detail": "11:59 - 3rd",
+     "detail": "9:24 - 3rd",
      "teams": [
       {
        "id": "58",
@@ -1715,10 +1715,10 @@
     "snapshot": {
      "date": "2026-10-17T23:00Z",
      "period": 3,
-     "clock": 719.0,
+     "clock": 564.0,
      "state": "in",
      "completed": false,
-     "detail": "11:59 - 3rd",
+     "detail": "9:24 - 3rd",
      "teams": [
       {
        "id": "58",
@@ -2592,11 +2592,11 @@
     "id": "401858263",
     "snapshot": {
      "date": "2026-10-17T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 894.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "14:54 - 3rd",
      "teams": [
       {
        "id": "2390",
@@ -3627,7 +3627,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -4391,7 +4391,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 21:04 ET",
+       "pulled": "2026-10-17 21:09 ET",
        "ml_home": 0.7551,
        "spread_home_line": -7.5,
        "spread_home_fair": 0.474,
@@ -5097,10 +5097,10 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-17 21:04 ET",
-       "ml_home": 0.7872,
+       "pulled": "2026-10-17 21:09 ET",
+       "ml_home": 0.7918,
        "spread_home_line": -8.0,
-       "spread_home_fair": 0.4654,
+       "spread_home_fair": 0.4687,
        "total_line": 41.5,
        "total_over_fair": 0.4977
       },
@@ -5927,7 +5927,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.7551,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.474,
@@ -6652,10 +6652,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
-     "ml_home": 0.5092,
+     "pulled": "2026-10-17 21:09 ET",
+     "ml_home": 0.5,
      "spread_home_line": -1.0,
-     "spread_home_fair": 0.4908,
+     "spread_home_fair": 0.4829,
      "total_line": 53.0,
      "total_over_fair": 0.5235
     },
@@ -7584,7 +7584,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.4274,
      "spread_home_line": 2.5,
      "spread_home_fair": 0.4829,
@@ -8527,7 +8527,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.3914,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5417,
@@ -9503,7 +9503,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -10230,7 +10230,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -10484,7 +10484,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.7551,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.474,
@@ -11175,7 +11175,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -11342,7 +11342,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -11491,10 +11491,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 92.0,
+     "clock": 44.0,
      "state": "in",
      "completed": false,
-     "detail": "1:32 - 2nd",
+     "detail": "0:44 - 2nd",
      "teams": [
       {
        "id": "252",
@@ -11504,7 +11504,7 @@
        "nick": "Cougars",
        "location": "BYU",
        "home": true,
-       "score": "20"
+       "score": "21"
       },
       {
        "id": "87",
@@ -12241,7 +12241,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.5701,
      "spread_home_line": -2.5,
      "spread_home_fair": 0.5092,
@@ -12992,7 +12992,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -13242,7 +13242,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -13476,7 +13476,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -13638,10 +13638,10 @@
     "snapshot": {
      "date": "2026-10-17T22:00Z",
      "period": 4,
-     "clock": 585.0,
+     "clock": 543.0,
      "state": "in",
      "completed": false,
-     "detail": "9:45 - 4th",
+     "detail": "9:03 - 4th",
      "teams": [
       {
        "id": "204",
@@ -13661,7 +13661,7 @@
        "nick": "Cougars",
        "location": "Washington State",
        "home": false,
-       "score": "16"
+       "score": "22"
       }
      ]
     },
@@ -14506,7 +14506,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 4th",
+     "detail": "Bot 4th",
      "teams": [
       {
        "id": "5",
@@ -14681,10 +14681,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
-     "ml_home": 0.5092,
+     "pulled": "2026-10-17 21:09 ET",
+     "ml_home": 0.5,
      "spread_home_line": -1.0,
-     "spread_home_fair": 0.4908,
+     "spread_home_fair": 0.4829,
      "total_line": 53.0,
      "total_over_fair": 0.5235
     },
@@ -15662,7 +15662,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-17 21:04 ET",
+     "pulled": "2026-10-17 21:09 ET",
      "ml_home": 0.4852,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5046,
@@ -16585,10 +16585,10 @@
     "snapshot": {
      "date": "2026-10-17T23:30Z",
      "period": 2,
-     "clock": 3720.0,
+     "clock": 4080.0,
      "state": "in",
      "completed": false,
-     "detail": "62'",
+     "detail": "68'",
      "teams": [
       {
        "id": "18418",
@@ -17045,6 +17045,6 @@
   "PointsBet": 72.0,
   "theScore": 0.6
  },
- "hash": "c5142ef3d3a26170659cc7d73e4d156da0ffd0df",
- "generated_at": "2026-10-17T21:04:48-04:00"
+ "hash": "a47c35ba8096605ea36f7c5f08b07269ada3499b",
+ "generated_at": "2026-10-17T21:09:54-04:00"
 }

@@ -13,6 +13,7 @@ h1{font-size:18px;margin:4px 0 2px}h2{font-size:14px;color:var(--mut);text-trans
 .bal{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
 .bal div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;justify-content:space-between}
 .bal .tot{grid-column:1/-1;font-weight:700;font-size:17px}
+.bal>div{align-items:center;gap:6px;min-width:0}.bal .bn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bal .bv{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;line-height:1.2;text-align:right}.bal .bv b{white-space:nowrap}.bal .bv .wag{margin-top:1px}
 .sum{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:6px}.sum small{display:block;font-size:10px;color:var(--mut)}.sum div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:12px;color:var(--mut)}.sum b{display:block;color:var(--txt);font-size:15px}
 .card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--pre);border-radius:12px;padding:10px 12px;margin-bottom:10px}
 .card.WINNING,.card.WON{border-left-color:var(--win)}.card.LOSING,.card.LOST{border-left-color:var(--lose)}.card.PUSH,.card.TIED{border-left-color:var(--push)}
@@ -775,7 +776,7 @@ function render(){
   upCards.sort((a,b)=>a.t-b.t);
   // per-book "(wagered)" = stakes on bets still live/upcoming; drops automatically once a bet goes final/LOST or is settled out of data.json
   const WAG={};for(const x of liveCards.concat(upCards))WAG[bkey(x.book)]=(WAG[bkey(x.book)]||0)+(x.stake||0);const wagT=Object.values(WAG).reduce((a,v)=>a+v,0);
-  setHTML($("bal"),D.balances.map(b=>`<div><span>${esc(b.book)}</span><b><i class="wag">(${money(WAG[bkey(b.book)]||0)})</i> ${money(b.balance)}</b></div>`).join("")+`<div class="tot"><span>Total</span><span><i class="wag">(${money(wagT)})</i> ${money(D.total)}</span></div>`);
+  setHTML($("bal"),D.balances.map(b=>`<div><span class="bn">${esc(b.book)}</span><span class="bv"><b>${money(b.balance)}</b><i class="wag">(${money(WAG[bkey(b.book)]||0)})</i></span></div>`).join("")+`<div class="tot"><span class="bn">Total</span><span class="bv"><b>${money(D.total)}</b><i class="wag">(${money(wagT)})</i></span></div>`);
   for(const x of D.settled_recent||[])if(x.date===TODAY&&x.pnl!=null)tonight+=x.pnl;
   const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
   $("sum").innerHTML=`<div>At risk<b>${money(atRisk)}</b><small>${openN} bet${openN===1?"":"s"} not final${FINAL_BI.size?` · ${FINAL_BI.size} final, unsettled`:""}</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout (est.)<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
