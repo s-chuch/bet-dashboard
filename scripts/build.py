@@ -63,6 +63,14 @@ def team_match(q, comp):
     qa = [alias.get(w, w) for w in qn]
     return len(qa) > 1 and all(any(d.startswith(w) for d in disp) for w in qa)
 
+TEAM_ALIASES = {r"chicago red stars": "Chicago Stars", r"^man utd$": "Manchester United", r"^man city$": "Manchester City",
+                r"^wolves$": "Wolverhampton", r"^spurs$": "Tottenham", r"^alaves$": "Alavés"}
+def team_alias(n):
+    """Book name -> the name ESPN uses (renames / short forms)."""
+    for k, v in TEAM_ALIASES.items():
+        if re.search(k, n, re.I): return v
+    return n
+
 def parse_date(row):
     s = row["start_et"].strip(); year = int(row["date"][:4])
     m = re.match(r"(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{1,2}):(\d{2}))?", s)
@@ -308,7 +316,7 @@ def build_bet(row):
     paths = candidate_paths(ev_raw, market)
     is_multi = bool(re.search(r"parlay|sgp|leg", market + " " + pick, re.I))
     leg_texts = [x for x in re.split(r"\s+\+\s+", pick) if x]
-    same_game = " @ " in ev_clean or " vs " in ev_clean.lower()
+    same_game = bool(re.search(r"\s@\s|\svs\.?\s|\sv\s", ev_clean, re.I))
     if is_multi and len(leg_texts) < 2:
         leg_texts = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]; same_game = False
     legs = [parse_leg(t, market) for t in leg_texts]
@@ -318,13 +326,17 @@ def build_bet(row):
            "to_win": num(row["to_win"]), "ev_pct": row["ev_pct"], "multi": is_multi, "legs": legs, "match": None,
            "sport": None}
     if same_game:
-        teams = [t.strip() for t in re.split(r"\s+@\s+|\s+vs\.?\s+", ev_clean, flags=re.I)]
-        bet["match"] = find_game(teams, paths, date)
+        teams = [t.strip() for t in re.split(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", ev_clean, flags=re.I)]
+        women_g = any(re.search(r"\s+(Women|W)$", t) for t in teams) or bool(re.search(r"NWSL|WNBA|\bWomen\b", ev_raw + " " + market))
+        teams = [team_alias(re.sub(r"\s+(Women|W)$", "", t)) for t in teams]
+        bet["match"] = find_game(teams, paths, date, women_g)
         if not bet["match"] and paths != TAGS["SOCCER"]:  # untagged soccer games (e.g. "Man City vs Ipswich Town")
-            bet["match"] = find_game(teams, TAGS["SOCCER"], date)
+            bet["match"] = find_game(teams, TAGS["SOCCER"], date, women_g)
         if bet["match"]:
             for L in legs:
                 if L.get("team"):  # resolve abbreviations like "SEA" against the matched game
+                    if re.search(r"\s+(Women|W)$", L["team"]): L["women"] = True
+                    L["team"] = team_alias(re.sub(r"\s+(Women|W)$", "", L["team"]))
                     L["team_ok"] = any(team_match(L["team"], {"team": {"displayName": t["name"], "abbreviation": t["abbr"]}})
                                        for t in bet["match"]["snapshot"]["teams"])
     else:
