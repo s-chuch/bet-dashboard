@@ -340,7 +340,7 @@ def pin_games(sid):
     if CI or os.environ.get("NO_PINNACLE"): return []   # Actions: use data/pregame_cache.json only
     if sid not in _pin:
         try:
-            sys.path.insert(0, HERE)
+            sys.path.insert(0, "/workspace/sportsbets")   # box-only scanner modules
             from ev_strict import pinnacle_sport
             from ev_finder import pinnacle_key
             _pin[sid] = pinnacle_sport(sid, pinnacle_key())
