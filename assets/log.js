@@ -197,8 +197,9 @@ function prepOpen(d){
     var r=(id&&byId[id])||byKey[revKey(b)]||null;
     return {i:i,id:id,book:String(b.book||''),event:String(b.event||''),market:String(b.market||''),pick:String(b.pick||''),stake:num(b.stake),
       toWin:(typeof b.to_win==='number'&&b.to_win>0)?b.to_win:null,price:b.price,bprice:b.boosted_price,start:String(b.start||''),sk:startMs(b),ts:(typeof b.start_ts==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z$/.test(b.start_ts))?Date.parse(b.start_ts):null,
-      review:!!r,reason:r?String(r.reason||'Needs review'):''}});
+      review:!!r,reason:r?String(r.reason||'Needs review'):'',cash:(typeof b.cash_stake==='number'&&b.cash_stake>=0)?b.cash_stake:null,payout:(typeof b.payout==='number'&&b.payout>0)?b.payout:null}});
   S.open.sort(function(a,b){return (a.sk===b.sk?a.i-b.i:a.sk<b.sk?-1:1)});   // strictly by start time, oldest first; needs-review bets keep their badge
+  S.bal=arr(d.balances).filter(function(x){return x&&typeof x==='object'&&typeof x.book==='string'&&x.book&&typeof x.balance==='number'&&isFinite(x.balance)}).map(function(x){return {book:x.book,cents:Math.round(x.balance*100),updated:String(x.updated||'')}});
   var u=d.unsettled&&typeof d.unsettled==='object'?d.unsettled:{};S.unsettled={n:(typeof u.n==='number'?u.n:null),cash:(typeof u.cash_stake==='number'?u.cash_stake:null)};
   S.openLoaded=true}
 function betById(id){for(var i=0;i<S.open.length;i++)if(S.open[i].id===id)return S.open[i];return null}
@@ -271,6 +272,7 @@ function renderSettle(){
   else{var list=S.open.filter(started);Object.keys(S.st).forEach(function(id){var q=S.st[id];if(q.mode==='done'&&q.bet&&!betById(id))list.push(q.bet)});
     if(!list.length)h+='<div class="empty">Nothing past its start time is waiting for a result \ud83c\udf89</div>';else h+='<div class="slist">'+settleByBook(list)+'</div>'}
   box.innerHTML=h+'</section>';
+  renderBalance();queueChain();
   if(fk){var els=box.querySelectorAll('button,input'),i,t=null;for(i=0;i<els.length;i++)if(focusKey(els[i])===fk){t=els[i];break}
     if(t&&!t.disabled){t.focus();if(ss!=null){try{t.setSelectionRange(ss,se)}catch(e){}}}}}
 function focusEl(sel){var e=$('settle-box').querySelector(sel);if(e)e.focus()}
@@ -279,7 +281,8 @@ function reconcile(){
   Object.keys(S.st).forEach(function(id){var st=S.st[id],here=!!betById(id);
     if(!here&&S.openLoaded){if(st.mode==='queued'||st.mode==='sending'){if(st.mode==='queued'){st.mode='done';changed=true;setTimeout(function(){delete S.st[id];renderSettle()},2500)}}
       else if(st.mode!=='done'){delete S.st[id];changed=true}}});
-  if(changed)renderSettle()}
+  if(changed)renderSettle();
+  setCheckDone();chainTick()}
 function ghHeaders(){return {'Authorization':'Bearer '+S.token,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}}
 function apiMsg(r,fallback){return r.json().then(function(j){return j&&typeof j.message==='string'?j.message:fallback},function(){return fallback})}
 function sendSettle(id){
@@ -340,6 +343,183 @@ $('settle-box').addEventListener('input',function(e){var t=e.target;
 $('settle-box').addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='tok-in'){e.preventDefault();var b=$('settle-box').querySelector('[data-act=savetok]');if(b)b.click()}
   else if(e.key==='Enter'&&e.target.dataset&&e.target.dataset.profit){e.preventDefault();sendSettle(e.target.dataset.profit)}
   else if(e.key==='Escape'){var c=e.target.closest&&e.target.closest('.sconf');if(c){var cb=c.querySelector('[data-act=cancel]');if(cb)cb.click()}}});
+/* ---------- balance check ---------- */
+var SET_API='https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/set-balance.yml',MAXC=14;
+S.bc={book:'',app:'',res:null,err:'',chain:null,set:null,confirm:false};
+function balOf(name){var l=arr(S.bal);for(var i=0;i<l.length;i++)if(l[i].book===name)return l[i];return null}
+function toCents(v){var m=/^([0-9]+)(?:\.([0-9]{1,2}))?$/.exec(v);return parseInt(m[1],10)*100+(m[2]?parseInt((m[2]+'0').slice(0,2),10):0)}
+function validAmt(v){return PROFIT_RE.test(v)&&v.length<=12}
+function cm(c,sign){return money(c/100,sign)}
+function runOk(st){return st.mode==='queued'&&st.runState==='success'}
+function anyBusy(){return Object.keys(S.st).some(function(id){var st=S.st[id];return busy(st)&&!runOk(st)})}
+function setBusy(){var s=S.bc.set;return !!s&&(s.mode==='sending'||s.mode==='queued')}
+function chainActive(){var c=S.bc.chain;return !!c&&c.active}
+// subsets of started open bets (each won / void / lost-or-pending) whose won+void amounts sum to the gap, in cents
+function findExpl(gap,cands){
+  var out=[],n=cands.length,pk=[];
+  function dfs(i,sum,cnt){
+    if(out.length>=4000)return;
+    if(sum===gap&&cnt>0){out.push(pk.slice());return}
+    if(sum>gap||i>=n)return;
+    dfs(i+1,sum,cnt);
+    var c=cands[i];
+    if(c.won){pk.push({i:i,r:'win',c:c.won});dfs(i+1,sum+c.won,cnt+1);pk.pop()}
+    if(c.void&&c.void!==c.won){pk.push({i:i,r:'void',c:c.void});dfs(i+1,sum+c.void,cnt+1);pk.pop()}}
+  dfs(0,0,0);
+  out.forEach(function(e){e.w=e.filter(function(x){return x.r==='win'}).length;e.si=e.reduce(function(a,x){return a+x.i},0)});
+  out.sort(function(a,b){return a.length-b.length||b.w-a.w||a.si-b.si});
+  return out.slice(0,3).map(function(e){return e.map(function(x){var b=cands[x.i].b;return {id:b.id,r:x.r,c:x.c,label:(b.event?b.event+' · ':'')+(b.pick||'(no pick)')}})})}
+function doCheck(){
+  var c=S.bc,v=String(c.app||'').trim();c.err='';c.confirm=false;
+  if(chainActive()||setBusy())return;
+  var bal=balOf(c.book);
+  if(!bal){c.res=null;c.err='Pick a book first.';renderBalance();return}
+  if(!validAmt(v)){c.res=null;c.err='Enter the app balance as a number like 164.26 (no $ or commas, at most 2 decimals).';renderBalance();focusBal('#bc-app');return}
+  var appC=toCents(v),gap=appC-bal.cents,r={book:bal.book,amount:v,appC:appC,trackC:bal.cents,gap:gap,kind:gap===0?'match':gap<0?'neg':'pos',expl:[],n:0};
+  if(r.kind==='pos'){
+    var now=Date.now(),all=S.open.filter(function(b){return b.book===bal.book&&b.ts!==null&&b.ts<=now}).sort(function(a,b){return a.ts-b.ts||a.i-b.i});
+    r.n=all.length;
+    var cands=all.slice(0,MAXC).map(function(b){return {b:b,won:b.payout!=null?Math.round(b.payout*100):null,void:(b.cash!=null&&b.cash>0)?Math.round(b.cash*100):null}});
+    r.expl=findExpl(gap,cands)}
+  c.res=r;c.chain=null;c.set=null;renderBalance()}
+function startChain(k){
+  var c=S.bc,r=c.res,e=r&&r.expl[k];
+  if(!e||!S.token||S.tokenBad||anyBusy()||setBusy()||chainActive())return;
+  c.chain={k:k,steps:e.map(function(x){return {id:x.id,r:x.r,sent:false}}),i:0,active:true,done:false,err:''};
+  renderBalance();chainTick()}
+function chainFail(msg){var c=S.bc.chain;if(!c)return;c.active=false;c.err=msg;renderBalance()}
+function chainTick(){
+  var c=S.bc.chain,g=0;if(!c||!c.active)return;
+  while(c.active&&c.i<c.steps.length&&g++<40){
+    var s=c.steps[c.i],b=betById(s.id),st=S.st[s.id];
+    if(!b){c.i++;continue}                        // left open: settled
+    if(!s.sent){
+      if(anyBusy())return;                       // one dispatch at a time
+      if(!S.token||S.tokenBad){chainFail('Connect GitHub first.');return}
+      var q=stOf(s.id);q.result=s.r==='win'?'win':'void';q.err='';q.perr='';q.runId='';q.profit='';
+      if(q.result==='win'&&b.toWin==null){
+        var pc=b.payout!=null?Math.round((b.payout-(b.cash||0))*100):0;
+        if(pc>0)q.profit=(pc/100).toFixed(2);
+        else{q.mode='confirm';renderSettle();chainFail('Profit is unknown for '+b.pick+'. Enter it in its Awaiting result card below, then press Settle these again.');return}}
+      s.sent=true;sendSettle(s.id);
+      if(!busy(q)){chainFail(q.err||'Not sent.')}
+      return}
+    if(st&&runOk(st)){c.i++;continue}             // run finished: next dispatch is safe
+    if(!st||st.mode==='idle'||st.mode==='confirm'){chainFail((st&&st.err)||'The settle did not go through.');return}
+    return}
+  if(c.active&&c.i>=c.steps.length){c.active=false;c.done=true;renderBalance()}}
+var chainQ=false;
+function queueChain(){if(chainQ||!S.bc.chain||!S.bc.chain.active)return;chainQ=true;Promise.resolve().then(function(){chainQ=false;chainTick()})}
+function stepStatus(c,k,i){
+  if(!c||c.k!==k)return '';
+  if(c.done||i<c.i)return ['ok','Settled'];
+  var s=c.steps[i];
+  if(i===c.i){var st=S.st[s.id],sl=st&&stateLine(st);
+    if(c.active)return sl?[sl[0],sl[1]]:['run',s.sent?'Settling…':'Next'];
+    return ['bad','Stopped']}
+  return ['',c.active?'Waiting':'Not sent']}
+function sendSet(){
+  var c=S.bc,r=c.res,s=c.set;
+  if(!r||!s||s.mode!=='confirm')return;
+  if(setBusy()||anyBusy()||chainActive())return;
+  if(!S.token){s.mode='idle';s.err='Connect GitHub first.';renderBalance();return}
+  if(!balOf(r.book)||balOf(r.book).book!==r.book||!validAmt(r.amount)){s.mode='idle';s.err='Invalid book or amount; not sent.';renderBalance();return}
+  s.mode='sending';s.err='';s.runId='';s.runState='';s.book=r.book;s.amount=r.amount;s.cents=toCents(r.amount);renderBalance();
+  var body=JSON.stringify({ref:'main',inputs:{book:r.book,amount:r.amount,note:'balance check'}});
+  fetch(SET_API+'/dispatches',{method:'POST',headers:Object.assign({'Content-Type':'application/json'},ghHeaders()),body:body,cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'}).then(function(x){
+    if(x.status===204){s.mode='queued';s.at=Date.now();s.deadline=s.at+POLL_MAX;s.runState='queued';renderBalance();startSetPoll();return}
+    return apiMsg(x,'HTTP '+x.status).then(function(m){
+      s.mode='idle';
+      if(x.status===401){S.tokenBad=true;S.tokenMsg='GitHub rejected the token (bad or expired). Paste a new one below.';s.err='Not sent: token rejected.'}
+      else if(x.status===403)s.err=/rate limit/i.test(m)?'GitHub rate limit reached. Try again in a few minutes.':'Not allowed: the token lacks permission. It needs Actions: Read and write on s-chuch/bet-dashboard.';
+      else if(x.status===404)s.err='GitHub could not find the set-balance workflow, or the token has no access to s-chuch/bet-dashboard.';
+      else if(x.status===422)s.err='GitHub rejected the request (422): '+m;
+      else s.err='GitHub returned HTTP '+x.status+': '+m;
+      renderBalance();if(x.status===401)renderSettle()})
+  }).catch(function(){s.mode='idle';s.err='Network error: could not reach GitHub. Nothing was sent.';renderBalance()})}
+var setT=0,setPolling=false;
+function startSetPoll(){if(!setT)setT=setInterval(setTick,POLL_MS)}
+function setTick(){
+  var s=S.bc.set;if(!s||s.mode!=='queued'){clearInterval(setT);setT=0;return}
+  if(document.hidden||setPolling)return;
+  setPolling=true;var now=Date.now(),dirty=false;
+  if(now>s.deadline&&s.runState!=='success'||now>s.deadline+POLL_MAX){s.mode='idle';s.err='Still not updated after 4 minutes. Check the run on GitHub, then refresh.';renderBalance();setPolling=false;return}
+  fetch(SET_API+'/runs?per_page=5',{headers:ghHeaders(),cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'}).then(function(r){
+    if(!r.ok){if(r.status===401){S.tokenBad=true;S.tokenMsg='GitHub rejected the token while checking the run.';dirty=true}return null}return r.json()}).catch(function(){return null}).then(function(j){
+    var runs=arr(j&&j.workflow_runs).filter(function(r){return r&&/^\d+$/.test(String(r.id))&&r.event==='workflow_dispatch'}).sort(function(a,b){return Date.parse(a.created_at)-Date.parse(b.created_at)});
+    if(!s.runId){var r0=runs.filter(function(r){return Date.parse(r.created_at)>=s.at-60000})[0];if(r0)s.runId=String(r0.id)}
+    var run=s.runId&&runs.filter(function(r){return String(r.id)===s.runId})[0];
+    if(run){var ns=run.status==='completed'?(run.conclusion==='success'?'success':'failed'):(run.status==='in_progress'?'in_progress':'queued');
+      if(ns!==s.runState){s.runState=ns;dirty=true}
+      if(ns==='failed'){s.mode='idle';s.err='The set-balance run failed ('+String(run.conclusion||'error')+'). The tracker balance was not changed.';dirty=true}}
+    if(dirty){renderBalance();if(S.tokenBad)renderSettle()}
+    return loadAll()}).then(function(){setPolling=false},function(){setPolling=false})}
+function setCheckDone(){var s=S.bc.set;if(!s||s.mode!=='queued')return;var b=balOf(s.book);if(b&&b.cents===s.cents){s.mode='done';renderBalance()}}
+function focusBal(sel){var e=$('bal-box').querySelector(sel);if(e)e.focus()}
+function balKey(el){return el?(el.id||((el.dataset.bact||'')+'|'+(el.dataset.k||''))):''}
+function runLink(id){return id&&/^\d+$/.test(String(id))?' <a href="https://github.com/s-chuch/bet-dashboard/actions/runs/'+esc(id)+'" target="_blank" rel="noopener noreferrer">View run</a>':''}
+function explHtml(r,k,off){
+  var e=r.expl[k],c=S.bc.chain,mine=c&&c.k===k,tot=e.reduce(function(a,x){return a+x.c},0),noId=e.some(function(x){return !x.id});
+  var h='<div class="bexp" data-k="'+k+'"><div class="bet"><span class="chip">Option '+(k+1)+'</span><span class="bsum">'+esc(cm(tot,true))+' from '+e.length+' bet'+(e.length===1?'':'s')+'</span></div><ul class="bit">'+
+    e.map(function(x,i){var ss=stepStatus(c,k,i);
+      return '<li><span class="bl">'+esc(x.label)+' → <b class="r-'+(x.r==='win'?'win':'void')+'">'+(x.r==='win'?'won':'void')+'</b> <span class="'+(x.r==='win'?'pos':'muted')+'">('+esc(cm(x.c,true))+')</span></span>'+
+        (ss?'<span class="bst '+esc(ss[0])+'">'+esc(ss[1])+'</span>':'')+'</li>'}).join('')+'</ul>';
+  if(mine&&c.err)h+='<div class="serr" role="alert">'+esc(c.err)+'</div>';
+  if(mine&&c.done)h+='<div class="sstat ok" role="status">All settled. The tracker balance updates after the next refresh.</div>';
+  if(noId)h+='<div class="snote">Settle unavailable: a bet here has no id in data.json yet.</div>';
+  h+='<button type="button" class="btn pri bgo" data-bact="settle" data-k="'+k+'"'+(off||noId||(c&&(c.active||c.done)&&mine)?' disabled':'')+'>'+(mine&&c.active?'Settling…':'Settle these')+'</button></div>';
+  return h}
+function renderBalance(){
+  var box=$('bal-box');if(!box)return;
+  var c=S.bc,ae=document.activeElement,fk=ae&&box.contains(ae)?balKey(ae):'',ss=null,se=null;
+  if(fk&&ae.tagName==='INPUT'){try{ss=ae.selectionStart;se=ae.selectionEnd}catch(e){}}
+  var h='<section class="panel bal" aria-labelledby="bal-h"><div class="shead"><h3 id="bal-h">Balance check</h3></div>';
+  if(!S.openLoaded||!arr(S.bal).length){
+    h+=!S.openLoaded?(S.dataErr?'<div class="empty">Balances unavailable ('+esc(S.dataErr)+').</div>':'<div class="skeleton" style="height:70px"></div>'):'<div class="empty">No book balances in data.json.</div>';
+    box.innerHTML=h+'</section>';return}
+  if(!balOf(c.book))c.book=S.bal[0].book;
+  var bal=balOf(c.book),r=c.res&&c.res.book===c.book?c.res:null,locked=chainActive()||setBusy(),off=!S.token||S.tokenBad||locked||anyBusy();
+  h+='<p class="bhint">Compare the tracker with the book’s app. Wins on games the tracker can’t see show up as a gap.</p>'+
+    '<div class="brow"><label class="bf"><span class="lbl">Book</span><select id="bc-book" aria-label="Book"'+(locked?' disabled':'')+'>'+S.bal.map(function(x){return '<option value="'+esc(x.book)+'"'+(x.book===c.book?' selected':'')+'>'+esc(x.book)+'</option>'}).join('')+'</select></label>'+
+    '<div class="bf"><span class="lbl">Tracker balance</span><div class="bv num" id="bc-track">'+esc(cm(bal.cents))+'</div></div></div>'+
+    '<div class="brow"><label class="bf"><span class="lbl">App balance now</span><input type="text" inputmode="decimal" id="bc-app" value="'+esc(c.app)+'" placeholder="e.g. 164.26" autocomplete="off"'+(c.err?' aria-invalid="true" aria-describedby="bc-err"':'')+'></label>'+
+    '<button type="button" class="btn pri bcheck" data-bact="check"'+(locked?' disabled':'')+'>Check</button></div>';
+  if(c.err)h+='<div class="serr" id="bc-err" role="alert">'+esc(c.err)+'</div>';
+  if(r){
+    var cur=balOf(r.book),matched=r.kind!=='match'&&cur&&cur.cents===r.appC;
+    if(r.kind==='match')h+='<div class="bres ok" role="status"><b>Matches ✓</b> <span class="muted">Tracker and app both show '+esc(cm(r.appC))+'.</span></div>';
+    else if(matched)h+='<div class="bres ok" role="status"><b>Balance now matches the app</b> <span class="muted">'+esc(r.book)+' is '+esc(cm(r.appC))+'.</span></div>';
+    else{
+      h+='<div class="bres" role="status"><div class="bgap">App is <b class="'+(r.gap>0?'pos':'neg')+'">'+esc(cm(Math.abs(r.gap)))+' '+(r.gap>0?'higher':'lower')+'</b> than the tracker ('+esc(cm(r.appC))+' vs '+esc(cm(r.trackC))+').</div>';
+      if(r.kind==='neg')h+='<p class="bnote">This can’t be explained by open bets: settling a bet never lowers the balance. Check for a withdrawal, a bet missing from the tracker, or a typo.</p>';
+      else if(!r.expl.length)h+='<p class="bnote">No combination of started open bets on '+esc(r.book)+' adds up to '+esc(cm(r.gap))+(r.n>MAXC?' (checked the '+MAXC+' earliest of '+r.n+')':r.n?' ('+r.n+' started bet'+(r.n===1?'':'s')+' checked)':' (none have started)')+'. It may be a deposit, a withdrawal or a bet the tracker doesn’t have.</p>';
+      else h+='<p class="bnote">Possible explanations'+(r.n>MAXC?' (from the '+MAXC+' earliest of '+r.n+' started bets)':'')+', fewest bets first:</p>'+r.expl.map(function(e,k){return explHtml(r,k,off)}).join('');
+      if(!S.token||S.tokenBad)h+='<div class="serr" role="alert">Connect GitHub first: use the Connect GitHub card under Awaiting result. These buttons stay disabled until then. <button type="button" class="btn sm" data-bact="goconnect">Go to card</button></div>';
+      var s=c.set;
+      h+='<div class="bset">';
+      if(s&&s.mode==='confirm')h+='<div class="sconf" role="group" aria-label="Confirm set balance"><div class="q">Set '+esc(r.book)+' to '+esc(money(r.appC/100))+'? This replaces the tracker balance.</div><div class="srow"><button type="button" class="btn sgo void" data-bact="setgo">Set balance</button><button type="button" class="btn" data-bact="setcancel">Cancel</button></div></div>';
+      else{
+        if(s&&(s.mode==='sending'||s.mode==='queued')){var t=s.mode==='sending'?'Sending to GitHub…':s.runState==='in_progress'?'Running…':s.runState==='success'?'Run finished — waiting for the site to update…':'Queued — updating…';
+          h+='<div class="sstat run" role="status"><span class="dot run" aria-hidden="true"></span><span>'+esc(t)+'</span></div>'}
+        if(s&&s.err)h+='<div class="serr" role="alert">'+esc(s.err)+runLink(s.runId)+'</div>';
+        h+='<button type="button" class="btn bgo" data-bact="setask"'+(off||setBusy()?' disabled':'')+'>Set balance to '+esc(money(r.appC/100))+'</button>'}
+      h+='</div></div>'}}
+  box.innerHTML=h+'</section>';
+  if(fk){var els=box.querySelectorAll('button,input,select'),i,t2=null;for(i=0;i<els.length;i++)if(balKey(els[i])===fk){t2=els[i];break}
+    if(t2&&!t2.disabled){t2.focus();if(ss!=null){try{t2.setSelectionRange(ss,se)}catch(e){}}}}}
+$('bal-box').addEventListener('click',function(e){
+  var t=e.target.closest('[data-bact]');if(!t||t.disabled)return;var a=t.dataset.bact,c=S.bc;
+  if(a==='check')doCheck();
+  else if(a==='settle')startChain(parseInt(t.dataset.k,10));
+  else if(a==='setask'){if(!c.res||!S.token||S.tokenBad||setBusy()||anyBusy()||chainActive())return;c.set={mode:'confirm',err:''};renderBalance();focusBal('[data-bact=setgo]')}
+  else if(a==='setcancel'){c.set=null;renderBalance();focusBal('[data-bact=setask]')}
+  else if(a==='setgo')sendSet();
+  else if(a==='goconnect'){var sb=$('settle-box');if(sb&&sb.scrollIntoView)sb.scrollIntoView({block:'start'})}});
+$('bal-box').addEventListener('input',function(e){if(e.target.id==='bc-app')c_app(e.target.value)});
+function c_app(v){S.bc.app=v}
+$('bal-box').addEventListener('change',function(e){if(e.target.id==='bc-book'){var c=S.bc;if(chainActive()||setBusy())return;c.book=e.target.value;c.res=null;c.err='';c.chain=null;c.set=null;renderBalance();focusBal('#bc-book')}});
+$('bal-box').addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='bc-app'){e.preventDefault();doCheck()}
+  else if(e.key==='Escape'&&S.bc.set&&S.bc.set.mode==='confirm'){S.bc.set=null;renderBalance();focusBal('[data-bact=setask]')}});
 renderSettle();
 
 /* ---------- picks (recommendation log) ---------- */
