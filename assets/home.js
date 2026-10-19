@@ -571,8 +571,11 @@ function tick1s(){if(!DATA||document.hidden)return;refreshLegs();
       const v=estLeg(L,m,localGame(g,m));if(v==null)return;const pct=Math.max(0,Math.min(100,v*100));if(first==null)first=pct;
       const col=pct>50?"var(--win)":pct<50?"var(--lose)":"var(--push)";const f=w.querySelector(".fill");f.style.width=pct+"%";f.style.background=col;
       w.querySelector(".lbl b").textContent=pct.toFixed(1)+"%"});
-    if(!b.multi&&b.legs[0]){const src=legSources(b,b.legs[0]);first=src.length?src[0].v*100:null;const se=c.querySelector("[data-src]");if(se&&src.length)se.textContent=SRC_LBL[src[0].k]}
-    const mini=c.querySelector(".mini");if(mini&&!b.multi&&first!=null){mini.style.width=first+"%";mini.style.background=first>50?"var(--win)":first<50?"var(--lose)":"var(--push)"}});
+    if(!b.multi&&b.legs[0]){const src=legSources(b,b.legs[0]);if(src.length)first=src[0].v*100;const se=c.querySelector("[data-src]");if(se&&src.length)se.textContent=SRC_LBL[src[0].k]}
+    const pls=c.querySelectorAll(".wp.prp");if(pls.length){const ls=legStatsFor(b),setW=(w,v)=>{const pct=Math.max(0,Math.min(100,v*100)),f=w.querySelector(".fill");f.style.width=pct+"%";f.style.background=pct>50?"var(--win)":pct<50?"var(--lose)":"var(--push)";w.querySelector(".lbl b").textContent=pct.toFixed(1)+"%";return pct};
+      pls.forEach(w=>{if(w.dataset.pbet){const lv=betLive(b,LAST_STATUS[+c.dataset.bi]||"?",ls);if(lv&&lv.p!=null){const pct=setW(w,lv.p);if(first==null)first=pct}}
+        else{const i=+w.dataset.pleg,x=ls[i];if(!x)return;const v=legP(b,x.L,x.s,x);if(v!=null){const pct=setW(w,v);if(!b.multi&&first==null)first=pct}}})}
+    const mini=c.querySelector(".mini");if(mini&&(!b.multi||c.querySelector(".wp.prb"))&&first!=null){mini.style.width=first+"%";mini.style.background=first>50?"var(--win)":first<50?"var(--lose)":"var(--push)"}});
   // probability-weighted payout (estimate): every unsettled bet contributes (implied-price fallback); bets with no payout/price are TBC
   let exp=0,tbc=0;const U=DATA.unsettled||{};
   DATA.open.forEach((b,i)=>{const pay=b.payout;if(pay==null){tbc++;return}
@@ -608,6 +611,14 @@ function barsFor(b){const out=[];let mini=null;
       out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
       out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
     if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
+  // player props / team totals have no market price: pace-based estimate per leg (+ one bar for the whole bet), live games only
+  const PRP=new Set(["prop","teamtotal"]);
+  if(b.legs.some(L=>PRP.has(L.type))){const ls=legStatsFor(b);let n=0;
+    b.legs.forEach((L,i)=>{if(!PRP.has(L.type)||!ls[i].g||ls[i].g.state!=="in")return;const v=legP(b,L,ls[i].s,ls[i]);if(v==null)return;n++;
+      out.push(bar(`Est. leg: ${esc(L.text)}`,v*100,"prp","",`data-pleg="${i}"`))});
+    if(n&&b.multi){const lv=betLive(b,LAST_STATUS[DATA.open.indexOf(b)]||"?",ls);if(lv&&lv.p!=null){out.push(bar(`Est. whole bet · all ${b.legs.length} legs`,lv.p*100,"prp prb","",'data-pbet="1"'));if(mini==null)mini=lv.p*100}}
+    else if(n&&mini==null){const x=ls[0],v=legP(b,x.L,x.s,x);if(v!=null)mini=v*100}
+    if(n)out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">Est. = our own pace-based estimate (stats so far, time left, typical rate). No sportsbook prices exist for player props.</div>`)}
   if(out.some(x=>x.includes('wp est')))out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">${EST_NOTE}</div>`);
   if(mini==null&&p)mini=p.pct;
   return{html:out.filter(Boolean).join(""),mini}}
