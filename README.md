@@ -146,3 +146,13 @@ free external scheduler such as [cron-job.org](https://cron-job.org):
 1. Create a *separate* fine-grained token ([pre-filled page](https://github.com/settings/personal-access-tokens/new?name=bet-timer&target_name=s-chuch&expires_in=90&actions=write&metadata=read)), repository `s-chuch/bet-dashboard` only. It can only start workflows, but treat it like a password: it lives on the third-party site.
 2. New cron job -> URL `https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/autorun.yml/dispatches`, method **POST**, request body `{"ref":"main"}`, headers `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, `Content-Type: application/json`. A success is HTTP 204.
 3. Schedule **every 2 minutes** while the repo is public (Actions minutes are unlimited for public repos; each run takes about 30 s and only commits when data changed, and overlapping requests merge because the workflow queues at most one). Every 30 minutes once the repo is private (see the Actions-minutes note under *Private hosting*). In cron-job.org, tick *Save responses in history* and enable the failure notification so you hear if the token expires (it is 90 days by default).
+
+## Set a book's balance from the Logs page
+`set-balance.yml` (`workflow_dispatch` only) sets a fresh balance snapshot (ledger `anchor`) for one book when the app's
+real cash balance differs from the tracker and open bets do not explain the gap. Inputs: `book` (PointsBet, bet365,
+FanDuel, DraftKings, theScore, Caesars, Hard Rock), `amount` (app cash balance, CAD, up to 2 decimals, max 100000) and
+optional `note`. It validates them, runs `scripts/set_balance.py` (same as `ledger.py anchor`; never touches `bets.csv`),
+a normal `autorun.py` pass, commits `set balance <book> <amount>` and pushes. Later stakes/returns apply on top of the
+new anchor. It shares the `autorun` concurrency group. The page calls
+`POST https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/set-balance.yml/dispatches` with
+`{"ref":"main","inputs":{"book":"FanDuel","amount":"123.45","note":""}}` and the same fine-grained token as manual settle.
