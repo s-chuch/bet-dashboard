@@ -44,6 +44,15 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "9e07f5a1",
+   "book": "PointsBet",
+   "event": "Al-Fayha FC v Al Ahli Jeddah (Saudi Pro League)",
+   "pick": "Al-Fayha FC",
+   "stake": "10.00",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -121,5 +130,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 14:57 ET"
+ "last_change_at": "2026-10-19 15:09 ET"
 }
