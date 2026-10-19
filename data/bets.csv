@@ -91,7 +91,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-18,PointsBet,Houston Texans @ Jacksonville Jaguars (London),Sun Oct 18 09:30 AM ET,SGP 3-leg (profit boost; legs not visible),SGP 3-leg C $0.50 (legs not shown in screenshot),+105,+112,0.50,0.56,,,won,0.56,c8ff18d0,2026-10-18 18:30,manual
 2026-10-18,PointsBet,Cienciano v UTC Cajamarca (Peru Liga 1),Sun Oct 18 07:30 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+500,,10.00,50.00,17.87,7.2,lost,-10.00,a0031feb,2026-10-19 17:01,auto
 2026-10-18,PointsBet,Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP),Sun Oct 18 09:00 PM ET,Moneyline (WELCOMEDM rollover),Panteras de Aguascalientes,-210,,25.00,11.90,67.89,0.2,lost,-25.00,b54671c7,2026-10-19 18:03,manual
-2026-10-18,PointsBet,Tai Po FC v Southern District (Hong Kong PL),Mon Oct 19 04:00 AM ET,3-Way Moneyline (WELCOMEDM rollover),Southern District RSA,+230,,10.00,23.00,30.02,-0.9,open,,ac75fe1c,,
+2026-10-18,PointsBet,Tai Po FC v Southern District (Hong Kong PL),Mon Oct 19 04:00 AM ET,3-Way Moneyline (WELCOMEDM rollover),Southern District RSA,+230,,10.00,23.00,30.02,-0.9,lost,-10.00,ac75fe1c,2026-10-19 18:21,manual
 2026-10-18,PointsBet,Phnom Penh Crown v Life FC SihanoukVille (Cambodia PL),Mon Oct 19 07:00 AM ET,3-Way Draw (WELCOMEDM rollover),Draw,+600,,10.00,60.00,13.33,-6.7,won,60.00,f2a01959,2026-10-19 18:03,manual
 2026-10-18,PointsBet,Al-Kuwait v Al Sulaibikhat (Kuwait PL),Mon Oct 19 10:40 AM ET,3-Way Draw (no Deposit Match tag on slip),Draw,+575,,10.00,57.50,12.89,-13.0,open,,79710608,,
 2026-10-18,PointsBet,Al-Fayha FC v Al Ahli Jeddah (Saudi Pro League),Mon Oct 19 11:05 AM ET,3-Way Moneyline (WELCOMEDM rollover),Al-Fayha FC,+700,,10.00,70.00,13.12,5.0,lost,-10.00,9e07f5a1,2026-10-19 17:01,auto

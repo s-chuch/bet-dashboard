@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "ac75fe1c",
-   "book": "PointsBet",
-   "event": "Tai Po FC v Southern District (Hong Kong PL)",
-   "pick": "Southern District RSA",
-   "stake": "10.00",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "79710608",
    "book": "PointsBet",
    "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
@@ -148,5 +139,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 18:04 ET"
+ "last_change_at": "2026-10-19 18:21 ET"
 }

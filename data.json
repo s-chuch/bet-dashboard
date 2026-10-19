@@ -95,36 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "ac75fe1c",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Tai Po FC v Southern District",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Southern District RSA",
-   "start": "Mon Oct 19 04:00 AM ET",
-   "price": "+230",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 23.0,
-   "ev_pct": "-0.9",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Southern District RSA",
-     "women": false,
-     "text": "Southern District RSA"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 33.0,
-   "payout_est": false,
-   "start_ts": "2026-10-19T08:00Z"
-  },
-  {
    "bet_id": "79710608",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -6614,6 +6584,16 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Tai Po FC v Southern District",
+   "pick": "Southern District RSA",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Panteras de Aguascalientes v Lobos Plateados",
    "pick": "Panteras de Aguascalientes",
    "result": "lost",
@@ -7512,15 +7492,15 @@
    "auto": false
   }
  ],
- "pnl_total": 160.76,
+ "pnl_total": 150.76,
  "unsettled": {
-  "n": 22,
-  "cash_stake": 49.1,
-  "max_payout": 858.41,
+  "n": 21,
+  "cash_stake": 39.1,
+  "max_payout": 825.41,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 49.1,
+ "open_stake": 39.1,
  "recs": {
   "stats": {
    "overall": {
@@ -10344,15 +10324,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "ac75fe1c",
-    "book": "PointsBet",
-    "event": "Tai Po FC v Southern District (Hong Kong PL)",
-    "pick": "Southern District RSA",
-    "stake": "10.00",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "79710608",
     "book": "PointsBet",
     "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
@@ -10490,17 +10461,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 18:04 ET"
+  "last_change_at": "2026-10-19 18:21 ET"
  },
- "open_live_n": 22,
+ "open_live_n": 21,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
-  "PointsBet": 178.75,
+  "PointsBet": 168.75,
   "theScore": 0.6
  },
- "hash": "8c1a6254b61bfc9d828827be96b7d430f030b4fc",
- "generated_at": "2026-10-19T18:11:11-04:00"
+ "hash": "469be1bec4779e3e40d49ba8551d6c6c31572521",
+ "generated_at": "2026-10-19T18:21:28-04:00"
 }

@@ -151,3 +151,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-19 17:01,PointsBet,44d354e4,settled,0.00,"lost, no return"
 2026-10-19 18:03,PointsBet,f2a01959,return,70.00,won
 2026-10-19 18:03,PointsBet,b54671c7,settled,0.00,"lost, no return"
+2026-10-19 18:21,PointsBet,ac75fe1c,settled,0.00,"lost, no return"
