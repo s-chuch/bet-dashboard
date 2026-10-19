@@ -2553,6 +2553,17 @@
         "18609384798216315879602525400523030630000024227400183382752406839790237734918",
         "40903493538745139555052886196728167414620998991695963438410078813186930063385"
        ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "102439327873795204838746255733913239291325289712424008533559749801217783438131",
+        "36293660410544552764684439520852945025216069221033325128623465784224996748250"
+       ]
       }
      ],
      "ml": {
@@ -3905,6 +3916,17 @@
        "tokens": [
         "18609384798216315879602525400523030630000024227400183382752406839790237734918",
         "40903493538745139555052886196728167414620998991695963438410078813186930063385"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "102439327873795204838746255733913239291325289712424008533559749801217783438131",
+        "36293660410544552764684439520852945025216069221033325128623465784224996748250"
        ]
       }
      ],
@@ -7541,18 +7563,18 @@
   "stats": {
    "overall": {
     "n": 86,
-    "w": 28,
+    "w": 29,
     "l": 44,
     "p": 0,
-    "pending": 14,
-    "win_pct": 38.9,
+    "pending": 13,
+    "win_pct": 39.7,
     "units": 15.02,
     "roi_pct": 23.5,
     "roi_n": 64,
     "exp_roi_pct": 12.1,
-    "exp_wins": 25.5,
-    "exp_wins_n": 72,
-    "wins_with_fair": 28
+    "exp_wins": 25.7,
+    "exp_wins_n": 73,
+    "wins_with_fair": 29
    },
    "by_promo": {
     "No Sweat": {
@@ -7572,18 +7594,18 @@
     },
     "bonus bet": {
      "n": 11,
-     "w": 3,
+     "w": 4,
      "l": 2,
      "p": 0,
-     "pending": 6,
-     "win_pct": 60.0,
+     "pending": 5,
+     "win_pct": 66.7,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 0.8,
-     "exp_wins_n": 5,
-     "wins_with_fair": 3
+     "exp_wins": 1.0,
+     "exp_wins_n": 6,
+     "wins_with_fair": 4
     },
     "cash": {
      "n": 20,
@@ -7739,18 +7761,18 @@
     },
     "Soccer": {
      "n": 24,
-     "w": 5,
+     "w": 6,
      "l": 8,
      "p": 0,
-     "pending": 11,
-     "win_pct": 38.5,
+     "pending": 10,
+     "win_pct": 42.9,
      "units": -1.83,
      "roi_pct": -18.3,
      "roi_n": 10,
      "exp_roi_pct": 1.5,
-     "exp_wins": 3.3,
-     "exp_wins_n": 13,
-     "wins_with_fair": 5
+     "exp_wins": 3.4,
+     "exp_wins_n": 14,
+     "wins_with_fair": 6
     },
     "WNBA": {
      "n": 1,
@@ -7786,18 +7808,18 @@
     },
     "no": {
      "n": 19,
-     "w": 5,
+     "w": 6,
      "l": 9,
      "p": 0,
-     "pending": 5,
-     "win_pct": 35.7,
+     "pending": 4,
+     "win_pct": 40.0,
      "units": -4.76,
      "roi_pct": -47.6,
      "roi_n": 10,
      "exp_roi_pct": 5.2,
-     "exp_wins": 4.3,
-     "exp_wins_n": 14,
-     "wins_with_fair": 5
+     "exp_wins": 4.5,
+     "exp_wins_n": 15,
+     "wins_with_fair": 6
     }
    },
    "friend": {
@@ -8525,11 +8547,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "GVFC 2-1 SCB (FT)",
     "source": "chat (Caesars bonus bets)",
     "notes": "price shown is Pinnacle fair (no Caesars feed); Caesars price TBC",
-    "units": null
+    "units": 5.64
    },
    {
     "rec_id": "cf660ce5",
@@ -10252,6 +10274,6 @@
   "PointsBet": 213.75,
   "theScore": 0.6
  },
- "hash": "51986a1e02818aeabc75f222845fa3e930d15a9e",
- "generated_at": "2026-10-19T17:01:50-04:00"
+ "hash": "8fd344d407834855be76d937d0ccece72a626a7e",
+ "generated_at": "2026-10-19T17:43:08-04:00"
 }
