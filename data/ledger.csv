@@ -131,3 +131,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-18 23:44,Hard Rock,c8cabe33,stake,0.00,"bonus bet token, no cash deducted"
 2026-10-18 23:47,PointsBet,99db10eb,settled,0.00,"lost, no return"
 2026-10-18 23:47,Caesars,f6d731b5,settled,0.00,"lost, no return"
+2026-10-19 16:22,PointsBet,5c5ab743,return,25.50,won

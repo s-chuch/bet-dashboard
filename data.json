@@ -12,8 +12,8 @@
   },
   {
    "book": "PointsBet",
-   "balance": 68.76,
-   "updated": "2026-10-18 19:43"
+   "balance": 94.26,
+   "updated": "2026-10-19 16:22"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 593.41,
+ "total": 618.91,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -267,69 +267,6 @@
    "payout": 80.0,
    "payout_est": false,
    "start_ts": "2026-10-19T15:05Z"
-  },
-  {
-   "bet_id": "5c5ab743",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "San Telmo v Defensores de Belgrano",
-   "market": "3-Way Draw (WELCOMEDM rollover)",
-   "pick": "Draw",
-   "start": "Mon Oct 19 02:30 PM ET",
-   "price": "+155",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 15.5,
-   "ev_pct": "9.8",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Draw"
-    }
-   ],
-   "match": {
-    "path": "soccer/arg.2",
-    "date": "20261019",
-    "groups": null,
-    "id": "401844212",
-    "snapshot": {
-     "date": "2026-10-19T18:30Z",
-     "period": 1,
-     "clock": 2280.0,
-     "state": "in",
-     "completed": false,
-     "detail": "38'",
-     "teams": [
-      {
-       "id": "10157",
-       "name": "San Telmo",
-       "abbr": "SAN",
-       "short": "San Telmo",
-       "nick": "San Telmo",
-       "location": "San Telmo",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "10151",
-       "name": "Defensores de Belgrano",
-       "abbr": "DEF",
-       "short": "Defensores",
-       "nick": "Defensores de Belgrano",
-       "location": "Defensores de Belgrano",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 25.5,
-   "payout_est": false,
-   "start_ts": "2026-10-19T18:30Z"
   },
   {
    "bet_id": "44d354e4",
@@ -1576,6 +1513,16 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "San Telmo v Defensores de Belgrano",
+   "pick": "Draw",
+   "result": "won",
+   "pnl": 15.5,
+   "stake": 10.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Houston Texans @ Jacksonville Jaguars",
    "pick": "SGP 3-leg C $0.50 (legs not shown in screenshot)",
    "result": "won",
@@ -2454,31 +2401,31 @@
    "auto": false
   }
  ],
- "pnl_total": 140.76,
+ "pnl_total": 156.26,
  "unsettled": {
-  "n": 16,
-  "cash_stake": 120.2,
-  "max_payout": 1146.44,
+  "n": 15,
+  "cash_stake": 110.2,
+  "max_payout": 1120.94,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 120.2,
+ "open_stake": 110.2,
  "recs": {
   "stats": {
    "overall": {
     "n": 86,
-    "w": 27,
+    "w": 28,
     "l": 41,
     "p": 0,
-    "pending": 18,
-    "win_pct": 39.7,
-    "units": 16.47,
-    "roi_pct": 27.5,
-    "roi_n": 60,
-    "exp_roi_pct": 12.5,
-    "exp_wins": 24.5,
-    "exp_wins_n": 68,
-    "wins_with_fair": 27
+    "pending": 17,
+    "win_pct": 40.6,
+    "units": 18.02,
+    "roi_pct": 29.5,
+    "roi_n": 61,
+    "exp_roi_pct": 12.4,
+    "exp_wins": 24.9,
+    "exp_wins_n": 69,
+    "wins_with_fair": 28
    },
    "by_promo": {
     "No Sweat": {
@@ -2558,18 +2505,18 @@
     },
     "rollover": {
      "n": 32,
-     "w": 8,
+     "w": 9,
      "l": 13,
      "p": 0,
-     "pending": 11,
-     "win_pct": 38.1,
-     "units": -3.71,
-     "roi_pct": -19.5,
-     "roi_n": 19,
-     "exp_roi_pct": -0.7,
-     "exp_wins": 10.0,
-     "exp_wins_n": 21,
-     "wins_with_fair": 8
+     "pending": 10,
+     "win_pct": 40.9,
+     "units": -2.16,
+     "roi_pct": -10.8,
+     "roi_n": 20,
+     "exp_roi_pct": -0.4,
+     "exp_wins": 10.4,
+     "exp_wins_n": 22,
+     "wins_with_fair": 9
     }
    },
    "by_sport": {
@@ -2665,18 +2612,18 @@
     },
     "Soccer": {
      "n": 24,
-     "w": 4,
+     "w": 5,
      "l": 5,
      "p": 0,
-     "pending": 15,
-     "win_pct": 44.4,
-     "units": -0.38,
-     "roi_pct": -6.3,
-     "roi_n": 6,
-     "exp_roi_pct": -1.1,
-     "exp_wins": 2.2,
-     "exp_wins_n": 9,
-     "wins_with_fair": 4
+     "pending": 14,
+     "win_pct": 50.0,
+     "units": 1.17,
+     "roi_pct": 16.7,
+     "roi_n": 7,
+     "exp_roi_pct": -0.4,
+     "exp_wins": 2.6,
+     "exp_wins_n": 10,
+     "wins_with_fair": 5
     },
     "WNBA": {
      "n": 1,
@@ -2697,18 +2644,18 @@
    "by_placed": {
     "yes": {
      "n": 67,
-     "w": 22,
+     "w": 23,
      "l": 32,
      "p": 0,
-     "pending": 13,
-     "win_pct": 40.7,
-     "units": 21.23,
-     "roi_pct": 42.5,
-     "roi_n": 50,
-     "exp_roi_pct": 14.0,
-     "exp_wins": 20.2,
-     "exp_wins_n": 54,
-     "wins_with_fair": 22
+     "pending": 12,
+     "win_pct": 41.8,
+     "units": 22.78,
+     "roi_pct": 44.7,
+     "roi_n": 51,
+     "exp_roi_pct": 13.8,
+     "exp_wins": 20.6,
+     "exp_wins_n": 55,
+     "wins_with_fair": 23
     },
     "no": {
      "n": 19,
@@ -3152,11 +3099,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "DEF 0-0 SAN (FT)",
     "source": "rec.py add",
     "notes": "Pin home +229 / draw +133 / away +211; pb/sun2/out.txt",
-    "units": null
+    "units": 1.55
    },
    {
     "rec_id": "a287851d",
@@ -5059,6 +5006,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "5c5ab743",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "won",
+    "pnl": 15.5,
+    "final": "DEF 0-0 SAN",
+    "at": "2026-10-19 16:22"
+   },
+   {
     "bet_id": "99db10eb",
     "book": "PointsBet",
     "pick": "Dallas Cowboys +3.5",
@@ -5131,15 +5087,15 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 15:09 ET"
+  "last_change_at": "2026-10-19 16:22 ET"
  },
- "open_live_n": 16,
+ "open_live_n": 15,
  "open_stake_by_book": {
   "DraftKings": 0.1,
   "FanDuel": 0.1,
   "Hard Rock": 5.0,
-  "PointsBet": 253.75
+  "PointsBet": 243.75
  },
- "hash": "59699c6838cc948c10836bfc28c4c85fc5f19c61",
- "generated_at": "2026-10-19T15:09:42-04:00"
+ "hash": "38d0fab64a00495ed064fb310e2dd3b4c4116051",
+ "generated_at": "2026-10-19T16:22:11-04:00"
 }
