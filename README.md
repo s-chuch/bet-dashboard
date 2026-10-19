@@ -126,7 +126,7 @@ GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on
 ## Adaptive refresh timer (GitHub only, free while the repo is public)
 GitHub's own cron fires only about once per 8 hours, so `.github/workflows/timer.yml` is the clock. Each cycle it runs
 `scripts/next_run.py` to decide when the next refresh is due, sleeps until then, starts `autorun`, and queues the next timer:
-- a bet that has started (or starts within 10 minutes) and is not settled yet -> refresh about every 3 minutes, until it is settled or 8 hours after its start;
+- a bet that has started (or starts within 10 minutes) and is not settled yet -> **live mode**: a refresh about every minute (60 s sleep + run time), so results show up as games finish, until it is settled or 8 hours after its start;
 - otherwise it wakes **10 minutes before the next upcoming bet starts**, but at least once an hour;
 - no upcoming bets -> a check every hour, forever. Futures (no start time) and bets already waiting for your OK never keep it in fast mode.
 The timer holds no lock while it sleeps, so a bet you log from the box still rebuilds the page right away (`autorun.yml` runs on pushes), and a push to

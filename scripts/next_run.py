@@ -14,7 +14,7 @@ import json, os, sys, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from common import REPO, AUTO
 
-LEAD, FAST, IDLE, MIN_WAIT, ACTIVE_HOURS = 600, 120, 3600, 30, 8
+LEAD, FAST, IDLE, MIN_WAIT, ACTIVE_HOURS = 600, 60, 3600, 30, 8
 UTC = datetime.timezone.utc
 
 def parse(ts):
