@@ -39,6 +39,7 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: write   # push data commits to main
+      issues: write     # one "Bets need your OK" issue = a phone notification
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -86,3 +87,10 @@ jobs:
           set -euo pipefail
           echo "::error::autorun finished with errors (status='${AUTORUN_STATUS:-step did not finish}')"
           exit 1
+
+      - name: Alert when bets need your OK
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NOTIFY_LOGS_URL: https://${{ github.repository_owner }}.github.io/bet-dashboard/log.html#activity
+        run: python3 scripts/notify.py
