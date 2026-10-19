@@ -53,6 +53,15 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "bd13eed8",
+   "book": "FanDuel",
+   "event": "Colorado Avalanche @ Philadelphia Flyers",
+   "pick": "SGP (legs not shown in screenshot)",
+   "stake": "0.50",
+   "reason": "parlay legs not listed in the pick text",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -148,5 +157,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 16:58 ET"
+ "last_change_at": "2026-10-19 16:59 ET"
 }
