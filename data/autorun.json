@@ -8,6 +8,15 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "0515e985",
+   "book": "",
+   "event": "",
+   "pick": "",
+   "stake": "",
+   "reason": "grader error: ValueError: invalid literal for int() with base 10: ''",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -66,6 +75,8 @@
    "at": "2026-10-18 19:42"
   }
  ],
- "errors": [],
- "last_change_at": "2026-10-18 23:33 ET"
+ "errors": [
+  "rec grade: invalid literal for int() with base 10: ''"
+ ],
+ "last_change_at": "2026-10-18 23:42 ET"
 }
