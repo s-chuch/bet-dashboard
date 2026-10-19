@@ -2452,116 +2452,6 @@
    "pnl": 67.0,
    "stake": 25.0,
    "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "PointsBet",
-   "event": "Knicks @ Raptors",
-   "pick": "Over 219.5",
-   "result": "won",
-   "pnl": 21.74,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "PointsBet",
-   "event": "Knicks @ Raptors",
-   "pick": "Knicks +11.5",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "FanDuel",
-   "event": "Brazil W ML + Mexico W ML + Millonarios ML",
-   "pick": "3-leg soccer parlay",
-   "result": "lost",
-   "pnl": -0.8,
-   "stake": 0.8,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Caesars",
-   "event": "Knicks @ Raptors",
-   "pick": "Knicks ML",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Caesars",
-   "event": "Pacers @ Thunder",
-   "pick": "Pacers ML",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Hard Rock",
-   "event": "Knicks @ Raptors",
-   "pick": "Knicks ML",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 20.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Hard Rock",
-   "event": "FIU @ Jacksonville State",
-   "pick": "Jacksonville State ML",
-   "result": "won",
-   "pnl": 3.23,
-   "stake": 5.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "DraftKings",
-   "event": "FIU @ Jacksonville State",
-   "pick": "FIU ML",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "DraftKings",
-   "event": "Napoli @ Villarreal",
-   "pick": "Villarreal ML",
-   "result": "won",
-   "pnl": 1.32,
-   "stake": 0.96,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Caesars",
-   "event": "Delaware @ Middle Tennessee",
-   "pick": "Delaware ML",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-13",
-   "book": "Caesars",
-   "event": "FIU @ Jacksonville State",
-   "pick": "FIU ML",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
   }
  ],
  "pnl_total": 140.76,
@@ -5182,6 +5072,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 253.75
  },
- "hash": "45062ebc6d59738f397541438ec255809d4824f0",
- "generated_at": "2026-10-18T23:48:02-04:00"
+ "hash": "f374f40ca3d56c2c06f63352d52278c576a52eb7",
+ "generated_at": "2026-10-19T00:29:10-04:00"
 }
