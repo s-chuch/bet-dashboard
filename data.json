@@ -98,11 +98,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 3,
-     "clock": 167.0,
+     "period": 4,
+     "clock": 900.0,
      "state": "in",
      "completed": false,
-     "detail": "2:47 - 3rd",
+     "detail": "15:00 - 4th",
      "teams": [
       {
        "id": "9",
@@ -1075,11 +1075,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 3,
-     "clock": 167.0,
+     "period": 4,
+     "clock": 900.0,
      "state": "in",
      "completed": false,
-     "detail": "2:47 - 3rd",
+     "detail": "15:00 - 4th",
      "teams": [
       {
        "id": "9",
@@ -4378,11 +4378,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 84,
+    "n": 85,
     "w": 27,
     "l": 40,
     "p": 0,
-    "pending": 17,
+    "pending": 18,
     "win_pct": 40.3,
     "units": 17.47,
     "roi_pct": 29.6,
@@ -4409,11 +4409,11 @@
      "wins_with_fair": 1
     },
     "bonus bet": {
-     "n": 10,
+     "n": 11,
      "w": 3,
      "l": 2,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 60.0,
      "units": 0,
      "roi_pct": null,
@@ -4576,11 +4576,11 @@
      "wins_with_fair": 5
     },
     "Soccer": {
-     "n": 23,
+     "n": 24,
      "w": 4,
      "l": 5,
      "p": 0,
-     "pending": 14,
+     "pending": 15,
      "win_pct": 44.4,
      "units": -0.38,
      "roi_pct": -6.3,
@@ -4623,11 +4623,11 @@
      "wins_with_fair": 22
     },
     "no": {
-     "n": 18,
+     "n": 19,
      "w": 5,
      "l": 9,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 35.7,
      "units": -4.76,
      "roi_pct": -47.6,
@@ -4640,22 +4640,45 @@
    },
    "friend": {
     "n": 12,
-    "w": 0,
+    "w": 1,
     "l": 4,
     "p": 0,
-    "pending": 8,
-    "win_pct": 0.0,
-    "units": -4.0,
-    "roi_pct": -100.0,
-    "roi_n": 4,
-    "exp_roi_pct": 55.4,
-    "exp_wins": 1.6,
-    "exp_wins_n": 4,
-    "wins_with_fair": 0
+    "pending": 7,
+    "win_pct": 20.0,
+    "units": -0.36,
+    "roi_pct": -7.2,
+    "roi_n": 5,
+    "exp_roi_pct": 55.0,
+    "exp_wins": 1.9,
+    "exp_wins_n": 5,
+    "wins_with_fair": 1
    },
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "a9e797df",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "22:50",
+    "sport": "Soccer",
+    "event": "FC Porto v PSV Eindhoven (Champions League)",
+    "market": "Moneyline / Match Result 3-way (bonus bet)",
+    "selection": "PSV Eindhoven",
+    "book": "Hard Rock",
+    "rec_price": "+380",
+    "eff_price": "+380",
+    "fair_pct": "20.6",
+    "ev_pct": "78.4",
+    "stake": "5.00",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "Hard Rock  bonus bet (No Sweat refund, stake not returned). Hard Rock ON price not in feed: +380 is proxy (FD/CZR +380, b365 +400, DK +370). ev = bonus value per $1 x100 (0.784 at +380; 0.826 at +400). Pin Porto -157 / draw +371 / PSV +367, fair 20.6% (+384). Pulled 10:48 PM ET. Yes at +363 or better. Backups: Coventry +500 at Spurs (Mon 3 PM), Bodo/Glimt +400 at Napoli (Tue 3 PM)",
+    "units": null
+   },
    {
     "rec_id": "2d4ff644",
     "rec_date": "2026-10-18",
@@ -5133,11 +5156,11 @@
     "promo": "profit boost",
     "friend": "yes",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "CAR 2-3 CGY (Final)",
     "source": "rec.py add",
     "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
-    "units": null
+    "units": 3.64
    },
    {
     "rec_id": "daaea44d",
@@ -6933,6 +6956,6 @@
   "FanDuel": 0.1,
   "PointsBet": 278.75
  },
- "hash": "9e2fc69bcb00bd616cc9537a4fc5ca22fc6bf01b",
- "generated_at": "2026-10-19T02:38:44+00:00"
+ "hash": "63a4e4597f4ca249f7e360dccdd6813e955ad253",
+ "generated_at": "2026-10-18T22:49:37-04:00"
 }
