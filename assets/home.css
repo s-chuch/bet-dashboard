@@ -106,3 +106,4 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right;font-w
 .autoh:empty{display:none}
 .review .rvlink{display:block;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.45);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--push);text-decoration:none}
 .feeds{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11.5px;margin:-4px 2px 8px;color:var(--mut)}.feeds .fok{color:var(--win)}.feeds .fbad{color:var(--lose)}.feeds small{color:inherit;font-size:inherit;opacity:.85}.feeds:empty{display:none}
+.bkh.sub{margin-top:6px;padding-left:10px;border-left:2px solid var(--line2);font-weight:500;opacity:.9}
