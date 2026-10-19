@@ -284,6 +284,27 @@ def _single_game_bet(row, legs, ms):
             return False
     return True
 
+def _makeup_game(m, sched):
+    """A postponed game is often replayed as a NEW ESPN event (doubleheader, next day). Look for another game of the same two
+    teams within 7 days of the scheduled start. -> dict (found) | {} (none found) | None (could not check)."""
+    try:
+        ids = {t["id"] for t in m["snapshot"]["teams"]}
+        if len(ids) != 2: return None
+        got_any = False
+        for k in range(0, 8):
+            d = (sched + datetime.timedelta(days=k)).strftime("%Y%m%d")
+            j = P.fetch(P.sb_url(m["path"], d))
+            if j.get("events"): got_any = True
+            for ev in j.get("events", []):
+                if str(ev.get("id")) == str(m["id"]): continue
+                comps = ev["competitions"][0]["competitors"]
+                if {str(c["team"].get("id") or c.get("id")) for c in comps} == {str(i) for i in ids}:
+                    stt = ev.get("status") or ev["competitions"][0]["status"]
+                    return {"id": ev["id"], "when": ev.get("date", d)[:16].replace("T", " ") + "Z", "status": stt["type"].get("detail", "")}
+        return {} if got_any else None
+    except Exception:
+        return None
+
 def postponed_void(row, legs, ms, m, s, st):
     """Return a log reason (str) if this postponed/cancelled/suspended game's bet should be auto-voided now.
     Returns None (-> review) otherwise; raises Review with a 'will auto-void on ...' note while inside the grace period."""
@@ -302,6 +323,12 @@ def postponed_void(row, legs, ms, m, s, st):
     what = (st.get("description") or st.get("name")).lower()
     if now_et() < deadline:
         raise Review(f"game {m['id']} {what}; auto-void on {deadline:%a %b %d %I:%M %p} ET if not played")
+    mk = _makeup_game(m, sched)
+    if mk is None:
+        raise Review(f"game {m['id']} {what}: could not check whether it was replayed, so it is not auto-voided")
+    if mk:
+        raise Review(f"game {m['id']} {what}, but the same teams play again as game {mk['id']} ({mk['when']}, {mk['status']}): "
+                     f"the book may keep the bet alive on the replay, so it is not auto-voided; check the slip")
     return (f"auto-void: game {m['id']} {what} and not completed {VOID_GRACE_HOURS}h after scheduled start "
             f"({sched:%Y-%m-%d %H:%M} ET); single-game bet, stake refunded")
 
