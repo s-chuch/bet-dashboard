@@ -418,8 +418,8 @@
      ]
     },
     "pregame": {
-     "home": 86.3,
-     "away": 13.6
+     "home": 87.0,
+     "away": 12.9
     },
     "pin": {
      "src": "Pinnacle no-vig",
@@ -5005,6 +5005,15 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "f2a01959",
+    "book": "PointsBet",
+    "event": "Phnom Penh Crown v Life FC SihanoukVille (Cambodia PL)",
+    "pick": "Draw",
+    "stake": "10.00",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -5081,7 +5090,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 08:27 ET"
+  "last_change_at": "2026-10-19 11:14 ET"
  },
  "open_live_n": 16,
  "open_stake_by_book": {
@@ -5090,6 +5099,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 253.75
  },
- "hash": "b33d9bd283d3d1998104344ce061ff77e3188420",
- "generated_at": "2026-10-19T08:27:55-04:00"
+ "hash": "515aa473d8c4d103202ac98cf9cb1fae9b6404b4",
+ "generated_at": "2026-10-19T11:14:48-04:00"
 }
