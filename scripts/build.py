@@ -47,6 +47,7 @@ def norm(s):
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9 ]", " ", s).split()
 
+GENERIC_WORDS = {"al", "el", "fc", "cf", "sc", "ac", "as", "afc", "fk", "sk", "cd", "ud", "hsc", "club", "de", "del", "la", "city", "united", "real", "sporting", "atletico", "athletic", "town", "rovers", "wanderers"}
 def team_match(q, comp):
     """q: name from the bet; comp: ESPN competitor dict."""
     t = comp.get("team", {})
@@ -61,7 +62,13 @@ def team_match(q, comp):
     # prefix match for short forms like "Man City" -> "Manchester City", "Man Utd" -> "Manchester United"
     alias = {"utd": "united", "spurs": "tottenham"}
     qa = [alias.get(w, w) for w in qn]
-    return len(qa) > 1 and all(any(d.startswith(w) for d in disp) for w in qa)
+    if len(qa) > 1 and all(any(d.startswith(w) for d in disp) for w in qa): return True
+    # the bet's name is LONGER than ESPN's: "UTC Cajamarca" vs "UTC", "Al-Fayha FC" vs "Al Fayha", "Montpellier HSC" vs "Montpellier".
+    # Every word of ESPN's name must appear in the bet's name and carry at least one distinctive word (not al / fc / united ...).
+    for f in (t.get("displayName"), t.get("shortDisplayName"), t.get("name")):
+        fn = norm(f or "")
+        if fn and all(w in qn for w in fn) and any(w not in GENERIC_WORDS and len(w) >= 3 for w in fn): return True
+    return False
 
 TEAM_ALIASES = {r"chicago red stars": "Chicago Stars", r"^man utd$": "Manchester United", r"^man city$": "Manchester City",
                 r"^wolves$": "Wolverhampton", r"^spurs$": "Tottenham", r"^alaves$": "Alavés"}
@@ -351,6 +358,8 @@ def build_bet(row):
                 if L.get("team"):  # resolve abbreviations like "SEA" against the matched game
                     if re.search(r"\s+(Women|W)$", L["team"]): L["women"] = True
                     L["team"] = team_alias(re.sub(r"\s+(Women|W)$", "", L["team"]))
+                    for _t in bet["match"]["snapshot"]["teams"]:   # use ESPN's own name for that side: the live page matches on it
+                        if team_match(L["team"], _snap_comp(_t)): L["team"] = _t["name"]; break
                     L["team_ok"] = any(team_match(L["team"], {"team": {"displayName": t["name"], "abbreviation": t["abbr"]}})
                                        for t in bet["match"]["snapshot"]["teams"])
     else:
