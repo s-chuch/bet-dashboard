@@ -198,7 +198,7 @@ function prepOpen(d){
     return {i:i,id:id,book:String(b.book||''),event:String(b.event||''),market:String(b.market||''),pick:String(b.pick||''),stake:num(b.stake),
       toWin:(typeof b.to_win==='number'&&b.to_win>0)?b.to_win:null,price:b.price,bprice:b.boosted_price,start:String(b.start||''),sk:startMs(b),ts:(typeof b.start_ts==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z$/.test(b.start_ts))?Date.parse(b.start_ts):null,
       review:!!r,reason:r?String(r.reason||'Needs review'):''}});
-  S.open.sort(function(a,b){return (b.review-a.review)||(a.sk===b.sk?a.i-b.i:a.sk<b.sk?-1:1)});
+  S.open.sort(function(a,b){return (a.sk===b.sk?a.i-b.i:a.sk<b.sk?-1:1)});   // strictly by start time, oldest first; needs-review bets keep their badge
   var u=d.unsettled&&typeof d.unsettled==='object'?d.unsettled:{};S.unsettled={n:(typeof u.n==='number'?u.n:null),cash:(typeof u.cash_stake==='number'?u.cash_stake:null)};
   S.openLoaded=true}
 function betById(id){for(var i=0;i<S.open.length;i++)if(S.open[i].id===id)return S.open[i];return null}

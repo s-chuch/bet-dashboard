@@ -542,6 +542,16 @@ const bkey=b=>String(b||"?").toLowerCase();
 function byBook(items){const s=items.map((x,i)=>({...x,i})).sort((a,c)=>bkey(a.book).localeCompare(bkey(c.book))||a.i-c.i),tot={};
   s.forEach(x=>{tot[bkey(x.book)]=(tot[bkey(x.book)]||0)+(x.stake||0)});let out="",cur=null;
   for(const x of s){if(bkey(x.book)!==cur){cur=bkey(x.book);out+=`<div class="bkh">${esc(x.book||"?")} <b>(${money(tot[cur])})</b></div>`}out+=x.html}return out}
+// chronological view: soonest start first, one heading per start time (Tonight / Tomorrow / Thu Oct 22 + time), book stays on each card.
+// Bets without a real start time (futures) go last under "No start time".
+function byTime(items){
+  const arr=items.map((x,i)=>({...x,i})).sort((a,c)=>(a.ts==null)-(c.ts==null)||(a.ts-c.ts)||bkey(a.book).localeCompare(bkey(c.book))||a.i-c.i);
+  const today=etDay(Date.now()),tomorrow=etDay(Date.now()+864e5);
+  const lab=ts=>{if(ts==null)return"No start time (futures)";const d=new Date(ts),day=etDay(d);
+    const dl=day===today?"Today":day===tomorrow?"Tomorrow":d.toLocaleDateString("en-CA",{timeZone:TZ,weekday:"short",month:"short",day:"numeric"});
+    return dl+" · "+d.toLocaleTimeString("en-CA",{timeZone:TZ,hour:"numeric",minute:"2-digit"})+" ET"};
+  const groups=[];for(const x of arr){const k=x.ts==null?"none":Math.floor(x.ts/60000);let g=groups[groups.length-1];if(!g||g.k!==k){g={k,ts:x.ts,n:0,stake:0,html:""};groups.push(g)}g.n++;g.stake+=x.stake||0;g.html+=x.html}
+  return groups.map(g=>`<div class="bkh">${esc(lab(g.ts))} <b>(${g.n} bet${g.n===1?"":"s"} · ${money(g.stake)})</b></div>${g.html}`).join("")}
 const setStake=s=>s.stake!=null?s.stake:(s.pnl!=null&&s.pnl<0?-s.pnl:0);
 // re-render every leg row / status chip / bar / "needs" line of every card (collapsed or open) from the latest data
 function refreshLegs(){if(!DATA)return;document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;const ls=legStatsFor(b);
@@ -690,12 +700,11 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     // At risk / payout come from DATA.unsettled (all bets still open in the tracker, finals included); FINAL_BI = final-but-unsettled
     if(allFinal)FINAL_BI.add(D.open.indexOf(b));
     if(graded&&b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
-    const BK={book:b.book,stake:b.stake||0};const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
+    const ts0=b.start_ts?Date.parse(b.start_ts):NaN,ts=isFinite(ts0)?ts0:(isFinite(t)?t:null);const BK={book:b.book,stake:b.stake||0,ts};const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
     if(status==="LOST"){toFinal();lostCards.push({html,...BK});lostPending+=b.stake||0}
     else if(gs.some(g=>g.state==="in"))liveCards.push({html,...BK});
     else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){toFinal();wonCards.push({html,...BK});if(status==="WON")wonPending+=b.to_win||0}
     else upCards.push({html,t,...BK})});
-  upCards.sort((a,b)=>a.t-b.t);
   // per-book "(wagered)" = cash stake of ALL unsettled bets of that book (bonus bets 0); Total equals the At-risk tile
   const WAG={};for(const x of D.open)WAG[bkey(x.book)]=(WAG[bkey(x.book)]||0)+(x.cash_stake||0);const wagT=Object.values(WAG).reduce((a,v)=>a+v,0);
   setHTML($("bal"),D.balances.map(b=>`<div><span class="bn">${esc(b.book)}</span><span class="bv"><b>${money(b.balance)}</b><i class="wag">(${money(WAG[bkey(b.book)]||0)})</i></span></div>`).join("")+`<div class="tot"><span class="bn">Total</span><span class="bv"><b>${money(D.total)}</b><i class="wag">(${money(wagT)})</i></span></div>`);
@@ -703,18 +712,18 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
   const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
   $("sum").innerHTML=`<div>At risk<b>${money(D.unsettled.cash_stake)}</b><small>${D.unsettled.n} unsettled bet${D.unsettled.n===1?"":"s"}${FINAL_BI.size?` · ${FINAL_BI.size} final, awaiting settle`:""}</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
   const sy=window.scrollY;   // patch only what changed, keep the reader's scroll position
-  setHTML($("live"),byBook(liveCards)||'<div class="meta">Nothing live right now.</div>');
-  setHTML($("bets"),byBook(upCards)||'<div class="meta">Nothing upcoming.</div>');
+  setHTML($("live"),byTime(liveCards)||'<div class="meta">Nothing live right now.</div>');
+  setHTML($("bets"),byTime(upCards)||'<div class="meta">Nothing upcoming.</div>');
   $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
-  $("wonCards").innerHTML=wonCards.length?`<div class="meta" style="margin:0 2px 6px">Final, not settled in the tracker yet</div>`+byBook(wonCards):"";
+  $("wonCards").innerHTML=wonCards.length?`<div class="meta" style="margin:0 2px 6px">Final, not settled in the tracker yet</div>`+byTime(wonCards):"";
   const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${/void/i.test(s.result)?"Void · stake back":s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
   const st=D.settled_recent||[], lostS=st.filter(s=>/lost|loss/i.test(s.result)), wonS=st.filter(s=>!/lost|loss/i.test(s.result));
   const wonSum=wonS.reduce((a,s)=>a+(s.pnl||0),0), lostSum=lostS.reduce((a,s)=>a-(s.pnl||0),0);
-  $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled recently</div>`:"")+byBook(wonS.map(s=>({html:row(s),book:s.book,stake:setStake(s)})))||(wonCards.length?"":'<div class="meta">None settled recently.</div>');
+  $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled recently</div>`:"")+wonS.map(row).join("")||(wonCards.length?"":'<div class="meta">None settled recently.</div>');
   const wonN=wonCards.length+wonS.length,wonAll=wonSum+wonPending;
   $("wonHead").textContent=`Won / Push / Void · ${wonN} · +${money(wonAll)}`;
-  $("lostCards").innerHTML=lostCards.length?`<div class="meta" style="margin:0 2px 6px">Graded LOST live, not settled in the tracker yet</div>`+byBook(lostCards):"";
-  $("lost").innerHTML=(lostS.length?`<div class="meta" style="margin:8px 2px 2px">Settled recently</div>`:"")+byBook(lostS.map(s=>({html:row(s),book:s.book,stake:setStake(s)})))||(lostCards.length?"":'<div class="meta">None settled recently.</div>');
+  $("lostCards").innerHTML=lostCards.length?`<div class="meta" style="margin:0 2px 6px">Graded LOST live, not settled in the tracker yet</div>`+byTime(lostCards):"";
+  $("lost").innerHTML=(lostS.length?`<div class="meta" style="margin:8px 2px 2px">Settled recently</div>`:"")+lostS.map(row).join("")||(lostCards.length?"":'<div class="meta">None settled recently.</div>');
   const lostTotal=lostSum+lostPending;
   $("lostHead").textContent=`Lost · ${lostCards.length+lostS.length} · −${money(lostTotal)}`;
   $("lostHead").title=lostPending?`incl. ${money(lostPending)} not yet settled in the tracker`:"";
