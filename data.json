@@ -2228,10 +2228,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 1,
-     "clock": 2280.0,
+     "clock": 2700.0,
      "state": "in",
      "completed": false,
-     "detail": "38'",
+     "detail": "HT",
      "teams": [
       {
        "id": "15360",
@@ -2251,7 +2251,7 @@
        "nick": "Seattle Reign FC",
        "location": "Seattle Reign FC",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -3481,11 +3481,11 @@
     "id": "401892533",
     "snapshot": {
      "date": "2026-10-18T22:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1012.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "16:52 - 3rd",
      "teams": [
       {
        "id": "30",
@@ -4558,11 +4558,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 80,
+    "n": 84,
     "w": 27,
     "l": 39,
     "p": 0,
-    "pending": 14,
+    "pending": 18,
     "win_pct": 40.9,
     "units": 18.47,
     "roi_pct": 31.8,
@@ -4589,11 +4589,11 @@
      "wins_with_fair": 1
     },
     "bonus bet": {
-     "n": 6,
+     "n": 10,
      "w": 3,
      "l": 2,
      "p": 0,
-     "pending": 1,
+     "pending": 5,
      "win_pct": 60.0,
      "units": 0,
      "roi_pct": null,
@@ -4756,11 +4756,11 @@
      "wins_with_fair": 5
     },
     "Soccer": {
-     "n": 19,
+     "n": 23,
      "w": 4,
      "l": 4,
      "p": 0,
-     "pending": 11,
+     "pending": 15,
      "win_pct": 50.0,
      "units": 0.62,
      "roi_pct": 12.4,
@@ -4803,11 +4803,11 @@
      "wins_with_fair": 22
     },
     "no": {
-     "n": 18,
+     "n": 22,
      "w": 5,
      "l": 9,
      "p": 0,
-     "pending": 4,
+     "pending": 8,
      "win_pct": 35.7,
      "units": -4.76,
      "roi_pct": -47.6,
@@ -4836,6 +4836,98 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "2d4ff644",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "20:05",
+    "sport": "Soccer",
+    "event": "Inter Club de Escaldes v Cs Uni Craiova (UEFA Conference League)",
+    "market": "Match Result (bonus bet)",
+    "selection": "Inter Club de Escaldes",
+    "book": "PointsBet",
+    "rec_price": "+500",
+    "eff_price": "+500",
+    "fair_pct": "18.22",
+    "ev_pct": "91.1",
+    "stake": "33.43",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.911; power 0.866); cash EV +9.3%; Pin Escaldes +417 / draw +307 / Craiova -165; pulled 8:00 PM ET; yes at +442",
+    "units": null
+   },
+   {
+    "rec_id": "7e88d331",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "20:05",
+    "sport": "Soccer",
+    "event": "Trabzonspor v Hearts (UEFA Conference League)",
+    "market": "Match Result (bonus bet)",
+    "selection": "Hearts",
+    "book": "PointsBet",
+    "rec_price": "+600",
+    "eff_price": "+600",
+    "fair_pct": "15.83",
+    "ev_pct": "95.0",
+    "stake": "33.43",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.950; power 0.882); cash EV +10.8%; Pin Trabzonspor -227 / draw +398 / Hearts +494; pulled 8:00 PM ET; yes at +521",
+    "units": null
+   },
+   {
+    "rec_id": "939032ea",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "20:05",
+    "sport": "Soccer",
+    "event": "Paphos FC v Riga FC (UEFA Conference League)",
+    "market": "Match Result (bonus bet)",
+    "selection": "Riga FC",
+    "book": "PointsBet",
+    "rec_price": "+500",
+    "eff_price": "+500",
+    "fair_pct": "19.2",
+    "ev_pct": "96.0",
+    "stake": "33.46",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.960; power devig 0.919); cash EV +15.2%; Pin Pafos -151 / draw +291 / Riga +391; pulled 8:00 PM ET; yes at +417",
+    "units": null
+   },
+   {
+    "rec_id": "be91fe22",
+    "rec_date": "2026-10-18",
+    "rec_time_et": "20:05",
+    "sport": "Soccer",
+    "event": "Arsenal v Everton (EPL)",
+    "market": "Match Result (bonus bet)",
+    "selection": "Draw",
+    "book": "PointsBet",
+    "rec_price": "+400",
+    "eff_price": "+400",
+    "fair_pct": "21.3",
+    "ev_pct": "85.2",
+    "stake": "33.43",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.852; power 0.823); cash EV +6.5%; Pin Arsenal -240 / draw +352 / Everton +797; pulled 8:00 PM ET; yes at +372",
+    "units": null
+   },
    {
     "rec_id": "55f649f7",
     "rec_date": "2026-10-18",
@@ -7019,6 +7111,6 @@
   "PointsBet": 155.0,
   "theScore": 0.2
  },
- "hash": "29ee3e760df62776c2d45aca4ff7e74ee3e81a3a",
- "generated_at": "2026-10-18T19:47:21-04:00"
+ "hash": "97a4517d5d2393f72ab5e7ec3f1a26272f93bad4",
+ "generated_at": "2026-10-18T20:02:34-04:00"
 }
