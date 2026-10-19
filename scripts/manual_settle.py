@@ -8,7 +8,8 @@ Inputs come from the environment only (never from the command line or a shell st
 
 Looks in data/bets.csv only (archived or already settled bets are refused), settles through
 ledger.settle (which refuses double settles), marks settled_by=manual, saves bets + balances.
-Exit 0 = settled, 2 = bad input, 1 = refused / not found.
+Exit 0 = settled, 3 = already settled with the SAME result (a repeat request: nothing to do, not an error),
+2 = bad input, 1 = refused / not found / already settled with a DIFFERENT result.
 """
 import sys, os, re
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -22,6 +23,13 @@ def die(msg, code=1):
     print(f"::error::manual settle refused: {msg}" if os.environ.get("GITHUB_ACTIONS") else f"REFUSED: {msg}", flush=True)
     sys.exit(code)
 
+def already(bid, result, existing):
+    """Repeat request for a bet that is already settled. Same result -> quiet no-op (exit 3); different -> refuse loudly."""
+    if (existing or "").strip().lower() == result:
+        print((f"::notice::" if os.environ.get("GITHUB_ACTIONS") else "") + f"{bid} is already settled as {result}; nothing to do", flush=True)
+        sys.exit(3)
+    die(f"{bid} is already settled (result={existing}), not {result}")
+
 def main():
     bid = os.environ.get("BET_ID", ""); result = os.environ.get("RESULT", ""); profit = os.environ.get("PROFIT", "")
     if not ID_RE.fullmatch(bid): die("bad bet_id format", 2)
@@ -31,11 +39,12 @@ def main():
         rows, cols = LG.load_bets(); led = LG.load_ledger()
         m = [r for r in rows if r["bet_id"] == bid]
         if not m:
-            if any(r.get("bet_id") == bid for r in archive_rows()): die(f"{bid} is archived (already settled)")
+            for a in archive_rows():
+                if a.get("bet_id") == bid: already(bid, result, a.get("result"))
             die(f"no open bet with id {bid}")
         r = m[0]
         if r["result"].strip().lower() not in ("open", "") or r["settled_at"]:
-            die(f"{bid} is already settled (result={r['result']})")
+            already(bid, result, r["result"])
         pnl = None
         if result == "won" and LG.num(r["to_win"]) == 0:
             if not profit or float(profit) <= 0: die(f"{bid}: to_win unknown, a profit amount is required for a win")

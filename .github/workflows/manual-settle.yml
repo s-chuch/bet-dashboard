@@ -81,8 +81,11 @@ jobs:
           pushed=0
           for attempt in 1 2 3; do
             git fetch -q origin main && git reset -q --hard origin/main
-            # a refusal (not found / already settled / bad input) fails the job: no fallthrough
-            python3 scripts/manual_settle.py
+            # a refusal (not found / different result already recorded / bad input) fails the job: no fallthrough.
+            # exit 3 = the same result was already recorded (a repeat tap): quiet success, nothing to commit.
+            rc=0; python3 scripts/manual_settle.py || rc=$?
+            if [ "$rc" -eq 3 ]; then exit 0; fi
+            if [ "$rc" -ne 0 ]; then exit "$rc"; fi
             # full normal pass: archive, balances, rec grading, rebuild JSON, needs_review refresh
             python3 scripts/autorun.py || echo "::warning::autorun rebuild reported errors"
             git add -A data data.json stats.json archive.json log.json
