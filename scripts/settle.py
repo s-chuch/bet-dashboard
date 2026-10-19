@@ -11,6 +11,9 @@ Book void rules (player who doesn't play):
   FanDuel / DraftKings / Caesars / theScore / others: void only if he never plays; a parlay is then repriced
      (we can't know the repriced odds, so a voided leg in a winning parlay -> review).
   PointsBet / Hard Rock: a voided leg voids the whole SGP.
+Postponed / canceled / suspended single-game bets (all legs in one game) auto-void once the game is still not
+  completed 48h after its scheduled start (postponed_void); before that they sit in review with the auto-void time.
+  Multi-game parlays with such a game always go to review.
 Anything not explicitly decidable goes to review.
 """
 import re, sys, os, datetime
@@ -263,6 +266,45 @@ def grade_leg(L, games, book, ctx):
         return "won" if me > op else "lost"
     raise Review(f'leg "{L["text"]}": unsupported leg type {t}')
 
+# ---------------------------------------------------------------- postponed / cancelled single-game bets
+VOID_GRACE_HOURS = 48
+VOIDABLE_STATUS = {"STATUS_POSTPONED", "STATUS_CANCELED", "STATUS_CANCELLED", "STATUS_SUSPENDED"}
+
+def _single_game_bet(row, legs, ms):
+    """True only when we are sure every leg belongs to the one matched game (single bet or same-game parlay)."""
+    if len(ms) != 1: return False
+    ev = re.sub(r"^\s*[A-Z]{2,6}\s*:\s*", "", re.sub(r"\s*\([^)]*\)", "", row["event"]))
+    pieces = [p for p in re.split(r"\s+\+\s+|,\s*", ev) if p.strip()]
+    if len(pieces) != 1: return False
+    if not re.search(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", pieces[0]): return False
+    # a leg naming its own game (multi-game parlay syntax) must name the same game as the event
+    norm = lambda x: re.sub(r"\W+", "", x).lower()
+    for L in legs:
+        if L.get("game") and {norm(x) for x in L["game"]} != {norm(x) for x in re.split(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", pieces[0])}:
+            return False
+    return True
+
+def postponed_void(row, legs, ms, m, s, st):
+    """Return a log reason (str) if this postponed/cancelled/suspended game's bet should be auto-voided now.
+    Returns None (-> review) otherwise; raises Review with a 'will auto-void on ...' note while inside the grace period."""
+    if st.get("name") not in VOIDABLE_STATUS or st.get("completed"): return None
+    if not _single_game_bet(row, legs, ms): return None
+    try:
+        from common import ET, now_et
+        raw = s["header"]["competitions"][0]["date"]
+        sched = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if sched.tzinfo is None: sched = sched.replace(tzinfo=datetime.timezone.utc)
+        if ET: sched = sched.astimezone(ET)
+        sched = sched.replace(tzinfo=None)
+    except Exception:
+        return None   # no usable scheduled start -> never void
+    deadline = sched + datetime.timedelta(hours=VOID_GRACE_HOURS)
+    what = (st.get("description") or st.get("name")).lower()
+    if now_et() < deadline:
+        raise Review(f"game {m['id']} {what}; auto-void on {deadline:%a %b %d %I:%M %p} ET if not played")
+    return (f"auto-void: game {m['id']} {what} and not completed {VOID_GRACE_HOURS}h after scheduled start "
+            f"({sched:%Y-%m-%d %H:%M} ET); single-game bet, stake refunded")
+
 def candidate_games(row, legs, bet):
     """Return list of matches (ESPN) this bet depends on."""
     if bet.get("match"): return [bet["match"]]
@@ -312,6 +354,8 @@ def grade_row(row):
             s, st = game_status(m)
             if not st: raise Review(f"ESPN summary unavailable for {m['path']} {m['id']}")
             if re.search(r"POSTPONED|CANCEL|SUSPEND|ABANDON|FORFEIT", st.get("name", "")):
+                v = postponed_void(row, legs, ms, m, s, st)
+                if v: return {**out, "status": "settle", "result": "void", "reason": v, "final": v}
                 raise Review(f"game {m['id']} is {st.get('description') or st.get('name')} (book rules: usually void, confirm)")
             if not is_final(st):
                 return {**out, "status": "waiting", "reason": f"game {m['id']} {st.get('shortDetail', '')}"}

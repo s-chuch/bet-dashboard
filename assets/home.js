@@ -68,13 +68,15 @@ function stBadge(g){const i=stInfo(g);if(!i)return"";const r=RS[g.id];
   return`<div class="stb ${i.cls}"><span class="dot"></span>${esc(i.txt)}</div>${evs?`<div class="stn">${esc(evs)}</div>`:""}`}
 const PROB_PATHS=new Set(["football/nfl","football/college-football","baseball/mlb","basketball/nba","basketball/wnba","basketball/mens-college-basketball"]);
 const probs={}, probCount={}, pregameLive={};
-let espnErr=false;
+let espnErr=false;const FEED={site:null,core:null,csp:null};
+document.addEventListener("securitypolicyviolation",e=>{try{FEED.csp=new URL(e.blockedURI).host||String(e.blockedURI)}catch(_){FEED.csp=String(e.blockedURI||"?")}});
+
 function allMatches(){const ms=[];for(const b of DATA.open){if(b.match)ms.push(b.match);for(const L of b.legs)if(L.match)ms.push(L.match)}return ms}
 const etDay=d=>new Date(d).toLocaleDateString("en-CA",{timeZone:TZ});
 function isActive(m){const g=gameFor(m);if(!g||g.completed)return false;if(g.state==="in")return true;
   return g.date&&new Date(g.date).getTime()-Date.now()<20*60000}  // live, or starting within 20 min
-async function espn(u){if(!/^https:\/\/(site\.api|sports\.core\.api)\.espn\.com\/[\w\/.,&=?%-]*$/.test(u))return null;try{const r=await tfetch(u,{cache:"no-store"});if(r.status===429||r.status>=500){espnErr=true;return null}
-  if(!r.ok)return null;return await r.json()}catch(e){espnErr=true;return null}}
+async function espn(u){if(!/^https:\/\/(site\.api|sports\.core\.api)\.espn\.com\/[\w\/.,&=?%-]*$/.test(u)){FEED.site={bad:"blocked URL"};return null}const fk=/sports\.core\./.test(u)?"core":"site";try{const r=await tfetch(u,{cache:"no-store"});if(r.status===429||r.status>=500){espnErr=true;FEED[fk]={bad:"HTTP "+r.status};return null}
+  if(!r.ok){FEED[fk]={bad:"HTTP "+r.status};return null}const j=await r.json();FEED[fk]={ok:Date.now()};return j}catch(e){espnErr=true;FEED[fk]={bad:"network/CORS"};return null}}
 const corePath=m=>{const[sp,lg]=m.path.split("/");return`https://sports.core.api.espn.com/v2/sports/${sp}/leagues/${lg}/events/${m.id}/competitions/${m.id}`};
 // full=true: every unfinished game (60s cycle); full=false: only live / about-to-start games (10s cycle)
 async function refreshScores(full){
@@ -651,7 +653,7 @@ document.addEventListener("click",e=>{
   const sh=e.target.closest(".sechead");if(sh&&sh.closest(".sec.fold")){const k="x-"+sh.dataset.sec;SECS.has(k)?SECS.delete(k):SECS.add(k);saveUI();syncUI();return}if(sh){SECS.has(sh.dataset.sec)?SECS.delete(sh.dataset.sec):SECS.add(sh.dataset.sec);saveUI();syncUI();return}
   const row=e.target.closest(".crow");if(row){const k=row.parentElement.dataset.k;OPEN.has(k)?OPEN.delete(k):OPEN.add(k);saveUI();syncUI()}});
 
-function render(){try{renderReview()}catch(e){}
+function render(){try{renderReview();renderFeeds()}catch(e){}
   const D=DATA;
   const liveCards=[],upCards=[],wonCards=[],lostCards=[];let lostPending=0,wonPending=0,atRisk=0,potPay=0,potTBC=0,tonight=0,tonightTBC=0,openN=0;const TODAY=etDay(Date.now());
   FINAL_BI=new Set();
@@ -737,6 +739,13 @@ document.addEventListener("visibilitychange",()=>{if(document.hidden)clearTimeou
 // ---- auto-run health: last GitHub Actions run of autorun.yml (GitHub API; needs the optional token from Logs, else banner stays hidden) + needs_review from data.json
 const GH_RUNS="https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/autorun.yml/runs?per_page=10";
 let AUTO_RUNS=null,AUTO_AT=0;
+function renderFeeds(){const el=$("feeds");if(!el)return;
+  const f=(n,ok,bad)=>`<span class="${ok?"fok":"fbad"}" title="${esc(bad||"")}">${ok?"●":"○"} ${n}${!ok&&bad?` <small>${esc(bad)}</small>`:""}</span>`;
+  const st=x=>x&&x.ok&&Date.now()-x.ok<120000,bad=x=>x&&x.bad;
+  const eBad=bad(FEED.site)||bad(FEED.core),eOK=st(FEED.site)&&!eBad;
+  const parts=[f("ESPN",eOK,eBad||(FEED.site?"stale":"no data yet")),f("Polymarket",pmOK!==false,pmOK===false?"request failed":""),f("Odds",anOK!==false,anOK===false?"request failed":"")];
+  const h=parts.join("")+(FEED.csp?` <span class="fbad">⚠ blocked by page security policy: ${esc(FEED.csp)}</span>`:"");
+  if(el._h!==h){el._h=h;el.innerHTML=h}}
 function renderReview(){
   const rv=(DATA&&DATA.auto&&DATA.auto.needs_review)||[];
   {const re_=$("review"),h=rv.length?`<a class="rvlink" href="log.html#activity">${rv.length} bet${rv.length>1?"s":""} need your OK (not auto-settled) · settle in Logs ›</a>`:"";if(re_._h!==h){re_._h=h;re_.innerHTML=h}}

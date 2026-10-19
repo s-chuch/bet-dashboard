@@ -31,8 +31,15 @@ Book void rules: bet365 soccer player props void if the player doesn't **start**
 void only if the player never plays (a parlay is then repriced → we can't know the price → review);
 PointsBet/Hard Rock void the whole SGP.
 
+**Postponed / canceled / suspended games:** if every leg of a bet is in one game (single bet or same-game parlay) and ESPN
+shows that game as Postponed, Canceled or Suspended (not completed), the bet is auto-**void**ed (stake refunded,
+`settled_by=auto`, reason in the autorun log) once 48 hours have passed since the game's scheduled start (ET). Until then
+it sits in needs_review with "game postponed; auto-void on <day time> ET if not played". If the game is completed
+(even rescheduled) it is graded normally instead. Multi-game parlays with such a game, other statuses (forfeit,
+abandoned) and missing/ambiguous ESPN data always stay in review.
+
 Anything else goes to **needs_review** (`data/autorun.json`, shown at the top of the page) and is never auto-settled:
-unknown/unlisted legs, unmatched team or player, ambiguous player names, missing stats, postponed/cancelled games,
+unknown/unlisted legs, unmatched team or player, ambiguous player names, missing stats, postponed/cancelled games in multi-game parlays or still inside the 48h grace,
 soccer extra time, NFL ties, void legs that need repricing, wins with no/unconfirmed payout. Futures wait.
 
 ## Health
