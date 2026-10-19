@@ -2,13 +2,13 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 208.4,
-   "updated": "2026-10-19 16:43"
+   "balance": 207.9,
+   "updated": "2026-10-19 16:46"
   },
   {
    "book": "FanDuel",
-   "balance": 154.37,
-   "updated": "2026-10-19 16:43"
+   "balance": 153.87,
+   "updated": "2026-10-19 16:46"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 615.51,
+ "total": 614.51,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -6632,6 +6632,104 @@
    "payout": 1.16,
    "payout_est": false,
    "start_ts": "2026-10-20T00:15Z"
+  },
+  {
+   "bet_id": "bd13eed8",
+   "date": "2026-10-19",
+   "book": "FanDuel",
+   "event": "Colorado Avalanche @ Philadelphia Flyers",
+   "market": "SGP (40% profit boost)",
+   "pick": "SGP (legs not shown in screenshot)",
+   "start": "Mon Oct 19 07:10 PM ET",
+   "price": "+108",
+   "boosted_price": "+152",
+   "stake": 0.5,
+   "stake_note": "",
+   "to_win": 0.76,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Colorado Avalanche @ Philadelphia Flyers"
+    }
+   ],
+   "match": null,
+   "sport": null,
+   "cash_stake": 0.5,
+   "payout": 1.26,
+   "payout_est": false,
+   "start_ts": "2026-10-19T23:10Z"
+  },
+  {
+   "bet_id": "659ed958",
+   "date": "2026-10-19",
+   "book": "Caesars",
+   "event": "Tottenham vs Coventry City",
+   "market": "SGP 3-leg",
+   "pick": "Tottenham ML + 2 more legs (not clear in screenshot)",
+   "start": "Mon Oct 19 03:00 PM ET",
+   "price": "+300",
+   "boosted_price": "",
+   "stake": 0.5,
+   "stake_note": "",
+   "to_win": 1.5,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Tottenham",
+     "women": false,
+     "text": "Tottenham ML",
+     "team_ok": true
+    },
+    {
+     "type": "unknown",
+     "text": "2 more legs (not clear in screenshot)"
+    }
+   ],
+   "match": {
+    "path": "soccer/eng.1",
+    "date": "20261019",
+    "groups": null,
+    "id": "401879257",
+    "snapshot": {
+     "date": "2026-10-19T19:00Z",
+     "period": 2,
+     "clock": 5220.0,
+     "state": "in",
+     "completed": false,
+     "detail": "87'",
+     "teams": [
+      {
+       "id": "367",
+       "name": "Tottenham Hotspur",
+       "abbr": "TOT",
+       "short": "Spurs",
+       "nick": "Tottenham Hotspur",
+       "location": "Tottenham Hotspur",
+       "home": true,
+       "score": "2"
+      },
+      {
+       "id": "388",
+       "name": "Coventry City",
+       "abbr": "COV",
+       "short": "Coventry",
+       "nick": "Coventry City",
+       "location": "Coventry City",
+       "home": false,
+       "score": "1"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.5,
+   "payout": 2.0,
+   "payout_est": false,
+   "start_ts": "2026-10-19T19:00Z"
   }
  ],
  "settled_recent": [
@@ -7548,13 +7646,13 @@
  ],
  "pnl_total": 156.26,
  "unsettled": {
-  "n": 26,
-  "cash_stake": 113.6,
-  "max_payout": 1139.05,
+  "n": 28,
+  "cash_stake": 114.6,
+  "max_payout": 1142.31,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 113.6,
+ "open_stake": 114.6,
  "recs": {
   "stats": {
    "overall": {
@@ -10147,6 +10245,15 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "bd13eed8",
+    "book": "FanDuel",
+    "event": "Colorado Avalanche @ Philadelphia Flyers",
+    "pick": "SGP (legs not shown in screenshot)",
+    "stake": "0.50",
+    "reason": "parlay legs not listed in the pick text",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -10232,17 +10339,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 16:22 ET"
+  "last_change_at": "2026-10-19 16:47 ET"
  },
- "open_live_n": 26,
+ "open_live_n": 28,
  "open_stake_by_book": {
-  "Caesars": 0.5,
+  "Caesars": 1.0,
   "DraftKings": 0.7,
-  "FanDuel": 1.8,
+  "FanDuel": 2.3,
   "Hard Rock": 5.0,
   "PointsBet": 243.75,
   "theScore": 0.6
  },
- "hash": "7e0a86f95710173421a55f0866362a099dde8ecb",
- "generated_at": "2026-10-19T16:43:53-04:00"
+ "hash": "de11a995753ac0d6c037f1035dc0fd4e11e17be5",
+ "generated_at": "2026-10-19T16:47:04-04:00"
 }
