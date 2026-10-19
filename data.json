@@ -6,14 +6,14 @@
    "updated": "2026-10-19 16:46"
   },
   {
+   "book": "PointsBet",
+   "balance": 164.26,
+   "updated": "2026-10-19 18:03"
+  },
+  {
    "book": "FanDuel",
    "balance": 153.87,
    "updated": "2026-10-19 16:46"
-  },
-  {
-   "book": "PointsBet",
-   "balance": 94.26,
-   "updated": "2026-10-19 16:22"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 614.51,
+ "total": 684.51,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -95,36 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "b54671c7",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Panteras de Aguascalientes v Lobos Plateados",
-   "market": "Moneyline (WELCOMEDM rollover)",
-   "pick": "Panteras de Aguascalientes",
-   "start": "Sun Oct 18 09:00 PM ET",
-   "price": "-210",
-   "boosted_price": "",
-   "stake": 25.0,
-   "stake_note": "",
-   "to_win": 11.9,
-   "ev_pct": "0.2",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Panteras de Aguascalientes",
-     "women": false,
-     "text": "Panteras de Aguascalientes"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 25.0,
-   "payout": 36.9,
-   "payout_est": false,
-   "start_ts": "2026-10-19T01:00Z"
-  },
-  {
    "bet_id": "ac75fe1c",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -153,34 +123,6 @@
    "payout": 33.0,
    "payout_est": false,
    "start_ts": "2026-10-19T08:00Z"
-  },
-  {
-   "bet_id": "f2a01959",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Phnom Penh Crown v Life FC SihanoukVille",
-   "market": "3-Way Draw (WELCOMEDM rollover)",
-   "pick": "Draw",
-   "start": "Mon Oct 19 07:00 AM ET",
-   "price": "+600",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 60.0,
-   "ev_pct": "-6.7",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Draw"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 70.0,
-   "payout_est": false,
-   "start_ts": "2026-10-19T11:00Z"
   },
   {
    "bet_id": "79710608",
@@ -6662,6 +6604,26 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Phnom Penh Crown v Life FC SihanoukVille",
+   "pick": "Draw",
+   "result": "won",
+   "pnl": 60.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Panteras de Aguascalientes v Lobos Plateados",
+   "pick": "Panteras de Aguascalientes",
+   "result": "lost",
+   "pnl": -25.0,
+   "stake": 25.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Cienciano v UTC Cajamarca",
    "pick": "Draw",
    "result": "lost",
@@ -7550,31 +7512,31 @@
    "auto": false
   }
  ],
- "pnl_total": 125.76,
+ "pnl_total": 160.76,
  "unsettled": {
-  "n": 24,
-  "cash_stake": 84.1,
-  "max_payout": 965.31,
+  "n": 22,
+  "cash_stake": 49.1,
+  "max_payout": 858.41,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 84.1,
+ "open_stake": 49.1,
  "recs": {
   "stats": {
    "overall": {
     "n": 86,
-    "w": 29,
-    "l": 44,
+    "w": 30,
+    "l": 45,
     "p": 0,
-    "pending": 13,
-    "win_pct": 39.7,
-    "units": 15.02,
-    "roi_pct": 23.5,
-    "roi_n": 64,
-    "exp_roi_pct": 12.1,
-    "exp_wins": 25.7,
-    "exp_wins_n": 73,
-    "wins_with_fair": 29
+    "pending": 11,
+    "win_pct": 40.0,
+    "units": 18.02,
+    "roi_pct": 27.3,
+    "roi_n": 66,
+    "exp_roi_pct": 11.9,
+    "exp_wins": 26.6,
+    "exp_wins_n": 75,
+    "wins_with_fair": 30
    },
    "by_promo": {
     "No Sweat": {
@@ -7654,34 +7616,34 @@
     },
     "rollover": {
      "n": 32,
-     "w": 9,
-     "l": 16,
+     "w": 10,
+     "l": 17,
      "p": 0,
-     "pending": 7,
-     "win_pct": 36.0,
-     "units": -5.16,
-     "roi_pct": -22.4,
-     "roi_n": 23,
-     "exp_roi_pct": 0.4,
-     "exp_wins": 11.0,
-     "exp_wins_n": 25,
-     "wins_with_fair": 9
+     "pending": 5,
+     "win_pct": 37.0,
+     "units": -2.16,
+     "roi_pct": -8.6,
+     "roi_n": 25,
+     "exp_roi_pct": 0.8,
+     "exp_wins": 11.9,
+     "exp_wins_n": 27,
+     "wins_with_fair": 10
     }
    },
    "by_sport": {
     "Basketball": {
      "n": 1,
      "w": 0,
-     "l": 0,
+     "l": 1,
      "p": 0,
-     "pending": 1,
-     "win_pct": null,
-     "units": 0,
-     "roi_pct": null,
-     "roi_n": 0,
-     "exp_roi_pct": null,
-     "exp_wins": null,
-     "exp_wins_n": 0,
+     "pending": 0,
+     "win_pct": 0.0,
+     "units": -1.0,
+     "roi_pct": -100.0,
+     "roi_n": 1,
+     "exp_roi_pct": 0.2,
+     "exp_wins": 0.7,
+     "exp_wins_n": 1,
      "wins_with_fair": 0
     },
     "MLB": {
@@ -7761,18 +7723,18 @@
     },
     "Soccer": {
      "n": 24,
-     "w": 6,
+     "w": 7,
      "l": 8,
      "p": 0,
-     "pending": 10,
-     "win_pct": 42.9,
-     "units": -1.83,
-     "roi_pct": -18.3,
-     "roi_n": 10,
-     "exp_roi_pct": 1.5,
-     "exp_wins": 3.4,
-     "exp_wins_n": 14,
-     "wins_with_fair": 6
+     "pending": 9,
+     "win_pct": 46.7,
+     "units": 2.17,
+     "roi_pct": 19.7,
+     "roi_n": 11,
+     "exp_roi_pct": 2.4,
+     "exp_wins": 3.6,
+     "exp_wins_n": 15,
+     "wins_with_fair": 7
     },
     "WNBA": {
      "n": 1,
@@ -7793,18 +7755,18 @@
    "by_placed": {
     "yes": {
      "n": 67,
-     "w": 23,
-     "l": 35,
+     "w": 24,
+     "l": 36,
      "p": 0,
-     "pending": 9,
-     "win_pct": 39.7,
-     "units": 19.78,
-     "roi_pct": 36.6,
-     "roi_n": 54,
-     "exp_roi_pct": 13.4,
-     "exp_wins": 21.2,
-     "exp_wins_n": 58,
-     "wins_with_fair": 23
+     "pending": 7,
+     "win_pct": 40.0,
+     "units": 22.78,
+     "roi_pct": 40.7,
+     "roi_n": 56,
+     "exp_roi_pct": 13.1,
+     "exp_wins": 22.1,
+     "exp_wins_n": 60,
+     "wins_with_fair": 24
     },
     "no": {
      "n": 19,
@@ -8087,11 +8049,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "Pin home -276 / away +188; pb/sun3/out.txt",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "7810e76c",
@@ -8179,11 +8141,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "won",
     "final_score": "",
     "source": "rec.py add",
     "notes": "Pin home -700 / draw +566 / away +889; pb/sun3/out.txt",
-    "units": null
+    "units": 4.0
    },
    {
     "rec_id": "dfbbcaac",
@@ -10099,28 +10061,10 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "b54671c7",
-    "book": "PointsBet",
-    "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
-    "pick": "Panteras de Aguascalientes",
-    "stake": "25.00",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "ac75fe1c",
     "book": "PointsBet",
     "event": "Tai Po FC v Southern District (Hong Kong PL)",
     "pick": "Southern District RSA",
-    "stake": "10.00",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "f2a01959",
-    "book": "PointsBet",
-    "event": "Phnom Penh Crown v Life FC SihanoukVille (Cambodia PL)",
-    "pick": "Draw",
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
@@ -10263,17 +10207,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 17:01 ET"
+  "last_change_at": "2026-10-19 18:04 ET"
  },
- "open_live_n": 24,
+ "open_live_n": 22,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
-  "PointsBet": 213.75,
+  "PointsBet": 178.75,
   "theScore": 0.6
  },
- "hash": "8fd344d407834855be76d937d0ccece72a626a7e",
- "generated_at": "2026-10-19T17:43:08-04:00"
+ "hash": "e26c4e8ed4325a5667e2b52e1c0e62c8d9bc4a57",
+ "generated_at": "2026-10-19T18:04:21-04:00"
 }

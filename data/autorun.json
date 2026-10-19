@@ -1,28 +1,10 @@
 {
  "needs_review": [
   {
-   "bet_id": "b54671c7",
-   "book": "PointsBet",
-   "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
-   "pick": "Panteras de Aguascalientes",
-   "stake": "25.00",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "ac75fe1c",
    "book": "PointsBet",
    "event": "Tai Po FC v Southern District (Hong Kong PL)",
    "pick": "Southern District RSA",
-   "stake": "10.00",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "f2a01959",
-   "book": "PointsBet",
-   "event": "Phnom Penh Crown v Life FC SihanoukVille (Cambodia PL)",
-   "pick": "Draw",
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
@@ -166,5 +148,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 17:01 ET"
+ "last_change_at": "2026-10-19 18:04 ET"
 }
