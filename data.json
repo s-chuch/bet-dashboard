@@ -6,14 +6,14 @@
    "updated": "2026-10-19 16:46"
   },
   {
-   "book": "PointsBet",
-   "balance": 164.26,
-   "updated": "2026-10-19 18:03"
-  },
-  {
    "book": "FanDuel",
    "balance": 153.87,
    "updated": "2026-10-19 16:46"
+  },
+  {
+   "book": "PointsBet",
+   "balance": 124.26,
+   "updated": "2026-10-19 18:26"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 684.51,
+ "total": 644.51,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -6480,6 +6480,267 @@
    "payout": 1.26,
    "payout_est": false,
    "start_ts": "2026-10-19T23:10Z"
+  },
+  {
+   "bet_id": "47d27866",
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Yeovil v Leatherhead",
+   "market": "3-Way Moneyline (WELCOMEDM rollover)",
+   "pick": "Leatherhead",
+   "start": "Tue Oct 20 02:45 PM ET",
+   "price": "+550",
+   "boosted_price": "",
+   "stake": 10.0,
+   "stake_note": "",
+   "to_win": 55.0,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Leatherhead",
+     "women": false,
+     "text": "Leatherhead",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/eng.fa_qual",
+    "date": "20261020",
+    "groups": null,
+    "id": "401930578",
+    "snapshot": {
+     "date": "2026-10-20T18:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "284",
+       "name": "Yeovil Town",
+       "abbr": "YEO",
+       "short": "Yeovil",
+       "nick": "Yeovil Town",
+       "location": "Yeovil Town",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "3908",
+       "name": "Leatherhead",
+       "abbr": "Leatherhead",
+       "short": "Leatherhead",
+       "nick": "Leatherhead",
+       "location": "Leatherhead",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 65.0,
+   "payout_est": false,
+   "start_ts": "2026-10-20T18:45Z"
+  },
+  {
+   "bet_id": "d368e326",
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Harrogate Town v Bury",
+   "market": "3-Way Moneyline (WELCOMEDM rollover)",
+   "pick": "Bury",
+   "start": "Tue Oct 20 02:45 PM ET",
+   "price": "+300",
+   "boosted_price": "",
+   "stake": 10.0,
+   "stake_note": "",
+   "to_win": 30.0,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Bury",
+     "women": false,
+     "text": "Bury",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/eng.fa_qual",
+    "date": "20261020",
+    "groups": null,
+    "id": "401930559",
+    "snapshot": {
+     "date": "2026-10-20T18:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "19262",
+       "name": "Harrogate Town",
+       "abbr": "HAR",
+       "short": "Harrogate",
+       "nick": "Harrogate Town",
+       "location": "Harrogate Town",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "354",
+       "name": "Bury",
+       "abbr": "BURY",
+       "short": "Bury",
+       "nick": "Bury",
+       "location": "Bury",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 40.0,
+   "payout_est": false,
+   "start_ts": "2026-10-20T18:45Z"
+  },
+  {
+   "bet_id": "dc3d72cd",
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Forest Green v Chesham Utd",
+   "market": "3-Way Moneyline (WELCOMEDM rollover)",
+   "pick": "Chesham Utd",
+   "start": "Tue Oct 20 02:45 PM ET",
+   "price": "+1000",
+   "boosted_price": "",
+   "stake": 10.0,
+   "stake_note": "",
+   "to_win": 100.0,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Chesham United",
+     "women": false,
+     "text": "Chesham Utd",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/eng.fa_qual",
+    "date": "20261020",
+    "groups": null,
+    "id": "401930565",
+    "snapshot": {
+     "date": "2026-10-20T18:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "282",
+       "name": "Forest Green Rovers",
+       "abbr": "FGR",
+       "short": "Forest Green",
+       "nick": "Forest Green Rovers",
+       "location": "Forest Green Rovers",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "4181",
+       "name": "Chesham United",
+       "abbr": "CHM",
+       "short": "Chesham Utd",
+       "nick": "Chesham United",
+       "location": "Chesham United",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 110.0,
+   "payout_est": false,
+   "start_ts": "2026-10-20T18:45Z"
+  },
+  {
+   "bet_id": "5db8dfe1",
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Barcelona v Alaves",
+   "market": "3-Way Draw (WELCOMEDM rollover)",
+   "pick": "Draw",
+   "start": "Sat Oct 31 04:00 PM ET",
+   "price": "+800",
+   "boosted_price": "",
+   "stake": 10.0,
+   "stake_note": "",
+   "to_win": 80.0,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Draw"
+    }
+   ],
+   "match": {
+    "path": "soccer/esp.1",
+    "date": "20261031",
+    "groups": null,
+    "id": "401882822",
+    "snapshot": {
+     "date": "2026-10-31T20:00Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "83",
+       "name": "Barcelona",
+       "abbr": "BAR",
+       "short": "Barcelona",
+       "nick": "Barcelona",
+       "location": "Barcelona",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "96",
+       "name": "Alav\u00e9s",
+       "abbr": "ALA",
+       "short": "Alav\u00e9s",
+       "nick": "Alav\u00e9s",
+       "location": "Alav\u00e9s",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 90.0,
+   "payout_est": false,
+   "start_ts": "2026-10-31T20:00Z"
   }
  ],
  "settled_recent": [
@@ -7476,13 +7737,13 @@
  ],
  "pnl_total": 140.76,
  "unsettled": {
-  "n": 20,
-  "cash_stake": 29.1,
-  "max_payout": 757.91,
+  "n": 24,
+  "cash_stake": 69.1,
+  "max_payout": 1062.91,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 29.1,
+ "open_stake": 69.1,
  "recs": {
   "stats": {
    "overall": {
@@ -10436,15 +10697,15 @@
   ],
   "last_change_at": "2026-10-19 18:21 ET"
  },
- "open_live_n": 20,
+ "open_live_n": 24,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
-  "PointsBet": 158.75,
+  "PointsBet": 198.75,
   "theScore": 0.6
  },
- "hash": "cfe99b942104d2e7866b15cdcd3acc7602c6c3e1",
- "generated_at": "2026-10-19T18:21:44-04:00"
+ "hash": "e1804a9792f00434d9ec8c1f88be6a55a4d4b622",
+ "generated_at": "2026-10-19T18:27:14-04:00"
 }
