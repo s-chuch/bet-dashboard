@@ -6660,97 +6660,19 @@
    "payout": 1.26,
    "payout_est": false,
    "start_ts": "2026-10-19T23:10Z"
-  },
-  {
-   "bet_id": "659ed958",
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "Tottenham vs Coventry City",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
-   "start": "Mon Oct 19 03:00 PM ET",
-   "price": "+300",
-   "boosted_price": "+390",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.95,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Tottenham",
-     "women": false,
-     "text": "Tottenham ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Omar Marmoush",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Omar Marmoush score or assist",
-     "pteam": "TOT",
-     "pname": "Omar Marmoush",
-     "pid": "303745"
-    },
-    {
-     "type": "prop",
-     "player": "Sidiki Cherif",
-     "stat": "shots",
-     "op": "min",
-     "min": 2,
-     "text": "Sidiki Cherif 2+ shots",
-     "pteam": "COV",
-     "pname": "Sidiki Cherif",
-     "pid": "366817"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261019",
-    "groups": null,
-    "id": "401879257",
-    "snapshot": {
-     "date": "2026-10-19T19:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+2'",
-     "teams": [
-      {
-       "id": "367",
-       "name": "Tottenham Hotspur",
-       "abbr": "TOT",
-       "short": "Spurs",
-       "nick": "Tottenham Hotspur",
-       "location": "Tottenham Hotspur",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "388",
-       "name": "Coventry City",
-       "abbr": "COV",
-       "short": "Coventry",
-       "nick": "Coventry City",
-       "location": "Coventry City",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.5,
-   "payout": 2.45,
-   "payout_est": false,
-   "start_ts": "2026-10-19T19:00Z"
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-19",
+   "book": "Caesars",
+   "event": "Tottenham vs Coventry City",
+   "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true
+  },
   {
    "date": "2026-10-18",
    "book": "bet365",
@@ -7662,15 +7584,15 @@
    "auto": false
   }
  ],
- "pnl_total": 156.26,
+ "pnl_total": 155.76,
  "unsettled": {
-  "n": 28,
-  "cash_stake": 114.6,
-  "max_payout": 1142.76,
+  "n": 27,
+  "cash_stake": 114.1,
+  "max_payout": 1140.31,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 114.6,
+ "open_stake": 114.1,
  "recs": {
   "stats": {
    "overall": {
@@ -10263,18 +10185,18 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "bd13eed8",
-    "book": "FanDuel",
-    "event": "Colorado Avalanche @ Philadelphia Flyers",
-    "pick": "SGP (legs not shown in screenshot)",
-    "stake": "0.50",
-    "reason": "parlay legs not listed in the pick text",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "659ed958",
+    "book": "Caesars",
+    "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "COV 1-3 TOT",
+    "at": "2026-10-19 16:58"
+   },
    {
     "bet_id": "5c5ab743",
     "book": "PointsBet",
@@ -10357,17 +10279,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 16:47 ET"
+  "last_change_at": "2026-10-19 16:58 ET"
  },
- "open_live_n": 28,
+ "open_live_n": 27,
  "open_stake_by_book": {
-  "Caesars": 1.0,
+  "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
   "PointsBet": 243.75,
   "theScore": 0.6
  },
- "hash": "4e79005bc33b43865cdc888e30dff4add0ae986e",
- "generated_at": "2026-10-19T16:52:07-04:00"
+ "hash": "48e199cb0665cbc3a29a2e7f9b5416e8f9f7d917",
+ "generated_at": "2026-10-19T16:58:33-04:00"
 }
