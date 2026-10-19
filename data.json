@@ -27,8 +27,8 @@
   },
   {
    "book": "theScore",
-   "balance": 30.75,
-   "updated": "2026-10-17 19:27"
+   "balance": 30.95,
+   "updated": "2026-10-18 20:25"
   },
   {
    "book": "Hard Rock",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 587.2,
+ "total": 587.4,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -61,109 +61,6 @@
    ],
    "match": null,
    "sport": null
-  },
-  {
-   "bet_id": "c2582df3",
-   "date": "2026-10-16",
-   "book": "theScore",
-   "event": "Tampa Bay Rays @ Cleveland Guardians",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
-   "start": "Fri Oct 16 08:00 PM ET",
-   "price": "+429",
-   "boosted_price": "+645",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.29,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Guardians",
-     "women": false,
-     "text": "Guardians ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "N. Martinez",
-     "stat": "k",
-     "op": "min",
-     "min": 3,
-     "text": "N. Martinez 3+ K",
-     "pteam": "TB",
-     "pname": "Nick Martinez",
-     "pid": "33372"
-    },
-    {
-     "type": "prop",
-     "player": "C. Simpson",
-     "stat": "tb",
-     "op": "min",
-     "min": 1,
-     "text": "C. Simpson 1+ total bases",
-     "pteam": "TB",
-     "pname": "Chandler Simpson",
-     "pid": "4679983"
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261016",
-    "groups": null,
-    "id": "401908026",
-    "snapshot": {
-     "date": "2026-10-17T00:00Z",
-     "period": 1,
-     "clock": 0.0,
-     "state": "post",
-     "completed": false,
-     "detail": "Postponed",
-     "teams": [
-      {
-       "id": "5",
-       "name": "Cleveland Guardians",
-       "abbr": "CLE",
-       "short": "Guardians",
-       "nick": "Guardians",
-       "location": "Cleveland",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    },
-    "pregame": {
-     "home": 53.1,
-     "away": 46.9
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-16 18:18 ET",
-     "ml_home": 0.4882,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.6363,
-     "total_line": 6.5,
-     "total_over_fair": 0.4875
-    },
-    "pm": null,
-    "an": {
-     "id": 303428,
-     "home_team_id": 193,
-     "away_team_id": 189
-    }
-   },
-   "sport": "MLB"
   },
   {
    "bet_id": "99db10eb",
@@ -197,11 +94,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 757.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/18 - 8:20 PM EDT",
+     "detail": "12:37 - 1st",
      "teams": [
       {
        "id": "9",
@@ -1249,11 +1146,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 757.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/18 - 8:20 PM EDT",
+     "detail": "12:37 - 1st",
      "teams": [
       {
        "id": "9",
@@ -2228,10 +2125,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 2,
-     "clock": 2760.0,
+     "clock": 3600.0,
      "state": "in",
      "completed": false,
-     "detail": "46'",
+     "detail": "60'",
      "teams": [
       {
        "id": "15360",
@@ -3482,10 +3379,10 @@
     "snapshot": {
      "date": "2026-10-18T22:00Z",
      "period": 3,
-     "clock": 620.0,
+     "clock": 36.0,
      "state": "in",
      "completed": false,
-     "detail": "10:20 - 3rd",
+     "detail": "0:36 - 3rd",
      "teams": [
       {
        "id": "30",
@@ -3588,6 +3485,17 @@
        "tokens": [
         "32487202851734042178102910475927243399676308014347251614407275438346288049040",
         "57832384130744688948584939372722929950732931349653454364901474376927866582445"
+       ]
+      },
+      {
+       "line": 3.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "112321406089822106130435042935908847285247344481500845570323468850422167980605",
+        "71124900925839337767008507550628257918749475905870550810089913059663128837637"
        ]
       }
      ],
@@ -4238,6 +4146,16 @@
   {
    "date": "2026-10-16",
    "book": "theScore",
+   "event": "Tampa Bay Rays @ Cleveland Guardians",
+   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+   "result": "void",
+   "pnl": 0.0,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-16",
+   "book": "theScore",
    "event": "Pittsburgh Penguins @ Colorado Avalanche",
    "pick": "Avalanche ML + Penguins +2.5 + Over 5.5 + Kadri 1+ pts",
    "result": "lost",
@@ -4727,7 +4645,7 @@
   }
  ],
  "pnl_total": 171.15,
- "open_stake": 290.35,
+ "open_stake": 290.15,
  "recs": {
   "stats": {
    "overall": {
@@ -7222,15 +7140,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "c2582df3",
-    "book": "theScore",
-    "event": "Tampa Bay Rays @ Cleveland Guardians",
-    "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
-    "stake": "0.20",
-    "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
-    "legs": []
-   },
-   {
     "bet_id": "10edceb9",
     "book": "bet365",
     "event": "Osasuna vs Racing Santander",
@@ -7255,6 +7164,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "c2582df3",
+    "book": "theScore",
+    "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+    "result": "void",
+    "pnl": 0.0,
+    "final": "auto-void: game 401908026 postponed and not completed 48h after scheduled start (2026-10-16 20:00 ET); single-game bet, stake refunded",
+    "at": "2026-10-18 20:25"
+   },
+   {
     "bet_id": "cdd1e058",
     "book": "bet365",
     "pick": "Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions",
@@ -7273,17 +7191,16 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 19:44 ET"
+  "last_change_at": "2026-10-18 20:26 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 1.0,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
-  "PointsBet": 288.75,
-  "theScore": 0.2
+  "PointsBet": 288.75
  },
- "hash": "7da81a099ffaaf5127b5f548142c291149c30f18",
- "generated_at": "2026-10-18T20:13:53-04:00"
+ "hash": "848d6711faf8f611b2bc16a14dd1b92612670425",
+ "generated_at": "2026-10-18T20:26:06-04:00"
 }

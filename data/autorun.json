@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "c2582df3",
-   "book": "theScore",
-   "event": "Tampa Bay Rays @ Cleveland Guardians",
-   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
-   "stake": "0.20",
-   "reason": "game 401908026 is Postponed (book rules: usually void, confirm)",
-   "legs": []
-  },
-  {
    "bet_id": "10edceb9",
    "book": "bet365",
    "event": "Osasuna vs Racing Santander",
@@ -34,6 +25,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "c2582df3",
+   "book": "theScore",
+   "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
+   "result": "void",
+   "pnl": 0.0,
+   "final": "auto-void: game 401908026 postponed and not completed 48h after scheduled start (2026-10-16 20:00 ET); single-game bet, stake refunded",
+   "at": "2026-10-18 20:25"
+  },
+  {
    "bet_id": "cdd1e058",
    "book": "bet365",
    "pick": "Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions",
@@ -53,5 +53,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 19:44 ET"
+ "last_change_at": "2026-10-18 20:26 ET"
 }
