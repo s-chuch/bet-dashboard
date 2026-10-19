@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "79710608",
-   "book": "PointsBet",
-   "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
-   "pick": "Draw",
-   "stake": "10.00",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "bd13eed8",
    "book": "FanDuel",
    "event": "Colorado Avalanche @ Philadelphia Flyers",

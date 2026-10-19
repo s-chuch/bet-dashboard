@@ -95,34 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "79710608",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Al-Kuwait v Al Sulaibikhat",
-   "market": "3-Way Draw (no Deposit Match tag on slip)",
-   "pick": "Draw",
-   "start": "Mon Oct 19 10:40 AM ET",
-   "price": "+575",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 57.5,
-   "ev_pct": "-13.0",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Draw"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 67.5,
-   "payout_est": false,
-   "start_ts": "2026-10-19T14:40Z"
-  },
-  {
    "bet_id": "c55174ee",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -6574,6 +6546,16 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Al-Kuwait v Al Sulaibikhat",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Phnom Penh Crown v Life FC SihanoukVille",
    "pick": "Draw",
    "result": "won",
@@ -7492,30 +7474,30 @@
    "auto": false
   }
  ],
- "pnl_total": 150.76,
+ "pnl_total": 140.76,
  "unsettled": {
-  "n": 21,
-  "cash_stake": 39.1,
-  "max_payout": 825.41,
+  "n": 20,
+  "cash_stake": 29.1,
+  "max_payout": 757.91,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 39.1,
+ "open_stake": 29.1,
  "recs": {
   "stats": {
    "overall": {
     "n": 97,
     "w": 30,
-    "l": 45,
+    "l": 46,
     "p": 0,
-    "pending": 22,
-    "win_pct": 40.0,
-    "units": 18.02,
-    "roi_pct": 27.3,
-    "roi_n": 66,
-    "exp_roi_pct": 11.9,
-    "exp_wins": 26.6,
-    "exp_wins_n": 75,
+    "pending": 21,
+    "win_pct": 39.5,
+    "units": 17.02,
+    "roi_pct": 25.4,
+    "roi_n": 67,
+    "exp_roi_pct": 11.8,
+    "exp_wins": 26.8,
+    "exp_wins_n": 76,
     "wins_with_fair": 30
    },
    "by_promo": {
@@ -7597,16 +7579,16 @@
     "rollover": {
      "n": 43,
      "w": 10,
-     "l": 17,
+     "l": 18,
      "p": 0,
-     "pending": 16,
-     "win_pct": 37.0,
-     "units": -2.16,
-     "roi_pct": -8.6,
-     "roi_n": 25,
-     "exp_roi_pct": 0.8,
-     "exp_wins": 11.9,
-     "exp_wins_n": 27,
+     "pending": 15,
+     "win_pct": 35.7,
+     "units": -3.16,
+     "roi_pct": -12.1,
+     "roi_n": 26,
+     "exp_roi_pct": 1.0,
+     "exp_wins": 12.1,
+     "exp_wins_n": 28,
      "wins_with_fair": 10
     }
    },
@@ -7704,16 +7686,16 @@
     "Soccer": {
      "n": 24,
      "w": 7,
-     "l": 8,
+     "l": 9,
      "p": 0,
-     "pending": 9,
-     "win_pct": 46.7,
-     "units": 2.17,
-     "roi_pct": 19.7,
-     "roi_n": 11,
-     "exp_roi_pct": 2.4,
-     "exp_wins": 3.6,
-     "exp_wins_n": 15,
+     "pending": 8,
+     "win_pct": 43.8,
+     "units": 1.17,
+     "roi_pct": 9.8,
+     "roi_n": 12,
+     "exp_roi_pct": 2.6,
+     "exp_wins": 3.8,
+     "exp_wins_n": 16,
      "wins_with_fair": 7
     },
     "WNBA": {
@@ -7766,16 +7748,16 @@
     "yes": {
      "n": 67,
      "w": 24,
-     "l": 36,
+     "l": 37,
      "p": 0,
-     "pending": 7,
-     "win_pct": 40.0,
-     "units": 22.78,
-     "roi_pct": 40.7,
-     "roi_n": 56,
-     "exp_roi_pct": 13.1,
-     "exp_wins": 22.1,
-     "exp_wins_n": 60,
+     "pending": 6,
+     "win_pct": 39.3,
+     "units": 21.78,
+     "roi_pct": 38.2,
+     "roi_n": 57,
+     "exp_roi_pct": 13.0,
+     "exp_wins": 22.3,
+     "exp_wins_n": 61,
      "wins_with_fair": 24
     },
     "no": {
@@ -8427,11 +8409,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "Pin home -745 / draw +603 / away +1162; pb/sun3/out.txt",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "45107e6c",
@@ -10324,15 +10306,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "79710608",
-    "book": "PointsBet",
-    "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
-    "pick": "Draw",
-    "stake": "10.00",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "bd13eed8",
     "book": "FanDuel",
     "event": "Colorado Avalanche @ Philadelphia Flyers",
@@ -10463,15 +10436,15 @@
   ],
   "last_change_at": "2026-10-19 18:21 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
-  "PointsBet": 168.75,
+  "PointsBet": 158.75,
   "theScore": 0.6
  },
- "hash": "469be1bec4779e3e40d49ba8551d6c6c31572521",
- "generated_at": "2026-10-19T18:21:28-04:00"
+ "hash": "cfe99b942104d2e7866b15cdcd3acc7602c6c3e1",
+ "generated_at": "2026-10-19T18:21:44-04:00"
 }
