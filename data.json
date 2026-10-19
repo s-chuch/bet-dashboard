@@ -22,8 +22,8 @@
   },
   {
    "book": "bet365",
-   "balance": 57.49,
-   "updated": "2026-10-18 21:52"
+   "balance": 57.29,
+   "updated": "2026-10-19 18:35"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 634.51,
+ "total": 634.31,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -6807,6 +6807,98 @@
    "payout": 34.0,
    "payout_est": false,
    "start_ts": "2026-10-20T18:45Z"
+  },
+  {
+   "bet_id": "207a4cea",
+   "date": "2026-10-19",
+   "book": "bet365",
+   "event": "Fenerbahce v Slavia Prague",
+   "market": "Same Game Parlay (50% profit boost)",
+   "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
+   "start": "Tue Oct 20 12:45 PM ET",
+   "price": "+110",
+   "boosted_price": "+165",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.33,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "prop",
+     "player": "Mason Greenwood",
+     "stat": "sot",
+     "op": "min",
+     "min": 1,
+     "text": "Mason Greenwood 1+ SOT",
+     "pteam": "FEN",
+     "pname": "Mason Greenwood",
+     "pid": "276221"
+    },
+    {
+     "type": "prop",
+     "player": "Vedat Muriqi",
+     "stat": "sot",
+     "op": "min",
+     "min": 1,
+     "text": "Vedat Muriqi 1+ SOT",
+     "pteam": "FEN",
+     "pname": "Vedat Muriqi",
+     "pid": "240209"
+    },
+    {
+     "type": "prop",
+     "player": "Marco Asensio",
+     "stat": "shots",
+     "op": "min",
+     "min": 3,
+     "text": "Marco Asensio 3+ shots",
+     "pteam": "FEN",
+     "pname": "Marco Asensio",
+     "pid": "195821"
+    }
+   ],
+   "match": {
+    "path": "soccer/uefa.champions",
+    "date": "20261020",
+    "groups": null,
+    "id": "401915403",
+    "snapshot": {
+     "date": "2026-10-20T16:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "436",
+       "name": "Fenerbahce",
+       "abbr": "FEN",
+       "short": "Fenerbahce",
+       "nick": "Fenerbahce",
+       "location": "Fenerbahce",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "494",
+       "name": "Slavia Prague",
+       "abbr": "SLP",
+       "short": "Slavia Prague",
+       "nick": "Slavia Prague",
+       "location": "Slavia Prague",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.2,
+   "payout": 0.53,
+   "payout_est": false,
+   "start_ts": "2026-10-20T16:45Z"
   }
  ],
  "settled_recent": [
@@ -7803,13 +7895,13 @@
  ],
  "pnl_total": 140.76,
  "unsettled": {
-  "n": 25,
-  "cash_stake": 79.1,
-  "max_payout": 1096.91,
+  "n": 26,
+  "cash_stake": 79.3,
+  "max_payout": 1097.44,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 79.1,
+ "open_stake": 79.3,
  "recs": {
   "stats": {
    "overall": {
@@ -10763,8 +10855,9 @@
   ],
   "last_change_at": "2026-10-19 18:21 ET"
  },
- "open_live_n": 25,
+ "open_live_n": 26,
  "open_stake_by_book": {
+  "bet365": 0.2,
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
@@ -10772,6 +10865,6 @@
   "PointsBet": 208.75,
   "theScore": 0.6
  },
- "hash": "3ad7c8cbd08de3434815b1807fff5b5068805972",
- "generated_at": "2026-10-19T18:30:58-04:00"
+ "hash": "141ef1780edaef540b1272ce819d3f2e0850cbf1",
+ "generated_at": "2026-10-19T18:36:13-04:00"
 }
