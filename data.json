@@ -60,7 +60,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 0.1,
+   "payout": 0.47,
+   "payout_est": false,
+   "start_ts": "2026-12-12T00:00Z"
   },
   {
    "bet_id": "99db10eb",
@@ -95,10 +99,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 1,
-     "clock": 757.0,
+     "clock": 680.0,
      "state": "in",
      "completed": false,
-     "detail": "12:37 - 1st",
+     "detail": "11:20 - 1st",
      "teams": [
       {
        "id": "9",
@@ -995,7 +999,11 @@
      "away_team_id": 140
     }
    },
-   "sport": "NFL"
+   "sport": "NFL",
+   "cash_stake": 25.0,
+   "payout": 40.63,
+   "payout_est": false,
+   "start_ts": "2026-10-19T00:20Z"
   },
   {
    "bet_id": "d46d9fcb",
@@ -1019,7 +1027,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 0.1,
+   "payout": 2.6,
+   "payout_est": false,
+   "start_ts": null
   },
   {
    "bet_id": "10edceb9",
@@ -1109,7 +1121,11 @@
      ]
     }
    },
-   "sport": "Soccer"
+   "sport": "Soccer",
+   "cash_stake": 0.2,
+   "payout": 0.47,
+   "payout_est": false,
+   "start_ts": "2026-10-18T12:00Z"
   },
   {
    "bet_id": "f6d731b5",
@@ -1147,10 +1163,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 1,
-     "clock": 757.0,
+     "clock": 680.0,
      "state": "in",
      "completed": false,
-     "detail": "12:37 - 1st",
+     "detail": "11:20 - 1st",
      "teams": [
       {
        "id": "9",
@@ -2047,7 +2063,11 @@
      "away_team_id": 140
     }
    },
-   "sport": "NFL"
+   "sport": "NFL",
+   "cash_stake": 0.5,
+   "payout": 2.49,
+   "payout_est": false,
+   "start_ts": "2026-10-19T00:20Z"
   },
   {
    "bet_id": "2146f957",
@@ -2091,7 +2111,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 0.5,
+   "payout": 5.54,
+   "payout_est": false,
+   "start_ts": "2026-10-17T23:00Z"
   },
   {
    "bet_id": "2311eef1",
@@ -2125,10 +2149,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 2,
-     "clock": 3600.0,
+     "clock": 3660.0,
      "state": "in",
      "completed": false,
-     "detail": "60'",
+     "detail": "61'",
      "teams": [
       {
        "id": "15360",
@@ -2153,7 +2177,11 @@
      ]
     }
    },
-   "sport": "Soccer"
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 85.0,
+   "payout_est": false,
+   "start_ts": "2026-10-18T23:00Z"
   },
   {
    "bet_id": "a0031feb",
@@ -2177,7 +2205,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 60.0,
+   "payout_est": false,
+   "start_ts": "2026-10-18T23:30Z"
   },
   {
    "bet_id": "b54671c7",
@@ -2203,7 +2235,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 25.0,
+   "payout": 36.9,
+   "payout_est": false,
+   "start_ts": "2026-10-19T01:00Z"
   },
   {
    "bet_id": "ac75fe1c",
@@ -2229,7 +2265,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 33.0,
+   "payout_est": false,
+   "start_ts": "2026-10-19T08:00Z"
   },
   {
    "bet_id": "f2a01959",
@@ -2253,7 +2293,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 70.0,
+   "payout_est": false,
+   "start_ts": "2026-10-19T11:00Z"
   },
   {
    "bet_id": "79710608",
@@ -2277,7 +2321,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 67.5,
+   "payout_est": false,
+   "start_ts": "2026-10-19T14:40Z"
   },
   {
    "bet_id": "9e07f5a1",
@@ -2303,7 +2351,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 80.0,
+   "payout_est": false,
+   "start_ts": "2026-10-19T15:05Z"
   },
   {
    "bet_id": "5c5ab743",
@@ -2362,7 +2414,11 @@
      ]
     }
    },
-   "sport": "Soccer"
+   "sport": "Soccer",
+   "cash_stake": 10.0,
+   "payout": 25.5,
+   "payout_est": false,
+   "start_ts": "2026-10-19T18:30Z"
   },
   {
    "bet_id": "44d354e4",
@@ -2386,7 +2442,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 10.0,
+   "payout": 35.0,
+   "payout_est": false,
+   "start_ts": "2026-10-19T18:45Z"
   },
   {
    "bet_id": "c55174ee",
@@ -3319,7 +3379,11 @@
      "away_team_id": 145
     }
    },
-   "sport": "NFL"
+   "sport": "NFL",
+   "cash_stake": 25.0,
+   "payout": 47.72,
+   "payout_est": false,
+   "start_ts": "2026-10-20T00:15Z"
   },
   {
    "bet_id": "300d5fa9",
@@ -3379,10 +3443,10 @@
     "snapshot": {
      "date": "2026-10-18T22:00Z",
      "period": 3,
-     "clock": 36.0,
+     "clock": 4.0,
      "state": "in",
      "completed": false,
-     "detail": "0:36 - 3rd",
+     "detail": "0:04 - 3rd",
      "teams": [
       {
        "id": "30",
@@ -3516,7 +3580,11 @@
      "away_team_id": 240
     }
    },
-   "sport": "NHL"
+   "sport": "NHL",
+   "cash_stake": 0.2,
+   "payout": 0.47,
+   "payout_est": false,
+   "start_ts": "2026-10-18T22:07Z"
   },
   {
    "bet_id": "f0a25e0b",
@@ -3542,7 +3610,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 0.0,
+   "payout": 167.3,
+   "payout_est": false,
+   "start_ts": "2026-10-22T16:45Z"
   },
   {
    "bet_id": "383dd8ea",
@@ -3604,7 +3676,11 @@
      ]
     }
    },
-   "sport": "Soccer"
+   "sport": "Soccer",
+   "cash_stake": 0.0,
+   "payout": 200.58,
+   "payout_est": false,
+   "start_ts": "2026-10-22T16:45Z"
   },
   {
    "bet_id": "3258bda0",
@@ -3630,7 +3706,11 @@
     }
    ],
    "match": null,
-   "sport": null
+   "sport": null,
+   "cash_stake": 0.0,
+   "payout": 167.15,
+   "payout_est": false,
+   "start_ts": "2026-10-22T16:45Z"
   },
   {
    "bet_id": "f5ba9f28",
@@ -3689,7 +3769,11 @@
      ]
     }
    },
-   "sport": "Soccer"
+   "sport": "Soccer",
+   "cash_stake": 0.0,
+   "payout": 133.72,
+   "payout_est": false,
+   "start_ts": "2026-10-24T14:00Z"
   }
  ],
  "settled_recent": [
@@ -4645,7 +4729,14 @@
   }
  ],
  "pnl_total": 171.15,
- "open_stake": 290.15,
+ "unsettled": {
+  "n": 21,
+  "cash_stake": 156.6,
+  "max_payout": 1262.04,
+  "payout_tbc": 0,
+  "payout_estimated": 0
+ },
+ "open_stake": 156.6,
  "recs": {
   "stats": {
    "overall": {
@@ -7201,6 +7292,6 @@
   "FanDuel": 0.1,
   "PointsBet": 288.75
  },
- "hash": "848d6711faf8f611b2bc16a14dd1b92612670425",
- "generated_at": "2026-10-18T20:26:06-04:00"
+ "hash": "846cd499306542a7452458db2e13d95e985e70e5",
+ "generated_at": "2026-10-19T00:27:20+00:00"
 }

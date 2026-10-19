@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from common import BETS, BAL, REPO, PIN_CACHE, AUTO, CI, now_et, all_bets
+from common import BETS, BAL, REPO, PIN_CACHE, AUTO, CI, now_et, all_bets, ET
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/"
 
 TAGS = {"NCAAF": ["football/college-football"], "NFL": ["football/nfl"], "NBA": ["basketball/nba"],
@@ -325,6 +325,16 @@ def build_bet(row):
            "stake": num(row["stake"]), "stake_note": "unconfirmed" if "unconfirmed" in row["stake"] else "",
            "to_win": num(row["to_win"]), "ev_pct": row["ev_pct"], "multi": is_multi, "legs": legs, "match": None,
            "sport": None}
+    try:
+        import statsgen as SG
+        cs, pay, est = SG.row_payout(row)
+        bet["cash_stake"], bet["payout"], bet["payout_est"] = cs, pay, est
+    except Exception as e:
+        print("payout fields failed", e, file=sys.stderr)
+    try:
+        d0 = parse_date(row)
+        bet["start_ts"] = d0.replace(tzinfo=ET).astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ") if d0 and ET else None
+    except Exception: bet["start_ts"] = None
     if same_game:
         teams = [t.strip() for t in re.split(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", ev_clean, flags=re.I)]
         women_g = any(re.search(r"\s+(Women|W)$", t) for t in teams) or bool(re.search(r"NWSL|WNBA|\bWomen\b", ev_raw + " " + market))
@@ -567,7 +577,8 @@ def build(verbose=True):
     pnl_total = round(sum(num(r["pnl"]) or 0 for r in rows if r["result"].strip().lower() not in ("open", "")), 2)
     auto = json.load(open(AUTO)) if os.path.exists(AUTO) else {}
     data = {"balances": balances, "total": total, "open": bets, "settled_recent": settled[::-1],
-            "pnl_total": pnl_total, "open_stake": round(sum(b["stake"] or 0 for b in bets if not all_final(b)), 2),
+            "pnl_total": pnl_total, "unsettled": __import__("statsgen").open_summary(open_rows),
+            "open_stake": __import__("statsgen").open_summary(open_rows)["cash_stake"],
             "recs": recs,
             "auto": {"needs_review": auto.get("needs_review", []), "last_settled": auto.get("last_settled", []),
                      "last_change_at": auto.get("last_change_at")},

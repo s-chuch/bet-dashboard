@@ -20,6 +20,23 @@ def american(s):
     if re.search(r"\bx\d", s, re.I): return None   # "boosted x2 profit" is a label, not a price
     m = re.search(r"[+-]?\d{3,}", s) or re.search(r"[+-]\d+", s)
     return int(m[0]) if m else None
+def row_payout(r):
+    """(cash_stake, payout_if_win, estimated?) for one unsettled bet. payout = what lands back in the balance on a win
+    (stake + profit; profit only for bonus bets). profit = to_win when known, else derived from the American price."""
+    cs = cash_stake(r); profit = num(r.get("to_win")); est = False
+    if not profit:
+        o = american(r.get("boosted_price")) or american(r.get("price")); st = num(r.get("stake"))
+        if o and st: profit = st * (o / 100.0 if o > 0 else 100.0 / abs(o)); est = True
+        else: return cs, None, False
+    return cs, round(cs + profit, 2), est
+def open_summary(rows):
+    """One definition of 'unsettled' for every page: all bets whose result is still open."""
+    n = stake = pay = tbc = est_n = 0
+    for r in rows:
+        n += 1; cs, p, est = row_payout(r); stake += cs
+        if p is None: tbc += 1
+        else: pay += p; est_n += est
+    return {"n": n, "cash_stake": round(stake, 2), "max_payout": round(pay, 2), "payout_tbc": tbc, "payout_estimated": est_n}
 def now_iso(): return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
 
 # ---------- stat helpers ----------
@@ -105,6 +122,7 @@ def build_stats(rows, led):
               "avg_stake": r2(a["staked"] / a["bets"]) if a["bets"] else 0.0,
               "avg_win": r2(sum(wins) / len(wins)) if wins else 0.0, "avg_loss": r2(sum(losses) / len(losses)) if losses else 0.0,
               "open": len(opn), "open_stake": r2(sum(cash_stake(r) for r in opn)),
+              "open_payout": open_summary(opn)["max_payout"], "open_payout_tbc": open_summary(opn)["payout_tbc"],
               "first_date": st[0]["date"] if st else None, "last_date": st[-1]["date"] if st else None,
               "best": brief(max(st, key=lambda r: num(r["pnl"]))) if st else None,
               "worst": brief(min(st, key=lambda r: num(r["pnl"]))) if st else None}
