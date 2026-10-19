@@ -231,12 +231,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 19:46 ET",
-     "ml_home": 0.4907,
+     "pulled": "2026-10-18 20:13 ET",
+     "ml_home": 0.4884,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5093,
      "total_line": 53.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5183
     },
     "pm": {
      "slug": "nfl-dal-gb-2026-10-19",
@@ -1283,12 +1283,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 19:46 ET",
-     "ml_home": 0.4907,
+     "pulled": "2026-10-18 20:13 ET",
+     "ml_home": 0.4884,
      "spread_home_line": 1.0,
      "spread_home_fair": 0.5093,
      "total_line": 53.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5183
     },
     "pm": {
      "slug": "nfl-dal-gb-2026-10-19",
@@ -2227,11 +2227,11 @@
     "id": "401854026",
     "snapshot": {
      "date": "2026-10-18T23:00Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 2760.0,
      "state": "in",
      "completed": false,
-     "detail": "HT",
+     "detail": "46'",
      "teams": [
       {
        "id": "15360",
@@ -2555,7 +2555,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 19:46 ET",
+     "pulled": "2026-10-18 20:13 ET",
      "ml_home": 0.7752,
      "spread_home_line": -7.5,
      "spread_home_fair": 0.4954,
@@ -3482,10 +3482,10 @@
     "snapshot": {
      "date": "2026-10-18T22:00Z",
      "period": 3,
-     "clock": 740.0,
+     "clock": 620.0,
      "state": "in",
      "completed": false,
-     "detail": "12:20 - 3rd",
+     "detail": "10:20 - 3rd",
      "teams": [
       {
        "id": "30",
@@ -7284,6 +7284,6 @@
   "PointsBet": 288.75,
   "theScore": 0.2
  },
- "hash": "5cbd719e90b8d583e73b567aed042260ddd584a4",
- "generated_at": "2026-10-18T20:10:26-04:00"
+ "hash": "7da81a099ffaaf5127b5f548142c291149c30f18",
+ "generated_at": "2026-10-18T20:13:53-04:00"
 }
