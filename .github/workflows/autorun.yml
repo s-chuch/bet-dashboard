@@ -40,7 +40,6 @@ jobs:
     permissions:
       contents: write   # push data commits to main
       issues: write     # one "Bets need your OK" issue = a phone notification
-      actions: write    # lets the last step queue the next run (see "Keep the loop going")
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -95,22 +94,3 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           NOTIFY_LOGS_URL: https://${{ github.repository_owner }}.github.io/bet-dashboard/log.html#activity
         run: python3 scripts/notify.py
-
-      # GitHub's cron is best-effort (about 1 scheduled run in 8 hours was observed), so each run queues the next one.
-      # Limits: only while the repo is PUBLIC (private repos have a monthly Actions-minutes allowance, so the chain
-      # stops by itself the moment the repo turns private); never overnight (02:00-06:59 ET, the cron covers it);
-      # OFF SWITCH = set the repository variable AUTORUN_CHAIN to 'false' (Settings > Secrets and variables > Actions
-      # > Variables), or disable the workflow; and it never queues a second run while one is already waiting, so
-      # pushes / cron / manual runs all merge into the same single chain instead of multiplying it.
-      - name: Keep the loop going
-        if: always() && github.event.repository.private == false && vars.AUTORUN_CHAIN != 'false'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TZ: America/Toronto
-        run: |
-          set -euo pipefail
-          hour=$((10#$(date +%H)))
-          if [ "$hour" -ge 2 ] && [ "$hour" -lt 7 ]; then echo "overnight - leaving it to the cron"; exit 0; fi
-          sleep 120
-          queued=$(gh run list --workflow autorun.yml --limit 20 --json status --jq '[.[] | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length')
-          if [ "$queued" -eq 0 ]; then gh workflow run autorun.yml --ref main && echo "next run queued"; else echo "a run is already queued"; fi

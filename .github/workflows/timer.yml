@@ -1,0 +1,74 @@
+name: timer
+# Adaptive refresh timer. GitHub's own cron is best-effort (about 1 scheduled run per 8 hours was observed), so this
+# workflow is the clock: it works out WHEN the next refresh is due (scripts/next_run.py), sleeps until then, starts
+# autorun, and queues its own successor.
+#   - any bet started, or starting within 10 min, and not settled yet -> refresh every ~2 min (plus ~75 s settle wait)
+#   - otherwise wake 10 min before the next upcoming bet starts, but at least once an hour
+#   - no upcoming bets -> hourly check, forever
+# It holds no autorun lock while sleeping, so box pushes still rebuild immediately (autorun.yml runs on pushes).
+# Limits: public repo only (it stops by itself if the repo turns private: private repos have a monthly Actions-minutes
+# allowance), never more than one timer at a time, and OFF SWITCH = repository variable AUTORUN_CHAIN set to 'false'
+# (Settings > Secrets and variables > Actions > Variables) or disable this workflow.
+# Restart paths if the chain ever breaks: the 6-hourly cron below, any push to data/, or "Run workflow" by hand.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths: ["data/**"]      # a bet logged from the box: recompute the plan right away
+  workflow_dispatch:
+
+permissions: {}
+
+# the newest timer wins: a push, the cron or a manual run replaces a sleeping timer, which then re-plans from fresh data
+concurrency:
+  group: timer
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  wait:
+    if: github.repository == 's-chuch/bet-dashboard' && github.ref == 'refs/heads/main' && github.event.repository.private == false && vars.AUTORUN_CHAIN != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    permissions:
+      contents: read
+      actions: write      # start autorun and the next timer (GITHUB_TOKEN dispatches are allowed to start runs)
+    steps:
+      # a chained / pushed autorun is probably still settling: give it a moment so settled bets stop counting as active
+      - name: Let the autorun we just started finish
+        if: github.event_name != 'schedule'
+        run: sleep 75
+
+      - name: Checkout (fresh data)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Plan the next refresh
+        id: plan
+        run: python3 scripts/next_run.py
+
+      - name: Sleep until it is due
+        env:
+          DELAY: ${{ steps.plan.outputs.delay }}
+          REASON: ${{ steps.plan.outputs.reason }}
+        run: |
+          set -euo pipefail
+          case "$DELAY" in ''|*[!0-9]*) DELAY=3600;; esac
+          if [ "$DELAY" -gt 3600 ]; then DELAY=3600; fi
+          echo "next refresh in ${DELAY}s: ${REASON}"
+          sleep "$DELAY"
+
+      - name: Refresh now, then queue the next timer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh workflow run autorun.yml --ref main
+          gh workflow run timer.yml --ref main
+          echo "autorun started, next timer queued"

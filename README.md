@@ -123,15 +123,17 @@ GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on
 7. **The Logs page** needs a GitHub token to read Actions runs and to settle bets (the repo is private): create a [fine-grained token](https://github.com/settings/personal-access-tokens/new?name=bet-tracker&target_name=s-chuch&expires_in=90&actions=write&metadata=read) for this repo only (Actions: Read and write, Metadata: Read; the link pre-fills them) and paste it into *Logs -> Activity -> Connect GitHub*. It is stored only in that browser.
 **Honest limits:** anything that was public before stays in whatever copies, forks or caches already exist, so treat past data as seen. Cloudflare can serve a single page but the repo/Actions logs are private to you. Never print bet data in workflow logs on a public repo.
 
-## Self-queuing loop (GitHub only, free while the repo is public)
-Because the cron fires so rarely, the last step of `autorun.yml` ("Keep the loop going") waits 2 minutes and queues the next
-run, so there is a run roughly every 3 minutes without any outside service. Limits built in: it only runs while the repo is
-**public** (it stops by itself when you make the repo private, since private repos have a monthly Actions-minutes allowance),
-it pauses 02:00-06:59 ET (the cron covers overnight), it never queues a second run while one is waiting (pushes, cron and manual
-runs merge into one chain), and runs still commit only when data changed. **Off switch:** add a repository variable
-`AUTORUN_CHAIN` = `false` (Settings > Secrets and variables > Actions > Variables), or disable the workflow. **Restart:** if the chain
-ever breaks (for example the workflow was disabled), run the workflow once by hand (Actions > autorun > Run workflow) or push to
-`data/`; the cron and your box pushes also restart it.
+## Adaptive refresh timer (GitHub only, free while the repo is public)
+GitHub's own cron fires only about once per 8 hours, so `.github/workflows/timer.yml` is the clock. Each cycle it runs
+`scripts/next_run.py` to decide when the next refresh is due, sleeps until then, starts `autorun`, and queues the next timer:
+- a bet that has started (or starts within 10 minutes) and is not settled yet -> refresh about every 3 minutes, until it is settled or 8 hours after its start;
+- otherwise it wakes **10 minutes before the next upcoming bet starts**, but at least once an hour;
+- no upcoming bets -> a check every hour, forever. Futures (no start time) and bets already waiting for your OK never keep it in fast mode.
+The timer holds no lock while it sleeps, so a bet you log from the box still rebuilds the page right away (`autorun.yml` runs on pushes), and a push to
+`data/` also restarts the timer so it re-plans around the new bet. Limits: it only runs while the repo is **public** (it stops by itself when
+you make the repo private, since private repos have a monthly Actions-minutes allowance), only one timer exists at a time, and runs commit only when data changed.
+**Off switch:** add a repository variable `AUTORUN_CHAIN` = `false` (Settings > Secrets and variables > Actions > Variables), or disable the *timer* workflow.
+**Restart:** a 6-hourly cron and any push to `data/` restart it; or run *timer* by hand (Actions > timer > Run workflow).
 
 ## If GitHub's cron stalls (it is best-effort and may not fire for hours)
 GitHub's cron has been observed firing about once in 8 hours instead of every 5 minutes, so **finished bets are settled when something starts a run**. Starters: the schedule, any push to `data/` or `scripts/` (every box commit), the Refresh button, and the Live page itself: with a token connected, an open Live page asks for a run (at most one per 5 min, once per finished bet) as soon as it sees a game finish. Updates are triggered these ways: the 5-minute `schedule`, any push to `data/` or `scripts/` (so every box commit rebuilds
