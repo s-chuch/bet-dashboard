@@ -1,13 +1,14 @@
 name: timer
-# Adaptive refresh timer. GitHub's own cron is best-effort (about 1 scheduled run per 8 hours was observed), so this
-# workflow is the clock: it works out WHEN the next refresh is due (scripts/next_run.py), sleeps until then, starts
-# autorun, and queues its own successor.
-#   - any bet started, or starting within 10 min, and not settled yet -> LIVE mode: a refresh about every minute, so results show up live
-#   - otherwise wake 10 min before the next upcoming bet starts, but at least once an hour (idle mode only exists to avoid pointless runs)
-#   - no upcoming bets -> hourly check, forever
-# It holds no autorun lock while sleeping, so box pushes still rebuild immediately (autorun.yml runs on pushes).
+# Adaptive timer. GitHub's own cron is best-effort (about 1 scheduled run per 8 hours was observed), so this workflow is
+# the clock: it works out WHEN the next refresh is due (scripts/next_run.py), starts autorun at the right time, and queues
+# its own successor.
+#   - LIVE time = any bet started, or starting within 10 min, and not settled yet (futures / needs-review bets don't count):
+#       start a LIVE autorun now: one long job that checks for finished games about every 10 s (max 55 min);
+#       wake again after ~50 min (or 10 min before the next bet starts) so the next live job takes over without a gap.
+#   - otherwise wake 10 min before the next upcoming bet starts, but at least once an hour (idle mode only exists to
+#     avoid pointless runs), and run a normal autorun then. No upcoming bets -> hourly check, forever.
 # Limits: public repo only (it stops by itself if the repo turns private: private repos have a monthly Actions-minutes
-# allowance), never more than one timer at a time, and OFF SWITCH = repository variable AUTORUN_CHAIN set to 'false'
+# allowance), only one timer at a time, and OFF SWITCH = repository variable AUTORUN_CHAIN set to 'false'
 # (Settings > Secrets and variables > Actions > Variables) or disable this workflow.
 # Restart paths if the chain ever breaks: the 6-hourly cron below, any push to data/, or "Run workflow" by hand.
 on:
@@ -44,11 +45,21 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
-      - name: Plan the next refresh
+      - name: Plan
         id: plan
         run: python3 scripts/next_run.py
 
-      - name: Sleep until it is due
+      - name: LIVE time - start the live loop now
+        if: steps.plan.outputs.live == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # queues behind a live loop that is still finishing (live loops have their own concurrency group)
+          gh workflow run autorun.yml --ref main -f live=true
+          echo "live loop requested"
+
+      - name: Sleep until the next planned time
         env:
           DELAY: ${{ steps.plan.outputs.delay }}
           REASON: ${{ steps.plan.outputs.reason }}
@@ -56,14 +67,22 @@ jobs:
           set -euo pipefail
           case "$DELAY" in ''|*[!0-9]*) DELAY=3600;; esac
           if [ "$DELAY" -gt 3600 ]; then DELAY=3600; fi
-          echo "next refresh in ${DELAY}s: ${REASON}"
+          echo "next wake-up in ${DELAY}s: ${REASON}"
           sleep "$DELAY"
 
-      - name: Refresh now, then queue the next timer
+      - name: Idle time - normal refresh
+        if: steps.plan.outputs.live != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           gh workflow run autorun.yml --ref main
+          echo "normal refresh requested"
+
+      - name: Queue the next timer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
           gh workflow run timer.yml --ref main
-          echo "autorun started, next timer queued"
+          echo "next timer queued"

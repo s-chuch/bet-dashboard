@@ -19,12 +19,18 @@ on:
     branches: [main]
     paths: ["data/**", "scripts/**"]
   workflow_dispatch:
+    inputs:
+      live:
+        description: "Live loop: while any bet is active, check for finished games every ~10 s for up to 55 min (the timer workflow sets this)"
+        type: boolean
+        default: false
 
 # Deny everything by default; the job grants only what it needs.
 permissions: {}
 
 concurrency:
-  group: autorun
+  # live loops queue behind each other only; normal runs behind each other only (cancel-in-progress stays false)
+  group: ${{ inputs.live == true && 'autorun-live' || 'autorun' }}
   cancel-in-progress: false
 
 defaults:
@@ -36,7 +42,7 @@ jobs:
     # forks must not run the bot; manual runs from other branches must not push to main
     if: github.repository == 's-chuch/bet-dashboard' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 70      # a live loop runs up to 55 min; a normal run takes well under a minute
     permissions:
       contents: write   # push data commits to main
       issues: write     # one "Bets need your OK" issue = a phone notification
@@ -52,31 +58,48 @@ jobs:
         with:
           python-version: "3.12"      # scripts use the stdlib only: no pip install, no cache
 
-      - name: settle + archive + grade + build (retry on push race)
+      - name: settle + archive + grade + build (retry on push race; live loop when asked)
         id: autorun
         env:
           TZ: America/Toronto
           GH_TOKEN: ${{ github.token }}
+          LIVE: ${{ inputs.live }}
         run: |
           set -euo pipefail
           git config user.name "bet-tracker-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           status=0      # non-zero = autorun.py failed or nothing could be pushed
           pushed=0
-          for attempt in 1 2 3; do
-            git fetch -q origin main && git reset -q --hard origin/main
-            # intentional: keep going after a script failure so partial progress is still committed
-            python3 scripts/autorun.py || status=$?
-            git add -A data data.json stats.json archive.json log.json
-            if git diff --cached --quiet; then echo "no data changes - nothing to commit"; pushed=1; break; fi
-            git commit -qm "autorun $(date '+%Y-%m-%d %H:%M') ET"
-            if git push -q origin HEAD:main; then
-              echo "pushed"; pushed=1
-              break
-            fi
-            echo "push rejected (box pushed meanwhile) - redoing on fresh main"; sleep 5
-          done
-          if [ "$pushed" -ne 1 ] && [ "$status" -eq 0 ]; then status=1; echo "::error::could not push after 3 attempts"; fi
+          # one pass: $1 = '' (full: settle, archive, picks, rebuild) or --fast (live: settle check only, rebuild only if a bet settled)
+          pass() {
+            status=0; pushed=0
+            for attempt in 1 2 3; do
+              git fetch -q origin main && git reset -q --hard origin/main
+              # intentional: keep going after a script failure so partial progress is still committed
+              python3 scripts/autorun.py $1 || status=$?
+              git add -A data data.json stats.json archive.json log.json
+              if git diff --cached --quiet; then pushed=1; break; fi
+              git commit -qm "autorun $(date '+%Y-%m-%d %H:%M:%S') ET"
+              if git push -q origin HEAD:main; then echo "pushed"; pushed=1; break; fi
+              echo "push rejected (box pushed meanwhile) - redoing on fresh main"; sleep 5
+            done
+            if [ "$pushed" -ne 1 ] && [ "$status" -eq 0 ]; then status=1; echo "::error::could not push after 3 attempts"; fi
+          }
+          if [ "$LIVE" = "true" ]; then
+            echo "LIVE loop: settle check about every 10 s while any bet is active (max 55 min)"
+            pass ""                                      # one full pass first (review list, archive, rebuild)
+            end=$((SECONDS + 3300))
+            while [ "$SECONDS" -lt "$end" ] && python3 scripts/next_run.py --live-check; do
+              t0=$SECONDS
+              pass --fast
+              [ "$status" -ne 0 ] && echo "::warning::live pass reported status $status"
+              left=$((10 - (SECONDS - t0))); if [ "$left" -gt 0 ]; then sleep "$left"; fi
+            done
+            echo "live loop finished after $SECONDS s"
+            pass ""                                      # final full pass decides the run's status
+          else
+            pass ""
+          fi
           echo "status=$status" >> "$GITHUB_OUTPUT"
 
       - name: Fail if the run had errors

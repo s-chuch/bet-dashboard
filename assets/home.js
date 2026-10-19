@@ -75,8 +75,9 @@ function allMatches(){const ms=[];for(const b of DATA.open){if(b.match)ms.push(b
 const etDay=d=>new Date(d).toLocaleDateString("en-CA",{timeZone:TZ});
 function isActive(m){const g=gameFor(m);if(!g||g.completed)return false;if(g.state==="in")return true;
   return g.date&&new Date(g.date).getTime()-Date.now()<20*60000}  // live, or starting within 20 min
-async function espn(u){if(!/^https:\/\/(site\.api|sports\.core\.api)\.espn\.com\/[\w\/.,&=?%-]*$/.test(u)){FEED.site={bad:"blocked URL"};return null}const fk=/sports\.core\./.test(u)?"core":"site";try{const r=await tfetch(u,{cache:"no-store"});if(r.status===429||r.status>=500){espnErr=true;FEED[fk]={bad:"HTTP "+r.status};return null}
-  if(!r.ok){FEED[fk]={bad:"HTTP "+r.status};return null}const j=await r.json();FEED[fk]={ok:Date.now()};return j}catch(e){espnErr=true;FEED[fk]={bad:"network/CORS"};return null}}
+async function espn(u){if(!/^https:\/\/(site\.api|sports\.core\.api)\.espn\.com\/[\w\/.,&=?%-]*$/.test(u)){FEED.site={bad:"blocked URL"};return null}const fk=/sports\.core\./.test(u)?"core":"site";try{const r=await tfetch(u,{cache:"no-store"});if(r.status===429){espnErr=true;FEED[fk]={bad:"rate limited (HTTP 429), backing off"};return null}   // the only case that slows the 10 s poll
+  if(r.status>=500){FEED[fk]={bad:"HTTP "+r.status};return null}
+  if(!r.ok){FEED[fk]={bad:"HTTP "+r.status};return null}const j=await r.json();FEED[fk]={ok:Date.now()};return j}catch(e){FEED[fk]={bad:"network/CORS"};return null}}
 const corePath=m=>{const[sp,lg]=m.path.split("/");return`https://sports.core.api.espn.com/v2/sports/${sp}/leagues/${lg}/events/${m.id}/competitions/${m.id}`};
 // full=true: every unfinished game (60s cycle); full=false: only live / about-to-start games (10s cycle)
 async function refreshScores(full){
@@ -730,7 +731,8 @@ async function fastTick(full){clearTimeout(fastTimer);if(loading&&Date.now()-loa
   try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
   FAST=espnErr?30000:10000;try{render()}catch(e){console.error(e)}schedule()}
 let nextAt=0;
-function schedule(){clearTimeout(fastTimer);if(!document.hidden){nextAt=Date.now()+FAST;fastTimer=setTimeout(()=>fastTick(false),FAST)}tickCD()}
+// fixed 10 s period: the next poll starts FAST ms after the previous one STARTED, not after it finished (min 1 s gap)
+function schedule(){clearTimeout(fastTimer);if(!document.hidden){const wait=Math.max(1000,FAST-(Date.now()-loadingAt));nextAt=Date.now()+wait;fastTimer=setTimeout(()=>fastTick(false),wait)}tickCD()}
 function tickCD(){const el=$("cd");if(!el)return;
   if(loading){el.textContent="Updating…";el.className="cd busy";return}
   if(document.hidden||!nextAt){el.textContent="paused";el.className="cd";return}

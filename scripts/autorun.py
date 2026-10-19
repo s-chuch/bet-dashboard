@@ -3,6 +3,7 @@
 
   python3 scripts/autorun.py                 # settle + balances + picks grading + rebuild data.json
   python3 scripts/autorun.py --dry-run       # show what it WOULD settle / send to review; writes nothing
+  python3 scripts/autorun.py --fast          # live-loop pass: settle check only; full rebuild only if something changed
   python3 scripts/autorun.py --regrade DATE  # dry check: re-grade bets already settled on DATE (YYYY-MM-DD,
                                              #   by settled_at) and compare with the recorded result
 
@@ -34,7 +35,7 @@ def regrade(day):
     log(f"regrade {day}: {agree} agree, {dis} disagree, {rev} not auto-gradable (would go to review/wait)")
     return dis
 
-def run(dry=False):
+def run(dry=False, fast=False):
     errors = []
     rows, cols = LG.load_bets(); led = LG.load_ledger()
     if not dry:
@@ -43,14 +44,26 @@ def run(dry=False):
     for r in rows: r.setdefault("settled_by", "")
     open_rows = [r for r in rows if r["result"].strip().lower() in ("open", "")]
     review, settled = [], []
-    for r in open_rows:
-        try: g = S.grade_row(r)
-        except Exception as e:
-            errors.append(f"{r['bet_id']}: {e}"); continue
+    if fast:   # a bet that has not started cannot be settled, and futures wait for the owner: skip them in live passes
+        import datetime as _dt
+        cutoff = now_et() + _dt.timedelta(minutes=5)
+        def _started(r):
+            try: d = S.P.parse_date(r)
+            except Exception: d = None
+            return bool(d) and d <= cutoff
+        open_rows = [r for r in open_rows if _started(r)]
+    from concurrent.futures import ThreadPoolExecutor
+    def _grade(r):
+        try: return S.grade_row(r), None
+        except Exception as e: return None, e
+    with ThreadPoolExecutor(8) as ex: graded = list(ex.map(_grade, open_rows))   # network-bound: grade bets concurrently
+    for r, (g, err) in zip(open_rows, graded):
+        if err is not None:
+            errors.append(f"{r['bet_id']}: {err}"); continue
         if g["status"] == "review":
             review.append({"bet_id": r["bet_id"], "book": r["book"], "event": r["event"], "pick": r["pick"], "stake": r["stake"],
                            "reason": g["reason"], "legs": g["legs"]})
-            log("REVIEW", r["bet_id"], r["book"], r["pick"][:60], "|", g["reason"])
+            if not fast: log("REVIEW", r["bet_id"], r["book"], r["pick"][:60], "|", g["reason"])
         elif g["status"] == "settle":
             if dry:
                 stake = LG.num(r["stake"]); p = LG.settle_amount(r, g["result"])[1]
@@ -62,9 +75,13 @@ def run(dry=False):
                 settled.append({"bet_id": r["bet_id"], "book": r["book"], "pick": r["pick"], "result": g["result"],
                                 "pnl": LG.num(r["pnl"]), "final": g.get("final", ""), "at": r["settled_at"]})
         else:
-            log("wait  ", r["bet_id"], r["book"], r["pick"][:60], "|", g["reason"])
+            if not fast: log("wait  ", r["bet_id"], r["book"], r["pick"][:60], "|", g["reason"])
     if dry:
         log(f"DRY RUN: would settle {len(settled)} (P&L {sum(x['pnl'] for x in settled):+.2f}), review {len(review)}"); return 0
+    if fast:   # live-loop pass (every ~10 s): rebuild only when a bet actually settled; review-list changes and flaky ESPN
+        if not settled:   # responses are picked up by the normal pass at the start/end of each live job
+            return 0
+        log(f"live pass: {len(settled)} settled: full rebuild")
     LG.save_bets(rows, cols); LG.write_balances(led)
     try:
         import rec as R
@@ -98,4 +115,4 @@ if __name__ == "__main__":
     if "--regrade" in a: sys.exit(1 if regrade(a[a.index("--regrade") + 1]) else 0)
     dry = "--dry-run" in a
     if dry: sys.exit(run(True))
-    with lock(): sys.exit(run(False))
+    with lock(): sys.exit(run(False, fast="--fast" in a))
