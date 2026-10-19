@@ -21,7 +21,7 @@ on:
   workflow_dispatch:
     inputs:
       live:
-        description: "Live loop: while any bet is active, check for finished games every ~10 s for up to 55 min (the timer workflow sets this)"
+        description: "Live loop: while any bet is active, check for finished games every 5-10 s for up to 55 min (the timer workflow sets this)"
         type: boolean
         default: false
 
@@ -86,14 +86,14 @@ jobs:
             if [ "$pushed" -ne 1 ] && [ "$status" -eq 0 ]; then status=1; echo "::error::could not push after 3 attempts"; fi
           }
           if [ "$LIVE" = "true" ]; then
-            echo "LIVE loop: settle check about every 10 s while any bet is active (max 55 min)"
+            echo "LIVE loop: settle check every 5-10 s while any bet is active (max 55 min)"
             pass ""                                      # one full pass first (review list, archive, rebuild)
             end=$((SECONDS + 3300))
             while [ "$SECONDS" -lt "$end" ] && python3 scripts/next_run.py --live-check; do
               t0=$SECONDS
               pass --fast
               [ "$status" -ne 0 ] && echo "::warning::live pass reported status $status"
-              left=$((10 - (SECONDS - t0))); if [ "$left" -gt 0 ]; then sleep "$left"; fi
+              left=$((10 - (SECONDS - t0))); if [ "$left" -lt 5 ]; then left=5; fi; sleep "$left"   # 10 s period, but never closer than 5 s
             done
             echo "live loop finished after $SECONDS s"
             pass ""                                      # final full pass decides the run's status

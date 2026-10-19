@@ -127,12 +127,12 @@ GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on
 GitHub's own cron fires only about once per 8 hours, so `.github/workflows/timer.yml` is the clock. Each cycle `scripts/next_run.py` decides
 what is due and the timer acts on it:
 - **Live time** = a bet has started (or starts within 10 minutes) and is not settled yet (until 8 h after its start). The timer starts a **live autorun**:
-  one long job (`autorun.yml` with `live=true`, up to 55 min) that checks for finished games **about every 10 seconds** (`scripts/autorun.py --fast`:
+  one long job (`autorun.yml` with `live=true`, up to 55 min) that checks for finished games **every 5-10 seconds** (10 s period, never closer than 5 s) (`scripts/autorun.py --fast`:
   only started bets, graded in parallel, ~6 s per pass) and does the full rebuild only when a bet actually settles. The timer wakes again after ~50 min
   (or 10 min before the next bet starts) so the next live job takes over without a gap. Live jobs have their own concurrency group, so box pushes never cancel a queued handoff.
 - **Otherwise** it wakes **10 minutes before the next upcoming bet starts**, but at least once an hour, and runs a normal refresh. No upcoming bets: a check every hour, forever. Idle mode only exists to avoid pointless runs.
 - Futures (no start time) and bets already waiting for your OK never count as live.
-The Live page itself polls ESPN every 10 seconds (fixed period; it only backs off when ESPN answers HTTP 429).
+The Live page itself polls ESPN every 10 seconds (never closer than 5 s apart; it only backs off when ESPN answers HTTP 429).
 A bet you log from the box still rebuilds the page right away (`autorun.yml` runs on pushes) and restarts the timer so it re-plans around the new bet.
 Limits: only while the repo is **public** (it stops by itself when you make the repo private, since private repos have a monthly Actions-minutes allowance), only one timer exists at a time, and runs commit only when data changed.
 **Off switch:** add a repository variable `AUTORUN_CHAIN` = `false` (Settings > Secrets and variables > Actions > Variables), or disable the *timer* workflow.

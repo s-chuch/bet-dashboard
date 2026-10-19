@@ -731,8 +731,8 @@ async function fastTick(full){clearTimeout(fastTimer);if(loading&&Date.now()-loa
   try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
   FAST=espnErr?30000:10000;try{render()}catch(e){console.error(e)}schedule()}
 let nextAt=0;
-// fixed 10 s period: the next poll starts FAST ms after the previous one STARTED, not after it finished (min 1 s gap)
-function schedule(){clearTimeout(fastTimer);if(!document.hidden){const wait=Math.max(1000,FAST-(Date.now()-loadingAt));nextAt=Date.now()+wait;fastTimer=setTimeout(()=>fastTick(false),wait)}tickCD()}
+// 10 s period: the next poll starts FAST ms after the previous one STARTED, not after it finished, but never less than 5 s after it
+function schedule(){clearTimeout(fastTimer);if(!document.hidden){const wait=Math.max(5000,FAST-(Date.now()-loadingAt));nextAt=Date.now()+wait;fastTimer=setTimeout(()=>fastTick(false),wait)}tickCD()}
 function tickCD(){const el=$("cd");if(!el)return;
   if(loading){el.textContent="Updating…";el.className="cd busy";return}
   if(document.hidden||!nextAt){el.textContent="paused";el.className="cd";return}
