@@ -3482,10 +3482,10 @@
     "snapshot": {
      "date": "2026-10-18T22:00Z",
      "period": 3,
-     "clock": 1012.0,
+     "clock": 740.0,
      "state": "in",
      "completed": false,
-     "detail": "16:52 - 3rd",
+     "detail": "12:20 - 3rd",
      "teams": [
       {
        "id": "30",
@@ -3609,6 +3609,179 @@
     }
    },
    "sport": "NHL"
+  },
+  {
+   "bet_id": "f0a25e0b",
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Paphos FC v Riga FC",
+   "market": "3-Way Moneyline (bonus bet $33.46)",
+   "pick": "Riga FC",
+   "start": "Thu Oct 22 12:45 PM ET",
+   "price": "+500",
+   "boosted_price": "",
+   "stake": 33.46,
+   "stake_note": "",
+   "to_win": 167.3,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Riga FC",
+     "women": false,
+     "text": "Riga FC"
+    }
+   ],
+   "match": null,
+   "sport": null
+  },
+  {
+   "bet_id": "383dd8ea",
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Trabzonspor v Hearts",
+   "market": "3-Way Moneyline (bonus bet $33.43)",
+   "pick": "Hearts",
+   "start": "Thu Oct 22 12:45 PM ET",
+   "price": "+600",
+   "boosted_price": "",
+   "stake": 33.43,
+   "stake_note": "",
+   "to_win": 200.58,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Hearts",
+     "women": false,
+     "text": "Hearts",
+     "team_ok": false
+    }
+   ],
+   "match": {
+    "path": "soccer/uefa.europa.conf",
+    "date": "20261022",
+    "groups": null,
+    "id": "401915745",
+    "snapshot": {
+     "date": "2026-10-22T16:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "997",
+       "name": "Trabzonspor",
+       "abbr": "TRAB",
+       "short": "Trabzonspor",
+       "nick": "Trabzonspor",
+       "location": "Trabzonspor",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "262",
+       "name": "Heart of Midlothian",
+       "abbr": "HOM",
+       "short": "Hearts",
+       "nick": "Heart of Midlothian",
+       "location": "Heart of Midlothian",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer"
+  },
+  {
+   "bet_id": "3258bda0",
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Inter Club de Escaldes v Universitatea Craiova",
+   "market": "3-Way Moneyline (bonus bet $33.43)",
+   "pick": "Inter Club de Escaldes",
+   "start": "Thu Oct 22 12:45 PM ET",
+   "price": "+500",
+   "boosted_price": "",
+   "stake": 33.43,
+   "stake_note": "",
+   "to_win": 167.15,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Inter Club de Escaldes",
+     "women": false,
+     "text": "Inter Club de Escaldes"
+    }
+   ],
+   "match": null,
+   "sport": null
+  },
+  {
+   "bet_id": "f5ba9f28",
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Arsenal v Everton",
+   "market": "3-Way Draw (bonus bet $33.43)",
+   "pick": "Draw",
+   "start": "Sat Oct 24 10:00 AM ET",
+   "price": "+400",
+   "boosted_price": "",
+   "stake": 33.43,
+   "stake_note": "",
+   "to_win": 133.72,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Draw"
+    }
+   ],
+   "match": {
+    "path": "soccer/eng.1",
+    "date": "20261024",
+    "groups": null,
+    "id": "401878768",
+    "snapshot": {
+     "date": "2026-10-24T14:00Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "359",
+       "name": "Arsenal",
+       "abbr": "ARS",
+       "short": "Arsenal",
+       "nick": "Arsenal",
+       "location": "Arsenal",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "368",
+       "name": "Everton",
+       "abbr": "EVE",
+       "short": "Everton",
+       "nick": "Everton",
+       "location": "Everton",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer"
   }
  ],
  "settled_recent": [
@@ -4554,7 +4727,7 @@
   }
  ],
  "pnl_total": 171.15,
- "open_stake": 156.6,
+ "open_stake": 290.35,
  "recs": {
   "stats": {
    "overall": {
@@ -4788,11 +4961,11 @@
    },
    "by_placed": {
     "yes": {
-     "n": 62,
+     "n": 66,
      "w": 22,
      "l": 30,
      "p": 0,
-     "pending": 10,
+     "pending": 14,
      "win_pct": 42.3,
      "units": 23.23,
      "roi_pct": 48.4,
@@ -4803,11 +4976,11 @@
      "wins_with_fair": 22
     },
     "no": {
-     "n": 22,
+     "n": 18,
      "w": 5,
      "l": 9,
      "p": 0,
-     "pending": 8,
+     "pending": 4,
      "win_pct": 35.7,
      "units": -4.76,
      "roi_pct": -47.6,
@@ -4852,7 +5025,7 @@
     "stake": "33.43",
     "promo": "bonus bet",
     "friend": "no",
-    "placed": "no",
+    "placed": "yes",
     "result": "pending",
     "final_score": "",
     "source": "rec.py add",
@@ -4875,7 +5048,7 @@
     "stake": "33.43",
     "promo": "bonus bet",
     "friend": "no",
-    "placed": "no",
+    "placed": "yes",
     "result": "pending",
     "final_score": "",
     "source": "rec.py add",
@@ -4898,7 +5071,7 @@
     "stake": "33.46",
     "promo": "bonus bet",
     "friend": "no",
-    "placed": "no",
+    "placed": "yes",
     "result": "pending",
     "final_score": "",
     "source": "rec.py add",
@@ -4921,7 +5094,7 @@
     "stake": "33.43",
     "promo": "bonus bet",
     "friend": "no",
-    "placed": "no",
+    "placed": "yes",
     "result": "pending",
     "final_score": "",
     "source": "rec.py add",
@@ -7102,15 +7275,15 @@
   ],
   "last_change_at": "2026-10-18 19:44 ET"
  },
- "open_live_n": 17,
+ "open_live_n": 21,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 1.0,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
-  "PointsBet": 155.0,
+  "PointsBet": 288.75,
   "theScore": 0.2
  },
- "hash": "97a4517d5d2393f72ab5e7ec3f1a26272f93bad4",
- "generated_at": "2026-10-18T20:02:34-04:00"
+ "hash": "5cbd719e90b8d583e73b567aed042260ddd584a4",
+ "generated_at": "2026-10-18T20:10:26-04:00"
 }
