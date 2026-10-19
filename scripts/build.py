@@ -329,7 +329,10 @@ def build_bet(row):
     leg_texts = [x for x in re.split(r"\s+\+\s+", pick) if x]
     same_game = bool(re.search(r"\s@\s|\svs\.?\s|\sv\s", ev_clean, re.I))
     if is_multi and len(leg_texts) < 2:
-        leg_texts = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]; same_game = False
+        ev_legs = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]
+        if len(ev_legs) > 1 or not same_game:   # "A @ B" with legs not logged: keep the game link so the score still shows
+            leg_texts = ev_legs; same_game = False
+        else: leg_texts = [ev_clean]
     legs = [parse_leg(t, market) for t in leg_texts]
     bet = {"bet_id": row.get("bet_id", ""), "date": row["date"], "book": row["book"], "event": ev_clean, "market": market, "pick": pick,
            "start": row["start_et"], "price": row["price"], "boosted_price": row["boosted_price"],
