@@ -160,6 +160,10 @@ def parse_leg(text, market):
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "goal", "op": "min", "min": 1, "text": t}
     m = re.match(r"^(.+?)\s+(?:to\s+)?(?:score or assist|goal or assist|G\+A)$", t, re.I)
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "goalOrAssist", "op": "min", "min": 1, "text": t}
+    # "First TD Scorer" / "Last TD Scorer" / "2nd TD": a different market from anytime TD (it depends on scoring ORDER), so it
+    # must NOT be read as "anytime TD for a player called 'McCaffrey First'". Left ungraded: settled by hand.
+    m = re.match(r"^(.+?)\s+(?:first|1st|last|2nd|second)\s+(?:TD|touchdown)(?:\s+scorer)?$", t, re.I)
+    if m: return {"type": "unknown", "text": t, "note": "first/last TD scorer: settle by hand", "player": m[1].strip()}
     # "J. Carter TD", "Kelce anytime TD"
     m = re.match(r"^(.+?)\s+(?:anytime\s+)?(?:TD|touchdown)(?:\s+scorer)?$|^(.+?)\s+ATT?D$", t, re.I)
     if m: return {"type": "prop", "player": (m[1] or m[2]).strip(), "stat": "td", "op": "min", "min": 1, "text": t}

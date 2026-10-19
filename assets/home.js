@@ -160,7 +160,7 @@ function legStatus(L,g,sport,matchId){
     return{s:over?Lo:W,n:`total ${t}, ${(-d).toFixed(1)} under the line`,pv:t}}
   if(L.type==="prop")return propStatus(L,g,matchId);
   if(L.type==="teamtotal")return teamTotalStatus(L,g,sport);
-  return{s:"?",n:"can't compute"}}
+  return{s:"?",n:L.note||"can't compute"}}
 // team totals ("Valkyries O78.5 team pts"): graded from that team's own score
 const ttUnit=(L,sport)=>({NHL:"goals",MLB:"runs",Soccer:"goals"}[sport]||"pts");
 const ttName=(L,g)=>{const i=g?sideIdx(g,L.team):-1;return i<0?L.team:(g.teams[i].nick||g.teams[i].short||g.teams[i].name)};
