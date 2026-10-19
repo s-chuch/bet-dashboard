@@ -12,6 +12,24 @@
  ],
  "last_settled": [
   {
+   "bet_id": "99db10eb",
+   "book": "PointsBet",
+   "pick": "Dallas Cowboys +3.5",
+   "result": "lost",
+   "pnl": -25.0,
+   "final": "DAL 13-23 GB",
+   "at": "2026-10-18 23:47"
+  },
+  {
+   "bet_id": "f6d731b5",
+   "book": "Caesars",
+   "pick": "MarShawn Lloyd ATTD + Cowboys ML",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "DAL 13-23 GB",
+   "at": "2026-10-18 23:47"
+  },
+  {
    "bet_id": "2311eef1",
    "book": "PointsBet",
    "pick": "Chicago Red Stars Women",
@@ -67,5 +85,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 23:45 ET"
+ "last_change_at": "2026-10-18 23:47 ET"
 }

@@ -54,7 +54,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-16,theScore,Boston Bruins @ Anaheim Ducks,Fri Oct 16 10:00 PM ET,SGP 4-leg (30% profit boost),Ducks +1.5 + Over 5.5 + D. Pastrnak U0.5 goals + C. Gauthier 4+ SOG,+432,+560,0.20,1.12,,,lost,-0.20,d63a6a5f,pre-ledger,
 2026-10-17,PointsBet,New York Jets @ New England Patriots,Sun Oct 18 01:00 PM ET,Alt Spread (WELCOMEDM rollover),New York Jets +14.5,-260,,25.00,9.62,73.09,1.21,won,9.62,117ab8f0,2026-10-18 16:55,
 2026-10-17,PointsBet,Rutgers @ Maryland,Sat Oct 17 12:30 PM ET,Spread (WELCOMEDM rollover),Maryland Terrapins -5,-112,,25.00,22.32,53.25,0.8,lost,-25.00,d39470fd,pre-ledger,
-2026-10-17,PointsBet,Dallas Cowboys @ Green Bay Packers,Sun Oct 18 08:20 PM ET,Alt Spread (WELCOMEDM rollover),Dallas Cowboys +3.5,-160,,25.00,15.63,61.97,0.7,open,,99db10eb,,
+2026-10-17,PointsBet,Dallas Cowboys @ Green Bay Packers,Sun Oct 18 08:20 PM ET,Alt Spread (WELCOMEDM rollover),Dallas Cowboys +3.5,-160,,25.00,15.63,61.97,0.7,lost,-25.00,99db10eb,2026-10-18 23:47,auto
 2026-10-17,PointsBet,Vancouver Canucks @ Tampa Bay Lightning,Sat Oct 17 04:00 PM ET,Puck Line (WELCOMEDM rollover),Vancouver Canucks +2.5,-130,,25.00,19.23,56.85,0.59,won,19.23,ea9d0f46,2026-10-17 19:27,
 2026-10-17,PointsBet,Pittsburgh Steelers @ Tampa Bay Buccaneers,Sun Oct 18 01:00 PM ET,Alt Total (WELCOMEDM rollover),Under 32.5,+220,,10.00,22.00,32.47,3.9,lost,-10.00,090012ce,2026-10-18 16:55,
 2026-10-17,PointsBet,Carolina Panthers @ Philadelphia Eagles,Sun Oct 18 01:00 PM ET,Alt Total (WELCOMEDM rollover),Under 32.5,+210,,10.00,21.00,32.27,0.03,lost,-10.00,2aeaa37c,2026-10-18 16:55,
@@ -88,7 +88,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-17,Caesars,Tampa Bay Rays @ Cleveland Guardians,Sat Oct 17 08:08 PM ET,HR prop (30% profit boost),Junior Caminero to hit a HR,+525,+684,0.50,3.42,,,lost,-0.50,b174ee37,2026-10-18 16:55,
 2026-10-17,Caesars,Washington State @ Oregon State,Sat Oct 17 06:10 PM ET,SGP 4-leg (15% profit boost),Oregon State -13.5 + Over 52 + Under 57.5 + Braden Atkinson 310+ pass yds,+950,+1095,0.20,2.19,,,lost,-0.20,f104ae9e,2026-10-18 16:55,
 2026-10-17,Caesars,Tampa Bay Rays @ Cleveland Guardians,Sat Oct 17 08:08 PM ET,SGP 3-leg (25% profit boost),Under 7.5 + Guardians +1.5 + Over 2.5 total doubles,+315,+394,0.50,1.97,,,lost,-0.50,762a175b,2026-10-18 16:55,
-2026-10-17,Caesars,Dallas Cowboys @ Green Bay Packers,Sun Oct 18 08:20 PM ET,SGP 2-leg (30% profit boost),MarShawn Lloyd ATTD + Cowboys ML,+305,+398,0.50,1.99,,,open,,f6d731b5,,
+2026-10-17,Caesars,Dallas Cowboys @ Green Bay Packers,Sun Oct 18 08:20 PM ET,SGP 2-leg (30% profit boost),MarShawn Lloyd ATTD + Cowboys ML,+305,+398,0.50,1.99,,,lost,-0.50,f6d731b5,2026-10-18 23:47,auto
 2026-10-17,Caesars,Alabama @ Tennessee / Missouri @ Ole Miss / Auburn @ Georgia,Sat Oct 17 03:30 PM ET,Parlay 3-leg LIVE (10% profit boost),Alabama ML (-209) + Mizzou/Ole Miss Under 45.5 (-120) + Georgia ML (-162),+338,+372,0.50,1.86,,,lost,-0.50,2c5c0e3d,2026-10-17 19:27,
 2026-10-17,Caesars,NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL,Sat Oct 17 07:00 PM ET,Parlay 3-leg (20% profit boost),Kaprizov AGS + McDavid AGS + Caufield AGS,+840,+1008,0.50,5.04,,,won,5.04,2146f957,2026-10-18 20:32,auto
 2026-10-17,Caesars,Chicago Bears @ Atlanta Falcons,Sun Oct 18 01:00 PM ET,SGP 3-leg (20% profit boost),Bijan Robinson ATTD + D'Andre Swift ATTD + Drake London ATTD,+334,+400,0.50,2.00,,,lost,-0.50,31523b92,2026-10-18 16:55,
