@@ -6666,14 +6666,14 @@
    "date": "2026-10-19",
    "book": "Caesars",
    "event": "Tottenham vs Coventry City",
-   "market": "SGP 3-leg",
-   "pick": "Tottenham ML + 2 more legs (not clear in screenshot)",
+   "market": "SGP 3-leg (30% profit boost)",
+   "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
    "start": "Mon Oct 19 03:00 PM ET",
    "price": "+300",
-   "boosted_price": "",
+   "boosted_price": "+390",
    "stake": 0.5,
    "stake_note": "",
-   "to_win": 1.5,
+   "to_win": 1.95,
    "ev_pct": "",
    "multi": true,
    "legs": [
@@ -6685,8 +6685,26 @@
      "team_ok": true
     },
     {
-     "type": "unknown",
-     "text": "2 more legs (not clear in screenshot)"
+     "type": "prop",
+     "player": "Omar Marmoush",
+     "stat": "goalOrAssist",
+     "op": "min",
+     "min": 1,
+     "text": "Omar Marmoush score or assist",
+     "pteam": "TOT",
+     "pname": "Omar Marmoush",
+     "pid": "303745"
+    },
+    {
+     "type": "prop",
+     "player": "Sidiki Cherif",
+     "stat": "shots",
+     "op": "min",
+     "min": 2,
+     "text": "Sidiki Cherif 2+ shots",
+     "pteam": "COV",
+     "pname": "Sidiki Cherif",
+     "pid": "366817"
     }
    ],
    "match": {
@@ -6697,10 +6715,10 @@
     "snapshot": {
      "date": "2026-10-19T19:00Z",
      "period": 2,
-     "clock": 5220.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "87'",
+     "detail": "90'+2'",
      "teams": [
       {
        "id": "367",
@@ -6727,7 +6745,7 @@
    },
    "sport": "Soccer",
    "cash_stake": 0.5,
-   "payout": 2.0,
+   "payout": 2.45,
    "payout_est": false,
    "start_ts": "2026-10-19T19:00Z"
   }
@@ -7648,7 +7666,7 @@
  "unsettled": {
   "n": 28,
   "cash_stake": 114.6,
-  "max_payout": 1142.31,
+  "max_payout": 1142.76,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -10350,6 +10368,6 @@
   "PointsBet": 243.75,
   "theScore": 0.6
  },
- "hash": "de11a995753ac0d6c037f1035dc0fd4e11e17be5",
- "generated_at": "2026-10-19T16:47:04-04:00"
+ "hash": "4e79005bc33b43865cdc888e30dff4add0ae986e",
+ "generated_at": "2026-10-19T16:52:07-04:00"
 }
