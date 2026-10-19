@@ -88,14 +88,17 @@ jobs:
           if [ "$LIVE" = "true" ]; then
             echo "LIVE loop: settle check every 5-10 s while any bet is active (max 55 min)"
             pass ""                                      # one full pass first (review list, archive, rebuild)
-            end=$((SECONDS + 3300))
+            end=$((SECONDS + 3300)); n=0; loop0=$SECONDS
             while [ "$SECONDS" -lt "$end" ] && python3 scripts/next_run.py --live-check; do
-              t0=$SECONDS
+              t0=$SECONDS; n=$((n + 1))
               pass --fast
               [ "$status" -ne 0 ] && echo "::warning::live pass reported status $status"
-              left=$((10 - (SECONDS - t0))); if [ "$left" -lt 5 ]; then left=5; fi; sleep "$left"   # 10 s period, but never closer than 5 s
+              took=$((SECONDS - t0)); left=$((10 - took)); if [ "$left" -lt 5 ]; then left=5; fi
+              # one short line per pass so the log shows the real period (pass time + sleep)
+              echo "live pass $n at $(date +%H:%M:%S): took ${took}s, sleeping ${left}s, status $status"
+              sleep "$left"   # 10 s period, but never closer than 5 s
             done
-            echo "live loop finished after $SECONDS s"
+            echo "live loop finished after $((SECONDS - loop0)) s: $n passes, average period $(( n > 0 ? (SECONDS - loop0) / n : 0 )) s"
             pass ""                                      # final full pass decides the run's status
           else
             pass ""
