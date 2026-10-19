@@ -128,3 +128,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-18 20:32,bet365,300d5fa9,settled,0.00,"lost, no return"
 2026-10-18 21:52,bet365,10edceb9,return,0.47,won
 2026-10-18 21:52,PointsBet,2311eef1,settled,0.00,"lost, no return"
+2026-10-18 23:44,Hard Rock,c8cabe33,stake,0.00,"bonus bet token, no cash deducted"
