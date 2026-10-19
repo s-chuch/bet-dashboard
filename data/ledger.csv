@@ -124,3 +124,5 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-18 20:09,PointsBet,3258bda0,stake,0.00,"bonus bet token, no cash deducted"
 2026-10-18 20:09,PointsBet,f5ba9f28,stake,0.00,"bonus bet token, no cash deducted"
 2026-10-18 20:25,theScore,c2582df3,return,0.20,void
+2026-10-18 20:32,Caesars,2146f957,return,5.54,won
+2026-10-18 20:32,bet365,300d5fa9,settled,0.00,"lost, no return"

@@ -25,6 +25,24 @@
  ],
  "last_settled": [
   {
+   "bet_id": "2146f957",
+   "book": "Caesars",
+   "pick": "Kaprizov AGS + McDavid AGS + Caufield AGS",
+   "result": "won",
+   "pnl": 5.04,
+   "final": "CBJ 1-2 MIN; EDM 6-2 UTA; BUF 3-4 MTL",
+   "at": "2026-10-18 20:32"
+  },
+  {
+   "bet_id": "300d5fa9",
+   "book": "bet365",
+   "pick": "Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "CBJ 1-2 MIN",
+   "at": "2026-10-18 20:32"
+  },
+  {
    "bet_id": "c2582df3",
    "book": "theScore",
    "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
@@ -53,5 +71,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 20:26 ET"
+ "last_change_at": "2026-10-18 20:32 ET"
 }

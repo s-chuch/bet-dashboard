@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 203.36,
-   "updated": "2026-10-17 19:27"
+   "balance": 208.9,
+   "updated": "2026-10-18 20:32"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 587.4,
+ "total": 592.94,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -99,10 +99,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 1,
-     "clock": 680.0,
+     "clock": 542.0,
      "state": "in",
      "completed": false,
-     "detail": "11:20 - 1st",
+     "detail": "9:02 - 1st",
      "teams": [
       {
        "id": "9",
@@ -1163,10 +1163,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 1,
-     "clock": 680.0,
+     "clock": 542.0,
      "state": "in",
      "completed": false,
-     "detail": "11:20 - 1st",
+     "detail": "9:02 - 1st",
      "teams": [
       {
        "id": "9",
@@ -2070,54 +2070,6 @@
    "start_ts": "2026-10-19T00:20Z"
   },
   {
-   "bet_id": "2146f957",
-   "date": "2026-10-17",
-   "book": "Caesars",
-   "event": "NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL",
-   "market": "Parlay 3-leg (20% profit boost)",
-   "pick": "Kaprizov AGS + McDavid AGS + Caufield AGS",
-   "start": "Sat Oct 17 07:00 PM ET",
-   "price": "+840",
-   "boosted_price": "+1008",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 5.04,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Kaprizov",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Kaprizov AGS"
-    },
-    {
-     "type": "prop",
-     "player": "McDavid",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "McDavid AGS"
-    },
-    {
-     "type": "prop",
-     "player": "Caufield",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Caufield AGS"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.5,
-   "payout": 5.54,
-   "payout_est": false,
-   "start_ts": "2026-10-17T23:00Z"
-  },
-  {
    "bet_id": "2311eef1",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -2149,10 +2101,10 @@
     "snapshot": {
      "date": "2026-10-18T23:00Z",
      "period": 2,
-     "clock": 3660.0,
+     "clock": 3960.0,
      "state": "in",
      "completed": false,
-     "detail": "61'",
+     "detail": "66'",
      "teams": [
       {
        "id": "15360",
@@ -3386,207 +3338,6 @@
    "start_ts": "2026-10-20T00:15Z"
   },
   {
-   "bet_id": "300d5fa9",
-   "date": "2026-10-18",
-   "book": "bet365",
-   "event": "Columbus Blue Jackets @ Minnesota Wild",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG",
-   "start": "Sun Oct 18 06:07 PM ET",
-   "price": "+105",
-   "boosted_price": "+135",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.27,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Kirill Kaprizov",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Kirill Kaprizov 1+ pts",
-     "pteam": "MIN",
-     "pname": "Kirill Kaprizov",
-     "pid": "3942335"
-    },
-    {
-     "type": "prop",
-     "player": "Matthew Boldy",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Matthew Boldy 1+ pts",
-     "pteam": "MIN",
-     "pname": "Matt Boldy",
-     "pid": "4565233"
-    },
-    {
-     "type": "prop",
-     "player": "Matthew Boldy",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Matthew Boldy 3+ SOG",
-     "pteam": "MIN",
-     "pname": "Matt Boldy",
-     "pid": "4565233"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261018",
-    "groups": null,
-    "id": "401892533",
-    "snapshot": {
-     "date": "2026-10-18T22:00Z",
-     "period": 3,
-     "clock": 4.0,
-     "state": "in",
-     "completed": false,
-     "detail": "0:04 - 3rd",
-     "teams": [
-      {
-       "id": "30",
-       "name": "Minnesota Wild",
-       "abbr": "MIN",
-       "short": "Wild",
-       "nick": "Wild",
-       "location": "Minnesota",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "29",
-       "name": "Columbus Blue Jackets",
-       "abbr": "CBJ",
-       "short": "Blue Jackets",
-       "nick": "Blue Jackets",
-       "location": "Columbus",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pin": {
-     "ml_home": 0.6363,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.4204,
-     "total_line": 6.5,
-     "total_over_fair": 0.4829,
-     "src": "Pinnacle no-vig (saved scan)",
-     "pulled": "2026-10-18 17:52 ET"
-    },
-    "pm": {
-     "slug": "nhl-cbj-min-2026-10-18",
-     "title": "Blue Jackets vs. Wild",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Wild",
-        "Blue Jackets"
-       ],
-       "tokens": [
-        "41873484262704268313472614780852164880010165354182450935485522210247457234434",
-        "17446163624521898353905736392854204085807827399372864160137788969650686306577"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Wild",
-        "Blue Jackets"
-       ],
-       "tokens": [
-        "23163684264086279422248597802123583886101189876239524746869103425704892830192",
-        "35650715089900630404448660849999333719731241668313423974225805364442210012713"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "41024321931191472937327446429267499163915729191320930738368855890533885315301",
-        "33246243297336709511148683416478470654183269406549767035479467315065741699678"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "61170443566643370716651001387462208802674236308792557389612053409827909884342",
-        "100970634060317100883491316812830837514667369211945462864042270338696598668376"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "37877714829165862035612231571591145625367930833523412938618266461727327306938",
-        "61245601760605286042693080928670100583448428721644653007669334064862903643077"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "32487202851734042178102910475927243399676308014347251614407275438346288049040",
-        "57832384130744688948584939372722929950732931349653454364901474376927866582445"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "112321406089822106130435042935908847285247344481500845570323468850422167980605",
-        "71124900925839337767008507550628257918749475905870550810089913059663128837637"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Blue Jackets",
-       "Wild"
-      ],
-      "tokens": [
-       "104399038229767533049785956662932622672730849801796757660461459481011876111224",
-       "43312022263883618222678719424246029736285434462705482021547460622246168039595"
-      ]
-     }
-    },
-    "an": {
-     "id": 293433,
-     "home_team_id": 226,
-     "away_team_id": 240
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.2,
-   "payout": 0.47,
-   "payout_est": false,
-   "start_ts": "2026-10-18T22:07Z"
-  },
-  {
    "bet_id": "f0a25e0b",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -3789,6 +3540,16 @@
   },
   {
    "date": "2026-10-18",
+   "book": "bet365",
+   "event": "Columbus Blue Jackets @ Minnesota Wild",
+   "pick": "Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
    "book": "PointsBet",
    "event": "Houston Texans @ Jacksonville Jaguars",
    "pick": "SGP 3-leg C $0.50 (legs not shown in screenshot)",
@@ -3866,6 +3627,16 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": false
+  },
+  {
+   "date": "2026-10-17",
+   "book": "Caesars",
+   "event": "NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL",
+   "pick": "Kaprizov AGS + McDavid AGS + Caufield AGS",
+   "result": "won",
+   "pnl": 5.04,
+   "stake": 0.5,
+   "auto": true
   },
   {
    "date": "2026-10-17",
@@ -4728,15 +4499,15 @@
    "auto": false
   }
  ],
- "pnl_total": 171.15,
+ "pnl_total": 175.99,
  "unsettled": {
-  "n": 21,
-  "cash_stake": 156.6,
-  "max_payout": 1262.04,
+  "n": 19,
+  "cash_stake": 155.9,
+  "max_payout": 1256.03,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 156.6,
+ "open_stake": 155.9,
  "recs": {
   "stats": {
    "overall": {
@@ -5003,16 +4774,16 @@
    "friend": {
     "n": 12,
     "w": 0,
-    "l": 3,
+    "l": 4,
     "p": 0,
-    "pending": 9,
+    "pending": 8,
     "win_pct": 0.0,
-    "units": -3.0,
+    "units": -4.0,
     "roi_pct": -100.0,
-    "roi_n": 3,
-    "exp_roi_pct": 55.1,
-    "exp_wins": 1.2,
-    "exp_wins_n": 3,
+    "roi_n": 4,
+    "exp_roi_pct": 55.4,
+    "exp_wins": 1.6,
+    "exp_wins_n": 4,
     "wins_with_fair": 0
    },
    "clv": "not available: no closing Pinnacle prices are stored"
@@ -5541,11 +5312,11 @@
     "promo": "profit boost",
     "friend": "yes",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "CBJ 1-2 MIN (Final)",
     "source": "rec.py add",
     "notes": "friend's Caesars; price = Caesars ON feed estimate",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "69071343",
@@ -7255,6 +7026,24 @@
   ],
   "last_settled": [
    {
+    "bet_id": "2146f957",
+    "book": "Caesars",
+    "pick": "Kaprizov AGS + McDavid AGS + Caufield AGS",
+    "result": "won",
+    "pnl": 5.04,
+    "final": "CBJ 1-2 MIN; EDM 6-2 UTA; BUF 3-4 MTL",
+    "at": "2026-10-18 20:32"
+   },
+   {
+    "bet_id": "300d5fa9",
+    "book": "bet365",
+    "pick": "Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "CBJ 1-2 MIN",
+    "at": "2026-10-18 20:32"
+   },
+   {
     "bet_id": "c2582df3",
     "book": "theScore",
     "pick": "Guardians ML + N. Martinez 3+ K + C. Simpson 1+ total bases",
@@ -7282,16 +7071,16 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 20:26 ET"
+  "last_change_at": "2026-10-18 20:32 ET"
  },
- "open_live_n": 20,
+ "open_live_n": 18,
  "open_stake_by_book": {
-  "bet365": 0.2,
-  "Caesars": 1.0,
+  "bet365": 0,
+  "Caesars": 0.5,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
   "PointsBet": 288.75
  },
- "hash": "846cd499306542a7452458db2e13d95e985e70e5",
- "generated_at": "2026-10-19T00:27:20+00:00"
+ "hash": "a875a0a4bec717c3da3f7d4cce7205d7ebd0ae92",
+ "generated_at": "2026-10-18T20:32:58-04:00"
 }

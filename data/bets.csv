@@ -90,7 +90,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-17,Caesars,Tampa Bay Rays @ Cleveland Guardians,Sat Oct 17 08:08 PM ET,SGP 3-leg (25% profit boost),Under 7.5 + Guardians +1.5 + Over 2.5 total doubles,+315,+394,0.50,1.97,,,lost,-0.50,762a175b,2026-10-18 16:55,
 2026-10-17,Caesars,Dallas Cowboys @ Green Bay Packers,Sun Oct 18 08:20 PM ET,SGP 2-leg (30% profit boost),MarShawn Lloyd ATTD + Cowboys ML,+305,+398,0.50,1.99,,,open,,f6d731b5,,
 2026-10-17,Caesars,Alabama @ Tennessee / Missouri @ Ole Miss / Auburn @ Georgia,Sat Oct 17 03:30 PM ET,Parlay 3-leg LIVE (10% profit boost),Alabama ML (-209) + Mizzou/Ole Miss Under 45.5 (-120) + Georgia ML (-162),+338,+372,0.50,1.86,,,lost,-0.50,2c5c0e3d,2026-10-17 19:27,
-2026-10-17,Caesars,NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL,Sat Oct 17 07:00 PM ET,Parlay 3-leg (20% profit boost),Kaprizov AGS + McDavid AGS + Caufield AGS,+840,+1008,0.50,5.04,,,open,,2146f957,,
+2026-10-17,Caesars,NHL: CBJ/MIN + EDM @ UTA + BUF @ MTL,Sat Oct 17 07:00 PM ET,Parlay 3-leg (20% profit boost),Kaprizov AGS + McDavid AGS + Caufield AGS,+840,+1008,0.50,5.04,,,won,5.04,2146f957,2026-10-18 20:32,auto
 2026-10-17,Caesars,Chicago Bears @ Atlanta Falcons,Sun Oct 18 01:00 PM ET,SGP 3-leg (20% profit boost),Bijan Robinson ATTD + D'Andre Swift ATTD + Drake London ATTD,+334,+400,0.50,2.00,,,lost,-0.50,31523b92,2026-10-18 16:55,
 2026-10-17,DraftKings,Inter Miami @ Atlanta United,Sat Oct 17 07:30 PM ET,SGP 3-leg (30% parlay boost),Messi AGS + Messi 7+ shots + Inter Miami -0.5,+345,+449,0.20,0.89,,,lost,-0.20,3c3918c1,2026-10-18 16:55,
 2026-10-17,PointsBet,Houston Texans @ Jacksonville Jaguars (London),Sun Oct 18 09:30 AM ET,SGP 3-leg (profit boost; legs not visible),SGP 3-leg A (legs not shown in screenshot),+300,+326,1.00,3.26,,,won,3.26,4eece662,2026-10-18 18:32,manual
@@ -109,7 +109,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-18,PointsBet,San Telmo v Defensores de Belgrano (Argentina Primera Nacional),Mon Oct 19 02:30 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+155,,10.00,15.50,43.06,9.8,open,,5c5ab743,,
 2026-10-18,PointsBet,Rodez v Montpellier HSC (Ligue 2),Mon Oct 19 02:45 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+250,,10.00,25.00,30.61,7.1,open,,44d354e4,,
 2026-10-18,PointsBet,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,Total (WELCOMEDM rollover),Over 51.5,-110,,25.00,22.72,52.76,0.7,open,,c55174ee,,
-2026-10-18,bet365,Columbus Blue Jackets @ Minnesota Wild,Sun Oct 18 06:07 PM ET,SGP 3-leg (30% profit boost),Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG,+105,+135,0.20,0.27,,,open,,300d5fa9,,
+2026-10-18,bet365,Columbus Blue Jackets @ Minnesota Wild,Sun Oct 18 06:07 PM ET,SGP 3-leg (30% profit boost),Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG,+105,+135,0.20,0.27,,,lost,-0.20,300d5fa9,2026-10-18 20:32,auto
 2026-10-18,bet365,Houston Texans @ Jacksonville Jaguars (London),Sun Oct 18 09:30 AM ET,SGP 3-leg (50% profit boost),Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions,+110,+165,0.20,0.33,,,won,0.33,cdd1e058,2026-10-18 19:44,auto
 2026-10-18,PointsBet,Paphos FC v Riga FC (UEFA Conference League),Thu Oct 22 12:45 PM ET,3-Way Moneyline (bonus bet $33.46),Riga FC,+500,,33.46 (bonus),167.30,19.2,,open,,f0a25e0b,,
 2026-10-18,PointsBet,Trabzonspor v Hearts (UEFA Conference League),Thu Oct 22 12:45 PM ET,3-Way Moneyline (bonus bet $33.43),Hearts,+600,,33.43 (bonus),200.58,15.83,,open,,383dd8ea,,
