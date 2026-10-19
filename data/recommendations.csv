@@ -99,3 +99,4 @@ e6fd1751,2026-10-18,,NFL,Tennessee Titans @ Indianapolis Colts,2026-10-18 13:00,
 2daa9897,2026-10-19,15:09,MLB,Cleveland Guardians @ Tampa Bay Rays (MLB),2026-10-19 20:08,Run Line / Spread,Tampa Bay Rays -1.5,theScore,+165,+165,40.07,6.2,0.15,cash,no,no,,pending,,rec.py add,"3:07 PM scan, pulled 3:08 PM ET; Pin main home +143 / away -160 (fair +150); yes at +155 (2% EV floor); FanDuel +152 below threshold"
 3fc1b4ae,2026-10-19,18:06,soccer,Forest Green v Chesham Utd (FA Cup Qualifying),Tue Oct 20 2:45 PM ET,Match Result,Chesham Utd,PointsBet,+1000,+1000,11.8,29.75,10,rollover,no,no,,pending,,rec.py add,
 fdcf3a8e,2026-10-19,18:06,soccer,Barcelona v Alaves (La Liga),Sat Oct 24 4:00 PM ET,Match Result,Draw,PointsBet,+800,+800,14.47,30.25,10,rollover,no,no,,pending,,rec.py add,
+1caa974b,2026-10-19,18:07,soccer,Harrogate Town v Bury (FA Cup Qualifying),Tue Oct 20 2:45 PM ET,Match Result,Bury,PointsBet,+300,+300,30.64,22.54,10,rollover,no,no,,pending,,rec.py add,
