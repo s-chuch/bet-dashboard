@@ -255,7 +255,7 @@
     var st = obj(state.data).streak ? obj(obj(state.data).streak) : {}, cu = st.current;
     var sTxt = cu && cu.n ? (cu.type === 'won' ? 'W' : 'L') + cu.n : '–';
     k1.appendChild(kpi('Current streak', sTxt, 'Best W' + num(st.best_win) + ' · Worst L' + num(st.worst_loss), cu && cu.n ? (cu.type === 'won' ? 'pos' : 'neg') : ''));
-    k1.appendChild(kpi('Open bets', String(num(t.open)), money(t.open_stake) + ' at risk'));
+    k1.appendChild(kpi('Unsettled bets', String(num(t.open)), money(t.open_stake) + ' at risk · potential payout ' + money(t.open_payout) + (num(t.open_payout_tbc) > 0 ? ' + ' + num(t.open_payout_tbc) + ' TBC' : '')));
 
     var bw = $('bw'); clear(bw);
     [['best', 'Best bet', t.best], ['worst', 'Worst bet', t.worst]].forEach(function (x) {

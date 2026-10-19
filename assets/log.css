@@ -184,3 +184,6 @@
 
 a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;text-decoration:none;box-sizing:border-box}
 .tlink{color:var(--accent2);font-weight:600}
+
+.settle .ssum{font-size:13px;margin:-2px 0 6px}
+.settle .ssub{font-size:12px;color:var(--mut);margin:0 0 8px}

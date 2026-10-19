@@ -196,9 +196,10 @@ function prepOpen(d){
     var id=ID_RE.test(String(b.bet_id||''))?String(b.bet_id):'';
     var r=(id&&byId[id])||byKey[revKey(b)]||null;
     return {i:i,id:id,book:String(b.book||''),event:String(b.event||''),market:String(b.market||''),pick:String(b.pick||''),stake:num(b.stake),
-      toWin:(typeof b.to_win==='number'&&b.to_win>0)?b.to_win:null,price:b.price,bprice:b.boosted_price,start:String(b.start||''),sk:startMs(b),
+      toWin:(typeof b.to_win==='number'&&b.to_win>0)?b.to_win:null,price:b.price,bprice:b.boosted_price,start:String(b.start||''),sk:startMs(b),ts:(typeof b.start_ts==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z$/.test(b.start_ts))?Date.parse(b.start_ts):null,
       review:!!r,reason:r?String(r.reason||'Needs review'):''}});
   S.open.sort(function(a,b){return (b.review-a.review)||(a.sk===b.sk?a.i-b.i:a.sk<b.sk?-1:1)});
+  var u=d.unsettled&&typeof d.unsettled==='object'?d.unsettled:{};S.unsettled={n:(typeof u.n==='number'?u.n:null),cash:(typeof u.cash_stake==='number'?u.cash_stake:null)};
   S.openLoaded=true}
 function betById(id){for(var i=0;i<S.open.length;i++)if(S.open[i].id===id)return S.open[i];return null}
 function stOf(id){return S.st[id]||(S.st[id]={mode:'idle'})}
@@ -245,16 +246,20 @@ function connectHtml(){
     '<li>Paste the token here. It stays in this browser only and is sent only to api.github.com.</li></ol>'+
     '<div class="trow"><input type="password" id="tok-in" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_…" aria-label="GitHub fine-grained token" value="'+esc(S.tokenDraft)+'"><button type="button" class="btn pri" data-act="savetok">Save</button></div>'+
     (S.tokenMsg&&!bad?'<div class="serr" role="alert">'+esc(S.tokenMsg)+'</div>':'')+'</div>'}
+function started(b){return b.ts!==null&&b.ts<=Date.now()}
+function sumHtml(){if(!S.openLoaded)return '';var sh=S.open.filter(started).length,u=S.unsettled||{},tot=u.n!=null?u.n:S.open.length,
+  hid=Math.max(0,tot-sh),cash=u.cash!=null?u.cash:S.open.reduce(function(a,b){return a+b.stake},0);
+  return '<div class="ssum">'+esc(sh+' past start \u00b7 '+tot+' unsettled in total \u00b7 $'+cash.toFixed(2)+' at risk')+'</div>'+(hid?'<div class="ssub">'+esc(hid+' not started yet')+'</div>':'')}
 function renderSettle(){
   var box=$('settle-box');if(!box)return;
   var ae=document.activeElement,fk=ae&&box.contains(ae)?focusKey(ae):'',ss=null,se=null;
   if(fk&&ae.tagName==='INPUT'){try{ss=ae.selectionStart;se=ae.selectionEnd}catch(e){}}
-  var h='<section class="panel settle" aria-labelledby="settle-h"><div class="shead"><h3 id="settle-h">Awaiting result'+(S.openLoaded?' <span class="chip">'+S.open.length+'</span>':'')+'</h3>'+
-    (S.token?'<button type="button" class="btn sm" data-act="disconnect">Disconnect</button>':'')+'</div>';
+  var h='<section class="panel settle" aria-labelledby="settle-h"><div class="shead"><h3 id="settle-h">Awaiting result'+(S.openLoaded?' <span class="chip">'+S.open.filter(started).length+'</span>':'')+'</h3>'+
+    (S.token?'<button type="button" class="btn sm" data-act="disconnect">Disconnect</button>':'')+'</div>'+sumHtml();
   if(!S.token||S.tokenBad)h+=connectHtml();
   if(!S.openLoaded)h+=S.dataErr?'<div class="empty">Open bets unavailable ('+esc(S.dataErr)+').</div>':'<div class="skeleton" style="height:70px"></div>';
-  else{var list=S.open.slice();Object.keys(S.st).forEach(function(id){var q=S.st[id];if(q.mode==='done'&&q.bet&&!betById(id))list.push(q.bet)});
-    if(!list.length)h+='<div class="empty">No unsettled bets \ud83c\udf89</div>';else h+='<div class="slist">'+list.map(settleCard).join('')+'</div>'}
+  else{var list=S.open.filter(started);Object.keys(S.st).forEach(function(id){var q=S.st[id];if(q.mode==='done'&&q.bet&&!betById(id))list.push(q.bet)});
+    if(!list.length)h+='<div class="empty">Nothing past its start time is waiting for a result \ud83c\udf89</div>';else h+='<div class="slist">'+list.map(settleCard).join('')+'</div>'}
   box.innerHTML=h+'</section>';
   if(fk){var els=box.querySelectorAll('button,input'),i,t=null;for(i=0;i<els.length;i++)if(focusKey(els[i])===fk){t=els[i];break}
     if(t&&!t.disabled){t.focus();if(ss!=null){try{t.setSelectionRange(ss,se)}catch(e){}}}}}
