@@ -250,6 +250,16 @@ function started(b){return b.ts!==null&&b.ts<=Date.now()}
 function sumHtml(){if(!S.openLoaded)return '';var sh=S.open.filter(started).length,u=S.unsettled||{},tot=u.n!=null?u.n:S.open.length,
   hid=Math.max(0,tot-sh),cash=u.cash!=null?u.cash:S.open.reduce(function(a,b){return a+b.stake},0);
   return '<div class="ssum">'+esc(sh+' past start \u00b7 '+tot+' unsettled in total \u00b7 $'+cash.toFixed(2)+' at risk')+'</div>'+(hid?'<div class="ssub">'+esc(hid+' not started yet')+'</div>':'')}
+// Awaiting result: one heading per book (A-Z, with bet count and cash at risk), oldest start first inside each book
+function settleByBook(list){
+  var arr=list.map(function(b,i){return {b:b,i:i}}).sort(function(x,y){
+    var bx=String(x.b.book||'').toLowerCase(),by=String(y.b.book||'').toLowerCase();
+    if(bx!==by)return bx<by?-1:1;
+    var sx=x.b.sk,sy=y.b.sk;if(sx!==sy)return sx<sy?-1:1;return x.i-y.i});
+  var out='',cur=null,n=0,stake=0,body='';
+  function flush(){if(cur!==null)out+='<div class="bkh">'+esc(cur||'?')+' <b>('+n+' bet'+(n===1?'':'s')+' \u00b7 $'+stake.toFixed(2)+')</b></div>'+body}
+  arr.forEach(function(x){var k=String(x.b.book||'');if(k!==cur){flush();cur=k;n=0;stake=0;body=''}n++;stake+=+x.b.stake||0;body+=settleCard(x.b)});
+  flush();return out}
 function renderSettle(){
   var box=$('settle-box');if(!box)return;
   var ae=document.activeElement,fk=ae&&box.contains(ae)?focusKey(ae):'',ss=null,se=null;
@@ -259,7 +269,7 @@ function renderSettle(){
   if(!S.token||S.tokenBad)h+=connectHtml();
   if(!S.openLoaded)h+=S.dataErr?'<div class="empty">Open bets unavailable ('+esc(S.dataErr)+').</div>':'<div class="skeleton" style="height:70px"></div>';
   else{var list=S.open.filter(started);Object.keys(S.st).forEach(function(id){var q=S.st[id];if(q.mode==='done'&&q.bet&&!betById(id))list.push(q.bet)});
-    if(!list.length)h+='<div class="empty">Nothing past its start time is waiting for a result \ud83c\udf89</div>';else h+='<div class="slist">'+list.map(settleCard).join('')+'</div>'}
+    if(!list.length)h+='<div class="empty">Nothing past its start time is waiting for a result \ud83c\udf89</div>';else h+='<div class="slist">'+settleByBook(list)+'</div>'}
   box.innerHTML=h+'</section>';
   if(fk){var els=box.querySelectorAll('button,input'),i,t=null;for(i=0;i<els.length;i++)if(focusKey(els[i])===fk){t=els[i];break}
     if(t&&!t.disabled){t.focus();if(ss!=null){try{t.setSelectionRange(ss,se)}catch(e){}}}}}
