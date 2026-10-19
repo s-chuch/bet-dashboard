@@ -8,6 +8,15 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "b54671c7",
+   "book": "PointsBet",
+   "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
+   "pick": "Panteras de Aguascalientes",
+   "stake": "25.00",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -85,5 +94,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 23:47 ET"
+ "last_change_at": "2026-10-19 01:17 ET"
 }

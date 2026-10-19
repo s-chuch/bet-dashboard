@@ -4987,6 +4987,15 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "b54671c7",
+    "book": "PointsBet",
+    "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
+    "pick": "Panteras de Aguascalientes",
+    "stake": "25.00",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -5063,7 +5072,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 23:47 ET"
+  "last_change_at": "2026-10-19 01:17 ET"
  },
  "open_live_n": 16,
  "open_stake_by_book": {
@@ -5072,6 +5081,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 253.75
  },
- "hash": "f374f40ca3d56c2c06f63352d52278c576a52eb7",
- "generated_at": "2026-10-19T00:29:10-04:00"
+ "hash": "c9305fa1f454cd40a58727b6a2fc5bf27f5eb741",
+ "generated_at": "2026-10-19T01:17:29-04:00"
 }
