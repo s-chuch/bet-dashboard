@@ -99,10 +99,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 4,
-     "clock": 181.0,
+     "clock": 44.0,
      "state": "in",
      "completed": false,
-     "detail": "3:01 - 4th",
+     "detail": "0:44 - 4th",
      "teams": [
       {
        "id": "9",
@@ -122,7 +122,7 @@
        "nick": "Cowboys",
        "location": "Dallas",
        "home": false,
-       "score": "7"
+       "score": "13"
       }
      ]
     },
@@ -1076,10 +1076,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 4,
-     "clock": 181.0,
+     "clock": 44.0,
      "state": "in",
      "completed": false,
-     "detail": "3:01 - 4th",
+     "detail": "0:44 - 4th",
      "teams": [
       {
        "id": "9",
@@ -1099,7 +1099,7 @@
        "nick": "Cowboys",
        "location": "Dallas",
        "home": false,
-       "score": "7"
+       "score": "13"
       }
      ]
     },
@@ -3372,6 +3372,72 @@
    "payout": 133.72,
    "payout_est": false,
    "start_ts": "2026-10-24T14:00Z"
+  },
+  {
+   "bet_id": "c8cabe33",
+   "date": "2026-10-18",
+   "book": "Hard Rock",
+   "event": "FC Porto v PSV Eindhoven",
+   "market": "3-Way Moneyline (bonus bet $5.00; price unconfirmed, est.)",
+   "pick": "PSV Eindhoven",
+   "start": "Tue Oct 20 3:00 PM ET",
+   "price": "+380",
+   "boosted_price": "",
+   "stake": 5.0,
+   "stake_note": "",
+   "to_win": 19.0,
+   "ev_pct": "78.4",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "PSV Eindhoven",
+     "women": false,
+     "text": "PSV Eindhoven",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/uefa.champions",
+    "date": "20261020",
+    "groups": null,
+    "id": "401915398",
+    "snapshot": {
+     "date": "2026-10-20T19:00Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "437",
+       "name": "FC Porto",
+       "abbr": "FCP",
+       "short": "FC Porto",
+       "nick": "FC Porto",
+       "location": "FC Porto",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "148",
+       "name": "PSV Eindhoven",
+       "abbr": "PSV",
+       "short": "PSV",
+       "nick": "PSV Eindhoven",
+       "location": "PSV Eindhoven",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.0,
+   "payout": 19.0,
+   "payout_est": false,
+   "start_ts": "2026-10-20T19:00Z"
   }
  ],
  "settled_recent": [
@@ -4368,9 +4434,9 @@
  ],
  "pnl_total": 166.26,
  "unsettled": {
-  "n": 17,
+  "n": 18,
   "cash_stake": 145.7,
-  "max_payout": 1170.56,
+  "max_payout": 1189.56,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -4608,11 +4674,11 @@
    },
    "by_placed": {
     "yes": {
-     "n": 66,
+     "n": 67,
      "w": 22,
      "l": 31,
      "p": 0,
-     "pending": 13,
+     "pending": 14,
      "win_pct": 41.5,
      "units": 22.23,
      "roi_pct": 45.4,
@@ -4623,11 +4689,11 @@
      "wins_with_fair": 22
     },
     "no": {
-     "n": 19,
+     "n": 18,
      "w": 5,
      "l": 9,
      "p": 0,
-     "pending": 5,
+     "pending": 4,
      "win_pct": 35.7,
      "units": -4.76,
      "roi_pct": -47.6,
@@ -4672,7 +4738,7 @@
     "stake": "5.00",
     "promo": "bonus bet",
     "friend": "no",
-    "placed": "no",
+    "placed": "yes",
     "result": "pending",
     "final_score": "",
     "source": "rec.py add",
@@ -6957,15 +7023,16 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 23:33 ET"
+  "last_change_at": "2026-10-18 23:45 ET"
  },
- "open_live_n": 17,
+ "open_live_n": 18,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
+  "Hard Rock": 5.0,
   "PointsBet": 278.75
  },
- "hash": "c1132131f13a07c21192b15877fbb2e36449b426",
- "generated_at": "2026-10-18T23:33:42-04:00"
+ "hash": "24e9ec8d80c8738bd4422d20917951ca83d4d9a8",
+ "generated_at": "2026-10-18T23:45:13-04:00"
 }
