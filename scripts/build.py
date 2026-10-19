@@ -161,7 +161,7 @@ def parse_leg(text, market):
     m = re.match(r"^(.+?)\s+(?:to\s+)?(?:score or assist|goal or assist|G\+A)$", t, re.I)
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "goalOrAssist", "op": "min", "min": 1, "text": t}
     # "J. Carter TD", "Kelce anytime TD"
-    m = re.match(r"^(.+?)\s+(?:anytime\s+)?(?:TD|touchdown)(?:\s+scorer)?$|^(.+?)\s+ATD$", t, re.I)
+    m = re.match(r"^(.+?)\s+(?:anytime\s+)?(?:TD|touchdown)(?:\s+scorer)?$|^(.+?)\s+ATT?D$", t, re.I)
     if m: return {"type": "prop", "player": (m[1] or m[2]).strip(), "stat": "td", "op": "min", "min": 1, "text": t}
     # "M. Stokes 220+ pass yds", "Makar 1+ pts", "player 2+"
     m = re.match(r"^(.+?)\s+(\d+)\+\s*(.*)$", t)

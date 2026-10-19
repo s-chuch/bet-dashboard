@@ -98,11 +98,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 167.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "2:47 - 3rd",
      "teams": [
       {
        "id": "9",
@@ -112,7 +112,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "17"
+       "score": "20"
       },
       {
        "id": "6",
@@ -122,7 +122,7 @@
        "nick": "Cowboys",
        "location": "Dallas",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -1050,8 +1050,15 @@
    "multi": true,
    "legs": [
     {
-     "type": "unknown",
-     "text": "MarShawn Lloyd ATTD"
+     "type": "prop",
+     "player": "MarShawn Lloyd",
+     "stat": "td",
+     "op": "min",
+     "min": 1,
+     "text": "MarShawn Lloyd ATTD",
+     "pteam": "GB",
+     "pname": "MarShawn Lloyd",
+     "pid": "4429023"
     },
     {
      "type": "ml",
@@ -1068,11 +1075,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 167.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "2:47 - 3rd",
      "teams": [
       {
        "id": "9",
@@ -1082,7 +1089,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "17"
+       "score": "20"
       },
       {
        "id": "6",
@@ -1092,7 +1099,7 @@
        "nick": "Cowboys",
        "location": "Dallas",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -6926,6 +6933,6 @@
   "FanDuel": 0.1,
   "PointsBet": 278.75
  },
- "hash": "86c0604778ecae3a4436e313d3ff1aec5d2f1165",
- "generated_at": "2026-10-18T21:52:41-04:00"
+ "hash": "9e2fc69bcb00bd616cc9537a4fc5ca22fc6bf01b",
+ "generated_at": "2026-10-19T02:38:44+00:00"
 }
