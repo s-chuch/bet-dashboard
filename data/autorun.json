@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "a0031feb",
-   "book": "PointsBet",
-   "event": "Cienciano v UTC Cajamarca (Peru Liga 1)",
-   "pick": "Draw",
-   "stake": "10.00",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "b54671c7",
    "book": "PointsBet",
    "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
@@ -44,27 +35,36 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  }
+ ],
+ "last_settled": [
+  {
+   "bet_id": "a0031feb",
+   "book": "PointsBet",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": -10.0,
+   "final": "UTC 0-1 CIE",
+   "at": "2026-10-19 17:01"
   },
   {
    "bet_id": "9e07f5a1",
    "book": "PointsBet",
-   "event": "Al-Fayha FC v Al Ahli Jeddah (Saudi Pro League)",
    "pick": "Al-Fayha FC",
-   "stake": "10.00",
-   "reason": "no ESPN game matched",
-   "legs": []
+   "result": "lost",
+   "pnl": -10.0,
+   "final": "AHL 3-2 FAY",
+   "at": "2026-10-19 17:01"
   },
   {
-   "bet_id": "bd13eed8",
-   "book": "FanDuel",
-   "event": "Colorado Avalanche @ Philadelphia Flyers",
-   "pick": "SGP (legs not shown in screenshot)",
-   "stake": "0.50",
-   "reason": "parlay legs not listed in the pick text",
-   "legs": []
-  }
- ],
- "last_settled": [
+   "bet_id": "44d354e4",
+   "book": "PointsBet",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": -10.0,
+   "final": "MON 3-0 AVE",
+   "at": "2026-10-19 17:01"
+  },
   {
    "bet_id": "659ed958",
    "book": "Caesars",
@@ -157,5 +157,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 16:59 ET"
+ "last_change_at": "2026-10-19 17:01 ET"
 }

@@ -95,34 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "a0031feb",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Cienciano v UTC Cajamarca",
-   "market": "3-Way Draw (WELCOMEDM rollover)",
-   "pick": "Draw",
-   "start": "Sun Oct 18 07:30 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 50.0,
-   "ev_pct": "7.2",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Draw"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 60.0,
-   "payout_est": false,
-   "start_ts": "2026-10-18T23:30Z"
-  },
-  {
    "bet_id": "b54671c7",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -237,64 +209,6 @@
    "payout": 67.5,
    "payout_est": false,
    "start_ts": "2026-10-19T14:40Z"
-  },
-  {
-   "bet_id": "9e07f5a1",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Al-Fayha FC v Al Ahli Jeddah",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Al-Fayha FC",
-   "start": "Mon Oct 19 11:05 AM ET",
-   "price": "+700",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 70.0,
-   "ev_pct": "5.0",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Al-Fayha FC",
-     "women": false,
-     "text": "Al-Fayha FC"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 80.0,
-   "payout_est": false,
-   "start_ts": "2026-10-19T15:05Z"
-  },
-  {
-   "bet_id": "44d354e4",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Rodez v Montpellier HSC",
-   "market": "3-Way Draw (WELCOMEDM rollover)",
-   "pick": "Draw",
-   "start": "Mon Oct 19 02:45 PM ET",
-   "price": "+250",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 25.0,
-   "ev_pct": "7.1",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Draw"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 10.0,
-   "payout": 35.0,
-   "payout_est": false,
-   "start_ts": "2026-10-19T18:45Z"
   },
   {
    "bet_id": "c55174ee",
@@ -1281,10 +1195,10 @@
    "legs": [
     {
      "type": "ml",
-     "team": "Hearts",
+     "team": "Heart of Midlothian",
      "women": false,
      "text": "Hearts",
-     "team_ok": false
+     "team_ok": true
     }
    ],
    "match": {
@@ -2548,14 +2462,14 @@
    "legs": [
     {
      "type": "ml",
-     "team": "TB Rays",
+     "team": "Tampa Bay Rays",
      "women": false,
      "text": "TB Rays ML",
-     "team_ok": false
+     "team_ok": true
     },
     {
      "type": "spread",
-     "team": "CLE Guardians",
+     "team": "Cleveland Guardians",
      "line": 2.5,
      "women": false,
      "text": "CLE Guardians +2.5",
@@ -2682,10 +2596,10 @@
    "legs": [
     {
      "type": "ml",
-     "team": "SF 49ers",
+     "team": "San Francisco 49ers",
      "women": false,
      "text": "SF 49ers ML",
-     "team_ok": false
+     "team_ok": true
     },
     {
      "type": "prop",
@@ -3910,14 +3824,14 @@
     },
     {
      "type": "ml",
-     "team": "TB Rays",
+     "team": "Tampa Bay Rays",
      "women": false,
      "text": "TB Rays ML",
-     "team_ok": false
+     "team_ok": true
     },
     {
      "type": "teamtotal",
-     "team": "CLE Guardians",
+     "team": "Cleveland Guardians",
      "side": "over",
      "line": 0.5,
      "unit": "runs",
@@ -6696,10 +6610,40 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Rodez v Montpellier HSC",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "San Telmo v Defensores de Belgrano",
    "pick": "Draw",
    "result": "won",
    "pnl": 15.5,
+   "stake": 10.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Al-Fayha FC v Al Ahli Jeddah",
+   "pick": "Al-Fayha FC",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Cienciano v UTC Cajamarca",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": -10.0,
    "stake": 10.0,
    "auto": true
   },
@@ -7584,30 +7528,30 @@
    "auto": false
   }
  ],
- "pnl_total": 155.76,
+ "pnl_total": 125.76,
  "unsettled": {
-  "n": 27,
-  "cash_stake": 114.1,
-  "max_payout": 1140.31,
+  "n": 24,
+  "cash_stake": 84.1,
+  "max_payout": 965.31,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 114.1,
+ "open_stake": 84.1,
  "recs": {
   "stats": {
    "overall": {
     "n": 86,
     "w": 28,
-    "l": 41,
+    "l": 44,
     "p": 0,
-    "pending": 17,
-    "win_pct": 40.6,
-    "units": 18.02,
-    "roi_pct": 29.5,
-    "roi_n": 61,
-    "exp_roi_pct": 12.4,
-    "exp_wins": 24.9,
-    "exp_wins_n": 69,
+    "pending": 14,
+    "win_pct": 38.9,
+    "units": 15.02,
+    "roi_pct": 23.5,
+    "roi_n": 64,
+    "exp_roi_pct": 12.1,
+    "exp_wins": 25.5,
+    "exp_wins_n": 72,
     "wins_with_fair": 28
    },
    "by_promo": {
@@ -7689,16 +7633,16 @@
     "rollover": {
      "n": 32,
      "w": 9,
-     "l": 13,
+     "l": 16,
      "p": 0,
-     "pending": 10,
-     "win_pct": 40.9,
-     "units": -2.16,
-     "roi_pct": -10.8,
-     "roi_n": 20,
-     "exp_roi_pct": -0.4,
-     "exp_wins": 10.4,
-     "exp_wins_n": 22,
+     "pending": 7,
+     "win_pct": 36.0,
+     "units": -5.16,
+     "roi_pct": -22.4,
+     "roi_n": 23,
+     "exp_roi_pct": 0.4,
+     "exp_wins": 11.0,
+     "exp_wins_n": 25,
      "wins_with_fair": 9
     }
    },
@@ -7796,16 +7740,16 @@
     "Soccer": {
      "n": 24,
      "w": 5,
-     "l": 5,
+     "l": 8,
      "p": 0,
-     "pending": 14,
-     "win_pct": 50.0,
-     "units": 1.17,
-     "roi_pct": 16.7,
-     "roi_n": 7,
-     "exp_roi_pct": -0.4,
-     "exp_wins": 2.6,
-     "exp_wins_n": 10,
+     "pending": 11,
+     "win_pct": 38.5,
+     "units": -1.83,
+     "roi_pct": -18.3,
+     "roi_n": 10,
+     "exp_roi_pct": 1.5,
+     "exp_wins": 3.3,
+     "exp_wins_n": 13,
      "wins_with_fair": 5
     },
     "WNBA": {
@@ -7828,16 +7772,16 @@
     "yes": {
      "n": 67,
      "w": 23,
-     "l": 32,
+     "l": 35,
      "p": 0,
-     "pending": 12,
-     "win_pct": 41.8,
-     "units": 22.78,
-     "roi_pct": 44.7,
-     "roi_n": 51,
-     "exp_roi_pct": 13.8,
-     "exp_wins": 20.6,
-     "exp_wins_n": 55,
+     "pending": 9,
+     "win_pct": 39.7,
+     "units": 19.78,
+     "roi_pct": 36.6,
+     "roi_n": 54,
+     "exp_roi_pct": 13.4,
+     "exp_wins": 21.2,
+     "exp_wins_n": 58,
      "wins_with_fair": 23
     },
     "no": {
@@ -8305,11 +8249,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "AHL 3-2 FAY (FT)",
     "source": "rec.py add",
     "notes": "Pin home +616 / draw +435 / away -281; pb/sun2/out.txt",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "d6d87c56",
@@ -8328,11 +8272,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "Pin home -420 / draw +425 / away +1381; pb/sun2/out.txt",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "0a8551b8",
@@ -8673,11 +8617,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "MON 3-0 AVE (FT)",
     "source": "chat (Find pb bets) / pb/sun/out.txt",
     "notes": "",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "d97aa6df",
@@ -10133,15 +10077,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "a0031feb",
-    "book": "PointsBet",
-    "event": "Cienciano v UTC Cajamarca (Peru Liga 1)",
-    "pick": "Draw",
-    "stake": "10.00",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "b54671c7",
     "book": "PointsBet",
     "event": "Panteras de Aguascalientes v Lobos Plateados (Mexico LNBP)",
@@ -10176,27 +10111,36 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
+   }
+  ],
+  "last_settled": [
+   {
+    "bet_id": "a0031feb",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "lost",
+    "pnl": -10.0,
+    "final": "UTC 0-1 CIE",
+    "at": "2026-10-19 17:01"
    },
    {
     "bet_id": "9e07f5a1",
     "book": "PointsBet",
-    "event": "Al-Fayha FC v Al Ahli Jeddah (Saudi Pro League)",
     "pick": "Al-Fayha FC",
-    "stake": "10.00",
-    "reason": "no ESPN game matched",
-    "legs": []
+    "result": "lost",
+    "pnl": -10.0,
+    "final": "AHL 3-2 FAY",
+    "at": "2026-10-19 17:01"
    },
    {
-    "bet_id": "bd13eed8",
-    "book": "FanDuel",
-    "event": "Colorado Avalanche @ Philadelphia Flyers",
-    "pick": "SGP (legs not shown in screenshot)",
-    "stake": "0.50",
-    "reason": "parlay legs not listed in the pick text",
-    "legs": []
-   }
-  ],
-  "last_settled": [
+    "bet_id": "44d354e4",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "lost",
+    "pnl": -10.0,
+    "final": "MON 3-0 AVE",
+    "at": "2026-10-19 17:01"
+   },
    {
     "bet_id": "659ed958",
     "book": "Caesars",
@@ -10288,17 +10232,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 16:59 ET"
+  "last_change_at": "2026-10-19 17:01 ET"
  },
- "open_live_n": 27,
+ "open_live_n": 24,
  "open_stake_by_book": {
   "Caesars": 0.5,
   "DraftKings": 0.7,
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
-  "PointsBet": 243.75,
+  "PointsBet": 213.75,
   "theScore": 0.6
  },
- "hash": "4755d26e16173be6e246ebc6f535e8a9007d79eb",
- "generated_at": "2026-10-19T16:59:09-04:00"
+ "hash": "b12fbe20b288ecc7e321a683d81cd8f34691be8e",
+ "generated_at": "2026-10-19T17:01:37-04:00"
 }
