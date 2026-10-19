@@ -99,10 +99,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 4,
-     "clock": 900.0,
+     "clock": 181.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 4th",
+     "detail": "3:01 - 4th",
      "teams": [
       {
        "id": "9",
@@ -112,7 +112,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "20"
+       "score": "23"
       },
       {
        "id": "6",
@@ -1076,10 +1076,10 @@
     "snapshot": {
      "date": "2026-10-19T00:20Z",
      "period": 4,
-     "clock": 900.0,
+     "clock": 181.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 4th",
+     "detail": "3:01 - 4th",
      "teams": [
       {
        "id": "9",
@@ -1089,7 +1089,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "20"
+       "score": "23"
       },
       {
        "id": "6",
@@ -6890,7 +6890,17 @@
   ]
  },
  "auto": {
-  "needs_review": [],
+  "needs_review": [
+   {
+    "bet_id": "a0031feb",
+    "book": "PointsBet",
+    "event": "Cienciano v UTC Cajamarca (Peru Liga 1)",
+    "pick": "Draw",
+    "stake": "10.00",
+    "reason": "no ESPN game matched",
+    "legs": []
+   }
+  ],
   "last_settled": [
    {
     "bet_id": "2311eef1",
@@ -6947,7 +6957,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 21:52 ET"
+  "last_change_at": "2026-10-18 23:33 ET"
  },
  "open_live_n": 17,
  "open_stake_by_book": {
@@ -6956,6 +6966,6 @@
   "FanDuel": 0.1,
   "PointsBet": 278.75
  },
- "hash": "63a4e4597f4ca249f7e360dccdd6813e955ad253",
- "generated_at": "2026-10-18T22:49:37-04:00"
+ "hash": "c1132131f13a07c21192b15877fbb2e36449b426",
+ "generated_at": "2026-10-18T23:33:42-04:00"
 }
