@@ -22,8 +22,8 @@
   },
   {
    "book": "bet365",
-   "balance": 57.02,
-   "updated": "2026-10-18 19:44"
+   "balance": 57.49,
+   "updated": "2026-10-18 21:52"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 592.94,
+ "total": 593.41,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -98,11 +98,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 1,
-     "clock": 542.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "9:02 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "9",
@@ -112,7 +112,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "0"
+       "score": "17"
       },
       {
        "id": "6",
@@ -1034,100 +1034,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "10edceb9",
-   "date": "2026-10-17",
-   "book": "bet365",
-   "event": "Osasuna vs Racing Santander",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
-   "start": "Sun Oct 18 08:00 AM ET",
-   "price": "+105",
-   "boosted_price": "+137",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.27,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Ante Budimir",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Ante Budimir score or assist",
-     "pteam": "OSA",
-     "pname": "Ante Budimir",
-     "pid": "207288"
-    },
-    {
-     "type": "prop",
-     "player": "Raul Garcia",
-     "stat": "shots",
-     "op": "min",
-     "min": 2,
-     "text": "Raul Garcia 2+ shots",
-     "pteam": "OSA",
-     "pcands": [
-      "Rub\u00e9n Garc\u00eda",
-      "Ra\u00fal Garc\u00eda"
-     ]
-    },
-    {
-     "type": "prop",
-     "player": "Jonathan Dubasin",
-     "stat": "shots",
-     "op": "min",
-     "min": 1,
-     "text": "Jonathan Dubasin 1+ shots",
-     "pteam": "OSA",
-     "pname": "Jonathan Dubasin",
-     "pid": "311969"
-    }
-   ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261018",
-    "groups": null,
-    "id": "401882840",
-    "snapshot": {
-     "date": "2026-10-18T12:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "97",
-       "name": "Osasuna",
-       "abbr": "OSA",
-       "short": "Osasuna",
-       "nick": "Osasuna",
-       "location": "Osasuna",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "87",
-       "name": "Racing Santander",
-       "abbr": "RAC",
-       "short": "Racing",
-       "nick": "Racing Santander",
-       "location": "Racing Santander",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.2,
-   "payout": 0.47,
-   "payout_est": false,
-   "start_ts": "2026-10-18T12:00Z"
-  },
-  {
    "bet_id": "f6d731b5",
    "date": "2026-10-17",
    "book": "Caesars",
@@ -1162,11 +1068,11 @@
     "id": "401873007",
     "snapshot": {
      "date": "2026-10-19T00:20Z",
-     "period": 1,
-     "clock": 542.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "9:02 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "9",
@@ -1176,7 +1082,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "0"
+       "score": "17"
       },
       {
        "id": "6",
@@ -2068,72 +1974,6 @@
    "payout": 2.49,
    "payout_est": false,
    "start_ts": "2026-10-19T00:20Z"
-  },
-  {
-   "bet_id": "2311eef1",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Chicago Red Stars Women v Seattle Reign Women",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Chicago Red Stars Women",
-   "start": "Sun Oct 18 07:00 PM ET",
-   "price": "+750",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 75.0,
-   "ev_pct": "2.5",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Chicago Stars",
-     "women": true,
-     "text": "Chicago Red Stars Women",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/usa.nwsl",
-    "date": "20261018",
-    "groups": null,
-    "id": "401854026",
-    "snapshot": {
-     "date": "2026-10-18T23:00Z",
-     "period": 2,
-     "clock": 3960.0,
-     "state": "in",
-     "completed": false,
-     "detail": "66'",
-     "teams": [
-      {
-       "id": "15360",
-       "name": "Chicago Stars FC",
-       "abbr": "CHI",
-       "short": "Chicago",
-       "nick": "Chicago Stars FC",
-       "location": "Chicago Stars FC",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "15363",
-       "name": "Seattle Reign FC",
-       "abbr": "SEA",
-       "short": "Seattle",
-       "nick": "Seattle Reign FC",
-       "location": "Seattle Reign FC",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 85.0,
-   "payout_est": false,
-   "start_ts": "2026-10-18T23:00Z"
   },
   {
    "bet_id": "a0031feb",
@@ -3581,6 +3421,16 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Chicago Red Stars Women v Seattle Reign Women",
+   "pick": "Chicago Red Stars Women",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Tennessee Titans @ Indianapolis Colts",
    "pick": "Tennessee Titans +14.5",
    "result": "won",
@@ -3765,6 +3615,16 @@
    "pick": "Over 4.5 runs + Yandy Diaz 1+ hits + Guardians U5.5 team runs",
    "result": "won",
    "pnl": 0.26,
+   "stake": 0.2,
+   "auto": false
+  },
+  {
+   "date": "2026-10-17",
+   "book": "bet365",
+   "event": "Osasuna vs Racing Santander",
+   "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
+   "result": "won",
+   "pnl": 0.27,
    "stake": 0.2,
    "auto": false
   },
@@ -4499,30 +4359,30 @@
    "auto": false
   }
  ],
- "pnl_total": 175.99,
+ "pnl_total": 166.26,
  "unsettled": {
-  "n": 19,
-  "cash_stake": 155.9,
-  "max_payout": 1256.03,
+  "n": 17,
+  "cash_stake": 145.7,
+  "max_payout": 1170.56,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 155.9,
+ "open_stake": 145.7,
  "recs": {
   "stats": {
    "overall": {
     "n": 84,
     "w": 27,
-    "l": 39,
+    "l": 40,
     "p": 0,
-    "pending": 18,
-    "win_pct": 40.9,
-    "units": 18.47,
-    "roi_pct": 31.8,
-    "roi_n": 58,
-    "exp_roi_pct": 12.9,
-    "exp_wins": 23.8,
-    "exp_wins_n": 66,
+    "pending": 17,
+    "win_pct": 40.3,
+    "units": 17.47,
+    "roi_pct": 29.6,
+    "roi_n": 59,
+    "exp_roi_pct": 12.7,
+    "exp_wins": 23.9,
+    "exp_wins_n": 67,
     "wins_with_fair": 27
    },
    "by_promo": {
@@ -4604,16 +4464,16 @@
     "rollover": {
      "n": 32,
      "w": 8,
-     "l": 11,
+     "l": 12,
      "p": 0,
-     "pending": 13,
-     "win_pct": 42.1,
-     "units": -1.71,
-     "roi_pct": -10.0,
-     "roi_n": 17,
-     "exp_roi_pct": -0.9,
-     "exp_wins": 9.2,
-     "exp_wins_n": 19,
+     "pending": 12,
+     "win_pct": 40.0,
+     "units": -2.71,
+     "roi_pct": -15.0,
+     "roi_n": 18,
+     "exp_roi_pct": -0.7,
+     "exp_wins": 9.4,
+     "exp_wins_n": 20,
      "wins_with_fair": 8
     }
    },
@@ -4711,16 +4571,16 @@
     "Soccer": {
      "n": 23,
      "w": 4,
-     "l": 4,
+     "l": 5,
      "p": 0,
-     "pending": 15,
-     "win_pct": 50.0,
-     "units": 0.62,
-     "roi_pct": 12.4,
-     "roi_n": 5,
-     "exp_roi_pct": -1.8,
-     "exp_wins": 2.1,
-     "exp_wins_n": 8,
+     "pending": 14,
+     "win_pct": 44.4,
+     "units": -0.38,
+     "roi_pct": -6.3,
+     "roi_n": 6,
+     "exp_roi_pct": -1.1,
+     "exp_wins": 2.2,
+     "exp_wins_n": 9,
      "wins_with_fair": 4
     },
     "WNBA": {
@@ -4743,16 +4603,16 @@
     "yes": {
      "n": 66,
      "w": 22,
-     "l": 30,
+     "l": 31,
      "p": 0,
-     "pending": 14,
-     "win_pct": 42.3,
-     "units": 23.23,
-     "roi_pct": 48.4,
-     "roi_n": 48,
-     "exp_roi_pct": 14.5,
-     "exp_wins": 19.4,
-     "exp_wins_n": 52,
+     "pending": 13,
+     "win_pct": 41.5,
+     "units": 22.23,
+     "roi_pct": 45.4,
+     "roi_n": 49,
+     "exp_roi_pct": 14.3,
+     "exp_wins": 19.5,
+     "exp_wins_n": 53,
      "wins_with_fair": 22
     },
     "no": {
@@ -5588,11 +5448,11 @@
     "promo": "rollover",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "bets.csv (priced pick he placed)",
     "notes": "",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "4997f338",
@@ -7000,31 +6860,17 @@
   ]
  },
  "auto": {
-  "needs_review": [
-   {
-    "bet_id": "10edceb9",
-    "book": "bet365",
-    "event": "Osasuna vs Racing Santander",
-    "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
-    "stake": "0.20",
-    "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
-    "legs": [
-     {
-      "leg": "Ante Budimir score or assist",
-      "result": "won"
-     },
-     {
-      "leg": "Raul Garcia 2+ shots",
-      "result": "void"
-     },
-     {
-      "leg": "Jonathan Dubasin 1+ shots",
-      "result": "won"
-     }
-    ]
-   }
-  ],
+  "needs_review": [],
   "last_settled": [
+   {
+    "bet_id": "2311eef1",
+    "book": "PointsBet",
+    "pick": "Chicago Red Stars Women",
+    "result": "lost",
+    "pnl": -10.0,
+    "final": "SEA 3-1 CHI",
+    "at": "2026-10-18 21:52"
+   },
    {
     "bet_id": "2146f957",
     "book": "Caesars",
@@ -7071,16 +6917,15 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-18 20:32 ET"
+  "last_change_at": "2026-10-18 21:52 ET"
  },
- "open_live_n": 18,
+ "open_live_n": 17,
  "open_stake_by_book": {
-  "bet365": 0,
   "Caesars": 0.5,
   "DraftKings": 0.1,
   "FanDuel": 0.1,
-  "PointsBet": 288.75
+  "PointsBet": 278.75
  },
- "hash": "a875a0a4bec717c3da3f7d4cce7205d7ebd0ae92",
- "generated_at": "2026-10-18T20:32:58-04:00"
+ "hash": "86c0604778ecae3a4436e313d3ff1aec5d2f1165",
+ "generated_at": "2026-10-18T21:52:41-04:00"
 }

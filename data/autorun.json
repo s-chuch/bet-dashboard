@@ -1,29 +1,15 @@
 {
- "needs_review": [
-  {
-   "bet_id": "10edceb9",
-   "book": "bet365",
-   "event": "Osasuna vs Racing Santander",
-   "pick": "Ante Budimir score or assist + Raul Garcia 2+ shots + Jonathan Dubasin 1+ shots",
-   "stake": "0.20",
-   "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
-   "legs": [
-    {
-     "leg": "Ante Budimir score or assist",
-     "result": "won"
-    },
-    {
-     "leg": "Raul Garcia 2+ shots",
-     "result": "void"
-    },
-    {
-     "leg": "Jonathan Dubasin 1+ shots",
-     "result": "won"
-    }
-   ]
-  }
- ],
+ "needs_review": [],
  "last_settled": [
+  {
+   "bet_id": "2311eef1",
+   "book": "PointsBet",
+   "pick": "Chicago Red Stars Women",
+   "result": "lost",
+   "pnl": -10.0,
+   "final": "SEA 3-1 CHI",
+   "at": "2026-10-18 21:52"
+  },
   {
    "bet_id": "2146f957",
    "book": "Caesars",
@@ -71,5 +57,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-18 20:32 ET"
+ "last_change_at": "2026-10-18 21:52 ET"
 }
