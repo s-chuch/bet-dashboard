@@ -35,6 +35,15 @@
    "stake": "10.00",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "79710608",
+   "book": "PointsBet",
+   "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
+   "pick": "Draw",
+   "stake": "10.00",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -112,5 +121,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 11:14 ET"
+ "last_change_at": "2026-10-19 14:57 ET"
 }

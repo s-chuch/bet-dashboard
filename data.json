@@ -296,11 +296,11 @@
     "id": "401844212",
     "snapshot": {
      "date": "2026-10-19T18:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1560.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "26'",
      "teams": [
       {
        "id": "10157",
@@ -5014,6 +5014,15 @@
     "stake": "10.00",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "79710608",
+    "book": "PointsBet",
+    "event": "Al-Kuwait v Al Sulaibikhat (Kuwait PL)",
+    "pick": "Draw",
+    "stake": "10.00",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -5090,7 +5099,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 11:14 ET"
+  "last_change_at": "2026-10-19 14:57 ET"
  },
  "open_live_n": 16,
  "open_stake_by_book": {
@@ -5099,6 +5108,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 253.75
  },
- "hash": "515aa473d8c4d103202ac98cf9cb1fae9b6404b4",
- "generated_at": "2026-10-19T11:14:48-04:00"
+ "hash": "29f261b73a0feb9bf268b572ff650311c4c9e9d9",
+ "generated_at": "2026-10-19T14:57:23-04:00"
 }
