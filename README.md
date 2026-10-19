@@ -124,7 +124,7 @@ GitHub Actions still settles, archives and rebuilds, and Cloudflare redeploys on
 **Honest limits:** anything that was public before stays in whatever copies, forks or caches already exist, so treat past data as seen. Cloudflare can serve a single page but the repo/Actions logs are private to you. Never print bet data in workflow logs on a public repo.
 
 ## If GitHub's cron stalls (it is best-effort and may not fire for hours)
-Updates are triggered three ways: the 5-minute `schedule`, any push to `data/` or `scripts/` (so every box commit rebuilds
+GitHub's cron has been observed firing about once in 8 hours instead of every 5 minutes, so **finished bets are settled when something starts a run**. Starters: the schedule, any push to `data/` or `scripts/` (every box commit), the Refresh button, and the Live page itself: with a token connected, an open Live page asks for a run (at most one per 5 min, once per finished bet) as soon as it sees a game finish. Updates are triggered these ways: the 5-minute `schedule`, any push to `data/` or `scripts/` (so every box commit rebuilds
 immediately), and the **Refresh** button on the Live page, which with a connected token (Logs -> Activity -> Connect GitHub)
 starts an `autorun` run and reloads the data about 45 and 90 seconds later. For a dependable timer without a server, use a
 free external scheduler such as [cron-job.org](https://cron-job.org):
