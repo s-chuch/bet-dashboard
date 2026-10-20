@@ -486,8 +486,8 @@
      ]
     },
     "pregame": {
-     "home": 58.9,
-     "away": 40.7
+     "home": 59.4,
+     "away": 40.3
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -1118,7 +1118,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T05:56Z"
+     "t": "2026-10-20T06:56Z"
     }
    },
    "sport": "NFL",
@@ -5601,6 +5601,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "1ceb7d270f3df2523bf2e7105a32af70562bf1d0",
- "generated_at": "2026-10-20T01:56:40-04:00"
+ "hash": "d06fe983b8f62e499f738d5cdf5b1aabdfe2c305",
+ "generated_at": "2026-10-20T02:56:55-04:00"
 }
