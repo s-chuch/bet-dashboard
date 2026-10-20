@@ -171,3 +171,16 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-20 00:01,DraftKings,8d2a2595,settled,0.00,"lost, no return"
 2026-10-20 06:04,bet365,,anchor,63.14,app My Bets 5:59 PM Mon Oct 19 (screenshots; 4 parlays relabeled to bet365)
 2026-10-20 14:19,FanDuel,cfd5b49a,stake,0.00,"bonus bet token, no cash deducted"
+2026-10-20 15:28,Caesars,48cfe23a,stake,-0.50,stake
+2026-10-20 15:28,Caesars,0e0f4610,stake,-0.50,stake
+2026-10-20 15:28,Caesars,4ca058ce,stake,-0.50,stake
+2026-10-20 15:28,Caesars,c4cc09ea,stake,-0.50,stake
+2026-10-20 15:28,Caesars,9d91f35f,stake,-0.50,stake
+2026-10-20 15:28,Caesars,5df01cb0,stake,-0.50,stake
+2026-10-20 15:28,DraftKings,0b6fbbde,stake,-0.20,stake
+2026-10-20 15:28,DraftKings,d1b6d899,stake,-0.20,stake
+2026-10-20 15:28,FanDuel,3f1b4171,stake,-0.50,stake
+2026-10-20 15:28,FanDuel,52414b40,stake,-0.50,stake
+2026-10-20 15:28,PointsBet,b1069fc2,stake,-0.50,stake
+2026-10-20 15:28,PointsBet,f5365e03,stake,-0.50,stake
+2026-10-20 15:28,bet365,11be1d03,stake,-0.20,stake
