@@ -107,3 +107,16 @@ h2 span{text-transform:none;letter-spacing:0;color:var(--txt);float:right;font-w
 .review .rvlink{display:block;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.45);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--push);text-decoration:none}
 .feeds{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11.5px;margin:-4px 2px 8px;color:var(--mut)}.feeds .fok{color:var(--win)}.feeds .fbad{color:var(--lose)}.feeds small{color:inherit;font-size:inherit;opacity:.85}.feeds:empty{display:none}
 .bkh.sub{margin-top:6px;padding-left:10px;border-left:2px solid var(--line2);font-weight:500;opacity:.9}
+
+/* live fun: players, play-by-play, swing, live P&L */
+.plr,.tick{margin:8px 0 4px}.pt{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.pl{padding:5px 0;border-top:1px solid var(--line,rgba(255,255,255,.08))}.pn{font-weight:600;font-size:13px;display:flex;gap:6px;align-items:baseline}.pn small{color:var(--mut);font-weight:400}.pn i{margin-left:auto;font-style:normal;font-size:12px;color:var(--mut)}
+.pc{display:flex;flex-wrap:wrap;gap:3px 12px;font-size:12px;color:var(--mut);margin-top:2px}.pc b{color:var(--fg)}.pc .hl b{color:var(--win)}
+.pk{font-size:12px;color:var(--mut);margin-top:4px}.pk b{color:var(--fg)}
+.tick ul{list-style:none;margin:0;padding:0}.tick li{font-size:12px;padding:3px 0 3px 8px;border-left:2px solid transparent;color:var(--mut);line-height:1.3}
+.tick li time{display:inline-block;min-width:64px;color:var(--mut);opacity:.8;font-variant-numeric:tabular-nums;margin-right:4px}
+.tick li.sc{color:var(--fg);font-weight:600}.tick li.mine{border-left-color:var(--win);color:var(--fg)}.tick .tg{font-size:11px;color:var(--mut);margin:4px 0 2px}
+.swing{margin-left:6px;font-weight:600}.swing.pos{color:var(--win)}.swing.neg{color:var(--lose)}
+.lpl{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 8px;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.04);font-size:11px;color:var(--mut)}
+.lpl b{display:block;font-size:14px;margin-top:2px}.lpl b.pos{color:var(--win)}.lpl b.neg{color:var(--lose)}
+@media(max-width:380px){.lpl{grid-template-columns:repeat(2,1fr)}}

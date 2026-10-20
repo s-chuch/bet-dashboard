@@ -97,11 +97,11 @@ async function refreshScores(full){
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
   await mlbBackup(Object.values(need));
   // player props need the box score (only in-progress SGPs with a prop leg)
-  const sm={};for(const b of DATA.open)for(const L of b.legs){const m=b.match||L.match;if(m&&L.type==="prop")sm[m.id]=m}
+  const sm={};for(const b of DATA.open)for(const L of b.legs){const m=b.match||L.match;if(m)sm[m.id]=m}   // box score + plays for every game on an open bet
   await Promise.all(Object.values(sm).map(async m=>{
     const g=gameFor(m);if(!g||g.state==="pre")return;const S=summaries[m.id];
     if(S&&S.done)return;if(S&&Date.now()-S.t<20000)return;   // live: box score at most every 20s
-    const d=await espn(`${ESPN}${m.path}/summary?event=${m.id}`);if(!d||!d.boxscore)return;
+    const d=await espn(`${ESPN}${m.path}/summary?event=${m.id}`);if(!d||(!d.boxscore&&!d.plays&&!d.drives))return;
     const fin=(S&&S.fin||0)+(g.completed?1:0);summaries[m.id]={d,t:Date.now(),path:m.path,fin,done:fin>=3}}));
 }
 // Free backup score source: MLB's own StatsAPI. ESPN sometimes lists an MLB game as "Scheduled" for many minutes after the first pitch
@@ -520,11 +520,59 @@ function sportChips(m,g){const si=g.sit||{},T=g.teams,ab=id=>{const t=T.find(t=>
     if(si.homeTimeouts!=null)out.push(`TOs ${esc(A.abbr)} ${esc(si.awayTimeouts)} · ${esc(H.abbr)} ${esc(si.homeTimeouts)}`);
     for(const[k,v]of Object.entries(si))if(/fouls|bonus/i.test(k))out.push(esc(`${k.replace(/([A-Z])/g," $1").toLowerCase()}: ${typeof v==="object"?(v.bonusState||v.teamFouls||JSON.stringify(v)):v}`))}
   return out.length?`<div class="chips">${out.map(x=>`<span>${x}</span>`).join("")}</div>`:""}
+// ---------- more live fun: your players' stat lines, a play-by-play ticker, win-chance swing, live P&L ----------
+const STATLINE={"hockey/nhl":[["goals","G"],["assists","A"],["shotsTotal","SOG"],["hits","HIT"],["plusMinus","+/-"]],
+  "basketball/nba":[["points","PTS"],["rebounds","REB"],["assists","AST"],["threePointFieldGoalsMade","3PM"],["steals","STL"],["blocks","BLK"]],
+  "basketball/wnba":[["points","PTS"],["rebounds","REB"],["assists","AST"],["threePointFieldGoalsMade","3PM"]],
+  "football/nfl":[["passingYards","PASS"],["passingTouchdowns","PTD"],["rushingYards","RUSH"],["rushingTouchdowns","RTD"],["receptions","REC"],["receivingYards","RECYD"],["receivingTouchdowns","RTD"]],
+  "football/college-football":[["passingYards","PASS"],["rushingYards","RUSH"],["receptions","REC"],["receivingYards","RECYD"]],
+  "baseball/mlb":[["hits","H"],["runs","R"],["RBIs","RBI"],["homeRuns","HR"],["strikeouts","K"],["p_strikeouts","K"]]};
+function athOf(L,S){const ath=athletesOf(S);let c=L.pid?ath.filter(a=>String(a.id)===String(L.pid)):[];
+  if(!c.length)c=ath.filter(a=>playerMatch(L.pname||L.player,a.name)&&(!L.pteam||!a.team||a.team===L.pteam));
+  if(c.length>1){const ib=c.filter(a=>a.inBox);if(ib.length)c=ib}return c[0]||null}
+const surname=n=>(String(n||"").trim().split(/\s+/).pop()||"").toLowerCase();
+// each prop leg's player with the full live stat line, plus "closest to hitting" for parlays
+function playersHTML(b,legStats){const rows=[],need=[];
+  legStats.forEach(x=>{const L=x.L;if(L.type!=="prop"||!x.g||x.g.state==="pre")return;const m=matchOfLeg(b,L),S=m&&summaries[m.id];if(!S)return;
+    const A=athOf(L,S);if(!A)return;const cfg=STATLINE[S.path]||[],seen=new Set(),chips=[];
+    for(const[k,lab]of cfg){const v=A.s[k];if(v==null||seen.has(lab))continue;seen.add(lab);chips.push(`<span${(x.pt!=null&&PROP[L.stat]&&PROP[L.stat][1]===lab)?' class="hl"':""}>${esc(lab)} <b>${esc(v)}</b></span>`)}
+    const st=x.s==="WON"?"✓":x.s==="LOST"?"✗":x.pt!=null&&x.pv!=null?`${Math.max(0,x.pt-x.pv)} to go`:"";
+    rows.push(`<div class="pl"><div class="pn">${esc(A.name)}<small> ${esc(A.team||"")}</small><i class="${x.s==="WON"?"pos":x.s==="LOST"?"neg":""}">${esc(st)}</i></div><div class="pc">${chips.join("")||'<span class="pm">no stats yet</span>'}</div></div>`);
+    if(x.s!=="WON"&&x.s!=="LOST"&&x.pt!=null&&x.pv!=null)need.push({n:A.name.split(" ").pop(),r:Math.max(0,x.pt-x.pv),f:(x.pv/Math.max(1e-9,x.pt))})});
+  if(!rows.length)return"";
+  let sum="";if(need.length>1){need.sort((a,c)=>c.f-a.f);const a=need[0],z=need[need.length-1];sum=`<div class="pk">Closest: <b>${esc(a.n)}</b> (${a.r} to go) · Furthest: <b>${esc(z.n)}</b> (${z.r} to go)</div>`}
+  return`<div class="plr"><div class="pt">Your players</div>${rows.join("")}${sum}</div>`}
+// last plays of every live game on the bet, newest first; plays by your own players are highlighted
+function playsOf(d){if(!d)return[];if(Array.isArray(d.plays)&&d.plays.length)return d.plays;
+  const dr=d.drives||{},all=[].concat(dr.previous||[],dr.current?[dr.current]:[]);return[].concat(...all.map(x=>x.plays||[]))}
+function tickerHTML(b,legStats){const mine=new Set(b.legs.filter(L=>L.type==="prop").map(L=>surname(L.pname||L.player)).filter(Boolean)),seen=new Set(),out=[];
+  for(const x of legStats){const m=matchOfLeg(b,x.L),g=x.g;if(!m||!g||g.state!=="in"||seen.has(m.id))continue;seen.add(m.id);const S=summaries[m.id];if(!S)continue;
+    const pl=playsOf(S.d).filter(p=>p&&p.text&&!/^(goalie stopped|stoppage|period start|game start)$/i.test(p.text)&&!(p.type&&/^face[ -]?off$/i.test(p.type.text||"")));
+    const multi=legStats.some(y=>matchOfLeg(b,y.L)&&matchOfLeg(b,y.L).id!==m.id);
+    if(multi)out.push(`<div class="tg">${esc(g.teams.map(t=>t.abbr).join(" @ "))}</div>`);
+    for(const p of pl.slice(-6).reverse()){const per=p.period&&(p.period.displayValue||p.period.number)||"",clk=p.clock&&p.clock.displayValue||"";
+      const hit=[...mine].some(n=>n&&String(p.text).toLowerCase().includes(n)),sc=p.scoringPlay;
+      out.push(`<li class="${hit?"mine":""}${sc?" sc":""}"><time>${esc(per)}${clk?" "+esc(clk):""}</time>${sc?"★ ":""}${esc(p.text)}</li>`)}}
+  const li=out.join("");return li?`<div class="tick"><div class="pt">Play by play</div><ul>${li}</ul></div>`:""}
+// win-chance swing vs ~5 minutes ago (history only builds while this page is open)
+function swingText(k){const h=PHIST[k]||[];if(h.length<2)return"";const now=h[h.length-1];let ref=h[0];for(const x of h)if(x.t<=now.t-300000)ref=x;
+  const mins=(now.t-ref.t)/60000;if(mins<0.5)return"";const d=(now.p-ref.p)*100;
+  return Math.abs(d)<1?`flat over ${mins<1?"<1":Math.round(mins)} min`:`${d>0?"▲ +":"▼ −"}${Math.abs(d).toFixed(0)} pts in ${mins<1?"<1":Math.round(mins)} min`}
+const swingCls=t=>/^▲/.test(t)?"pos":/^▼/.test(t)?"neg":"";
+// live P&L over bets that are in progress right now
+function livePL(){const el=$("livepl");if(!el||!DATA)return;let n=0,win=0,lose=0,exp=0,tbc=0;
+  DATA.open.forEach((b,i)=>{const lv=betLive(b,LAST_STATUS[i]||"?",legStatsFor(b));if(lv.final||lv.upcoming)return;n++;
+    const S=b.cash_stake||0,W=b.payout!=null?b.payout-S:null;if(W==null){tbc++;return}
+    win+=W;lose+=S;const p=lv.p;if(p==null){tbc++;exp+=0;return}exp+=p*W-(1-p)*S});
+  if(!n){el.innerHTML="";return}
+  const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
+  el.innerHTML=`<div class="lpl"><div>${n} live bet${n===1?"":"s"}</div><div>If all hit<b class="pos">${sg(win)}</b></div><div>If all bust<b class="neg">${sg(-lose)}</b></div><div>Expected ≈<b class="${exp>=0?"pos":"neg"}">${sg(exp)}</b></div></div>${tbc?`<div class="meta" style="margin:-2px 2px 6px">${tbc} bet${tbc===1?"":"s"} not counted (no payout or win chance yet)</div>`:""}`}
 function liveDetail(b,legStats){const seen=new Set(),parts=[];
   const legs=b.legs.map(L=>({L,m:matchOfLeg(b,L)})).filter(x=>x.m);
   const nh=needsHTML(b);if(nh)parts.push(`<div class="need" data-need>${nh}</div>`);
   for(const{m}of legs){const g=gameFor(m);if(!g||g.state!=="in"||seen.has(g.id))continue;seen.add(g.id);
     parts.push(sportChips(m,g)+lineScore(g)+(g.lastPlay?`<div class="lastp">Last: ${esc(g.lastPlay)}</div>`:""))}
+  if(parts.length){parts.push(playersHTML(b,legStats));parts.push(tickerHTML(b,legStats))}
   return parts.length?`<div class="ldet">${parts.join("")}</div>`:""}
 // p history for the sparkline (client-side, since this page opened)
 const PHIST={};
@@ -578,7 +626,7 @@ function tick1s(){if(!DATA||document.hidden)return;refreshLegs();
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;const ls=legStatsFor(b);
     const st=LAST_STATUS[+c.dataset.bi]||"?",q=pillState(b,st,ls),pe=c.querySelector("[data-pill]");if(!pe)return;
     pe.textContent=q.txt;pe.className="pill "+cls(q.cls);c.querySelector("[data-psub]").textContent=q.sub;
-    const lv=betLive(b,st,ls);if(!lv.final&&!lv.upcoming&&lv.p!=null){recordP(c.dataset.k,lv.p);const sp=c.querySelector("[data-spk]");if(sp&&c.classList.contains("open"))sp.innerHTML=sparkSVG(c.dataset.k)}
+    const lv=betLive(b,st,ls);if(!lv.final&&!lv.upcoming&&lv.p!=null){recordP(c.dataset.k,lv.p);const sp=c.querySelector("[data-spk]");if(sp&&c.classList.contains("open"))sp.innerHTML=sparkSVG(c.dataset.k);const sw=c.querySelector("[data-swing]");if(sw){const t=swingText(c.dataset.k);sw.textContent=t;sw.className="swing "+swingCls(t)}}
     c.classList.remove("WINNING","LOSING","NEUTRAL","LIVE","TIED","PUSH","WON","LOST","NOT_STARTED");c.classList.add(cls(q.cls))});
   document.querySelectorAll("[data-clk]").forEach(el=>{const g=games[el.dataset.clk];if(g)el.textContent=clockText(g,el.dataset.sep||" ")});
   document.querySelectorAll(".card[data-bi]").forEach(c=>{const b=DATA.open[+c.dataset.bi];if(!b)return;let first=null;
@@ -596,6 +644,7 @@ function tick1s(){if(!DATA||document.hidden)return;refreshLegs();
   DATA.open.forEach((b,i)=>{const pay=b.payout;if(pay==null){tbc++;return}
     const cs=b.cash_stake||0;let p=payoutP(b,LAST_STATUS[i]);if(p==null)p=impliedP(b);if(p==null){tbc++;return}
     exp+=p==="push"?cs:pay*p});
+  try{livePL()}catch(e){}
   const ep=$("expPay"),el=$("expPL");if(ep){ep.textContent=moneyC(U.max_payout);$("expSub").textContent=`${U.n!=null?U.n:DATA.open.length} bet${(U.n!=null?U.n:DATA.open.length)===1?"":"s"} · expected ≈ ${moneyC(exp)} (est.)${tbc?` · ${tbc} TBC`:""}`}
   if(el){const v=exp-(U.cash_stake||0);el.textContent=(v>=0?"+":"−")+money(Math.abs(v));el.className=v>=0?"pos":"neg"}}
 setInterval(tick1s,1000);
@@ -721,7 +770,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
       if(g)html+=scoreBox(g)}
     else{const x=legStats[0];html+=scoreBox(x&&x.g);if(x)html+=`<div class="meta" style="margin-top:4px" data-n1>${x.n?esc(x.n):""}${legBar(b,x,x.g&&x.g.state==="in"?legP(b,x.L,x.s,x):null)}</div>`}
     const anyLive=legStats.some(x=>x.g&&x.g.state==="in");
-    if(anyLive)html+=liveDetail(b,legStats)+`<div class="spkw"><span class="spk-t">Win chance since page opened</span><div data-spk>${sparkSVG(k)}</div></div>`;
+    if(anyLive)html+=liveDetail(b,legStats)+`<div class="spkw"><span class="spk-t">Win chance since page opened <b class="swing" data-swing></b></span><div data-spk>${sparkSVG(k)}</div></div>`;
     html+=BR.html+`</div></div>`;
     const gs=(b.match?[gameFor(b.match)]:b.legs.map(L=>gameFor(L.match))).filter(Boolean);
     const t=Math.min(...gs.map(g=>g.date?new Date(g.date).getTime():Infinity),Infinity);
