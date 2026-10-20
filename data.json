@@ -375,11 +375,47 @@
      "type": "ml",
      "team": "PSV Eindhoven",
      "women": false,
-     "text": "PSV Eindhoven"
+     "text": "PSV Eindhoven",
+     "team_ok": true
     }
    ],
-   "match": null,
-   "sport": null,
+   "match": {
+    "path": "soccer/uefa.champions",
+    "date": "20261020",
+    "groups": null,
+    "id": "401915398",
+    "snapshot": {
+     "date": "2026-10-20T19:00Z",
+     "period": 2,
+     "clock": 4560.0,
+     "state": "in",
+     "completed": false,
+     "detail": "76'",
+     "teams": [
+      {
+       "id": "437",
+       "name": "FC Porto",
+       "abbr": "FCP",
+       "short": "FC Porto",
+       "nick": "FC Porto",
+       "location": "FC Porto",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "148",
+       "name": "PSV Eindhoven",
+       "abbr": "PSV",
+       "short": "PSV",
+       "nick": "PSV Eindhoven",
+       "location": "PSV Eindhoven",
+       "home": false,
+       "score": "1"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
    "cash_stake": 0.0,
    "payout": 19.0,
    "payout_est": false,
@@ -1395,43 +1431,8 @@
      "text": "Draw"
     }
    ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261031",
-    "groups": null,
-    "id": "401882822",
-    "snapshot": {
-     "date": "2026-10-31T20:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "83",
-       "name": "Barcelona",
-       "abbr": "BAR",
-       "short": "Barcelona",
-       "nick": "Barcelona",
-       "location": "Barcelona",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "96",
-       "name": "Alav\u00e9s",
-       "abbr": "ALA",
-       "short": "Alav\u00e9s",
-       "nick": "Alav\u00e9s",
-       "location": "Alav\u00e9s",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
+   "match": null,
+   "sport": null,
    "cash_stake": 10.0,
    "payout": 90.0,
    "payout_est": false,
@@ -3251,7 +3252,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "MLB",
@@ -3406,7 +3407,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "MLB",
@@ -3437,10 +3438,7 @@
      "stat": "sog",
      "op": "min",
      "min": 2,
-     "text": "Jakob Chychrun 2+ SOG",
-     "pteam": "WSH",
-     "pname": "Jakob Chychrun",
-     "pid": "4024950"
+     "text": "Jakob Chychrun 2+ SOG"
     },
     {
      "type": "prop",
@@ -3448,10 +3446,7 @@
      "stat": "sog",
      "op": "min",
      "min": 3,
-     "text": "Adrian Kempe 3+ SOG",
-     "pteam": "LA",
-     "pname": "Adrian Kempe",
-     "pid": "3114802"
+     "text": "Adrian Kempe 3+ SOG"
     },
     {
      "type": "prop",
@@ -3459,10 +3454,7 @@
      "stat": "sog",
      "op": "min",
      "min": 3,
-     "text": "Alex Ovechkin 3+ SOG",
-     "pteam": "WSH",
-     "pname": "Alex Ovechkin",
-     "pid": "3101"
+     "text": "Alex Ovechkin 3+ SOG"
     },
     {
      "type": "prop",
@@ -3470,134 +3462,11 @@
      "stat": "saves",
      "op": "min",
      "min": 24,
-     "text": "Darcy Kuemper 24+ saves",
-     "pteam": "LA",
-     "pname": "Darcy Kuemper",
-     "pid": "2610321"
+     "text": "Darcy Kuemper 24+ saves"
     }
    ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261020",
-    "groups": null,
-    "id": "401892542",
-    "snapshot": {
-     "date": "2026-10-20T23:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "10/20 - 7:00 PM EDT",
-     "teams": [
-      {
-       "id": "23",
-       "name": "Washington Capitals",
-       "abbr": "WSH",
-       "short": "Capitals",
-       "nick": "Capitals",
-       "location": "Washington",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "8",
-       "name": "Los Angeles Kings",
-       "abbr": "LA",
-       "short": "Kings",
-       "nick": "Kings",
-       "location": "Los Angeles",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-lak-wsh-2026-10-20",
-     "title": "Kings vs. Capitals",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Capitals",
-        "Kings"
-       ],
-       "tokens": [
-        "67534849156865846480597098748988694340893929760090580680715847061334204988596",
-        "28317720256909435584691832380764529253448726737990564483339007157762576331410"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "66346747385600019417583838929650432199060505724028777137574761821584310591161",
-        "17714494519727285575286059241961766407081543255713383368064552982742287368619"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "49461032484069626145064154158329644695290247581123365435672784486140362695457",
-        "8463378326367465089819609894345190960349666227302394583497723450974414969559"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "25920792981044025431572625006527146737577358673563991651004837452238612490938",
-        "112580412880644929577259265316972126698669218514129578974424867940910703735712"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "89724699728397721017342364612285945847443266350661030002373466989875970746769",
-        "53739073155417851488373216303247091015246491447791320322930195194191465714206"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Kings",
-       "Capitals"
-      ],
-      "tokens": [
-       "40269947215745651963455295220527473268707373964950973430064632882612325499471",
-       "18649853143465572006291333455660198460031096854130098977855424406841583253675"
-      ]
-     }
-    },
-    "an": {
-     "id": 293442,
-     "home_team_id": 242,
-     "away_team_id": 217
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.595,
-     "away": 0.405,
-     "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
-    }
-   },
-   "sport": "NHL",
+   "match": null,
+   "sport": null,
    "cash_stake": 0.5,
    "payout": 3.1,
    "payout_est": false,
@@ -3650,10 +3519,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 4440.0,
+     "clock": 4560.0,
      "state": "in",
      "completed": false,
-     "detail": "74'",
+     "detail": "76'",
      "teams": [
       {
        "id": "382",
@@ -3898,7 +3767,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NBA",
@@ -3961,10 +3830,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 479.0,
+     "clock": 478.0,
      "state": "in",
      "completed": false,
-     "detail": "7:59 - 3rd",
+     "detail": "7:58 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -3974,7 +3843,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "52"
+       "score": "53"
       },
       {
        "id": "2",
@@ -4365,10 +4234,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.065,
-     "away": 0.935,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NBA",
@@ -4431,10 +4300,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 479.0,
+     "clock": 478.0,
      "state": "in",
      "completed": false,
-     "detail": "7:59 - 3rd",
+     "detail": "7:58 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4444,7 +4313,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "52"
+       "score": "53"
       },
       {
        "id": "2",
@@ -4835,10 +4704,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.065,
-     "away": 0.935,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NBA",
@@ -4905,10 +4774,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 4440.0,
+     "clock": 4560.0,
      "state": "in",
      "completed": false,
-     "detail": "74'",
+     "detail": "76'",
      "teams": [
       {
        "id": "382",
@@ -4963,13 +4832,12 @@
     },
     {
      "type": "teamtotal",
-     "team": "Columbus Blue Jackets",
+     "team": "Blue Jackets",
      "side": "over",
      "line": 1.5,
      "unit": "goals",
      "women": false,
-     "text": "Blue Jackets O1.5 team goals",
-     "team_ok": true
+     "text": "Blue Jackets O1.5 team goals"
     },
     {
      "type": "prop",
@@ -4977,134 +4845,11 @@
      "stat": "sog",
      "op": "min",
      "min": 3,
-     "text": "Auston Matthews 3+ SOG",
-     "pteam": "TOR",
-     "pname": "Auston Matthews",
-     "pid": "4024123"
+     "text": "Auston Matthews 3+ SOG"
     }
    ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261020",
-    "groups": null,
-    "id": "401892543",
-    "snapshot": {
-     "date": "2026-10-20T23:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "10/20 - 7:00 PM EDT",
-     "teams": [
-      {
-       "id": "29",
-       "name": "Columbus Blue Jackets",
-       "abbr": "CBJ",
-       "short": "Blue Jackets",
-       "nick": "Blue Jackets",
-       "location": "Columbus",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "21",
-       "name": "Toronto Maple Leafs",
-       "abbr": "TOR",
-       "short": "Maple Leafs",
-       "nick": "Maple Leafs",
-       "location": "Toronto",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-tor-cbj-2026-10-20",
-     "title": "Maple Leafs vs. Blue Jackets",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Blue Jackets",
-        "Maple Leafs"
-       ],
-       "tokens": [
-        "6832603266255391755932077472530918831560941967587070192753161804263576521115",
-        "113967249715846221663050958322368983068008310531790581365485565922003865827382"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "78040247031710674198952411210222158391754137099740465593375474478380766731217",
-        "4296989296839553703179572026698205544205150163195248868264440984222595151655"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "110654904189450653707334844891588279151227096299165501969084885958802561279192",
-        "80505827696773013633695183028701949067467064789964949687227875119290680516641"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18008387419035300289266458336166304595083768120313698571623568091366333420700",
-        "75753499320992506344858306991677326876731714861690464343509077480477800811197"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "54176899668128231772268478036013840986172764823595764924646422441052976741157",
-        "57629095904453828582653817723638226430545786318556657749909638115939418407989"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Maple Leafs",
-       "Blue Jackets"
-      ],
-      "tokens": [
-       "94148277393623176691821230871036770421974641301237566661250277738287724008720",
-       "95603211098044682131021222506320965804352379180852460219270667191978675380491"
-      ]
-     }
-    },
-    "an": {
-     "id": 293441,
-     "home_team_id": 240,
-     "away_team_id": 235
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.595,
-     "away": 0.405,
-     "spread": 0.01,
-     "t": "2026-10-20T20:34Z"
-    }
-   },
-   "sport": "NHL",
+   "match": null,
+   "sport": null,
    "cash_stake": 0.5,
    "payout": 1.55,
    "payout_est": false,
@@ -5168,10 +4913,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 479.0,
+     "clock": 478.0,
      "state": "in",
      "completed": false,
-     "detail": "7:59 - 3rd",
+     "detail": "7:58 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -5181,7 +4926,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "52"
+       "score": "53"
       },
       {
        "id": "2",
@@ -5572,10 +5317,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.065,
-     "away": 0.935,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NBA",
@@ -9812,6 +9557,24 @@
  "auto": {
   "needs_review": [
    {
+    "bet_id": "ecfed1e1",
+    "book": "Caesars",
+    "event": "New England Patriots @ Chicago Bears",
+    "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
+    "stake": "0.50",
+    "reason": "ESPN summary unavailable for football/nfl 401873010",
+    "legs": []
+   },
+   {
+    "bet_id": "dc3d72cd",
+    "book": "PointsBet",
+    "event": "Forest Green v Chesham Utd (English FA Cup)",
+    "pick": "Chesham Utd",
+    "stake": "10.00",
+    "reason": "ESPN summary unavailable for soccer/eng.fa_qual 401930565",
+    "legs": []
+   },
+   {
     "bet_id": "207a4cea",
     "book": "bet365",
     "event": "Fenerbahce v Slavia Prague (UEFA Champions League)",
@@ -10030,7 +9793,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 15:11 ET"
+  "last_change_at": "2026-10-20 16:34 ET"
  },
  "open_live_n": 29,
  "open_stake_by_book": {
@@ -10041,6 +9804,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "8f62ccf6ebde1b012746054b353ae311b6d16ef4",
- "generated_at": "2026-10-20T20:34:02+00:00"
+ "hash": "0af3dccbaf94aa72db8de74df453a4e14ab6d5d8",
+ "generated_at": "2026-10-20T16:34:33-04:00"
 }
