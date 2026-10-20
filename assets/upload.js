@@ -54,6 +54,7 @@
   function loadExisting() {
     fetch('data.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (d) {
       S.existing = [].concat(d.open || [], d.settled_recent || []).map(function (b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; });
+      S.examples = (d.open || []).filter(function (b) { return b.pick && b.market && b.event; }).map(function (b) { return { book: b.book, event: b.event, market: b.market, pick: b.pick, price: b.price, boosted_price: b.boosted_price }; });
       renderDrafts();
     }).catch(function () {});
   }
@@ -70,13 +71,13 @@
   /* ---------- AI reading (Gemini vision, free key) ---------- */
   var AI_KEY = 'bt.ai.gemini', GEM = 'https://generativelanguage.googleapis.com/v1beta/';
   function getAi() { try { return localStorage.getItem(AI_KEY) || ''; } catch (e) { return ''; } }
-  function setAi(v) { try { v ? localStorage.setItem(AI_KEY, v) : localStorage.removeItem(AI_KEY); } catch (e) {} S.model = ''; }
+  function setAi(v) { try { v ? localStorage.setItem(AI_KEY, v) : localStorage.removeItem(AI_KEY); } catch (e) {} S.model = ''; S.models = null; }
   function renderAi() {
     var k = getAi(), el = $('ai');
     if (k) {
       el.innerHTML = '<h3>AI reading</h3><p class="small">On ✓ &nbsp;<span class="muted" id="ai-model"></span> <button class="btn sm" type="button" id="ai-off" style="margin-left:6px">Remove key</button></p>';
       $('ai-off').onclick = function () { setAi(''); renderAi(); };
-      if (S.model) $('ai-model').textContent = '(' + S.model + ')';
+      if (S.models) $('ai-model').textContent = '(' + S.models.join(' → ') + ')';
     } else {
       el.innerHTML = '<h3>AI reading (recommended, free)</h3><p class="small muted">Lets the page read slips as well as Claude or Grok do, so you fill in nothing. Get a free Google AI Studio key (1 minute), paste it once; it stays in this browser.</p>' +
         '<p class="small"><a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a> · Privacy: on Google’s free tier, the screenshots you upload may be used by Google to improve its products. Crop out balances if that matters to you.</p>' +
@@ -85,52 +86,53 @@
         var v = $('ai-in').value.trim();
         if (!/^[A-Za-z0-9._~-]{20,200}$/.test(v)) { $('ai-err').textContent = 'That does not look like a key: it should be one string with no spaces, at least 20 characters.'; return; }
         $('ai-err').textContent = 'Checking the key with Google…'; setAi(v);
-        getModel().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = (e && e.message ? e.message : String(e)); });
+        getModels().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = (e && e.message ? e.message : String(e)); });
       };
     }
   }
-  function pickModel(models) {
+  function pickModels(models) {   // strongest first: Pro reads small print better; Flash is the fallback when Pro's free quota is used up
     var names = (models || []).filter(function (m) { return (m.supportedGenerationMethods || []).indexOf('generateContent') >= 0; }).map(function (m) { return String(m.name).replace(/^models\//, ''); })
-      .filter(function (n) { return /flash/.test(n) && !/lite|image|tts|live|audio|thinking|exp|preview|8b/.test(n); });
-    var prefs = [/^gemini-flash-latest$/, /^gemini-3(\.\d+)?-flash$/, /^gemini-2\.5-flash$/, /^gemini-2\.0-flash$/, /^gemini-1\.5-flash/, /flash/];
-    for (var i = 0; i < prefs.length; i++) { var f = names.filter(function (n) { return prefs[i].test(n); }).sort().reverse()[0]; if (f) return f; }
-    return '';
+      .filter(function (n) { return /^gemini-/.test(n) && !/lite|image|tts|live|audio|thinking|exp|preview|8b|embed|robotics|computer|customtools/.test(n); });
+    var pick = function (re) { return names.filter(function (n) { return re.test(n); }).sort().reverse()[0]; };
+    var pro = pick(/^gemini-(\d+(\.\d+)?)-pro$/) || pick(/^gemini-pro-latest$/), flash = pick(/^gemini-(\d+(\.\d+)?)-flash$/) || pick(/^gemini-flash-latest$/) || pick(/flash/);
+    var out = [pro, flash];
+    return out.filter(function (x, i) { return x && out.indexOf(x) === i; });
   }
   var VTX = 'https://aiplatform.googleapis.com/v1/publishers/google/models/';
   function gerr(r, what) { return r.json().catch(function () { return {}; }).then(function (j) { throw new Error(what + ' (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 140) : '') + ')'); }); }
   function vtxProbe(key) {   // newer Google keys (AQ.…) work on the Vertex AI "express" endpoint instead of the Gemini Developer API
-    var cands = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-flash-lite'], i = 0, last = null;
+    var cands = ['gemini-2.5-flash', 'gemini-2.0-flash'], i = 0, last = null;
     function next() {
       if (i >= cands.length) return Promise.reject(last || new Error('no Gemini model available for this key'));
       var m = cands[i++];
       return fetch(VTX + m + ':generateContent?key=' + encodeURIComponent(key), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: 'Reply with the word ok.' }] }], generationConfig: { maxOutputTokens: 8 } }), credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
-        if (r.ok) { S.kind = 'vtx'; return m; }
+        if (r.ok) { S.kind = 'vtx'; return [m === 'gemini-2.5-flash' ? 'gemini-2.5-pro' : m, m]; }
         if (r.status === 404) return next();
         return gerr(r, 'Google did not accept the key');
       });
     }
     return next();
   }
-  function getModel() {
-    if (S.model) return Promise.resolve(S.model);
+  function getModels() {
+    if (S.models) return Promise.resolve(S.models);
     var key = getAi();
-    function done(m) { S.model = m; var e = $('ai-model'); if (e) e.textContent = '(' + m + ')'; return m; }
+    function done(ms) { S.models = ms; S.model = ms[0]; var e = $('ai-model'); if (e) e.textContent = '(' + ms.join(' → ') + ')'; return ms; }
     return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(key), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
-      if (r.ok) return r.json().then(function (j) { var m = pickModel(j.models); if (!m) throw new Error('no Gemini model available for this key'); S.kind = 'gem'; return done(m); });
+      if (r.ok) return r.json().then(function (j) { var ms = pickModels(j.models); if (!ms.length) throw new Error('no Gemini model available for this key'); S.kind = 'gem'; return done(ms); });
       return r.json().catch(function () { return {}; }).then(function (j) {
         var g1 = 'Gemini API: HTTP ' + r.status + (j.error && j.error.message ? ' ' + String(j.error.message).slice(0, 90) : '') + (j.error && j.error.details && j.error.details[0] && j.error.details[0].reason ? ' [' + j.error.details[0].reason + ']' : '');
         return vtxProbe(key).then(done, function (e) { throw new Error(g1 + ' · Vertex: ' + String(e.message).replace(/^Google did not accept the key \(?/, '').replace(/\)$/, '')); });
       });
     });
   }
-  function shrink(file) {   // max 1600 px, JPEG: small enough to send fast, sharp enough to read
+  function shrink(file) {   // max 3000 px (phone screenshots stay full size so small digits stay readable), JPEG 0.92
     return new Promise(function (res, rej) {
       var img = new Image(), u = URL.createObjectURL(file);
       img.onload = function () {
-        var sc = Math.min(1, 1600 / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
+        var sc = Math.min(1, 3000 / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
         c.width = Math.round(img.naturalWidth * sc); c.height = Math.round(img.naturalHeight * sc);
         c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(u);
-        res(c.toDataURL('image/jpeg', 0.88).split(',')[1]);
+        res(c.toDataURL('image/jpeg', 0.92).split(',')[1]);
       };
       img.onerror = function () { URL.revokeObjectURL(u); rej(new Error('could not open the picture')); };
       img.src = u;
@@ -146,25 +148,78 @@
     'price (American odds of the whole bet BEFORE any profit boost, like "+325"; if only the boosted odds are shown use those), boosted_price (American odds AFTER the boost if a boost is shown, else ""; if only payout is shown compute (payout - stake) / stake * 100), ' +
     'stake (cash wagered, number), to_win (profit if it wins = total payout including boost minus stake, number), boost_pct (number or ""), warnings (array of short strings for anything unclear or cut off). ' +
     'Ignore account balances, bonus-offer banners and ads. For a settled slip fill the same fields and the result.';
-  function aiRead(it) {
+  // recent rows from the tracker, so the model copies the exact house style for picks / markets
+  function styleExamples() {
+    var ex = (S.examples || []).slice(-10);
+    return ex.length ? ' House style examples (existing tracker rows: book | event | market | pick | odds -> boosted): ' + ex.map(function (b) { return [b.book, b.event, b.market, b.pick, b.price + (b.boosted_price ? ' -> ' + b.boosted_price : '')].join(' | '); }).join(' ;; ') + '.' : '';
+  }
+  function promptText(ocr, fix) {
+    return PROMPT + styleExamples() + ' Today is ' + todayET() + ' (America/Toronto). Read EVERY digit from the image itself, slowly; names must be spelled as printed. ' +
+      (ocr ? 'For cross-checking only, a rough machine OCR of the same picture (it contains errors, e.g. +124 can read +424; trust the picture over this text): """' + ocr.slice(0, 2500) + '""" ' : '') +
+      (fix ? ' CORRECTION NEEDED: ' + fix : '');
+  }
+  function oddsProfit(o, stake) { var m = String(o || '').match(/^([+-])(\d+)$/); if (!m || !(stake > 0)) return null; var n = parseInt(m[2], 10); return m[1] === '+' ? stake * n / 100 : stake * 100 / n; }
+  function inconsistent(rows) {   // stake, odds and to-win must agree (boost shows up in the boosted odds)
+    var bad = [];
+    rows.forEach(function (r, i) {
+      var b = fromAi(r); if (b.kind !== 'placed' && b.kind !== 'open') return;
+      var pf = oddsProfit(b.boosted_price || b.price, b.stake);
+      if (pf != null && b.to_win != null && Math.abs(pf - b.to_win) > Math.max(0.04, 0.05 * b.to_win)) bad.push('bet ' + (i + 1) + ': stake ' + b.stake + ' at ' + (b.boosted_price || b.price) + ' should win about ' + pf.toFixed(2) + ' but to_win says ' + b.to_win);
+      if (!b.book) bad.push('bet ' + (i + 1) + ': book is missing');
+      if (!b.pick) bad.push('bet ' + (i + 1) + ': pick is missing');
+    });
+    return bad;
+  }
+  function callModel(model, b64, text, it) {
     var tries = 0;
-    function go(model, b64) {
+    function go() {
       tries++;
       var vtx = S.kind === 'vtx';
-      var body = { contents: [{ role: 'user', parts: [{ text: PROMPT + ' Today is ' + todayET() + ' (America/Toronto).' }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
+      var body = { contents: [{ role: 'user', parts: [{ text: text }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
       return fetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
-        if (r.status === 429 && tries < 4) { it.msg = 'Waiting for Google’s free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 15000 * tries); }).then(function () { return go(model, b64); }); }
-        if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { throw new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); });
+        if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { var e = new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); e.status = r.status; throw e; });
         return r.json();
+      }).then(function (j) {
+        var t = ((((j.candidates || [])[0] || {}).content || {}).parts || []).filter(function (x) { return !x.thought; }).map(function (x) { return x.text || ''; }).join('');
+        t = t.replace(/^\s*```(?:json)?/i, '').replace(/```\s*$/, '');
+        var o = JSON.parse(t), arr = Array.isArray(o) ? o : (o.bets || []);
+        if (!arr.length) throw new Error('the AI found no bet on this picture');
+        return arr;
       });
     }
-    return getModel().then(function (m) { return shrink(it.file).then(function (b64) { return go(m, b64); }); }).then(function (j) {
-      var t = ((((j.candidates || [])[0] || {}).content || {}).parts || []).map(function (x) { return x.text || ''; }).join('');
-      t = t.replace(/^\s*```(?:json)?/i, '').replace(/```\s*$/, '');
-      var o = JSON.parse(t), arr = Array.isArray(o) ? o : (o.bets || []);
-      if (!arr.length) throw new Error('the AI found no bet on this picture');
-      return arr;
+    return go();
+  }
+  function tryModels(models, b64, text, it) {   // strongest model first, next one if its free quota is gone / it is unavailable
+    var i = 0, last = null;
+    function next() {
+      if (i >= models.length) {
+        if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for Google’s free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
+        return Promise.reject(last);
+      }
+      var m = models[i++]; it.msg = 'Reading with ' + m + '…'; renderQueue();
+      return callModel(m, b64, text, it).catch(function (e) { last = e; return next(); });
+    }
+    return next();
+  }
+  function aiRead(it) {
+    return getModels().then(function (models) {
+      var ocr = ocrHint(it);
+      return shrink(it.file).then(function (b64) {
+        return ocr.then(function (hint) {
+          return tryModels(models, b64, promptText(hint, ''), it).then(function (rows) {
+            var bad = inconsistent(rows);
+            if (!bad.length) return rows;
+            it.msg = 'Double-checking the numbers…'; renderQueue();
+            return tryModels(models, b64, promptText(hint, 'your first answer had problems: ' + bad.join('; ') + '. Look at the picture again and fix them; if a value is truly not visible leave it empty.'), it)
+              .then(function (rows2) { return inconsistent(rows2).length <= bad.length ? rows2 : rows; }, function () { return rows; });
+          });
+        });
+      });
     });
+  }
+  function ocrHint(it) {   // the browser OCR text is passed to the AI as a cross-check for digits
+    S.progress = function (m) { if (m && typeof m.progress === 'number') { it.pct = Math.round(m.progress * 100); renderQueue(); } };
+    return getWorker().then(function (w) { return w.recognize(it.file); }).then(function (r) { return (r && r.data && r.data.text) || ''; }).catch(function () { return ''; });
   }
   function fromAi(r) {
     var num = function (x) { if (x === '' || x == null) return null; var n = parseFloat(String(x).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : null; };
@@ -357,7 +412,7 @@
   function reread(id) {
     var it = S.items.filter(function (x) { return String(x.id) === String(id); })[0]; if (!it || it.state === 'read' || it.state === 'wait') return;
     S.drafts = S.drafts.filter(function (d) { return String(d.itemId) !== String(id); });
-    it.state = 'wait'; it.msg = ''; it.pct = 0; S.drafts.forEach(function (x) { x._seen = 0; });
+    it.state = 'wait'; it.msg = ''; it.pct = 0; it.waited = 0; S.drafts.forEach(function (x) { x._seen = 0; });
     renderQueue(); renderDrafts(); runQueue();
   }
   document.addEventListener('click', function (e) { var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rr'); if (id) reread(id); });
