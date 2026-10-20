@@ -3574,10 +3574,10 @@
     "snapshot": {
      "date": "2026-10-20T00:00Z",
      "period": 3,
-     "clock": 63.0,
+     "clock": 46.2,
      "state": "in",
      "completed": false,
-     "detail": "1:03 - 3rd",
+     "detail": "46.2 - 3rd",
      "teams": [
       {
        "id": "129689",
@@ -3587,7 +3587,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "44"
+       "score": "46"
       },
       {
        "id": "20",
@@ -3597,7 +3597,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "52"
+       "score": "55"
       }
      ]
     }
@@ -6450,212 +6450,6 @@
    "start_ts": "2026-10-20T00:15Z"
   },
   {
-   "bet_id": "bd13eed8",
-   "date": "2026-10-19",
-   "book": "FanDuel",
-   "event": "Colorado Avalanche @ Philadelphia Flyers",
-   "market": "SGP (40% profit boost)",
-   "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
-   "start": "Mon Oct 19 07:10 PM ET",
-   "price": "+108",
-   "boosted_price": "+152",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.76,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Colorado Avalanche",
-     "women": false,
-     "text": "Colorado Avalanche ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Cale Makar",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Cale Makar 2+ SOG",
-     "pteam": "COL",
-     "pname": "Cale Makar",
-     "pid": "4233563"
-    },
-    {
-     "type": "prop",
-     "player": "Nathan MacKinnon",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Nathan MacKinnon 2+ SOG",
-     "pteam": "COL",
-     "pname": "Nathan MacKinnon",
-     "pid": "3041969"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261019",
-    "groups": null,
-    "id": "401892536",
-    "snapshot": {
-     "date": "2026-10-19T23:00Z",
-     "period": 3,
-     "clock": 7.0,
-     "state": "in",
-     "completed": false,
-     "detail": "0:07 - 3rd",
-     "teams": [
-      {
-       "id": "15",
-       "name": "Philadelphia Flyers",
-       "abbr": "PHI",
-       "short": "Flyers",
-       "nick": "Flyers",
-       "location": "Philadelphia",
-       "home": true,
-       "score": "3"
-      },
-      {
-       "id": "17",
-       "name": "Colorado Avalanche",
-       "abbr": "COL",
-       "short": "Avalanche",
-       "nick": "Avalanche",
-       "location": "Colorado",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-col-phi-2026-10-19",
-     "title": "Avalanche vs. Flyers",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Avalanche",
-        "Flyers"
-       ],
-       "tokens": [
-        "55521694922571125813048199369600726980377078379294790862119524650523656987578",
-        "74464170171412201704032911965473209816730495859269257778145015215929194174629"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Flyers",
-        "Avalanche"
-       ],
-       "tokens": [
-        "48053498077977717821760773318248716634351278497943336452161622665715201872578",
-        "42015057249073026343214239341290180323896598664562345380725035722869683647539"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Flyers",
-        "Avalanche"
-       ],
-       "tokens": [
-        "8906333136032896328506529910254627899083560738656968839179036890446980310970",
-        "2551627122125584418193351318195435068944433471887504165598852617772007847363"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "110324375249327820170433488878819273578699587636656383487582212496474632256559",
-        "9254704503903358871075980436193594205156803675064107481669764822915852835358"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "63845445523976674765242246309779512102893158876569209837618724573938142740967",
-        "35023748937365231720305007615530128967016715010527738213033535898562189929293"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "87429861564477912364547417146584041224067063162963915581225372373489370688138",
-        "79469152000943839102700325414405043267801431218894014201002764125583719448080"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "115392956507826016122255829016410652415177547912181563252822345843082001647323",
-        "37503383886345610990391166851091018387329099676673896329978846236928751897999"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "112940937902092535432097988588164313004548235241205246285840776180314929161216",
-        "108449654510208940283918489992054548139131663783178838232731612719186219317578"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Avalanche",
-       "Flyers"
-      ],
-      "tokens": [
-       "27478765205176197916184060773291512799621576836994965341289697253109501493067",
-       "22755181383245166284346092140295696285782167792297702662729273008159320314598"
-      ]
-     }
-    },
-    "an": {
-     "id": 293436,
-     "home_team_id": 245,
-     "away_team_id": 225
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.995,
-     "away": 0.005,
-     "spread": 0.01,
-     "t": "2026-10-20T01:44Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 1.26,
-   "payout_est": false,
-   "start_ts": "2026-10-19T23:10Z"
-  },
-  {
    "bet_id": "47d27866",
    "date": "2026-10-19",
    "book": "PointsBet",
@@ -7081,6 +6875,16 @@
    "book": "Caesars",
    "event": "Tottenham vs Coventry City",
    "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "FanDuel",
+   "event": "Colorado Avalanche @ Philadelphia Flyers",
+   "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
@@ -8077,15 +7881,15 @@
    "auto": false
   }
  ],
- "pnl_total": 140.98,
+ "pnl_total": 140.48,
  "unsettled": {
-  "n": 25,
-  "cash_stake": 79.1,
-  "max_payout": 1097.02,
+  "n": 24,
+  "cash_stake": 78.6,
+  "max_payout": 1095.76,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 79.1,
+ "open_stake": 78.6,
  "recs": {
   "stats": {
    "overall": {
@@ -8381,18 +8185,18 @@
    },
    "friend": {
     "n": 12,
-    "w": 1,
+    "w": 2,
     "l": 4,
     "p": 0,
-    "pending": 7,
-    "win_pct": 20.0,
-    "units": -0.36,
-    "roi_pct": -7.2,
-    "roi_n": 5,
-    "exp_roi_pct": 55.0,
-    "exp_wins": 1.9,
-    "exp_wins_n": 5,
-    "wins_with_fair": 1
+    "pending": 6,
+    "win_pct": 33.3,
+    "units": 3.2,
+    "roi_pct": 53.3,
+    "roi_n": 6,
+    "exp_roi_pct": 54.8,
+    "exp_wins": 2.2,
+    "exp_wins_n": 6,
+    "wins_with_fair": 2
    },
    "clv": "not available: no closing Pinnacle prices are stored"
   },
@@ -9196,11 +9000,11 @@
     "promo": "profit boost",
     "friend": "yes",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "COL 2-3 PHI (Final)",
     "source": "rec.py add",
     "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
-    "units": null
+    "units": 3.56
    },
    {
     "rec_id": "5d595bd9",
@@ -10910,6 +10714,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "bd13eed8",
+    "book": "FanDuel",
+    "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "COL 2-3 PHI",
+    "at": "2026-10-19 21:44"
+   },
+   {
     "bet_id": "a90a66f3",
     "book": "theScore",
     "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
@@ -11036,18 +10849,18 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 21:41 ET"
+  "last_change_at": "2026-10-19 21:44 ET"
  },
- "open_live_n": 25,
+ "open_live_n": 24,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 0.5,
   "DraftKings": 0.7,
-  "FanDuel": 2.3,
+  "FanDuel": 1.8,
   "Hard Rock": 5.0,
   "PointsBet": 208.75,
   "theScore": 0.4
  },
- "hash": "46dc86cd919fd9e5de778960b980c3fa1ba5d1f5",
- "generated_at": "2026-10-19T21:44:20-04:00"
+ "hash": "2db8a494223fb0f0c77e364c5379aa92bc219724",
+ "generated_at": "2026-10-19T21:44:55-04:00"
 }

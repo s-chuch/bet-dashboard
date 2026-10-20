@@ -160,3 +160,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-19 18:30,PointsBet,682b90b5,stake,-10.00,stake
 2026-10-19 18:35,bet365,207a4cea,stake,-0.20,stake
 2026-10-19 21:41,theScore,a90a66f3,return,0.42,won
+2026-10-19 21:44,FanDuel,bd13eed8,settled,0.00,"lost, no return"

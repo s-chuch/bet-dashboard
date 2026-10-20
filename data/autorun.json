@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "bd13eed8",
+   "book": "FanDuel",
+   "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "COL 2-3 PHI",
+   "at": "2026-10-19 21:44"
+  },
+  {
    "bet_id": "a90a66f3",
    "book": "theScore",
    "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
@@ -129,5 +138,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 21:41 ET"
+ "last_change_at": "2026-10-19 21:44 ET"
 }
