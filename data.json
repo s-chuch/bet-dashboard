@@ -124,11 +124,11 @@
     "id": "401873008",
     "snapshot": {
      "date": "2026-10-20T00:15Z",
-     "period": 1,
-     "clock": 116.0,
+     "period": 2,
+     "clock": 782.0,
      "state": "in",
      "completed": false,
-     "detail": "1:56 - 1st",
+     "detail": "13:02 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -1026,10 +1026,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.895,
-     "away": 0.105,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -1372,11 +1372,11 @@
     "id": "401873008",
     "snapshot": {
      "date": "2026-10-20T00:15Z",
-     "period": 1,
-     "clock": 116.0,
+     "period": 2,
+     "clock": 782.0,
      "state": "in",
      "completed": false,
-     "detail": "1:56 - 1st",
+     "detail": "13:02 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -2274,10 +2274,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.895,
-     "away": 0.105,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -2392,11 +2392,11 @@
     "id": "401908028",
     "snapshot": {
      "date": "2026-10-20T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "30",
@@ -2504,10 +2504,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "MLB",
@@ -2569,11 +2569,11 @@
     "id": "401873008",
     "snapshot": {
      "date": "2026-10-20T00:15Z",
-     "period": 1,
-     "clock": 116.0,
+     "period": 2,
+     "clock": 782.0,
      "state": "in",
      "completed": false,
-     "detail": "1:56 - 1st",
+     "detail": "13:02 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -3471,10 +3471,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.895,
-     "away": 0.105,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -3540,11 +3540,11 @@
     "id": "401892535",
     "snapshot": {
      "date": "2026-10-19T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "13",
@@ -3684,7 +3684,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NHL",
@@ -3751,10 +3751,10 @@
     "snapshot": {
      "date": "2026-10-20T00:00Z",
      "period": 2,
-     "clock": 393.0,
+     "clock": 56.6,
      "state": "in",
      "completed": false,
-     "detail": "6:33 - 2nd",
+     "detail": "56.6 - 2nd",
      "teams": [
       {
        "id": "129689",
@@ -3764,7 +3764,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "29"
+       "score": "37"
       },
       {
        "id": "20",
@@ -3774,7 +3774,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "27"
+       "score": "37"
       }
      ]
     }
@@ -3832,11 +3832,11 @@
     "id": "401908028",
     "snapshot": {
      "date": "2026-10-20T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "30",
@@ -3944,10 +3944,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "MLB",
@@ -4669,7 +4669,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -4735,11 +4735,11 @@
     "id": "401873008",
     "snapshot": {
      "date": "2026-10-20T00:15Z",
-     "period": 1,
-     "clock": 116.0,
+     "period": 2,
+     "clock": 782.0,
      "state": "in",
      "completed": false,
-     "detail": "1:56 - 1st",
+     "detail": "13:02 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -5637,10 +5637,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.895,
-     "away": 0.105,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -5679,11 +5679,11 @@
     "id": "401873008",
     "snapshot": {
      "date": "2026-10-20T00:15Z",
-     "period": 1,
-     "clock": 116.0,
+     "period": 2,
+     "clock": 782.0,
      "state": "in",
      "completed": false,
-     "detail": "1:56 - 1st",
+     "detail": "13:02 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -6581,10 +6581,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.895,
-     "away": 0.105,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NFL",
@@ -6779,7 +6779,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-20T00:48Z"
+     "t": "2026-10-20T01:04Z"
     }
    },
    "sport": "NHL",
@@ -11162,6 +11162,6 @@
   "PointsBet": 208.75,
   "theScore": 0.6
  },
- "hash": "2707ea3ee6c0fe2557839a60f3ddb16330603c8e",
- "generated_at": "2026-10-19T20:48:16-04:00"
+ "hash": "da1bfa0d5a3dacd27f00f5aab8d829dcec51b7c0",
+ "generated_at": "2026-10-19T21:04:50-04:00"
 }
