@@ -1122,7 +1122,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T11:07Z"
+     "t": "2026-10-20T12:45Z"
     }
    },
    "sport": "NFL",
@@ -5605,6 +5605,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "f6ddd4b3189ac6b8e49f738aff04d6ebcfa39857",
- "generated_at": "2026-10-20T07:07:06-04:00"
+ "hash": "68595fe2415fa6ba501ad45d3cef02720b4dd109",
+ "generated_at": "2026-10-20T08:45:15-04:00"
 }
