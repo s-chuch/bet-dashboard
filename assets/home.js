@@ -8,9 +8,16 @@ const norm=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLo
 function teamMatch(q,t){const qn=norm(q);if(!qn.length)return false;
   for(const f of [t.name,t.abbr,t.short,t.location,t.nick]){const fn=norm(f);if(fn.length&&fn.join(" ")===qn.join(" "))return true}
   const d=norm(t.name);return qn.every(w=>d.includes(w))&&(qn.length>1||qn[0].length>3)}
+// ESPN carries a sportsbook's lines (DraftKings) on the scoreboard for almost every game, soccer and small leagues included
+function pickOdds(od){const o=od&&od[0];if(!o)return null;const n=v=>{const x=parseFloat(String(v).replace(/[^\d.+-]/g,""));return isFinite(x)?x:null};
+  const cl=x=>x&&(x.close||x.open),r={prov:(o.provider&&o.provider.displayName)||"Sportsbook"},ml=o.moneyline;
+  if(ml){const h=n((cl(ml.home)||{}).odds),a=n((cl(ml.away)||{}).odds),d=n((cl(ml.draw)||{}).odds!=null?cl(ml.draw).odds:(o.drawOdds||{}).moneyLine);if(h!=null&&a!=null)r.ml={h,a,d}}
+  const ps=o.pointSpread;if(ps){const h=cl(ps.home),a=cl(ps.away);if(h&&a&&n(h.line)!=null&&n(h.odds)!=null&&n(a.odds)!=null)r.sp={h:n(h.line),ho:n(h.odds),ao:n(a.odds)}}
+  const t=o.total;if(t&&t.over&&t.under){const ov=cl(t.over),un=cl(t.under);if(ov&&un&&n(ov.line)!=null&&n(ov.odds)!=null&&n(un.odds)!=null)r.tot={line:n(ov.line),o:n(ov.odds),u:n(un.odds)}}
+  return r.ml||r.sp||r.tot?r:null}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
   return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,lastPlay:c.situation&&c.situation.lastPlay&&c.situation.lastPlay.text||"",longDetail:st.type.detail||"",state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
-    sit:pickSit(c.situation),teams:c.competitors.map(x=>({id:x.team.id||x.id,name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score,ls:(x.linescores||[]).map(l=>l.displayValue!=null?l.displayValue:l.value),st:Object.fromEntries((x.statistics||[]).map(q=>[q.name,q.displayValue]))}))}}
+    sit:pickSit(c.situation),teams:c.competitors.map(x=>({id:x.team.id||x.id,name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score,ls:(x.linescores||[]).map(l=>l.displayValue!=null?l.displayValue:l.value),st:Object.fromEntries((x.statistics||[]).map(q=>[q.name,q.displayValue]))})),odds:pickOdds(c.odds)}}
 // keep only the small, flat situation fields (+ batter/pitcher names) from the scoreboard
 function pickSit(si){if(!si)return null;const o={};for(const[k,v]of Object.entries(si)){if(v==null||k==="lastPlay")continue;
     if(typeof v!=="object")o[k]=v;else if((k==="batter"||k==="pitcher")&&v.athlete)o[k]={n:v.athlete.shortName||v.athlete.displayName,s:v.summary||""};
@@ -670,6 +677,15 @@ function kalBar(L,m,g,ctx){if(L.type!=="ml"||!m||!g)return"";const pt=pickTeam(g
     return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · live · ${age<90?Math.round(age)+" s":Math.round(age/60)+" min"} old`)}
   if(g.state!=="pre"||!m.kal)return"";const v=pt.T.home?m.kal.home:m.kal.away;if(v==null)return"";
   return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · pregame · as of ${tfmt(m.kal.t)}`)}
+// book-line bar (no-vig) for the leg, from ESPN's scoreboard odds; exact line only for spreads / totals
+function lineBar(L,m,g,ctx){const od=g&&g.odds;if(!od||g.completed||g.state==="post")return"";const nv=(a,b)=>{const x=ip(a),y=ip(b);return x/(x+y)};let v=null,what="";
+  if(L.type==="ml"&&od.ml){const pt=pickTeam(g,L);if(!pt)return"";const mine=pt.T.home?od.ml.h:od.ml.a,opp=pt.T.home?od.ml.a:od.ml.h;
+    v=od.ml.d!=null?ip(mine)/(ip(mine)+ip(opp)+ip(od.ml.d)):nv(mine,opp);what=`${esc(pt.T.abbr)} win${od.ml.d!=null?" (not draw)":""}`}
+  else if(L.type==="spread"&&od.sp){const pt=pickTeam(g,L);if(!pt)return"";const line=pt.T.home?od.sp.h:-od.sp.h;if(Math.abs(line-L.line)>0.01)return"";
+    v=pt.T.home?nv(od.sp.ho,od.sp.ao):nv(od.sp.ao,od.sp.ho);what=`${esc(L.text)} covers`}
+  else if(L.type==="total"&&od.tot&&Math.abs(od.tot.line-L.line)<0.01){v=L.side==="under"?nv(od.tot.u,od.tot.o):nv(od.tot.o,od.tot.u);what=`${esc(L.text)} hits`}
+  if(v==null)return"";
+  return bar(`${esc(od.prov)}${ctx||""} · ${what}`,v*100,"lnb",`${esc(od.prov)} line via ESPN, vig removed${g.state==="in"?" · may be stale once live":""}`)}
 function booksBar(L,m,g,ctx){if(g.state!=="in")return"";const bp=booksP(L,m,g);if(!bp)return"";
   const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:L.type==="spread"?`${esc(L.text)} covers`:`${esc(L.text)} hits`;
   return bar(`Books (no-vig)${ctx||""} · ${what}`,bp.v*100,"bkb",`${bp.book===15?"Action Network consensus":BKN[bp.book]} live line, vig removed${L.type!=="ml"?" · at your exact line":""}`)}
@@ -681,14 +697,14 @@ function barsFor(b){const out=[];let mini=null;
   const estOf=(L,i,lbl)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return"";const v=estLeg(L,m,localGame(g,m));return v==null?"":bar(lbl,v*100,"est","",`data-leg="${i}"`)};
   if(!b.multi){const L=b.legs[0];if(L){const m=matchOfLeg(b,L),g=gameFor(m);
       if(g&&!g.completed){out.push(liveLine(L,m,g));
-        out.push(pmBar(L,m,g));out.push(kalBar(L,m,g));out.push(booksBar(L,m,g));
+        out.push(pmBar(L,m,g));out.push(kalBar(L,m,g));out.push(lineBar(L,m,g));out.push(booksBar(L,m,g));
         out.push(estOf(L,0,L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`));
         const src=legSources(b,L);if(src.length){mini=src[0].v*100;out.push(`<div class="note srcn">Pill &amp; payout use: <b data-src>${SRC_LBL[src[0].k]}</b></div>`)}}}
-    if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb|lnb)/.test(x)))out.push(espnBar())}
   else{b.legs.forEach((L,i)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return;const ctx=` · ${esc(L.text)}`;
-      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(kalBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
+      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(kalBar(L,m,g,` leg`));out.push(lineBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
       out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
-    if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb|lnb)/.test(x)))out.push(espnBar())}
   // player props / team totals have no market price: pace-based estimate per leg (+ one bar for the whole bet), live games only
   const PRP=new Set(["prop","teamtotal"]);
   if(b.legs.some(L=>PRP.has(L.type))){const ls=legStatsFor(b);let n=0;
