@@ -181,6 +181,47 @@ function sofaBar(L,m,g,ctx){if(!m||!g||g.completed||!SOCCER(m.path)||(L.type!=="
     if(home==null)return"";v=home?o.h:o.a;what=`${esc(pt.T.abbr)} win (not draw)`}
   const age=Math.round((Date.now()-o.t)/1000);
   return bar(`SofaScore odds${ctx||""} · ${what}`,v*100,"sfb",`Bookmaker odds via SofaScore, vig removed · ${o.live?"live":"pregame"} · ${age} s old`)}
+// ---- pregame player props: season per-game rate from ESPN's core API (free, same host we already use) -> chance the line is reached ----
+const PSTAT={},PSTAT_TRY={};
+const SP_PATH={"hockey/nhl":["hockey","nhl"],"basketball/nba":["basketball","nba"],"basketball/wnba":["basketball","wnba"],"football/nfl":["football","nfl"],"baseball/mlb":["baseball","mlb"]};
+function seasonYear(path,iso){const d=new Date(iso),y=d.getUTCFullYear(),mo=d.getUTCMonth()+1;
+  if(/^soccer/.test(path))return mo>=7?y:y-1;
+  if(path==="hockey/nhl"||path==="basketball/nba")return mo>=8?y+1:y;if(path==="football/nfl")return mo<=2?y-1:y;return y}
+const SOC_DOM=["eng.1","esp.1","ger.1","ita.1","fra.1","ned.1","por.1","tur.1","sco.1","bel.1"];
+async function fetchPStat(L,m,g){const k=m.path+"|"+L.pid;if(PSTAT[k]||PSTAT_TRY[k])return;PSTAT_TRY[k]=1;if(!L.pid||!/^\d+$/.test(String(L.pid)))return;
+  if(SOCCER(m.path)){const y=seasonYear(m.path,g.date),lgs=[...new Set([m.path.split("/")[1],...SOC_DOM])];let best=null;
+    for(let i=0;i<lgs.length&&!(best&&best.gp>=4);i+=3)   // 3 leagues at a time, stop once a league shows a regular starter
+    await Promise.all(lgs.slice(i,i+3).map(async lg=>{const d=await espn(`https://sports.core.api.espn.com/v2/sports/soccer/leagues/${lg}/seasons/${y}/types/1/athletes/${L.pid}/statistics`);
+      if(!d||!d.splits)return;const flat={};for(const c of d.splits.categories||[])for(const st of c.stats||[])if(flat[st.name]==null&&st.value!=null)flat[st.name]=st.value;
+      const ap=flat.appearances;if(ap>=2&&(!best||ap>best.gp))best={flat,gp:ap,y,prev:false}}));
+    if(best)PSTAT[k]=best;return}
+  const sp=SP_PATH[m.path];if(!sp)return;
+  const y0=seasonYear(m.path,g.date);
+  for(const y of [y0,y0-1]){const d=await espn(`https://sports.core.api.espn.com/v2/sports/${sp[0]}/leagues/${sp[1]}/seasons/${y}/types/2/athletes/${L.pid}/statistics`);
+    if(!d||!d.splits)continue;const flat={};for(const c of d.splits.categories||[])for(const st of c.stats||[])if(flat[st.name]==null&&st.value!=null)flat[st.name]=st.value;
+    const gp=flat.gamesPlayed!=null?flat.gamesPlayed:flat.games;if(gp>=(y===y0?4:1)){PSTAT[k]={flat,gp,y,prev:y!==y0};return}}}
+function propMean(stat,path,P){const f=P.flat,gp=P.gp,pg=(...ks)=>{for(const x of ks){if(f[x[0]]!=null)return x[1]?f[x[0]]:f[x[0]]/gp}return null};
+  const A=(n)=>f[n]!=null?f[n]/gp:null;
+  if(path==="hockey/nhl"){if(stat==="sog")return f.avgShots!=null?f.avgShots:A("shotsTotal");if(stat==="goals")return A("goals");if(stat==="assists")return A("assists");
+    if(stat==="pts")return f.goals!=null&&f.assists!=null?(f.goals+f.assists)/gp:null;if(stat==="hits")return A("hits");if(stat==="saves")return f.avgSaves!=null?f.avgSaves:A("saves");return null}
+  if(/^basketball/.test(path)){if(stat==="pts")return f.avgPoints!=null?f.avgPoints:A("points");if(stat==="reb")return f.avgRebounds!=null?f.avgRebounds:A("rebounds");
+    if(stat==="assists")return f.avgAssists!=null?f.avgAssists:A("assists");if(stat==="threes")return f.avgThreePointFieldGoalsMade!=null?f.avgThreePointFieldGoalsMade:A("threePointFieldGoalsMade");return null}
+  if(path==="football/nfl"){if(stat==="passYds")return f.netPassingYardsPerGame!=null?f.netPassingYardsPerGame:A("passingYards");if(stat==="rushYds")return f.rushingYardsPerGame!=null?f.rushingYardsPerGame:A("rushingYards");
+    if(stat==="recYds")return f.receivingYardsPerGame!=null?f.receivingYardsPerGame:A("receivingYards");if(stat==="receptions")return A("receptions");if(stat==="passTD")return A("passingTouchdowns");
+    if(stat==="rushRecYds"){const a=f.rushingYardsPerGame!=null?f.rushingYardsPerGame:A("rushingYards"),b=f.receivingYardsPerGame!=null?f.receivingYardsPerGame:A("receivingYards");return a==null&&b==null?null:(a||0)+(b||0)}
+    if(stat==="td"){const t=(f.rushingTouchdowns||0)+(f.receivingTouchdowns||0);return f.rushingTouchdowns==null&&f.receivingTouchdowns==null?null:t/gp}return null}
+  if(/^soccer/.test(path)){const a=n=>f[n]!=null?f[n]/gp:null;if(stat==="sot")return a("shotsOnTarget");if(stat==="shots")return a("totalShots");if(stat==="goals"||stat==="goal")return a("totalGoals");
+    if(stat==="assists")return a("goalAssists");if(stat==="goalOrAssist"){const x=a("totalGoals"),y=a("goalAssists");return x==null&&y==null?null:(x||0)+(y||0)}return null}
+  if(path==="baseball/mlb"){if(stat==="hits")return A("hits");if(stat==="tb")return A("totalBases");if(stat==="hr")return A("homeRuns");if(stat==="rbi")return A("RBIs");if(stat==="runs")return A("runs");return null}
+  return null}
+// chance this prop leg is reached from the season rate alone (null when unknown)
+function propPre(L,m){if(L.type!=="prop"||!L.pid||!L.stat||!m)return null;const P=PSTAT[m.path+"|"+L.pid];if(!P)return null;const mu=propMean(L.stat,m.path,P);if(mu==null||!(mu>=0))return null;
+  const under=L.op==="under",tgt=under?Math.floor(L.line)+1:(L.op==="over"?Math.floor(L.line)+1:L.min);if(tgt==null||!isFinite(tgt))return null;
+  const cont=/Yds$/.test(L.stat)||(/^basketball/.test(m.path)&&L.stat==="pts")||(m.path==="hockey/nhl"&&L.stat==="saves");
+  let p;if(!cont&&mu<4)p=poisGE(Math.max(mu,0.02),tgt);else{const sd=/Yds$/.test(L.stat)?0.55*mu+5:L.stat==="pts"?0.32*mu+1.2:L.stat==="saves"?0.22*mu+2:1.15*Math.sqrt(mu)+0.3;p=1-Phi((tgt-0.5-mu)/sd)}
+  return Math.max(0.005,Math.min(0.995,under?1-p:p))}
+async function refreshPropStats(){const jobs=[];for(const b of DATA.open)for(const L of b.legs){if(L.type!=="prop"||!L.pid)continue;const m=matchOfLeg(b,L),g=gameFor(m);if(!m||!g||g.completed||!(SP_PATH[m.path]||SOCCER(m.path)))continue;jobs.push(fetchPStat(L,m,g))}
+  await Promise.all(jobs)}
 // live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
 async function refreshProbs(){
   const ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
@@ -532,6 +573,7 @@ function soccerP(L,g,f){const lam=1.35*f,sc=g.teams.map(t=>Number(t.score||0)),S
   for(const k in d){const v=cur+ +k;if(v>0)w+=d[k];else if(v===0)push+=d[k]}
   return L.type==="ml"?w:w/Math.max(1e-9,1-push)}
 function approxLeg(b,L,x){if(x.s==="WON")return 1;if(x.s==="LOST")return 0;const m=matchOfLeg(b,L),g=x.g||gameFor(m);if(!g||!m)return 0.5;
+  if(g.state!=="in"&&L.type==="prop"){const pp=propPre(L,m);if(pp!=null)return pp}
   if(g.state!=="in"){if(L.type==="ml"){const pg=pregameLive[m.id]||m.pregame,pt=pickTeam(g,L);if(pg&&pt)return(pt.T.home?pg.home:pg.away)/100}return 0.5}
   const lg=localGame(g,m),f=fracLeft(m,lg),e=1-f,[sdm,sdt]=SDX[m.path]||[12,14],sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1],soc=SOCCER(m.path);
   if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total"||L.type==="draw")){const v=soccerP(L,lg,f);if(v!=null)return v}
@@ -805,11 +847,19 @@ function barsFor(b){const out=[];let mini=null;
   // player props / team totals have no market price: pace-based estimate per leg (+ one bar for the whole bet), live games only
   const PRP=new Set(["prop","teamtotal"]);
   if(b.legs.some(L=>PRP.has(L.type))){const ls=legStatsFor(b);let n=0;
-    b.legs.forEach((L,i)=>{if(!PRP.has(L.type)||!ls[i].g||ls[i].g.state!=="in")return;const v=legP(b,L,ls[i].s,ls[i]);if(v==null)return;n++;
-      out.push(bar(`Est. leg: ${esc(L.text)}`,v*100,"prp","",`data-pleg="${i}"`))});
-    if(n&&b.multi){const lv=betLive(b,LAST_STATUS[DATA.open.indexOf(b)]||"?",ls);if(lv&&lv.p!=null){out.push(bar(`Est. whole bet · all ${b.legs.length} legs`,lv.p*100,"prp prb","",'data-pbet="1"'));if(mini==null)mini=lv.p*100}}
-    else if(n&&mini==null){const x=ls[0],v=legP(b,x.L,x.s,x);if(v!=null)mini=v*100}
-    if(n)out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">Est. = our own pace-based estimate (stats so far, time left, typical rate). No sportsbook prices exist for player props.</div>`)}
+    let preAll=[];
+    b.legs.forEach((L,i)=>{const g=ls[i].g;if(!PRP.has(L.type)||!g)return;const live=g.state==="in";let v=null,pre=false;
+      if(live)v=legP(b,L,ls[i].s,ls[i]);else if(g.state==="pre"&&L.type==="prop"){v=propPre(L,matchOfLeg(b,L));pre=v!=null}
+      if(v==null)return;n++;out.push(bar(`Est. leg: ${esc(L.text)}${pre?" · season avg":""}`,v*100,"prp","",`data-pleg="${i}"`))});
+    // pregame whole-bet estimate: every leg needs a number (props from season rates, game legs from the book-line model)
+    const pregame=b.multi&&ls.every(x=>x.g&&x.g.state==="pre");
+    if(pregame&&n){let pp=1;for(let i=0;i<b.legs.length&&pp!=null;i++){const L=b.legs[i],m=matchOfLeg(b,L),g=ls[i].g;let v=null;
+        if(L.type==="prop")v=propPre(L,m);else if(L.type==="ml"||L.type==="spread"||L.type==="total"){if(!SOCCER(m.path))v=estLeg(L,m,g)}
+        pp=v==null?null:pp*v}
+      if(pp!=null){out.push(bar(`Est. whole bet · all ${b.legs.length} legs · pregame`,pp*100,"prp prb","",'data-pbetpre="1"'));if(mini==null)mini=pp*100}}
+    if(n&&b.multi&&!pregame){const lv=betLive(b,LAST_STATUS[DATA.open.indexOf(b)]||"?",ls);if(lv&&lv.p!=null){out.push(bar(`Est. whole bet · all ${b.legs.length} legs`,lv.p*100,"prp prb","",'data-pbet="1"'));if(mini==null)mini=lv.p*100}}
+    else if(n&&mini==null&&!b.multi){const x=ls[0],v=legP(b,x.L,x.s,x);if(v!=null)mini=v*100}
+    if(n)out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">Est. = our own estimate: live from stats so far and time left; pregame from the player's season average per game. No sportsbook prices exist for player props.</div>`)}
   if(out.some(x=>x.includes('wp est')))out.push(`<div class="note" style="font-size:11px;color:var(--mut);margin-top:4px">${EST_NOTE}</div>`);
   if(mini==null&&p)mini=p.pct;
   return{html:out.filter(Boolean).join(""),mini}}
@@ -940,7 +990,7 @@ let FAST=10000, fastTimer=null, loading=false;
 async function loadData(){try{const d=await getJSON("data.json?t="+Date.now());if(!d||typeof d!=="object"||!Array.isArray(d.open)||!Array.isArray(d.settled_recent)||!d.balances||typeof d.balances!=="object")throw new Error("bad data");DATA=d}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
 let loadingAt=0;
 async function fastTick(full){clearTimeout(fastTimer);if(loading&&Date.now()-loadingAt>30000)loading=false;if(!DATA||loading)return schedule();loading=true;loadingAt=Date.now();espnErr=false;tickCD();
-  try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{}),refreshKalshi().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
+  try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{}),refreshKalshi().catch(()=>{}),refreshPropStats().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
   FAST=espnErr?30000:10000;try{render()}catch(e){console.error(e)}schedule()}
 let nextAt=0;
 // 10 s period: the next poll starts FAST ms after the previous one STARTED, not after it finished, but never less than 5 s after it
