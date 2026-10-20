@@ -327,6 +327,9 @@ def build_bet(row):
     ev_raw = row["event"]; market = row["market"]; pick = row["pick"]
     ev_clean = re.sub(r"\s*\([^)]*\)", "", ev_raw).strip()
     date = parse_date(row)
+    if date is None:   # no kickoff on the slip (uploads): look the game up on the day the bet was placed
+        try: date = datetime.datetime.strptime(row["date"][:10], "%Y-%m-%d")
+        except ValueError: date = None
     paths = candidate_paths(ev_raw, market)
     is_multi = bool(re.search(r"parlay|sgp|leg", market + " " + pick, re.I))
     leg_texts = [x for x in re.split(r"\s+\+\s+", pick) if x]
@@ -373,6 +376,11 @@ def build_bet(row):
             if L.get("team"): L["match"] = find_game([L["team"]], paths, date, L.get("women", False))
             elif L.get("game"): L["match"] = find_game(L["game"], paths, date)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
+    if m and not str(bet.get("start") or "").strip() and ET:   # kickoff missing on the slip: take it from the matched game
+        try:
+            k = datetime.datetime.fromisoformat(m["snapshot"]["date"].replace("Z", "+00:00"))
+            bet["start"] = k.astimezone(ET).strftime("%a %b %d %I:%M %p ET"); bet["start_ts"] = k.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+        except Exception as e: print("start from game failed", e, file=sys.stderr)
     if m: bet["sport"] = "Soccer" if m["path"].startswith("soccer") else SPORT_LABEL.get(m["path"], m["path"])
     elif "soccer" in (ev_raw + market).lower(): bet["sport"] = "Soccer"
     try: resolve_props(bet)
