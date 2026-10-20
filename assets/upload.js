@@ -83,8 +83,8 @@
       $('ai-save').onclick = function () {
         var v = $('ai-in').value.trim();
         if (!/^[A-Za-z0-9._~-]{20,200}$/.test(v)) { $('ai-err').textContent = 'That does not look like a key: it should be one string with no spaces, at least 20 characters.'; return; }
-        setAi(v); renderAi();
-        getModel().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = 'Google did not accept that key: ' + (e && e.message ? e.message : e); });
+        $('ai-err').textContent = 'Checking the key with Google…'; setAi(v);
+        getModel().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = (e && e.message ? e.message : String(e)); });
       };
     }
   }
@@ -95,12 +95,29 @@
     for (var i = 0; i < prefs.length; i++) { var f = names.filter(function (n) { return prefs[i].test(n); }).sort().reverse()[0]; if (f) return f; }
     return '';
   }
+  var VTX = 'https://aiplatform.googleapis.com/v1/publishers/google/models/';
+  function gerr(r, what) { return r.json().catch(function () { return {}; }).then(function (j) { throw new Error(what + ' (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 140) : '') + ')'); }); }
+  function vtxProbe(key) {   // newer Google keys (AQ.…) work on the Vertex AI "express" endpoint instead of the Gemini Developer API
+    var cands = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-flash-lite'], i = 0, last = null;
+    function next() {
+      if (i >= cands.length) return Promise.reject(last || new Error('no Gemini model available for this key'));
+      var m = cands[i++];
+      return fetch(VTX + m + ':generateContent?key=' + encodeURIComponent(key), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: 'Reply with the word ok.' }] }], generationConfig: { maxOutputTokens: 8 } }), credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+        if (r.ok) { S.kind = 'vtx'; return m; }
+        if (r.status === 404) return next();
+        return gerr(r, 'Google did not accept the key');
+      });
+    }
+    return next();
+  }
   function getModel() {
     if (S.model) return Promise.resolve(S.model);
-    return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(getAi()), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
-      if (!r.ok) throw new Error(r.status === 400 || r.status === 403 ? 'Google rejected the key' : 'Google error ' + r.status);
-      return r.json();
-    }).then(function (j) { var m = pickModel(j.models); if (!m) throw new Error('no Gemini model available for this key'); S.model = m; var e = $('ai-model'); if (e) e.textContent = '(' + m + ')'; return m; });
+    var key = getAi();
+    function done(m) { S.model = m; var e = $('ai-model'); if (e) e.textContent = '(' + m + ')'; return m; }
+    return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(key), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      if (r.ok) return r.json().then(function (j) { var m = pickModel(j.models); if (!m) throw new Error('no Gemini model available for this key'); S.kind = 'gem'; return done(m); });
+      return vtxProbe(key).then(done, function (e) { throw new Error(/^Google did not/.test(e.message) ? e.message : 'Google did not accept the key: ' + e.message); });
+    });
   }
   function shrink(file) {   // max 1600 px, JPEG: small enough to send fast, sharp enough to read
     return new Promise(function (res, rej) {
@@ -129,8 +146,9 @@
     var tries = 0;
     function go(model, b64) {
       tries++;
-      var body = { contents: [{ parts: [{ text: PROMPT + ' Today is ' + todayET() + ' (America/Toronto).' }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
-      return fetch(GEM + 'models/' + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      var vtx = S.kind === 'vtx';
+      var body = { contents: [{ role: 'user', parts: [{ text: PROMPT + ' Today is ' + todayET() + ' (America/Toronto).' }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
+      return fetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
         if (r.status === 429 && tries < 4) { it.msg = 'Waiting for Google’s free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 15000 * tries); }).then(function () { return go(model, b64); }); }
         if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { throw new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); });
         return r.json();
