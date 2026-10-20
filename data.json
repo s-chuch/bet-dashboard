@@ -380,17 +380,17 @@
     }
    ],
    "match": {
-    "path": "soccer/all",
+    "path": "soccer/uefa.champions",
     "date": "20261020",
     "groups": null,
     "id": "401915398",
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 2940.0,
+     "clock": 3000.0,
      "state": "in",
      "completed": false,
-     "detail": "49'",
+     "detail": "50'",
      "teams": [
       {
        "id": "437",
@@ -1362,13 +1362,49 @@
    "legs": [
     {
      "type": "ml",
-     "team": "Chesham Utd",
+     "team": "Chesham United",
      "women": false,
-     "text": "Chesham Utd"
+     "text": "Chesham Utd",
+     "team_ok": true
     }
    ],
-   "match": null,
-   "sport": null,
+   "match": {
+    "path": "soccer/eng.fa_qual",
+    "date": "20261020",
+    "groups": null,
+    "id": "401930565",
+    "snapshot": {
+     "date": "2026-10-20T18:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "282",
+       "name": "Forest Green Rovers",
+       "abbr": "FGR",
+       "short": "Forest Green",
+       "nick": "Forest Green Rovers",
+       "location": "Forest Green Rovers",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "4181",
+       "name": "Chesham United",
+       "abbr": "CHM",
+       "short": "Chesham Utd",
+       "nick": "Chesham United",
+       "location": "Chesham United",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
    "cash_stake": 10.0,
    "payout": 110.0,
    "payout_est": false,
@@ -1525,7 +1561,10 @@
      "stat": "sot",
      "op": "min",
      "min": 1,
-     "text": "Mason Greenwood 1+ SOT"
+     "text": "Mason Greenwood 1+ SOT",
+     "pteam": "FEN",
+     "pname": "Mason Greenwood",
+     "pid": "276221"
     },
     {
      "type": "prop",
@@ -1533,7 +1572,10 @@
      "stat": "sot",
      "op": "min",
      "min": 1,
-     "text": "Vedat Muriqi 1+ SOT"
+     "text": "Vedat Muriqi 1+ SOT",
+     "pteam": "FEN",
+     "pname": "Vedat Muriqi",
+     "pid": "240209"
     },
     {
      "type": "prop",
@@ -1541,11 +1583,14 @@
      "stat": "shots",
      "op": "min",
      "min": 3,
-     "text": "Marco Asensio 3+ shots"
+     "text": "Marco Asensio 3+ shots",
+     "pteam": "FEN",
+     "pname": "Marco Asensio",
+     "pid": "195821"
     }
    ],
    "match": {
-    "path": "soccer/all",
+    "path": "soccer/uefa.champions",
     "date": "20261020",
     "groups": null,
     "id": "401915403",
@@ -3641,10 +3686,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 2820.0,
+     "clock": 2880.0,
      "state": "in",
      "completed": false,
-     "detail": "47'",
+     "detail": "48'",
      "teams": [
       {
        "id": "382",
@@ -3952,10 +3997,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 69.0,
+     "clock": 45.0,
      "state": "in",
      "completed": false,
-     "detail": "1:09 - 2nd",
+     "detail": "45.0 - 2nd",
      "teams": [
       {
        "id": "8",
@@ -4301,8 +4346,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.155,
-     "away": 0.845,
+     "home": 0.175,
+     "away": 0.825,
      "spread": 0.01,
      "t": "2026-10-20T20:06Z"
     }
@@ -4367,10 +4412,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 69.0,
+     "clock": 45.0,
      "state": "in",
      "completed": false,
-     "detail": "1:09 - 2nd",
+     "detail": "45.0 - 2nd",
      "teams": [
       {
        "id": "8",
@@ -4716,8 +4761,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.155,
-     "away": 0.845,
+     "home": 0.175,
+     "away": 0.825,
      "spread": 0.01,
      "t": "2026-10-20T20:06Z"
     }
@@ -4783,10 +4828,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 2820.0,
+     "clock": 2880.0,
      "state": "in",
      "completed": false,
-     "detail": "47'",
+     "detail": "48'",
      "teams": [
       {
        "id": "382",
@@ -5046,10 +5091,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 69.0,
+     "clock": 45.0,
      "state": "in",
      "completed": false,
-     "detail": "1:09 - 2nd",
+     "detail": "45.0 - 2nd",
      "teams": [
       {
        "id": "8",
@@ -5395,8 +5440,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.155,
-     "away": 0.845,
+     "home": 0.175,
+     "away": 0.825,
      "spread": 0.01,
      "t": "2026-10-20T20:06Z"
     }
@@ -9864,6 +9909,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "4226b4528dcdee243163fc75ad9841a87d9fda9f",
- "generated_at": "2026-10-20T20:06:36+00:00"
+ "hash": "65db53e2743722319d8a94d416bf867b3298ac06",
+ "generated_at": "2026-10-20T16:06:59-04:00"
 }
