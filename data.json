@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NFL",
@@ -2957,7 +2957,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "MLB",
@@ -3112,7 +3112,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "MLB",
@@ -3300,7 +3300,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NHL",
@@ -3523,7 +3523,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NBA",
@@ -3694,7 +3694,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-20T21:37Z"
+     "t": "2026-10-20T21:56Z"
     }
    },
    "sport": "NHL",
@@ -4930,11 +4930,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 109,
+    "n": 110,
     "w": 32,
     "l": 47,
     "p": 0,
-    "pending": 30,
+    "pending": 31,
     "win_pct": 40.5,
     "units": 17.67,
     "roi_pct": 25.6,
@@ -4991,11 +4991,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 22,
+     "n": 23,
      "w": 8,
      "l": 12,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 40.0,
      "units": 13.74,
      "roi_pct": 68.7,
@@ -5083,11 +5083,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 14,
+     "n": 15,
      "w": 2,
      "l": 10,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 16.7,
      "units": -4.25,
      "roi_pct": -47.2,
@@ -5220,11 +5220,11 @@
      "wins_with_fair": 25
     },
     "no": {
-     "n": 41,
+     "n": 42,
      "w": 7,
      "l": 9,
      "p": 0,
-     "pending": 25,
+     "pending": 26,
      "win_pct": 43.8,
      "units": -3.11,
      "roi_pct": -28.2,
@@ -5253,6 +5253,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "675e4193",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "17:56",
+    "sport": "NBA",
+    "event": "Philadelphia 76ers @ New York Knicks",
+    "market": "Total (alt line)",
+    "selection": "Under 232.5",
+    "book": "theScore",
+    "rec_price": "-110",
+    "eff_price": "-110",
+    "fair_pct": "53.52",
+    "ev_pct": "2.17",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "5:47 PM scan, pulled 5:55 PM ET Oct 20; Pin alt over +108 / under -124; yes at -110 or better",
+    "units": null
+   },
    {
     "rec_id": "09af3014",
     "rec_date": "2026-10-20",
@@ -8296,6 +8319,6 @@
   "FanDuel": 2.1,
   "PointsBet": 144.25
  },
- "hash": "7885a575e377c463812f26cce94a880f5662ad2a",
- "generated_at": "2026-10-20T17:37:17-04:00"
+ "hash": "7313d925837b3af8abcabbcfc82af47a7a83d199",
+ "generated_at": "2026-10-20T17:56:19-04:00"
 }
