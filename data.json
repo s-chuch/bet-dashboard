@@ -27,8 +27,8 @@
   },
   {
    "book": "theScore",
-   "balance": 30.35,
-   "updated": "2026-10-19 16:43"
+   "balance": 30.77,
+   "updated": "2026-10-19 21:41"
   },
   {
    "book": "Hard Rock",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 634.31,
+ "total": 634.73,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -125,10 +125,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 2,
-     "clock": 782.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "13:02 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "25",
@@ -138,7 +138,7 @@
        "nick": "49ers",
        "location": "San Francisco",
        "home": true,
-       "score": "13"
+       "score": "20"
       },
       {
        "id": "28",
@@ -1026,10 +1026,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -1373,10 +1373,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 2,
-     "clock": 782.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "13:02 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "25",
@@ -1386,7 +1386,7 @@
        "nick": "49ers",
        "location": "San Francisco",
        "home": true,
-       "score": "13"
+       "score": "20"
       },
       {
        "id": "28",
@@ -2274,10 +2274,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -2392,11 +2392,11 @@
     "id": "401908028",
     "snapshot": {
      "date": "2026-10-20T00:00Z",
-     "period": 3,
+     "period": 5,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 3rd",
+     "detail": "Top 5th",
      "teams": [
       {
        "id": "30",
@@ -2406,7 +2406,7 @@
        "nick": "Rays",
        "location": "Tampa Bay",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "5",
@@ -2449,6 +2449,28 @@
         "97736403860493637475203608498332140786992272127925321864797636592055128937516",
         "64409059263171687069343398193515983785410852523329658749088274551116148033319"
        ]
+      },
+      {
+       "line": -4.5,
+       "outcomes": [
+        "Tampa Bay Rays",
+        "Cleveland Guardians"
+       ],
+       "tokens": [
+        "85409329922041733171291742080512235427502966923168343837259703228403767805998",
+        "45836295438064446673100384980751129018749206451795729265504920832313438447776"
+       ]
+      },
+      {
+       "line": -3.5,
+       "outcomes": [
+        "Tampa Bay Rays",
+        "Cleveland Guardians"
+       ],
+       "tokens": [
+        "84638423711042053368716314564853575706490120729500940097821576068678582846901",
+        "35760104084279683263503379172907288791742396321768286190292959818987309420861"
+       ]
       }
      ],
      "totals": [
@@ -2484,6 +2506,17 @@
         "13500588164900381546648160819155082389841450630971158661527600261920989357990",
         "37140005371074013659116917855838130991174414609273746292192329870075576329876"
        ]
+      },
+      {
+       "line": 8.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "66849846208224056744211159071183733075913108610192649082737157204850488650",
+        "79931902727865762123247945149188510836478318948064616467487338654586343883904"
+       ]
       }
      ],
      "ml": {
@@ -2504,10 +2537,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.835,
-     "away": 0.165,
+     "home": 0.895,
+     "away": 0.105,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "MLB",
@@ -2570,10 +2603,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 2,
-     "clock": 782.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "13:02 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "25",
@@ -2583,7 +2616,7 @@
        "nick": "49ers",
        "location": "San Francisco",
        "home": true,
-       "score": "13"
+       "score": "20"
       },
       {
        "id": "28",
@@ -3471,10 +3504,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -3482,216 +3515,6 @@
    "payout": 1.02,
    "payout_est": false,
    "start_ts": "2026-10-20T00:15Z"
-  },
-  {
-   "bet_id": "a90a66f3",
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Anaheim Ducks @ New York Rangers",
-   "market": "SGP 3-leg",
-   "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
-   "start": "Mon Oct 19 07:07 PM ET",
-   "price": "+110",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.22,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Beckett Sennecke",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Beckett Sennecke 2+ SOG",
-     "pteam": "ANA",
-     "pname": "Beckett Sennecke",
-     "pid": "5216858"
-    },
-    {
-     "type": "prop",
-     "player": "Pavel Dorofeyev",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Pavel Dorofeyev 2+ SOG",
-     "pteam": "NYR",
-     "pname": "Pavel Dorofeyev",
-     "pid": "4587588"
-    },
-    {
-     "type": "prop",
-     "player": "Cutter Gauthier",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Cutter Gauthier 3+ SOG",
-     "pteam": "ANA",
-     "pname": "Cutter Gauthier",
-     "pid": "5080145"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261019",
-    "groups": null,
-    "id": "401892535",
-    "snapshot": {
-     "date": "2026-10-19T23:00Z",
-     "period": 3,
-     "clock": 1200.0,
-     "state": "in",
-     "completed": false,
-     "detail": "20:00 - 3rd",
-     "teams": [
-      {
-       "id": "13",
-       "name": "New York Rangers",
-       "abbr": "NYR",
-       "short": "Rangers",
-       "nick": "Rangers",
-       "location": "New York",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "25",
-       "name": "Anaheim Ducks",
-       "abbr": "ANA",
-       "short": "Ducks",
-       "nick": "Ducks",
-       "location": "Anaheim",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-ana-nyr-2026-10-19",
-     "title": "Ducks vs. Rangers",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Rangers",
-        "Ducks"
-       ],
-       "tokens": [
-        "99963139498918968658001510778976308356146380266043966517363962644789868511515",
-        "60592738069493716017156201793169040287789174640724984357019431885372580624478"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Rangers",
-        "Ducks"
-       ],
-       "tokens": [
-        "67002691517560076629713503245220305977514000488018424699862879509934630781337",
-        "94430209409745874169041657095516278997014671032809918732000010868281935687431"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Rangers",
-        "Ducks"
-       ],
-       "tokens": [
-        "53644476241637424518767484790347507957994422391753808165936923109430387418562",
-        "34856429675215568571725342131345324511305920047157894082785874915871254297531"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Rangers",
-        "Ducks"
-       ],
-       "tokens": [
-        "63781428669372387336822802900537494649209405725472477601071218137040822627546",
-        "32267384399436664400518989715449266406278569306244652931850828387913997085660"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "73444060454040541938548292787822611062946607751262142174043192445610903730565",
-        "3518442380071112761693513781122378423305618328562345309434898565861253088065"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18636755626903059289112982225822868265763307665217151000302075478264914832504",
-        "73504993854303809355721898284535684681604125724011424036133104002798634789008"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "2970904477332642789095620827910408584641623410491628233927241608754068549435",
-        "74334304866124188056173743001587003466431939071346259593594085233358121542033"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "79218349040481945875631593124189584430745340186320015816946826868318677254184",
-        "105702421577462466774882788058555458846482737724522271225287797702629523540683"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Ducks",
-       "Rangers"
-      ],
-      "tokens": [
-       "98565930803831823007480627305358462916260014005483554765420794108251250617934",
-       "58364876603920607311080517827997727706334620111758985887287899370208604505041"
-      ]
-     }
-    },
-    "an": {
-     "id": 293435,
-     "home_team_id": 243,
-     "away_team_id": 223
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.995,
-     "away": 0.005,
-     "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.2,
-   "payout": 0.42,
-   "payout_est": false,
-   "start_ts": "2026-10-19T23:07Z"
   },
   {
    "bet_id": "ac79d306",
@@ -3750,11 +3573,11 @@
     "id": "401918306",
     "snapshot": {
      "date": "2026-10-20T00:00Z",
-     "period": 2,
-     "clock": 56.6,
+     "period": 3,
+     "clock": 130.0,
      "state": "in",
      "completed": false,
-     "detail": "56.6 - 2nd",
+     "detail": "2:10 - 3rd",
      "teams": [
       {
        "id": "129689",
@@ -3764,7 +3587,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": true,
-       "score": "37"
+       "score": "44"
       },
       {
        "id": "20",
@@ -3774,7 +3597,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": false,
-       "score": "37"
+       "score": "49"
       }
      ]
     }
@@ -3832,11 +3655,11 @@
     "id": "401908028",
     "snapshot": {
      "date": "2026-10-20T00:00Z",
-     "period": 3,
+     "period": 5,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 3rd",
+     "detail": "Top 5th",
      "teams": [
       {
        "id": "30",
@@ -3846,7 +3669,7 @@
        "nick": "Rays",
        "location": "Tampa Bay",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "5",
@@ -3889,6 +3712,28 @@
         "97736403860493637475203608498332140786992272127925321864797636592055128937516",
         "64409059263171687069343398193515983785410852523329658749088274551116148033319"
        ]
+      },
+      {
+       "line": -4.5,
+       "outcomes": [
+        "Tampa Bay Rays",
+        "Cleveland Guardians"
+       ],
+       "tokens": [
+        "85409329922041733171291742080512235427502966923168343837259703228403767805998",
+        "45836295438064446673100384980751129018749206451795729265504920832313438447776"
+       ]
+      },
+      {
+       "line": -3.5,
+       "outcomes": [
+        "Tampa Bay Rays",
+        "Cleveland Guardians"
+       ],
+       "tokens": [
+        "84638423711042053368716314564853575706490120729500940097821576068678582846901",
+        "35760104084279683263503379172907288791742396321768286190292959818987309420861"
+       ]
       }
      ],
      "totals": [
@@ -3924,6 +3769,17 @@
         "13500588164900381546648160819155082389841450630971158661527600261920989357990",
         "37140005371074013659116917855838130991174414609273746292192329870075576329876"
        ]
+      },
+      {
+       "line": 8.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "66849846208224056744211159071183733075913108610192649082737157204850488650",
+        "79931902727865762123247945149188510836478318948064616467487338654586343883904"
+       ]
       }
      ],
      "ml": {
@@ -3944,10 +3800,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.835,
-     "away": 0.165,
+     "home": 0.895,
+     "away": 0.105,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "MLB",
@@ -4669,7 +4525,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -4736,10 +4592,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 2,
-     "clock": 782.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "13:02 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "25",
@@ -4749,7 +4605,7 @@
        "nick": "49ers",
        "location": "San Francisco",
        "home": true,
-       "score": "13"
+       "score": "20"
       },
       {
        "id": "28",
@@ -5637,10 +5493,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -5680,10 +5536,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 2,
-     "clock": 782.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "13:02 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "25",
@@ -5693,7 +5549,7 @@
        "nick": "49ers",
        "location": "San Francisco",
        "home": true,
-       "score": "13"
+       "score": "20"
       },
       {
        "id": "28",
@@ -6581,10 +6437,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NFL",
@@ -6646,11 +6502,11 @@
     "id": "401892536",
     "snapshot": {
      "date": "2026-10-19T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 53.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "0:53 - 3rd",
      "teams": [
       {
        "id": "15",
@@ -6660,7 +6516,7 @@
        "nick": "Flyers",
        "location": "Philadelphia",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "17",
@@ -6670,7 +6526,7 @@
        "nick": "Avalanche",
        "location": "Colorado",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     },
@@ -6698,6 +6554,17 @@
        "tokens": [
         "48053498077977717821760773318248716634351278497943336452161622665715201872578",
         "42015057249073026343214239341290180323896598664562345380725035722869683647539"
+       ]
+      },
+      {
+       "line": -2.5,
+       "outcomes": [
+        "Flyers",
+        "Avalanche"
+       ],
+       "tokens": [
+        "8906333136032896328506529910254627899083560738656968839179036890446980310970",
+        "2551627122125584418193351318195435068944433471887504165598852617772007847363"
        ]
       }
      ],
@@ -6776,10 +6643,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.605,
-     "away": 0.395,
-     "spread": 0.01,
-     "t": "2026-10-20T01:04Z"
+     "home": 0.9397,
+     "away": 0.0603,
+     "spread": 0.02,
+     "t": "2026-10-20T01:41Z"
     }
    },
    "sport": "NHL",
@@ -7217,6 +7084,16 @@
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "theScore",
+   "event": "Anaheim Ducks @ New York Rangers",
+   "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
+   "result": "won",
+   "pnl": 0.22,
+   "stake": 0.2,
    "auto": true
   },
   {
@@ -8200,15 +8077,15 @@
    "auto": false
   }
  ],
- "pnl_total": 140.76,
+ "pnl_total": 140.98,
  "unsettled": {
-  "n": 26,
-  "cash_stake": 79.3,
-  "max_payout": 1097.44,
+  "n": 25,
+  "cash_stake": 79.1,
+  "max_payout": 1097.02,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 79.3,
+ "open_stake": 79.1,
  "recs": {
   "stats": {
    "overall": {
@@ -11033,6 +10910,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "a90a66f3",
+    "book": "theScore",
+    "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
+    "result": "won",
+    "pnl": 0.22,
+    "final": "ANA 2-5 NYR",
+    "at": "2026-10-19 21:41"
+   },
+   {
     "bet_id": "a0031feb",
     "book": "PointsBet",
     "pick": "Draw",
@@ -11150,9 +11036,9 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 20:00 ET"
+  "last_change_at": "2026-10-19 21:41 ET"
  },
- "open_live_n": 26,
+ "open_live_n": 25,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 0.5,
@@ -11160,8 +11046,8 @@
   "FanDuel": 2.3,
   "Hard Rock": 5.0,
   "PointsBet": 208.75,
-  "theScore": 0.6
+  "theScore": 0.4
  },
- "hash": "da1bfa0d5a3dacd27f00f5aab8d829dcec51b7c0",
- "generated_at": "2026-10-19T21:04:50-04:00"
+ "hash": "6ea1f33407ce5e2016e39beed0c1ba02b449ce7b",
+ "generated_at": "2026-10-19T21:41:38-04:00"
 }
