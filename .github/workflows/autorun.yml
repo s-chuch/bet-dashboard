@@ -85,6 +85,15 @@ jobs:
             done
             if [ "$pushed" -ne 1 ] && [ "$status" -eq 0 ]; then status=1; echo "::error::could not push after 3 attempts"; fi
           }
+          # live loop only: Kalshi prices (it rejects browser requests) -> one rewritten commit on the live-feed branch, read by the Live page
+          kalshi() {
+            python3 scripts/kalshi_live.py "$RUNNER_TEMP/kalshi.json" 2>/dev/null || return 0
+            [ -s "$RUNNER_TEMP/kalshi.json" ] || return 0
+            blob=$(git hash-object -w "$RUNNER_TEMP/kalshi.json")
+            tree=$(printf '100644 blob %s\tkalshi.json\n' "$blob" | git mktree)
+            commit=$(git commit-tree "$tree" -m "kalshi feed $(date -u +%H:%M:%S)")
+            git push -q -f origin "$commit:refs/heads/live-feed" || echo "kalshi feed push failed"
+          }
           if [ "$LIVE" = "true" ]; then
             echo "LIVE loop: settle check every 5-10 s while any bet is active (max 55 min)"
             pass ""                                      # one full pass first (review list, archive, rebuild)
@@ -92,6 +101,7 @@ jobs:
             while [ "$SECONDS" -lt "$end" ] && python3 scripts/next_run.py --live-check; do
               t0=$SECONDS; n=$((n + 1))
               pass --fast
+              if [ $((n % 2)) -eq 0 ]; then kalshi || true; fi       # every other pass: ~20 s, keeps Kalshi's rate limit happy
               [ "$status" -ne 0 ] && echo "::warning::live pass reported status $status"
               took=$((SECONDS - t0)); left=$((10 - took)); if [ "$left" -lt 5 ]; then left=5; fi
               # one short line per pass so the log shows the real period (pass time + sleep)

@@ -657,8 +657,18 @@ function pmBar(L,m,g,ctx){const q=pmVal(L,m,g);if(!q)return"";const live=g.state
   const note=`Polymarket mid${q.spread!=null?` · spread ${(q.spread*100).toFixed(1)}¢`:""}${wide?" · thin market, not used":""}${!live?" · pregame":""}${L.type!=="ml"?" · display only":""}`;
   return bar(`Polymarket${ctx||""} · ${what}`,q.mid*100,"pmb",note)}
 // Kalshi (free prediction market) moneyline, pulled server-side at the last build, so pregame only
-function kalBar(L,m,g,ctx){if(L.type!=="ml"||!m||!m.kal||!g||g.state!=="pre")return"";const pt=pickTeam(g,L);if(!pt)return"";
-  const v=pt.T.home?m.kal.home:m.kal.away;if(v==null)return"";
+// live: the GitHub live loop pushes fresh Kalshi prices to the live-feed branch every ~20 s; the page reads them via the contents API
+// (needs the saved GitHub token for a 20 s poll; without it the API's anonymous limit allows about one read a minute)
+const KLIVE={games:{},t:0},KLIVE_URL="https://api.github.com/repos/s-chuch/bet-dashboard/contents/kalshi.json?ref=live-feed";let KLIVE_AT=0;
+async function refreshKalshi(){let tok="";try{tok=localStorage.getItem("bt.gh.settle")||""}catch(e){}
+  if(!DATA||Date.now()-KLIVE_AT<(tok?18000:70000))return;
+  if(!allMatches().some(m=>{const g=gameFor(m);return g&&g.state==="in"}))return;KLIVE_AT=Date.now();
+  try{const r=await tfetch(KLIVE_URL,{cache:"no-store",headers:{Accept:"application/vnd.github.raw",...(tok?{Authorization:"Bearer "+tok}:{})}});if(!r.ok)throw 0;
+    const j=await r.json();KLIVE.games=j.games||{};KLIVE.t=Date.parse(j.t)||0;FEED.kal={ok:Date.now()}}catch(e){FEED.kal={bad:"no live feed yet"}}}
+function kalBar(L,m,g,ctx){if(L.type!=="ml"||!m||!g)return"";const pt=pickTeam(g,L);if(!pt)return"";
+  if(g.state==="in"){const k=KLIVE.games[m.id],age=(Date.now()-KLIVE.t)/1000;if(!k||!KLIVE.t||age>300)return"";const v=pt.T.home?k.home:k.away;if(v==null)return"";
+    return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · live · ${age<90?Math.round(age)+" s":Math.round(age/60)+" min"} old`)}
+  if(g.state!=="pre"||!m.kal)return"";const v=pt.T.home?m.kal.home:m.kal.away;if(v==null)return"";
   return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · pregame · as of ${tfmt(m.kal.t)}`)}
 function booksBar(L,m,g,ctx){if(g.state!=="in")return"";const bp=booksP(L,m,g);if(!bp)return"";
   const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:L.type==="spread"?`${esc(L.text)} covers`:`${esc(L.text)} hits`;
@@ -816,7 +826,7 @@ let FAST=10000, fastTimer=null, loading=false;
 async function loadData(){try{const d=await getJSON("data.json?t="+Date.now());if(!d||typeof d!=="object"||!Array.isArray(d.open)||!Array.isArray(d.settled_recent)||!d.balances||typeof d.balances!=="object")throw new Error("bad data");DATA=d}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
 let loadingAt=0;
 async function fastTick(full){clearTimeout(fastTimer);if(loading&&Date.now()-loadingAt>30000)loading=false;if(!DATA||loading)return schedule();loading=true;loadingAt=Date.now();espnErr=false;tickCD();
-  try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
+  try{await refreshScores(full);await Promise.all([refreshProbs(),refreshPM().catch(()=>{}),refreshAN().catch(()=>{}),refreshKalshi().catch(()=>{})]);if(full)await refreshPregame()}finally{loading=false}
   FAST=espnErr?30000:10000;try{render()}catch(e){console.error(e)}schedule()}
 let nextAt=0;
 // 10 s period: the next poll starts FAST ms after the previous one STARTED, not after it finished, but never less than 5 s after it
@@ -838,6 +848,7 @@ function renderFeeds(){const el=$("feeds");if(!el)return;
   const st=x=>x&&x.ok&&Date.now()-x.ok<120000,bad=x=>x&&x.bad;
   const eBad=bad(FEED.site)||bad(FEED.core),eOK=st(FEED.site)&&!eBad;
   const parts=[f("ESPN",eOK,eBad||(FEED.site?"stale":"no data yet")),f("Polymarket",pmOK!==false,pmOK===false?"request failed":""),f("Odds",anOK!==false,anOK===false?"request failed":"")];
+  if(FEED.kal)parts.push(f("Kalshi",!!FEED.kal.ok,FEED.kal.bad||""));
   if(FEED.mlb)parts.push(f("MLB backup",!!FEED.mlb.ok,FEED.mlb.bad||""));
   const h=parts.join("")+(FEED.csp?` <span class="fbad">⚠ blocked by page security policy: ${esc(FEED.csp)}</span>`:"");
   if(el._h!==h){el._h=h;el.innerHTML=h}}
