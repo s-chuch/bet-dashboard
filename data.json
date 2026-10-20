@@ -125,10 +125,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 780.0,
+     "clock": 775.0,
      "state": "in",
      "completed": false,
-     "detail": "13:00 - 4th",
+     "detail": "12:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -1026,8 +1026,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
+     "home": 0.9343,
+     "away": 0.0657,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -1373,10 +1373,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 780.0,
+     "clock": 775.0,
      "state": "in",
      "completed": false,
-     "detail": "13:00 - 4th",
+     "detail": "12:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -2274,8 +2274,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
+     "home": 0.9343,
+     "away": 0.0657,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -2548,8 +2548,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9455,
-     "away": 0.0545,
+     "home": 0.945,
+     "away": 0.055,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -2614,10 +2614,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 780.0,
+     "clock": 775.0,
      "state": "in",
      "completed": false,
-     "detail": "13:00 - 4th",
+     "detail": "12:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -3515,8 +3515,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
+     "home": 0.9343,
+     "away": 0.0657,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -3730,8 +3730,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9455,
-     "away": 0.0545,
+     "home": 0.945,
+     "away": 0.055,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -4522,10 +4522,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 780.0,
+     "clock": 775.0,
      "state": "in",
      "completed": false,
-     "detail": "13:00 - 4th",
+     "detail": "12:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -5423,8 +5423,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
+     "home": 0.9343,
+     "away": 0.0657,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -5466,10 +5466,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 780.0,
+     "clock": 775.0,
      "state": "in",
      "completed": false,
-     "detail": "13:00 - 4th",
+     "detail": "12:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -6367,8 +6367,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
+     "home": 0.9343,
+     "away": 0.0657,
      "spread": 0.01,
      "t": "2026-10-20T02:39Z"
     }
@@ -10810,6 +10810,6 @@
   "PointsBet": 208.75,
   "theScore": 0.2
  },
- "hash": "f16eceee26cf01e1d943db284747245e3a00dd26",
- "generated_at": "2026-10-19T22:39:34-04:00"
+ "hash": "d08e1124d4cd6129479d1a97bb1acf4d739d6638",
+ "generated_at": "2026-10-19T22:39:53-04:00"
 }
