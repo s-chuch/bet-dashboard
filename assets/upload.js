@@ -197,7 +197,7 @@
     if (!it) { return; }
     S.busy = true; it.state = 'read'; it.msg = ''; renderQueue();
     var job = getAi() ? aiRead(it).then(function (rows) {
-      rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', ''); });
+      rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
       : ocrRead(it, getAi() ? '' : 'Basic reader (no AI key). Add a free key above for full automatic reading.');
     job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
@@ -229,15 +229,15 @@
     if (typeof SlipParse === 'undefined') p = { kind: 'placed', warnings: ['Automatic field filling is not available: fill the fields from the text at the bottom of this card.'] };
     else try { p = SlipParse.parseSlip(it.text) || {}; } catch (e) { p = { kind: 'placed', warnings: ['Could not fill the fields automatically (' + e.message + '). Fill them from the text at the bottom of this card.'] }; }
     if (!p.date) p.date = slipDate(it.text);
-    addDraftParsed(it.name, p, why || '', it.text);
+    addDraftParsed(it.name, p, why || '', it.text, it.id);
   }
-  function addDraftParsed(name, p, note, text) {
+  function addDraftParsed(name, p, note, text, itemId) {
     var date = p.date || todayET();
     var dr = {
       id: S.nextId++, file: name, kind: p.kind || 'other', on: p.kind === 'placed' || p.kind === 'open',
       book: p.book || '', date: date, event: p.event || '', start: normStart(p.start_text, date), market: p.market || '', pick: p.pick || '',
       price: p.price || '', boosted: p.boosted_price || '', stake: p.stake != null ? String(p.stake) : '', to_win: p.to_win != null ? String(p.to_win) : '',
-      warnings: (p.warnings || []).slice(), result: p.result || '', text: text || '', dup: false, note: note || ''
+      warnings: (p.warnings || []).slice(), result: p.result || '', text: text || '', dup: false, note: note || '', itemId: itemId
     };
     if (!dr.price && dr.boosted) { dr.price = dr.boosted; dr.boosted = ''; dr.warnings.push('The odds before the boost were not readable, so the boosted odds are shown as the odds. Stake and to-win are right.'); }
     if (note && /^AI reading failed|^Basic reader/.test(note)) dr.warnings.unshift(note);
@@ -260,6 +260,7 @@
     if (!MONEY_RE.test(d.to_win.trim())) bad.to_win = 1;
     return bad;
   }
+  function problemsCount(d) { return Object.keys(problems(d)).length; }
   function updateSend() {
     var on = S.drafts.filter(function (d) { return d.on; }), ok = on.length && on.every(function (d) { return !Object.keys(problems(d)).length; });
     var b = $('send'); if (!b) return;
@@ -314,7 +315,7 @@
   function renderQueue() {
     $('queue').innerHTML = S.items.map(function (it) {
       var st = it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ('Reading… ' + (it.pct || 0) + '%') : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
-      return '<div class="qi"><img alt="" src="' + esc(it.url) + '"><div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div>';
+      return '<div class="qi"><img alt="" src="' + esc(it.url) + '"><div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">Re-read</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
     }).join('');
   }
   function fld(d, k, label, cls, type) {
@@ -333,7 +334,7 @@
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
       var raw = '<details class="small muted" style="margin-top:8px"><summary>What the reader saw</summary><pre style="white-space:pre-wrap;font-size:11px;margin:6px 0 0">' + esc(d.text) + '</pre></details>';
-      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '" style="margin-left:8px">Remove</button></div>' + form + w + raw + '</div>';
+      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + (d.itemId && (d.kind === 'other' || d.warnings.length || problemsCount(d)) ? '<button class="btn sm pri" type="button" data-rr="' + d.itemId + '" style="margin-left:8px">Re-read</button>' : '') + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '" style="margin-left:8px">Remove</button></div>' + form + w + raw + '</div>';
     }).join('');
     if (!keepMsg) { var m = $('sendmsg'); if (m && !m.dataset.keep) m.textContent = ''; }
     updateSend();
@@ -353,6 +354,13 @@
   ['dragenter', 'dragover'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
   ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
   drop.addEventListener('drop', function (e) { addFiles(e.dataTransfer && e.dataTransfer.files); });
+  function reread(id) {
+    var it = S.items.filter(function (x) { return String(x.id) === String(id); })[0]; if (!it || it.state === 'read' || it.state === 'wait') return;
+    S.drafts = S.drafts.filter(function (d) { return String(d.itemId) !== String(id); });
+    it.state = 'wait'; it.msg = ''; it.pct = 0; S.drafts.forEach(function (x) { x._seen = 0; });
+    renderQueue(); renderDrafts(); runQueue();
+  }
+  document.addEventListener('click', function (e) { var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rr'); if (id) reread(id); });
   $('queue').addEventListener('click', function (e) {
     var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rm'); if (!id) return;
     var it = S.items.filter(function (x) { return String(x.id) === id; })[0]; if (!it || it.state === 'read') return;
