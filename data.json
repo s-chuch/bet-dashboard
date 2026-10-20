@@ -32,11 +32,11 @@
   },
   {
    "book": "Hard Rock",
-   "balance": 8.0,
-   "updated": "2026-10-17 19:27"
+   "balance": 27.0,
+   "updated": "2026-10-20 16:53"
   }
  ],
- "total": 639.15,
+ "total": 658.15,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -354,72 +354,6 @@
    "payout": 133.72,
    "payout_est": false,
    "start_ts": "2026-10-24T14:00Z"
-  },
-  {
-   "bet_id": "c8cabe33",
-   "date": "2026-10-18",
-   "book": "Hard Rock",
-   "event": "FC Porto v PSV Eindhoven",
-   "market": "3-Way Moneyline (bonus bet $5.00; price unconfirmed, est.)",
-   "pick": "PSV Eindhoven",
-   "start": "Tue Oct 20 3:00 PM ET",
-   "price": "+380",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 19.0,
-   "ev_pct": "78.4",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "PSV Eindhoven",
-     "women": false,
-     "text": "PSV Eindhoven",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261020",
-    "groups": null,
-    "id": "401915398",
-    "snapshot": {
-     "date": "2026-10-20T19:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+4'",
-     "teams": [
-      {
-       "id": "437",
-       "name": "FC Porto",
-       "abbr": "FCP",
-       "short": "FC Porto",
-       "nick": "FC Porto",
-       "location": "FC Porto",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "148",
-       "name": "PSV Eindhoven",
-       "abbr": "PSV",
-       "short": "PSV",
-       "nick": "PSV Eindhoven",
-       "location": "PSV Eindhoven",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 19.0,
-   "payout_est": false,
-   "start_ts": "2026-10-20T19:00Z"
   },
   {
    "bet_id": "537c5a5e",
@@ -1203,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NFL",
@@ -2336,7 +2270,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NFL",
@@ -3055,7 +2989,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NFL",
@@ -3287,7 +3221,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "MLB",
@@ -3442,7 +3376,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "MLB",
@@ -3630,7 +3564,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NHL",
@@ -3853,7 +3787,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NBA",
@@ -3916,10 +3850,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 132.0,
+     "clock": 57.2,
      "state": "in",
      "completed": false,
-     "detail": "2:12 - 3rd",
+     "detail": "57.2 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -3929,7 +3863,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "77"
+       "score": "79"
       },
       {
        "id": "2",
@@ -3939,7 +3873,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "83"
+       "score": "85"
       }
      ]
     },
@@ -4375,10 +4309,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
-     "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "home": 0.2886,
+     "away": 0.7114,
+     "spread": 0.02,
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NBA",
@@ -4441,10 +4375,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 132.0,
+     "clock": 57.2,
      "state": "in",
      "completed": false,
-     "detail": "2:12 - 3rd",
+     "detail": "57.2 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4454,7 +4388,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "77"
+       "score": "79"
       },
       {
        "id": "2",
@@ -4464,7 +4398,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "83"
+       "score": "85"
       }
      ]
     },
@@ -4900,10 +4834,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
-     "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "home": 0.2886,
+     "away": 0.7114,
+     "spread": 0.02,
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NBA",
@@ -5074,7 +5008,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NHL",
@@ -5141,10 +5075,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 132.0,
+     "clock": 57.2,
      "state": "in",
      "completed": false,
-     "detail": "2:12 - 3rd",
+     "detail": "57.2 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -5154,7 +5088,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "77"
+       "score": "79"
       },
       {
        "id": "2",
@@ -5164,7 +5098,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "83"
+       "score": "85"
       }
      ]
     },
@@ -5600,10 +5534,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
-     "spread": 0.01,
-     "t": "2026-10-20T20:51Z"
+     "home": 0.2886,
+     "away": 0.7114,
+     "spread": 0.02,
+     "t": "2026-10-20T20:53Z"
     }
    },
    "sport": "NBA",
@@ -5824,6 +5758,16 @@
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "Hard Rock",
+   "event": "FC Porto v PSV Eindhoven",
+   "pick": "PSV Eindhoven",
+   "result": "won",
+   "pnl": 19.0,
+   "stake": 5.0,
    "auto": true
   },
   {
@@ -6737,11 +6681,11 @@
    "auto": false
   }
  ],
- "pnl_total": 118.27,
+ "pnl_total": 137.27,
  "unsettled": {
-  "n": 28,
+  "n": 27,
   "cash_stake": 56.5,
-  "max_payout": 1065.98,
+  "max_payout": 1046.98,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -6750,18 +6694,18 @@
   "stats": {
    "overall": {
     "n": 109,
-    "w": 31,
+    "w": 32,
     "l": 47,
     "p": 0,
-    "pending": 31,
-    "win_pct": 39.7,
+    "pending": 30,
+    "win_pct": 40.5,
     "units": 17.67,
     "roi_pct": 25.6,
     "roi_n": 69,
     "exp_roi_pct": 11.6,
-    "exp_wins": 27.7,
-    "exp_wins_n": 78,
-    "wins_with_fair": 31
+    "exp_wins": 27.9,
+    "exp_wins_n": 79,
+    "wins_with_fair": 32
    },
    "by_promo": {
     "No Sweat": {
@@ -6781,18 +6725,18 @@
     },
     "bonus bet": {
      "n": 18,
-     "w": 4,
+     "w": 5,
      "l": 2,
      "p": 0,
-     "pending": 12,
-     "win_pct": 66.7,
+     "pending": 11,
+     "win_pct": 71.4,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.0,
-     "exp_wins_n": 6,
-     "wins_with_fair": 4
+     "exp_wins": 1.2,
+     "exp_wins_n": 7,
+     "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
      "n": 3,
@@ -6963,18 +6907,18 @@
     },
     "Soccer": {
      "n": 30,
-     "w": 7,
+     "w": 8,
      "l": 9,
      "p": 0,
-     "pending": 14,
-     "win_pct": 43.8,
+     "pending": 13,
+     "win_pct": 47.1,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 3.8,
-     "exp_wins_n": 16,
-     "wins_with_fair": 7
+     "exp_wins": 4.1,
+     "exp_wins_n": 17,
+     "wins_with_fair": 8
     },
     "WNBA": {
      "n": 1,
@@ -7025,18 +6969,18 @@
    "by_placed": {
     "yes": {
      "n": 68,
-     "w": 24,
+     "w": 25,
      "l": 38,
      "p": 0,
-     "pending": 6,
-     "win_pct": 38.7,
+     "pending": 5,
+     "win_pct": 39.7,
      "units": 20.78,
      "roi_pct": 35.8,
      "roi_n": 58,
      "exp_roi_pct": 12.7,
-     "exp_wins": 22.8,
-     "exp_wins_n": 62,
-     "wins_with_fair": 24
+     "exp_wins": 23.0,
+     "exp_wins_n": 63,
+     "wins_with_fair": 25
     },
     "no": {
      "n": 41,
@@ -7641,11 +7585,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "PSV 1-0 FCP (FT)",
     "source": "rec.py add",
     "notes": "Hard Rock  bonus bet (No Sweat refund, stake not returned). Hard Rock ON price not in feed: +380 is proxy (FD/CZR +380, b365 +400, DK +370). ev = bonus value per $1 x100 (0.784 at +380; 0.826 at +400). Pin Porto -157 / draw +371 / PSV +367, fair 20.6% (+384). Pulled 10:48 PM ET. Yes at +363 or better. Backups: Coventry +500 at Spurs (Mon 3 PM), Bodo/Glimt +400 at Napoli (Tue 3 PM)",
-    "units": null
+    "units": 3.8
    },
    {
     "rec_id": "2d4ff644",
@@ -9880,6 +9824,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "c8cabe33",
+    "book": "Hard Rock",
+    "pick": "PSV Eindhoven",
+    "result": "won",
+    "pnl": 19.0,
+    "final": "PSV 1-0 FCP",
+    "at": "2026-10-20 16:53"
+   },
+   {
     "bet_id": "5df01cb0",
     "book": "Caesars",
     "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
@@ -10096,17 +10049,16 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 16:51 ET"
+  "last_change_at": "2026-10-20 16:53 ET"
  },
- "open_live_n": 27,
+ "open_live_n": 26,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 3.0,
   "DraftKings": 0.5,
   "FanDuel": 2.6,
-  "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "79e1231c39a1e69f829f2883cf1367caff9d6c95",
- "generated_at": "2026-10-20T16:51:49-04:00"
+ "hash": "22346e18d117afa088a931dc99db812290c229f0",
+ "generated_at": "2026-10-20T16:53:18-04:00"
 }

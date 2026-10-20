@@ -21,6 +21,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "c8cabe33",
+   "book": "Hard Rock",
+   "pick": "PSV Eindhoven",
+   "result": "won",
+   "pnl": 19.0,
+   "final": "PSV 1-0 FCP",
+   "at": "2026-10-20 16:53"
+  },
+  {
    "bet_id": "5df01cb0",
    "book": "Caesars",
    "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
@@ -238,5 +247,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 16:51 ET"
+ "last_change_at": "2026-10-20 16:53 ET"
 }
