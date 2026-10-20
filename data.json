@@ -433,7 +433,10 @@
      "stat": "passYds",
      "op": "min",
      "min": 220,
-     "text": "Drake Maye 220+ pass yds"
+     "text": "Drake Maye 220+ pass yds",
+     "pteam": "NE",
+     "pname": "Drake Maye",
+     "pid": "4431452"
     },
     {
      "type": "prop",
@@ -441,7 +444,10 @@
      "stat": "passYds",
      "op": "min",
      "min": 220,
-     "text": "Caleb Williams 220+ pass yds"
+     "text": "Caleb Williams 220+ pass yds",
+     "pteam": "CHI",
+     "pname": "Caleb Williams",
+     "pid": "4431611"
     }
    ],
    "match": {
@@ -1282,7 +1288,7 @@
     }
    ],
    "match": {
-    "path": "soccer/all",
+    "path": "soccer/eng.fa_qual",
     "date": "20261020",
     "groups": null,
     "id": "401930565",
@@ -5599,6 +5605,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "db0d093bef4d3830de66d5cb4a36c097e35a8259",
- "generated_at": "2026-10-20T10:03:20+00:00"
+ "hash": "29a6b9db66b68e26ddd1caf700aca7014e1d15cb",
+ "generated_at": "2026-10-20T06:03:36-04:00"
 }
