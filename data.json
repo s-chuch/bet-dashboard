@@ -1122,7 +1122,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T16:35Z"
+     "t": "2026-10-20T17:30Z"
     }
    },
    "sport": "NFL",
@@ -1515,11 +1515,11 @@
     "id": "401915403",
     "snapshot": {
      "date": "2026-10-20T16:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "436",
@@ -1529,7 +1529,7 @@
        "nick": "Fenerbahce",
        "location": "Fenerbahce",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "494",
@@ -1539,7 +1539,7 @@
        "nick": "Slavia Prague",
        "location": "Slavia Prague",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -5605,6 +5605,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "fe835b70c5b01d50df123f51fff7bcf53722f656",
- "generated_at": "2026-10-20T12:35:18-04:00"
+ "hash": "05f6ab28c6ce19b2606d87807685dad107e99c05",
+ "generated_at": "2026-10-20T13:30:42-04:00"
 }
