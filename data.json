@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NFL",
@@ -2957,7 +2957,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "MLB",
@@ -3112,7 +3112,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "MLB",
@@ -3300,7 +3300,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NHL",
@@ -3523,7 +3523,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NBA",
@@ -3599,7 +3599,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "95"
+       "score": "96"
       },
       {
        "id": "2",
@@ -4100,10 +4100,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NBA",
@@ -4179,7 +4179,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "95"
+       "score": "96"
       },
       {
        "id": "2",
@@ -4680,10 +4680,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NBA",
@@ -4854,7 +4854,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NHL",
@@ -4934,7 +4934,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "95"
+       "score": "96"
       },
       {
        "id": "2",
@@ -5435,10 +5435,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NBA",
@@ -5610,7 +5610,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "95"
+       "score": "96"
       },
       {
        "id": "2",
@@ -6111,10 +6111,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-20T21:12Z"
+     "t": "2026-10-20T21:13Z"
     }
    },
    "sport": "NBA",
@@ -10345,15 +10345,6 @@
       "result": "won"
      }
     ]
-   },
-   {
-    "bet_id": "3829ebcd",
-    "book": "bet365",
-    "event": "Boston Celtics @ Detroit Pistons",
-    "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
@@ -10583,7 +10574,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 17:08 ET"
+  "last_change_at": "2026-10-20 17:13 ET"
  },
  "open_live_n": 23,
  "open_stake_by_book": {
@@ -10593,6 +10584,6 @@
   "FanDuel": 2.6,
   "PointsBet": 144.75
  },
- "hash": "00c69f4ac948b612524c6d943caaa0db2b54de2f",
- "generated_at": "2026-10-20T21:12:47+00:00"
+ "hash": "863f6ff1ac13e6e24b1e220e8a06041d07bd1cd2",
+ "generated_at": "2026-10-20T17:13:07-04:00"
 }

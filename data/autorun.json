@@ -17,15 +17,6 @@
      "result": "won"
     }
    ]
-  },
-  {
-   "bet_id": "3829ebcd",
-   "book": "bet365",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
@@ -256,5 +247,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 17:08 ET"
+ "last_change_at": "2026-10-20 17:13 ET"
 }
