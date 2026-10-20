@@ -1122,7 +1122,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T17:31Z"
+     "t": "2026-10-20T18:05Z"
     }
    },
    "sport": "NFL",
@@ -1515,11 +1515,11 @@
     "id": "401915403",
     "snapshot": {
      "date": "2026-10-20T16:45Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 3660.0,
      "state": "in",
      "completed": false,
-     "detail": "45'",
+     "detail": "61'",
      "teams": [
       {
        "id": "436",
@@ -2575,11 +2575,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 97,
+    "n": 98,
     "w": 31,
     "l": 47,
     "p": 0,
-    "pending": 19,
+    "pending": 20,
     "win_pct": 39.7,
     "units": 17.67,
     "roi_pct": 25.6,
@@ -2606,11 +2606,11 @@
      "wins_with_fair": 1
     },
     "bonus bet": {
-     "n": 11,
+     "n": 12,
      "w": 4,
      "l": 2,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 66.7,
      "units": 0,
      "roi_pct": null,
@@ -2743,11 +2743,11 @@
      "wins_with_fair": 9
     },
     "NFL": {
-     "n": 13,
+     "n": 14,
      "w": 4,
      "l": 9,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 30.8,
      "units": -4.34,
      "roi_pct": -39.5,
@@ -2850,11 +2850,11 @@
      "wins_with_fair": 24
     },
     "no": {
-     "n": 30,
+     "n": 31,
      "w": 7,
      "l": 9,
      "p": 0,
-     "pending": 14,
+     "pending": 15,
      "win_pct": 43.8,
      "units": -3.11,
      "roi_pct": -28.2,
@@ -2883,6 +2883,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "91850737",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "14:05",
+    "sport": "NFL",
+    "event": "New York Giants @ Houston Texans",
+    "market": "Moneyline",
+    "selection": "New York Giants",
+    "book": "FanDuel",
+    "rec_price": "+370",
+    "eff_price": "+370",
+    "fair_pct": "21.23",
+    "ev_pct": "0.786",
+    "stake": "1",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "value per $1 = 0.786; yes at +354",
+    "units": null
+   },
    {
     "rec_id": "5334a8db",
     "rec_date": "2026-10-19",
@@ -5605,6 +5628,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "f16600036c7185fd52bda1745a84e8baf4098e83",
- "generated_at": "2026-10-20T13:31:05-04:00"
+ "hash": "6cbc2ee4762cd2e5f4c3fd69341a8fc5618b6819",
+ "generated_at": "2026-10-20T14:05:28-04:00"
 }
