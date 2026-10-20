@@ -3850,10 +3850,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 57.2,
+     "clock": 50.5,
      "state": "in",
      "completed": false,
-     "detail": "57.2 - 3rd",
+     "detail": "50.5 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -3863,7 +3863,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "79"
+       "score": "82"
       },
       {
        "id": "2",
@@ -4309,8 +4309,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2886,
-     "away": 0.7114,
+     "home": 0.3568,
+     "away": 0.6432,
      "spread": 0.02,
      "t": "2026-10-20T20:53Z"
     }
@@ -4375,10 +4375,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 57.2,
+     "clock": 50.5,
      "state": "in",
      "completed": false,
-     "detail": "57.2 - 3rd",
+     "detail": "50.5 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4388,7 +4388,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "79"
+       "score": "82"
       },
       {
        "id": "2",
@@ -4834,8 +4834,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2886,
-     "away": 0.7114,
+     "home": 0.3568,
+     "away": 0.6432,
      "spread": 0.02,
      "t": "2026-10-20T20:53Z"
     }
@@ -5075,10 +5075,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 57.2,
+     "clock": 50.5,
      "state": "in",
      "completed": false,
-     "detail": "57.2 - 3rd",
+     "detail": "50.5 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -5088,7 +5088,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "79"
+       "score": "82"
       },
       {
        "id": "2",
@@ -5534,8 +5534,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2886,
-     "away": 0.7114,
+     "home": 0.3568,
+     "away": 0.6432,
      "spread": 0.02,
      "t": "2026-10-20T20:53Z"
     }
@@ -10059,6 +10059,6 @@
   "FanDuel": 2.6,
   "PointsBet": 184.75
  },
- "hash": "22346e18d117afa088a931dc99db812290c229f0",
- "generated_at": "2026-10-20T16:53:18-04:00"
+ "hash": "fa6365bc5c987b9ca2e952ef31282be74bcaeaf1",
+ "generated_at": "2026-10-20T16:53:39-04:00"
 }
