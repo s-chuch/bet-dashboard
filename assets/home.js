@@ -416,9 +416,26 @@ async function pmLookup(m){pmTried[m.id]=1;const g=gameFor(m);if(!g)return;const
           if(t==="moneyline"&&!pm.ml)pm.ml={outcomes:o,tokens:tk};else if(t==="spreads"&&mk.line!=null)pm.spreads.push({line:+mk.line,outcomes:o,tokens:tk});else if(t==="totals"&&mk.line!=null)pm.totals.push({line:+mk.line,outcomes:o,tokens:tk})}
         if(pm.ml||pm.soc){PMX[m.id]=pm;return}}}}catch(e){}}
 function pmWanted(m,g){return g&&!g.completed&&(g.state==="in"||new Date(g.date)-Date.now()<3*3600e3)}
+// ---- futures (outright winner / MVP / relegation ...): Polymarket outcome price, matched by title keywords + the team / player name ----
+const PMF={},pmfTried={};const FUT_KW=["relegat","mvp","cup","champion","runner","finals","golden boot","top scorer","promot","rookie","defensive","coach"];
+const isFuture=b=>!b.match&&!b.legs.some(L=>L.match);
+function futParts(b){const txt=`${b.event} ${b.pick}`.toLowerCase(),kws=FUT_KW.filter(k=>txt.includes(k));
+  const ent=String(b.pick||"").replace(/\b(to (win|be|finish|get|reach)\b.*|\d{2}-\d{2}|20\d\d\/?\d*|nba|nfl|nhl|mlb|epl|regular season|mvp|cup|finals?|runner up|champion(ship)?|relegated|outrights?)\b/ig," ").replace(/\s+/g," ").trim();
+  return{kws,ent,q:String(b.pick||"").replace(/\bto (win|be)\b/ig," ").replace(/\b\d{2}-\d{2}\b/g," ").replace(/\s+/g," ").trim()}}
+async function pmFutLookup(b){const k=cardKey(b);pmfTried[k]=1;const{kws,ent,q}=futParts(b);if(!kws.length||!ent)return;
+  try{for(const qq of [q,`${ent} ${kws[0]==="relegat"?"relegated":kws[0]==="promot"?"promoted":kws[0]}`]){let d;try{d=await getJSON("https://gamma-api.polymarket.com/public-search?limit_per_type=10&events_status=active&q="+encodeURIComponent(qq))}catch(_){continue}
+    for(const e of d.events||[]){const ti=String(e.title||"").toLowerCase();if(!kws.every(w=>ti.includes(w)))continue;
+      if(kws.includes("cup")&&!/nba cup|fa cup|league cup|world cup|champions/.test(ti)&&!ti.includes("cup"))continue;
+      const full=(await getJSON("https://gamma-api.polymarket.com/events?slug="+e.slug))[0]||e;const J=x=>{try{return typeof x==="string"?JSON.parse(x):(x||[])}catch(_){return[]}};
+      for(const mk of full.markets||[]){const tk=J(mk.clobTokenIds),o=J(mk.outcomes);if(tk.length!==2||o.length!==2||String(o[0]).toLowerCase()!=="yes")continue;
+        const nm=mk.groupItemTitle||mk.question||"";if(!pmLoose(ent,{name:nm,short:nm,location:nm,nick:nm}))continue;
+        PMF[k]={token:tk[0],title:e.title,q:mk.question||nm,slug:e.slug};return}}}}catch(e){}}
+function futBar(b){const f=PMF[cardKey(b)];if(!f)return"";const q=PMMID[f.token];if(!q||Date.now()-q.t>120000)return"";
+  return bar(`Polymarket · ${esc(f.q).slice(0,70)}`,q.mid*100,"pmb",`Polymarket mid · ${esc(f.title)} · spread ${q.spread!=null?(q.spread*100).toFixed(1)+"¢":"?"} · futures price, not a live game odds`)}
 async function refreshPM(){const toks=new Set();
   for(const b of DATA.open)for(const L of b.legs){const m=matchOfLeg(b,L),g=gameFor(m);if(!m||!pmPath(m.path)||!pmWanted(m,g))continue;
     if(!pmOf(m)&&!pmTried[m.id])await pmLookup(m);const t=pmToken(L,m,g);if(t)toks.add(t)}
+  for(const b of DATA.open)if(isFuture(b)){const k=cardKey(b);if(!PMF[k]&&!pmfTried[k])await pmFutLookup(b);if(PMF[k])toks.add(PMF[k].token)}
   if(!toks.size)return;const body=JSON.stringify([...toks].map(t=>({token_id:t})));
   try{const [a,c]=await Promise.all(["midpoints","spreads"].map(e=>tfetch("https://clob.polymarket.com/"+e,{method:"POST",body,cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})));
     const now=Date.now();for(const t of toks)if(a[t]!=null)PMMID[t]={mid:+a[t],spread:c[t]!=null?+c[t]:null,t:now};pmOK=true}catch(e){pmOK=false}}
@@ -747,6 +764,7 @@ function booksBar(L,m,g,ctx){if(g.state!=="in")return"";const bp=booksP(L,m,g);i
 function liveLine(L,m,g){if(!g||g.state!=="in")return"";const t=anText(L,m,g);return t?`<div class="aln">${esc(t)}</div>`:""}
 // all bars for a card + the single value used for the collapsed row (top-priority source)
 function barsFor(b){const out=[];let mini=null;
+  if(isFuture(b)){const fb=futBar(b);return{html:fb,mini:fb?(PMMID[(PMF[cardKey(b)]||{}).token]||{mid:null}).mid*100:null}}
   const p=probFor(b);
   const espnBar=()=>p?bar(`ESPN · ${esc(p.label)}`,p.pct,"",p.ml?(p.kind==="pregame"?"ESPN pregame predictor":"ESPN live win probability"):(b.multi?"ESPN game-win chance for that team only, not the parlay's chance":"ESPN chance to win the game, not to cover")):"";
   const estOf=(L,i,lbl)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return"";const v=estLeg(L,m,localGame(g,m));return v==null?"":bar(lbl,v*100,"est","",`data-leg="${i}"`)};
