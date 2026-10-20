@@ -146,6 +146,11 @@ function sofaApply(m,g,e,fin){const sc=(side)=>{const o=e[side+"Score"]||{};cons
   if(code===31||/half ?time/i.test(detail))detail="HT";
   else if(t0){const el=Math.max(0,Math.floor(Date.now()/1000)-t0)+ini;clock=el;detail=`${Math.floor(el/60)+1}'`}
   return{...g,state:"in",completed:false,period:per,clock,detail,teams}}
+async function sofaDiscover(m,g){if(SOFA_ID[m.id]||SOFA_DISC[m.id])return SOFA_ID[m.id];SOFA_DISC[m.id]=1;const[A,H]=g.teams;
+  try{const r=await tfetch(SOFA+"search/events?page=0&q="+encodeURIComponent(`${H.short||H.name} ${A.short||A.name}`));if(!r.ok)return null;const d=await r.json();
+    for(const x of d.results||[]){const e=x.entity;if(!e||!e.homeTeam||!e.awayTeam||Math.abs(e.startTimestamp*1000-Date.parse(g.date))>6*3600e3)continue;
+      if(sofaPair(e,g,true)||sofaPair(e,g,false)){SOFA_ID[m.id]=e.id;SOFA_NAMES[id_(e)]={home:e.homeTeam.name,away:e.awayTeam.name};return e.id}}}catch(e){}return null}
+const id_=e=>e.id;
 async function sofaBackup(ms){const list=ms.filter(m=>SOCCER(m.path));if(!list.length)return;
   const cand=list.filter(m=>{const g=gameFor(m);return g&&!g.completed&&g.state==="pre"&&g.date&&Date.parse(g.date)-Date.now()<-30000||games[m.id]&&games[m.id].sofa});
   if(!cand.length)return;
@@ -155,7 +160,7 @@ async function sofaBackup(ms){const list=ms.filter(m=>SOCCER(m.path));if(!list.l
     let e=SOFA_ID[m.id]&&SOFA_LIVE.ev.find(x=>x.id===SOFA_ID[m.id]);
     if(!e){const hits=SOFA_LIVE.ev.filter(x=>sofaPair(x,g,true));const loose=hits.length?hits:SOFA_LIVE.ev.filter(x=>sofaPair(x,g,false));if(loose.length===1)e=loose[0]}
     if(e){SOFA_ID[m.id]=e.id;games[m.id]={...sofaApply(m,g,e,false),sofa:true};continue}
-    const id=SOFA_ID[m.id];   // was live, not in the live list any more: ask for the final
+    const id=SOFA_ID[m.id]||await sofaDiscover(m,g);   // not in the live list: ask for the final (finds the event by search if this page never saw it live)
     if(id&&(!SOFA_FIN[id]||Date.now()-SOFA_FIN[id]>30000)){SOFA_FIN[id]=Date.now();
       try{const r=await tfetch(SOFA+"event/"+id,{cache:"no-store"});if(r.ok){const ev=(await r.json()).event;if(ev&&ev.status&&ev.status.type==="finished")games[m.id]={...sofaApply(m,g,ev,true),sofa:true}}}catch(x){}}}}
 // SofaScore bookmaker odds (1X2, in-play too) for soccer moneyline / draw legs: covers games with no ESPN line or Polymarket market
@@ -164,9 +169,7 @@ const fracDec=f=>{const m=String(f||"").match(/^(\d+)\/(\d+)$/);return m?1+ +m[1
 async function sofaOdds(ms){const want=ms.filter(m=>SOCCER(m.path)&&DATA.open.some(b=>b.legs.some(L=>(L.type==="ml"||L.type==="draw")&&matchOfLeg(b,L)&&matchOfLeg(b,L).id===m.id)));
   for(const m of want){const g=gameFor(m);if(!g||g.completed)continue;const live=g.state==="in";if(!live&&Date.parse(g.date)-Date.now()>3*3600e3)continue;
     let id=SOFA_ID[m.id];
-    if(!id&&!SOFA_DISC[m.id]){SOFA_DISC[m.id]=1;const[A,H]=g.teams;
-      try{const r=await tfetch(SOFA+"search/events?page=0&q="+encodeURIComponent(`${H.short||H.name} ${A.short||A.name}`));if(r.ok){const d=await r.json();
-        for(const x of d.results||[]){const e=x.entity;if(!e||!e.homeTeam||!e.awayTeam||Math.abs(e.startTimestamp*1000-Date.parse(g.date))>6*3600e3)continue;if(sofaPair(e,g,true)||sofaPair(e,g,false)){id=SOFA_ID[m.id]=e.id;SOFA_NAMES[id]={home:e.homeTeam.name,away:e.awayTeam.name};break}}}}catch(e){}}
+    if(!id)id=await sofaDiscover(m,g);
     if(!id)continue;
     if(Date.now()-(SOFA_OAT[id]||0)<(live?14000:55000))continue;SOFA_OAT[id]=Date.now();
     try{const r=await tfetch(SOFA+`event/${id}/odds/1/featured`,{cache:"no-store"});if(!r.ok)throw 0;const j=await r.json(),mk=j.featured&&(j.featured.fullTime||j.featured.default);
