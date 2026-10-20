@@ -156,3 +156,11 @@ a normal `autorun.py` pass, commits `set balance <book> <amount>` and pushes. La
 new anchor. It shares the `autorun` concurrency group. The page calls
 `POST https://api.github.com/repos/s-chuch/bet-dashboard/actions/workflows/set-balance.yml/dispatches` with
 `{"ref":"main","inputs":{"book":"FanDuel","amount":"123.45","note":""}}` and the same fine-grained token as manual settle.
+
+## Upload bets (screenshots -> tracker, all inside GitHub)
+`upload.html` (the **Upload** tab): choose screenshots of bet slips from any app. The text is read **in the browser** with a self-hosted
+Tesseract OCR (`assets/vendor/tesseract/`, nothing is downloaded from a CDN and the pictures never leave the phone), `assets/slipparse.js`
+turns it into a draft row (book, event, pick, odds, boost, stake, to win), you fix anything wrong, and the page dispatches
+`.github/workflows/add-bets.yml` with only the confirmed rows. `scripts/add_bets.py` validates every field again, skips duplicates, logs the bets
+through `ledger.py log` (which deducts the stake) and rebuilds. It uses the same fine-grained token as the Logs page (Actions: read and write).
+Why not upload the images themselves: this repo is public, so a screenshot committed to it (balances, account names) would be public too.

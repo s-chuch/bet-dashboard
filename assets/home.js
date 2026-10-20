@@ -614,7 +614,7 @@ function pillState(b,status,legStats){const v=betLive(b,status,legStats);
   const hitTxt=b.multi?legsHit(legStats):"";
   if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||hitTxt};
   const pct=Math.round(v.p*100),k=v.p>=0.55?"WINNING":v.p<=0.45?"LOSING":"NEUTRAL";
-  return{cls:k,txt:`${k} ${v.approx?"≈":""}${pct}%`,
+  return{cls:k,txt:`${v.approx?"≈":""}${pct}%`,
     sub:v.approx?`${hitTxt} · approx.`:(v.sub||"")}}
 function legsHit(ls){const h=ls.filter(x=>x.s==="WON").length,lv=ls.filter(x=>x.s!=="WON"&&x.s!=="LOST").length;
   return`${h}/${ls.length} legs hit${lv&&h<ls.length?` · ${lv} live`:""}`}
@@ -739,9 +739,9 @@ function legBar(b,x,p){const L=x.L,g=x.g;if(!g||g.state==="pre"||(g.state==="pos
   return`<div class="lbar" title="${esc(txt)}"><div class="lt"><div class="lf" style="width:${(fill*100).toFixed(1)}%;background:${col}"></div></div><small>${esc(lab)}</small></div>`}
 function legChip(b,x){const g=x.g,live=g&&g.state==="in";let lbl=x.lbl||x.s,p=null;
   if(live&&!["WON","LOST"].includes(x.s)){p=legP(b,x.L,x.s,x);if(p!=null&&x.s!=="PUSH")lbl=p>=0.55?"WINNING":p<=0.45?"LOSING":"NEUTRAL"}
-  const c=lbl==="HIT"?"WON":lbl==="MISSED"?"LOST":lbl;return{lbl,c,p}}
+  const c=lbl==="HIT"?"WON":lbl==="MISSED"?"LOST":lbl;return{lbl,c,p,txt:p!=null&&["WINNING","LOSING","NEUTRAL"].includes(lbl)?Math.round(p*100)+"%":lbl}}
 function legRowInner(b,x){const ch=legChip(b,x);
-  return`<span class="lgt">${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}${legBar(b,x,ch.p)}</span><span class="pill ${cls(ch.c)}">${esc(ch.lbl)}</span>`}
+  return`<span class="lgt">${esc(x.L.text)}${x.n?` <span class="meta">· ${esc(x.n)}</span>`:""}${!b.match&&x.g?`<br><span class="meta">${x.g.teams.map(t=>esc(t.abbr||t.name)+" "+(x.g.state==="pre"?"":esc(t.score))).join(" – ")} · ${esc(x.g.state==="pre"?fmtStart(x.g):x.g.detail)}</span>`:""}${legBar(b,x,ch.p)}</span><span class="pill ${cls(ch.c)}">${esc(ch.txt)}</span>`}
 function needsHTML(b){return b.legs.map(L=>{const m=matchOfLeg(b,L);return m?needLine(L,m,gameFor(m)):""}).filter(Boolean).map(esc).join("<br>")}
 const setHTML=(el,h)=>{if(el&&el.innerHTML!==h)el.innerHTML=h};
 // group cards/rows by book A–Z (case-insensitive, stable within a book) under a 'Book ($staked)' subheader

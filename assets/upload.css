@@ -1,0 +1,29 @@
+.small{font-size:12.5px}
+.drop{display:flex;flex-direction:column;gap:4px;align-items:center;text-align:center;padding:26px 14px;border:1.5px dashed var(--line2);border-radius:var(--r);cursor:pointer;background:rgba(255,255,255,.02);transition:border-color .15s,background .15s}
+.drop:hover,.drop.over{border-color:var(--accent);background:rgba(129,140,248,.08)}
+.drop .big{font-weight:700;font-size:16px}
+.drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.queue{display:grid;gap:8px;margin-top:10px}
+.qi{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;padding:8px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--card)}
+.qi img{width:54px;height:54px;object-fit:cover;border-radius:8px;background:#000}
+.qi .nm{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qi .st{font-size:12px;color:var(--mut)}
+.bar{height:4px;border-radius:2px;background:var(--line);margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--grad);transition:width .2s}
+.qi .x{font-size:12px}
+.draft{border:1px solid var(--line);border-radius:var(--r);padding:12px;background:var(--card);margin-top:10px}
+.draft.skip{opacity:.55}
+.draft .hd{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.draft .hd label{display:flex;gap:8px;align-items:center;font-weight:700;cursor:pointer}
+.draft .hd input[type=checkbox]{width:20px;height:20px;accent-color:var(--accent)}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--card2);border:1px solid var(--line2);color:var(--mut);margin-left:auto}
+.tag.warn{color:var(--push);border-color:rgba(251,191,36,.4)}.tag.ok{color:var(--win);border-color:rgba(52,211,153,.4)}.tag.bad{color:var(--lose);border-color:rgba(248,113,113,.4)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid .full{grid-column:1/-1}
+.fld{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fld span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.fld input,.fld select{width:100%;font-size:16px}
+.fld.bad input,.fld.bad select{border-color:var(--lose)}
+.warns{margin:8px 0 0;padding:0;list-style:none;font-size:12.5px;color:var(--push)}
+.sendbar{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.sendbar .btn{min-height:44px;padding:0 20px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(4,1fr)}.grid .full{grid-column:1/-1}.grid .half{grid-column:span 2}}
