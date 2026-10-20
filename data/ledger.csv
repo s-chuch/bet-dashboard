@@ -184,3 +184,5 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-20 15:28,PointsBet,b1069fc2,stake,-0.50,stake
 2026-10-20 15:28,PointsBet,f5365e03,stake,-0.50,stake
 2026-10-20 15:28,bet365,11be1d03,stake,-0.20,stake
+2026-10-20 16:51,Caesars,5df01cb0,return,3.79,won
+2026-10-20 16:51,FanDuel,52414b40,settled,0.00,"lost, no return"

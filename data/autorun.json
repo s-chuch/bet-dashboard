@@ -21,6 +21,24 @@
  ],
  "last_settled": [
   {
+   "bet_id": "5df01cb0",
+   "book": "Caesars",
+   "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
+   "result": "won",
+   "pnl": 3.29,
+   "final": "AEK 1-5 MNC",
+   "at": "2026-10-20 16:51"
+  },
+  {
+   "bet_id": "52414b40",
+   "book": "FanDuel",
+   "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "AEK 1-5 MNC",
+   "at": "2026-10-20 16:51"
+  },
+  {
    "bet_id": "c55174ee",
    "book": "PointsBet",
    "pick": "Over 51.5",
@@ -220,5 +238,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 16:36 ET"
+ "last_change_at": "2026-10-20 16:51 ET"
 }

@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 204.9,
-   "updated": "2026-10-20 15:28"
+   "balance": 208.69,
+   "updated": "2026-10-20 16:51"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 635.36,
+ "total": 639.15,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -390,7 +390,7 @@
      "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "90'+3'",
+     "detail": "90'+4'",
      "teams": [
       {
        "id": "437",
@@ -3640,87 +3640,6 @@
    "start_ts": "2026-10-20T23:08Z"
   },
   {
-   "bet_id": "5df01cb0",
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Man City vs AEK Athens",
-   "market": "SGP 2-leg (25% profit boost)",
-   "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
-   "start": "Tue Oct 20 03:00 PM ET",
-   "price": "+525",
-   "boosted_price": "+658",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 3.29,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Phil Foden",
-     "stat": "goals",
-     "op": "min",
-     "min": 1,
-     "text": "Phil Foden 1+ goals",
-     "pteam": "MNC",
-     "pname": "Phil Foden",
-     "pid": "250787"
-    },
-    {
-     "type": "prop",
-     "player": "Rayan Cherki",
-     "stat": "goals",
-     "op": "min",
-     "min": 1,
-     "text": "Rayan Cherki 1+ goals",
-     "pteam": "MNC",
-     "pname": "Rayan Cherki",
-     "pid": "298008"
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261020",
-    "groups": null,
-    "id": "401915401",
-    "snapshot": {
-     "date": "2026-10-20T19:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "382",
-       "name": "Manchester City",
-       "abbr": "MNC",
-       "short": "Man City",
-       "nick": "Manchester City",
-       "location": "Manchester City",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "887",
-       "name": "AEK Athens",
-       "abbr": "AEK",
-       "short": "AEK Athens",
-       "nick": "AEK Athens",
-       "location": "AEK Athens",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.5,
-   "payout": 3.79,
-   "payout_est": false,
-   "start_ts": "2026-10-20T19:00Z"
-  },
-  {
    "bet_id": "0b6fbbde",
    "date": "2026-10-20",
    "book": "DraftKings",
@@ -4456,9 +4375,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3333,
-     "away": 0.6667,
-     "spread": 0.02,
+     "home": 0.335,
+     "away": 0.665,
+     "spread": 0.01,
      "t": "2026-10-20T20:51Z"
     }
    },
@@ -4981,107 +4900,15 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3333,
-     "away": 0.6667,
-     "spread": 0.02,
+     "home": 0.335,
+     "away": 0.665,
+     "spread": 0.01,
      "t": "2026-10-20T20:51Z"
     }
    },
    "sport": "NBA",
    "cash_stake": 0.5,
    "payout": 1.71,
-   "payout_est": false,
-   "start_ts": "2026-10-20T19:00Z"
-  },
-  {
-   "bet_id": "52414b40",
-   "date": "2026-10-20",
-   "book": "FanDuel",
-   "event": "Man City vs AEK Athens",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
-   "start": "Tue Oct 20 03:00 PM ET",
-   "price": "+124",
-   "boosted_price": "+186",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.93,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Phil Foden",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Phil Foden 1+ SOT",
-     "pteam": "MNC",
-     "pname": "Phil Foden",
-     "pid": "250787"
-    },
-    {
-     "type": "prop",
-     "player": "Rayan Cherki",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Rayan Cherki 1+ SOT",
-     "pteam": "MNC",
-     "pname": "Rayan Cherki",
-     "pid": "298008"
-    },
-    {
-     "type": "prop",
-     "player": "Allan",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Allan 3+ shots",
-     "pteam": "MNC",
-     "pname": "Allan Elias",
-     "pid": "382966"
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261020",
-    "groups": null,
-    "id": "401915401",
-    "snapshot": {
-     "date": "2026-10-20T19:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "382",
-       "name": "Manchester City",
-       "abbr": "MNC",
-       "short": "Man City",
-       "nick": "Manchester City",
-       "location": "Manchester City",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "887",
-       "name": "AEK Athens",
-       "abbr": "AEK",
-       "short": "AEK Athens",
-       "nick": "AEK Athens",
-       "location": "AEK Athens",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.5,
-   "payout": 1.43,
    "payout_est": false,
    "start_ts": "2026-10-20T19:00Z"
   },
@@ -5773,9 +5600,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3333,
-     "away": 0.6667,
-     "spread": 0.02,
+     "home": 0.335,
+     "away": 0.665,
+     "spread": 0.01,
      "t": "2026-10-20T20:51Z"
     }
    },
@@ -5879,6 +5706,26 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-20",
+   "book": "FanDuel",
+   "event": "Man City vs AEK Athens",
+   "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "Caesars",
+   "event": "Man City vs AEK Athens",
+   "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
+   "result": "won",
+   "pnl": 3.29,
+   "stake": 0.5,
+   "auto": true
+  },
   {
    "date": "2026-10-19",
    "book": "Caesars",
@@ -6890,15 +6737,15 @@
    "auto": false
   }
  ],
- "pnl_total": 115.48,
+ "pnl_total": 118.27,
  "unsettled": {
-  "n": 30,
-  "cash_stake": 57.5,
-  "max_payout": 1071.2,
+  "n": 28,
+  "cash_stake": 56.5,
+  "max_payout": 1065.98,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 57.5,
+ "open_stake": 56.5,
  "recs": {
   "stats": {
    "overall": {
@@ -10033,6 +9880,24 @@
   ],
   "last_settled": [
    {
+    "bet_id": "5df01cb0",
+    "book": "Caesars",
+    "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
+    "result": "won",
+    "pnl": 3.29,
+    "final": "AEK 1-5 MNC",
+    "at": "2026-10-20 16:51"
+   },
+   {
+    "bet_id": "52414b40",
+    "book": "FanDuel",
+    "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "AEK 1-5 MNC",
+    "at": "2026-10-20 16:51"
+   },
+   {
     "bet_id": "c55174ee",
     "book": "PointsBet",
     "pick": "Over 51.5",
@@ -10231,7 +10096,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 16:36 ET"
+  "last_change_at": "2026-10-20 16:51 ET"
  },
  "open_live_n": 27,
  "open_stake_by_book": {
@@ -10242,6 +10107,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "ed7b6bac084ec5e517c3b7fd66998b1619161b26",
- "generated_at": "2026-10-20T16:51:29-04:00"
+ "hash": "79e1231c39a1e69f829f2883cf1367caff9d6c95",
+ "generated_at": "2026-10-20T16:51:49-04:00"
 }
