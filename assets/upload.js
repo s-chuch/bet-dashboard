@@ -116,7 +116,10 @@
     function done(m) { S.model = m; var e = $('ai-model'); if (e) e.textContent = '(' + m + ')'; return m; }
     return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(key), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
       if (r.ok) return r.json().then(function (j) { var m = pickModel(j.models); if (!m) throw new Error('no Gemini model available for this key'); S.kind = 'gem'; return done(m); });
-      return vtxProbe(key).then(done, function (e) { throw new Error(/^Google did not/.test(e.message) ? e.message : 'Google did not accept the key: ' + e.message); });
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        var g1 = 'Gemini API: HTTP ' + r.status + (j.error && j.error.message ? ' ' + String(j.error.message).slice(0, 90) : '') + (j.error && j.error.details && j.error.details[0] && j.error.details[0].reason ? ' [' + j.error.details[0].reason + ']' : '');
+        return vtxProbe(key).then(done, function (e) { throw new Error(g1 + ' · Vertex: ' + String(e.message).replace(/^Google did not accept the key \(?/, '').replace(/\)$/, '')); });
+      });
     });
   }
   function shrink(file) {   // max 1600 px, JPEG: small enough to send fast, sharp enough to read
