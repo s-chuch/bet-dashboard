@@ -62,7 +62,8 @@
     var i = S.drafts.indexOf(dr), earlier = i < 0 ? S.drafts : S.drafts.slice(0, i);
     var was = dr.dup;
     dr.dup = S.existing.some(function (e) { return sameBet(dr, e); }) || earlier.some(function (o) { return (o.kind === 'placed' || o.kind === 'open') && sameBet(dr, o); });
-    if (dr.dup && !was && (dr.kind === 'placed' || dr.kind === 'open')) dr.on = false;
+    if (dr.dup && !was && (dr.kind === 'placed' || dr.kind === 'open')) { dr.on = false; dr.autoOff = true; }
+    if (!dr.dup && was && dr.autoOff) { dr.on = true; dr.autoOff = false; }
   }
   function markAllDups() { S.drafts.forEach(markDup); }
 
@@ -332,7 +333,7 @@
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
       var raw = '<details class="small muted" style="margin-top:8px"><summary>What the reader saw</summary><pre style="white-space:pre-wrap;font-size:11px;margin:6px 0 0">' + esc(d.text) + '</pre></details>';
-      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '</div>' + form + w + raw + '</div>';
+      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '" style="margin-left:8px">Remove</button></div>' + form + w + raw + '</div>';
     }).join('');
     if (!keepMsg) { var m = $('sendmsg'); if (m && !m.dataset.keep) m.textContent = ''; }
     updateSend();
@@ -371,6 +372,15 @@
     var t = e.target, on = t.getAttribute('data-on');
     if (on) { var d = S.drafts.filter(function (x) { return String(x.id) === on; })[0]; if (d) { d.on = t.checked; var c = t.closest('.draft'); if (c) c.classList.toggle('skip', !d.on); updateSend(); } return; }
     if (t.getAttribute('data-k') === 'book') { var id = t.getAttribute('data-d'), dd = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (dd) { dd.book = t.value; markDup(dd); renderDrafts(true); } }
+  });
+  $('rows').addEventListener('click', function (e) {
+    var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rmd'); if (!id) return;
+    var d = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (!d) return;
+    S.drafts = S.drafts.filter(function (x) { return x !== d; });
+    // when nothing from that screenshot is left, drop it from the list above too
+    if (!S.drafts.some(function (x) { return x.file === d.file; })) S.items = S.items.filter(function (it) { return !(it.name === d.file && it.state === 'done'); });
+    S.drafts.forEach(function (x) { x._seen = 0; });   // duplicate flags are recomputed without the removed row
+    renderQueue(); renderDrafts();
   });
   $('send').addEventListener('click', send);
 
