@@ -607,6 +607,10 @@ function pmBar(L,m,g,ctx){const q=pmVal(L,m,g);if(!q)return"";const live=g.state
   const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:`${esc(L.text)} (same line)`;
   const note=`Polymarket mid${q.spread!=null?` · spread ${(q.spread*100).toFixed(1)}¢`:""}${wide?" · thin market, not used":""}${!live?" · pregame":""}${L.type!=="ml"?" · display only":""}`;
   return bar(`Polymarket${ctx||""} · ${what}`,q.mid*100,"pmb",note)}
+// Kalshi (free prediction market) moneyline, pulled server-side at the last build, so pregame only
+function kalBar(L,m,g,ctx){if(L.type!=="ml"||!m||!m.kal||!g||g.state!=="pre")return"";const pt=pickTeam(g,L);if(!pt)return"";
+  const v=pt.T.home?m.kal.home:m.kal.away;if(v==null)return"";
+  return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · pregame · as of ${tfmt(m.kal.t)}`)}
 function booksBar(L,m,g,ctx){if(g.state!=="in")return"";const bp=booksP(L,m,g);if(!bp)return"";
   const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:L.type==="spread"?`${esc(L.text)} covers`:`${esc(L.text)} hits`;
   return bar(`Books (no-vig)${ctx||""} · ${what}`,bp.v*100,"bkb",`${bp.book===15?"Action Network consensus":BKN[bp.book]} live line, vig removed${L.type!=="ml"?" · at your exact line":""}`)}
@@ -618,12 +622,12 @@ function barsFor(b){const out=[];let mini=null;
   const estOf=(L,i,lbl)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return"";const v=estLeg(L,m,localGame(g,m));return v==null?"":bar(lbl,v*100,"est","",`data-leg="${i}"`)};
   if(!b.multi){const L=b.legs[0];if(L){const m=matchOfLeg(b,L),g=gameFor(m);
       if(g&&!g.completed){out.push(liveLine(L,m,g));
-        out.push(pmBar(L,m,g));out.push(booksBar(L,m,g));
+        out.push(pmBar(L,m,g));out.push(kalBar(L,m,g));out.push(booksBar(L,m,g));
         out.push(estOf(L,0,L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`));
         const src=legSources(b,L);if(src.length){mini=src[0].v*100;out.push(`<div class="note srcn">Pill &amp; payout use: <b data-src>${SRC_LBL[src[0].k]}</b></div>`)}}}
     if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
   else{b.legs.forEach((L,i)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return;const ctx=` · ${esc(L.text)}`;
-      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
+      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(kalBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
       out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
     if(!out.some(x=>/wp (pmb|bkb)/.test(x)))out.push(espnBar())}
   // player props / team totals have no market price: pace-based estimate per leg (+ one bar for the whole bet), live games only

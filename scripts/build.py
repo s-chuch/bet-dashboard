@@ -8,7 +8,7 @@ Reads data/bets.csv (open bets) and data/balances.csv, matches each bet/leg to a
 sport path + date + event id so the browser can refresh it). data.json is only rewritten when its
 content (minus live-volatile fields like scores/clock) changed, so unchanged runs produce no commit.
 """
-import csv, json, re, sys, os, subprocess, hashlib, datetime, unicodedata, urllib.request, urllib.parse
+import time, csv, json, re, sys, os, subprocess, hashlib, datetime, unicodedata, urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -523,6 +523,42 @@ def an_find(m):
             return {"id": g["id"], "home_team_id": g["home_team_id"], "away_team_id": g["away_team_id"]}
     return None
 
+KAL_SERIES = {"football/nfl": "KXNFLGAME", "football/college-football": "KXNCAAFGAME", "hockey/nhl": "KXNHLGAME",
+              "baseball/mlb": "KXMLBGAME", "basketball/nba": "KXNBAGAME"}
+
+def kal_name_match(sub, T):
+    """Kalshi labels a side by city/short name ('New York R', 'San Francisco'); match it to an ESPN team."""
+    if names_match(sub, T): return True
+    a = norm(sub); b = norm(f"{T.get('location') or ''} {T.get('nick') or ''}")
+    return len(a) > 1 and len(a) <= len(b) and a[:-1] == b[:len(a) - 1] and b[len(a) - 1].startswith(a[-1])
+
+def kalshi_find(m):
+    """Kalshi moneyline mid prices (a free prediction market) for this game: no-vig win chances for both sides. Server side only
+    (Kalshi rejects browser requests), so the page shows it as 'as of' the last build."""
+    ser = KAL_SERIES.get(m["path"])
+    if not ser: return None
+    tm = m["snapshot"]["teams"]; H = next(t for t in tm if t["home"]); A = next(t for t in tm if not t["home"])
+    d = fetch(f"https://api.elections.kalshi.com/trade-api/v2/events?limit=200&status=open&with_nested_markets=true&series_ticker={ser}")
+    for e in d.get("events", []):
+        mk = e.get("markets") or []
+        if len(mk) != 2: continue
+        side = {}
+        for k in mk:
+            for key, T in (("home", H), ("away", A)):
+                if kal_name_match(k.get("yes_sub_title", ""), T): side[key] = k
+        if set(side) != {"home", "away"} or side["home"] is side["away"]: continue
+        def mid(k):
+            try:
+                b, a = float(k["yes_bid_dollars"]), float(k["yes_ask_dollars"])
+                if a > 0 and a >= b: return (a + b) / 2, a - b
+                return float(k["last_price_dollars"]), None
+            except Exception: return None, None
+        (ph, sh), (pa, sa) = mid(side["home"]), mid(side["away"])
+        if not ph or not pa or ph + pa <= 0: return None
+        return {"src": "Kalshi", "home": round(ph / (ph + pa), 4), "away": round(pa / (ph + pa), 4),
+                "spread": round(max(sh or 0, sa or 0), 3), "t": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")}
+    return None
+
 def attach_live_ids(bets):
     ms = {}
     for b in bets:
@@ -533,11 +569,18 @@ def attach_live_ids(bets):
         except Exception as e: print("pm fail", m["id"], e, file=sys.stderr)
         try: m["an"] = an_find(m)
         except Exception as e: print("an fail", m["id"], e, file=sys.stderr)
+        try: m["kal"] = kalshi_find(m)
+        except Exception as e: print("kalshi fail", m["id"], e, file=sys.stderr)
+    for ser in {KAL_SERIES[m["path"]] for m in ms.values() if m["path"] in KAL_SERIES}:   # once each, before the threads (avoids Kalshi 429s)
+        u = f"https://api.elections.kalshi.com/trade-api/v2/events?limit=200&status=open&with_nested_markets=true&series_ticker={ser}"
+        for _ in range(3):
+            if fetch(u): break
+            _cache.pop(u, None); time.sleep(3)
     with ThreadPoolExecutor(6) as ex: list(ex.map(work, ms.values()))
     # every reference to the same game gets the same ids
     for b in bets:
         for m in [b["match"]] + [L.get("match") for L in b["legs"]]:
-            if m and m["id"] in ms: m["pm"], m["an"] = ms[m["id"]].get("pm"), ms[m["id"]].get("an")
+            if m and m["id"] in ms: m["pm"], m["an"], m["kal"] = ms[m["id"]].get("pm"), ms[m["id"]].get("an"), ms[m["id"]].get("kal")
 
 def attach_pregame(bets):
     cache = json.load(open(PIN_CACHE)) if os.path.exists(PIN_CACHE) else {}
