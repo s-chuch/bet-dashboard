@@ -296,6 +296,7 @@ function teamTotalStatus(L,g,sport){const i=sideIdx(g,L.team);if(i<0)return{s:"?
 const SFX=new Set(["jr","sr","ii","iii","iv","v"]);
 const nameW=s=>norm(s).filter(x=>!SFX.has(x));
 function playerMatch(bet,full){const b=nameW(bet),w=nameW(full);if(!b.length||!w.length)return false;const last=b[b.length-1],fi=b.length>1?b[0][0]:null;
+  if(b.length===1&&w[0]===last)return true;   // one-word names a book prints ("Allan"): the first name counts
   if(w[w.length-1]!==last&&!w.slice(1).includes(last))return false;return!fi||w[0][0]===fi}
 function athletesOf(S){if(S._ath)return S._ath;const d=S.d,by={},list=[];
   const get=(id,name,team)=>{const k=id?"i"+id:name+"|"+team;if(!by[k]){by[k]={id,name,team,s:{},inBox:false};list.push(by[k])}return by[k]};

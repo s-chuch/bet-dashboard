@@ -375,47 +375,11 @@
      "type": "ml",
      "team": "PSV Eindhoven",
      "women": false,
-     "text": "PSV Eindhoven",
-     "team_ok": true
+     "text": "PSV Eindhoven"
     }
    ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261020",
-    "groups": null,
-    "id": "401915398",
-    "snapshot": {
-     "date": "2026-10-20T19:00Z",
-     "period": 2,
-     "clock": 4560.0,
-     "state": "in",
-     "completed": false,
-     "detail": "76'",
-     "teams": [
-      {
-       "id": "437",
-       "name": "FC Porto",
-       "abbr": "FCP",
-       "short": "FC Porto",
-       "nick": "FC Porto",
-       "location": "FC Porto",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "148",
-       "name": "PSV Eindhoven",
-       "abbr": "PSV",
-       "short": "PSV",
-       "nick": "PSV Eindhoven",
-       "location": "PSV Eindhoven",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
+   "match": null,
+   "sport": null,
    "cash_stake": 0.0,
    "payout": 19.0,
    "payout_est": false,
@@ -1203,7 +1167,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NFL",
@@ -2336,7 +2300,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NFL",
@@ -3055,7 +3019,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NFL",
@@ -3997,10 +3961,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 497.0,
+     "clock": 479.0,
      "state": "in",
      "completed": false,
-     "detail": "8:17 - 3rd",
+     "detail": "7:59 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4010,7 +3974,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "50"
+       "score": "52"
       },
       {
        "id": "2",
@@ -4401,8 +4365,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.055,
-     "away": 0.945,
+     "home": 0.065,
+     "away": 0.935,
      "spread": 0.01,
      "t": "2026-10-20T20:33Z"
     }
@@ -4467,10 +4431,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 497.0,
+     "clock": 479.0,
      "state": "in",
      "completed": false,
-     "detail": "8:17 - 3rd",
+     "detail": "7:59 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4480,7 +4444,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "50"
+       "score": "52"
       },
       {
        "id": "2",
@@ -4871,8 +4835,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.055,
-     "away": 0.945,
+     "home": 0.065,
+     "away": 0.935,
      "spread": 0.01,
      "t": "2026-10-20T20:33Z"
     }
@@ -4927,7 +4891,10 @@
      "stat": "shots",
      "op": "min",
      "min": 3,
-     "text": "Allan 3+ shots"
+     "text": "Allan 3+ shots",
+     "pteam": "MNC",
+     "pname": "Allan Elias",
+     "pid": "382966"
     }
    ],
    "match": {
@@ -5134,7 +5101,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:33Z"
+     "t": "2026-10-20T20:34Z"
     }
    },
    "sport": "NHL",
@@ -5201,10 +5168,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 497.0,
+     "clock": 479.0,
      "state": "in",
      "completed": false,
-     "detail": "8:17 - 3rd",
+     "detail": "7:59 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -5214,7 +5181,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "50"
+       "score": "52"
       },
       {
        "id": "2",
@@ -5605,8 +5572,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.055,
-     "away": 0.945,
+     "home": 0.065,
+     "away": 0.935,
      "spread": 0.01,
      "t": "2026-10-20T20:33Z"
     }
@@ -10074,6 +10041,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "9ab390ca9df4cf53568e4e32f1142b1aa9c45907",
- "generated_at": "2026-10-20T16:33:22-04:00"
+ "hash": "8f62ccf6ebde1b012746054b353ae311b6d16ef4",
+ "generated_at": "2026-10-20T20:34:02+00:00"
 }

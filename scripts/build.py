@@ -216,6 +216,7 @@ def player_match(bet_name, full_name):
     if not last: return False
     w = [x for x in norm(full_name or "") if x not in SUFFIX]
     if not w: return False
+    if fi is None and last == w[0]: return True   # one-word names a book prints ("Allan", "Casemiro"): the first name counts
     if w[-1] != last and last not in w[1:]: return False
     return fi is None or w[0][0] == fi
 
