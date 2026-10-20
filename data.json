@@ -387,10 +387,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 4500.0,
+     "clock": 4560.0,
      "state": "in",
      "completed": false,
-     "detail": "75'",
+     "detail": "76'",
      "teams": [
       {
        "id": "437",
@@ -1203,7 +1203,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NFL",
@@ -2336,7 +2336,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NFL",
@@ -3055,7 +3055,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NFL",
@@ -3287,7 +3287,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "MLB",
@@ -3442,7 +3442,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "MLB",
@@ -3630,7 +3630,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NHL",
@@ -3686,10 +3686,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 4380.0,
+     "clock": 4440.0,
      "state": "in",
      "completed": false,
-     "detail": "73'",
+     "detail": "74'",
      "teams": [
       {
        "id": "382",
@@ -3934,7 +3934,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NBA",
@@ -3997,10 +3997,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 527.0,
+     "clock": 497.0,
      "state": "in",
      "completed": false,
-     "detail": "8:47 - 3rd",
+     "detail": "8:17 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4020,7 +4020,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "69"
+       "score": "72"
       }
      ]
     },
@@ -4401,10 +4401,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.075,
-     "away": 0.925,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NBA",
@@ -4467,10 +4467,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 527.0,
+     "clock": 497.0,
      "state": "in",
      "completed": false,
-     "detail": "8:47 - 3rd",
+     "detail": "8:17 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -4490,7 +4490,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "69"
+       "score": "72"
       }
      ]
     },
@@ -4871,10 +4871,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.075,
-     "away": 0.925,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NBA",
@@ -4938,10 +4938,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 2,
-     "clock": 4380.0,
+     "clock": 4440.0,
      "state": "in",
      "completed": false,
-     "detail": "73'",
+     "detail": "74'",
      "teams": [
       {
        "id": "382",
@@ -5134,7 +5134,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NHL",
@@ -5201,10 +5201,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 3,
-     "clock": 527.0,
+     "clock": 497.0,
      "state": "in",
      "completed": false,
-     "detail": "8:47 - 3rd",
+     "detail": "8:17 - 3rd",
      "teams": [
       {
        "id": "8",
@@ -5224,7 +5224,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "69"
+       "score": "72"
       }
      ]
     },
@@ -5605,10 +5605,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.075,
-     "away": 0.925,
+     "home": 0.055,
+     "away": 0.945,
      "spread": 0.01,
-     "t": "2026-10-20T20:32Z"
+     "t": "2026-10-20T20:33Z"
     }
    },
    "sport": "NBA",
@@ -10074,6 +10074,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "dd7078827730cc09601c1c20169605555a8bb6cf",
- "generated_at": "2026-10-20T16:32:52-04:00"
+ "hash": "9ab390ca9df4cf53568e4e32f1142b1aa9c45907",
+ "generated_at": "2026-10-20T16:33:22-04:00"
 }
