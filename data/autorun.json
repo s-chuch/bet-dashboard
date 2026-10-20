@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "ac79d306",
+   "book": "theScore",
+   "pick": "Kiah Stokes 5+ rebounds + Angel Reese 7+ rebounds + Jordin Canada 7+ assists",
+   "result": "won",
+   "pnl": 0.21,
+   "final": "ATL 79-65 GS",
+   "at": "2026-10-19 22:23"
+  },
+  {
    "bet_id": "bd13eed8",
    "book": "FanDuel",
    "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
@@ -138,5 +147,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 21:44 ET"
+ "last_change_at": "2026-10-19 22:23 ET"
 }
