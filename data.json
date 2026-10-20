@@ -1112,13 +1112,17 @@
       ]
      }
     },
-    "an": null,
+    "an": {
+     "id": 290930,
+     "home_team_id": 143,
+     "away_team_id": 129
+    },
     "kal": {
      "src": "Kalshi",
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T07:57Z"
+     "t": "2026-10-20T08:57Z"
     }
    },
    "sport": "NFL",
@@ -5601,6 +5605,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "18d8ffb3eb2dc185d61e2166e52c193e2b4aff0f",
- "generated_at": "2026-10-20T03:57:03-04:00"
+ "hash": "ca7f646e97598047444636b0a6496995974aa0f1",
+ "generated_at": "2026-10-20T04:57:22-04:00"
 }
