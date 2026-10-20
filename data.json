@@ -16,14 +16,14 @@
    "updated": "2026-10-19 18:30"
   },
   {
+   "book": "bet365",
+   "balance": 63.14,
+   "updated": "2026-10-20 06:04"
+  },
+  {
    "book": "DraftKings",
    "balance": 62.64,
    "updated": "2026-10-19 16:43"
-  },
-  {
-   "book": "bet365",
-   "balance": 58.61,
-   "updated": "2026-10-19 23:22"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 636.43,
+ "total": 640.96,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1122,7 +1122,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T10:03Z"
+     "t": "2026-10-20T10:05Z"
     }
    },
    "sport": "NFL",
@@ -5605,6 +5605,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "29a6b9db66b68e26ddd1caf700aca7014e1d15cb",
- "generated_at": "2026-10-20T06:03:36-04:00"
+ "hash": "0d590609b14ba4dedcfc13ff658d729cab6097cb",
+ "generated_at": "2026-10-20T10:05:13+00:00"
 }
