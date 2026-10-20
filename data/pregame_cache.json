@@ -318,5 +318,23 @@
   "total_over_fair": 0.4829,
   "src": "Pinnacle no-vig (saved scan)",
   "pulled": "2026-10-18 17:52 ET"
+ },
+ "401873010": {
+  "src": "Pinnacle no-vig",
+  "pulled": "2026-10-20 14:19 ET",
+  "ml_home": 0.6019,
+  "spread_home_line": -3.0,
+  "spread_home_fair": 0.5023,
+  "total_line": 50.5,
+  "total_over_fair": 0.5022
+ },
+ "401873016": {
+  "src": "Pinnacle no-vig",
+  "pulled": "2026-10-20 14:19 ET",
+  "ml_home": 0.7877,
+  "spread_home_line": -10.0,
+  "spread_home_fair": 0.4977,
+  "total_line": 43.5,
+  "total_over_fair": 0.4745
  }
 }
