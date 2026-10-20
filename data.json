@@ -315,10 +315,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 1260.0,
+     "clock": 1380.0,
      "state": "in",
      "completed": false,
-     "detail": "21'",
+     "detail": "23'",
      "teams": [
       {
        "id": "437",
@@ -1131,7 +1131,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T19:22Z"
+     "t": "2026-10-20T19:23Z"
     }
    },
    "sport": "NFL",
@@ -2264,7 +2264,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T19:22Z"
+     "t": "2026-10-20T19:23Z"
     }
    },
    "sport": "NFL",
@@ -6638,6 +6638,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "da53362dabf9383dfe17307bc1b385c7b59caa04",
- "generated_at": "2026-10-20T15:22:17-04:00"
+ "hash": "99dfa3398afe4453397f40702147e1372b45bf21",
+ "generated_at": "2026-10-20T15:23:35-04:00"
 }
