@@ -110,11 +110,11 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-19,DraftKings,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,Player prop (50% profit boost),Christian McCaffrey First TD Scorer,+320,+480,0.20,0.96,,,lost,-0.20,8d2a2595,2026-10-20 00:01,manual
 2026-10-19,FanDuel,Colorado Avalanche @ Philadelphia Flyers,Mon Oct 19 07:10 PM ET,SGP (40% profit boost),Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG,+108,+152,0.50,0.76,,,lost,-0.50,bd13eed8,2026-10-19 21:44,auto
 2026-10-19,Caesars,Tottenham vs Coventry City,Mon Oct 19 03:00 PM ET,SGP 3-leg (30% profit boost),Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots,+300,+390,0.50,1.95,,,lost,-0.50,659ed958,2026-10-19 16:58,auto
-2026-10-19,PointsBet,Yeovil v Leatherhead (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Leatherhead,+550,,10.00,55.00,,,open,,47d27866,,
-2026-10-19,PointsBet,Harrogate Town v Bury (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Bury,+300,,10.00,30.00,,,open,,d368e326,,
-2026-10-19,PointsBet,Forest Green v Chesham Utd (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Chesham Utd,+1000,,10.00,100.00,,,open,,dc3d72cd,,
+2026-10-19,PointsBet,Yeovil v Leatherhead (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Leatherhead,+550,,10.00,55.00,,,lost,-10.00,47d27866,2026-10-20 16:54,manual
+2026-10-19,PointsBet,Harrogate Town v Bury (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Bury,+300,,10.00,30.00,,,lost,-10.00,d368e326,2026-10-20 16:54,manual
+2026-10-19,PointsBet,Forest Green v Chesham Utd (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Chesham Utd,+1000,,10.00,100.00,,,lost,-10.00,dc3d72cd,2026-10-20 16:54,manual
 2026-10-19,PointsBet,Barcelona v Alaves (Spanish La Liga),Sat Oct 31 04:00 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+800,,10.00,80.00,,,open,,5db8dfe1,,
-2026-10-19,PointsBet,Anstey Nomads v Macclesfield FC (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Anstey Nomads,+240,,10.00,24.00,,,open,,682b90b5,,
+2026-10-19,PointsBet,Anstey Nomads v Macclesfield FC (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Anstey Nomads,+240,,10.00,24.00,,,lost,-10.00,682b90b5,2026-10-20 16:54,manual
 2026-10-19,bet365,Fenerbahce v Slavia Prague (UEFA Champions League),Tue Oct 20 12:45 PM ET,Same Game Parlay (50% profit boost),Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots,+110,+165,0.20,0.33,,,open,,207a4cea,,
 2026-10-20,FanDuel,New York Giants @ Houston Texans (NFL),Sun Oct 25 1:00 PM ET,"Moneyline (bonus bet $1.00; price unconfirmed, est.)",New York Giants,+370,,1.00 (bonus),3.70,21.2,78.6,open,,cfd5b49a,,
 2026-10-19,Caesars,Miami Dolphins @ New York Jets,Sun Oct 25 01:00 PM ET,SGP 3-leg (10% profit boost),NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter,+325,+358,0.50,1.79,,,open,,48cfe23a,,

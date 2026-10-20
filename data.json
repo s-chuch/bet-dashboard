@@ -439,10 +439,7 @@
      "stat": "passYds",
      "op": "min",
      "min": 220,
-     "text": "Drake Maye 220+ pass yds",
-     "pteam": "NE",
-     "pname": "Drake Maye",
-     "pid": "4431452"
+     "text": "Drake Maye 220+ pass yds"
     },
     {
      "type": "prop",
@@ -1137,7 +1134,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NFL",
@@ -1145,204 +1142,6 @@
    "payout": 1.68,
    "payout_est": false,
    "start_ts": "2026-10-23T00:15Z"
-  },
-  {
-   "bet_id": "47d27866",
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Yeovil v Leatherhead",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Leatherhead",
-   "start": "Tue Oct 20 02:45 PM ET",
-   "price": "+550",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 55.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Leatherhead",
-     "women": false,
-     "text": "Leatherhead",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.fa_qual",
-    "date": "20261020",
-    "groups": null,
-    "id": "401930578",
-    "snapshot": {
-     "date": "2026-10-20T18:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "284",
-       "name": "Yeovil Town",
-       "abbr": "YEO",
-       "short": "Yeovil",
-       "nick": "Yeovil Town",
-       "location": "Yeovil Town",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "3908",
-       "name": "Leatherhead",
-       "abbr": "Leatherhead",
-       "short": "Leatherhead",
-       "nick": "Leatherhead",
-       "location": "Leatherhead",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 65.0,
-   "payout_est": false,
-   "start_ts": "2026-10-20T18:45Z"
-  },
-  {
-   "bet_id": "d368e326",
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Harrogate Town v Bury",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Bury",
-   "start": "Tue Oct 20 02:45 PM ET",
-   "price": "+300",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 30.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Bury",
-     "women": false,
-     "text": "Bury",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.fa_qual",
-    "date": "20261020",
-    "groups": null,
-    "id": "401930559",
-    "snapshot": {
-     "date": "2026-10-20T18:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "19262",
-       "name": "Harrogate Town",
-       "abbr": "HAR",
-       "short": "Harrogate",
-       "nick": "Harrogate Town",
-       "location": "Harrogate Town",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "354",
-       "name": "Bury",
-       "abbr": "BURY",
-       "short": "Bury",
-       "nick": "Bury",
-       "location": "Bury",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 40.0,
-   "payout_est": false,
-   "start_ts": "2026-10-20T18:45Z"
-  },
-  {
-   "bet_id": "dc3d72cd",
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Forest Green v Chesham Utd",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Chesham Utd",
-   "start": "Tue Oct 20 02:45 PM ET",
-   "price": "+1000",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 100.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Chesham United",
-     "women": false,
-     "text": "Chesham Utd",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.fa_qual",
-    "date": "20261020",
-    "groups": null,
-    "id": "401930565",
-    "snapshot": {
-     "date": "2026-10-20T18:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "282",
-       "name": "Forest Green Rovers",
-       "abbr": "FGR",
-       "short": "Forest Green",
-       "nick": "Forest Green Rovers",
-       "location": "Forest Green Rovers",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "4181",
-       "name": "Chesham United",
-       "abbr": "CHM",
-       "short": "Chesham Utd",
-       "nick": "Chesham United",
-       "location": "Chesham United",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 110.0,
-   "payout_est": false,
-   "start_ts": "2026-10-20T18:45Z"
   },
   {
    "bet_id": "5db8dfe1",
@@ -1406,72 +1205,6 @@
    "payout": 90.0,
    "payout_est": false,
    "start_ts": "2026-10-31T20:00Z"
-  },
-  {
-   "bet_id": "682b90b5",
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Anstey Nomads v Macclesfield FC",
-   "market": "3-Way Moneyline (WELCOMEDM rollover)",
-   "pick": "Anstey Nomads",
-   "start": "Tue Oct 20 02:45 PM ET",
-   "price": "+240",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 24.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Anstey Nomads",
-     "women": false,
-     "text": "Anstey Nomads",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.fa_qual",
-    "date": "20261020",
-    "groups": null,
-    "id": "401930562",
-    "snapshot": {
-     "date": "2026-10-20T18:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "132337",
-       "name": "Anstey Nomads",
-       "abbr": "ANS",
-       "short": "Ansstey",
-       "nick": "Anstey Nomads",
-       "location": "Anstey Nomads",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "131494",
-       "name": "Macclesfield FC",
-       "abbr": "MFC",
-       "short": "Macclesfield",
-       "nick": "Macclesfield FC",
-       "location": "Macclesfield FC",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 10.0,
-   "payout": 34.0,
-   "payout_est": false,
-   "start_ts": "2026-10-20T18:45Z"
   },
   {
    "bet_id": "207a4cea",
@@ -2270,7 +2003,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NFL",
@@ -2989,7 +2722,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NFL",
@@ -3221,7 +2954,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "MLB",
@@ -3376,7 +3109,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "MLB",
@@ -3564,7 +3297,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NHL",
@@ -3787,7 +3520,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NBA",
@@ -4312,7 +4045,7 @@
      "home": 0.275,
      "away": 0.725,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NBA",
@@ -4837,7 +4570,7 @@
      "home": 0.275,
      "away": 0.725,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NBA",
@@ -5008,7 +4741,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NHL",
@@ -5537,7 +5270,7 @@
      "home": 0.275,
      "away": 0.725,
      "spread": 0.01,
-     "t": "2026-10-20T20:55Z"
+     "t": "2026-10-20T20:56Z"
     }
    },
    "sport": "NBA",
@@ -5659,6 +5392,46 @@
    "pnl": 3.29,
    "stake": 0.5,
    "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Anstey Nomads v Macclesfield FC",
+   "pick": "Anstey Nomads",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Forest Green v Chesham Utd",
+   "pick": "Chesham Utd",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Harrogate Town v Bury",
+   "pick": "Bury",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
+  },
+  {
+   "date": "2026-10-19",
+   "book": "PointsBet",
+   "event": "Yeovil v Leatherhead",
+   "pick": "Leatherhead",
+   "result": "lost",
+   "pnl": -10.0,
+   "stake": 10.0,
+   "auto": false
   },
   {
    "date": "2026-10-19",
@@ -6681,15 +6454,15 @@
    "auto": false
   }
  ],
- "pnl_total": 137.27,
+ "pnl_total": 97.27,
  "unsettled": {
-  "n": 27,
-  "cash_stake": 56.5,
-  "max_payout": 1046.98,
+  "n": 23,
+  "cash_stake": 16.5,
+  "max_payout": 797.98,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 56.5,
+ "open_stake": 16.5,
  "recs": {
   "stats": {
    "overall": {
@@ -10051,14 +9824,14 @@
   ],
   "last_change_at": "2026-10-20 16:53 ET"
  },
- "open_live_n": 26,
+ "open_live_n": 22,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 3.0,
   "DraftKings": 0.5,
   "FanDuel": 2.6,
-  "PointsBet": 184.75
+  "PointsBet": 144.75
  },
- "hash": "d05b2aaab64349fa6c8d28d2ea717cfbdd677d0b",
- "generated_at": "2026-10-20T16:55:20-04:00"
+ "hash": "3249a0c90b50f1920a270a3ddcee93e2f221cf3c",
+ "generated_at": "2026-10-20T20:56:04+00:00"
 }

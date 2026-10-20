@@ -187,3 +187,7 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-20 16:51,Caesars,5df01cb0,return,3.79,won
 2026-10-20 16:51,FanDuel,52414b40,settled,0.00,"lost, no return"
 2026-10-20 16:53,Hard Rock,c8cabe33,return,19.00,won
+2026-10-20 16:54,PointsBet,47d27866,settled,0.00,"lost, no return"
+2026-10-20 16:54,PointsBet,d368e326,settled,0.00,"lost, no return"
+2026-10-20 16:54,PointsBet,dc3d72cd,settled,0.00,"lost, no return"
+2026-10-20 16:54,PointsBet,682b90b5,settled,0.00,"lost, no return"
