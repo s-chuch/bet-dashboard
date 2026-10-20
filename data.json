@@ -314,11 +314,11 @@
     "id": "401915398",
     "snapshot": {
      "date": "2026-10-20T19:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 540.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "9'",
      "teams": [
       {
        "id": "437",
@@ -1131,7 +1131,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T18:26Z"
+     "t": "2026-10-20T19:11Z"
     }
    },
    "sport": "NFL",
@@ -1525,10 +1525,10 @@
     "snapshot": {
      "date": "2026-10-20T16:45Z",
      "period": 2,
-     "clock": 4980.0,
-     "state": "in",
-     "completed": false,
-     "detail": "83'",
+     "clock": 5400.0,
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "436",
@@ -1548,7 +1548,7 @@
        "nick": "Slavia Prague",
        "location": "Slavia Prague",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     }
@@ -2264,7 +2264,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T18:26Z"
+     "t": "2026-10-20T19:11Z"
     }
    },
    "sport": "NFL",
@@ -3298,11 +3298,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 104,
+    "n": 106,
     "w": 31,
     "l": 47,
     "p": 0,
-    "pending": 26,
+    "pending": 28,
     "win_pct": 39.7,
     "units": 17.67,
     "roi_pct": 25.6,
@@ -3344,11 +3344,11 @@
      "wins_with_fair": 4
     },
     "cash": {
-     "n": 20,
+     "n": 22,
      "w": 8,
      "l": 12,
      "p": 0,
-     "pending": 0,
+     "pending": 2,
      "win_pct": 40.0,
      "units": 13.74,
      "roi_pct": 68.7,
@@ -3436,11 +3436,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 12,
+     "n": 14,
      "w": 2,
      "l": 10,
      "p": 0,
-     "pending": 0,
+     "pending": 2,
      "win_pct": 16.7,
      "units": -4.25,
      "roi_pct": -47.2,
@@ -3573,11 +3573,11 @@
      "wins_with_fair": 24
     },
     "no": {
-     "n": 36,
+     "n": 38,
      "w": 7,
      "l": 9,
      "p": 0,
-     "pending": 20,
+     "pending": 22,
      "win_pct": 43.8,
      "units": -3.11,
      "roi_pct": -28.2,
@@ -3606,6 +3606,52 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "887e2d9c",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "15:10",
+    "sport": "NBA",
+    "event": "Oklahoma City Thunder @ San Antonio Spurs",
+    "market": "Spread",
+    "selection": "Oklahoma City Thunder +1.5",
+    "book": "theScore",
+    "rec_price": "-110",
+    "eff_price": "-110",
+    "fair_pct": "54.17",
+    "ev_pct": "3.41",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan, pulled 3:10 PM ET Oct 20; backup to OKC ML (same game, pick one); Pin alt home +112 / away -126 (fair -118); yes at -113 (2% EV)",
+    "units": null
+   },
+   {
+    "rec_id": "90ef4557",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "15:10",
+    "sport": "NBA",
+    "event": "Oklahoma City Thunder @ San Antonio Spurs",
+    "market": "Moneyline",
+    "selection": "Oklahoma City Thunder",
+    "book": "theScore",
+    "rec_price": "+105",
+    "eff_price": "+105",
+    "fair_pct": "51.27",
+    "ev_pct": "5.1",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan, pulled 3:10 PM ET Oct 20; Pin main home +100 / away -111 (fair -105); yes at -101 (2% EV)",
+    "units": null
+   },
    {
     "rec_id": "6d705e3a",
     "rec_date": "2026-10-20",
@@ -6277,7 +6323,26 @@
   ]
  },
  "auto": {
-  "needs_review": [],
+  "needs_review": [
+   {
+    "bet_id": "207a4cea",
+    "book": "bet365",
+    "event": "Fenerbahce v Slavia Prague (UEFA Champions League)",
+    "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
+    "stake": "0.20",
+    "reason": "leg \"Marco Asensio 3+ shots\": player \"Marco Asensio\" not in any box score (DNP void, or name mismatch?)",
+    "legs": [
+     {
+      "leg": "Mason Greenwood 1+ SOT",
+      "result": "won"
+     },
+     {
+      "leg": "Vedat Muriqi 1+ SOT",
+      "result": "won"
+     }
+    ]
+   }
+  ],
   "last_settled": [
    {
     "bet_id": "c55174ee",
@@ -6478,17 +6543,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 00:02 ET"
+  "last_change_at": "2026-10-20 15:11 ET"
  },
- "open_live_n": 17,
+ "open_live_n": 16,
  "open_stake_by_book": {
-  "bet365": 0.2,
+  "bet365": 0,
   "Caesars": 0.5,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "dc1921fb2095fceeaaac64823a2e34db0ade5870",
- "generated_at": "2026-10-20T14:26:20-04:00"
+ "hash": "c5452e5419c197ba06fd2b3708da2b0f1b41f411",
+ "generated_at": "2026-10-20T15:11:14-04:00"
 }
