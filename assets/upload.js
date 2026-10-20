@@ -216,6 +216,7 @@
       price: p.price || '', boosted: p.boosted_price || '', stake: p.stake != null ? String(p.stake) : '', to_win: p.to_win != null ? String(p.to_win) : '',
       warnings: (p.warnings || []).slice(), result: p.result || '', text: text || '', dup: false, note: note || ''
     };
+    if (!dr.price && dr.boosted) { dr.price = dr.boosted; dr.boosted = ''; dr.warnings.push('The odds before the boost were not readable, so the boosted odds are shown as the odds. Stake and to-win are right.'); }
     if (note && /^AI reading failed|^Basic reader/.test(note)) dr.warnings.unshift(note);
     if (dr.kind === 'settled') dr.warnings.unshift('This slip is already settled (' + (dr.result || 'result shown') + '). Settled bets are not added here.');
     if (dr.kind === 'other') dr.warnings.unshift('This does not look like a bet slip.');
