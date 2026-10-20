@@ -6470,7 +6470,7 @@
    "book": "FanDuel",
    "event": "Colorado Avalanche @ Philadelphia Flyers",
    "market": "SGP (40% profit boost)",
-   "pick": "SGP (legs not shown in screenshot)",
+   "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
    "start": "Mon Oct 19 07:10 PM ET",
    "price": "+108",
    "boosted_price": "+152",
@@ -6481,8 +6481,33 @@
    "multi": true,
    "legs": [
     {
-     "type": "unknown",
-     "text": "Colorado Avalanche @ Philadelphia Flyers"
+     "type": "ml",
+     "team": "Colorado Avalanche",
+     "women": false,
+     "text": "Colorado Avalanche ML",
+     "team_ok": true
+    },
+    {
+     "type": "prop",
+     "player": "Cale Makar",
+     "stat": "sog",
+     "op": "min",
+     "min": 2,
+     "text": "Cale Makar 2+ SOG",
+     "pteam": "COL",
+     "pname": "Cale Makar",
+     "pid": "4233563"
+    },
+    {
+     "type": "prop",
+     "player": "Nathan MacKinnon",
+     "stat": "sog",
+     "op": "min",
+     "min": 2,
+     "text": "Nathan MacKinnon 2+ SOG",
+     "pteam": "COL",
+     "pname": "Nathan MacKinnon",
+     "pid": "3041969"
     }
    ],
    "match": {
@@ -11011,6 +11036,6 @@
   "PointsBet": 208.75,
   "theScore": 0.6
  },
- "hash": "2fde9cd662bdfd01def8b11d52bfb4b76344d4bc",
- "generated_at": "2026-10-19T23:58:35+00:00"
+ "hash": "f9a50b1e2546197d8fa14b7c4c1fb3d5ba6eb4fa",
+ "generated_at": "2026-10-19T23:59:58+00:00"
 }
