@@ -79,11 +79,12 @@
     } else {
       el.innerHTML = '<h3>AI reading (recommended, free)</h3><p class="small muted">Lets the page read slips as well as Claude or Grok do, so you fill in nothing. Get a free Google AI Studio key (1 minute), paste it once; it stays in this browser.</p>' +
         '<p class="small"><a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a> · Privacy: on Google’s free tier, the screenshots you upload may be used by Google to improve its products. Crop out balances if that matters to you.</p>' +
-        '<div style="display:flex;gap:8px"><input type="text" id="ai-in" placeholder="Paste key (AIza…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>';
+        '<div style="display:flex;gap:8px"><input type="text" id="ai-in" placeholder="Paste your Google AI key" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>';
       $('ai-save').onclick = function () {
         var v = $('ai-in').value.trim();
-        if (!/^AIza[0-9A-Za-z_-]{30,}$/.test(v)) { $('ai-err').textContent = 'That does not look like a Google AI key (starts with AIza).'; return; }
+        if (!/^[A-Za-z0-9._~-]{20,200}$/.test(v)) { $('ai-err').textContent = 'That does not look like a key: it should be one string with no spaces, at least 20 characters.'; return; }
         setAi(v); renderAi();
+        getModel().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = 'Google did not accept that key: ' + (e && e.message ? e.message : e); });
       };
     }
   }
