@@ -105,6 +105,7 @@ async function refreshScores(full){
   const every=[...new Map(allMatches().map(m=>[m.id,m])).values()];   // need{} holds one match per league+day; the backups need every game
   await mlbBackup(every);
   await sofaBackup(every).catch(()=>{});
+  await sofaOdds(every).catch(()=>{});
   // player props need the box score (only in-progress SGPs with a prop leg)
   const sm={};for(const b of DATA.open)for(const L of b.legs){const m=b.match||L.match;if(m)sm[m.id]=m}   // box score + plays for every game on an open bet
   await Promise.all(Object.values(sm).map(async m=>{
@@ -157,6 +158,29 @@ async function sofaBackup(ms){const list=ms.filter(m=>SOCCER(m.path));if(!list.l
     const id=SOFA_ID[m.id];   // was live, not in the live list any more: ask for the final
     if(id&&(!SOFA_FIN[id]||Date.now()-SOFA_FIN[id]>30000)){SOFA_FIN[id]=Date.now();
       try{const r=await tfetch(SOFA+"event/"+id,{cache:"no-store"});if(r.ok){const ev=(await r.json()).event;if(ev&&ev.status&&ev.status.type==="finished")games[m.id]={...sofaApply(m,g,ev,true),sofa:true}}}catch(x){}}}}
+// SofaScore bookmaker odds (1X2, in-play too) for soccer moneyline / draw legs: covers games with no ESPN line or Polymarket market
+const SOFA_ODDS={},SOFA_NAMES={},SOFA_DISC={},SOFA_OAT={};
+const fracDec=f=>{const m=String(f||"").match(/^(\d+)\/(\d+)$/);return m?1+ +m[1]/+m[2]:null};
+async function sofaOdds(ms){const want=ms.filter(m=>SOCCER(m.path)&&DATA.open.some(b=>b.legs.some(L=>(L.type==="ml"||L.type==="draw")&&matchOfLeg(b,L)&&matchOfLeg(b,L).id===m.id)));
+  for(const m of want){const g=gameFor(m);if(!g||g.completed)continue;const live=g.state==="in";if(!live&&Date.parse(g.date)-Date.now()>3*3600e3)continue;
+    let id=SOFA_ID[m.id];
+    if(!id&&!SOFA_DISC[m.id]){SOFA_DISC[m.id]=1;const[A,H]=g.teams;
+      try{const r=await tfetch(SOFA+"search/events?page=0&q="+encodeURIComponent(`${H.short||H.name} ${A.short||A.name}`));if(r.ok){const d=await r.json();
+        for(const x of d.results||[]){const e=x.entity;if(!e||!e.homeTeam||!e.awayTeam||Math.abs(e.startTimestamp*1000-Date.parse(g.date))>6*3600e3)continue;if(sofaPair(e,g,true)||sofaPair(e,g,false)){id=SOFA_ID[m.id]=e.id;SOFA_NAMES[id]={home:e.homeTeam.name,away:e.awayTeam.name};break}}}}catch(e){}}
+    if(!id)continue;
+    if(Date.now()-(SOFA_OAT[id]||0)<(live?14000:55000))continue;SOFA_OAT[id]=Date.now();
+    try{const r=await tfetch(SOFA+`event/${id}/odds/1/featured`,{cache:"no-store"});if(!r.ok)throw 0;const j=await r.json(),mk=j.featured&&(j.featured.fullTime||j.featured.default);
+      if(!mk||mk.suspended||!mk.choices)continue;const dec={};for(const c of mk.choices)dec[c.name]=fracDec(c.fractionalValue);
+      if(!dec["1"]||!dec["X"]||!dec["2"])continue;const ip3=[1,"X",2].map(k=>1/dec[k]),tot=ip3[0]+ip3[1]+ip3[2];
+      SOFA_ODDS[id]={h:ip3[0]/tot,d:ip3[1]/tot,a:ip3[2]/tot,t:Date.now(),live:!!mk.isLive};FEED.sofa=FEED.sofa&&FEED.sofa.bad?FEED.sofa:{ok:Date.now()}}catch(e){}}}
+function sofaBar(L,m,g,ctx){if(!m||!g||g.completed||!SOCCER(m.path)||(L.type!=="ml"&&L.type!=="draw"))return"";const id=SOFA_ID[m.id],o=id&&SOFA_ODDS[id],nm=id&&SOFA_NAMES[id];
+  if(!o||Date.now()-o.t>180000)return"";let v,what;
+  if(L.type==="draw"){v=o.d;what="Draw"}
+  else{const pt=pickTeam(g,L);if(!pt)return"";let home=null;if(nm)home=sofaSide(nm.home,pt.T,false)&&!sofaSide(nm.away,pt.T,true);
+    if(home==null){const e=SOFA_LIVE.ev.find(x=>x.id===id);if(e)home=sofaSide(e.homeTeam.name,pt.T,false)}
+    if(home==null)return"";v=home?o.h:o.a;what=`${esc(pt.T.abbr)} win (not draw)`}
+  const age=Math.round((Date.now()-o.t)/1000);
+  return bar(`SofaScore odds${ctx||""} · ${what}`,v*100,"sfb",`Bookmaker odds via SofaScore, vig removed · ${o.live?"live":"pregame"} · ${age} s old`)}
 // live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
 async function refreshProbs(){
   const ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
@@ -770,14 +794,14 @@ function barsFor(b){const out=[];let mini=null;
   const estOf=(L,i,lbl)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return"";const v=estLeg(L,m,localGame(g,m));return v==null?"":bar(lbl,v*100,"est","",`data-leg="${i}"`)};
   if(!b.multi){const L=b.legs[0];if(L){const m=matchOfLeg(b,L),g=gameFor(m);
       if(g&&!g.completed){out.push(liveLine(L,m,g));
-        out.push(pmBar(L,m,g));out.push(kalBar(L,m,g));out.push(lineBar(L,m,g));out.push(booksBar(L,m,g));
+        out.push(pmBar(L,m,g));out.push(kalBar(L,m,g));out.push(lineBar(L,m,g));out.push(sofaBar(L,m,g));out.push(booksBar(L,m,g));
         out.push(estOf(L,0,L.type==="ml"?"Est. win":L.type==="spread"?`Est. cover ${esc(L.text)}`:`Est. ${esc(L.text)} hits`));
         const src=legSources(b,L);if(src.length){mini=src[0].v*100;out.push(`<div class="note srcn">Pill &amp; payout use: <b data-src>${SRC_LBL[src[0].k]}</b></div>`)}}}
-    if(!out.some(x=>/wp (pmb|bkb|lnb)/.test(x)))out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb|lnb|sfb)/.test(x)))out.push(espnBar())}
   else{b.legs.forEach((L,i)=>{const m=matchOfLeg(b,L),g=gameFor(m);if(!g||g.completed)return;const ctx=` · ${esc(L.text)}`;
-      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(kalBar(L,m,g,` leg`));out.push(lineBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
+      out.push(liveLine(L,m,g));out.push(pmBar(L,m,g,` leg`));out.push(kalBar(L,m,g,` leg`));out.push(lineBar(L,m,g,` leg`));out.push(sofaBar(L,m,g,` leg`));out.push(booksBar(L,m,g,` leg`));
       out.push(estOf(L,i,`Est. leg: ${esc(L.text)}${L.type==="spread"?" covers":L.type==="ml"?" wins":" hits"}`))});
-    if(!out.some(x=>/wp (pmb|bkb|lnb)/.test(x)))out.push(espnBar())}
+    if(!out.some(x=>/wp (pmb|bkb|lnb|sfb)/.test(x)))out.push(espnBar())}
   // player props / team totals have no market price: pace-based estimate per leg (+ one bar for the whole bet), live games only
   const PRP=new Set(["prop","teamtotal"]);
   if(b.legs.some(L=>PRP.has(L.type))){const ls=legStatsFor(b);let n=0;
