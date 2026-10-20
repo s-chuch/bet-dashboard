@@ -315,10 +315,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 540.0,
+     "clock": 780.0,
      "state": "in",
      "completed": false,
-     "detail": "9'",
+     "detail": "13'",
      "teams": [
       {
        "id": "437",
@@ -1131,7 +1131,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T19:11Z"
+     "t": "2026-10-20T19:14Z"
     }
    },
    "sport": "NFL",
@@ -2264,7 +2264,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T19:11Z"
+     "t": "2026-10-20T19:14Z"
     }
    },
    "sport": "NFL",
@@ -3298,11 +3298,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 106,
+    "n": 109,
     "w": 31,
     "l": 47,
     "p": 0,
-    "pending": 28,
+    "pending": 31,
     "win_pct": 39.7,
     "units": 17.67,
     "roi_pct": 25.6,
@@ -3342,6 +3342,21 @@
      "exp_wins": 1.0,
      "exp_wins_n": 6,
      "wins_with_fair": 4
+    },
+    "bonus bet $15 (min +300)": {
+     "n": 3,
+     "w": 0,
+     "l": 0,
+     "p": 0,
+     "pending": 3,
+     "win_pct": null,
+     "units": 0,
+     "roi_pct": null,
+     "roi_n": 0,
+     "exp_roi_pct": null,
+     "exp_wins": null,
+     "exp_wins_n": 0,
+     "wins_with_fair": 0
     },
     "cash": {
      "n": 22,
@@ -3451,11 +3466,11 @@
      "wins_with_fair": 2
     },
     "NCAAF": {
-     "n": 24,
+     "n": 27,
      "w": 9,
      "l": 15,
      "p": 0,
-     "pending": 0,
+     "pending": 3,
      "win_pct": 37.5,
      "units": 15.87,
      "roi_pct": 66.1,
@@ -3573,11 +3588,11 @@
      "wins_with_fair": 24
     },
     "no": {
-     "n": 38,
+     "n": 41,
      "w": 7,
      "l": 9,
      "p": 0,
-     "pending": 22,
+     "pending": 25,
      "win_pct": 43.8,
      "units": -3.11,
      "roi_pct": -28.2,
@@ -3606,6 +3621,75 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "09af3014",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "15:13",
+    "sport": "NCAAF",
+    "event": "Pittsburgh Panthers @ Miami (FL) Hurricanes",
+    "market": "Moneyline",
+    "selection": "Pittsburgh Panthers",
+    "book": "theScore",
+    "rec_price": "1300",
+    "eff_price": "1300",
+    "fair_pct": "9.6",
+    "ev_pct": "1.248",
+    "stake": "15",
+    "promo": "bonus bet $15 (min +300)",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "pick; ev=bonus value per $1",
+    "units": null
+   },
+   {
+    "rec_id": "28b7cf73",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "15:13",
+    "sport": "NCAAF",
+    "event": "Texas A&M Aggies @ Alabama Crimson Tide",
+    "market": "Moneyline",
+    "selection": "Texas A&M Aggies",
+    "book": "theScore",
+    "rec_price": "500",
+    "eff_price": "500",
+    "fair_pct": "17.89",
+    "ev_pct": "0.895",
+    "stake": "15",
+    "promo": "bonus bet $15 (min +300)",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "backup1; ev=bonus value per $1",
+    "units": null
+   },
+   {
+    "rec_id": "96b82d2d",
+    "rec_date": "2026-10-20",
+    "rec_time_et": "15:13",
+    "sport": "NCAAF",
+    "event": "California Golden Bears @ SMU Mustangs",
+    "market": "Moneyline",
+    "selection": "California Golden Bears",
+    "book": "theScore",
+    "rec_price": "750",
+    "eff_price": "750",
+    "fair_pct": "11.64",
+    "ev_pct": "0.873",
+    "stake": "15",
+    "promo": "bonus bet $15 (min +300)",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "backup2; ev=bonus value per $1",
+    "units": null
+   },
    {
     "rec_id": "887e2d9c",
     "rec_date": "2026-10-20",
@@ -6554,6 +6638,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "c5452e5419c197ba06fd2b3708da2b0f1b41f411",
- "generated_at": "2026-10-20T15:11:14-04:00"
+ "hash": "e49ac147894223b199d49ec395b4fd68b3d7c127",
+ "generated_at": "2026-10-20T15:14:05-04:00"
 }
