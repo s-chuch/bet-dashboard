@@ -95,6 +95,7 @@ async function refreshScores(full){
       CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};observe(ev.id,m.path,old,nw,moving);
       const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
+  await mlbBackup(Object.values(need));
   // player props need the box score (only in-progress SGPs with a prop leg)
   const sm={};for(const b of DATA.open)for(const L of b.legs){const m=b.match||L.match;if(m&&L.type==="prop")sm[m.id]=m}
   await Promise.all(Object.values(sm).map(async m=>{
@@ -103,6 +104,20 @@ async function refreshScores(full){
     const d=await espn(`${ESPN}${m.path}/summary?event=${m.id}`);if(!d||!d.boxscore)return;
     const fin=(S&&S.fin||0)+(g.completed?1:0);summaries[m.id]={d,t:Date.now(),path:m.path,fin,done:fin>=3}}));
 }
+// Free backup score source: MLB's own StatsAPI. ESPN sometimes lists an MLB game as "Scheduled" for many minutes after the first pitch
+// (or as in-progress after the last out); when MLB says the game is further along, advance the game state. ESPN stays the primary.
+const MLB_API="https://statsapi.mlb.com/api/v1/schedule?sportId=1&hydrate=linescore&date=";
+const ordn=n=>n+(["th","st","nd","rd"][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4]||"th");
+async function mlbBackup(ms){const list=ms.filter(m=>m.path==="baseball/mlb"),days=[...new Set(list.map(m=>m.date))];if(!list.length)return;
+  for(const d of days){let j;try{const r=await tfetch(MLB_API+`${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6)}`,{cache:"no-store"});if(!r.ok)throw 0;j=await r.json();FEED.mlb={ok:Date.now()}}catch(e){FEED.mlb={bad:"network/CORS"};continue}
+    const mg=[].concat(...(j.dates||[]).map(x=>x.games||[]));
+    for(const m of list.filter(x=>x.date===d)){const g=gameFor(m);if(!g||g.completed)continue;
+      const hit=mg.find(x=>{const a=x.teams.away.team.name,h=x.teams.home.team.name,t=g.teams;return t.some(y=>!y.home&&y.name===a)&&t.some(y=>y.home&&y.name===h)});if(!hit)continue;
+      const st=hit.status.abstractGameState,ls=hit.linescore||{};
+      const sc=g.teams.map(y=>{const o=y.home?ls.teams&&ls.teams.home:ls.teams&&ls.teams.away;return{...y,score:o&&o.runs!=null?String(o.runs):y.score}});
+      if(st==="Final"&&g.state!=="post"&&hit.status.detailedState==="Final")games[m.id]={...g,state:"post",completed:true,detail:"Final",teams:sc};
+      else if(st==="Live"&&g.state==="pre"&&ls.currentInning){const top=ls.inningHalf==="Top",half=ls.isTopInning===true||top?"Top":"Bot";
+        games[m.id]={...g,state:"in",completed:false,period:ls.currentInning,outs:ls.outs,detail:`${half} ${ordn(ls.currentInning)}`,teams:sc};CLK[m.id]={clock:null,t:Date.now(),moving:false}}}}}
 // live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
 async function refreshProbs(){
   const ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
@@ -770,6 +785,7 @@ function renderFeeds(){const el=$("feeds");if(!el)return;
   const st=x=>x&&x.ok&&Date.now()-x.ok<120000,bad=x=>x&&x.bad;
   const eBad=bad(FEED.site)||bad(FEED.core),eOK=st(FEED.site)&&!eBad;
   const parts=[f("ESPN",eOK,eBad||(FEED.site?"stale":"no data yet")),f("Polymarket",pmOK!==false,pmOK===false?"request failed":""),f("Odds",anOK!==false,anOK===false?"request failed":"")];
+  if(FEED.mlb)parts.push(f("MLB backup",!!FEED.mlb.ok,FEED.mlb.bad||""));
   const h=parts.join("")+(FEED.csp?` <span class="fbad">⚠ blocked by page security policy: ${esc(FEED.csp)}</span>`:"");
   if(el._h!==h){el._h=h;el.innerHTML=h}}
 function renderReview(){
