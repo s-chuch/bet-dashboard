@@ -3599,7 +3599,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "97"
+       "score": "98"
       },
       {
        "id": "2",
@@ -4100,9 +4100,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
+     "home": 0.4577,
+     "away": 0.5423,
+     "spread": 0.02,
      "t": "2026-10-20T21:13Z"
     }
    },
@@ -4179,7 +4179,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "97"
+       "score": "98"
       },
       {
        "id": "2",
@@ -4680,9 +4680,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
+     "home": 0.4577,
+     "away": 0.5423,
+     "spread": 0.02,
      "t": "2026-10-20T21:13Z"
     }
    },
@@ -4934,7 +4934,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "97"
+       "score": "98"
       },
       {
        "id": "2",
@@ -5435,9 +5435,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
+     "home": 0.4577,
+     "away": 0.5423,
+     "spread": 0.02,
      "t": "2026-10-20T21:13Z"
     }
    },
@@ -5610,7 +5610,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "97"
+       "score": "98"
       },
       {
        "id": "2",
@@ -6111,9 +6111,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
+     "home": 0.4577,
+     "away": 0.5423,
+     "spread": 0.02,
      "t": "2026-10-20T21:13Z"
     }
    },
@@ -10584,6 +10584,6 @@
   "FanDuel": 2.6,
   "PointsBet": 144.75
  },
- "hash": "5c9db5899f07d93c3c71cccf93cd934103579cdd",
- "generated_at": "2026-10-20T17:13:23-04:00"
+ "hash": "cc60bcc5c42a9707745bd7f7df3efca2052620c0",
+ "generated_at": "2026-10-20T17:13:44-04:00"
 }
