@@ -3586,10 +3586,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 570.0,
+     "clock": 543.0,
      "state": "in",
      "completed": false,
-     "detail": "9:30 - 4th",
+     "detail": "9:03 - 4th",
      "teams": [
       {
        "id": "8",
@@ -4067,9 +4067,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
-     "spread": 0.01,
+     "home": 0.165,
+     "away": 0.835,
+     "spread": 0.03,
      "t": "2026-10-20T21:03Z"
     }
    },
@@ -4133,10 +4133,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 570.0,
+     "clock": 543.0,
      "state": "in",
      "completed": false,
-     "detail": "9:30 - 4th",
+     "detail": "9:03 - 4th",
      "teams": [
       {
        "id": "8",
@@ -4614,9 +4614,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
-     "spread": 0.01,
+     "home": 0.165,
+     "away": 0.835,
+     "spread": 0.03,
      "t": "2026-10-20T21:03Z"
     }
    },
@@ -4785,8 +4785,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.601,
-     "away": 0.399,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
      "t": "2026-10-20T21:03Z"
     }
@@ -4855,10 +4855,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 570.0,
+     "clock": 543.0,
      "state": "in",
      "completed": false,
-     "detail": "9:30 - 4th",
+     "detail": "9:03 - 4th",
      "teams": [
       {
        "id": "8",
@@ -5336,9 +5336,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
-     "spread": 0.01,
+     "home": 0.165,
+     "away": 0.835,
+     "spread": 0.03,
      "t": "2026-10-20T21:03Z"
     }
    },
@@ -9901,6 +9901,6 @@
   "FanDuel": 2.6,
   "PointsBet": 144.75
  },
- "hash": "d8bcbe96a146a5f0ef31c9c8081fb2decf9f2c7b",
- "generated_at": "2026-10-20T17:03:18-04:00"
+ "hash": "16cb272bb03ee7245801167fdb46bd94227d8727",
+ "generated_at": "2026-10-20T17:03:58-04:00"
 }
