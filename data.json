@@ -315,10 +315,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 1740.0,
+     "clock": 1800.0,
      "state": "in",
      "completed": false,
-     "detail": "29'",
+     "detail": "30'",
      "teams": [
       {
        "id": "437",
@@ -1160,11 +1160,47 @@
      "type": "ml",
      "team": "Leatherhead",
      "women": false,
-     "text": "Leatherhead"
+     "text": "Leatherhead",
+     "team_ok": true
     }
    ],
-   "match": null,
-   "sport": null,
+   "match": {
+    "path": "soccer/eng.fa_qual",
+    "date": "20261020",
+    "groups": null,
+    "id": "401930578",
+    "snapshot": {
+     "date": "2026-10-20T18:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "284",
+       "name": "Yeovil Town",
+       "abbr": "YEO",
+       "short": "Yeovil",
+       "nick": "Yeovil Town",
+       "location": "Yeovil Town",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "3908",
+       "name": "Leatherhead",
+       "abbr": "Leatherhead",
+       "short": "Leatherhead",
+       "nick": "Leatherhead",
+       "location": "Leatherhead",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
    "cash_stake": 10.0,
    "payout": 65.0,
    "payout_est": false,
@@ -3578,10 +3614,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 1680.0,
+     "clock": 1740.0,
      "state": "in",
      "completed": false,
-     "detail": "28'",
+     "detail": "29'",
      "teams": [
       {
        "id": "382",
@@ -3889,10 +3925,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 115.0,
+     "clock": 100.0,
      "state": "in",
      "completed": false,
-     "detail": "1:55 - 1st",
+     "detail": "1:40 - 1st",
      "teams": [
       {
        "id": "8",
@@ -4161,10 +4197,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 115.0,
+     "clock": 100.0,
      "state": "in",
      "completed": false,
-     "detail": "1:55 - 1st",
+     "detail": "1:40 - 1st",
      "teams": [
       {
        "id": "8",
@@ -4434,10 +4470,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 1680.0,
+     "clock": 1740.0,
      "state": "in",
      "completed": false,
-     "detail": "28'",
+     "detail": "29'",
      "teams": [
       {
        "id": "382",
@@ -4697,10 +4733,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 1,
-     "clock": 115.0,
+     "clock": 100.0,
      "state": "in",
      "completed": false,
-     "detail": "1:55 - 1st",
+     "detail": "1:40 - 1st",
      "teams": [
       {
        "id": "8",
@@ -9372,6 +9408,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 184.75
  },
- "hash": "88a6baa913d36873740298cc12d1dc619457a3e8",
- "generated_at": "2026-10-20T19:30:18+00:00"
+ "hash": "ba99981d6cdf6e7d8bd17dcd1b2e84682cbb8e69",
+ "generated_at": "2026-10-20T15:30:36-04:00"
 }
