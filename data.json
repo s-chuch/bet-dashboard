@@ -10894,17 +10894,7 @@
   ]
  },
  "auto": {
-  "needs_review": [
-   {
-    "bet_id": "bd13eed8",
-    "book": "FanDuel",
-    "event": "Colorado Avalanche @ Philadelphia Flyers",
-    "pick": "SGP (legs not shown in screenshot)",
-    "stake": "0.50",
-    "reason": "parlay legs not listed in the pick text",
-    "legs": []
-   }
-  ],
+  "needs_review": [],
   "last_settled": [
    {
     "bet_id": "a0031feb",
@@ -11024,7 +11014,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 18:21 ET"
+  "last_change_at": "2026-10-19 20:00 ET"
  },
  "open_live_n": 26,
  "open_stake_by_book": {
@@ -11036,6 +11026,6 @@
   "PointsBet": 208.75,
   "theScore": 0.6
  },
- "hash": "f9a50b1e2546197d8fa14b7c4c1fb3d5ba6eb4fa",
- "generated_at": "2026-10-19T23:59:58+00:00"
+ "hash": "4323ba14d726eaeb5e55f8e560d03e6c2f32257a",
+ "generated_at": "2026-10-19T20:00:27-04:00"
 }
