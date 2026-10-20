@@ -15,9 +15,10 @@ on:
 # Deny everything by default; the job grants only what it needs.
 permissions: {}
 
-# shared with autorun so the two never overlap
+# its own group: GitHub keeps only ONE pending run per group, so sharing "autorun" would let a busy autorun cancel a queued upload.
+# Both jobs fetch/reset/push in a retry loop, so overlapping with an autorun is safe.
 concurrency:
-  group: autorun
+  group: add-bets
   cancel-in-progress: false
 
 defaults:

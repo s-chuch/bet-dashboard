@@ -36,19 +36,35 @@
     }
   }
 
-  /* ---------- existing bets (duplicate check) ---------- */
-  function dupKey(book, event, pick, stake) {
-    var n = function (s) { return String(s || '').toLowerCase().replace(/\([^)]*\)/g, '').replace(/[^a-z0-9]/g, ''); };
-    return [String(book || '').trim().toLowerCase(), n(event), n(pick), (parseFloat(stake) || 0).toFixed(2)].join('|');
+  /* ---------- duplicate check (same rule as scripts/add_bets.py: same book + stake, within 3 days, same line numbers, names overlap >= 75%) ---------- */
+  var STOP = {to:1,win:1,wins:1,ml:1,moneyline:1,pts:1,points:1,pt:1,sog:1,sot:1,shots:1,shot:1,on:1,goal:1,goals:1,team:1,total:1,the:1,fc:1,and:1,of:1,sgp:1,leg:1,legs:1,vs:1,v:1,at:1,target:1,parlay:1};
+  function sig(o) {
+    var t = (String(o.event || '') + ' ' + String(o.pick || '')).toLowerCase().match(/[a-z]+|\d+(?:\.\d+)?/g) || [], w = {}, n = {};
+    t.forEach(function (x) { if (/^\d/.test(x)) n[x] = 1; else if (!STOP[x] && x.length > 1) w[x] = 1; });
+    return { w: Object.keys(w), n: Object.keys(n).sort().join(',') };
+  }
+  function sameBet(a, b) {
+    if (String(a.book).trim().toLowerCase() !== String(b.book).trim().toLowerCase()) return false;
+    if (Math.abs((parseFloat(a.stake) || 0) - (parseFloat(b.stake) || 0)) > 0.005) return false;
+    var da = Date.parse(a.date), db = Date.parse(b.date); if (isNaN(da) || isNaN(db) || Math.abs(da - db) > 3 * 864e5) return false;
+    var x = sig(a), y = sig(b); if (x.n !== y.n || !x.w.length || !y.w.length) return false;
+    var hit = x.w.filter(function (k) { return y.w.indexOf(k) >= 0; }).length;
+    return hit / Math.min(x.w.length, y.w.length) >= 0.75;
   }
   function loadExisting() {
     fetch('data.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (d) {
-      var rows = [].concat(d.open || [], d.settled_recent || []);
-      S.existing = rows.map(function (b) { return dupKey(b.book, b.event, b.pick, b.stake); });
-      S.drafts.forEach(markDup); renderDrafts();
+      S.existing = [].concat(d.open || [], d.settled_recent || []).map(function (b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; });
+      renderDrafts();
     }).catch(function () {});
   }
-  function markDup(dr) { dr.dup = S.existing.indexOf(dupKey(dr.book, dr.event, dr.pick, dr.stake)) >= 0; if (dr.dup && dr.kind === 'placed') dr.on = false; }
+  // a draft is a duplicate of a tracker bet, or of an earlier draft in this upload
+  function markDup(dr) {
+    var i = S.drafts.indexOf(dr), earlier = i < 0 ? S.drafts : S.drafts.slice(0, i);
+    var was = dr.dup;
+    dr.dup = S.existing.some(function (e) { return sameBet(dr, e); }) || earlier.some(function (o) { return (o.kind === 'placed' || o.kind === 'open') && sameBet(dr, o); });
+    if (dr.dup && !was && (dr.kind === 'placed' || dr.kind === 'open')) dr.on = false;
+  }
+  function markAllDups() { S.drafts.forEach(markDup); }
 
   /* ---------- OCR ---------- */
   function getWorker(onProgress) {
@@ -135,7 +151,7 @@
     var on = S.drafts.filter(function (d) { return d.on; });
     if (!on.length || S.sending) return;
     var rows = on.map(function (d) {
-      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim(), to_win: d.to_win.trim() };
+      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim(), to_win: d.to_win.trim(), force: d.dup ? '1' : '' };
     });
     var body = JSON.stringify({ ref: 'main', inputs: { bets: JSON.stringify(rows) } });
     if (body.length > 60000) { $('sendmsg').textContent = 'Too many bets for one send. Send fewer at a time.'; return; }
@@ -189,9 +205,10 @@
     return '<label class="fld' + bad + ' ' + (cls || '') + '"><span>' + label + '</span><input type="text" data-d="' + d.id + '" data-k="' + k + '" value="' + esc(d[k]) + '" autocomplete="off" autocapitalize="off" spellcheck="false"' + (type === 'num' ? ' inputmode="decimal"' : '') + '></label>';
   }
   function renderDrafts(keepMsg) {
+    S.drafts.forEach(function (d) { if (!d._seen) { d._seen = 1; markDup(d); } });
     $('review').hidden = !S.drafts.length;
     $('rows').innerHTML = S.drafts.map(function (d) {
-      var tag = d.kind === 'settled' ? '<span class="tag bad">settled</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">already in tracker</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">looks good</span>');
+      var tag = d.kind === 'settled' ? '<span class="tag bad">settled</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">looks good</span>');
       var form = (d.kind === 'placed' || d.kind === 'open') ? '<div class="grid">' + fld(d, 'book', 'Book') + fld(d, 'date', 'Date placed', '', '') + fld(d, 'stake', 'Stake', '', 'num') + fld(d, 'to_win', 'To win', '', 'num') +
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
