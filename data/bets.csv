@@ -1,12 +1,4 @@
 date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,ev_pct,result,pnl,bet_id,settled_at,settled_by
-2026-10-14,Caesars,Kennesaw State @ Missouri State,Wed Oct 14 07:30 PM ET,Moneyline (100% profit boost),Missouri State Bears,+134,+268,25.00,67.00,40.97,50.8,won,67.00,487c5808,pre-ledger,
-2026-10-14,PointsBet,New Orleans Pelicans @ Dallas Mavericks,Wed Oct 14 08:00 PM ET,Moneyline (WELCOMEDM rollover),New Orleans Pelicans,unconfirmed,,25.00,,48.62,,won,23.81,0ace57c4,pre-ledger,
-2026-10-14,PointsBet,Western Kentucky @ Sam Houston State,Wed Oct 14 08:00 PM ET,Moneyline (WELCOMEDM rollover),Western Kentucky Hilltoppers,-125,,25.00,20.00,52.16,-6.1,won,20.00,bc664895,pre-ledger,
-2026-10-14,PointsBet,Chicago Bulls @ Milwaukee Bucks,Wed Oct 14 08:00 PM ET,Moneyline (WELCOMEDM rollover),Milwaukee Bucks,unconfirmed,,25.00,,46.32,,lost,-25.00,002836c9,pre-ledger,
-2026-10-14,PointsBet,New Orleans Pelicans @ Dallas Mavericks,Wed Oct 14 08:00 PM ET,Moneyline (WELCOMEDM rollover),Dallas Mavericks,unconfirmed,,25.00,,51.38,,lost,-25.00,522a7c30,pre-ledger,
-2026-10-14,bet365,Dallas Stars @ Colorado Avalanche,Wed Oct 14 08:30 PM ET,Moneyline (Safety Net $10 back),Dallas Stars,+115,,10.00,11.50,44.6,34.7,won,11.50,5919fefa,pre-ledger,
-2026-10-14,bet365,Phoenix Suns @ San Antonio Spurs,Wed Oct 14 08:00 PM ET,Moneyline,Phoenix Suns,+325,,0.17,0.55,24.81,5.46,lost,-0.17,c466305f,pre-ledger,
-2026-10-14,FanDuel,Phoenix Suns @ San Antonio Spurs,Wed Oct 14 08:00 PM ET,Moneyline,Phoenix Suns,+320,,0.79,2.53,24.81,4.22,lost,-0.79,35753496,pre-ledger,
 2026-10-15,DraftKings,Ohio State @ Indiana,Sat Oct 17 12:00 PM ET,Moneyline (50% profit boost),Indiana Hoosiers,+150,+225,0.30,0.67,38.26,24.3,lost,-0.30,a0cc50d3,pre-ledger,
 2026-10-15,DraftKings,Notre Dame @ BYU,Sat Oct 17 07:30 PM ET,Moneyline (50% profit boost),BYU Cougars,+310,+465,0.30,1.39,22.03,24.5,won,1.39,76ac7eed,2026-10-18 16:55,
 2026-10-15,PointsBet,Georgia Southern @ Old Dominion,Thu Oct 15 07:30 PM ET,Spread (WELCOMEDM rollover),Old Dominion +3.5,-108,,25.00,23.15,50.23,-3.3,lost,-25.00,3776ddb3,pre-ledger,
@@ -115,7 +107,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-19,theScore,Cleveland Guardians @ Tampa Bay Rays,Mon Oct 19 08:08 PM ET,SGP 3-leg (100% profit boost),Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs,+105,,0.20,0.42,,,won,0.42,cd53af17,2026-10-19 23:04,auto
 2026-10-19,Caesars,New England Patriots @ Chicago Bears,Thu Oct 22 08:15 PM ET,SGP 3-leg,Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds,+235,,0.50,1.18,,,open,,ecfed1e1,,
 2026-10-19,FanDuel,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,SGP 3-leg (50% profit boost),Christian McCaffrey anytime TD + Mike Evans 40+ rec yds + George Kittle 50+ rec yds,+110,,0.20,0.22,,,won,0.22,89146120,2026-10-19 23:22,auto
-2026-10-19,DraftKings,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,Player prop (50% profit boost),Christian McCaffrey First TD Scorer,+320,+480,0.20,0.96,,,open,,8d2a2595,,
+2026-10-19,DraftKings,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,Player prop (50% profit boost),Christian McCaffrey First TD Scorer,+320,+480,0.20,0.96,,,lost,-0.20,8d2a2595,2026-10-20 00:01,manual
 2026-10-19,FanDuel,Colorado Avalanche @ Philadelphia Flyers,Mon Oct 19 07:10 PM ET,SGP (40% profit boost),Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG,+108,+152,0.50,0.76,,,lost,-0.50,bd13eed8,2026-10-19 21:44,auto
 2026-10-19,Caesars,Tottenham vs Coventry City,Mon Oct 19 03:00 PM ET,SGP 3-leg (30% profit boost),Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots,+300,+390,0.50,1.95,,,lost,-0.50,659ed958,2026-10-19 16:58,auto
 2026-10-19,PointsBet,Yeovil v Leatherhead (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Leatherhead,+550,,10.00,55.00,,,open,,47d27866,,

@@ -168,3 +168,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-19 23:22,FanDuel,fb168e73,settled,0.00,"lost, no return"
 2026-10-19 23:22,DraftKings,2adec047,settled,0.00,"lost, no return"
 2026-10-19 23:22,FanDuel,89146120,return,0.42,won
+2026-10-20 00:01,DraftKings,8d2a2595,settled,0.00,"lost, no return"

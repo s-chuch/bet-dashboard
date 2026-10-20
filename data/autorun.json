@@ -1,15 +1,5 @@
 {
- "needs_review": [
-  {
-   "bet_id": "8d2a2595",
-   "book": "DraftKings",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Christian McCaffrey First TD Scorer",
-   "stake": "0.20",
-   "reason": "leg \"Christian McCaffrey First TD Scorer\": market/stat not recognised",
-   "legs": []
-  }
- ],
+ "needs_review": [],
  "last_settled": [
   {
    "bet_id": "c55174ee",
@@ -211,5 +201,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 23:22 ET"
+ "last_change_at": "2026-10-20 00:02 ET"
 }

@@ -1118,7 +1118,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T03:22Z"
+     "t": "2026-10-20T04:02Z"
     }
    },
    "sport": "NFL",
@@ -1126,80 +1126,6 @@
    "payout": 1.68,
    "payout_est": false,
    "start_ts": "2026-10-23T00:15Z"
-  },
-  {
-   "bet_id": "8d2a2595",
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "market": "Player prop (50% profit boost)",
-   "pick": "Christian McCaffrey First TD Scorer",
-   "start": "Mon Oct 19 08:15 PM ET",
-   "price": "+320",
-   "boosted_price": "+480",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.96,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Christian McCaffrey First TD Scorer",
-     "note": "first/last TD scorer: settle by hand",
-     "player": "Christian McCaffrey"
-    }
-   ],
-   "match": {
-    "path": "football/nfl",
-    "date": "20261019",
-    "groups": null,
-    "id": "401873008",
-    "snapshot": {
-     "date": "2026-10-20T00:15Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "25",
-       "name": "San Francisco 49ers",
-       "abbr": "SF",
-       "short": "49ers",
-       "nick": "49ers",
-       "location": "San Francisco",
-       "home": true,
-       "score": "23"
-      },
-      {
-       "id": "28",
-       "name": "Washington Commanders",
-       "abbr": "WSH",
-       "short": "Commanders",
-       "nick": "Commanders",
-       "location": "Washington",
-       "home": false,
-       "score": "17"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-18 23:46 ET",
-     "ml_home": 0.7757,
-     "spread_home_line": -7.5,
-     "spread_home_fair": 0.4954,
-     "total_line": 52.5,
-     "total_over_fair": 0.4932
-    }
-   },
-   "sport": "NFL",
-   "cash_stake": 0.2,
-   "payout": 1.16,
-   "payout_est": false,
-   "start_ts": "2026-10-20T00:15Z"
   },
   {
    "bet_id": "47d27866",
@@ -1641,6 +1567,16 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "DraftKings",
+   "event": "Washington Commanders @ San Francisco 49ers",
+   "pick": "Christian McCaffrey First TD Scorer",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-19",
@@ -2621,97 +2557,17 @@
    "pnl": -0.3,
    "stake": 0.3,
    "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "FanDuel",
-   "event": "Phoenix Suns @ San Antonio Spurs",
-   "pick": "Phoenix Suns",
-   "result": "lost",
-   "pnl": -0.79,
-   "stake": 0.79,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "bet365",
-   "event": "Phoenix Suns @ San Antonio Spurs",
-   "pick": "Phoenix Suns",
-   "result": "lost",
-   "pnl": -0.17,
-   "stake": 0.17,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "bet365",
-   "event": "Dallas Stars @ Colorado Avalanche",
-   "pick": "Dallas Stars",
-   "result": "won",
-   "pnl": 11.5,
-   "stake": 10.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "PointsBet",
-   "event": "New Orleans Pelicans @ Dallas Mavericks",
-   "pick": "Dallas Mavericks",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "PointsBet",
-   "event": "Chicago Bulls @ Milwaukee Bucks",
-   "pick": "Milwaukee Bucks",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "PointsBet",
-   "event": "Western Kentucky @ Sam Houston State",
-   "pick": "Western Kentucky Hilltoppers",
-   "result": "won",
-   "pnl": 20.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "PointsBet",
-   "event": "New Orleans Pelicans @ Dallas Mavericks",
-   "pick": "New Orleans Pelicans",
-   "result": "won",
-   "pnl": 23.81,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-14",
-   "book": "Caesars",
-   "event": "Kennesaw State @ Missouri State",
-   "pick": "Missouri State Bears",
-   "result": "won",
-   "pnl": 67.0,
-   "stake": 25.0,
-   "auto": false
   }
  ],
- "pnl_total": 115.43,
+ "pnl_total": 115.23,
  "unsettled": {
-  "n": 17,
-  "cash_stake": 52.1,
-  "max_payout": 1041.69,
+  "n": 16,
+  "cash_stake": 51.9,
+  "max_payout": 1040.53,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 52.1,
+ "open_stake": 51.9,
  "recs": {
   "stats": {
    "overall": {
@@ -5533,17 +5389,7 @@
   ]
  },
  "auto": {
-  "needs_review": [
-   {
-    "bet_id": "8d2a2595",
-    "book": "DraftKings",
-    "event": "Washington Commanders @ San Francisco 49ers",
-    "pick": "Christian McCaffrey First TD Scorer",
-    "stake": "0.20",
-    "reason": "leg \"Christian McCaffrey First TD Scorer\": market/stat not recognised",
-    "legs": []
-   }
-  ],
+  "needs_review": [],
   "last_settled": [
    {
     "bet_id": "c55174ee",
@@ -5744,7 +5590,7 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 23:22 ET"
+  "last_change_at": "2026-10-20 00:02 ET"
  },
  "open_live_n": 16,
  "open_stake_by_book": {
@@ -5755,6 +5601,6 @@
   "Hard Rock": 5.0,
   "PointsBet": 183.75
  },
- "hash": "5e7b850f16f611585e60a3a2d176732f4701711c",
- "generated_at": "2026-10-19T23:22:20-04:00"
+ "hash": "4ea6415b80d9d9f5234daf10ca9e4abfd7afd734",
+ "generated_at": "2026-10-20T00:02:04-04:00"
 }
