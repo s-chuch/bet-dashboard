@@ -27,8 +27,8 @@
   },
   {
    "book": "theScore",
-   "balance": 31.18,
-   "updated": "2026-10-19 22:23"
+   "balance": 31.8,
+   "updated": "2026-10-19 23:04"
   },
   {
    "book": "Hard Rock",
@@ -36,7 +36,7 @@
    "updated": "2026-10-17 19:27"
   }
  ],
- "total": 635.14,
+ "total": 635.76,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -125,10 +125,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 775.0,
+     "clock": 175.0,
      "state": "in",
      "completed": false,
-     "detail": "12:55 - 4th",
+     "detail": "2:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -148,7 +148,7 @@
        "nick": "Commanders",
        "location": "Washington",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -1026,10 +1026,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9343,
-     "away": 0.0657,
+     "home": 0.6818,
+     "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -1373,10 +1373,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 775.0,
+     "clock": 175.0,
      "state": "in",
      "completed": false,
-     "detail": "12:55 - 4th",
+     "detail": "2:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -1396,7 +1396,7 @@
        "nick": "Commanders",
        "location": "Washington",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -2274,10 +2274,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9343,
-     "away": 0.0657,
+     "home": 0.6818,
+     "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -2343,224 +2343,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "6409f661",
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "market": "SGP 3-leg (30% parlay boost)",
-   "pick": "TB Rays ML + CLE Guardians +2.5 + Chase DeLauter 1+ hits",
-   "start": "Mon Oct 19 08:05 PM ET",
-   "price": "+315",
-   "boosted_price": "+410",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.82,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Tampa Bay Rays",
-     "women": false,
-     "text": "TB Rays ML",
-     "team_ok": true
-    },
-    {
-     "type": "spread",
-     "team": "Cleveland Guardians",
-     "line": 2.5,
-     "women": false,
-     "text": "CLE Guardians +2.5",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Chase DeLauter",
-     "stat": "hits",
-     "op": "min",
-     "min": 1,
-     "text": "Chase DeLauter 1+ hits",
-     "pteam": "CLE",
-     "pname": "Chase DeLauter",
-     "pid": "4619649"
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261019",
-    "groups": null,
-    "id": "401908028",
-    "snapshot": {
-     "date": "2026-10-20T00:00Z",
-     "period": 8,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "Top 8th",
-     "teams": [
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "5",
-       "name": "Cleveland Guardians",
-       "abbr": "CLE",
-       "short": "Guardians",
-       "nick": "Guardians",
-       "location": "Cleveland",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pregame": {
-     "home": 55.5,
-     "away": 44.5
-    },
-    "pm": {
-     "slug": "mlb-cle-tb-2026-10-19",
-     "title": "Cleveland Guardians vs. Tampa Bay Rays",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "93733477547426117127664133246661996578985412597163447366443710706316251606307",
-        "59070912528187711065068613621845488643502072596959200590901196884657111310601"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "97736403860493637475203608498332140786992272127925321864797636592055128937516",
-        "64409059263171687069343398193515983785410852523329658749088274551116148033319"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "85409329922041733171291742080512235427502966923168343837259703228403767805998",
-        "45836295438064446673100384980751129018749206451795729265504920832313438447776"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "84638423711042053368716314564853575706490120729500940097821576068678582846901",
-        "35760104084279683263503379172907288791742396321768286190292959818987309420861"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18609384798216315879602525400523030630000024227400183382752406839790237734918",
-        "40903493538745139555052886196728167414620998991695963438410078813186930063385"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "102439327873795204838746255733913239291325289712424008533559749801217783438131",
-        "36293660410544552764684439520852945025216069221033325128623465784224996748250"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "13500588164900381546648160819155082389841450630971158661527600261920989357990",
-        "37140005371074013659116917855838130991174414609273746292192329870075576329876"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "66849846208224056744211159071183733075913108610192649082737157204850488650",
-        "79931902727865762123247945149188510836478318948064616467487338654586343883904"
-       ]
-      },
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "75488198782670276386753884525129015526640575568384317545080165938718202479895",
-        "13104664780296035936344622919179200796981515470683082444570181533715897037353"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Cleveland Guardians",
-       "Tampa Bay Rays"
-      ],
-      "tokens": [
-       "65005422871851982368670592851797343608502532095622886623098813646055338667802",
-       "39531941367620490173433483514084761526640949663961297824684199735572872835630"
-      ]
-     }
-    },
-    "an": {
-     "id": 303623,
-     "home_team_id": 189,
-     "away_team_id": 193
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.945,
-     "away": 0.055,
-     "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
-    }
-   },
-   "sport": "MLB",
-   "cash_stake": 0.2,
-   "payout": 1.02,
-   "payout_est": false,
-   "start_ts": "2026-10-20T00:05Z"
-  },
-  {
    "bet_id": "2adec047",
    "date": "2026-10-19",
    "book": "DraftKings",
@@ -2614,10 +2396,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 775.0,
+     "clock": 175.0,
      "state": "in",
      "completed": false,
-     "detail": "12:55 - 4th",
+     "detail": "2:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -2637,7 +2419,7 @@
        "nick": "Commanders",
        "location": "Washington",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -3515,10 +3297,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9343,
-     "away": 0.0657,
+     "home": 0.6818,
+     "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -3526,221 +3308,6 @@
    "payout": 1.02,
    "payout_est": false,
    "start_ts": "2026-10-20T00:15Z"
-  },
-  {
-   "bet_id": "cd53af17",
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "market": "SGP 3-leg (100% profit boost)",
-   "pick": "Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs",
-   "start": "Mon Oct 19 08:08 PM ET",
-   "price": "+105",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.42,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "over",
-     "line": 3.5,
-     "text": "Over 3.5 runs"
-    },
-    {
-     "type": "ml",
-     "team": "Tampa Bay Rays",
-     "women": false,
-     "text": "TB Rays ML",
-     "team_ok": true
-    },
-    {
-     "type": "teamtotal",
-     "team": "Cleveland Guardians",
-     "side": "over",
-     "line": 0.5,
-     "unit": "runs",
-     "women": false,
-     "text": "CLE Guardians Over 0.5 team runs",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261019",
-    "groups": null,
-    "id": "401908028",
-    "snapshot": {
-     "date": "2026-10-20T00:00Z",
-     "period": 8,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "Top 8th",
-     "teams": [
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "5",
-       "name": "Cleveland Guardians",
-       "abbr": "CLE",
-       "short": "Guardians",
-       "nick": "Guardians",
-       "location": "Cleveland",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pregame": {
-     "home": 55.5,
-     "away": 44.5
-    },
-    "pm": {
-     "slug": "mlb-cle-tb-2026-10-19",
-     "title": "Cleveland Guardians vs. Tampa Bay Rays",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "93733477547426117127664133246661996578985412597163447366443710706316251606307",
-        "59070912528187711065068613621845488643502072596959200590901196884657111310601"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "97736403860493637475203608498332140786992272127925321864797636592055128937516",
-        "64409059263171687069343398193515983785410852523329658749088274551116148033319"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "85409329922041733171291742080512235427502966923168343837259703228403767805998",
-        "45836295438064446673100384980751129018749206451795729265504920832313438447776"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Cleveland Guardians"
-       ],
-       "tokens": [
-        "84638423711042053368716314564853575706490120729500940097821576068678582846901",
-        "35760104084279683263503379172907288791742396321768286190292959818987309420861"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18609384798216315879602525400523030630000024227400183382752406839790237734918",
-        "40903493538745139555052886196728167414620998991695963438410078813186930063385"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "102439327873795204838746255733913239291325289712424008533559749801217783438131",
-        "36293660410544552764684439520852945025216069221033325128623465784224996748250"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "13500588164900381546648160819155082389841450630971158661527600261920989357990",
-        "37140005371074013659116917855838130991174414609273746292192329870075576329876"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "66849846208224056744211159071183733075913108610192649082737157204850488650",
-        "79931902727865762123247945149188510836478318948064616467487338654586343883904"
-       ]
-      },
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "75488198782670276386753884525129015526640575568384317545080165938718202479895",
-        "13104664780296035936344622919179200796981515470683082444570181533715897037353"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Cleveland Guardians",
-       "Tampa Bay Rays"
-      ],
-      "tokens": [
-       "65005422871851982368670592851797343608502532095622886623098813646055338667802",
-       "39531941367620490173433483514084761526640949663961297824684199735572872835630"
-      ]
-     }
-    },
-    "an": {
-     "id": 303623,
-     "home_team_id": 189,
-     "away_team_id": 193
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.945,
-     "away": 0.055,
-     "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
-    }
-   },
-   "sport": "MLB",
-   "cash_stake": 0.2,
-   "payout": 0.62,
-   "payout_est": false,
-   "start_ts": "2026-10-20T00:08Z"
   },
   {
    "bet_id": "ecfed1e1",
@@ -4455,7 +4022,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -4522,10 +4089,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 775.0,
+     "clock": 175.0,
      "state": "in",
      "completed": false,
-     "detail": "12:55 - 4th",
+     "detail": "2:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -4545,7 +4112,7 @@
        "nick": "Commanders",
        "location": "Washington",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -5423,10 +4990,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9343,
-     "away": 0.0657,
+     "home": 0.6818,
+     "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -5466,10 +5033,10 @@
     "snapshot": {
      "date": "2026-10-20T00:15Z",
      "period": 4,
-     "clock": 775.0,
+     "clock": 175.0,
      "state": "in",
      "completed": false,
-     "detail": "12:55 - 4th",
+     "detail": "2:55 - 4th",
      "teams": [
       {
        "id": "25",
@@ -5489,7 +5056,7 @@
        "nick": "Commanders",
        "location": "Washington",
        "home": false,
-       "score": "10"
+       "score": "17"
       }
      ]
     },
@@ -6367,10 +5934,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9343,
-     "away": 0.0657,
+     "home": 0.6818,
+     "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-20T02:39Z"
+     "t": "2026-10-20T03:04Z"
     }
    },
    "sport": "NFL",
@@ -6823,6 +6390,16 @@
   {
    "date": "2026-10-19",
    "book": "theScore",
+   "event": "Cleveland Guardians @ Tampa Bay Rays",
+   "pick": "Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs",
+   "result": "won",
+   "pnl": 0.42,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "theScore",
    "event": "Atlanta Dream @ Golden State Valkyries",
    "pick": "Kiah Stokes 5+ rebounds + Angel Reese 7+ rebounds + Jordin Canada 7+ assists",
    "result": "won",
@@ -6837,6 +6414,16 @@
    "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
    "result": "won",
    "pnl": 0.22,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "DraftKings",
+   "event": "Cleveland Guardians @ Tampa Bay Rays",
+   "pick": "TB Rays ML + CLE Guardians +2.5 + Chase DeLauter 1+ hits",
+   "result": "lost",
+   "pnl": -0.2,
    "stake": 0.2,
    "auto": true
   },
@@ -7821,31 +7408,31 @@
    "auto": false
   }
  ],
- "pnl_total": 140.69,
+ "pnl_total": 140.91,
  "unsettled": {
-  "n": 23,
-  "cash_stake": 78.4,
-  "max_payout": 1095.35,
+  "n": 21,
+  "cash_stake": 78.0,
+  "max_payout": 1093.71,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 78.4,
+ "open_stake": 78.0,
  "recs": {
   "stats": {
    "overall": {
     "n": 97,
-    "w": 30,
+    "w": 31,
     "l": 46,
     "p": 0,
-    "pending": 21,
-    "win_pct": 39.5,
-    "units": 17.02,
-    "roi_pct": 25.4,
-    "roi_n": 67,
-    "exp_roi_pct": 11.8,
-    "exp_wins": 26.8,
-    "exp_wins_n": 76,
-    "wins_with_fair": 30
+    "pending": 20,
+    "win_pct": 40.3,
+    "units": 18.67,
+    "roi_pct": 27.5,
+    "roi_n": 68,
+    "exp_roi_pct": 11.7,
+    "exp_wins": 27.2,
+    "exp_wins_n": 77,
+    "wins_with_fair": 31
    },
    "by_promo": {
     "No Sweat": {
@@ -7880,18 +7467,18 @@
     },
     "cash": {
      "n": 20,
-     "w": 7,
+     "w": 8,
      "l": 12,
      "p": 0,
-     "pending": 1,
-     "win_pct": 36.8,
-     "units": 12.09,
-     "roi_pct": 63.6,
-     "roi_n": 19,
+     "pending": 0,
+     "win_pct": 40.0,
+     "units": 13.74,
+     "roi_pct": 68.7,
+     "roi_n": 20,
      "exp_roi_pct": 6.8,
-     "exp_wins": 5.9,
-     "exp_wins_n": 19,
-     "wins_with_fair": 7
+     "exp_wins": 6.3,
+     "exp_wins_n": 20,
+     "wins_with_fair": 8
     },
     "live boost": {
      "n": 1,
@@ -7957,18 +7544,18 @@
     },
     "MLB": {
      "n": 3,
-     "w": 2,
+     "w": 3,
      "l": 0,
      "p": 0,
-     "pending": 1,
+     "pending": 0,
      "win_pct": 100.0,
-     "units": 5.08,
-     "roi_pct": 254.0,
-     "roi_n": 2,
-     "exp_roi_pct": 53.4,
-     "exp_wins": 0.9,
-     "exp_wins_n": 2,
-     "wins_with_fair": 2
+     "units": 6.73,
+     "roi_pct": 224.3,
+     "roi_n": 3,
+     "exp_roi_pct": 37.7,
+     "exp_wins": 1.3,
+     "exp_wins_n": 3,
+     "wins_with_fair": 3
     },
     "NBA": {
      "n": 12,
@@ -8109,18 +7696,18 @@
     },
     "no": {
      "n": 30,
-     "w": 6,
+     "w": 7,
      "l": 9,
      "p": 0,
-     "pending": 15,
-     "win_pct": 40.0,
-     "units": -4.76,
-     "roi_pct": -47.6,
-     "roi_n": 10,
-     "exp_roi_pct": 5.2,
-     "exp_wins": 4.5,
-     "exp_wins_n": 15,
-     "wins_with_fair": 6
+     "pending": 14,
+     "win_pct": 43.8,
+     "units": -3.11,
+     "roi_pct": -28.2,
+     "roi_n": 11,
+     "exp_roi_pct": 5.3,
+     "exp_wins": 4.9,
+     "exp_wins_n": 16,
+     "wins_with_fair": 7
     }
    },
    "friend": {
@@ -8411,11 +7998,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "CLE 3-7 TB (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan, pulled 3:08 PM ET; Pin main home +143 / away -160 (fair +150); yes at +155 (2% EV floor); FanDuel +152 below threshold",
-    "units": null
+    "units": 1.65
    },
    {
     "rec_id": "a9e797df",
@@ -10654,6 +10241,24 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "6409f661",
+    "book": "DraftKings",
+    "pick": "TB Rays ML + CLE Guardians +2.5 + Chase DeLauter 1+ hits",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "CLE 3-7 TB",
+    "at": "2026-10-19 23:04"
+   },
+   {
+    "bet_id": "cd53af17",
+    "book": "theScore",
+    "pick": "Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs",
+    "result": "won",
+    "pnl": 0.42,
+    "final": "CLE 3-7 TB",
+    "at": "2026-10-19 23:04"
+   },
+   {
     "bet_id": "ac79d306",
     "book": "theScore",
     "pick": "Kiah Stokes 5+ rebounds + Angel Reese 7+ rebounds + Jordin Canada 7+ assists",
@@ -10798,18 +10403,17 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-19 22:23 ET"
+  "last_change_at": "2026-10-19 23:04 ET"
  },
- "open_live_n": 23,
+ "open_live_n": 21,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 0.5,
-  "DraftKings": 0.7,
+  "DraftKings": 0.5,
   "FanDuel": 1.8,
   "Hard Rock": 5.0,
-  "PointsBet": 208.75,
-  "theScore": 0.2
+  "PointsBet": 208.75
  },
- "hash": "d08e1124d4cd6129479d1a97bb1acf4d739d6638",
- "generated_at": "2026-10-19T22:39:53-04:00"
+ "hash": "c10351498281a31cbe4d47bf590824bbb0bff56c",
+ "generated_at": "2026-10-19T23:04:53-04:00"
 }

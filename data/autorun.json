@@ -2,6 +2,24 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "6409f661",
+   "book": "DraftKings",
+   "pick": "TB Rays ML + CLE Guardians +2.5 + Chase DeLauter 1+ hits",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "CLE 3-7 TB",
+   "at": "2026-10-19 23:04"
+  },
+  {
+   "bet_id": "cd53af17",
+   "book": "theScore",
+   "pick": "Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs",
+   "result": "won",
+   "pnl": 0.42,
+   "final": "CLE 3-7 TB",
+   "at": "2026-10-19 23:04"
+  },
+  {
    "bet_id": "ac79d306",
    "book": "theScore",
    "pick": "Kiah Stokes 5+ rebounds + Angel Reese 7+ rebounds + Jordin Canada 7+ assists",
@@ -147,5 +165,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 22:23 ET"
+ "last_change_at": "2026-10-19 23:04 ET"
 }
