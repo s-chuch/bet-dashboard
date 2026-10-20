@@ -102,7 +102,9 @@ async function refreshScores(full){
       CLK[ev.id]={clock:nw.clock,t:Date.now(),moving};observe(ev.id,m.path,old,nw,moving);
       const p=ev.competitions[0].situation&&ev.competitions[0].situation.lastPlay&&ev.competitions[0].situation.lastPlay.probability;
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
-  await mlbBackup(Object.values(need));
+  const every=[...new Map(allMatches().map(m=>[m.id,m])).values()];   // need{} holds one match per league+day; the backups need every game
+  await mlbBackup(every);
+  await sofaBackup(every).catch(()=>{});
   // player props need the box score (only in-progress SGPs with a prop leg)
   const sm={};for(const b of DATA.open)for(const L of b.legs){const m=b.match||L.match;if(m)sm[m.id]=m}   // box score + plays for every game on an open bet
   await Promise.all(Object.values(sm).map(async m=>{
@@ -125,6 +127,36 @@ async function mlbBackup(ms){const list=ms.filter(m=>m.path==="baseball/mlb"),da
       if(st==="Final"&&g.state!=="post"&&hit.status.detailedState==="Final")games[m.id]={...g,state:"post",completed:true,detail:"Final",teams:sc};
       else if(st==="Live"&&g.state==="pre"&&ls.currentInning){const top=ls.inningHalf==="Top",half=ls.isTopInning===true||top?"Top":"Bot";
         games[m.id]={...g,state:"in",completed:false,period:ls.currentInning,outs:ls.outs,detail:`${half} ${ordn(ls.currentInning)}`,teams:sc};CLK[m.id]={clock:null,t:Date.now(),moving:false}}}}}
+// Free backup for soccer: SofaScore's public live feed covers leagues ESPN never updates (FA Cup qualifying, lower divisions, ...).
+// Unofficial API, so it is only used when ESPN still says "not started" after kickoff, and ESPN takes over as soon as it reports the game live.
+const SOFA="https://api.sofascore.com/api/v1/";const SOFA_ID={};let SOFA_LIVE={t:0,ev:[]},SOFA_FIN={};
+const sofaToks=n=>norm(n).filter(w=>!["fc","afc","cf","sc","ac","the"].includes(w));
+const sameToks=(a,b)=>a.length&&a.length===b.length&&a.every(x=>b.includes(x));
+const subToks=(a,b)=>a.length&&b.length&&(a.every(x=>b.includes(x))||b.every(x=>a.includes(x)));
+function sofaSide(name,t,exact){const q=sofaToks(name);return[t.name,t.short,t.location,t.nick&&t.location?t.location+" "+t.nick:""].filter(Boolean).some(v=>exact?sameToks(q,sofaToks(v)):subToks(q,sofaToks(v)))}
+function sofaPair(e,g,exact){const[a,b]=g.teams;const h=e.homeTeam.name,w=e.awayTeam.name;
+  return(sofaSide(h,a,exact)&&sofaSide(w,b,exact))||(sofaSide(h,b,exact)&&sofaSide(w,a,exact))}
+function sofaApply(m,g,e,fin){const sc=(side)=>{const o=e[side+"Score"]||{};const v=fin&&o.normaltime!=null?o.normaltime:o.current;return v==null?null:String(v)};
+  const teams=g.teams.map(t=>{const hm=sofaSide(e.homeTeam.name,t,true)||(!sofaSide(e.awayTeam.name,t,false)&&sofaSide(e.homeTeam.name,t,false));const v=sc(hm?"home":"away");return{...t,score:v==null?t.score:v}});
+  const code=(e.status||{}).code,t0=(e.time||{}).currentPeriodStartTimestamp,ini=(e.time||{}).initial||0;
+  if(fin)return{...g,state:"post",completed:true,detail:"FT",teams};
+  const per=code===6||code===41?1:code===7||code===42?2:code===31?1:2;
+  let clock=null,detail=String((e.status||{}).description||"Live");
+  if(code===31||/half ?time/i.test(detail))detail="HT";
+  else if(t0){const el=Math.max(0,Math.floor(Date.now()/1000)-t0)+ini;clock=el;detail=`${Math.floor(el/60)+1}'`}
+  return{...g,state:"in",completed:false,period:per,clock,detail,teams}}
+async function sofaBackup(ms){const list=ms.filter(m=>SOCCER(m.path));if(!list.length)return;
+  const cand=list.filter(m=>{const g=gameFor(m);return g&&!g.completed&&g.state==="pre"&&g.date&&Date.parse(g.date)-Date.now()<-30000||games[m.id]&&games[m.id].sofa});
+  if(!cand.length)return;
+  if(Date.now()-SOFA_LIVE.t>12000){try{const r=await tfetch(SOFA+"sport/football/events/live",{cache:"no-store"});if(!r.ok)throw 0;SOFA_LIVE={t:Date.now(),ev:(await r.json()).events||[]};FEED.sofa={ok:Date.now()}}catch(e){FEED.sofa={bad:"network/CORS"};return}}
+  for(const m of cand){const g=gameFor(m);if(!g||g.completed)continue;
+    if(g.state==="in"&&!g.sofa)continue;   // ESPN reports it live: ESPN wins
+    let e=SOFA_ID[m.id]&&SOFA_LIVE.ev.find(x=>x.id===SOFA_ID[m.id]);
+    if(!e){const hits=SOFA_LIVE.ev.filter(x=>sofaPair(x,g,true));const loose=hits.length?hits:SOFA_LIVE.ev.filter(x=>sofaPair(x,g,false));if(loose.length===1)e=loose[0]}
+    if(e){SOFA_ID[m.id]=e.id;games[m.id]={...sofaApply(m,g,e,false),sofa:true};continue}
+    const id=SOFA_ID[m.id];   // was live, not in the live list any more: ask for the final
+    if(id&&(!SOFA_FIN[id]||Date.now()-SOFA_FIN[id]>30000)){SOFA_FIN[id]=Date.now();
+      try{const r=await tfetch(SOFA+"event/"+id,{cache:"no-store"});if(r.ok){const ev=(await r.json()).event;if(ev&&ev.status&&ev.status.type==="finished")games[m.id]={...sofaApply(m,g,ev,true),sofa:true}}}catch(x){}}}}
 // live win probability: tiny ESPN core API pages (latest play's probability), only for in-progress games in covered sports
 async function refreshProbs(){
   const ids={};for(const b of DATA.open){const m=probMatch(b);if(m)ids[m.id]=m}
@@ -437,9 +469,16 @@ function fracLeft(m,g){if(!g||g.state==="pre")return 1;if(g.completed)return 0;c
   const[n,len]=PERX[path]||[4,900],p=g.period||1;if(p>n)return 0.03;const c=typeof g.clock==="number"?g.clock:len;
   if(/half/i.test(g.detail||""))return 0.5;return Math.max(0.005,Math.min(1,((n-p)*len+c)/(n*len)))}
 function poisGE(l,k){if(k<=0)return 1;let t=Math.exp(-l),c=t;for(let i=1;i<k;i++){t*=l/i;c+=t}return Math.max(0,1-c)}
+// soccer: remaining goals are Poisson (about 1.35 per team per 90 minutes); results are decided by goal difference / total goals
+function soccerP(L,g,f){const lam=1.35*f,sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1];
+  if(L.type==="total"){const need=L.line-S;let po;if(need<0)po=1;else po=pOverPois(2*lam,Number.isInteger(need)?need:Math.floor(need)+0.5);return L.side==="under"?1-po:po}
+  const pt=pickTeam(g,L);if(!pt)return null;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0),d=diffDist(lam,lam);let w=0,push=0;
+  for(const k in d){const v=cur+ +k;if(v>0)w+=d[k];else if(v===0)push+=d[k]}
+  return L.type==="ml"?w:w/Math.max(1e-9,1-push)}
 function approxLeg(b,L,x){if(x.s==="WON")return 1;if(x.s==="LOST")return 0;const m=matchOfLeg(b,L),g=x.g||gameFor(m);if(!g||!m)return 0.5;
   if(g.state!=="in"){if(L.type==="ml"){const pg=pregameLive[m.id]||m.pregame,pt=pickTeam(g,L);if(pg&&pt)return(pt.T.home?pg.home:pg.away)/100}return 0.5}
   const lg=localGame(g,m),f=fracLeft(m,lg),e=1-f,[sdm,sdt]=SDX[m.path]||[12,14],sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1],soc=SOCCER(m.path);
+  if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total")){const v=soccerP(L,lg,f);if(v!=null)return v}
   const w=Math.min(0.75,e); // trust the observed pace more as the game goes on (never fully)
   const overP=(cur,line,sd0)=>{if(f<0.004)return cur>line?1:cur<line?0:0.5;const pace=e>0.02?cur/e:line,rem=f*(w*pace+(1-w)*line),sd=Math.max(0.5,sd0*Math.sqrt(f));return 1-Phi((line-cur-rem)/sd)};
   if(L.type==="ml"||L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return 0.5;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0);
@@ -865,6 +904,7 @@ function renderFeeds(){const el=$("feeds");if(!el)return;
   const eBad=bad(FEED.site)||bad(FEED.core),eOK=st(FEED.site)&&!eBad;
   const parts=[f("ESPN",eOK,eBad||(FEED.site?"stale":"no data yet")),f("Polymarket",pmOK!==false,pmOK===false?"request failed":""),f("Odds",anOK!==false,anOK===false?"request failed":"")];
   if(FEED.kal)parts.push(f("Kalshi",!!FEED.kal.ok,FEED.kal.bad||""));
+  if(FEED.sofa)parts.push(f("Soccer backup",!!FEED.sofa.ok,FEED.sofa.bad||""));
   if(FEED.mlb)parts.push(f("MLB backup",!!FEED.mlb.ok,FEED.mlb.bad||""));
   const h=parts.join("")+(FEED.csp?` <span class="fbad">⚠ blocked by page security policy: ${esc(FEED.csp)}</span>`:"");
   if(el._h!==h){el._h=h;el.innerHTML=h}}
