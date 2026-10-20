@@ -1,24 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "ecfed1e1",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
-   "stake": "0.50",
-   "reason": "ESPN summary unavailable for football/nfl 401873010",
-   "legs": []
-  },
-  {
-   "bet_id": "dc3d72cd",
-   "book": "PointsBet",
-   "event": "Forest Green v Chesham Utd (English FA Cup)",
-   "pick": "Chesham Utd",
-   "stake": "10.00",
-   "reason": "ESPN summary unavailable for soccer/eng.fa_qual 401930565",
-   "legs": []
-  },
-  {
    "bet_id": "207a4cea",
    "book": "bet365",
    "event": "Fenerbahce v Slavia Prague (UEFA Champions League)",
@@ -238,5 +220,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 16:34 ET"
+ "last_change_at": "2026-10-20 16:36 ET"
 }
