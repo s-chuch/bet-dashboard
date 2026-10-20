@@ -200,6 +200,7 @@ function legStatus(L,g,sport,matchId){
   if(g.state==="pre")return{s:"NOT STARTED",n:""};
   if(g.state==="post"&&!g.completed)return{s:"NOT STARTED",n:g.detail||"postponed"};
   const fin=g.completed, sc=g.teams.map(t=>Number(t.score||0)), W=fin?"WON":"WINNING", Lo=fin?"LOST":"LOSING";
+  if(L.type==="draw")return sc[0]===sc[1]?{s:W,n:`level ${sc[0]}–${sc[1]}`}:{s:Lo,n:`${sc[0]}–${sc[1]}, needs an equaliser`};
   if(L.type==="ml"||L.type==="spread"){const i=sideIdx(g,L.team);if(i<0)return{s:"?",n:"team not matched"};
     const m=sc[i]-sc[1-i]+(L.type==="spread"?L.line:0);
     if(m>0)return{s:W,n:L.type==="spread"?`covering by ${m}`:""};
@@ -305,8 +306,8 @@ function scoreBox(g){if(!g)return"";const live=g.state==="in";
     <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":g.completed?esc(g.detail):`<span data-clk="${esc(g.id)}" data-sep=" - ">${esc(clockText(g," - "))}</span>`}</div>${g.completed?"":stBadge(g)}</div>`}
 
 // ===== Our estimate (NOT ESPN, NOT a sportsbook price): Pinnacle pregame no-vig inputs + live score/clock =====
-const SD={"football/nfl":[13.5,10],"football/college-football":[15,12],"basketball/nba":[12,18]};
-const PER={"football/nfl":[4,900],"football/college-football":[4,900],"basketball/nba":[4,720],"hockey/nhl":[3,1200]};
+const SD={"football/nfl":[13.5,10],"football/college-football":[15,12],"basketball/nba":[12,18],"basketball/wnba":[11,15]};
+const PER={"football/nfl":[4,900],"football/college-football":[4,900],"basketball/nba":[4,720],"basketball/wnba":[4,600],"hockey/nhl":[3,1200]};
 function erf(x){const t=1/(1+0.3275911*Math.abs(x)),y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return x>=0?y:-y}
 const Phi=x=>0.5*(1+erf(x/Math.SQRT2));
 function invPhi(p){p=Math.min(Math.max(p,1e-6),1-1e-6);let lo=-8,hi=8;for(let i=0;i<60;i++){const m=(lo+hi)/2;Phi(m)<p?lo=m:hi=m}return(lo+hi)/2}
@@ -318,7 +319,11 @@ function pOverPois(l,need){// P(X > need) with push on equality excluded (condit
 function bisect(f,lo,hi,target,inc=true){for(let i=0;i<60;i++){const m=(lo+hi)/2;((f(m)<target)===inc)?lo=m:hi=m}return(lo+hi)/2}
 const homeWinPois=(lh,la,m0=0)=>{const d=diffDist(lh,la);let w=0,t=0;for(const k in d){const v=m0+ +k;if(v>0)w+=d[k];else if(v===0)t+=d[k]}return w+0.5*t};
 const _mc={};
-function modelFor(m){if(!m||!m.pin)return null;if(_mc[m.id])return _mc[m.id];const P=m.pin,out={};
+// no Pinnacle inputs (build only has them for some games): fall back to the sportsbook line ESPN carries, same shape
+function pseudoPin(m){const g=gameFor(m),od=g&&g.odds;if(!od||SOCCER(m.path))return null;const nv=(a,b)=>{const x=ip(a),y=ip(b);return x/(x+y)},P={};
+  if(od.ml)P.ml_home=nv(od.ml.h,od.ml.a);if(od.sp){P.spread_home_line=od.sp.h;P.spread_home_fair=nv(od.sp.ho,od.sp.ao)}
+  if(od.tot){P.total_line=od.tot.line;P.total_over_fair=nv(od.tot.o,od.tot.u)}return Object.keys(P).length?P:null}
+function modelFor(m){if(!m)return null;if(_mc[m.id])return _mc[m.id];const P=m.pin||pseudoPin(m);if(!P)return null;const out={};
   if(m.path==="hockey/nhl"||m.path==="baseball/mlb"){
     if(P.total_line!=null&&P.total_over_fair!=null){const need=P.total_line,ln=Number.isInteger(need)?need:Math.floor(need);
       out.T=bisect(T=>Number.isInteger(need)?pOverPois(T,need):pOverPois(T,ln+0.5),0.3,25,P.total_over_fair)}
@@ -391,6 +396,7 @@ function pickTeam(g,L){if(!g||!L.team)return null;const i=sideIdx(g,L.team);retu
 function pmIdx(outs,pt){const a=outs.map(o=>teamMatch(o,pt.T)&&!teamMatch(o,pt.O));return a.filter(Boolean).length===1?a.indexOf(true):-1}
 // token for the bet's own outcome; spreads/totals only when Polymarket has the exact same line
 function pmToken(L,m,g){const pm=pmOf(m);if(!pm||!g)return null;
+  if(L.type==="draw"&&pm.soc){const x=pm.soc.find(y=>y.draw);return x?x.yes:null}
   if(L.type==="ml"&&pm.soc){const pt=pickTeam(g,L);if(!pt)return null;const x=pm.soc.find(y=>!y.draw&&pmLoose(y.title,pt.T));return x?x.yes:null}
   if(L.type==="ml"){const pt=pickTeam(g,L);if(!pt||!pm.ml)return null;const i=pmIdx(pm.ml.outcomes,pt);return i<0?null:pm.ml.tokens[i]}
   if(L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return null;
@@ -480,13 +486,14 @@ function poisGE(l,k){if(k<=0)return 1;let t=Math.exp(-l),c=t;for(let i=1;i<k;i++
 // soccer: remaining goals are Poisson (about 1.35 per team per 90 minutes); results are decided by goal difference / total goals
 function soccerP(L,g,f){const lam=1.35*f,sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1];
   if(L.type==="total"){const need=L.line-S;let po;if(need<0)po=1;else po=pOverPois(2*lam,Number.isInteger(need)?need:Math.floor(need)+0.5);return L.side==="under"?1-po:po}
+  if(L.type==="draw"){const d=diffDist(lam,lam);return d[sc[1]-sc[0]]||0}   // diff in the remaining goals must exactly undo the current gap
   const pt=pickTeam(g,L);if(!pt)return null;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0),d=diffDist(lam,lam);let w=0,push=0;
   for(const k in d){const v=cur+ +k;if(v>0)w+=d[k];else if(v===0)push+=d[k]}
   return L.type==="ml"?w:w/Math.max(1e-9,1-push)}
 function approxLeg(b,L,x){if(x.s==="WON")return 1;if(x.s==="LOST")return 0;const m=matchOfLeg(b,L),g=x.g||gameFor(m);if(!g||!m)return 0.5;
   if(g.state!=="in"){if(L.type==="ml"){const pg=pregameLive[m.id]||m.pregame,pt=pickTeam(g,L);if(pg&&pt)return(pt.T.home?pg.home:pg.away)/100}return 0.5}
   const lg=localGame(g,m),f=fracLeft(m,lg),e=1-f,[sdm,sdt]=SDX[m.path]||[12,14],sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1],soc=SOCCER(m.path);
-  if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total")){const v=soccerP(L,lg,f);if(v!=null)return v}
+  if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total"||L.type==="draw")){const v=soccerP(L,lg,f);if(v!=null)return v}
   const w=Math.min(0.75,e); // trust the observed pace more as the game goes on (never fully)
   const overP=(cur,line,sd0)=>{if(f<0.004)return cur>line?1:cur<line?0:0.5;const pace=e>0.02?cur/e:line,rem=f*(w*pace+(1-w)*line),sd=Math.max(0.5,sd0*Math.sqrt(f));return 1-Phi((line-cur-rem)/sd)};
   if(L.type==="ml"||L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return 0.5;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0);
@@ -707,8 +714,8 @@ function bar(label,v,cls2,note,attr){v=Math.max(0,Math.min(100,v));const col=v>5
 const EST_NOTE="Est. = our own estimate from Pinnacle pregame no-vig prices + the live score/clock. Not an ESPN or sportsbook number.";
 // all bars for a card + the single value used for the collapsed row
 function pmBar(L,m,g,ctx){const q=pmVal(L,m,g);if(!q)return"";const live=g.state==="in",wide=q.spread!=null&&q.spread>0.1;
-  const what=L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:`${esc(L.text)} (same line)`;
-  const note=`Polymarket mid${q.spread!=null?` · spread ${(q.spread*100).toFixed(1)}¢`:""}${wide?" · thin market, not used":""}${!live?" · pregame":""}${L.type!=="ml"?" · display only":""}`;
+  const what=L.type==="draw"?"Draw":L.type==="ml"?`${esc(pickTeam(g,L).T.abbr)} win`:`${esc(L.text)} (same line)`;
+  const note=`Polymarket mid${q.spread!=null?` · spread ${(q.spread*100).toFixed(1)}¢`:""}${wide?" · thin market, not used":""}${!live?" · pregame":""}${L.type!=="ml"&&L.type!=="draw"?" · display only":""}`;
   return bar(`Polymarket${ctx||""} · ${what}`,q.mid*100,"pmb",note)}
 // Kalshi (free prediction market) moneyline, pulled server-side at the last build, so pregame only
 // live: the GitHub live loop pushes fresh Kalshi prices to the live-feed branch every ~20 s; the page reads them via the contents API
@@ -726,6 +733,7 @@ function kalBar(L,m,g,ctx){if(L.type!=="ml"||!m||!g)return"";const pt=pickTeam(g
   return bar(`Kalshi${ctx||""} · ${esc(pt.T.abbr)} win`,v*100,"kab",`Kalshi mid price, no-vig · pregame · as of ${tfmt(m.kal.t)}`)}
 // book-line bar (no-vig) for the leg, from ESPN's scoreboard odds; exact line only for spreads / totals
 function lineBar(L,m,g,ctx){const od=g&&g.odds;if(!od||g.completed||g.state==="post")return"";const nv=(a,b)=>{const x=ip(a),y=ip(b);return x/(x+y)};let v=null,what="";
+  if(L.type==="draw"&&od.ml&&od.ml.d!=null){v=ip(od.ml.d)/(ip(od.ml.h)+ip(od.ml.a)+ip(od.ml.d));what="Draw"}else
   if(L.type==="ml"&&od.ml){const pt=pickTeam(g,L);if(!pt)return"";const mine=pt.T.home?od.ml.h:od.ml.a,opp=pt.T.home?od.ml.a:od.ml.h;
     v=od.ml.d!=null?ip(mine)/(ip(mine)+ip(opp)+ip(od.ml.d)):nv(mine,opp);what=`${esc(pt.T.abbr)} win${od.ml.d!=null?" (not draw)":""}`}
   else if(L.type==="spread"&&od.sp){const pt=pickTeam(g,L);if(!pt)return"";const line=pt.T.home?od.sp.h:-od.sp.h;if(Math.abs(line-L.line)>0.01)return"";
@@ -788,6 +796,7 @@ function rawStart(raw){if(!raw)return"";const m=String(raw).match(/^(\w{3}) (\w{
 // plain-English "what has to happen for this bet to win"
 function unitFor(sport){return {NHL:"goals",MLB:"runs",Soccer:"goals"}[sport]||"points"}
 function needLeg(L,sport){if(!L)return"";const u=unitFor(sport),t=L.team;
+  if(L.type==="draw")return"Match ends level (draw)";
   if(L.type==="ml")return `${t} win${sport==="Soccer"?" (no draw)":""}`;
   if(L.type==="spread"&&L.line!=null){if(L.line>0){const k=Math.ceil(L.line)-1;return k<=0?`${t} win or tie`:`${t} win, or lose by ${k} or fewer`}
     return `${t} win by ${Math.floor(-L.line)+1}+`}

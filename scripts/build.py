@@ -71,7 +71,8 @@ def team_match(q, comp):
     return False
 
 TEAM_ALIASES = {r"chicago red stars": "Chicago Stars", r"^man utd$": "Manchester United", r"^man city$": "Manchester City",
-                r"^wolves$": "Wolverhampton", r"^spurs$": "Tottenham", r"^alaves$": "Alavés"}
+                r"^wolves$": "Wolverhampton", r"^spurs$": "Tottenham", r"^alaves$": "Alavés",
+                r"^paphos( fc)?$": "Pafos", r"inter (club )?d[e' ]*escaldes": "Inter D'Escaldes", r"^universitatea craiova$": "CSU Craiova"}
 def team_alias(n):
     """Book name -> the name ESPN uses (renames / short forms)."""
     for k, v in TEAM_ALIASES.items():
@@ -137,6 +138,7 @@ def _prop_stat(words):
 
 def parse_leg(text, market):
     t = text.strip()
+    if re.fullmatch(r"draw|tie|the draw", t, re.I): return {"type": "draw", "text": t}   # 3-way soccer market
     # team totals: "Over 6.5", "Under 56.5", "U56.5", "O 4.5 runs"
     m = re.match(r"^(Over|Under|O|U)\s*([\d.]+)(?:\s+(?:runs|goals|points|pts|total))?$", t, re.I)
     if m:
