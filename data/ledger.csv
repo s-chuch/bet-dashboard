@@ -191,3 +191,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-20 16:54,PointsBet,d368e326,settled,0.00,"lost, no return"
 2026-10-20 16:54,PointsBet,dc3d72cd,settled,0.00,"lost, no return"
 2026-10-20 16:54,PointsBet,682b90b5,settled,0.00,"lost, no return"
+2026-10-20 17:08,bet365,3829ebcd,stake,-0.20,stake

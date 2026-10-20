@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 62.94,
-   "updated": "2026-10-20 15:28"
+   "balance": 62.74,
+   "updated": "2026-10-20 17:08"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 658.15,
+ "total": 657.95,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NFL",
@@ -2957,7 +2957,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "MLB",
@@ -3112,7 +3112,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "MLB",
@@ -3300,7 +3300,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NHL",
@@ -3523,7 +3523,7 @@
      "home": 0.485,
      "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NBA",
@@ -3586,10 +3586,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 524.0,
+     "clock": 454.0,
      "state": "in",
      "completed": false,
-     "detail": "8:44 - 4th",
+     "detail": "7:34 - 4th",
      "teams": [
       {
        "id": "8",
@@ -3599,7 +3599,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "87"
+       "score": "95"
       },
       {
        "id": "2",
@@ -3609,7 +3609,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "96"
+       "score": "99"
       }
      ]
     },
@@ -4047,6 +4047,17 @@
         "26989340290032671415148286405593723109072487696711999339376083753832552226860",
         "17787060067444290460265546639963063935556216479117158914972550169166845448407"
        ]
+      },
+      {
+       "line": 226.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "112063470912755242330641334976611639716380924676465322209652647554258429845284",
+        "100249724100837434277480072041268901199887697036317745567872167046051802164846"
+       ]
       }
      ],
      "ml": {
@@ -4067,10 +4078,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1294,
-     "away": 0.8706,
-     "spread": 0.02,
-     "t": "2026-10-20T21:04Z"
+     "home": 0.285,
+     "away": 0.715,
+     "spread": 0.01,
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NBA",
@@ -4133,10 +4144,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 524.0,
+     "clock": 454.0,
      "state": "in",
      "completed": false,
-     "detail": "8:44 - 4th",
+     "detail": "7:34 - 4th",
      "teams": [
       {
        "id": "8",
@@ -4146,7 +4157,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "87"
+       "score": "95"
       },
       {
        "id": "2",
@@ -4156,7 +4167,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "96"
+       "score": "99"
       }
      ]
     },
@@ -4594,6 +4605,17 @@
         "26989340290032671415148286405593723109072487696711999339376083753832552226860",
         "17787060067444290460265546639963063935556216479117158914972550169166845448407"
        ]
+      },
+      {
+       "line": 226.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "112063470912755242330641334976611639716380924676465322209652647554258429845284",
+        "100249724100837434277480072041268901199887697036317745567872167046051802164846"
+       ]
       }
      ],
      "ml": {
@@ -4614,10 +4636,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1294,
-     "away": 0.8706,
-     "spread": 0.02,
-     "t": "2026-10-20T21:04Z"
+     "home": 0.285,
+     "away": 0.715,
+     "spread": 0.01,
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NBA",
@@ -4788,7 +4810,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-20T21:04Z"
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NHL",
@@ -4855,10 +4877,10 @@
     "snapshot": {
      "date": "2026-10-20T19:00Z",
      "period": 4,
-     "clock": 524.0,
+     "clock": 454.0,
      "state": "in",
      "completed": false,
-     "detail": "8:44 - 4th",
+     "detail": "7:34 - 4th",
      "teams": [
       {
        "id": "8",
@@ -4868,7 +4890,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": true,
-       "score": "87"
+       "score": "95"
       },
       {
        "id": "2",
@@ -4878,7 +4900,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": false,
-       "score": "96"
+       "score": "99"
       }
      ]
     },
@@ -5316,6 +5338,17 @@
         "26989340290032671415148286405593723109072487696711999339376083753832552226860",
         "17787060067444290460265546639963063935556216479117158914972550169166845448407"
        ]
+      },
+      {
+       "line": 226.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "112063470912755242330641334976611639716380924676465322209652647554258429845284",
+        "100249724100837434277480072041268901199887697036317745567872167046051802164846"
+       ]
       }
      ],
      "ml": {
@@ -5336,10 +5369,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1294,
-     "away": 0.8706,
-     "spread": 0.02,
-     "t": "2026-10-20T21:04Z"
+     "home": 0.285,
+     "away": 0.715,
+     "spread": 0.01,
+     "t": "2026-10-20T21:08Z"
     }
    },
    "sport": "NBA",
@@ -5439,6 +5472,54 @@
    "payout": 0.56,
    "payout_est": false,
    "start_ts": "2026-10-21T19:00Z"
+  },
+  {
+   "bet_id": "3829ebcd",
+   "date": "2026-10-20",
+   "book": "bet365",
+   "event": "Boston Celtics @ Detroit Pistons",
+   "market": "SGP 3-leg (100% profit boost)",
+   "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
+   "start": "",
+   "price": "+105",
+   "boosted_price": "+210",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.42,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "prop",
+     "player": "Jayson Tatum",
+     "stat": "pts",
+     "op": "min",
+     "min": 20,
+     "text": "Jayson Tatum 20+ pts"
+    },
+    {
+     "type": "prop",
+     "player": "Cade Cunningham",
+     "stat": "pts",
+     "op": "min",
+     "min": 20,
+     "text": "Cade Cunningham 20+ pts"
+    },
+    {
+     "type": "prop",
+     "player": "Jayson Tatum",
+     "stat": "reb",
+     "op": "min",
+     "min": 7,
+     "text": "Jayson Tatum 7+ rebounds"
+    }
+   ],
+   "match": null,
+   "sport": null,
+   "cash_stake": 0.2,
+   "payout": 0.62,
+   "payout_est": false,
+   "start_ts": null
   }
  ],
  "settled_recent": [
@@ -6525,13 +6606,13 @@
  ],
  "pnl_total": 97.27,
  "unsettled": {
-  "n": 23,
-  "cash_stake": 16.5,
-  "max_payout": 797.98,
+  "n": 24,
+  "cash_stake": 16.7,
+  "max_payout": 798.6,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.5,
+ "open_stake": 16.7,
  "recs": {
   "stats": {
    "overall": {
@@ -9662,6 +9743,15 @@
       "result": "won"
      }
     ]
+   },
+   {
+    "bet_id": "3829ebcd",
+    "book": "bet365",
+    "event": "Boston Celtics @ Detroit Pistons",
+    "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
+    "stake": "0.2",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -9891,16 +9981,16 @@
     "at": "2026-10-18 19:42"
    }
   ],
-  "last_change_at": "2026-10-20 16:53 ET"
+  "last_change_at": "2026-10-20 17:08 ET"
  },
- "open_live_n": 22,
+ "open_live_n": 23,
  "open_stake_by_book": {
-  "bet365": 0.2,
+  "bet365": 0.4,
   "Caesars": 3.0,
   "DraftKings": 0.5,
   "FanDuel": 2.6,
   "PointsBet": 144.75
  },
- "hash": "192eee77afa0d565fc76ad8d3961ec7c00df5495",
- "generated_at": "2026-10-20T17:04:52-04:00"
+ "hash": "37e6316271b425d4cb81b77bc8c75dc3aa0b87c6",
+ "generated_at": "2026-10-20T17:08:51-04:00"
 }
