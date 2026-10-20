@@ -379,12 +379,19 @@ function matchOfLeg(b,L){return b.match||L.match}
 // ---------- Polymarket (CLOB mid) + Action Network live odds ----------
 const PMX={}, PMMID={}, ANG={}, pmTried={};let anAt=0, anOK=null, pmOK=null;
 const PM_PATHS=new Set(["football/nfl","football/college-football","hockey/nhl","baseball/mlb","basketball/nba"]);
+const pmPath=p=>PM_PATHS.has(p)||/^soccer/.test(p||"")||p==="basketball/wnba";
+// Polymarket's names differ from ESPN's ("FC Bayern München" / "Bayern Munich"): also accept a shared distinctive word
+const PMSTOP=new Set(["fc","afc","cf","sc","ac","the","de","fk","as","ssc","ud","cd","sk","city","united","utd"]);
+const pmToks=n=>norm(n).filter(w=>!PMSTOP.has(w));
+function pmLoose(name,T){if(teamMatch(name,T))return true;const q=pmToks(name);
+  return[T.name,T.short,T.location,T.nick].filter(Boolean).some(v=>{const t=pmToks(v);return q.some(a=>t.some(b=>(a===b&&a.length>=4)||(a.length>=5&&b.length>=5&&a.slice(0,5)===b.slice(0,5))))})}
 const AN_LG={"football/nfl":"nfl","football/college-football":"ncaaf","hockey/nhl":"nhl","baseball/mlb":"mlb","basketball/nba":"nba"};
 function pmOf(m){return m&&(m.pm||PMX[m.id])||null}
 function pickTeam(g,L){if(!g||!L.team)return null;const i=sideIdx(g,L.team);return i<0?null:{T:g.teams[i],O:g.teams[1-i]}}
 function pmIdx(outs,pt){const a=outs.map(o=>teamMatch(o,pt.T)&&!teamMatch(o,pt.O));return a.filter(Boolean).length===1?a.indexOf(true):-1}
 // token for the bet's own outcome; spreads/totals only when Polymarket has the exact same line
 function pmToken(L,m,g){const pm=pmOf(m);if(!pm||!g)return null;
+  if(L.type==="ml"&&pm.soc){const pt=pickTeam(g,L);if(!pt)return null;const x=pm.soc.find(y=>!y.draw&&pmLoose(y.title,pt.T));return x?x.yes:null}
   if(L.type==="ml"){const pt=pickTeam(g,L);if(!pt||!pm.ml)return null;const i=pmIdx(pm.ml.outcomes,pt);return i<0?null:pm.ml.tokens[i]}
   if(L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return null;
     for(const x of pm.spreads||[]){const i=pmIdx(x.outcomes,pt);if(i===0&&x.line===L.line)return x.tokens[0];if(i===1&&x.line===-L.line)return x.tokens[1]}return null}
@@ -392,18 +399,19 @@ function pmToken(L,m,g){const pm=pmOf(m);if(!pm||!g)return null;
   return null}
 function pmVal(L,m,g){const t=pmToken(L,m,g);const q=t&&PMMID[t];if(!q||Date.now()-q.t>90000)return null;return q}
 async function pmLookup(m){pmTried[m.id]=1;const g=gameFor(m);if(!g)return;const A=g.teams.find(t=>!t.home),H=g.teams.find(t=>t.home);
-  try{for(const q of [`${A.location} ${H.location}`,`${A.nick} ${H.nick}`]){
+  try{for(const q of [`${A.location} ${H.location}`,`${A.nick} ${H.nick}`,`${A.name} ${H.name}`,...(/^soccer/.test(m.path)?[[A,H].map(t=>pmToks(t.name).sort((x,y)=>y.length-x.length)[0]||t.name).join(" ")]:[])]){
       const d=await getJSON("https://gamma-api.polymarket.com/public-search?limit_per_type=15&events_status=all&q="+encodeURIComponent(q));
       for(const e of d.events||[]){if(!/^[a-z]+-[a-z0-9]+-[a-z0-9]+-\d{4}-\d{2}-\d{2}$/.test(e.slug||"")||!e.startTime)continue;
         if(Math.abs(new Date(e.startTime)-new Date(g.date))>4*3600e3)continue;const pr=String(e.title||"").split(/\s+vs\.?\s+/);if(pr.length!==2)continue;
-        const ok=(teamMatch(pr[0],A)&&teamMatch(pr[1],H))||(teamMatch(pr[0],H)&&teamMatch(pr[1],A));if(!ok)continue;
+        const soc=/^soccer/.test(m.path),ok=soc?((pmLoose(pr[0],A)&&pmLoose(pr[1],H))||(pmLoose(pr[0],H)&&pmLoose(pr[1],A))):((teamMatch(pr[0],A)&&teamMatch(pr[1],H))||(teamMatch(pr[0],H)&&teamMatch(pr[1],A)));if(!ok)continue;
         const full=(await getJSON("https://gamma-api.polymarket.com/events?slug="+e.slug))[0]||e;const J=x=>{try{return typeof x==="string"?JSON.parse(x):(x||[])}catch(_){return[]}};
         const pm={slug:e.slug,spreads:[],totals:[]};for(const mk of full.markets||[]){const t=mk.sportsMarketType,tk=J(mk.clobTokenIds),o=J(mk.outcomes);if(tk.length!==2||o.length!==2)continue;
+          if(soc&&t==="moneyline"){(pm.soc=pm.soc||[]).push({title:mk.groupItemTitle||"",yes:tk[0],draw:/draw/i.test(mk.groupItemTitle||mk.question||"")});continue}
           if(t==="moneyline"&&!pm.ml)pm.ml={outcomes:o,tokens:tk};else if(t==="spreads"&&mk.line!=null)pm.spreads.push({line:+mk.line,outcomes:o,tokens:tk});else if(t==="totals"&&mk.line!=null)pm.totals.push({line:+mk.line,outcomes:o,tokens:tk})}
-        if(pm.ml){PMX[m.id]=pm;return}}}}catch(e){}}
+        if(pm.ml||pm.soc){PMX[m.id]=pm;return}}}}catch(e){}}
 function pmWanted(m,g){return g&&!g.completed&&(g.state==="in"||new Date(g.date)-Date.now()<3*3600e3)}
 async function refreshPM(){const toks=new Set();
-  for(const b of DATA.open)for(const L of b.legs){const m=matchOfLeg(b,L),g=gameFor(m);if(!m||!PM_PATHS.has(m.path)||!pmWanted(m,g))continue;
+  for(const b of DATA.open)for(const L of b.legs){const m=matchOfLeg(b,L),g=gameFor(m);if(!m||!pmPath(m.path)||!pmWanted(m,g))continue;
     if(!pmOf(m)&&!pmTried[m.id])await pmLookup(m);const t=pmToken(L,m,g);if(t)toks.add(t)}
   if(!toks.size)return;const body=JSON.stringify([...toks].map(t=>({token_id:t})));
   try{const [a,c]=await Promise.all(["midpoints","spreads"].map(e=>tfetch("https://clob.polymarket.com/"+e,{method:"POST",body,cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})));
