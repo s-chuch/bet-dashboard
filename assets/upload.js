@@ -66,6 +66,91 @@
   }
   function markAllDups() { S.drafts.forEach(markDup); }
 
+  /* ---------- AI reading (Gemini vision, free key) ---------- */
+  var AI_KEY = 'bt.ai.gemini', GEM = 'https://generativelanguage.googleapis.com/v1beta/';
+  function getAi() { try { return localStorage.getItem(AI_KEY) || ''; } catch (e) { return ''; } }
+  function setAi(v) { try { v ? localStorage.setItem(AI_KEY, v) : localStorage.removeItem(AI_KEY); } catch (e) {} S.model = ''; }
+  function renderAi() {
+    var k = getAi(), el = $('ai');
+    if (k) {
+      el.innerHTML = '<h3>AI reading</h3><p class="small">On ✓ &nbsp;<span class="muted" id="ai-model"></span> <button class="btn sm" type="button" id="ai-off" style="margin-left:6px">Remove key</button></p>';
+      $('ai-off').onclick = function () { setAi(''); renderAi(); };
+      if (S.model) $('ai-model').textContent = '(' + S.model + ')';
+    } else {
+      el.innerHTML = '<h3>AI reading (recommended, free)</h3><p class="small muted">Lets the page read slips as well as Claude or Grok do, so you fill in nothing. Get a free Google AI Studio key (1 minute), paste it once; it stays in this browser.</p>' +
+        '<p class="small"><a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a> · Privacy: on Google’s free tier, the screenshots you upload may be used by Google to improve its products. Crop out balances if that matters to you.</p>' +
+        '<div style="display:flex;gap:8px"><input type="text" id="ai-in" placeholder="Paste key (AIza…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>';
+      $('ai-save').onclick = function () {
+        var v = $('ai-in').value.trim();
+        if (!/^AIza[0-9A-Za-z_-]{30,}$/.test(v)) { $('ai-err').textContent = 'That does not look like a Google AI key (starts with AIza).'; return; }
+        setAi(v); renderAi();
+      };
+    }
+  }
+  function pickModel(models) {
+    var names = (models || []).filter(function (m) { return (m.supportedGenerationMethods || []).indexOf('generateContent') >= 0; }).map(function (m) { return String(m.name).replace(/^models\//, ''); })
+      .filter(function (n) { return /flash/.test(n) && !/lite|image|tts|live|audio|thinking|exp|preview|8b/.test(n); });
+    var prefs = [/^gemini-flash-latest$/, /^gemini-3(\.\d+)?-flash$/, /^gemini-2\.5-flash$/, /^gemini-2\.0-flash$/, /^gemini-1\.5-flash/, /flash/];
+    for (var i = 0; i < prefs.length; i++) { var f = names.filter(function (n) { return prefs[i].test(n); }).sort().reverse()[0]; if (f) return f; }
+    return '';
+  }
+  function getModel() {
+    if (S.model) return Promise.resolve(S.model);
+    return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(getAi()), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      if (!r.ok) throw new Error(r.status === 400 || r.status === 403 ? 'Google rejected the key' : 'Google error ' + r.status);
+      return r.json();
+    }).then(function (j) { var m = pickModel(j.models); if (!m) throw new Error('no Gemini model available for this key'); S.model = m; var e = $('ai-model'); if (e) e.textContent = '(' + m + ')'; return m; });
+  }
+  function shrink(file) {   // max 1600 px, JPEG: small enough to send fast, sharp enough to read
+    return new Promise(function (res, rej) {
+      var img = new Image(), u = URL.createObjectURL(file);
+      img.onload = function () {
+        var sc = Math.min(1, 1600 / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
+        c.width = Math.round(img.naturalWidth * sc); c.height = Math.round(img.naturalHeight * sc);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(u);
+        res(c.toDataURL('image/jpeg', 0.88).split(',')[1]);
+      };
+      img.onerror = function () { URL.revokeObjectURL(u); rej(new Error('could not open the picture')); };
+      img.src = u;
+    });
+  }
+  var PROMPT = 'You read screenshots of sports-betting app screens (Caesars, DraftKings, FanDuel, PointsBet, bet365, theScore, Hard Rock, BetMGM ...) for a personal bet tracker. Money is Canadian dollars; ignore currency symbols. ' +
+    'Return ONLY JSON: {"bets":[{...}]} with one object per bet visible (a My Bets list can show several). Never invent a value: use "" when it is not visible. Fields: ' +
+    'kind ("placed" = receipt / Bet Placed page, "open" = pending bet on a My Bets / Open list, "settled" = shows WON / LOST / Returned / cashed out / void, "other" = not a bet), result ("won"|"lost"|"void"|"" , settled only), ' +
+    'book (exactly one of: ' + BOOKS.join(', ') + ' - decide from logos, layout and wording: "CAESARS SPORTSBOOK" = Caesars; "Receipt ... DK63..." with Wager Amount / Total Payout = DraftKings; blue "My Bets" with Opta / TOTAL WAGER / TOTAL PAYOUT / Cash out = FanDuel; red "Betslip ... Receipt #B26" = PointsBet; green "Bet Ref PP..." / "To Return" / BetGuard + Wager/Return = bet365), ' +
+    'date (YYYY-MM-DD the bet was placed if a timestamp is visible, else ""), event ("Away @ Home" for NA sports, "Team A v Team B" for soccer), start_et (kickoff text as shown, e.g. "Tue Oct 20 03:00 PM ET" or "Today 3:00 PM"), ' +
+    'market (e.g. "SGP 3-leg (30% profit boost)", "Parlay 3-leg", "Moneyline", "Futures"), ' +
+    'pick (ALL legs in short form joined by " + ", e.g. "Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts"; "Over 150.5 + Valkyries -3.5"; "NY Jets U26.5 team pts"; "Jakob Chychrun 2+ SOG + Darcy Kuemper 24+ saves"; "Phil Foden 1+ goals"; "Harry Kane 1+ SOT + Harry Kane 3+ shots"; "Jackson Chourio U1.5 TB"; "Junior Caminero 1+ hits"; "Christian McCaffrey anytime TD + Mike Evans 40+ rec yds"; "Cade Cunningham 8+ ast + Payton Pritchard 4+ reb"; "Draw"; use the team nickname for ML, spreads and team totals), ' +
+    'price (American odds of the whole bet BEFORE any profit boost, like "+325"; if only the boosted odds are shown use those), boosted_price (American odds AFTER the boost if a boost is shown, else ""; if only payout is shown compute (payout - stake) / stake * 100), ' +
+    'stake (cash wagered, number), to_win (profit if it wins = total payout including boost minus stake, number), boost_pct (number or ""), warnings (array of short strings for anything unclear or cut off). ' +
+    'Ignore account balances, bonus-offer banners and ads. For a settled slip fill the same fields and the result.';
+  function aiRead(it) {
+    var tries = 0;
+    function go(model, b64) {
+      tries++;
+      var body = { contents: [{ parts: [{ text: PROMPT + ' Today is ' + todayET() + ' (America/Toronto).' }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
+      return fetch(GEM + 'models/' + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+        if (r.status === 429 && tries < 4) { it.msg = 'Waiting for Google’s free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 15000 * tries); }).then(function () { return go(model, b64); }); }
+        if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { throw new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); });
+        return r.json();
+      });
+    }
+    return getModel().then(function (m) { return shrink(it.file).then(function (b64) { return go(m, b64); }); }).then(function (j) {
+      var t = ((((j.candidates || [])[0] || {}).content || {}).parts || []).map(function (x) { return x.text || ''; }).join('');
+      t = t.replace(/^\s*```(?:json)?/i, '').replace(/```\s*$/, '');
+      var o = JSON.parse(t), arr = Array.isArray(o) ? o : (o.bets || []);
+      if (!arr.length) throw new Error('the AI found no bet on this picture');
+      return arr;
+    });
+  }
+  function fromAi(r) {
+    var num = function (x) { if (x === '' || x == null) return null; var n = parseFloat(String(x).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : null; };
+    var odds = function (x) { var m = String(x || '').replace(/[−–]/g, '-').match(/^\s*([+-]?)\s*(\d{2,5})\s*$/); return m ? (m[1] || '+') + m[2] : ''; };
+    var kind = ['placed', 'open', 'settled', 'other'].indexOf(r.kind) >= 0 ? r.kind : 'placed';
+    return { kind: kind, book: BOOKS.indexOf(r.book) >= 0 ? r.book : '', date: /^20\d\d-\d\d-\d\d$/.test(r.date || '') ? r.date : '', event: String(r.event || ''), start_text: String(r.start_et || ''), market: String(r.market || ''), pick: String(r.pick || ''),
+      price: odds(r.price), boosted_price: odds(r.boosted_price), stake: num(r.stake), to_win: num(r.to_win), result: r.result || '', warnings: Array.isArray(r.warnings) ? r.warnings.map(String).slice(0, 5) : [] };
+  }
+
   /* ---------- OCR ---------- */
   function getWorker(onProgress) {
     if (S.workerP) return S.workerP;
@@ -76,17 +161,23 @@
     }).then(function (w) { S.worker = w; return w; });
     return S.workerP;
   }
+  function ocrRead(it, why) {
+    S.progress = function (m) { if (m && typeof m.progress === 'number') { it.pct = Math.round(m.progress * 100); it.msg = m.status; renderQueue(); } };
+    return getWorker().then(function (w) { return w.recognize(it.file); }).then(function (r) {
+      it.text = (r && r.data && r.data.text) || '';
+      addDraftFrom(it, why);
+    });
+  }
   function runQueue() {
     if (S.busy) return;
     var it = S.items.filter(function (x) { return x.state === 'wait'; })[0];
     if (!it) { return; }
-    S.busy = true; it.state = 'read'; renderQueue();
-    S.progress = function (m) { if (m && typeof m.progress === 'number') { it.pct = Math.round(m.progress * 100); it.msg = m.status; renderQueue(); } };
-    getWorker().then(function (w) { return w.recognize(it.file); }).then(function (r) {
-      it.text = (r && r.data && r.data.text) || '';
-      it.state = 'done'; it.pct = 100;
-      addDraftFrom(it);
-    }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
+    S.busy = true; it.state = 'read'; it.msg = ''; renderQueue();
+    var job = getAi() ? aiRead(it).then(function (rows) {
+      rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', ''); });
+    }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
+      : ocrRead(it, getAi() ? '' : 'Basic reader (no AI key). Add a free key above for full automatic reading.');
+    job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
       .then(function () { S.busy = false; renderQueue(); renderDrafts(); runQueue(); });
   }
 
@@ -110,17 +201,22 @@
     if (!day) return t;
     return DOW[day.getUTCDay()] + ' ' + MN[day.getUTCMonth()] + ' ' + day.getUTCDate() + ' ' + pad(hh) + ':' + pad(mm) + ' ' + ap + ' ET';
   }
-  function addDraftFrom(it) {
+  function addDraftFrom(it, why) {
     var p = {};
     if (typeof SlipParse === 'undefined') p = { kind: 'placed', warnings: ['Automatic field filling is not available: fill the fields from the text at the bottom of this card.'] };
     else try { p = SlipParse.parseSlip(it.text) || {}; } catch (e) { p = { kind: 'placed', warnings: ['Could not fill the fields automatically (' + e.message + '). Fill them from the text at the bottom of this card.'] }; }
-    var date = slipDate(it.text) || todayET();
+    if (!p.date) p.date = slipDate(it.text);
+    addDraftParsed(it.name, p, why || '', it.text);
+  }
+  function addDraftParsed(name, p, note, text) {
+    var date = p.date || todayET();
     var dr = {
-      id: S.nextId++, file: it.name, kind: p.kind || 'other', on: p.kind === 'placed' || p.kind === 'open',
+      id: S.nextId++, file: name, kind: p.kind || 'other', on: p.kind === 'placed' || p.kind === 'open',
       book: p.book || '', date: date, event: p.event || '', start: normStart(p.start_text, date), market: p.market || '', pick: p.pick || '',
       price: p.price || '', boosted: p.boosted_price || '', stake: p.stake != null ? String(p.stake) : '', to_win: p.to_win != null ? String(p.to_win) : '',
-      warnings: (p.warnings || []).slice(), result: p.result || '', text: it.text, dup: false
+      warnings: (p.warnings || []).slice(), result: p.result || '', text: text || '', dup: false, note: note || ''
     };
+    if (note && /^AI reading failed|^Basic reader/.test(note)) dr.warnings.unshift(note);
     if (dr.kind === 'settled') dr.warnings.unshift('This slip is already settled (' + (dr.result || 'result shown') + '). Settled bets are not added here.');
     if (dr.kind === 'other') dr.warnings.unshift('This does not look like a bet slip.');
     markDup(dr); S.drafts.push(dr);
@@ -208,7 +304,7 @@
     S.drafts.forEach(function (d) { if (!d._seen) { d._seen = 1; markDup(d); } });
     $('review').hidden = !S.drafts.length;
     $('rows').innerHTML = S.drafts.map(function (d) {
-      var tag = d.kind === 'settled' ? '<span class="tag bad">settled</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">looks good</span>');
+      var tag = d.kind === 'settled' ? '<span class="tag bad">settled</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">' + (d.note === 'Read by AI' ? 'AI read ✓' : 'looks good') + '</span>');
       var form = (d.kind === 'placed' || d.kind === 'open') ? '<div class="grid">' + fld(d, 'book', 'Book') + fld(d, 'date', 'Date placed', '', '') + fld(d, 'stake', 'Stake', '', 'num') + fld(d, 'to_win', 'To win', '', 'num') +
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
@@ -255,5 +351,5 @@
   });
   $('send').addEventListener('click', send);
 
-  renderGh(); loadExisting(); updateSend();
+  renderGh(); renderAi(); loadExisting(); updateSend();
 })();
