@@ -1,6 +1,52 @@
 {
- "needs_review": [],
+ "needs_review": [
+  {
+   "bet_id": "8d2a2595",
+   "book": "DraftKings",
+   "event": "Washington Commanders @ San Francisco 49ers",
+   "pick": "Christian McCaffrey First TD Scorer",
+   "stake": "0.20",
+   "reason": "leg \"Christian McCaffrey First TD Scorer\": market/stat not recognised",
+   "legs": []
+  }
+ ],
  "last_settled": [
+  {
+   "bet_id": "c55174ee",
+   "book": "PointsBet",
+   "pick": "Over 51.5",
+   "result": "lost",
+   "pnl": -25.0,
+   "final": "WSH 17-23 SF",
+   "at": "2026-10-19 23:22"
+  },
+  {
+   "bet_id": "fb168e73",
+   "book": "FanDuel",
+   "pick": "Christian McCaffrey 50+ rush yds + Rachaad White 30+ rush yds + Jayden Daniels 175+ pass yds + Terry McLaurin 15+ rec yds + Brock Purdy 225+ pass yds",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "WSH 17-23 SF",
+   "at": "2026-10-19 23:22"
+  },
+  {
+   "bet_id": "2adec047",
+   "book": "DraftKings",
+   "pick": "SF 49ers ML + Brock Purdy 280+ pass yds + Christian McCaffrey anytime TD",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "WSH 17-23 SF",
+   "at": "2026-10-19 23:22"
+  },
+  {
+   "bet_id": "89146120",
+   "book": "FanDuel",
+   "pick": "Christian McCaffrey anytime TD + Mike Evans 40+ rec yds + George Kittle 50+ rec yds",
+   "result": "won",
+   "pnl": 0.22,
+   "final": "WSH 17-23 SF",
+   "at": "2026-10-19 23:22"
+  },
   {
    "bet_id": "6409f661",
    "book": "DraftKings",
@@ -165,5 +211,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-19 23:04 ET"
+ "last_change_at": "2026-10-19 23:22 ET"
 }
