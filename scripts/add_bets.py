@@ -3,7 +3,8 @@
 
 Input comes from the environment only (never a command line or shell string):
   BETS_JSON  a JSON array (max 30) of objects with keys date, book, event, start_et, market, pick, price,
-             boosted_price, stake, to_win  (all strings or numbers)
+             boosted_price, stake, to_win  (all strings or numbers), optional force ("1") and result
+             (won|lost|push|void: the slip was already settled; the bet is logged, then settled through ledger.settle)
 Every field is validated here again (the page validated it too, but the workflow is the real gate). A bet that
 duplicates an existing one (same book + event + pick + stake) is skipped, not an error. Each accepted bet goes through
 ledger.log, which assigns the id, writes data/bets.csv and deducts the stake in data/ledger.csv.
@@ -15,7 +16,8 @@ from common import lock, now_et, all_bets
 import ledger as LG
 
 BOOKS = {"DraftKings", "FanDuel", "Caesars", "PointsBet", "bet365", "theScore", "Hard Rock", "BetMGM", "BetRivers", "Bet99", "888sport", "Betway", "LeoVegas", "Sports Interaction", "Pinnacle", "Proline", "Bally Bet", "NorthStar Bets"}
-KEYS = ("date", "book", "event", "start_et", "market", "pick", "price", "boosted_price", "stake", "to_win", "force")
+KEYS = ("date", "book", "event", "start_et", "market", "pick", "price", "boosted_price", "stake", "to_win", "force", "result")
+RESULTS = ("", "won", "lost", "push", "void")
 LIMIT = {"event": 120, "start_et": 40, "market": 80, "pick": 400}
 ODDS_RE = re.compile(r"[+-](?:1[0-9]{2}|[2-9][0-9]{2}|[0-9]{4,5})")   # American odds, magnitude >= 100
 MONEY_RE = re.compile(r"[0-9]{1,6}(\.[0-9]{1,2})?")
@@ -58,6 +60,8 @@ def validate(i, b):
     if set(b) - set(KEYS): die(f"bet {i}: unknown field(s) {sorted(set(b) - set(KEYS))}")
     r = {k: clean(i, k, b.get(k)) for k in KEYS}
     if r["force"] not in ("", "1"): die(f"bet {i}: bad force flag")
+    r["result"] = r["result"].lower()
+    if r["result"] not in RESULTS: die(f"bet {i}: result must be won, lost, push or void")
     if not DATE_RE.fullmatch(r["date"]): die(f"bet {i}: bad date")
     try: d = datetime.date.fromisoformat(r["date"])
     except ValueError: die(f"bet {i}: bad date")
@@ -78,6 +82,16 @@ def validate(i, b):
     if not MONEY_RE.fullmatch(r["to_win"]) or not (0 < float(r["to_win"]) <= 100000): die(f"bet {i}: to_win must be above 0")
     return r
 
+def settle_new(log_out, result, r):
+    """Settle a bet that was just logged from an already-settled slip, through the ledger (so the return hits the balance)."""
+    m = re.search(r"^logged ([0-9a-f]{6,16})$", log_out, re.M)
+    if not m: print(f"::warning::logged but could not find the new bet id to settle ({r['pick'][:40]}); settle it by hand"); return
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf): LG.main(["settle", m.group(1), result])
+    except SystemExit as e: print(f"::warning::settle {m.group(1)} {result} failed ({e})"); return
+    print(f"settled: {m.group(1)} {result}" if f"settled {m.group(1)}" in buf.getvalue() else f"::warning::settle {m.group(1)} said: {buf.getvalue().strip()[:200]}")
+
 def main():
     try: bets = json.loads(os.environ.get("BETS_JSON", ""))
     except ValueError: die("BETS_JSON is not valid JSON")
@@ -87,7 +101,7 @@ def main():
     with lock():
         known = [dict(x) for x in all_bets()]      # live + archived + settled: the whole history
         for r in rows:
-            force = r.pop("force") == "1"
+            force = r.pop("force") == "1"; result = r.pop("result")
             twin = next((x for x in known if same_bet(r, x)), None)
             if twin and not force:
                 dup += 1; print(f"skipped duplicate (same as {twin.get('bet_id') or 'an earlier row of this upload'}): {r['book']} | {r['pick'][:60]}"); continue
@@ -96,6 +110,7 @@ def main():
             try:
                 with contextlib.redirect_stdout(buf): LG.main(argv)
                 added += 1; known.append(dict(r)); print(f"added: {r['book']} | {r['pick'][:60]}")
+                if result: settle_new(buf.getvalue(), result, r)
             except SystemExit as e:
                 if "REJECTED duplicate" in buf.getvalue(): dup += 1; print(f"skipped duplicate: {r['book']} | {r['pick'][:60]}")
                 else: print(f"failed: {r['book']} | {r['pick'][:60]} ({e})"); 

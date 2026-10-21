@@ -592,6 +592,93 @@
     return finish(r);
   }
 
+  /* ---------- Hard Rock Bet (fallback; conservative: anything not clearly read is left blank with a warning) ---------- */
+  function parseHardRock(L, t) {
+    var res = /\b(WON|Won|LOST|Lost|VOID|Void|PUSH|Push|Cashed Out|CASHED OUT)\b/.exec(t);
+    var placed = /Bet Placed|Bet Confirmed|bet has been placed/i.test(t);
+    var r = blank(res && !placed ? 'settled' : (placed ? 'placed' : 'open'), 'Hard Rock'), w = r.warnings;
+    if (res && !placed) r.result = /^W/i.test(res[1]) ? 'won' : /^L/i.test(res[1]) ? 'lost' : /^C/i.test(res[1]) ? 'cashout' : /^P/i.test(res[1]) ? 'push' : 'void';
+    var bonus = /Bonus Bet|Free Bet/i.test(t);
+    var stake = after(t, '(?:Total\\s+)?(?:Wager|Stake)');
+    var pay = after(t, '(?:To Pay|Potential Payout|Total Payout|Payout|Paid|To Win)');
+    var labelIsWin = /To Win\s*:?\s*\$/i.test(t) && !/To Pay|Payout|Paid/i.test(t);
+    if (stake == null) {
+      if (!/Wager|Stake/i.test(t)) return [other('Hard Rock screen without a wager (promo or offer page), not a bet slip')];
+      w.push('stake not readable');
+    }
+    r.stake = stake;
+    if (pay != null && stake != null) {
+      // cash bets pay stake back; bonus bets and "To Win" labels show profit only
+      var profit = (bonus || labelIsWin) ? pay : pay - stake;
+      if (profit > 0) r.to_win = r2(profit); else w.push('payout not readable');
+    } else if (r.result !== 'lost') w.push('payout not readable; to_win left blank');
+    var odds = [];
+    L.forEach(function (x) { if (!/Wager|Payout|To Pay|Balance/i.test(x)) odds = odds.concat(oddsIn(x)); });
+    var derived = r.stake && r.to_win ? r.to_win / r.stake : null;
+    if (odds.length || derived) r.price = pickOdds(odds.slice(-1).concat(odds.slice(0, -1)), derived, r.stake, w);
+    if (!odds.length) w.push('odds not printed on the slip; derived from stake and payout');
+    var nLegs = (/(\d+)\s*-?\s*(?:Leg|Pick|Selection)/i.exec(t) || [])[1];
+    var parlay = /Parlay/i.test(t), sgp = /Same Game|\bSGP\b/i.test(t);
+    var ev = null;
+    L.forEach(function (x) { if (!ev) { var e = eventFrom(clean(x).replace(/\s+\d{1,2}:\d\d.*$/, '')); if (e && /[A-Za-z]{3}/.test(e.away) && /[A-Za-z]{3}/.test(e.home) && e.ev.length < 80) ev = e.ev; } });
+    r.event = ev; if (!ev) w.push('event not readable');
+    var pickLine = null;
+    for (var i = 0; i < L.length; i++) { if (oddsIn(L[i]).length && !/Wager|Payout|To Pay|Parlay|Total/i.test(L[i])) { pickLine = clean(L[i].replace(/[+\-–]\s?\d{3,4}.*$/, '')).trim(); break; } }
+    if (pickLine && pickLine.length > 1 && !parlay) r.pick = pickLine;
+    else w.push((parlay ? 'parlay legs' : 'pick') + ' not read reliably; type them in');
+    r.market = (parlay || sgp) ? ((sgp ? 'SGP ' : 'Parlay ') + (nLegs ? nLegs + '-leg' : '')).trim() : (/Single/i.test(t) || pickLine ? 'Single' : null);
+    if (bonus && r.stake != null) r.market = (r.market || 'Bet') + ' (bonus bet $' + r.stake + ')';
+    if (!r.market) w.push('market not readable');
+    w.push('Hard Rock slips are read by a basic fallback; check every field');
+    return [r];
+  }
+
+  /* ---------- checks shared with the upload page (exported; covered by tests/slipparse.test.js) ---------- */
+  var DEFAULT_OWNERS = ['Shawn', 'Chu Cheong', 'charles123', 's-chuch'];
+  // account / user names printed on the screen ("Account: X", "Logged in as X", "Welcome back, X", "Hi X", "Username X")
+  function accountNames(text) {
+    var re = /(?:Account(?:\s*name)?|User\s*name|Username|Logged in as|Signed in as|Welcome back,?|Hi,?|Hello,?)\s*[:\-]?\s*([A-Za-z][A-Za-z0-9._' -]{1,30}?)(?=\s*(?:[\n|!,]|$))/gim, o = [], m;
+    while ((m = re.exec(String(text || '')))) { var n = m[1].trim(); if (n && o.indexOf(n) < 0 && !/^(there|again|guest)$/i.test(n)) o.push(n); }
+    return o;
+  }
+  function normName(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+  // a name that matches none of the owner names (either contains the other) -> a friend's slip
+  function foreignAccount(names, owners) {
+    var own = (owners && owners.length ? owners : DEFAULT_OWNERS).map(normName).filter(Boolean);
+    return (names || []).filter(function (n) {
+      var x = normName(n); if (!x) return false;
+      return !own.some(function (o) { return x.indexOf(o) >= 0 || o.indexOf(x) >= 0 || x.split(' ').some(function (p) { return p.length > 2 && o.split(' ').indexOf(p) >= 0; }); });
+    });
+  }
+  // stake x (decimal odds - 1) vs to_win, using the boosted odds when given. Bonus bets: same formula (profit only).
+  // returns { expected, diff (relative), level: 'ok'|'warn'|'block', msg }
+  function mathCheck(stake, toWin, price, boosted) {
+    var st = parseFloat(stake), tw = parseFloat(toWin), o = String(boosted || '').trim() || String(price || '').trim();
+    var m = /^([+-])(\d{3,5})$/.exec(o);
+    if (!(st > 0) || !(tw > 0) || !m) return { expected: null, diff: null, level: 'ok', msg: '' };
+    var n = parseInt(m[2], 10), exp = m[1] === '+' ? st * n / 100 : st * 100 / n;
+    var diff = Math.abs(exp - tw) / Math.max(exp, 0.01), abs = Math.abs(exp - tw);
+    var lvl = abs <= 0.02 || diff <= 0.01 ? 'ok' : diff > 0.05 ? 'block' : 'warn';
+    var why = 'Stake ' + st.toFixed(2) + ' at ' + o + ' should win about ' + exp.toFixed(2) + ', but To win says ' + tw.toFixed(2) + ' (' + Math.round(diff * 100) + '% off).';
+    if (lvl !== 'ok' && !String(boosted || '').trim() && tw > exp) why += ' If the bet was boosted, enter the boosted odds.';
+    return { expected: r2(exp), diff: Math.round(diff * 1000) / 1000, level: lvl, msg: lvl === 'ok' ? '' : why };
+  }
+  // fields a reader warning says were cut off / unreadable
+  function unclearFields(warnings) {
+    var out = {};
+    (warnings || []).forEach(function (w) {
+      w = String(w);
+      if (!/cut ?off|not readable|unreadable|garbled|blurr|not visible|illegible|unclear|cropped|partially|could not read|not read reliably/i.test(w)) return;
+      if (/\bodds\b|price/i.test(w) && !/derived/i.test(w)) out.price = 1;
+      if (/stake|wager/i.test(w) && !/from the card title/i.test(w)) out.stake = 1;
+      if (/payout|to.?win|return/i.test(w)) out.to_win = 1;
+      if (/\bpick\b|\blegs?\b|selection/i.test(w)) out.pick = 1;
+      if (/market/i.test(w)) out.market = 1;
+      if (/\bbook\b|sportsbook/i.test(w)) out.book = 1;
+    });
+    return out;
+  }
+
   /* ---------- router ---------- */
   function lines(text) {
     return String(text || '').replace(/\r/g, '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
@@ -606,6 +693,7 @@
     else if (/Bets Placed|\bDK\d{10,}|Wager Amount|Keep Picks/i.test(t)) out = parseDraftKings(L, t);
     else if (/TOTAL WAGER|TOTAL PAYOUT|Substituted players/i.test(t)) out = parseFanDuel(L, t);
     else if (/Bet Ref|To Return|Wager\s*Return|Live Alerts|SAME GAME PARLAY\s*[+#]\d/i.test(t)) out = parseBet365(L, t);
+    else if (/HARD\s?ROCK|Hard\s?Rock/i.test(t)) out = parseHardRock(L, t);
     else if (/BONUS BET|Bonus Bet/.test(t)) return [other('bonus-bet offer, not a bet slip')];
     else return [other('unrecognised sportsbook layout')];
     return out.map(function (r) { return r.kind === 'other' ? r : finish(r); });
@@ -616,5 +704,5 @@
     if (all.length > 1 && r.kind !== 'other') r.warnings.push(all.length + ' bets in this screenshot; this is the first complete one (parseSlips returns all)');
     return r;
   }
-  return { parseSlip: parseSlip, parseSlips: parseSlips };
+  return { parseSlip: parseSlip, parseSlips: parseSlips, accountNames: accountNames, foreignAccount: foreignAccount, mathCheck: mathCheck, unclearFields: unclearFields, DEFAULT_OWNERS: DEFAULT_OWNERS };
 });

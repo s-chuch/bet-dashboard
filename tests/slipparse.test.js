@@ -97,5 +97,43 @@ check('tracker page', 'Bet Tracker Stats Logs\nLIVE NOW\nCaesars ($0.50)\n0/2 le
   var r = P.parseSlip(g); eq('garbage ' + i + ' -> other', r.kind, 'other'); eq('garbage ' + i + ' pick', r.pick, null);
 });
 
+
+/* ---------- Hard Rock fallback (synthetic layout fixtures) ---------- */
+var HR_SINGLE = ['HARD ROCK BET', 'Bet Placed', 'Single', 'Toronto Raptors @ Boston Celtics 7:30 PM', 'Raptors +4.5 -110', 'Spread',
+  'Wager $2.20', 'To Pay $4.20'].join('\n');
+var hr = check('hard rock single', HR_SINGLE, { kind: 'placed', book: 'Hard Rock', event: 'Toronto Raptors @ Boston Celtics', price: '-110', stake: 2.2, to_win: 2, market: 'Single' });
+eq('hard rock warns', hr.warnings.some(function (x) { return /fallback/.test(x); }), true);
+var HR_BONUS = ['Hard Rock Bet', 'Bet Placed', 'Single', 'Bonus Bet', 'Atalanta v Frosinone', 'Draw +335', 'Wager $20.00', 'Potential Payout $67.00'].join('\n');
+check('hard rock bonus', HR_BONUS, { kind: 'placed', book: 'Hard Rock', stake: 20, to_win: 67, price: '+335', market: 'Single (bonus bet $20)', event: 'Atalanta v Frosinone' });
+var HR_LOST = ['Hard Rock Bet', 'My Bets', 'Settled', 'Lost', 'Heat @ Hornets', 'Heat ML +120', 'Wager $5.00', 'Paid $0.00'].join('\n');
+check('hard rock lost', HR_LOST, { kind: 'settled', result: 'lost', stake: 5, book: 'Hard Rock' });
+check('hard rock promo is not a slip', 'Hard Rock Bet\n$20 BONUS BET\nPlace a $5 bet at +100 or longer\nOpt in', { kind: 'other', stake: null });
+var HR_PARLAY = ['Hard Rock Bet', 'Bet Placed', '3 Leg Parlay +596', 'Wager $1.00', 'To Pay $6.96'].join('\n');
+var hp = check('hard rock parlay', HR_PARLAY, { stake: 1, to_win: 5.96, price: '+596', market: 'Parlay 3-leg', pick: null });
+eq('hard rock parlay warns about legs', hp.warnings.some(function (x) { return /legs/.test(x); }), true);
+
+/* ---------- friend check ---------- */
+eq('account names', P.accountNames('Account: Mike Jones\nBet Placed'), ['Mike Jones']);
+eq('welcome name', P.accountNames('Welcome back, Shawn!\nWager $1.00'), ['Shawn']);
+eq('owner is not foreign', P.foreignAccount(['Shawn Chu Cheong'], null), []);
+eq('owner handle not foreign', P.foreignAccount(['charles123'], null), []);
+eq('friend is foreign', P.foreignAccount(['Mike Jones'], null), ['Mike Jones']);
+eq('custom owners', P.foreignAccount(['Mike Jones'], ['Mike']), []);
+
+/* ---------- math check ---------- */
+eq('math ok', P.mathCheck(2, 4, '+200', '').level, 'ok');
+eq('math ok negative', P.mathCheck(2.2, 2, '-110', '').level, 'ok');
+eq('math ok boosted', P.mathCheck(1, 3.56, '+237', '+356').level, 'ok');
+eq('math bonus profit only', P.mathCheck(20, 67, '+335', '').level, 'ok');
+eq('math warn 3%', P.mathCheck(10, 20.6, '+200', '').level, 'warn');
+eq('math block (payout typed as to_win)', P.mathCheck(10, 30, '+200', '').level, 'block');
+eq('math cent rounding ok', P.mathCheck(0.5, 0.56, '+110', '').level, 'ok');
+eq('math missing -> ok', P.mathCheck('', '', '', '').level, 'ok');
+
+/* ---------- unclear-field flags ---------- */
+eq('unclear odds+stake', P.unclearFields(['odds cut off', 'wager/return not readable']), { price: 1, stake: 1, to_win: 1 });
+eq('derived odds not flagged', P.unclearFields(['odds not printed on the slip; derived from stake and payout']), {});
+eq('plain warning not flagged', P.unclearFields(['settled FanDuel slips are only partially supported']), {});
+
 console.log((n - fails) + '/' + n + ' assertions passed');
 process.exit(fails ? 1 : 0);

@@ -15,6 +15,9 @@
 
   function getTok() { try { return localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return ''; } }
   function setTok(v) { try { v ? localStorage.setItem(TOKEN_KEY, v) : localStorage.removeItem(TOKEN_KEY); } catch (e) {} }
+  var OWN_KEY = 'bt.owners';
+  function owners() { try { var v = JSON.parse(localStorage.getItem(OWN_KEY) || 'null'); if (Array.isArray(v) && v.length) return v; } catch (e) {} return (typeof SlipParse !== 'undefined' && SlipParse.DEFAULT_OWNERS) || ['Shawn', 'Chu Cheong', 'charles123', 's-chuch']; }
+  function setOwners(list) { try { localStorage.setItem(OWN_KEY, JSON.stringify(list)); } catch (e) {} }
   function todayET() { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Toronto' }); }
   function pad(n) { return (n < 10 ? '0' : '') + n; }
 
@@ -51,9 +54,14 @@
     var hit = x.w.filter(function (k) { return y.w.indexOf(k) >= 0; }).length;
     return hit / Math.min(x.w.length, y.w.length) >= 0.75;
   }
+  function slim(b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; }
+  // whole history like the server (scripts/add_bets.py uses all_bets(): live + settled + archived)
   function loadExisting() {
+    fetch('archive.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (a) {
+      S.archived = (a.bets || []).map(slim); S.existing = (S.live || []).concat(S.archived); S.drafts.forEach(function (x) { x._seen = 0; }); renderDrafts(true);
+    }).catch(function () {});
     fetch('data.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (d) {
-      S.existing = [].concat(d.open || [], d.settled_recent || []).map(function (b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; });
+      S.live = [].concat(d.open || [], d.settled_recent || []).map(slim); S.existing = S.live.concat(S.archived || []); S.drafts.forEach(function (x) { x._seen = 0; });
       S.examples = (d.open || []).filter(function (b) { return b.pick && b.market && b.event; }).map(function (b) { return { book: b.book, event: b.event, market: b.market, pick: b.pick, price: b.price, boosted_price: b.boosted_price }; });
       renderDrafts();
     }).catch(function () {});
@@ -62,8 +70,8 @@
   function markDup(dr) {
     var i = S.drafts.indexOf(dr), earlier = i < 0 ? S.drafts : S.drafts.slice(0, i);
     var was = dr.dup;
-    dr.dup = S.existing.some(function (e) { return sameBet(dr, e); }) || earlier.some(function (o) { return (o.kind === 'placed' || o.kind === 'open') && sameBet(dr, o); });
-    if (dr.dup && !was && (dr.kind === 'placed' || dr.kind === 'open')) { dr.on = false; dr.autoOff = true; }
+    dr.dup = S.existing.some(function (e) { return sameBet(dr, e); }) || earlier.some(function (o) { return (o.kind === 'placed' || o.kind === 'open' || o.kind === 'settled') && sameBet(dr, o); });
+    if (dr.dup && !was && (dr.kind === 'placed' || dr.kind === 'open' || dr.kind === 'settled')) { dr.on = false; dr.autoOff = true; }
     if (!dr.dup && was && dr.autoOff) { dr.on = true; dr.autoOff = false; }
   }
   function markAllDups() { S.drafts.forEach(markDup); }
@@ -167,7 +175,7 @@
   }
   var PROMPT = 'You read screenshots of sports-betting app screens (Caesars, DraftKings, FanDuel, PointsBet, bet365, theScore, Hard Rock, BetMGM ...) for a personal bet tracker. Money is Canadian dollars; ignore currency symbols. ' +
     'Return ONLY JSON: {"bets":[{...}]} with one object per bet visible (a My Bets list can show several). Never invent a value: use "" when it is not visible. Fields: ' +
-    'kind ("placed" = receipt / Bet Placed page, "open" = pending bet on a My Bets / Open list, "settled" = shows WON / LOST / Returned / cashed out / void, "other" = not a bet), result ("won"|"lost"|"void"|"" , settled only), ' +
+    'kind ("placed" = receipt / Bet Placed page, "open" = pending bet on a My Bets / Open list, "settled" = shows WON / LOST / Returned / cashed out / void, "other" = not a bet), result ("won"|"lost"|"push"|"void"|"cashout"|"" , settled only), account_name (the account / user name printed on the screen, e.g. in a header or "Welcome back, X", else ""), ' +
     'book (exactly one of: ' + BOOKS.join(', ') + ' - decide from logos, layout and wording: "CAESARS SPORTSBOOK" = Caesars; "Receipt ... DK63..." with Wager Amount / Total Payout = DraftKings; blue "My Bets" with Opta / TOTAL WAGER / TOTAL PAYOUT / Cash out = FanDuel; red "Betslip ... Receipt #B26" = PointsBet; green "Bet Ref PP..." / "To Return" / BetGuard + Wager/Return = bet365), ' +
     'date (YYYY-MM-DD the bet was placed if a timestamp is visible, else ""), event ("Away @ Home" for NA sports, "Team A v Team B" for soccer), start_et (kickoff text as shown, e.g. "Tue Oct 20 03:00 PM ET" or "Today 3:00 PM"), ' +
     'market (e.g. "SGP 3-leg (30% profit boost)", "Parlay 3-leg", "Moneyline", "Futures"), ' +
@@ -289,7 +297,7 @@
     if (bonus && !/bonus bet|free bet/i.test(mk)) mk = (mk ? mk + ' ' : 'Bet ') + '(bonus bet $' + bonus[1] + ')';
     r.market = mk;
     return { kind: kind, book: BOOKS.indexOf(r.book) >= 0 ? r.book : '', date: /^20\d\d-\d\d-\d\d$/.test(r.date || '') ? r.date : '', event: String(r.event || ''), start_text: String(r.start_et || ''), market: String(r.market || ''), pick: String(r.pick || ''),
-      price: odds(r.price), boosted_price: odds(r.boosted_price), stake: num(r.stake), to_win: num(r.to_win), result: r.result || '', warnings: Array.isArray(r.warnings) ? r.warnings.map(String).slice(0, 5) : [] };
+      price: odds(r.price), boosted_price: odds(r.boosted_price), stake: num(r.stake), to_win: num(r.to_win), result: ['won', 'lost', 'push', 'void', 'cashout'].indexOf(String(r.result || '').toLowerCase()) >= 0 ? String(r.result).toLowerCase() : '', account_name: String(r.account_name || '').slice(0, 60), warnings: Array.isArray(r.warnings) ? r.warnings.map(String).slice(0, 5) : [] };
   }
 
   /* ---------- OCR ---------- */
@@ -360,14 +368,19 @@
   function addDraftParsed(name, p, note, text, itemId) {
     var date = p.date || todayET();
     var dr = {
-      id: S.nextId++, file: name, kind: p.kind || 'other', on: p.kind === 'placed' || p.kind === 'open',
+      id: S.nextId++, file: name, kind: p.kind || 'other', on: p.kind === 'placed' || p.kind === 'open' || p.kind === 'settled',
       book: p.book || '', date: date, event: p.event || '', start: normStart(p.start_text, date), market: p.market || '', pick: p.pick || '',
       price: p.price || '', boosted: p.boosted_price || '', stake: p.stake != null ? String(p.stake) : '', to_win: p.to_win != null ? String(p.to_win) : '',
       warnings: (p.warnings || []).slice(), result: p.result || '', text: text || '', dup: false, note: note || '', itemId: itemId
     };
     if (!dr.price && dr.boosted) { dr.price = dr.boosted; dr.boosted = ''; dr.warnings.push('The odds before the boost were not readable, so the boosted odds are shown as the odds. Stake and to-win are right.'); }
     if (note && /^AI reading failed|^Basic reader/.test(note)) dr.warnings.unshift(note);
-    if (dr.kind === 'settled') dr.warnings.unshift('This slip is already settled (' + (dr.result || 'result shown') + '). Settled bets are not added here.');
+    if (dr.kind === 'settled') dr.warnings.unshift('This slip is already settled' + (dr.result ? ' (' + dr.result + ')' : '') + '. It will be added and settled with the result below.');
+    var SP = typeof SlipParse !== 'undefined' ? SlipParse : null;
+    dr.unclear = SP && SP.unclearFields ? SP.unclearFields(dr.warnings) : {};
+    var names = (p.account_name ? [p.account_name] : []).concat(SP && SP.accountNames ? SP.accountNames(text || '') : []);
+    dr.foreign = SP && SP.foreignAccount ? SP.foreignAccount(names, owners()) : [];
+    if (dr.foreign.length) { dr.on = false; dr.warnings.unshift('Account name on the slip is "' + dr.foreign[0] + '", not yours. Probably a friend\'s bet, so it is unticked. Tick it only if it really is yours.'); }
     if (dr.kind === 'other') dr.warnings.unshift('This does not look like a bet slip.');
     markDup(dr); S.drafts.push(dr);
   }
@@ -383,22 +396,41 @@
     if (d.boosted.trim() && !ODDS_RE.test(d.boosted.trim())) bad.boosted = 1;
     var st = parseFloat(d.stake);
     if (!MONEY_RE.test(d.stake.trim()) || !(st > 0 && st <= 500)) bad.stake = 1;
-    if (!MONEY_RE.test(d.to_win.trim())) bad.to_win = 1;
+    if (!MONEY_RE.test(d.to_win.trim()) || !(parseFloat(d.to_win) > 0)) bad.to_win = 1;
+    if (!String(d.market || '').trim()) bad.market = 1;
+    Object.keys(d.unclear || {}).forEach(function (k) { bad[k] = 1; });
+    if (d.kind === 'settled' && ['won', 'lost', 'push', 'void'].indexOf(d.result) < 0) bad.result = 1;
+    var mc = mathOf(d); if (mc.level === 'block') { bad.to_win = 1; bad.price = 1; }
     return bad;
+  }
+  function mathOf(d) { return typeof SlipParse !== 'undefined' && SlipParse.mathCheck ? SlipParse.mathCheck(d.stake, d.to_win, d.price, d.boosted) : { level: 'ok', msg: '' }; }
+  var LABEL = { book: 'book', date: 'date', event: 'event', pick: 'pick', price: 'odds', boosted: 'boosted odds', stake: 'stake', to_win: 'to win', market: 'market', result: 'result' };
+  // plain-language reasons a row cannot be added yet
+  function reasons(d) {
+    var bad = problems(d), out = [], mc = mathOf(d);
+    Object.keys(bad).forEach(function (k) {
+      if (mc.level === 'block' && (k === 'to_win' || k === 'price') && !(d.unclear || {})[k] && MONEY_RE.test(d.to_win.trim()) && ODDS_RE.test(d.price.trim())) return;
+      if ((d.unclear || {})[k]) out.push('The reader flagged ' + LABEL[k] + ' as cut off or unreadable. Check it against the slip and retype it.');
+      else if (k === 'result') out.push(d.result === 'cashout' ? 'Cashed-out bets need the cash-out amount; settle this one on the Logs page instead.' : 'Pick the result (won, lost, push or void).');
+      else out.push((LABEL[k] || k).replace(/^./, function (c) { return c.toUpperCase(); }) + ' is blank or not valid.');
+    });
+    if (mc.level === 'block') out.push(mc.msg + ' Fix the stake, odds or to win.');
+    return out;
   }
   function problemsCount(d) { return Object.keys(problems(d)).length; }
   function updateSend() {
-    var on = S.drafts.filter(function (d) { return d.on; }), ok = on.length && on.every(function (d) { return !Object.keys(problems(d)).length; });
+    var on = S.drafts.filter(function (d) { return d.on; }), blocked = on.filter(function (d) { return Object.keys(problems(d)).length; }), ok = on.length && !blocked.length;
     var b = $('send'); if (!b) return;
     b.disabled = !ok || S.sending || !getTok();
     b.textContent = on.length ? 'Add ' + on.length + ' bet' + (on.length === 1 ? '' : 's') + ' to tracker' : 'Add to tracker';
-    if (!S.sending && !$('sendmsg').dataset.keep) $('sendmsg').textContent = !getTok() ? 'Connect GitHub above first.' : (on.length && !ok ? 'Fix the red fields first.' : '');
+    if (!S.sending && !$('sendmsg').dataset.keep) $('sendmsg').textContent = !getTok() ? 'Connect GitHub above first.' : (on.length && !ok ? 'Can\'t add yet: fix the red fields in ' + blocked.map(function (d) { return d.file; }).slice(0, 3).join(', ') + (blocked.length > 3 ? '…' : '') + ' (reasons are under each row).' : '');
   }
   function send() {
     var on = S.drafts.filter(function (d) { return d.on; });
     if (!on.length || S.sending) return;
+    if (on.some(function (d) { return Object.keys(problems(d)).length; })) { updateSend(); return; }   // never send a guessed row
     var rows = on.map(function (d) {
-      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim() + (/bonus bet|free bet/i.test(d.market) ? ' (bonus)' : ''), to_win: d.to_win.trim(), force: d.dup ? '1' : '' };
+      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim() + (/bonus bet|free bet/i.test(d.market) ? ' (bonus)' : ''), to_win: d.to_win.trim(), force: d.dup ? '1' : '', result: d.kind === 'settled' ? d.result : '' };
     });
     var body = JSON.stringify({ ref: 'main', inputs: { bets: JSON.stringify(rows) } });
     if (body.length > 60000) { $('sendmsg').textContent = 'Too many bets for one send. Send fewer at a time.'; return; }
@@ -457,12 +489,15 @@
     S.drafts.forEach(function (d) { if (!d._seen) { d._seen = 1; markDup(d); } });
     $('review').hidden = !S.drafts.length;
     $('rows').innerHTML = S.drafts.map(function (d) {
-      var tag = d.kind === 'settled' ? '<span class="tag bad">settled</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">' + (d.note === 'Read by AI' ? 'AI read ✓' : 'looks good') + '</span>');
-      var form = (d.kind === 'placed' || d.kind === 'open') ? '<div class="grid">' + fld(d, 'book', 'Book') + fld(d, 'date', 'Date placed', '', '') + fld(d, 'stake', 'Stake', '', 'num') + fld(d, 'to_win', 'To win', '', 'num') +
+      var rs = (d.kind === 'placed' || d.kind === 'open' || d.kind === 'settled') ? reasons(d) : [], mc = mathOf(d);
+      var tag = d.foreign && d.foreign.length ? '<span class="tag bad">someone else\'s account?</span>' : rs.length ? '<span class="tag bad">can\'t add yet</span>' : d.kind === 'settled' ? '<span class="tag warn">settled: ' + esc(d.result || '?') + '</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">' + (d.note === 'Read by AI' ? 'AI read ✓' : 'looks good') + '</span>');
+      var resSel = d.kind === 'settled' ? '<label class="fld' + (problems(d).result ? ' bad' : '') + '"><span>Result</span><select data-d="' + d.id + '" data-k="result"><option value="">Choose…</option>' + ['won', 'lost', 'push', 'void'].map(function (x) { return '<option' + (x === d.result ? ' selected' : '') + '>' + x + '</option>'; }).join('') + '</select></label>' : '';
+      var form = (d.kind === 'placed' || d.kind === 'open' || d.kind === 'settled') ? '<div class="grid">' + resSel + fld(d, 'book', 'Book') + fld(d, 'date', 'Date placed', '', '') + fld(d, 'stake', 'Stake', '', 'num') + fld(d, 'to_win', 'To win', '', 'num') +
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
+      var why = rs.length ? '<ul class="warns" style="border-left:3px solid #e5484d;padding-left:18px"><li><b>Can\'t add this row yet:</b></li>' + rs.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : (mc.level === 'warn' ? '<ul class="warns"><li>' + esc(mc.msg) + '</li></ul>' : '');
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
       var raw = '<details class="small muted" style="margin-top:8px"><summary>What the reader saw</summary><pre style="white-space:pre-wrap;font-size:11px;margin:6px 0 0">' + esc(d.text) + '</pre></details>';
-      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '<div class="btns">' + (d.itemId && (d.kind === 'other' || d.warnings.length || problemsCount(d)) ? '<button class="btn sm pri" type="button" data-rr="' + d.itemId + '">Re-read</button>' : '') + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '">Remove</button></div></div>' + form + w + raw + '</div>';
+      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + ((d.kind === 'placed' || d.kind === 'open' || d.kind === 'settled') ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '<div class="btns">' + (d.itemId && (d.kind === 'other' || d.warnings.length || problemsCount(d)) ? '<button class="btn sm pri" type="button" data-rr="' + d.itemId + '">Re-read</button>' : '') + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '">Remove</button></div></div>' + form + why + w + raw + '</div>';
     }).join('');
     if (!keepMsg) { var m = $('sendmsg'); if (m && !m.dataset.keep) m.textContent = ''; }
     updateSend();
@@ -500,14 +535,16 @@
     var t = e.target, id = t.getAttribute('data-d'), k = t.getAttribute('data-k'); if (!id || !k) return;
     var d = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (!d) return;
     if (!S.sending) delete $('sendmsg').dataset.keep;
-    d[k] = t.value; markDup(d); saveSoon();
+    d[k] = t.value; if (d.unclear) delete d.unclear[k]; markDup(d); saveSoon();
     var fl = t.closest('.fld'); if (fl) fl.classList.toggle('bad', !!problems(d)[k]);
+    clearTimeout(S.rT); S.rT = setTimeout(function () { var a = document.activeElement, ak = a && a.getAttribute && a.getAttribute('data-k'), ad = a && a.getAttribute && a.getAttribute('data-d'), pos = a && a.selectionStart; renderDrafts(true); if (ak && ad) { var n = document.querySelector('[data-d="' + ad + '"][data-k="' + ak + '"]'); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (x) {} } } }, 600);
     updateSend();
   });
   $('rows').addEventListener('change', function (e) {
     var t = e.target, on = t.getAttribute('data-on');
     if (on) { var d = S.drafts.filter(function (x) { return String(x.id) === on; })[0]; if (d) { d.on = t.checked; saveSoon(); var c = t.closest('.draft'); if (c) c.classList.toggle('skip', !d.on); updateSend(); } return; }
-    if (t.getAttribute('data-k') === 'book') { var id = t.getAttribute('data-d'), dd = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (dd) { dd.book = t.value; markDup(dd); renderDrafts(true); } }
+    var sk = t.getAttribute('data-k');
+    if (sk === 'book' || sk === 'result') { var id = t.getAttribute('data-d'), dd = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (dd) { dd[sk] = t.value; if (dd.unclear) delete dd.unclear[sk]; markDup(dd); renderDrafts(true); } }
   });
   $('rows').addEventListener('click', function (e) {
     var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rmd'); if (!id) return;
@@ -558,5 +595,10 @@
   });
   document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') runQueue(); });
 
-  renderGh(); renderAi(); loadExisting(); updateSend(); restore();
+  function renderOwners() {
+    var el = $('owners'); if (!el) return;
+    el.innerHTML = '<span>Your account names (friend check):</span> <input type="text" id="own-in" value="' + esc(owners().join(', ')) + '" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:160px"> <button class="btn sm" type="button" id="own-save">Save</button>';
+    $('own-save').onclick = function () { var v = $('own-in').value.split(',').map(function (x) { return x.trim(); }).filter(Boolean); if (v.length) setOwners(v); renderOwners(); };
+  }
+  renderOwners(); renderGh(); renderAi(); loadExisting(); updateSend(); restore();
 })();
