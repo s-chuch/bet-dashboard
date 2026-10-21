@@ -21,6 +21,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "c8bea3fa",
+   "book": "theScore",
+   "pick": "Jalen Brunson 25+ pts + Jaylen Brown 20+ pts + Joel Embiid 8+ reb",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "PHI 106-100 NY",
+   "at": "2026-10-20 22:00"
+  },
+  {
    "bet_id": "b1069fc2",
    "book": "PointsBet",
    "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
@@ -235,17 +244,8 @@
    "pnl": -25.0,
    "final": "DAL 13-23 GB",
    "at": "2026-10-18 23:47"
-  },
-  {
-   "bet_id": "f6d731b5",
-   "book": "Caesars",
-   "pick": "MarShawn Lloyd ATTD + Cowboys ML",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "DAL 13-23 GB",
-   "at": "2026-10-18 23:47"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 21:44 ET"
+ "last_change_at": "2026-10-20 22:00 ET"
 }
