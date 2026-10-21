@@ -72,23 +72,50 @@
   var AI_KEY = 'bt.ai.gemini', GEM = 'https://generativelanguage.googleapis.com/v1beta/';
   function getAi() { try { return localStorage.getItem(AI_KEY) || ''; } catch (e) { return ''; } }
   function setAi(v) { try { v ? localStorage.setItem(AI_KEY, v) : localStorage.removeItem(AI_KEY); } catch (e) {} S.model = ''; S.models = null; }
+  var OR_KEY = 'bt.ai.or', OR = 'https://openrouter.ai/api/v1/';
+  function getOr() { try { return localStorage.getItem(OR_KEY) || ''; } catch (e) { return ''; } }
+  function setOr(v) { try { v ? localStorage.setItem(OR_KEY, v) : localStorage.removeItem(OR_KEY); } catch (e) {} S.orModels = null; }
+  function aiOn() { return !!(getAi() || getOr()); }
   function renderAi() {
-    var k = getAi(), el = $('ai');
-    if (k) {
-      el.innerHTML = '<h3>AI reading</h3><p class="small">On ✓ &nbsp;<span class="muted" id="ai-model"></span> <button class="btn sm" type="button" id="ai-off" style="margin-left:6px">Remove key</button></p>';
-      $('ai-off').onclick = function () { setAi(''); renderAi(); };
-      if (S.models) $('ai-model').textContent = '(' + S.models.join(' → ') + ')';
-    } else {
-      el.innerHTML = '<h3>AI reading (recommended, free)</h3><p class="small muted">Lets the page read slips as well as Claude or Grok do, so you fill in nothing. Get a free Google AI Studio key (1 minute), paste it once; it stays in this browser.</p>' +
-        '<p class="small"><a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a> · Privacy: on Google’s free tier, the screenshots you upload may be used by Google to improve its products. Crop out balances if that matters to you.</p>' +
-        '<div style="display:flex;gap:8px"><input type="text" id="ai-in" placeholder="Paste your Google AI key" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>';
-      $('ai-save').onclick = function () {
-        var v = $('ai-in').value.trim();
-        if (!/^[A-Za-z0-9._~-]{20,200}$/.test(v)) { $('ai-err').textContent = 'That does not look like a key: it should be one string with no spaces, at least 20 characters.'; return; }
-        $('ai-err').textContent = 'Checking the key with Google…'; setAi(v);
-        getModels().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = (e && e.message ? e.message : String(e)); });
-      };
-    }
+    var k = getAi(), o = getOr(), el = $('ai'), h = '<h3>AI reading (free keys)</h3><p class="small muted">Lets the page read slips like Claude or Grok would, so you fill in nothing. One key is enough; with two, the second is the backup when the first hits its free limit. Keys stay in this browser. On free tiers the providers may use your screenshots to improve their products, so crop out balances if that matters.</p>';
+    h += '<div class="aiRow"><b>Google</b> ' + (k ? '<span class="pos">On ✓</span> <span class="muted" id="ai-model"></span> <button class="btn sm" type="button" id="ai-off">Remove</button>' :
+      '<a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a><div style="display:flex;gap:8px;margin-top:6px"><input type="text" id="ai-in" placeholder="Paste Google key" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>') + '</div>';
+    h += '<div class="aiRow" style="margin-top:10px"><b>OpenRouter</b> ' + (o ? '<span class="pos">On ✓</span> <span class="muted" id="or-model"></span> <button class="btn sm" type="button" id="or-off">Remove</button>' :
+      '<a target="_blank" rel="noopener noreferrer" href="https://openrouter.ai/settings/keys">Get a free key ↗</a><div style="display:flex;gap:8px;margin-top:6px"><input type="text" id="or-in" placeholder="Paste OpenRouter key (sk-or-…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="or-save">Save</button></div><p id="or-err" class="small neg"></p>') + '</div>';
+    el.innerHTML = h;
+    if (k) { $('ai-off').onclick = function () { setAi(''); renderAi(); }; if (S.models) $('ai-model').textContent = '(' + S.models.join(' → ') + ')'; }
+    else $('ai-save').onclick = function () {
+      var v = $('ai-in').value.trim();
+      if (!/^[A-Za-z0-9._~-]{20,200}$/.test(v)) { $('ai-err').textContent = 'That does not look like a key: one string with no spaces, at least 20 characters.'; return; }
+      $('ai-err').textContent = 'Checking the key with Google…'; setAi(v);
+      getModels().then(function () { renderAi(); }).catch(function (e) { setAi(''); renderAi(); $('ai-err').textContent = (e && e.message ? e.message : String(e)); });
+    };
+    if (o) { $('or-off').onclick = function () { setOr(''); renderAi(); }; if (S.orModels) $('or-model').textContent = '(' + S.orModels.slice(0, 2).join(', ') + '…)'; }
+    else $('or-save').onclick = function () {
+      var v = $('or-in').value.trim();
+      if (!/^sk-or-[A-Za-z0-9_-]{20,}$/.test(v)) { $('or-err').textContent = 'An OpenRouter key starts with sk-or- (copy it from openrouter.ai/settings/keys).'; return; }
+      $('or-err').textContent = 'Checking the key with OpenRouter…'; setOr(v);
+      getOrModels().then(function () { renderAi(); }).catch(function (e) { setOr(''); renderAi(); $('or-err').textContent = (e && e.message ? e.message : String(e)); });
+    };
+  }
+  // free OpenRouter models that accept images, best readers first
+  function getOrModels() {
+    if (S.orModels) return Promise.resolve(S.orModels);
+    return fetch(OR + 'auth/key', { headers: { Authorization: 'Bearer ' + getOr() }, credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
+      if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { throw new Error('OpenRouter did not accept the key (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 100) : '') + ')'); });
+      return fetch(OR + 'models', { credentials: 'omit', referrerPolicy: 'no-referrer' });
+    }).then(function (r) { if (!r.ok) throw new Error('OpenRouter model list failed (HTTP ' + r.status + ')'); return r.json(); }).then(function (j) {
+      var free = (j.data || []).filter(function (m) {
+        var a = m.architecture || {}, pr = m.pricing || {};
+        return (a.input_modalities || []).indexOf('image') >= 0 && (a.output_modalities || ['text']).join() === 'text' && String(pr.prompt) === '0' && String(pr.completion) === '0' && !/lyria|safety|guard|embed|moderation/i.test(m.id) && m.id !== 'openrouter/free';
+      });
+      var prefs = [/gemma-?\d*.*31b/, /qwen.*vl.*(72b|235b|32b)/, /nemotron.*super.*vl|nemotron.*vl/, /llama-4/, /mistral-small|pixtral/, /inkling(?!-small)/, /gemini/, /gemma/, /./];
+      var score = function (m) { for (var i = 0; i < prefs.length; i++) if (prefs[i].test(m.id)) return i; return 99; };
+      free.sort(function (a, b) { return score(a) - score(b) || (b.context_length || 0) - (a.context_length || 0); });
+      var ids = free.map(function (m) { return m.id; }).slice(0, 5);
+      if (!ids.length) ids = ['openrouter/free'];
+      S.orModels = ids; var e = $('or-model'); if (e) e.textContent = '(' + ids.slice(0, 2).join(', ') + '…)'; return ids;
+    });
   }
   function pickModels(models) {   // strongest first: Pro reads small print better; Flash is the fallback when Pro's free quota is used up
     var names = (models || []).filter(function (m) { return (m.supportedGenerationMethods || []).indexOf('generateContent') >= 0; }).map(function (m) { return String(m.name).replace(/^models\//, ''); })
@@ -189,20 +216,47 @@
     }
     return go();
   }
-  function tryModels(models, b64, text, it) {   // strongest model first, next one if its free quota is gone / it is unavailable
+  function callOr(model, b64, text, it) {
+    function go(json) {
+      var body = { model: model, temperature: 0, max_tokens: 3000, messages: [{ role: 'user', content: [{ type: 'text', text: text }, { type: 'image_url', image_url: { url: 'data:image/jpeg;base64,' + b64 } }] }] };
+      if (json) body.response_format = { type: 'json_object' };
+      return fetch(OR + 'chat/completions', { method: 'POST', headers: { 'Authorization': 'Bearer ' + getOr(), 'Content-Type': 'application/json', 'X-Title': 'Bet Tracker' }, body: JSON.stringify(body), credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          if (!r.ok || j.error) { var e = new Error(((j.error && j.error.message) || 'HTTP ' + r.status).toString().slice(0, 140)); e.status = r.status; e.badFormat = /response_format|json/i.test(e.message); throw e; }
+          var t = (((j.choices || [])[0] || {}).message || {}).content || '';
+          if (Array.isArray(t)) t = t.map(function (x) { return x.text || ''; }).join('');
+          t = String(t).replace(/^[\s\S]*?```(?:json)?\s*/i, function (m0) { return /```/.test(m0) ? '' : m0; }).replace(/```[\s\S]*$/, '');
+          var a0 = t.indexOf('{'), a1 = t.lastIndexOf('}'); if (a0 >= 0 && a1 > a0) t = t.slice(a0, a1 + 1);
+          var o = JSON.parse(t), arr = Array.isArray(o) ? o : (o.bets || []);
+          if (!arr.length) throw new Error('no bet found on this picture');
+          return arr;
+        });
+      }).catch(function (e) { if (json && (e.badFormat || e.status === 400 || e instanceof SyntaxError)) return go(false); throw e; });
+    }
+    return go(true);
+  }
+  // every available reader in order: Google models, then OpenRouter free models; the first answer wins
+  function tryModels(models, b64, text, it) {
+    var chain = [];
+    (models || []).forEach(function (m) { chain.push({ name: m, run: function () { return callModel(m, b64, text, it); } }); });
+    var orMs = it._or || [];
+    orMs.forEach(function (m) { chain.push({ name: 'OpenRouter ' + m.replace(/:free$/, ''), run: function () { return callOr(m, b64, text, it); } }); });
     var i = 0, last = null;
     function next() {
-      if (i >= models.length) {
-        if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for Google’s free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
-        return Promise.reject(last);
+      if (i >= chain.length) {
+        if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for the free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
+        return Promise.reject(last || new Error('no reader available'));
       }
-      var m = models[i++]; it.msg = 'Reading with ' + m + '…'; renderQueue();
-      return callModel(m, b64, text, it).catch(function (e) { last = e; return next(); });
+      var c = chain[i++]; it.msg = 'Reading with ' + c.name + '…'; renderQueue();
+      return c.run().catch(function (e) { last = e; return next(); });
     }
     return next();
   }
   function aiRead(it) {
-    return getModels().then(function (models) {
+    var gm = getAi() ? getModels().catch(function (e) { if (!getOr()) throw e; return []; }) : Promise.resolve([]);
+    var om = getOr() ? getOrModels().catch(function (e) { if (!getAi()) throw e; return []; }) : Promise.resolve([]);
+    return Promise.all([gm, om]).then(function (r) {
+      var models = r[0]; it._or = r[1];
       var ocr = ocrHint(it);
       return shrink(it.file).then(function (b64) {
         return ocr.then(function (hint) {
@@ -251,10 +305,10 @@
     var it = S.items.filter(function (x) { return x.state === 'wait'; })[0];
     if (!it) { return; }
     S.busy = true; it.state = 'read'; it.msg = ''; renderQueue();
-    var job = getAi() ? aiRead(it).then(function (rows) {
+    var job = aiOn() ? aiRead(it).then(function (rows) {
       rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
-      : ocrRead(it, getAi() ? '' : 'Basic reader (no AI key). Add a free key above for full automatic reading.');
+      : ocrRead(it, 'Basic reader (no AI key). Add a free key above for full automatic reading.');
     job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
       .then(function () { S.busy = false; renderQueue(); renderDrafts(); runQueue(); });
   }
