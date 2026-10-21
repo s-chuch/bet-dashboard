@@ -35,7 +35,7 @@ def same_bet(a, b):
     same book, same stake, placed within 3 days, same set of line numbers, and the names of one overlap >= 75% with the other."""
     if a["book"].strip().lower() != b["book"].strip().lower(): return False
     try:
-        if abs(float(a["stake"]) - float(b["stake"])) > 0.005: return False
+        if abs(float(str(a["stake"]).split(" ")[0]) - float(str(b["stake"]).split(" ")[0])) > 0.005: return False
         if abs((datetime.date.fromisoformat(a["date"]) - datetime.date.fromisoformat(b["date"])).days) > 3: return False
     except (ValueError, KeyError): return False
     wa, na = sig(a); wb, nb = sig(b)
@@ -71,7 +71,10 @@ def validate(i, b):
     if not r["event"] or not r["pick"]: die(f"bet {i}: event and pick are required")
     if not ODDS_RE.fullmatch(r["price"]): die(f"bet {i}: price must be American odds like +325")
     if r["boosted_price"] and not ODDS_RE.fullmatch(r["boosted_price"]): die(f"bet {i}: bad boosted_price")
-    if not MONEY_RE.fullmatch(r["stake"]) or not (0 < float(r["stake"]) <= 500): die(f"bet {i}: stake must be 0.01 to 500")
+    bonus = r["stake"].endswith(" (bonus)")      # bonus / free bets: the tracker writes the stake as "15.00 (bonus)" so no cash is deducted
+    base = r["stake"][:-8] if bonus else r["stake"]
+    if bonus and not re.search(r"bonus bet|free bet", r["market"], re.I): die(f"bet {i}: a bonus stake needs 'bonus bet $N' in the market")
+    if not MONEY_RE.fullmatch(base) or not (0 < float(base) <= 500): die(f"bet {i}: stake must be 0.01 to 500")
     if not MONEY_RE.fullmatch(r["to_win"]) or not (0 < float(r["to_win"]) <= 100000): die(f"bet {i}: to_win must be above 0")
     return r
 

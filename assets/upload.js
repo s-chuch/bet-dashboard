@@ -173,7 +173,7 @@
     'market (e.g. "SGP 3-leg (30% profit boost)", "Parlay 3-leg", "Moneyline", "Futures"), ' +
     'pick (ALL legs in short form joined by " + ", e.g. "Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts"; "Over 150.5 + Valkyries -3.5"; "NY Jets U26.5 team pts"; "Jakob Chychrun 2+ SOG + Darcy Kuemper 24+ saves"; "Phil Foden 1+ goals"; "Harry Kane 1+ SOT + Harry Kane 3+ shots"; "Jackson Chourio U1.5 TB"; "Junior Caminero 1+ hits"; "Christian McCaffrey anytime TD + Mike Evans 40+ rec yds"; "Cade Cunningham 8+ ast + Payton Pritchard 4+ reb"; "Draw"; use the team nickname for ML, spreads and team totals), ' +
     'price (American odds of the whole bet BEFORE any profit boost, like "+325"; if only the boosted odds are shown use those), boosted_price (American odds AFTER the boost if a boost is shown, else ""; if only payout is shown compute (payout - stake) / stake * 100), ' +
-    'stake (cash wagered, number), to_win (profit if it wins = total payout including boost minus stake, number), boost_pct (number or ""), warnings (array of short strings for anything unclear or cut off). ' +
+    'stake (cash wagered, number; if a BONUS / free bet was used the cash wagered is 0, so instead put the bonus amount here and write "(bonus bet $N)" in market, e.g. "Moneyline (bonus bet $15)"), to_win (profit if it wins = total payout including boost minus stake, number), boost_pct (number or ""), warnings (array of short strings for anything unclear or cut off). ' +
     'Ignore account balances, bonus-offer banners and ads. For a settled slip fill the same fields and the result.';
   // recent rows from the tracker, so the model copies the exact house style for picks / markets
   function styleExamples() {
@@ -279,6 +279,11 @@
     var num = function (x) { if (x === '' || x == null) return null; var n = parseFloat(String(x).replace(/[^0-9.]/g, '')); return isFinite(n) ? n : null; };
     var odds = function (x) { var m = String(x || '').replace(/[−–]/g, '-').match(/^\s*([+-]?)\s*(\d{2,5})\s*$/); return m ? (m[1] || '+') + m[2] : ''; };
     var kind = ['placed', 'open', 'settled', 'other'].indexOf(r.kind) >= 0 ? r.kind : 'placed';
+    var bonus = (String(r.market || '') + ' ' + (r.warnings || []).join(' ')).match(/bonus bet\D{0,6}\$?\s*([0-9]+(?:\.[0-9]{1,2})?)/i);
+    var mk = String(r.market || '');
+    if (bonus && !(num(r.stake) > 0)) { r.stake = bonus[1]; }
+    if (bonus && !/bonus bet|free bet/i.test(mk)) mk = (mk ? mk + ' ' : 'Bet ') + '(bonus bet $' + bonus[1] + ')';
+    r.market = mk;
     return { kind: kind, book: BOOKS.indexOf(r.book) >= 0 ? r.book : '', date: /^20\d\d-\d\d-\d\d$/.test(r.date || '') ? r.date : '', event: String(r.event || ''), start_text: String(r.start_et || ''), market: String(r.market || ''), pick: String(r.pick || ''),
       price: odds(r.price), boosted_price: odds(r.boosted_price), stake: num(r.stake), to_win: num(r.to_win), result: r.result || '', warnings: Array.isArray(r.warnings) ? r.warnings.map(String).slice(0, 5) : [] };
   }
@@ -381,7 +386,7 @@
     var on = S.drafts.filter(function (d) { return d.on; });
     if (!on.length || S.sending) return;
     var rows = on.map(function (d) {
-      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim(), to_win: d.to_win.trim(), force: d.dup ? '1' : '' };
+      return { date: d.date, book: d.book, event: d.event.trim(), start_et: d.start.trim(), market: d.market.trim(), pick: d.pick.trim(), price: d.price.trim(), boosted_price: d.boosted.trim(), stake: d.stake.trim() + (/bonus bet|free bet/i.test(d.market) ? ' (bonus)' : ''), to_win: d.to_win.trim(), force: d.dup ? '1' : '' };
     });
     var body = JSON.stringify({ ref: 'main', inputs: { bets: JSON.stringify(rows) } });
     if (body.length > 60000) { $('sendmsg').textContent = 'Too many bets for one send. Send fewer at a time.'; return; }
@@ -443,7 +448,7 @@
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
       var w = d.warnings.length ? '<ul class="warns">' + d.warnings.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '';
       var raw = '<details class="small muted" style="margin-top:8px"><summary>What the reader saw</summary><pre style="white-space:pre-wrap;font-size:11px;margin:6px 0 0">' + esc(d.text) + '</pre></details>';
-      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + (d.itemId && (d.kind === 'other' || d.warnings.length || problemsCount(d)) ? '<button class="btn sm pri" type="button" data-rr="' + d.itemId + '" style="margin-left:8px">Re-read</button>' : '') + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '" style="margin-left:8px">Remove</button></div>' + form + w + raw + '</div>';
+      return '<div class="draft' + (d.on ? '' : ' skip') + '" data-id="' + d.id + '"><div class="hd"><label><input type="checkbox" data-on="' + d.id + '"' + (d.on ? ' checked' : '') + (d.kind === 'placed' || d.kind === 'open' ? '' : ' disabled') + '> ' + esc(d.file) + '</label>' + tag + '<div class="btns">' + (d.itemId && (d.kind === 'other' || d.warnings.length || problemsCount(d)) ? '<button class="btn sm pri" type="button" data-rr="' + d.itemId + '">Re-read</button>' : '') + '<button class="btn sm' + (d.dup ? ' pri' : '') + '" type="button" data-rmd="' + d.id + '">Remove</button></div></div>' + form + w + raw + '</div>';
     }).join('');
     if (!keepMsg) { var m = $('sendmsg'); if (m && !m.dataset.keep) m.textContent = ''; }
     updateSend();
