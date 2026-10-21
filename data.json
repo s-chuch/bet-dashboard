@@ -27,8 +27,8 @@
   },
   {
    "book": "theScore",
-   "balance": 30.95,
-   "updated": "2026-10-18 20:25"
+   "balance": 30.75,
+   "updated": "2026-10-20 20:37"
   },
   {
    "book": "Hard Rock",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 657.95,
+ "total": 657.75,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NFL",
@@ -3089,7 +3089,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "MLB",
@@ -3376,7 +3376,7 @@
      "home": 0.599,
      "away": 0.401,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "MLB",
@@ -3454,10 +3454,10 @@
     "snapshot": {
      "date": "2026-10-20T23:00Z",
      "period": 2,
-     "clock": 191.0,
+     "clock": 100.0,
      "state": "in",
      "completed": false,
-     "detail": "3:11 - 2nd",
+     "detail": "1:40 - 2nd",
      "teams": [
       {
        "id": "23",
@@ -3583,10 +3583,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.545,
-     "away": 0.455,
-     "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "home": 0.5729,
+     "away": 0.4271,
+     "spread": 0.02,
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NHL",
@@ -4007,7 +4007,7 @@
      "home": 0.4901,
      "away": 0.5099,
      "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NBA",
@@ -4068,10 +4068,10 @@
     "snapshot": {
      "date": "2026-10-20T23:00Z",
      "period": 2,
-     "clock": 453.0,
+     "clock": 369.0,
      "state": "in",
      "completed": false,
-     "detail": "7:33 - 2nd",
+     "detail": "6:09 - 2nd",
      "teams": [
       {
        "id": "29",
@@ -4230,10 +4230,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.035,
-     "away": 0.965,
-     "spread": 0.01,
-     "t": "2026-10-21T00:33Z"
+     "home": 0.0493,
+     "away": 0.9507,
+     "spread": 0.02,
+     "t": "2026-10-21T00:37Z"
     }
    },
    "sport": "NHL",
@@ -4333,6 +4333,81 @@
    "payout": 0.56,
    "payout_est": false,
    "start_ts": "2026-10-21T19:00Z"
+  },
+  {
+   "bet_id": "c4caca25",
+   "date": "2026-10-21",
+   "book": "theScore",
+   "event": "Lille v Galatasaray",
+   "market": "SGP 3-leg (30% Profit Boost for Soccer)",
+   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
+   "start": "Wed Oct 21 12:45 PM ET",
+   "price": "+360",
+   "boosted_price": "+470",
+   "stake": 0.2,
+   "stake_note": "",
+   "to_win": 0.94,
+   "ev_pct": "",
+   "multi": true,
+   "legs": [
+    {
+     "type": "unknown",
+     "text": "Under 3.5 Total Goals"
+    },
+    {
+     "type": "prop",
+     "player": "Yes Both Teams",
+     "stat": "goal",
+     "op": "min",
+     "min": 1,
+     "text": "Yes Both Teams To Score"
+    },
+    {
+     "type": "unknown",
+     "text": "Under 10.5 Total Corners"
+    }
+   ],
+   "match": {
+    "path": "soccer/uefa.champions",
+    "date": "20261021",
+    "groups": null,
+    "id": "401915396",
+    "snapshot": {
+     "date": "2026-10-21T16:45Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "166",
+       "name": "Lille",
+       "abbr": "LILL",
+       "short": "Lille",
+       "nick": "Lille",
+       "location": "Lille",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "432",
+       "name": "Galatasaray",
+       "abbr": "GAL",
+       "short": "Galatasaray",
+       "nick": "Galatasaray",
+       "location": "Galatasaray",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.2,
+   "payout": 1.14,
+   "payout_est": false,
+   "start_ts": "2026-10-21T16:45Z"
   }
  ],
  "settled_recent": [
@@ -5459,13 +5534,13 @@
  ],
  "pnl_total": 95.87,
  "unsettled": {
-  "n": 20,
-  "cash_stake": 15.3,
-  "max_payout": 793.35,
+  "n": 21,
+  "cash_stake": 15.5,
+  "max_payout": 794.49,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.3,
+ "open_stake": 15.5,
  "recs": {
   "stats": {
    "overall": {
@@ -8850,14 +8925,15 @@
   ],
   "last_change_at": "2026-10-20 17:37 ET"
  },
- "open_live_n": 19,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 3.0,
   "DraftKings": 0.3,
   "FanDuel": 2.1,
-  "PointsBet": 144.25
+  "PointsBet": 144.25,
+  "theScore": 0.2
  },
- "hash": "841f74d22d90880b019ecf7e0296253ad61e1a36",
- "generated_at": "2026-10-20T20:33:14-04:00"
+ "hash": "4fd8221a5d4f64a28d9378393d7b8d054fc846d7",
+ "generated_at": "2026-10-20T20:37:23-04:00"
 }

@@ -131,3 +131,4 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-20,PointsBet,Boston Celtics @ Detroit Pistons,Tue Oct 20 03:10 PM ET,SGP 3-leg (100% NBA profit boost),Cade Cunningham 8+ ast + Jayson Tatum 4+ ast + Payton Pritchard 4+ ast,+120,+240,0.50,1.20,,,lost,-0.50,f5365e03,2026-10-20 17:36,auto
 2026-10-20,bet365,Bayern Munich v Arsenal,Wed Oct 21 03:00 PM ET,SGP 3-leg (50% profit boost),Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots,+120,+180,0.20,0.36,,,open,,11be1d03,,
 2026-10-20,bet365,Boston Celtics @ Detroit Pistons,,SGP 3-leg (100% profit boost),Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds,+105,+210,0.2,0.42,,,lost,-0.20,3829ebcd,2026-10-20 17:37,auto
+2026-10-21,theScore,Lille v Galatasaray,Wed Oct 21 12:45 PM ET,SGP 3-leg (30% Profit Boost for Soccer),Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners,+360,+470,0.2,0.94,,,open,,c4caca25,,
