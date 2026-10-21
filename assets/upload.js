@@ -315,7 +315,10 @@
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
       : ocrRead(it, 'Basic reader (no AI key). Add a free key above for full automatic reading.');
     job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
-      .then(function () { S.busy = false; renderQueue(); renderDrafts(); runQueue(); });
+      .then(function () {
+        S.busy = false; renderQueue(); renderDrafts(); runQueue();
+        if (!S.items.some(function (x) { return x.state === 'wait' || x.state === 'read'; })) { var m = $('sendmsg'); if (m && /^Picked up/.test(m.textContent)) { delete m.dataset.keep; m.textContent = ''; updateSend(); } }
+      });
   }
 
   /* ---------- parse -> draft ---------- */
@@ -427,6 +430,7 @@
 
   /* ---------- rendering ---------- */
   function renderQueue() {
+    saveSoon();
     $('queue').innerHTML = S.items.map(function (it) {
       var st = it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ('Reading… ' + (it.pct || 0) + '%') : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
       return '<div class="qi"><img alt="" src="' + esc(it.url) + '"><div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">Re-read</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
@@ -440,6 +444,7 @@
     return '<label class="fld' + bad + ' ' + (cls || '') + '"><span>' + label + '</span><input type="text" data-d="' + d.id + '" data-k="' + k + '" value="' + esc(d[k]) + '" autocomplete="off" autocapitalize="off" spellcheck="false"' + (type === 'num' ? ' inputmode="decimal"' : '') + '></label>';
   }
   function renderDrafts(keepMsg) {
+    saveSoon();
     S.drafts.forEach(function (d) { if (!d._seen) { d._seen = 1; markDup(d); } });
     $('review').hidden = !S.drafts.length;
     $('rows').innerHTML = S.drafts.map(function (d) {
@@ -486,13 +491,13 @@
     var t = e.target, id = t.getAttribute('data-d'), k = t.getAttribute('data-k'); if (!id || !k) return;
     var d = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (!d) return;
     if (!S.sending) delete $('sendmsg').dataset.keep;
-    d[k] = t.value; markDup(d);
+    d[k] = t.value; markDup(d); saveSoon();
     var fl = t.closest('.fld'); if (fl) fl.classList.toggle('bad', !!problems(d)[k]);
     updateSend();
   });
   $('rows').addEventListener('change', function (e) {
     var t = e.target, on = t.getAttribute('data-on');
-    if (on) { var d = S.drafts.filter(function (x) { return String(x.id) === on; })[0]; if (d) { d.on = t.checked; var c = t.closest('.draft'); if (c) c.classList.toggle('skip', !d.on); updateSend(); } return; }
+    if (on) { var d = S.drafts.filter(function (x) { return String(x.id) === on; })[0]; if (d) { d.on = t.checked; saveSoon(); var c = t.closest('.draft'); if (c) c.classList.toggle('skip', !d.on); updateSend(); } return; }
     if (t.getAttribute('data-k') === 'book') { var id = t.getAttribute('data-d'), dd = S.drafts.filter(function (x) { return String(x.id) === id; })[0]; if (dd) { dd.book = t.value; markDup(dd); renderDrafts(true); } }
   });
   $('rows').addEventListener('click', function (e) {
@@ -506,5 +511,43 @@
   });
   $('send').addEventListener('click', send);
 
-  renderGh(); renderAi(); loadExisting(); updateSend();
+  /* ---------- keep the work when you leave the page (IndexedDB, on this phone only) ---------- */
+  var DB = null, saveT = 0;
+  function dbOpen() {
+    return new Promise(function (res) {
+      try { var rq = indexedDB.open('bt-upload', 1); rq.onupgradeneeded = function () { rq.result.createObjectStore('kv'); }; rq.onsuccess = function () { DB = rq.result; res(DB); }; rq.onerror = function () { res(null); }; } catch (e) { res(null); }
+    });
+  }
+  function dbGet(k) { return new Promise(function (res) { if (!DB) return res(null); try { var r = DB.transaction('kv').objectStore('kv').get(k); r.onsuccess = function () { res(r.result || null); }; r.onerror = function () { res(null); }; } catch (e) { res(null); } }); }
+  function saveSoon() {
+    if (!DB) return; clearTimeout(saveT);
+    saveT = setTimeout(function () {
+      try {
+        var tx = DB.transaction('kv', 'readwrite'), st = tx.objectStore('kv');
+        if (!S.items.length && !S.drafts.length) { st.delete('state'); return; }
+        st.put({
+          nextId: S.nextId,
+          items: S.items.map(function (it) { return { id: it.id, name: it.name, file: it.file, state: it.state === 'err' || it.state === 'done' ? it.state : 'wait', msg: it.state === 'err' ? it.msg : '' }; }),
+          drafts: S.drafts.map(function (d) { var o = {}; Object.keys(d).forEach(function (k) { if (k !== '_seen') o[k] = d[k]; }); return o; })
+        }, 'state');
+      } catch (e) {}
+    }, 250);
+  }
+  function restore() {
+    return dbOpen().then(function () { return dbGet('state'); }).then(function (st) {
+      if (!st || !(st.items || []).length && !(st.drafts || []).length) return;
+      S.nextId = Math.max(S.nextId, st.nextId || 1);
+      S.items = (st.items || []).filter(function (it) { return it.file; }).map(function (it) { return { id: it.id, file: it.file, name: it.name, url: URL.createObjectURL(it.file), state: it.state, msg: it.msg || '', pct: it.state === 'done' ? 100 : 0 }; });
+      S.drafts = (st.drafts || []);
+      var n = S.items.filter(function (x) { return x.state === 'wait'; }).length;
+      var m = $('sendmsg'); if (m) { m.dataset.keep = '1'; m.textContent = 'Picked up where you left off' + (n ? ': reading ' + n + ' more picture' + (n === 1 ? '' : 's') + '…' : '.'); }
+      renderQueue(); renderDrafts(true); runQueue();
+    });
+  }
+  window.addEventListener('beforeunload', function (e) {
+    if (S.items.some(function (x) { return x.state === 'read' || x.state === 'wait'; })) { e.preventDefault(); e.returnValue = ''; }
+  });
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') runQueue(); });
+
+  renderGh(); renderAi(); loadExisting(); updateSend(); restore();
 })();
