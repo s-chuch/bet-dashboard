@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0d12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+<title>Bet Finder · Bet Tracker</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/finder.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html">Upload</a><a href="finder.html" aria-current="page">Bet Finder</a></div></div></nav>
+<main class="wrap">
+  <h1 class="page-title">Bet Finder</h1>
+  <p class="page-sub">+EV scan: FanDuel, DraftKings, bet365 and theScore Bet priced against Pinnacle's no-vig line (same market, exact same line). BET at +2% EV or more. Stake is 0.5% of that book's balance. Games you already have a bet on are left out.</p>
+  <section class="panel" id="scanbar">
+    <div class="sb-row"><div><div class="lbl">Last scan</div><div id="scan-time" class="sb-time">…</div></div>
+    <button class="btn pri" id="scan-now" type="button">Scan now</button></div>
+    <div id="scan-status" class="muted small"></div>
+    <div id="tok" class="small"></div>
+  </section>
+  <p class="warn small">Prices change fast. Check the price in the app before placing. Hard Rock, Caesars and PointsBet aren't in the free odds feed, so they aren't scanned.</p>
+  <h2 class="sec-title">Bets (+2% EV or more)</h2>
+  <div id="bets"></div>
+  <h2 class="sec-title">Near misses (0 to 1.9%, skip)</h2>
+  <div id="near"></div>
+  <h2 class="sec-title">Scan details</h2>
+  <div id="details" class="panel small muted"></div>
+</main>
+<script src="assets/finder.js"></script>
+</body>
+</html>
