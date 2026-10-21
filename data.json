@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.6818,
      "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NFL",
@@ -3015,7 +3015,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "MLB",
@@ -4711,7 +4711,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NCAAF",
@@ -5599,7 +5599,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NFL",
@@ -6042,7 +6042,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NBA",
@@ -6584,7 +6584,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NBA",
@@ -6980,7 +6980,7 @@
      "home": 0.5404,
      "away": 0.4596,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NBA",
@@ -7177,7 +7177,7 @@
      "home": 0.505,
      "away": 0.495,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NHL",
@@ -7605,7 +7605,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T15:16Z"
+     "t": "2026-10-21T15:17Z"
     }
    },
    "sport": "NBA",
@@ -8819,11 +8819,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 115,
+    "n": 118,
     "w": 35,
     "l": 47,
     "p": 0,
-    "pending": 33,
+    "pending": 36,
     "win_pct": 42.7,
     "units": 20.54,
     "roi_pct": 28.5,
@@ -8880,6 +8880,21 @@
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
+     "n": 3,
+     "w": 0,
+     "l": 0,
+     "p": 0,
+     "pending": 3,
+     "win_pct": null,
+     "units": 0,
+     "roi_pct": null,
+     "roi_n": 0,
+     "exp_roi_pct": null,
+     "exp_wins": null,
+     "exp_wins_n": 0,
+     "wins_with_fair": 0
+    },
+    "bonus bet $20": {
      "n": 3,
      "w": 0,
      "l": 0,
@@ -9002,11 +9017,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 20,
+     "n": 21,
      "w": 5,
      "l": 10,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 33.3,
      "units": -1.38,
      "roi_pct": -11.5,
@@ -9062,11 +9077,11 @@
      "wins_with_fair": 5
     },
     "Soccer": {
-     "n": 30,
+     "n": 32,
      "w": 8,
      "l": 9,
      "p": 0,
-     "pending": 13,
+     "pending": 15,
      "win_pct": 47.1,
      "units": 1.17,
      "roi_pct": 9.8,
@@ -9139,11 +9154,11 @@
      "wins_with_fair": 25
     },
     "no": {
-     "n": 42,
+     "n": 45,
      "w": 10,
      "l": 9,
      "p": 0,
-     "pending": 23,
+     "pending": 26,
      "win_pct": 52.6,
      "units": -0.24,
      "roi_pct": -1.7,
@@ -9172,6 +9187,75 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "5b59ca27",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:17",
+    "sport": "Soccer",
+    "event": "Feyenoord @ Real Betis",
+    "market": "Match Result",
+    "selection": "Feyenoord",
+    "book": "Hard Rock",
+    "rec_price": "+388",
+    "eff_price": "+388",
+    "fair_pct": "+388",
+    "ev_pct": "0.795",
+    "stake": "20",
+    "promo": "bonus bet $20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair; ev = bonus value per $1",
+    "units": null
+   },
+   {
+    "rec_id": "7464cdba",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:17",
+    "sport": "NBA",
+    "event": "Dallas Mavericks @ Houston Rockets",
+    "market": "Moneyline",
+    "selection": "Dallas Mavericks",
+    "book": "Hard Rock",
+    "rec_price": "+331",
+    "eff_price": "+331",
+    "fair_pct": "+331",
+    "ev_pct": "0.768",
+    "stake": "20",
+    "promo": "bonus bet $20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair; ev = bonus value per $1",
+    "units": null
+   },
+   {
+    "rec_id": "feb5aa1c",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:17",
+    "sport": "Soccer",
+    "event": "Manchester United @ Como",
+    "market": "Match Result",
+    "selection": "Draw",
+    "book": "Hard Rock",
+    "rec_price": "+289",
+    "eff_price": "+289",
+    "fair_pct": "+289",
+    "ev_pct": "0.743",
+    "stake": "20",
+    "promo": "bonus bet $20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair; ev = bonus value per $1",
+    "units": null
+   },
    {
     "rec_id": "9bac8abf",
     "rec_date": "2026-10-21",
@@ -12354,6 +12438,6 @@
   "PointsBet": 158.75,
   "theScore": 0.2
  },
- "hash": "16cc5558b7ecedc494b65ad0188a73e59efbd4f1",
- "generated_at": "2026-10-21T11:16:40-04:00"
+ "hash": "16bae7eebac335f244047f73f7d5a4f9745849d9",
+ "generated_at": "2026-10-21T11:17:51-04:00"
 }
