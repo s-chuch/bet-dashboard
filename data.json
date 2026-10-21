@@ -3453,10 +3453,10 @@
     "snapshot": {
      "date": "2026-10-21T16:45Z",
      "period": 1,
-     "clock": 720.0,
+     "clock": 780.0,
      "state": "in",
      "completed": false,
-     "detail": "12'",
+     "detail": "13'",
      "teams": [
       {
        "id": "166",
@@ -4711,7 +4711,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-21T16:58Z"
+     "t": "2026-10-21T16:59Z"
     }
    },
    "sport": "NCAAF",
@@ -6187,10 +6187,7 @@
      "stat": "pts",
      "op": "min",
      "min": 20,
-     "text": "Tyler Herro 20+ pts",
-     "pteam": "MIL",
-     "pname": "Tyler Herro",
-     "pid": "4395725"
+     "text": "Tyler Herro 20+ pts"
     }
    ],
    "match": {
@@ -7208,10 +7205,7 @@
      "stat": "threes",
      "op": "min",
      "min": 2,
-     "text": "AJ Green 2+ threes",
-     "pteam": "MIL",
-     "pname": "AJ Green",
-     "pid": "4397475"
+     "text": "AJ Green 2+ threes"
     }
    ],
    "match": {
@@ -12553,6 +12547,6 @@
   "PointsBet": 158.75,
   "theScore": 0.2
  },
- "hash": "efa6d40239f4f1e510e387c9fcdf899385c199d5",
- "generated_at": "2026-10-21T12:58:07-04:00"
+ "hash": "b772887ff7eef3201474e9a6382f0b798bb88280",
+ "generated_at": "2026-10-21T12:59:18-04:00"
 }
