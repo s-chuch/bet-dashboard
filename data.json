@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "NFL",
@@ -3089,7 +3089,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "MLB",
@@ -3376,7 +3376,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "MLB",
@@ -3445,10 +3445,10 @@
     "snapshot": {
      "date": "2026-10-21T01:50Z",
      "period": 2,
-     "clock": 561.0,
+     "clock": 312.0,
      "state": "in",
      "completed": false,
-     "detail": "9:21 - 2nd",
+     "detail": "5:12 - 2nd",
      "teams": [
       {
        "id": "24",
@@ -3458,7 +3458,7 @@
        "nick": "Spurs",
        "location": "San Antonio",
        "home": true,
-       "score": "29"
+       "score": "33"
       },
       {
        "id": "25",
@@ -3468,7 +3468,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": false,
-       "score": "37"
+       "score": "49"
       }
      ]
     },
@@ -3794,10 +3794,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.215,
+     "away": 0.785,
      "spread": 0.01,
-     "t": "2026-10-21T02:31Z"
+     "t": "2026-10-21T02:41Z"
     }
    },
    "sport": "NBA",
@@ -8538,6 +8538,6 @@
   "PointsBet": 143.75,
   "theScore": 0.2
  },
- "hash": "a36abb0ea92cd9deb89ccd3038e587b211a64746",
- "generated_at": "2026-10-20T22:31:45-04:00"
+ "hash": "448fa0972531032970f8cfacb1e62b77b592dee2",
+ "generated_at": "2026-10-20T22:41:27-04:00"
 }
