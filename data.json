@@ -5667,7 +5667,10 @@
      "op": "min",
      "min": 30,
      "text": "Scottie Barnes 30+ pts+reb+ast",
-     "stat_raw": "pts+reb+ast"
+     "stat_raw": "pts+reb+ast",
+     "pteam": "TOR",
+     "pname": "Scottie Barnes",
+     "pid": "4433134"
     }
    ],
    "match": {
@@ -16843,6 +16846,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "96f173dc3427a0d3dda0deace0deb0c3f113bd65",
- "generated_at": "2026-10-21T17:00:21-04:00"
+ "hash": "fa933aaffcd7734fa10d460450a634ca767451af",
+ "generated_at": "2026-10-21T17:00:39-04:00"
 }
