@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.6818,
      "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NFL",
@@ -3015,7 +3015,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "MLB",
@@ -4711,7 +4711,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NCAAF",
@@ -5599,7 +5599,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NFL",
@@ -6042,7 +6042,7 @@
      "home": 0.785,
      "away": 0.215,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NBA",
@@ -6584,7 +6584,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NBA",
@@ -6980,7 +6980,7 @@
      "home": 0.5404,
      "away": 0.4596,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NBA",
@@ -7177,7 +7177,7 @@
      "home": 0.505,
      "away": 0.495,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NHL",
@@ -7605,7 +7605,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T14:38Z"
+     "t": "2026-10-21T15:14Z"
     }
    },
    "sport": "NBA",
@@ -8819,11 +8819,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 110,
+    "n": 111,
     "w": 35,
     "l": 47,
     "p": 0,
-    "pending": 28,
+    "pending": 29,
     "win_pct": 42.7,
     "units": 20.54,
     "roi_pct": 28.5,
@@ -8834,6 +8834,21 @@
     "wins_with_fair": 35
    },
    "by_promo": {
+    "Bet Reset $5": {
+     "n": 1,
+     "w": 0,
+     "l": 0,
+     "p": 0,
+     "pending": 1,
+     "win_pct": null,
+     "units": 0,
+     "roi_pct": null,
+     "roi_n": 0,
+     "exp_roi_pct": null,
+     "exp_wins": null,
+     "exp_wins_n": 0,
+     "wins_with_fair": 0
+    },
     "No Sweat": {
      "n": 7,
      "w": 1,
@@ -8972,11 +8987,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 15,
+     "n": 16,
      "w": 5,
      "l": 10,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 33.3,
      "units": -1.38,
      "roi_pct": -11.5,
@@ -9109,11 +9124,11 @@
      "wins_with_fair": 25
     },
     "no": {
-     "n": 37,
+     "n": 38,
      "w": 10,
      "l": 9,
      "p": 0,
-     "pending": 18,
+     "pending": 19,
      "win_pct": 52.6,
      "units": -0.24,
      "roi_pct": -1.7,
@@ -9142,6 +9157,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "0f959bb5",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:14",
+    "sport": "NBA",
+    "event": "Indiana Pacers @ New Orleans Pelicans",
+    "market": "SGP 4-leg",
+    "selection": "Pelicans ML + Over 238.5 + Zion Williamson 15+ pts + Trey Murphy III 10+ pts",
+    "book": "theScore",
+    "rec_price": "400",
+    "eff_price": "400",
+    "fair_pct": "16.7",
+    "ev_pct": "0.50",
+    "stake": "5",
+    "promo": "Bet Reset $5",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "min +400; EV incl 0.7x refund; props fair estimated (no Pinnacle props in feed)",
+    "units": null
+   },
    {
     "rec_id": "675e4193",
     "rec_date": "2026-10-20",
@@ -12209,6 +12247,6 @@
   "PointsBet": 158.75,
   "theScore": 0.2
  },
- "hash": "dcb45595df2c782fd69065d655f8b6c0582195cc",
- "generated_at": "2026-10-21T10:38:24-04:00"
+ "hash": "f5d2979011f6efac10ca06aa889146e1a21f341e",
+ "generated_at": "2026-10-21T11:14:45-04:00"
 }
