@@ -600,10 +600,15 @@ function legP(b,L,st,x){if(st==="WON")return 1;if(st==="LOST")return 0;const m=m
   x=x||{L,g,s:st};
   if(L.type==="prop"||L.type==="teamtotal"||st==="?")return approxLeg(b,L,x);
   const src=legSources(b,L).filter(y=>y.k!=="pre");return src.length?src[0].v:approxLeg(b,L,x)}
+// ESPN keeps a game "pre" until the real puck drop / tip-off (often 5-20 min after the listed time). A game whose listed
+// start has passed (up to 90 min) and is not final counts as started, so its bets move to Live Now instead of sitting in Upcoming.
+const STARTING_MS=90*60e3;
+function gStarting(g){if(!g||g.state!=="pre"||g.completed||!g.date)return false;const t=Date.parse(g.date);return isFinite(t)&&Date.now()>=t&&Date.now()-t<STARTING_MS}
+function gLive(g){return!!g&&(g.state==="in"||gStarting(g))}
 function betLive(b,status,legStats){
   const gs=legStats.map(x=>x.g).filter(Boolean);const allFinal=gs.length&&gs.length===b.legs.length&&gs.every(g=>g.completed);
   if(status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal)||allFinal)return{final:true};
-  if(!gs.some(g=>g.state==="in"))return{upcoming:true};
+  if(!gs.some(g=>g.state==="in"))return gs.some(gStarting)?{upcoming:true,starting:true}:{upcoming:true};
   let p;if(b.multi){p=1;const used=new Set();
     // Over a + Under b on the same game total = one band (a,b): P = P(over a) + P(under b) - 1, not the product
     legStats.forEach((x,i)=>{if(x.L.type!=="total"||x.L.side!=="over"||used.has(i))return;const m=matchOfLeg(b,x.L);
@@ -614,6 +619,7 @@ function betLive(b,status,legStats){
   return{p,approx:b.multi,sub:b.multi?null:SCORE_SUB[legStats[0]&&legStats[0].s]||null}}
 function pillState(b,status,legStats){const v=betLive(b,status,legStats);
   if(v.final)return{cls:status,txt:status,sub:""};
+  if(v.starting)return{cls:"LIVE",txt:"STARTING",sub:"start time passed · waiting for ESPN"};
   if(v.upcoming)return{cls:"NOT_STARTED",txt:"UPCOMING",sub:""};
   const hitTxt=b.multi?legsHit(legStats):"";
   if(v.p==null)return{cls:"LIVE",txt:"LIVE",sub:v.sub||hitTxt};
@@ -965,7 +971,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     if(graded&&b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
     const ts0=b.start_ts?Date.parse(b.start_ts):NaN,ts=isFinite(ts0)?ts0:(isFinite(t)?t:null);const BK={book:b.book,stake:(b.cash_stake!=null?b.cash_stake:(b.stake||0)),ts};const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
     if(status==="LOST"){toFinal();lostCards.push({html,...BK});lostPending+=b.stake||0}
-    else if(gs.some(g=>g.state==="in"))liveCards.push({html,...BK});
+    else if(gs.some(gLive))liveCards.push({html,...BK});
     else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){toFinal();wonCards.push({html,...BK});if(status==="WON")wonPending+=b.to_win||0}
     else upCards.push({html,t,...BK})});
   // per-book "(wagered)" = cash stake of ALL unsettled bets of that book (bonus bets 0); Total equals the At-risk tile
