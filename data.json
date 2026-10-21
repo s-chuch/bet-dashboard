@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.6818,
      "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NFL",
@@ -3015,7 +3015,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "MLB",
@@ -4711,7 +4711,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NCAAF",
@@ -5599,7 +5599,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NFL",
@@ -6039,10 +6039,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.785,
-     "away": 0.215,
+     "home": 0.795,
+     "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NBA",
@@ -6584,7 +6584,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NBA",
@@ -6980,7 +6980,7 @@
      "home": 0.5404,
      "away": 0.4596,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NBA",
@@ -7177,7 +7177,7 @@
      "home": 0.505,
      "away": 0.495,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NHL",
@@ -7605,7 +7605,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-21T15:14Z"
+     "t": "2026-10-21T15:15Z"
     }
    },
    "sport": "NBA",
@@ -8819,11 +8819,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 111,
+    "n": 114,
     "w": 35,
     "l": 47,
     "p": 0,
-    "pending": 29,
+    "pending": 32,
     "win_pct": 42.7,
     "units": 20.54,
     "roi_pct": 28.5,
@@ -8939,6 +8939,21 @@
      "exp_wins_n": 15,
      "wins_with_fair": 8
     },
+    "qualifying bet for 5x$20": {
+     "n": 3,
+     "w": 0,
+     "l": 0,
+     "p": 0,
+     "pending": 3,
+     "win_pct": null,
+     "units": 0,
+     "roi_pct": null,
+     "roi_n": 0,
+     "exp_roi_pct": null,
+     "exp_wins": null,
+     "exp_wins_n": 0,
+     "wins_with_fair": 0
+    },
     "rollover": {
      "n": 43,
      "w": 10,
@@ -8987,11 +9002,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 16,
+     "n": 19,
      "w": 5,
      "l": 10,
      "p": 0,
-     "pending": 1,
+     "pending": 4,
      "win_pct": 33.3,
      "units": -1.38,
      "roi_pct": -11.5,
@@ -9124,11 +9139,11 @@
      "wins_with_fair": 25
     },
     "no": {
-     "n": 38,
+     "n": 41,
      "w": 10,
      "l": 9,
      "p": 0,
-     "pending": 19,
+     "pending": 22,
      "win_pct": 52.6,
      "units": -0.24,
      "roi_pct": -1.7,
@@ -9157,6 +9172,75 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "5667a11f",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:15",
+    "sport": "NBA",
+    "event": "Indiana Pacers @ New Orleans Pelicans",
+    "market": "Moneyline",
+    "selection": "Indiana Pacers",
+    "book": "Hard Rock",
+    "rec_price": "-137",
+    "eff_price": "-137",
+    "fair_pct": "-137",
+    "ev_pct": "0",
+    "stake": "5",
+    "promo": "qualifying bet for 5x$20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair -137 (57.8%)",
+    "units": null
+   },
+   {
+    "rec_id": "9b70f118",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:15",
+    "sport": "NBA",
+    "event": "Minnesota Timberwolves @ Miami Heat",
+    "market": "Moneyline",
+    "selection": "Miami Heat",
+    "book": "Hard Rock",
+    "rec_price": "-107",
+    "eff_price": "-107",
+    "fair_pct": "-107",
+    "ev_pct": "0",
+    "stake": "5",
+    "promo": "qualifying bet for 5x$20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair -107 (51.7%)",
+    "units": null
+   },
+   {
+    "rec_id": "f8c7a49b",
+    "rec_date": "2026-10-21",
+    "rec_time_et": "11:15",
+    "sport": "NBA",
+    "event": "Charlotte Hornets @ Brooklyn Nets",
+    "market": "Moneyline",
+    "selection": "Charlotte Hornets",
+    "book": "Hard Rock",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "-105",
+    "ev_pct": "0",
+    "stake": "5",
+    "promo": "qualifying bet for 5x$20",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "HR price not in feed; yes-at = Pinnacle fair -105 (51.2%)",
+    "units": null
+   },
    {
     "rec_id": "0f959bb5",
     "rec_date": "2026-10-21",
@@ -12247,6 +12331,6 @@
   "PointsBet": 158.75,
   "theScore": 0.2
  },
- "hash": "f5d2979011f6efac10ca06aa889146e1a21f341e",
- "generated_at": "2026-10-21T11:14:45-04:00"
+ "hash": "ee4dec81d4cdc5c565a21d9df3b538f89bf6a44d",
+ "generated_at": "2026-10-21T11:15:56-04:00"
 }
