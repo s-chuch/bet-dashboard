@@ -1,15 +1,4 @@
 date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,ev_pct,result,pnl,bet_id,settled_at,settled_by
-2026-10-15,DraftKings,Ohio State @ Indiana,Sat Oct 17 12:00 PM ET,Moneyline (50% profit boost),Indiana Hoosiers,+150,+225,0.30,0.67,38.26,24.3,lost,-0.30,a0cc50d3,pre-ledger,
-2026-10-15,DraftKings,Notre Dame @ BYU,Sat Oct 17 07:30 PM ET,Moneyline (50% profit boost),BYU Cougars,+310,+465,0.30,1.39,22.03,24.5,won,1.39,76ac7eed,2026-10-18 16:55,
-2026-10-15,PointsBet,Georgia Southern @ Old Dominion,Thu Oct 15 07:30 PM ET,Spread (WELCOMEDM rollover),Old Dominion +3.5,-108,,25.00,23.15,50.23,-3.3,lost,-25.00,3776ddb3,pre-ledger,
-2026-10-15,PointsBet,East Carolina @ UAB,Thu Oct 15 07:30 PM ET,Total (WELCOMEDM rollover),Under 47.5,-112,,25.00,22.32,50.45,-4.5,won,22.32,32720087,pre-ledger,
-2026-10-15,PointsBet,Colorado State @ Texas State,Thu Oct 15 08:00 PM ET,Total (WELCOMEDM rollover),Under 70.5,-112,,25.00,22.32,50.65,-4.1,lost,-25.00,0a5b7f6d,pre-ledger,
-2026-10-15,PointsBet,Buffalo Sabres @ Toronto Maple Leafs,Thu Oct 15 07:00 PM ET,Moneyline (WELCOMEDM rollover),Toronto Maple Leafs,-125,,25.00,20.00,51.85,,lost,-25.00,f59fa569,pre-ledger,
-2026-10-15,PointsBet,New York Islanders @ Ottawa Senators,Thu Oct 15 07:00 PM ET,Total (WELCOMEDM rollover),Under 5.5,-110,,25.00,22.73,52.16,-0.4,won,22.73,14e0e374,pre-ledger,
-2026-10-15,FanDuel,Seattle Seahawks @ Denver Broncos,Thu Oct 15 08:15 PM ET,SGP 3-leg (50% profit boost),SEA -2.5 + Over 40.5 + Darnold 1+ pass TD,+237,+356,0.79,2.81,22.6,1.5,lost,-0.79,8e690f08,pre-ledger,
-2026-10-15,Caesars,Milwaukee Brewers @ Los Angeles Dodgers,Thu Oct 15 08:00 PM ET,ML (100% profit boost),Milwaukee Brewers,+134,+268,25.00,67.00,41.6,,won,67.00,2aca11f1,pre-ledger,
-2026-10-15,Caesars,New York Rangers @ New Jersey Devils,Thu Oct 15 07:00 PM ET,ML (100% profit boost),New York Rangers,+112,+224,25.00,56.00,44.9,,lost,-25.00,a9980c11,pre-ledger,
-2026-10-15,theScore,Colorado State Rams @ Texas State Bobcats,Thu Oct 15 08:00 PM ET,ML,Colorado State Rams,+550,,0.16,0.88,16.49,7.18,lost,-0.16,c07c71a0,pre-ledger,
 2026-10-16,theScore,Kent State @ South Florida,Sat Oct 17 07:00 PM ET,Moneyline,Kent State ML,+1000,,0.20,2.00,11.24,23.6,lost,-0.20,d764a01e,2026-10-18 16:55,
 2026-10-16,FanDuel,Kent State @ South Florida,Sat Oct 17 07:00 PM ET,Moneyline,Kent State ML,+980,,0.80,7.84,11.24,21.35,lost,-0.80,14bfbcf9,2026-10-18 16:55,
 2026-10-16,PointsBet,Auburn @ Georgia,Sat Oct 17 03:30 PM ET,Moneyline,Auburn ML,+800,,1.00,8.00,11.59,4.3,won,8.00,97924b77,2026-10-17 19:27,
@@ -123,7 +112,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-20,Caesars,Tampa Bay Rays @ Milwaukee Brewers,Fri Oct 23 08:00 PM ET,SGP 3-leg (25% profit boost),Brewers ML + Junior Caminero 1+ hits + William Contreras U1.5 TB,+355,+444,0.50,2.22,,,open,,c4cc09ea,,
 2026-10-20,Caesars,Los Angeles Kings @ Washington Capitals,Tue Oct 20 07:08 PM ET,SGP 4-leg (30% profit boost),Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves,+400,+520,0.50,2.60,,,lost,-0.50,9d91f35f,2026-10-20 21:37,auto
 2026-10-20,Caesars,Man City vs AEK Athens,Tue Oct 20 03:00 PM ET,SGP 2-leg (25% profit boost),Phil Foden 1+ goals + Rayan Cherki 1+ goals,+525,+658,0.50,3.29,,,won,3.29,5df01cb0,2026-10-20 16:51,auto
-2026-10-20,DraftKings,Oklahoma City Thunder @ San Antonio Spurs,Tue Oct 20 09:30 PM ET,SGP 3-leg (50% parlay boost),Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts,+320,+480,0.20,0.96,,,open,,0b6fbbde,,
+2026-10-20,DraftKings,Oklahoma City Thunder @ San Antonio Spurs,Tue Oct 20 09:30 PM ET,SGP 3-leg (50% parlay boost),Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts,+320,+480,0.20,0.96,,,lost,-0.20,0b6fbbde,2026-10-21 00:25,auto
 2026-10-20,DraftKings,Boston Celtics @ Detroit Pistons,Tue Oct 20 03:00 PM ET,SGP 3-leg (50% parlay boost),Celtics ML + Paul George 16+ pts + Jayson Tatum 25+ pts,+340,+510,0.20,1.02,,,lost,-0.20,d1b6d899,2026-10-20 17:36,auto
 2026-10-20,FanDuel,Boston Celtics @ Detroit Pistons,Tue Oct 20 03:00 PM ET,SGP 3-leg (100% profit boost),Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts,+121,+241,0.50,1.21,,,lost,-0.50,3f1b4171,2026-10-20 17:36,auto
 2026-10-20,FanDuel,Man City vs AEK Athens,Tue Oct 20 03:00 PM ET,SGP 3-leg (50% profit boost),Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots,+124,+186,0.50,0.93,,,lost,-0.50,52414b40,2026-10-20 16:51,auto

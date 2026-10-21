@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
+     "t": "2026-10-21T04:25Z"
     }
    },
    "sport": "NFL",
@@ -2003,10 +2003,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.803,
-     "away": 0.197,
+     "home": 0.795,
+     "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
+     "t": "2026-10-21T04:25Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
+     "t": "2026-10-21T04:25Z"
     }
    },
    "sport": "NFL",
@@ -3089,7 +3089,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
+     "t": "2026-10-21T04:25Z"
     }
    },
    "sport": "MLB",
@@ -3376,7 +3376,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
+     "t": "2026-10-21T04:25Z"
     }
    },
    "sport": "MLB",
@@ -3384,427 +3384,6 @@
    "payout": 2.72,
    "payout_est": false,
    "start_ts": "2026-10-24T00:00Z"
-  },
-  {
-   "bet_id": "0b6fbbde",
-   "date": "2026-10-20",
-   "book": "DraftKings",
-   "event": "Oklahoma City Thunder @ San Antonio Spurs",
-   "market": "SGP 3-leg (50% parlay boost)",
-   "pick": "Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts",
-   "start": "Tue Oct 20 09:30 PM ET",
-   "price": "+320",
-   "boosted_price": "+480",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.96,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Victor Wembanyama",
-     "stat": "pts",
-     "op": "min",
-     "min": 25,
-     "text": "Victor Wembanyama 25+ pts",
-     "pteam": "SA",
-     "pname": "Victor Wembanyama",
-     "pid": "5104157"
-    },
-    {
-     "type": "prop",
-     "player": "Jalen Williams",
-     "stat": "pts",
-     "op": "min",
-     "min": 15,
-     "text": "Jalen Williams 15+ pts",
-     "pteam": "OKC",
-     "pcands": [
-      "Jalen Williams",
-      "Jaylin Williams"
-     ]
-    },
-    {
-     "type": "prop",
-     "player": "Shai Gilgeous-Alexander",
-     "stat": "pts",
-     "op": "min",
-     "min": 30,
-     "text": "Shai Gilgeous-Alexander 30+ pts",
-     "pteam": "OKC",
-     "pname": "Shai Gilgeous-Alexander",
-     "pid": "4278073"
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261020",
-    "groups": null,
-    "id": "401909090",
-    "snapshot": {
-     "date": "2026-10-21T01:50Z",
-     "period": 3,
-     "clock": 193.0,
-     "state": "in",
-     "completed": false,
-     "detail": "3:13 - 3rd",
-     "teams": [
-      {
-       "id": "24",
-       "name": "San Antonio Spurs",
-       "abbr": "SA",
-       "short": "Spurs",
-       "nick": "Spurs",
-       "location": "San Antonio",
-       "home": true,
-       "score": "72"
-      },
-      {
-       "id": "25",
-       "name": "Oklahoma City Thunder",
-       "abbr": "OKC",
-       "short": "Thunder",
-       "nick": "Thunder",
-       "location": "Oklahoma City",
-       "home": false,
-       "score": "87"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nba-okc-sas-2026-10-20",
-     "title": "Thunder vs. Spurs",
-     "spreads": [
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "85775192995232721429988502128204854092740898704507053283099548125727036470135",
-        "4013157055689522924315291905191009140684970528930949971392037744880158158711"
-       ]
-      },
-      {
-       "line": -5.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "53095337416132319348019392921314521183365398683671260252757736222086265579983",
-        "46760261441880812410650626318416010263111692577193932743209368742822202571936"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "104771558822303263873557436309794192166378260963904312948557623292356179006441",
-        "60628699870961411466623782716236852316417821006672580421201377824347088068746"
-       ]
-      },
-      {
-       "line": -16.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "43791209117652125028226347174605546240845687181460383849302103473336874856923",
-        "10969123577305805586668727668696426870513306356275495690580738860114159752984"
-       ]
-      },
-      {
-       "line": -13.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "39060078564464016872089653788519031260436413866275111271886137367014207320359",
-        "69545717748283223606184973862632830331838875009536061717181539291860988637721"
-       ]
-      },
-      {
-       "line": -10.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "95992109405486445996137079720458685388338017666534793172491482830888834297397",
-        "111793333120116090892801766051498569321457767701376286875320125217240463768625"
-       ]
-      },
-      {
-       "line": -7.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "69751863939006019162456594870391063657291067711453760308504884176506331845221",
-        "77763690750383193099134590489168809319209195199126921977075250245459086570193"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Spurs",
-        "Thunder"
-       ],
-       "tokens": [
-        "79018928508466441425777535025086987820518132016411752320008052272202169450182",
-        "4088490010943859746772932959682615978783035252036787241788217801947887364447"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Thunder",
-        "Spurs"
-       ],
-       "tokens": [
-        "40017572138432272819564082761892350747488852494682256803529347451045035662005",
-        "78624094775456068685190187652540695888308203054484265318797662785347337598436"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Thunder",
-        "Spurs"
-       ],
-       "tokens": [
-        "34103648877149621390271999983008388862114807501645946485662999602367235917062",
-        "53205708583223563872576005571256334943188525464797809859097698977095203663670"
-       ]
-      },
-      {
-       "line": -5.5,
-       "outcomes": [
-        "Thunder",
-        "Spurs"
-       ],
-       "tokens": [
-        "72218719703655456410115609215620030327790393402259051116994276164178057843261",
-        "43044926258561319826852928490415054315317113231991199356038527205775312035255"
-       ]
-      },
-      {
-       "line": -8.5,
-       "outcomes": [
-        "Thunder",
-        "Spurs"
-       ],
-       "tokens": [
-        "49828014167658833920659446638014549336636220122382801859454567243456824128447",
-        "9418873769805214121560762573494201074581737233088631061668270101547343801698"
-       ]
-      },
-      {
-       "line": -11.5,
-       "outcomes": [
-        "Thunder",
-        "Spurs"
-       ],
-       "tokens": [
-        "103536996029696557841104047309129261696362270901518032714320240682630453819577",
-        "111587703551730691228631931714290129345159702830591345756742180033999208739971"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 230.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "57893516729952446538412912532846962769543968834610381991830905938215080216452",
-        "108652669263914064429408245865516571686779737486968231727173373708444428114893"
-       ]
-      },
-      {
-       "line": 227.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "57460119614882303906185036017430045677947274188566571190514051595800615950724",
-        "96553874850175343371481276945663623544118652121418908413916912052713237690544"
-       ]
-      },
-      {
-       "line": 228.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18267923449058390505337943937183522165683335333372365413423062010680995599303",
-        "59875349900394855392357906113513494234525565195375494239554068239023214559679"
-       ]
-      },
-      {
-       "line": 233.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "19900702744323853038028762959235553147076076482008932635297695923567063732875",
-        "94308001735866823059708227832648612736119097580258366051528191116382507235710"
-       ]
-      },
-      {
-       "line": 231.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "57920953742904780397348681319779438167913123488004303131255690213862389417053",
-        "106574544953777868990688042894056398369621486161785726601569565195158231027878"
-       ]
-      },
-      {
-       "line": 232.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "57049541125011914243972904096591971782458472082459173033771650886860959216755",
-        "54405825064317381186340003334135184928926275536655710661213159362380525023236"
-       ]
-      },
-      {
-       "line": 216.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "63062198053156135894594474109988484545428091240700171699652782525339272015145",
-        "112795797242746414007223025651588385250836707972303226365794220664121882652612"
-       ]
-      },
-      {
-       "line": 219.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "36042641357495480657928455011797976741974313322638006190452732634036854226780",
-        "58431291354716138131305566057356788407747584274067152711112124271215162400504"
-       ]
-      },
-      {
-       "line": 222.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "63649071090172826268705285452566918245553429865789678447914686754595696247968",
-        "110686425695337300685250754705556917576150000911678634305343647245086217256935"
-       ]
-      },
-      {
-       "line": 225.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "75996785484423397560472890929343357038051572723226426875146520197208891786222",
-        "72576184286534263517521334638888892800273565751645091688998391505700379750592"
-       ]
-      },
-      {
-       "line": 235.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "101606520588978947480292590052213585494155076950707266017974911651973221757011",
-        "96343782237006361618449282149705618210373835517492667085815937021026757601010"
-       ]
-      },
-      {
-       "line": 238.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "56884255774713798082958589506915610146092899063498171723083444063375849295136",
-        "20825445859295649815242977458087969318660168814831120142808601356460484062843"
-       ]
-      },
-      {
-       "line": 241.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "113391965471564919452451074250277041864251294942537668035893289737560510545076",
-        "51518165633641711170486694240348729695925864452553402005763171151562297212724"
-       ]
-      },
-      {
-       "line": 244.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "79307515944651622453192551352940467772693439242307631674590512408125555583685",
-        "24434837598567957120264248034051780276011739732693799682519058705754670157174"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Thunder",
-       "Spurs"
-      ],
-      "tokens": [
-       "48048387611605248970312168510075685614966865009736904258504751936343270135339",
-       "86140706431574137092378421405597667358309804892234804809603750735484644932576"
-      ]
-     }
-    },
-    "an": {
-     "id": 295138,
-     "home_team_id": 181,
-     "away_team_id": 175
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.095,
-     "away": 0.905,
-     "spread": 0.01,
-     "t": "2026-10-21T03:37Z"
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.2,
-   "payout": 1.16,
-   "payout_est": false,
-   "start_ts": "2026-10-21T01:30Z"
   },
   {
    "bet_id": "11be1d03",
@@ -4050,6 +3629,16 @@
    "book": "DraftKings",
    "event": "Boston Celtics @ Detroit Pistons",
    "pick": "Celtics ML + Paul George 16+ pts + Jayson Tatum 25+ pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "DraftKings",
+   "event": "Oklahoma City Thunder @ San Antonio Spurs",
+   "pick": "Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts",
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
@@ -5024,143 +4613,33 @@
    "pnl": -0.2,
    "stake": 0.2,
    "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "theScore",
-   "event": "Colorado State Rams @ Texas State Bobcats",
-   "pick": "Colorado State Rams",
-   "result": "lost",
-   "pnl": -0.16,
-   "stake": 0.16,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "Caesars",
-   "event": "New York Rangers @ New Jersey Devils",
-   "pick": "New York Rangers",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "Caesars",
-   "event": "Milwaukee Brewers @ Los Angeles Dodgers",
-   "pick": "Milwaukee Brewers",
-   "result": "won",
-   "pnl": 67.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "FanDuel",
-   "event": "Seattle Seahawks @ Denver Broncos",
-   "pick": "SEA -2.5 + Over 40.5 + Darnold 1+ pass TD",
-   "result": "lost",
-   "pnl": -0.79,
-   "stake": 0.79,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "PointsBet",
-   "event": "New York Islanders @ Ottawa Senators",
-   "pick": "Under 5.5",
-   "result": "won",
-   "pnl": 22.73,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "PointsBet",
-   "event": "Buffalo Sabres @ Toronto Maple Leafs",
-   "pick": "Toronto Maple Leafs",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "PointsBet",
-   "event": "Colorado State @ Texas State",
-   "pick": "Under 70.5",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "PointsBet",
-   "event": "East Carolina @ UAB",
-   "pick": "Under 47.5",
-   "result": "won",
-   "pnl": 22.32,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "PointsBet",
-   "event": "Georgia Southern @ Old Dominion",
-   "pick": "Old Dominion +3.5",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "DraftKings",
-   "event": "Notre Dame @ BYU",
-   "pick": "BYU Cougars",
-   "result": "won",
-   "pnl": 1.39,
-   "stake": 0.3,
-   "auto": false
-  },
-  {
-   "date": "2026-10-15",
-   "book": "DraftKings",
-   "event": "Ohio State @ Indiana",
-   "pick": "Indiana Hoosiers",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": false
   }
  ],
- "pnl_total": 94.17,
+ "pnl_total": 93.97,
  "unsettled": {
-  "n": 19,
-  "cash_stake": 14.5,
-  "max_payout": 789.84,
+  "n": 18,
+  "cash_stake": 14.3,
+  "max_payout": 788.68,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 14.5,
+ "open_stake": 14.3,
  "recs": {
   "stats": {
    "overall": {
     "n": 110,
-    "w": 33,
+    "w": 35,
     "l": 47,
     "p": 0,
-    "pending": 30,
-    "win_pct": 41.2,
-    "units": 18.58,
-    "roi_pct": 26.5,
-    "roi_n": 70,
-    "exp_roi_pct": 11.4,
-    "exp_wins": 28.4,
-    "exp_wins_n": 80,
-    "wins_with_fair": 33
+    "pending": 28,
+    "win_pct": 42.7,
+    "units": 20.54,
+    "roi_pct": 28.5,
+    "roi_n": 72,
+    "exp_roi_pct": 11.2,
+    "exp_wins": 29.5,
+    "exp_wins_n": 82,
+    "wins_with_fair": 35
    },
    "by_promo": {
     "No Sweat": {
@@ -5210,18 +4689,18 @@
     },
     "cash": {
      "n": 23,
-     "w": 9,
+     "w": 11,
      "l": 12,
      "p": 0,
-     "pending": 2,
-     "win_pct": 42.9,
-     "units": 14.65,
-     "roi_pct": 69.8,
-     "roi_n": 21,
-     "exp_roi_pct": 6.6,
-     "exp_wins": 6.8,
-     "exp_wins_n": 21,
-     "wins_with_fair": 9
+     "pending": 0,
+     "win_pct": 47.8,
+     "units": 16.61,
+     "roi_pct": 72.2,
+     "roi_n": 23,
+     "exp_roi_pct": 6.4,
+     "exp_wins": 7.9,
+     "exp_wins_n": 23,
+     "wins_with_fair": 11
     },
     "live boost": {
      "n": 1,
@@ -5302,18 +4781,18 @@
     },
     "NBA": {
      "n": 15,
-     "w": 3,
+     "w": 5,
      "l": 10,
      "p": 0,
-     "pending": 2,
-     "win_pct": 23.1,
-     "units": -3.34,
-     "roi_pct": -33.4,
-     "roi_n": 10,
-     "exp_roi_pct": 10.0,
-     "exp_wins": 5.5,
-     "exp_wins_n": 13,
-     "wins_with_fair": 3
+     "pending": 0,
+     "win_pct": 33.3,
+     "units": -1.38,
+     "roi_pct": -11.5,
+     "roi_n": 12,
+     "exp_roi_pct": 9.0,
+     "exp_wins": 6.6,
+     "exp_wins_n": 15,
+     "wins_with_fair": 5
     },
     "NCAAF": {
      "n": 27,
@@ -5439,18 +4918,18 @@
     },
     "no": {
      "n": 42,
-     "w": 8,
+     "w": 10,
      "l": 9,
      "p": 0,
-     "pending": 25,
-     "win_pct": 47.1,
-     "units": -2.2,
-     "roi_pct": -18.3,
-     "roi_n": 12,
-     "exp_roi_pct": 5.0,
-     "exp_wins": 5.4,
-     "exp_wins_n": 17,
-     "wins_with_fair": 8
+     "pending": 23,
+     "win_pct": 52.6,
+     "units": -0.24,
+     "roi_pct": -1.7,
+     "roi_n": 14,
+     "exp_roi_pct": 4.9,
+     "exp_wins": 6.5,
+     "exp_wins_n": 19,
+     "wins_with_fair": 10
     }
    },
    "friend": {
@@ -5580,11 +5059,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "OKC 116-104 SA (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan, pulled 3:10 PM ET Oct 20; backup to OKC ML (same game, pick one); Pin alt home +112 / away -126 (fair -118); yes at -113 (2% EV)",
-    "units": null
+    "units": 0.91
    },
    {
     "rec_id": "90ef4557",
@@ -5603,11 +5082,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "OKC 116-104 SA (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan, pulled 3:10 PM ET Oct 20; Pin main home +100 / away -111 (fair -105); yes at -101 (2% EV)",
-    "units": null
+    "units": 1.05
    },
    {
     "rec_id": "6d705e3a",
@@ -8302,6 +7781,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "0b6fbbde",
+    "book": "DraftKings",
+    "pick": "Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "OKC 116-104 SA",
+    "at": "2026-10-21 00:25"
+   },
+   {
     "bet_id": "caa33d4c",
     "book": "Caesars",
     "pick": "Isaiah Myers 70+ rec yds + Da'Wain Lofton 50+ rec yds + Sean Wilson 50+ rec yds",
@@ -8516,28 +8004,19 @@
     "pnl": -0.5,
     "final": "COV 1-3 TOT",
     "at": "2026-10-19 16:58"
-   },
-   {
-    "bet_id": "5c5ab743",
-    "book": "PointsBet",
-    "pick": "Draw",
-    "result": "won",
-    "pnl": 15.5,
-    "final": "DEF 0-0 SAN",
-    "at": "2026-10-19 16:22"
    }
   ],
-  "last_change_at": "2026-10-20 22:31 ET"
+  "last_change_at": "2026-10-21 00:25 ET"
  },
- "open_live_n": 18,
+ "open_live_n": 17,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 2.5,
-  "DraftKings": 0.3,
+  "DraftKings": 0.1,
   "FanDuel": 2.1,
   "PointsBet": 143.75,
   "theScore": 0.2
  },
- "hash": "0b129c91c6dfcade3973da5a33ccdaa1b0ee5784",
- "generated_at": "2026-10-20T23:37:07-04:00"
+ "hash": "2fa43871a9cbed8d38cc44dbd174be6901ca1b68",
+ "generated_at": "2026-10-21T00:25:05-04:00"
 }
