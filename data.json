@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NFL",
@@ -3089,7 +3089,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "MLB",
@@ -3376,7 +3376,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "MLB",
@@ -3797,7 +3797,7 @@
      "home": 0.495,
      "away": 0.505,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NBA",
@@ -3805,232 +3805,6 @@
    "payout": 1.16,
    "payout_est": false,
    "start_ts": "2026-10-21T01:30Z"
-  },
-  {
-   "bet_id": "b1069fc2",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
-   "market": "SGP 3-leg (50% NHL profit boost)",
-   "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
-   "start": "Tue Oct 20 07:15 PM ET",
-   "price": "+140",
-   "boosted_price": "+210",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.05,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "under",
-     "line": 7.5,
-     "text": "Under 7.5"
-    },
-    {
-     "type": "teamtotal",
-     "team": "Columbus Blue Jackets",
-     "side": "over",
-     "line": 1.5,
-     "unit": "goals",
-     "women": false,
-     "text": "Blue Jackets O1.5 team goals",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Auston Matthews",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Auston Matthews 3+ SOG",
-     "pteam": "TOR",
-     "pname": "Auston Matthews",
-     "pid": "4024123"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261020",
-    "groups": null,
-    "id": "401892543",
-    "snapshot": {
-     "date": "2026-10-20T23:00Z",
-     "period": 3,
-     "clock": 323.0,
-     "state": "in",
-     "completed": false,
-     "detail": "5:23 - 3rd",
-     "teams": [
-      {
-       "id": "29",
-       "name": "Columbus Blue Jackets",
-       "abbr": "CBJ",
-       "short": "Blue Jackets",
-       "nick": "Blue Jackets",
-       "location": "Columbus",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "21",
-       "name": "Toronto Maple Leafs",
-       "abbr": "TOR",
-       "short": "Maple Leafs",
-       "nick": "Maple Leafs",
-       "location": "Toronto",
-       "home": false,
-       "score": "5"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-tor-cbj-2026-10-20",
-     "title": "Maple Leafs vs. Blue Jackets",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Blue Jackets",
-        "Maple Leafs"
-       ],
-       "tokens": [
-        "6832603266255391755932077472530918831560941967587070192753161804263576521115",
-        "113967249715846221663050958322368983068008310531790581365485565922003865827382"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Blue Jackets",
-        "Maple Leafs"
-       ],
-       "tokens": [
-        "46163367738118981329998904919493553890519789119984744063174086053554079530781",
-        "96561480131094711935192022502431465772813869311199740770967811297402537343107"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Maple Leafs",
-        "Blue Jackets"
-       ],
-       "tokens": [
-        "57498070021961377107471277889307485290905748044329728783233531549447889071298",
-        "102371140903061382976534089933908628268052323937657579776837900177556939066498"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Maple Leafs",
-        "Blue Jackets"
-       ],
-       "tokens": [
-        "17103445035428601752451613903862322776692156684154027595448586143614701183623",
-        "55272094236889411095571742767667258222385037712192010170072421776620949005974"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Maple Leafs",
-        "Blue Jackets"
-       ],
-       "tokens": [
-        "3847152792258949184918329132055503654093599864149432120600563844421739530625",
-        "31944533841005619099651016936941359834190273197028862884004214545655244772889"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "78040247031710674198952411210222158391754137099740465593375474478380766731217",
-        "4296989296839553703179572026698205544205150163195248868264440984222595151655"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "110654904189450653707334844891588279151227096299165501969084885958802561279192",
-        "80505827696773013633695183028701949067467064789964949687227875119290680516641"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "18008387419035300289266458336166304595083768120313698571623568091366333420700",
-        "75753499320992506344858306991677326876731714861690464343509077480477800811197"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "54176899668128231772268478036013840986172764823595764924646422441052976741157",
-        "57629095904453828582653817723638226430545786318556657749909638115939418407989"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "19490304330624412311421292915496802640930650451793974249423302384273430740746",
-        "108764845694782117726789987297601291951683894921533232683624939126136228355970"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Maple Leafs",
-       "Blue Jackets"
-      ],
-      "tokens": [
-       "94148277393623176691821230871036770421974641301237566661250277738287724008720",
-       "95603211098044682131021222506320965804352379180852460219270667191978675380491"
-      ]
-     }
-    },
-    "an": {
-     "id": 293441,
-     "home_team_id": 240,
-     "away_team_id": 235
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.005,
-     "away": 0.995,
-     "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 1.55,
-   "payout_est": false,
-   "start_ts": "2026-10-20T23:15Z"
   },
   {
    "bet_id": "11be1d03",
@@ -4253,11 +4027,11 @@
     "id": "401871069",
     "snapshot": {
      "date": "2026-10-20T23:00Z",
-     "period": 3,
-     "clock": 186.0,
+     "period": 4,
+     "clock": 852.0,
      "state": "in",
      "completed": false,
-     "detail": "3:06 - 3rd",
+     "detail": "14:12 - 4th",
      "teams": [
       {
        "id": "48",
@@ -4871,10 +4645,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.875,
-     "away": 0.125,
+     "home": 0.895,
+     "away": 0.105,
      "spread": 0.01,
-     "t": "2026-10-21T01:37Z"
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NCAAF",
@@ -4941,10 +4715,10 @@
     "snapshot": {
      "date": "2026-10-20T23:00Z",
      "period": 4,
-     "clock": 377.0,
+     "clock": 207.0,
      "state": "in",
      "completed": false,
-     "detail": "6:17 - 4th",
+     "detail": "3:27 - 4th",
      "teams": [
       {
        "id": "18",
@@ -4954,7 +4728,7 @@
        "nick": "Knicks",
        "location": "New York",
        "home": true,
-       "score": "90"
+       "score": "95"
       },
       {
        "id": "20",
@@ -4964,7 +4738,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": false,
-       "score": "93"
+       "score": "99"
       }
      ]
     },
@@ -5301,10 +5075,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3788,
-     "away": 0.6212,
-     "spread": 0.03,
-     "t": "2026-10-21T01:37Z"
+     "home": 0.335,
+     "away": 0.665,
+     "spread": 0.01,
+     "t": "2026-10-21T01:44Z"
     }
    },
    "sport": "NBA",
@@ -5330,6 +5104,16 @@
    "book": "PointsBet",
    "event": "Boston Celtics @ Detroit Pistons",
    "pick": "Cade Cunningham 8+ ast + Jayson Tatum 4+ ast + Payton Pritchard 4+ ast",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
+   "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
+   "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
@@ -6446,15 +6230,15 @@
    "auto": false
   }
  ],
- "pnl_total": 95.37,
+ "pnl_total": 94.87,
  "unsettled": {
-  "n": 22,
-  "cash_stake": 15.7,
-  "max_payout": 794.31,
+  "n": 21,
+  "cash_stake": 15.2,
+  "max_payout": 792.76,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.7,
+ "open_stake": 15.2,
  "recs": {
   "stats": {
    "overall": {
@@ -9612,6 +9396,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "b1069fc2",
+    "book": "PointsBet",
+    "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "TOR 6-2 CBJ",
+    "at": "2026-10-20 21:44"
+   },
+   {
     "bet_id": "9d91f35f",
     "book": "Caesars",
     "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
@@ -9826,28 +9619,19 @@
     "pnl": -0.5,
     "final": "DAL 13-23 GB",
     "at": "2026-10-18 23:47"
-   },
-   {
-    "bet_id": "2311eef1",
-    "book": "PointsBet",
-    "pick": "Chicago Red Stars Women",
-    "result": "lost",
-    "pnl": -10.0,
-    "final": "SEA 3-1 CHI",
-    "at": "2026-10-18 21:52"
    }
   ],
-  "last_change_at": "2026-10-20 21:37 ET"
+  "last_change_at": "2026-10-20 21:44 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "bet365": 0.2,
   "Caesars": 3.0,
   "DraftKings": 0.3,
   "FanDuel": 2.1,
-  "PointsBet": 144.25,
+  "PointsBet": 143.75,
   "theScore": 0.4
  },
- "hash": "87134966895f3e459e72acc3e1199f4973795be0",
- "generated_at": "2026-10-20T21:37:30-04:00"
+ "hash": "0cc38b7d079a1ffe678f3502294a79e6b5deb939",
+ "generated_at": "2026-10-20T21:44:22-04:00"
 }

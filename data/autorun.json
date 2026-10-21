@@ -21,6 +21,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "b1069fc2",
+   "book": "PointsBet",
+   "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "TOR 6-2 CBJ",
+   "at": "2026-10-20 21:44"
+  },
+  {
    "bet_id": "9d91f35f",
    "book": "Caesars",
    "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
@@ -235,17 +244,8 @@
    "pnl": -0.5,
    "final": "DAL 13-23 GB",
    "at": "2026-10-18 23:47"
-  },
-  {
-   "bet_id": "2311eef1",
-   "book": "PointsBet",
-   "pick": "Chicago Red Stars Women",
-   "result": "lost",
-   "pnl": -10.0,
-   "final": "SEA 3-1 CHI",
-   "at": "2026-10-18 21:52"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-20 21:37 ET"
+ "last_change_at": "2026-10-20 21:44 ET"
 }
