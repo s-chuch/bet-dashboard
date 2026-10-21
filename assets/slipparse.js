@@ -173,6 +173,7 @@
       case 'soa': return sub ? sub + ' score or assist' : null;
       case 'q1td': return '1st TD in ' + sel.toLowerCase();
       case 'player':
+        sub = sub.replace(/\s+Total$/i, '');   // "Jalen Brunson Total Points"
         var st = statShort(c.stat, ctx.sport);
         m = ouTok(sel);
         var n = m || numPlus(sel);
@@ -452,6 +453,48 @@
     return [r];
   }
 
+  /* ---------- theScore Bet (My Bets > Open) ---------- */
+  function tsTeam(line) {   // OCR puts junk (icons) around the team name: try every 1-3 word window
+    var w = String(line || '').replace(/[^A-Za-z0-9. ]/g, ' ').split(/\s+/).filter(Boolean), n, i, f;
+    for (n = Math.min(3, w.length); n >= 1; n--) for (i = 0; i + n <= w.length; i++) { f = teamFind(w.slice(i, i + n).join(' ')); if (f) return { full: f.city + ' ' + f.nick, nick: f.nick, league: f.league }; }
+    return null;
+  }
+  function parseTheScore(L, t) {
+    var r = blank(/SETTLED/i.test(t) && !/OPEN\s+SETTLED/i.test(t) ? 'settled' : 'open', 'theScore'), w = r.warnings;
+    var hi = L.findIndex(function (x) { return /\bParlay\b|\bSingle\b/i.test(x) && oddsIn(x).length; });
+    var li = L.findIndex(function (x) { return /^\d+\s*Legs?$/i.test(x); });
+    if (hi < 0 || li < 0) return [other('theScore slip: header not found')];
+    var cands = oddsIn(L[hi]);
+    var ti = L.findIndex(function (x, i) { return i > li && /^Today|^Tomorrow|^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\b|^[A-Z][a-z]{2}\s\d+\b.*\d\s?[AP]M/i.test(x) && /\d\s?[AP]M/i.test(x); });
+    if (ti > 0) r.start_text = clean(L[ti]).replace(/\s+at\s+/i, ' ');
+    // the two team lines sit just above the start time
+    var teams = [], k;
+    for (k = ti - 1; k > li && teams.length < 2; k--) { var tm = tsTeam(L[k]); if (tm) teams.unshift(tm); }
+    var sport = teams[0] && teams[0].league;
+    if (teams.length === 2) r.event = teams[0].full + ' @ ' + teams[1].full; else w.push('event not found');
+    var ctx = { sport: sport, home: teams[1] && teams[1].nick, away: teams[0] && teams[0].nick };
+    var legsEnd = ti > 0 ? ti - (teams.length ? teams.length : 0) : L.length;
+    while (legsEnd > li && !classify(clean(L[legsEnd - 1])) && teams.length && tsTeam(L[legsEnd - 1])) legsEnd--;
+    r.legs = scanPairs(L, li + 1, legsEnd, ctx, w);
+    var nm = /(\d+)\s*Legs?/i.exec(L[li]);
+    if (nm && +nm[1] !== r.legs.length) w.push('header says ' + nm[1] + ' legs but ' + r.legs.length + ' parsed');
+    var bi = L.findIndex(function (x) { return /^BET\b.*PAYOUT|POTENTIAL PAYOUT/i.test(x); });
+    var amtLine = bi > 0 ? L[bi - 1] : '', amt = moneys(amtLine.replace(/\$\s*0-/g, '$0.'));
+    if (amt.length >= 2) {
+      r.stake = amt[0]; var pay = amt[amt.length - 1]; r.to_win = r2(pay - r.stake);
+      var d = r.to_win / r.stake, pm = /(\d+)\s*%\s*Profit Boost/i.exec(t);
+      var nw = w.length, p = pickOdds(cands, d, r.stake, w);
+      if (pm) {
+        w.length = nw;   // both the printed pre-boost and boosted odds are on this slip: not a disagreement
+        r.boost_pct = +pm[1]; r.boosted_price = p; var pre = amer(d / (1 + r.boost_pct / 100));
+        var near = cands.filter(function (c) { return c !== p && Math.abs(ratioOf(c) - ratioOf(pre)) < 0.12 * ratioOf(pre); })[0];
+        r.price = near || pre;
+      } else r.price = p;
+      r.market = marketName(r.legs.length, /\bSGP\b|Same Game|[S5$E]G[PF]/i.test(t) || /Same Game/i.test(t), r.boost_pct, 'profit boost', 'Single', !!r.boosted_price, null);
+    } else w.push('stake / payout not found');
+    return [r];
+  }
+
   /* ---------- bet365 ---------- */
   var B365_DESC = /^(Player Shots on Target|Player Shots|Shots on Goal|Rebounds|Assists|Points|Receiving Yds|Receptions|Total|Money Line|Team \d Total|Anytime TD Scorer|Passing Yds|Rushing Yds|Player [A-Za-z ]+|[A-Za-z ]+ Yds)$/i;
   function b365Legs(L, ctx, w) {
@@ -557,7 +600,8 @@
     var L = lines(text), t = L.join('\n'), out;
     if (!L.length) return [other('empty text')];
     if (/Bet Tracker|s-chuch\.github|Est\. leg|% to hit|Expand all|no result yet|UPCOMING|LIVE NOW|Settled recently/.test(t)) return [other('screenshot of the tracker itself, not a sportsbook slip')];
-    if (/CAESARS|Cash Wagered|Same Game Parlay Placed/i.test(t)) out = parseCaesars(L, t);
+    if (/theScore/i.test(t) && /\bLegs?\b/i.test(t) && /POTENTIAL PAYOUT/i.test(t)) out = parseTheScore(L, t);
+    else if (/CAESARS|Cash Wagered|Same Game Parlay Placed/i.test(t)) out = parseCaesars(L, t);
     else if (/DEPOSIT MATCH|ESTIMATED RETURN|BET RECEIPTS|POINTSBET|PROFIT BOOST OFFER/i.test(t)) out = parsePointsBet(L, t);
     else if (/Bets Placed|\bDK\d{10,}|Wager Amount|Keep Picks/i.test(t)) out = parseDraftKings(L, t);
     else if (/TOTAL WAGER|TOTAL PAYOUT|Substituted players/i.test(t)) out = parseFanDuel(L, t);

@@ -107,12 +107,12 @@
     }).then(function (r) { if (!r.ok) throw new Error('OpenRouter model list failed (HTTP ' + r.status + ')'); return r.json(); }).then(function (j) {
       var free = (j.data || []).filter(function (m) {
         var a = m.architecture || {}, pr = m.pricing || {};
-        return (a.input_modalities || []).indexOf('image') >= 0 && (a.output_modalities || ['text']).join() === 'text' && String(pr.prompt) === '0' && String(pr.completion) === '0' && !/lyria|safety|guard|embed|moderation/i.test(m.id) && m.id !== 'openrouter/free';
+        return (a.input_modalities || []).indexOf('image') >= 0 && (a.output_modalities || ['text']).join() === 'text' && String(pr.prompt) === '0' && String(pr.completion) === '0' && !/lyria|safety|guard|embed|moderation|inkling|dots-3|note/i.test(m.id) && m.id !== 'openrouter/free';
       });
       var prefs = [/gemma-?\d*.*31b/, /qwen.*vl.*(72b|235b|32b)/, /nemotron.*super.*vl|nemotron.*vl/, /llama-4/, /mistral-small|pixtral/, /inkling(?!-small)/, /gemini/, /gemma/, /./];
       var score = function (m) { for (var i = 0; i < prefs.length; i++) if (prefs[i].test(m.id)) return i; return 99; };
       free.sort(function (a, b) { return score(a) - score(b) || (b.context_length || 0) - (a.context_length || 0); });
-      var ids = free.map(function (m) { return m.id; }).slice(0, 5);
+      var ids = free.map(function (m) { return m.id; }).slice(0, 6);
       if (!ids.length) ids = ['openrouter/free'];
       S.orModels = ids; var e = $('or-model'); if (e) e.textContent = '(' + ids.slice(0, 2).join(', ') + '…)'; return ids;
     });
@@ -152,14 +152,14 @@
       });
     });
   }
-  function shrink(file) {   // max 3000 px (phone screenshots stay full size so small digits stay readable), JPEG 0.92
+  function shrink(file, maxSide, q) {   // max 3000 px (phone screenshots stay full size so small digits stay readable), JPEG 0.92
     return new Promise(function (res, rej) {
       var img = new Image(), u = URL.createObjectURL(file);
       img.onload = function () {
-        var sc = Math.min(1, 3000 / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
+        var sc = Math.min(1, (maxSide || 3000) / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
         c.width = Math.round(img.naturalWidth * sc); c.height = Math.round(img.naturalHeight * sc);
         c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(u);
-        res(c.toDataURL('image/jpeg', 0.92).split(',')[1]);
+        res(c.toDataURL('image/jpeg', q || 0.92).split(',')[1]);
       };
       img.onerror = function () { URL.revokeObjectURL(u); rej(new Error('could not open the picture')); };
       img.src = u;
@@ -241,15 +241,16 @@
     var chain = [];
     (models || []).forEach(function (m) { chain.push({ name: m, run: function () { return callModel(m, b64, text, it, quick); } }); });
     var orMs = it._or || [];
-    orMs.forEach(function (m) { chain.push({ name: 'OpenRouter ' + m.replace(/:free$/, ''), run: function () { return callOr(m, b64, text, it); } }); });
-    var i = 0, last = null;
+    orMs.forEach(function (m) { chain.push({ name: 'OpenRouter ' + m.replace(/:free$/, ''), run: function () { return callOr(m, it._small || b64, text, it); } }); });
+    var i = 0, last = null, errs = [];
     function next() {
       if (i >= chain.length) {
         if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for the free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
+        if (last && errs.length > 1) last = new Error(errs.slice(0, 4).join(' | '));
         return Promise.reject(last || new Error('no reader available'));
       }
       var c = chain[i++]; it.msg = 'Reading with ' + c.name + '…'; renderQueue();
-      return c.run().catch(function (e) { last = e; return next(); });
+      return c.run().catch(function (e) { last = e; errs.push(c.name.replace(/^OpenRouter /, '') + ': ' + String(e.message).slice(0, 70)); return next(); });
     }
     return next();
   }
@@ -260,7 +261,8 @@
       var models = r[0], fast = models.slice().reverse().filter(function (m) { return /flash/.test(m); }), strong = models.slice();
       if (!fast.length) fast = models.slice();
       it._or = r[1];
-      return shrink(it.file).then(function (b64) {
+      return Promise.all([shrink(it.file), it._or.length ? shrink(it.file, 1568, 0.85) : Promise.resolve('')]).then(function (imgs) {
+        var b64 = imgs[0]; it._small = imgs[1];
         return tryModels(fast, b64, promptText('', ''), it, true).then(function (rows) {
           var bad = inconsistent(rows);
           if (!bad.length) return rows;
