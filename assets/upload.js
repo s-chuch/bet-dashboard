@@ -197,12 +197,13 @@
     });
     return bad;
   }
-  function callModel(model, b64, text, it) {
-    var tries = 0;
+  function callModel(model, b64, text, it, quick) {
+    var tries = 0, noThink = !!quick;
     function go() {
       tries++;
       var vtx = S.kind === 'vtx';
       var body = { contents: [{ role: 'user', parts: [{ text: text }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
+      if (noThink && /flash/.test(model)) body.generationConfig.thinkingConfig = { thinkingBudget: 0 };   // quick pass: no extra "thinking" time
       return fetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
         if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { var e = new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); e.status = r.status; throw e; });
         return r.json();
@@ -214,7 +215,7 @@
         return arr;
       });
     }
-    return go();
+    return go().catch(function (e) { if (noThink && e.status === 400) { noThink = false; return go(); } throw e; });
   }
   function callOr(model, b64, text, it) {
     function go(json) {
@@ -236,9 +237,9 @@
     return go(true);
   }
   // every available reader in order: Google models, then OpenRouter free models; the first answer wins
-  function tryModels(models, b64, text, it) {
+  function tryModels(models, b64, text, it, quick) {
     var chain = [];
-    (models || []).forEach(function (m) { chain.push({ name: m, run: function () { return callModel(m, b64, text, it); } }); });
+    (models || []).forEach(function (m) { chain.push({ name: m, run: function () { return callModel(m, b64, text, it, quick); } }); });
     var orMs = it._or || [];
     orMs.forEach(function (m) { chain.push({ name: 'OpenRouter ' + m.replace(/:free$/, ''), run: function () { return callOr(m, b64, text, it); } }); });
     var i = 0, last = null;
@@ -252,19 +253,20 @@
     }
     return next();
   }
-  function aiRead(it) {
+  function aiRead(it) {   // fast pass first (Flash, no OCR); the strong pass (Pro + OCR hint) only when the numbers do not add up
     var gm = getAi() ? getModels().catch(function (e) { if (!getOr()) throw e; return []; }) : Promise.resolve([]);
     var om = getOr() ? getOrModels().catch(function (e) { if (!getAi()) throw e; return []; }) : Promise.resolve([]);
     return Promise.all([gm, om]).then(function (r) {
-      var models = r[0]; it._or = r[1];
-      var ocr = ocrHint(it);
+      var models = r[0], fast = models.slice().reverse().filter(function (m) { return /flash/.test(m); }), strong = models.slice();
+      if (!fast.length) fast = models.slice();
+      it._or = r[1];
       return shrink(it.file).then(function (b64) {
-        return ocr.then(function (hint) {
-          return tryModels(models, b64, promptText(hint, ''), it).then(function (rows) {
-            var bad = inconsistent(rows);
-            if (!bad.length) return rows;
-            it.msg = 'Double-checking the numbers…'; renderQueue();
-            return tryModels(models, b64, promptText(hint, 'your first answer had problems: ' + bad.join('; ') + '. Look at the picture again and fix them; if a value is truly not visible leave it empty.'), it)
+        return tryModels(fast, b64, promptText('', ''), it, true).then(function (rows) {
+          var bad = inconsistent(rows);
+          if (!bad.length) return rows;
+          it.msg = 'Double-checking the numbers…'; renderQueue();
+          return ocrHint(it).then(function (hint) {
+            return tryModels(strong, b64, promptText(hint, 'your first answer had problems: ' + bad.join('; ') + '. Look at the picture again and fix them; if a value is truly not visible leave it empty.'), it, false)
               .then(function (rows2) { return inconsistent(rows2).length <= bad.length ? rows2 : rows; }, function () { return rows; });
           });
         });
@@ -306,17 +308,22 @@
     });
   }
   function runQueue() {
-    if (S.busy) return;
-    var it = S.items.filter(function (x) { return x.state === 'wait'; })[0];
-    if (!it) { return; }
-    S.busy = true; it.state = 'read'; it.msg = ''; renderQueue();
+    S.active = S.active || 0;
+    while (S.active < 3) {
+      var it = S.items.filter(function (x) { return x.state === 'wait'; })[0];
+      if (!it) break;
+      S.active++; startItem(it);
+    }
+  }
+  function startItem(it) {
+    it.state = 'read'; it.msg = ''; renderQueue();
     var job = aiOn() ? aiRead(it).then(function (rows) {
       rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
       : ocrRead(it, 'Basic reader (no AI key). Add a free key above for full automatic reading.');
     job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
       .then(function () {
-        S.busy = false; renderQueue(); renderDrafts(); runQueue();
+        S.active--; renderQueue(); renderDrafts(); runQueue();
         if (!S.items.some(function (x) { return x.state === 'wait' || x.state === 'read'; })) { var m = $('sendmsg'); if (m && /^Picked up/.test(m.textContent)) { delete m.dataset.keep; m.textContent = ''; updateSend(); } }
       });
   }
