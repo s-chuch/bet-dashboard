@@ -17,3 +17,5 @@
 .near p{margin:0;font-size:12.5px;color:var(--mut)}
 .empty{color:var(--mut);font-size:13.5px;padding:6px 2px}
 .err{color:var(--lose)}
+.app{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.03em;padding:3px 10px;border-radius:999px;margin-bottom:7px;color:#fff}
+.app-FanDuel{background:#1493ff}.app-DraftKings{background:#53d337;color:#0b0d12}.app-bet365{background:#027b5b;color:#ffdf1b}.app-theScore{background:#6c2bd9}

@@ -14,7 +14,7 @@
   var opt = function (extra) { var o = { headers: hdrs(), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }; for (var k in extra) o[k] = extra[k]; return o; };
 
   function header(r) {
-    return '<h4>' + esc(r.sport + ' (' + r.league + '), ' + r.market.toUpperCase() + ': ' + r.selection + ' (' + r.away + ' @ ' + r.home + ')') + '</h4>';
+    return '<span class="app app-' + esc(r.book) + '">' + esc(r.book_app) + '</span><h4>' + esc(r.book_app + ': ' + r.sport + ' (' + r.league + '), ' + r.market.toUpperCase() + ': ' + r.selection + ' (' + r.away + ' @ ' + r.home + ')') + '</h4>';
   }
   function full(r) {
     var line = r.pin_line_type === 'alt' ? ' Pinnacle\u2019s matching line is an alternate one, so double-check the price.' : '';
@@ -29,7 +29,7 @@
       '</ul></article>';
   }
   function short(r) {
-    return '<article class="pick near">' + header(r) + '<p>' + esc(r.book_app) + ' ' + am(r.odds) + ' \u00b7 fair ' + am(r.fair_odds) + ' \u00b7 ' + r.ev_pct + '% EV \u00b7 needs ' + am(r.kill_price) + ' \u00b7 ' + esc(r.start_et) + '</p></article>';
+    return '<article class="pick near">' + header(r) + '<p><b>' + esc(r.book_app) + '</b> ' + am(r.odds) + ' \u00b7 fair ' + am(r.fair_odds) + ' \u00b7 ' + r.ev_pct + '% EV \u00b7 needs ' + am(r.kill_price) + ' \u00b7 ' + esc(r.start_et) + '</p></article>';
   }
   function render(d) {
     if (!d || !d.ok) { $('scan-time').textContent = d && d.scanned_et ? d.scanned_et : 'never'; $('bets').innerHTML = '<p class="empty err">' + esc(d && d.error ? 'Last scan failed: ' + d.error : 'No scan yet. Tap Scan now.') + '</p>'; return; }
