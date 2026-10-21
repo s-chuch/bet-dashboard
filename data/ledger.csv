@@ -237,3 +237,13 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-21 10:37,DraftKings,6b6a71e7,stake,-0.20,stake
 2026-10-21 10:37,DraftKings,34bb5692,stake,-0.20,stake
 2026-10-21 10:37,DraftKings,c6045ccd,stake,-0.20,stake
+2026-10-21 10:37,Caesars,f8f45202,return,2.67,won
+2026-10-21 10:37,DraftKings,e4267b6c,settled,0.00,"lost, no return"
+2026-10-21 10:37,DraftKings,bc1db943,settled,0.00,"lost, no return"
+2026-10-21 10:37,DraftKings,7646bf32,settled,0.00,"lost, no return"
+2026-10-21 10:37,theScore,ded63a12,return,1.28,won
+2026-10-21 10:37,theScore,bc891117,settled,0.00,"lost, no return"
+2026-10-21 10:37,theScore,341fb871,settled,0.00,"lost, no return"
+2026-10-21 10:37,theScore,551f70e9,settled,0.00,"lost, no return"
+2026-10-21 10:37,theScore,8307d992,settled,0.00,"lost, no return"
+2026-10-21 10:37,theScore,d6857658,settled,0.00,"lost, no return"
