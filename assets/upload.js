@@ -331,7 +331,7 @@
       rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
       : ocrRead(it, 'Basic reader (no AI key). Add a free key above for full automatic reading.');
-    job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { it.state = 'err'; it.msg = 'Could not read this picture (' + (e && e.message ? e.message : e) + ')'; })
+    job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { var m = String(e && e.message ? e.message : e); it.state = 'err'; if (/could not be read|NotReadable|Code=8|could not open/i.test(m)) { it.file = null; it.msg = NO_OPEN; } else it.msg = 'Could not read this picture (' + m + ')'; })
       .then(function () {
         S.active--; renderQueue(); renderDrafts(); runQueue();
         if (!S.items.some(function (x) { return x.state === 'wait' || x.state === 'read'; })) { var m = $('sendmsg'); if (m && /^Picked up/.test(m.textContent)) { delete m.dataset.keep; m.textContent = ''; updateSend(); } }
@@ -473,8 +473,8 @@
   function renderQueue() {
     saveSoon();
     $('queue').innerHTML = S.items.map(function (it) {
-      var st = it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ('Reading… ' + (it.pct || 0) + '%') : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
-      return '<div class="qi"><img alt="" src="' + esc(it.url) + '"><div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">Re-read</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
+      var st = it.state === 'copy' ? 'Opening…' : it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ('Reading… ' + (it.pct || 0) + '%') : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
+      return '<div class="qi">' + (it.url ? '<img alt="" src="' + esc(it.url) + '">' : '<span style="width:48px"></span>') + '<div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">' + (it.file ? 'Re-read' : 'Choose again') + '</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
     }).join('');
   }
   function fld(d, k, label, cls, type) {
@@ -504,13 +504,49 @@
   }
 
   /* ---------- events ---------- */
-  function addFiles(list) {
-    Array.prototype.forEach.call(list || [], function (f) {
-      if (!/^image\//.test(f.type) && !/\.(png|jpe?g|webp|heic)$/i.test(f.name)) return;
-      if (f.size > 25 * 1024 * 1024) return;
-      S.items.push({ id: S.nextId++, file: f, name: f.name || 'screenshot', url: URL.createObjectURL(f), state: 'wait', pct: 0 });
+  /* Copy the picture's bytes right away: iOS Safari File handles go stale (WebKit "Code=8" NotReadableError) after tab sleep,
+     reload or for iCloud photos, so the original File is never read again after this. */
+  var NO_OPEN = 'Your phone couldn\'t open this photo. If it\'s in iCloud, open it in Photos first so it downloads, then choose it again.';
+  function readBytes(f) {
+    if (f.arrayBuffer) return f.arrayBuffer().catch(function () { return readFR(f); });
+    return readFR(f);
+  }
+  function readFR(f) { return new Promise(function (res, rej) { var r = new FileReader(); r.onload = function () { res(r.result); }; r.onerror = function () { rej(r.error || new Error('read failed')); }; r.readAsArrayBuffer(f); }); }
+  function decode(blob) {   // ImageBitmap where available, else <img>
+    if (typeof createImageBitmap === 'function') return createImageBitmap(blob).catch(function () { return imgOf(blob); });
+    return imgOf(blob);
+  }
+  function imgOf(blob) { return new Promise(function (res, rej) { var u = URL.createObjectURL(blob), i = new Image(); i.onload = function () { URL.revokeObjectURL(u); res(i); }; i.onerror = function () { URL.revokeObjectURL(u); rej(new Error('decode failed')); }; i.src = u; }); }
+  // HEIC/HEIF (Tesseract can't read it) or very large pictures -> JPEG, longest side 3000 px
+  function normalize(blob, name) {
+    var heic = /hei[cf]/i.test(blob.type) || /\.hei[cf]$/i.test(name || '');
+    if (!heic && blob.size <= 8 * 1024 * 1024) return Promise.resolve(blob);
+    return decode(blob).then(function (im) {
+      var w = im.width || im.naturalWidth, h = im.height || im.naturalHeight, sc = Math.min(1, 3000 / Math.max(w, h)), c = document.createElement('canvas');
+      c.width = Math.round(w * sc); c.height = Math.round(h * sc); c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+      if (im.close) im.close();
+      return new Promise(function (res) { c.toBlob(function (b) { res(b || blob); }, 'image/jpeg', 0.92); });
+    }).catch(function () { if (heic) throw new Error('heic'); return blob; });
+  }
+  function copyFile(f) {
+    return readBytes(f).then(function (buf) {
+      if (!buf || !buf.byteLength) throw new Error('empty');
+      return normalize(new Blob([buf], { type: f.type || 'image/jpeg' }), f.name);
     });
-    renderQueue(); runQueue();
+  }
+  function addFiles(list) {
+    var arr = Array.prototype.slice.call(list || []).filter(function (f) { return (/^image\//.test(f.type) || /\.(png|jpe?g|webp|hei[cf])$/i.test(f.name)) && f.size <= 25 * 1024 * 1024; });
+    var target = S.pickFor; S.pickFor = null;
+    if (target) S.drafts = S.drafts.filter(function (d) { return String(d.itemId) !== String(target.id); });
+    arr.forEach(function (f, n) {
+      var it = n === 0 && target ? target : { id: S.nextId++, name: f.name || 'screenshot' };
+      it.name = f.name || it.name; it.file = null; it.url = ''; it.state = 'copy'; it.msg = 'Opening…'; it.pct = 0; it.waited = 0;
+      if (it !== target) S.items.push(it);
+      copyFile(f).then(function (b) { it.file = b; it.url = URL.createObjectURL(b); it.state = 'wait'; it.msg = ''; },
+        function () { it.state = 'err'; it.msg = NO_OPEN; })
+        .then(function () { renderQueue(); renderDrafts(); runQueue(); });
+    });
+    renderQueue();
   }
   $('files').addEventListener('change', function (e) { addFiles(e.target.files); e.target.value = ''; });
   var drop = $('drop');
@@ -518,7 +554,8 @@
   ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); }); });
   drop.addEventListener('drop', function (e) { addFiles(e.dataTransfer && e.dataTransfer.files); });
   function reread(id) {
-    var it = S.items.filter(function (x) { return String(x.id) === String(id); })[0]; if (!it || it.state === 'read' || it.state === 'wait') return;
+    var it = S.items.filter(function (x) { return String(x.id) === String(id); })[0]; if (!it || it.state === 'read' || it.state === 'wait' || it.state === 'copy') return;
+    if (!(it.file instanceof Blob) || !it.file.size) { S.pickFor = it; it.msg = 'Choose ' + it.name + ' again.'; renderQueue(); $('files').click(); return; }
     S.drafts = S.drafts.filter(function (d) { return String(d.itemId) !== String(id); });
     it.state = 'wait'; it.msg = ''; it.pct = 0; it.waited = 0; S.drafts.forEach(function (x) { x._seen = 0; });
     renderQueue(); renderDrafts(); runQueue();
@@ -527,7 +564,7 @@
   $('queue').addEventListener('click', function (e) {
     var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rm'); if (!id) return;
     var it = S.items.filter(function (x) { return String(x.id) === id; })[0]; if (!it || it.state === 'read') return;
-    try { URL.revokeObjectURL(it.url); } catch (x) {}
+    try { if (it.url) URL.revokeObjectURL(it.url); } catch (x) {}
     S.items = S.items.filter(function (x) { return x !== it; }); S.drafts = S.drafts.filter(function (d) { return d.file !== it.name; });
     renderQueue(); renderDrafts();
   });
@@ -573,7 +610,7 @@
         if (!S.items.length && !S.drafts.length) { st.delete('state'); return; }
         st.put({
           nextId: S.nextId,
-          items: S.items.map(function (it) { return { id: it.id, name: it.name, file: it.file, state: it.state === 'err' || it.state === 'done' ? it.state : 'wait', msg: it.state === 'err' ? it.msg : '' }; }),
+          items: S.items.map(function (it) { return { id: it.id, name: it.name, file: it.file instanceof Blob ? it.file : null, state: it.state === 'err' || it.state === 'done' ? it.state : (it.file ? 'wait' : 'err'), msg: it.state === 'err' || !it.file ? (it.msg || NO_OPEN) : '' }; }),
           drafts: S.drafts.map(function (d) { var o = {}; Object.keys(d).forEach(function (k) { if (k !== '_seen') o[k] = d[k]; }); return o; })
         }, 'state');
       } catch (e) {}
@@ -583,7 +620,11 @@
     return dbOpen().then(function () { return dbGet('state'); }).then(function (st) {
       if (!st || !(st.items || []).length && !(st.drafts || []).length) return;
       S.nextId = Math.max(S.nextId, st.nextId || 1);
-      S.items = (st.items || []).filter(function (it) { return it.file; }).map(function (it) { return { id: it.id, file: it.file, name: it.name, url: URL.createObjectURL(it.file), state: it.state, msg: it.msg || '', pct: it.state === 'done' ? 100 : 0 }; });
+      S.items = (st.items || []).map(function (it) {
+        var ok = it.file instanceof Blob && it.file.size > 0, u = '';
+        if (ok) try { u = URL.createObjectURL(it.file); } catch (e) { ok = false; }
+        return { id: it.id, file: ok ? it.file : null, name: it.name, url: u, state: ok ? it.state : 'err', msg: ok ? (it.msg || '') : 'This picture is no longer on this page. Tap Choose again.', pct: it.state === 'done' && ok ? 100 : 0 };
+      });
       S.drafts = (st.drafts || []);
       var n = S.items.filter(function (x) { return x.state === 'wait'; }).length;
       var m = $('sendmsg'); if (m) { m.dataset.keep = '1'; m.textContent = 'Picked up where you left off' + (n ? ': reading ' + n + ' more picture' + (n === 1 ? '' : 's') + '…' : '.'); }
