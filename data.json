@@ -16,14 +16,14 @@
    "updated": "2026-10-20 15:28"
   },
   {
+   "book": "bet365",
+   "balance": 62.67,
+   "updated": "2026-10-21 09:14"
+  },
+  {
    "book": "DraftKings",
    "balance": 62.24,
    "updated": "2026-10-20 15:28"
-  },
-  {
-   "book": "bet365",
-   "balance": 62.14,
-   "updated": "2026-10-21 09:10"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 656.25,
+ "total": 656.78,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "NFL",
@@ -1208,98 +1208,6 @@
    "payout": 90.0,
    "payout_est": false,
    "start_ts": "2026-10-31T20:00Z"
-  },
-  {
-   "bet_id": "207a4cea",
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Fenerbahce v Slavia Prague",
-   "market": "Same Game Parlay (50% profit boost)",
-   "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
-   "start": "Tue Oct 20 12:45 PM ET",
-   "price": "+110",
-   "boosted_price": "+165",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.33,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Mason Greenwood",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Mason Greenwood 1+ SOT",
-     "pteam": "FEN",
-     "pname": "Mason Greenwood",
-     "pid": "276221"
-    },
-    {
-     "type": "prop",
-     "player": "Vedat Muriqi",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Vedat Muriqi 1+ SOT",
-     "pteam": "FEN",
-     "pname": "Vedat Muriqi",
-     "pid": "240209"
-    },
-    {
-     "type": "prop",
-     "player": "Marco Asensio",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Marco Asensio 3+ shots",
-     "pteam": "FEN",
-     "pname": "Marco Asensio",
-     "pid": "195821"
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261020",
-    "groups": null,
-    "id": "401915403",
-    "snapshot": {
-     "date": "2026-10-20T16:45Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "436",
-       "name": "Fenerbahce",
-       "abbr": "FEN",
-       "short": "Fenerbahce",
-       "nick": "Fenerbahce",
-       "location": "Fenerbahce",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "494",
-       "name": "Slavia Prague",
-       "abbr": "SLP",
-       "short": "Slavia Prague",
-       "nick": "Slavia Prague",
-       "location": "Slavia Prague",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.2,
-   "payout": 0.53,
-   "payout_est": false,
-   "start_ts": "2026-10-20T16:45Z"
   },
   {
    "bet_id": "cfd5b49a",
@@ -2006,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "NFL",
@@ -2734,7 +2642,7 @@
      "home": 0.6818,
      "away": 0.3182,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "NFL",
@@ -3107,7 +3015,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "MLB",
@@ -3403,7 +3311,7 @@
      "home": 0.605,
      "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "MLB",
@@ -4803,7 +4711,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-21T13:14Z"
+     "t": "2026-10-21T13:15Z"
     }
    },
    "sport": "NCAAF",
@@ -4971,6 +4879,16 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": true
+  },
+  {
+   "date": "2026-10-19",
+   "book": "bet365",
+   "event": "Fenerbahce v Slavia Prague",
+   "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
+   "result": "won",
+   "pnl": 0.33,
+   "stake": 0.2,
+   "auto": false
   },
   {
    "date": "2026-10-19",
@@ -5923,15 +5841,15 @@
    "auto": false
   }
  ],
- "pnl_total": 93.57,
+ "pnl_total": 93.9,
  "unsettled": {
-  "n": 26,
-  "cash_stake": 14.7,
-  "max_payout": 1031.26,
+  "n": 25,
+  "cash_stake": 14.5,
+  "max_payout": 1030.73,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 14.7,
+ "open_stake": 14.5,
  "recs": {
   "stats": {
    "overall": {
@@ -9067,26 +8985,7 @@
   ]
  },
  "auto": {
-  "needs_review": [
-   {
-    "bet_id": "207a4cea",
-    "book": "bet365",
-    "event": "Fenerbahce v Slavia Prague (UEFA Champions League)",
-    "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
-    "stake": "0.20",
-    "reason": "leg \"Marco Asensio 3+ shots\": player \"Marco Asensio\" not in any box score (DNP void, or name mismatch?)",
-    "legs": [
-     {
-      "leg": "Mason Greenwood 1+ SOT",
-      "result": "won"
-     },
-     {
-      "leg": "Vedat Muriqi 1+ SOT",
-      "result": "won"
-     }
-    ]
-   }
-  ],
+  "needs_review": [],
   "last_settled": [
    {
     "bet_id": "0d1b2254",
@@ -9314,7 +9213,7 @@
     "at": "2026-10-19 17:01"
    }
   ],
-  "last_change_at": "2026-10-21 09:10 ET"
+  "last_change_at": "2026-10-21 09:15 ET"
  },
  "open_live_n": 25,
  "open_stake_by_book": {
@@ -9325,6 +9224,6 @@
   "PointsBet": 158.75,
   "theScore": 0.2
  },
- "hash": "4e6991c7384a4c48ddea35069c57191309ece05a",
- "generated_at": "2026-10-21T09:14:05-04:00"
+ "hash": "b33197d5ef23fff6315a97ace947624c7b9aa4a1",
+ "generated_at": "2026-10-21T09:15:10-04:00"
 }

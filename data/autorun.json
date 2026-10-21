@@ -1,24 +1,5 @@
 {
- "needs_review": [
-  {
-   "bet_id": "207a4cea",
-   "book": "bet365",
-   "event": "Fenerbahce v Slavia Prague (UEFA Champions League)",
-   "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
-   "stake": "0.20",
-   "reason": "leg \"Marco Asensio 3+ shots\": player \"Marco Asensio\" not in any box score (DNP void, or name mismatch?)",
-   "legs": [
-    {
-     "leg": "Mason Greenwood 1+ SOT",
-     "result": "won"
-    },
-    {
-     "leg": "Vedat Muriqi 1+ SOT",
-     "result": "won"
-    }
-   ]
-  }
- ],
+ "needs_review": [],
  "last_settled": [
   {
    "bet_id": "0d1b2254",
@@ -247,5 +228,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 09:10 ET"
+ "last_change_at": "2026-10-21 09:15 ET"
 }

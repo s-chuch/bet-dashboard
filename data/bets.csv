@@ -104,7 +104,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-19,PointsBet,Forest Green v Chesham Utd (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Chesham Utd,+1000,,10.00,100.00,,,lost,-10.00,dc3d72cd,2026-10-20 16:54,manual
 2026-10-19,PointsBet,Barcelona v Alaves (Spanish La Liga),Sat Oct 31 04:00 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+800,,10.00,80.00,,,open,,5db8dfe1,,
 2026-10-19,PointsBet,Anstey Nomads v Macclesfield FC (English FA Cup),Tue Oct 20 02:45 PM ET,3-Way Moneyline (WELCOMEDM rollover),Anstey Nomads,+240,,10.00,24.00,,,lost,-10.00,682b90b5,2026-10-20 16:54,manual
-2026-10-19,bet365,Fenerbahce v Slavia Prague (UEFA Champions League),Tue Oct 20 12:45 PM ET,Same Game Parlay (50% profit boost),Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots,+110,+165,0.20,0.33,,,open,,207a4cea,,
+2026-10-19,bet365,Fenerbahce v Slavia Prague (UEFA Champions League),Tue Oct 20 12:45 PM ET,Same Game Parlay (50% profit boost),Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots,+110,+165,0.20,0.33,,,won,0.33,207a4cea,2026-10-21 09:14,manual
 2026-10-20,FanDuel,New York Giants @ Houston Texans (NFL),Sun Oct 25 1:00 PM ET,"Moneyline (bonus bet $1.00; price unconfirmed, est.)",New York Giants,+370,,1.00 (bonus),3.70,21.2,78.6,open,,cfd5b49a,,
 2026-10-19,Caesars,Miami Dolphins @ New York Jets,Sun Oct 25 01:00 PM ET,SGP 3-leg (10% profit boost),NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter,+325,+358,0.50,1.79,,,open,,48cfe23a,,
 2026-10-20,Caesars,Golden State Valkyries @ Atlanta Dream,Wed Oct 21 08:00 PM ET,SGP 2-leg (30% profit boost),Over 150.5 + Valkyries -3.5,+425,+554,0.50,2.77,,,open,,0e0f4610,,
