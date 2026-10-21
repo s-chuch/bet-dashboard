@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NFL",
@@ -2006,7 +2006,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NFL",
@@ -2725,7 +2725,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NFL",
@@ -3086,10 +3086,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.599,
-     "away": 0.401,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T00:52Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "MLB",
@@ -3373,10 +3373,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.599,
-     "away": 0.401,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-21T00:52Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "MLB",
@@ -3384,216 +3384,6 @@
    "payout": 2.72,
    "payout_est": false,
    "start_ts": "2026-10-24T00:00Z"
-  },
-  {
-   "bet_id": "9d91f35f",
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Los Angeles Kings @ Washington Capitals",
-   "market": "SGP 4-leg (30% profit boost)",
-   "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
-   "start": "Tue Oct 20 07:08 PM ET",
-   "price": "+400",
-   "boosted_price": "+520",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 2.6,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Jakob Chychrun",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Jakob Chychrun 2+ SOG",
-     "pteam": "WSH",
-     "pname": "Jakob Chychrun",
-     "pid": "4024950"
-    },
-    {
-     "type": "prop",
-     "player": "Adrian Kempe",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Adrian Kempe 3+ SOG",
-     "pteam": "LA",
-     "pname": "Adrian Kempe",
-     "pid": "3114802"
-    },
-    {
-     "type": "prop",
-     "player": "Alex Ovechkin",
-     "stat": "sog",
-     "op": "min",
-     "min": 3,
-     "text": "Alex Ovechkin 3+ SOG",
-     "pteam": "WSH",
-     "pname": "Alex Ovechkin",
-     "pid": "3101"
-    },
-    {
-     "type": "prop",
-     "player": "Darcy Kuemper",
-     "stat": "saves",
-     "op": "min",
-     "min": 24,
-     "text": "Darcy Kuemper 24+ saves",
-     "pteam": "LA",
-     "pname": "Darcy Kuemper",
-     "pid": "2610321"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261020",
-    "groups": null,
-    "id": "401892542",
-    "snapshot": {
-     "date": "2026-10-20T23:00Z",
-     "period": 2,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "End of 2nd",
-     "teams": [
-      {
-       "id": "23",
-       "name": "Washington Capitals",
-       "abbr": "WSH",
-       "short": "Capitals",
-       "nick": "Capitals",
-       "location": "Washington",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "8",
-       "name": "Los Angeles Kings",
-       "abbr": "LA",
-       "short": "Kings",
-       "nick": "Kings",
-       "location": "Los Angeles",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-lak-wsh-2026-10-20",
-     "title": "Kings vs. Capitals",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Capitals",
-        "Kings"
-       ],
-       "tokens": [
-        "67534849156865846480597098748988694340893929760090580680715847061334204988596",
-        "28317720256909435584691832380764529253448726737990564483339007157762576331410"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Capitals",
-        "Kings"
-       ],
-       "tokens": [
-        "1519808492626571328546601466803303676838228265810404995301917599661418416539",
-        "114638391006512997734085053894889513342752561940346916083160894030272826381468"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "66346747385600019417583838929650432199060505724028777137574761821584310591161",
-        "17714494519727285575286059241961766407081543255713383368064552982742287368619"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "49461032484069626145064154158329644695290247581123365435672784486140362695457",
-        "8463378326367465089819609894345190960349666227302394583497723450974414969559"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "25920792981044025431572625006527146737577358673563991651004837452238612490938",
-        "112580412880644929577259265316972126698669218514129578974424867940910703735712"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "89724699728397721017342364612285945847443266350661030002373466989875970746769",
-        "53739073155417851488373216303247091015246491447791320322930195194191465714206"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "39706385323124904504983348839242561591328910478750116174199584009755025036096",
-        "17865876579988716872420434238908925919807002339984842908809252130513928274236"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Kings",
-       "Capitals"
-      ],
-      "tokens": [
-       "40269947215745651963455295220527473268707373964950973430064632882612325499471",
-       "18649853143465572006291333455660198460031096854130098977855424406841583253675"
-      ]
-     }
-    },
-    "an": {
-     "id": 293442,
-     "home_team_id": 242,
-     "away_team_id": 217
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.555,
-     "away": 0.445,
-     "spread": 0.01,
-     "t": "2026-10-21T00:52Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 3.1,
-   "payout_est": false,
-   "start_ts": "2026-10-20T23:08Z"
   },
   {
    "bet_id": "0b6fbbde",
@@ -4004,10 +3794,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.4901,
-     "away": 0.5099,
+     "home": 0.495,
+     "away": 0.505,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NBA",
@@ -4067,11 +3857,11 @@
     "id": "401892543",
     "snapshot": {
      "date": "2026-10-20T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 323.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "5:23 - 3rd",
      "teams": [
       {
        "id": "29",
@@ -4081,7 +3871,7 @@
        "nick": "Blue Jackets",
        "location": "Columbus",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "21",
@@ -4230,10 +4020,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.015,
-     "away": 0.985,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NHL",
@@ -4463,11 +4253,11 @@
     "id": "401871069",
     "snapshot": {
      "date": "2026-10-20T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 186.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "3:06 - 3rd",
      "teams": [
       {
        "id": "48",
@@ -4477,7 +4267,7 @@
        "nick": "Blue Hens",
        "location": "Delaware",
        "home": true,
-       "score": "24"
+       "score": "45"
       },
       {
        "id": "2623",
@@ -4487,7 +4277,7 @@
        "nick": "Bears",
        "location": "Missouri State",
        "home": false,
-       "score": "28"
+       "score": "35"
       }
      ]
     },
@@ -5081,10 +4871,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.505,
-     "away": 0.495,
+     "home": 0.875,
+     "away": 0.125,
      "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NCAAF",
@@ -5150,11 +4940,11 @@
     "id": "401909089",
     "snapshot": {
      "date": "2026-10-20T23:00Z",
-     "period": 3,
-     "clock": 586.0,
+     "period": 4,
+     "clock": 377.0,
      "state": "in",
      "completed": false,
-     "detail": "9:46 - 3rd",
+     "detail": "6:17 - 4th",
      "teams": [
       {
        "id": "18",
@@ -5164,7 +4954,7 @@
        "nick": "Knicks",
        "location": "New York",
        "home": true,
-       "score": "60"
+       "score": "90"
       },
       {
        "id": "20",
@@ -5174,7 +4964,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": false,
-       "score": "58"
+       "score": "93"
       }
      ]
     },
@@ -5511,10 +5301,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6287,
-     "away": 0.3713,
-     "spread": 0.01,
-     "t": "2026-10-21T00:53Z"
+     "home": 0.3788,
+     "away": 0.6212,
+     "spread": 0.03,
+     "t": "2026-10-21T01:37Z"
     }
    },
    "sport": "NBA",
@@ -5582,6 +5372,16 @@
    "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
    "result": "won",
    "pnl": 3.29,
+   "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "Caesars",
+   "event": "Los Angeles Kings @ Washington Capitals",
+   "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
+   "result": "lost",
+   "pnl": -0.5,
    "stake": 0.5,
    "auto": true
   },
@@ -6646,15 +6446,15 @@
    "auto": false
   }
  ],
- "pnl_total": 95.87,
+ "pnl_total": 95.37,
  "unsettled": {
-  "n": 23,
-  "cash_stake": 16.2,
-  "max_payout": 797.41,
+  "n": 22,
+  "cash_stake": 15.7,
+  "max_payout": 794.31,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.2,
+ "open_stake": 15.7,
  "recs": {
   "stats": {
    "overall": {
@@ -9812,6 +9612,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "9d91f35f",
+    "book": "Caesars",
+    "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "LA 5-2 WSH",
+    "at": "2026-10-20 21:37"
+   },
+   {
     "bet_id": "3829ebcd",
     "book": "bet365",
     "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
@@ -10026,28 +9835,19 @@
     "pnl": -10.0,
     "final": "SEA 3-1 CHI",
     "at": "2026-10-18 21:52"
-   },
-   {
-    "bet_id": "2146f957",
-    "book": "Caesars",
-    "pick": "Kaprizov AGS + McDavid AGS + Caufield AGS",
-    "result": "won",
-    "pnl": 5.04,
-    "final": "CBJ 1-2 MIN; EDM 6-2 UTA; BUF 3-4 MTL",
-    "at": "2026-10-18 20:32"
    }
   ],
-  "last_change_at": "2026-10-20 17:37 ET"
+  "last_change_at": "2026-10-20 21:37 ET"
  },
- "open_live_n": 22,
+ "open_live_n": 21,
  "open_stake_by_book": {
   "bet365": 0.2,
-  "Caesars": 3.5,
+  "Caesars": 3.0,
   "DraftKings": 0.3,
   "FanDuel": 2.1,
   "PointsBet": 144.25,
   "theScore": 0.4
  },
- "hash": "7c5d2f711081d877a72993e28569c336cb33c8b3",
- "generated_at": "2026-10-20T20:53:03-04:00"
+ "hash": "87134966895f3e459e72acc3e1199f4973795be0",
+ "generated_at": "2026-10-20T21:37:30-04:00"
 }
