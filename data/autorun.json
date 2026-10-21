@@ -1,6 +1,24 @@
 {
  "needs_review": [
   {
+   "bet_id": "11be1d03",
+   "book": "bet365",
+   "event": "Bayern Munich v Arsenal",
+   "pick": "Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots",
+   "stake": "0.20",
+   "reason": "leg \"Jamal Musiala 3+ shots\": player \"Jamal Musiala\" not in any box score (DNP void, or name mismatch?)",
+   "legs": [
+    {
+     "leg": "Harry Kane 1+ SOT",
+     "result": "won"
+    },
+    {
+     "leg": "Harry Kane 3+ shots",
+     "result": "won"
+    }
+   ]
+  },
+  {
    "bet_id": "c4caca25",
    "book": "theScore",
    "event": "Lille v Galatasaray",
@@ -274,5 +292,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 15:10 ET"
+ "last_change_at": "2026-10-21 16:59 ET"
 }
