@@ -1,6 +1,15 @@
 {
  "needs_review": [
   {
+   "bet_id": "c4caca25",
+   "book": "theScore",
+   "event": "Lille v Galatasaray",
+   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
+   "stake": "0.2",
+   "reason": "leg \"Under 3.5 Total Goals\": market/stat not recognised",
+   "legs": []
+  },
+  {
    "bet_id": "3f3089f2",
    "book": "Caesars",
    "event": "Boston Celtics @ Detroit Pistons",
@@ -265,5 +274,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 12:59 ET"
+ "last_change_at": "2026-10-21 15:10 ET"
 }
