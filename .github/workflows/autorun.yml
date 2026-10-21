@@ -85,13 +85,20 @@ jobs:
             if [ "$pushed" -ne 1 ] && [ "$status" -eq 0 ]; then status=1; echo "::error::could not push after 3 attempts"; fi
           }
           # live loop only: Kalshi prices (it rejects browser requests) -> one rewritten commit on the live-feed branch, read by the Live page
+          # plus live_status.json: backup game status from NHL / NBA feeds that block browsers (display only, never used to settle)
           kalshi() {
-            python3 scripts/kalshi_live.py "$RUNNER_TEMP/kalshi.json" 2>/dev/null || return 0
-            [ -s "$RUNNER_TEMP/kalshi.json" ] || return 0
-            blob=$(git hash-object -w "$RUNNER_TEMP/kalshi.json")
-            tree=$(printf '100644 blob %s\tkalshi.json\n' "$blob" | git mktree)
-            commit=$(git commit-tree "$tree" -m "kalshi feed $(date -u +%H:%M:%S)")
-            git push -q -f origin "$commit:refs/heads/live-feed" || echo "kalshi feed push failed"
+            rm -f "$RUNNER_TEMP/kalshi.json" "$RUNNER_TEMP/live_status.json"
+            python3 scripts/kalshi_live.py "$RUNNER_TEMP/kalshi.json" 2>/dev/null || true
+            python3 scripts/live_status.py "$RUNNER_TEMP/live_status.json" 2>/dev/null || true
+            entries=""
+            for f in kalshi.json live_status.json; do
+              [ -s "$RUNNER_TEMP/$f" ] || continue
+              entries="${entries}$(printf '100644 blob %s\t%s' "$(git hash-object -w "$RUNNER_TEMP/$f")" "$f")"$'\n'
+            done
+            [ -n "$entries" ] || return 0
+            tree=$(printf '%s' "$entries" | git mktree)
+            commit=$(git commit-tree "$tree" -m "live feed $(date -u +%H:%M:%S)")
+            git push -q -f origin "$commit:refs/heads/live-feed" || echo "live feed push failed"
           }
           if [ "$LIVE" = "true" ]; then
             echo "LIVE loop: settle check every 5-10 s while any bet is active (max 55 min)"

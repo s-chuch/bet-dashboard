@@ -104,6 +104,8 @@ async function refreshScores(full){
       if(p&&p.homeWinPercentage!=null)probs[ev.id]={home:p.homeWinPercentage,away:p.awayWinPercentage,t:Date.now(),src:"sb"}}}));
   const every=[...new Map(allMatches().map(m=>[m.id,m])).values()];   // need{} holds one match per league+day; the backups need every game
   await mlbBackup(every);
+  await anBackup(every).catch(()=>{});
+  await feedBackup(every).catch(()=>{});
   await sofaBackup(every).catch(()=>{});
   await sofaOdds(every).catch(()=>{});
   // player props need the box score (only in-progress SGPs with a prop leg)
@@ -128,6 +130,33 @@ async function mlbBackup(ms){const list=ms.filter(m=>m.path==="baseball/mlb"),da
       if(st==="Final"&&g.state!=="post"&&hit.status.detailedState==="Final")games[m.id]={...g,state:"post",completed:true,detail:"Final",teams:sc};
       else if(st==="Live"&&g.state==="pre"&&ls.currentInning){const top=ls.inningHalf==="Top",half=ls.isTopInning===true||top?"Top":"Bot";
         games[m.id]={...g,state:"in",completed:false,period:ls.currentInning,outs:ls.outs,detail:`${half} ${ordn(ls.currentInning)}`,teams:sc};CLK[m.id]={clock:null,t:Date.now(),moving:false}}}}}
+// Backup game status when ESPN is slow to flip a game live: only games past their listed start that ESPN still calls "pre".
+// ESPN stays primary (it takes over the moment it reports the game live) and the server never settles on a backup alone.
+function lateGames(ms){return ms.filter(m=>{const g=gameFor(m);return g&&!g.completed&&g.state==="pre"&&g.date&&Date.now()>=Date.parse(g.date)-60000&&Date.now()-Date.parse(g.date)<4*3600e3})}
+const nmEq=(a,b)=>{const x=norm(a).join(" "),y=norm(b).join(" ");return!!x&&!!y&&(x===y||x.endsWith(" "+y)||y.endsWith(" "+x))};
+function teamHit(t,name,abbr){return(abbr&&t.abbr&&String(abbr).toUpperCase()===String(t.abbr).toUpperCase())||nmEq(name,t.name)||nmEq(name,t.location&&t.nick?t.location+" "+t.nick:"")}
+function applyBackup(m,g,away,home,detail,src){
+  const teams=g.teams.map(y=>({...y,score:String(y.home?home:away)}));
+  games[m.id]={...g,state:"in",completed:false,detail:`${detail||"Live"} · via ${src}`,teams,backup:src};CLK[m.id]={clock:null,t:Date.now(),moving:false}}
+// 1) Action Network public scoreboard (CORS allowed for this site): NBA, WNBA, NHL, NFL, college football, MLB, soccer
+const AN_SB={nba:"basketball/nba",wnba:"basketball/wnba",nhl:"hockey/nhl",nfl:"football/nfl",ncaaf:"football/college-football",mlb:"baseball/mlb"},ANSB={};
+async function anBackup(ms){const late=lateGames(ms);if(!late.length)return;
+  for(const m of late){const lg=Object.keys(AN_SB).find(k=>AN_SB[k]===m.path)||(SOCCER(m.path)?"soccer":null);if(!lg)continue;
+    const key=lg+m.date;let c=ANSB[key];
+    if(!c||Date.now()-c.t>12000){try{const r=await tfetch(`https://api.actionnetwork.com/web/v2/scoreboard/${lg}?date=${m.date}`,{cache:"no-store"});if(!r.ok)throw 0;c=ANSB[key]={t:Date.now(),g:(await r.json()).games||[]};FEED.anb={ok:Date.now()}}catch(e){FEED.anb={bad:"network/CORS"};continue}}
+    const g=gameFor(m);if(!g||g.state!=="pre")continue;const H=g.teams.find(t=>t.home),A=g.teams.find(t=>!t.home);if(!H||!A)continue;
+    const hit=c.g.find(x=>{if(Math.abs(Date.parse(x.start_time)-Date.parse(g.date))>3*3600e3)return false;const tm=id=>(x.teams||[]).find(t=>t.id===id)||{};
+      const h=tm(x.home_team_id),a=tm(x.away_team_id);return teamHit(H,h.full_name,h.abbr)&&teamHit(A,a.full_name,a.abbr)});
+    if(hit&&hit.status==="inprogress"&&hit.boxscore){const b=hit.boxscore;applyBackup(m,g,b.total_away_points!=null?b.total_away_points:"–",b.total_home_points!=null?b.total_home_points:"–",hit.status_display,"Action Network")}}}
+// 2) Official league feeds that block browser requests (NHL api-web.nhle.com): fetched by the GitHub live loop into live_status.json
+//    on the live-feed branch (scripts/live_status.py), read here through the contents API only while a game is late.
+const LS_URL="https://api.github.com/repos/s-chuch/bet-dashboard/contents/live_status.json?ref=live-feed";let LS={t:0,games:{}},LS_AT=0;
+async function feedBackup(ms){const late=lateGames(ms).filter(m=>{const g=gameFor(m);return g&&g.state==="pre"});if(!late.length)return;
+  let tok="";try{tok=localStorage.getItem("bt.gh.settle")||""}catch(e){}
+  if(Date.now()-LS_AT>(tok?15000:70000)){LS_AT=Date.now();
+    try{const r=await tfetch(LS_URL,{cache:"no-store",headers:{Accept:"application/vnd.github.raw",...(tok?{Authorization:"Bearer "+tok}:{})}});if(!r.ok)throw 0;const j=await r.json();LS={t:Date.parse(j.t)||0,games:j.games||{}};FEED.lsf={ok:Date.now()}}catch(e){FEED.lsf={bad:"no live feed yet"}}}
+  if(!LS.t||Date.now()-LS.t>180000)return;
+  for(const m of late){const x=LS.games[m.id],g=gameFor(m);if(x&&x.state==="in"&&g)applyBackup(m,g,x.away,x.home,x.detail,x.src||"league feed")}}
 // Free backup for soccer: SofaScore's public live feed covers leagues ESPN never updates (FA Cup qualifying, lower divisions, ...).
 // Unofficial API, so it is only used when ESPN still says "not started" after kickoff, and ESPN takes over as soon as it reports the game live.
 const SOFA="https://api.sofascore.com/api/v1/";const SOFA_ID={};let SOFA_LIVE={t:0,ev:[]},SOFA_FIN={};
@@ -1031,6 +1060,8 @@ function renderFeeds(){const el=$("feeds");if(!el)return;
   if(FEED.kal)parts.push(f("Kalshi",!!FEED.kal.ok,FEED.kal.bad||""));
   if(FEED.sofa)parts.push(f("Soccer backup",!!FEED.sofa.ok,FEED.sofa.bad||""));
   if(FEED.mlb)parts.push(f("MLB backup",!!FEED.mlb.ok,FEED.mlb.bad||""));
+  if(FEED.anb)parts.push(f("Action Network backup",!!FEED.anb.ok,FEED.anb.bad||""));
+  if(FEED.lsf)parts.push(f("League feed backup",!!FEED.lsf.ok,FEED.lsf.bad||""));
   const h=parts.join("")+(FEED.csp?` <span class="fbad">⚠ blocked by page security policy: ${esc(FEED.csp)}</span>`:"");
   if(el._h!==h){el._h=h;el.innerHTML=h}}
 function renderReview(){
