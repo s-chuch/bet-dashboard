@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.6683,
      "away": 0.3317,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -3015,7 +3015,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "MLB",
@@ -3429,20 +3429,20 @@
    "multi": true,
    "legs": [
     {
-     "type": "unknown",
+     "type": "total",
+     "side": "under",
+     "line": 3.5,
      "text": "Under 3.5 Total Goals"
     },
     {
-     "type": "prop",
-     "player": "Yes Both Teams",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
+     "type": "btts",
+     "yes": true,
      "text": "Yes Both Teams To Score"
     },
     {
      "type": "unknown",
-     "text": "Under 10.5 Total Corners"
+     "text": "Under 10.5 Total Corners",
+     "note": "corners/cards: settle by hand"
     }
    ],
    "match": {
@@ -3504,7 +3504,9 @@
    "multi": false,
    "legs": [
     {
-     "type": "unknown",
+     "type": "ml",
+     "team": "Hapoel Beer Sheva",
+     "women": false,
      "text": "Hapoel Beer Sheva"
     }
    ],
@@ -3532,8 +3534,11 @@
    "multi": false,
    "legs": [
     {
-     "type": "unknown",
-     "text": "Carrarese"
+     "type": "ml",
+     "team": "Carrarese",
+     "women": false,
+     "text": "Carrarese",
+     "team_ok": true
     }
    ],
    "match": {
@@ -3595,8 +3600,11 @@
    "multi": false,
    "legs": [
     {
-     "type": "unknown",
-     "text": "Lillestrom"
+     "type": "ml",
+     "team": "Lillestrom",
+     "women": false,
+     "text": "Lillestrom",
+     "team_ok": true
     }
    ],
    "match": {
@@ -3658,8 +3666,11 @@
    "multi": false,
    "legs": [
     {
-     "type": "unknown",
-     "text": "Clube do Remo"
+     "type": "ml",
+     "team": "Remo",
+     "women": false,
+     "text": "Clube do Remo",
+     "team_ok": true
     }
    ],
    "match": {
@@ -3784,8 +3795,11 @@
    "multi": false,
    "legs": [
     {
-     "type": "unknown",
-     "text": "Tijuana"
+     "type": "ml",
+     "team": "Tijuana",
+     "women": false,
+     "text": "Tijuana",
+     "team_ok": true
     }
    ],
    "match": {
@@ -4711,7 +4725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NCAAF",
@@ -5599,7 +5613,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -5663,11 +5677,10 @@
     {
      "type": "prop",
      "player": "Scottie Barnes",
-     "stat": null,
+     "stat": "pra",
      "op": "min",
      "min": 30,
      "text": "Scottie Barnes 30+ pts+reb+ast",
-     "stat_raw": "pts+reb+ast",
      "pteam": "TOR",
      "pname": "Scottie Barnes",
      "pid": "4433134"
@@ -5681,10 +5694,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 1,
-     "clock": 196.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "3:16 - 1st",
+     "detail": "2:43 - 1st",
      "teams": [
       {
        "id": "28",
@@ -5694,7 +5707,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "23"
+       "score": "26"
       },
       {
        "id": "4",
@@ -5704,7 +5717,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "11"
+       "score": "13"
       }
      ]
     },
@@ -6141,7 +6154,7 @@
      "home": 0.905,
      "away": 0.095,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -6300,10 +6313,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 161.0,
+     "clock": 149.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 2nd",
+     "detail": "2:29 - 2nd",
      "teams": [
       {
        "id": "27",
@@ -6801,10 +6814,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -6832,11 +6845,10 @@
     {
      "type": "prop",
      "player": "Franz Wagner",
-     "stat": null,
+     "stat": "pra",
      "op": "min",
      "min": 30,
      "text": "Franz Wagner 30+ pts+reb+ast",
-     "stat_raw": "pts+reb+ast",
      "pteam": "ORL",
      "pname": "Franz Wagner",
      "pid": "4566434"
@@ -6850,10 +6862,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 304.0,
+     "clock": 238.0,
      "state": "in",
      "completed": false,
-     "detail": "5:04 - 2nd",
+     "detail": "3:58 - 2nd",
      "teams": [
       {
        "id": "19",
@@ -6863,7 +6875,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "44"
+       "score": "47"
       },
       {
        "id": "1",
@@ -6873,7 +6885,7 @@
        "nick": "Hawks",
        "location": "Atlanta",
        "home": false,
-       "score": "52"
+       "score": "54"
       }
      ]
     },
@@ -7321,7 +7333,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -7388,10 +7400,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 1,
-     "clock": 595.0,
+     "clock": 551.0,
      "state": "in",
      "completed": false,
-     "detail": "9:55 - 1st",
+     "detail": "9:11 - 1st",
      "teams": [
       {
        "id": "14",
@@ -7515,10 +7527,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
+     "home": 0.345,
+     "away": 0.655,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NHL",
@@ -7563,10 +7575,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 161.0,
+     "clock": 149.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 2nd",
+     "detail": "2:29 - 2nd",
      "teams": [
       {
        "id": "27",
@@ -8064,10 +8076,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -8812,7 +8824,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -8846,8 +8858,12 @@
      "text": "Nicolas Jackson AGS"
     },
     {
-     "type": "unknown",
-     "text": "Tammy Abraham AGS (SGP)"
+     "type": "prop",
+     "player": "Tammy Abraham",
+     "stat": "goal",
+     "op": "min",
+     "min": 1,
+     "text": "Tammy Abraham AGS"
     },
     {
      "type": "prop",
@@ -8934,10 +8950,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 161.0,
+     "clock": 149.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 2nd",
+     "detail": "2:29 - 2nd",
      "teams": [
       {
        "id": "27",
@@ -9435,10 +9451,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -9516,10 +9532,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 304.0,
+     "clock": 238.0,
      "state": "in",
      "completed": false,
-     "detail": "5:04 - 2nd",
+     "detail": "3:58 - 2nd",
      "teams": [
       {
        "id": "19",
@@ -9529,7 +9545,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "44"
+       "score": "47"
       },
       {
        "id": "1",
@@ -9539,7 +9555,7 @@
        "nick": "Hawks",
        "location": "Atlanta",
        "home": false,
-       "score": "52"
+       "score": "54"
       }
      ]
     },
@@ -9987,7 +10003,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -10707,7 +10723,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NFL",
@@ -10987,7 +11003,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "MLB",
@@ -11102,10 +11118,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 161.0,
+     "clock": 149.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 2nd",
+     "detail": "2:29 - 2nd",
      "teams": [
       {
        "id": "27",
@@ -11603,10 +11619,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -11634,11 +11650,10 @@
     {
      "type": "prop",
      "player": "Kawhi Leonard",
-     "stat": null,
+     "stat": "pra",
      "op": "min",
      "min": 40,
      "text": "Kawhi Leonard 40+ pts+reb+ast",
-     "stat_raw": "pts+reb+ast",
      "pteam": "TOR",
      "pname": "Kawhi Leonard",
      "pid": "6450"
@@ -11652,10 +11667,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 1,
-     "clock": 196.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "3:16 - 1st",
+     "detail": "2:43 - 1st",
      "teams": [
       {
        "id": "28",
@@ -11665,7 +11680,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "23"
+       "score": "26"
       },
       {
        "id": "4",
@@ -11675,7 +11690,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "11"
+       "score": "13"
       }
      ]
     },
@@ -12112,7 +12127,7 @@
      "home": 0.905,
      "away": 0.095,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -12266,10 +12281,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 2,
-     "clock": 161.0,
+     "clock": 149.0,
      "state": "in",
      "completed": false,
-     "detail": "2:41 - 2nd",
+     "detail": "2:29 - 2nd",
      "teams": [
       {
        "id": "27",
@@ -12767,10 +12782,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NBA",
@@ -12937,10 +12952,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 1,
-     "clock": 595.0,
+     "clock": 551.0,
      "state": "in",
      "completed": false,
-     "detail": "9:55 - 1st",
+     "detail": "9:11 - 1st",
      "teams": [
       {
        "id": "14",
@@ -13064,10 +13079,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
+     "home": 0.345,
+     "away": 0.655,
      "spread": 0.01,
-     "t": "2026-10-22T00:09Z"
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NHL",
@@ -13130,10 +13145,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 1,
-     "clock": 210.0,
+     "clock": 176.0,
      "state": "in",
      "completed": false,
-     "detail": "3:30 - 1st",
+     "detail": "2:56 - 1st",
      "teams": [
       {
        "id": "2",
@@ -13246,10 +13261,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5025,
-     "away": 0.4975,
-     "spread": 0.02,
-     "t": "2026-10-22T00:09Z"
+     "home": 0.485,
+     "away": 0.515,
+     "spread": 0.01,
+     "t": "2026-10-22T00:10Z"
     }
    },
    "sport": "NHL",
@@ -17987,8 +18002,13 @@
     "event": "Lille v Galatasaray",
     "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
     "stake": "0.2",
-    "reason": "leg \"Under 3.5 Total Goals\": market/stat not recognised",
-    "legs": []
+    "reason": "grader error: KeyError: 'team'",
+    "legs": [
+     {
+      "leg": "Under 3.5 Total Goals",
+      "result": "lost"
+     }
+    ]
    },
    {
     "bet_id": "3f3089f2",
@@ -18254,7 +18274,7 @@
     "at": "2026-10-19 23:22"
    }
   ],
-  "last_change_at": "2026-10-21 16:59 ET"
+  "last_change_at": "2026-10-21 20:10 ET"
  },
  "open_live_n": 46,
  "open_stake_by_book": {
@@ -18265,6 +18285,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "b3d216292c4855798876a9243e7ac134b8377823",
- "generated_at": "2026-10-21T20:09:33-04:00"
+ "hash": "00e0338aeed0995e4fa85c94146c4589d43a29e8",
+ "generated_at": "2026-10-21T20:10:57-04:00"
 }

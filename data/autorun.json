@@ -24,8 +24,13 @@
    "event": "Lille v Galatasaray",
    "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
    "stake": "0.2",
-   "reason": "leg \"Under 3.5 Total Goals\": market/stat not recognised",
-   "legs": []
+   "reason": "grader error: KeyError: 'team'",
+   "legs": [
+    {
+     "leg": "Under 3.5 Total Goals",
+     "result": "lost"
+    }
+   ]
   },
   {
    "bet_id": "3f3089f2",
@@ -292,5 +297,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 16:59 ET"
+ "last_change_at": "2026-10-21 20:10 ET"
 }
