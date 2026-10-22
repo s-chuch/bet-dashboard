@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -2689,11 +2689,11 @@
     "id": "401918307",
     "snapshot": {
      "date": "2026-10-22T00:00Z",
-     "period": 3,
-     "clock": 79.0,
+     "period": 4,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "1:19 - 3rd",
+     "detail": "9:05 - 4th",
      "teams": [
       {
        "id": "20",
@@ -2703,7 +2703,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "66"
+       "score": "73"
       },
       {
        "id": "129689",
@@ -2713,7 +2713,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "55"
+       "score": "60"
       }
      ]
     }
@@ -3015,7 +3015,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "MLB",
@@ -3810,10 +3810,10 @@
     "snapshot": {
      "date": "2026-10-22T01:00Z",
      "period": 1,
-     "clock": 2640.0,
+     "clock": 2700.0,
      "state": "in",
      "completed": false,
-     "detail": "44'",
+     "detail": "HT",
      "teams": [
       {
        "id": "223",
@@ -4725,7 +4725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NCAAF",
@@ -5522,7 +5522,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -5602,11 +5602,11 @@
     "id": "401909837",
     "snapshot": {
      "date": "2026-10-21T23:30Z",
-     "period": 3,
-     "clock": 7.7,
+     "period": 4,
+     "clock": 603.0,
      "state": "in",
      "completed": false,
-     "detail": "7.7 - 3rd",
+     "detail": "10:03 - 4th",
      "teams": [
       {
        "id": "28",
@@ -5616,7 +5616,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "103"
+       "score": "111"
       },
       {
        "id": "4",
@@ -5626,7 +5626,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "69"
+       "score": "72"
       }
      ]
     },
@@ -6217,7 +6217,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NBA",
@@ -6283,11 +6283,11 @@
     "id": "401918307",
     "snapshot": {
      "date": "2026-10-22T00:00Z",
-     "period": 3,
-     "clock": 79.0,
+     "period": 4,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "1:19 - 3rd",
+     "detail": "9:05 - 4th",
      "teams": [
       {
        "id": "20",
@@ -6297,7 +6297,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "66"
+       "score": "73"
       },
       {
        "id": "129689",
@@ -6307,7 +6307,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "55"
+       "score": "60"
       }
      ]
     }
@@ -6354,10 +6354,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 4,
-     "clock": 32.7,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "32.7 - 4th",
+     "detail": "End of 4th",
      "teams": [
       {
        "id": "19",
@@ -6367,7 +6367,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "123"
+       "score": "125"
       },
       {
        "id": "1",
@@ -6377,7 +6377,7 @@
        "nick": "Hawks",
        "location": "Atlanta",
        "home": false,
-       "score": "128"
+       "score": "132"
       }
      ]
     },
@@ -6899,10 +6899,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.025,
-     "away": 0.975,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NBA",
@@ -6969,10 +6969,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 1118.0,
+     "clock": 926.0,
      "state": "in",
      "completed": false,
-     "detail": "18:38 - 3rd",
+     "detail": "15:26 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -7107,10 +7107,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.905,
-     "away": 0.095,
+     "home": 0.915,
+     "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NHL",
@@ -7855,7 +7855,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -7981,10 +7981,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 4,
-     "clock": 32.7,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "32.7 - 4th",
+     "detail": "End of 4th",
      "teams": [
       {
        "id": "19",
@@ -7994,7 +7994,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "123"
+       "score": "125"
       },
       {
        "id": "1",
@@ -8004,7 +8004,7 @@
        "nick": "Hawks",
        "location": "Atlanta",
        "home": false,
-       "score": "128"
+       "score": "132"
       }
      ]
     },
@@ -8526,10 +8526,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.025,
-     "away": 0.975,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NBA",
@@ -9249,7 +9249,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NFL",
@@ -9529,7 +9529,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "MLB",
@@ -9621,11 +9621,11 @@
     "id": "401909837",
     "snapshot": {
      "date": "2026-10-21T23:30Z",
-     "period": 3,
-     "clock": 7.7,
+     "period": 4,
+     "clock": 603.0,
      "state": "in",
      "completed": false,
-     "detail": "7.7 - 3rd",
+     "detail": "10:03 - 4th",
      "teams": [
       {
        "id": "28",
@@ -9635,7 +9635,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "103"
+       "score": "111"
       },
       {
        "id": "4",
@@ -9645,7 +9645,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "69"
+       "score": "72"
       }
      ]
     },
@@ -10236,7 +10236,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NBA",
@@ -10389,11 +10389,11 @@
     "id": "401918307",
     "snapshot": {
      "date": "2026-10-22T00:00Z",
-     "period": 3,
-     "clock": 79.0,
+     "period": 4,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "1:19 - 3rd",
+     "detail": "9:05 - 4th",
      "teams": [
       {
        "id": "20",
@@ -10403,7 +10403,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "66"
+       "score": "73"
       },
       {
        "id": "129689",
@@ -10413,7 +10413,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "55"
+       "score": "60"
       }
      ]
     }
@@ -10490,10 +10490,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 1118.0,
+     "clock": 926.0,
      "state": "in",
      "completed": false,
-     "detail": "18:38 - 3rd",
+     "detail": "15:26 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -10628,10 +10628,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.905,
-     "away": 0.095,
+     "home": 0.915,
+     "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NHL",
@@ -10694,10 +10694,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 684.0,
+     "clock": 379.0,
      "state": "in",
      "completed": false,
-     "detail": "11:24 - 3rd",
+     "detail": "6:19 - 3rd",
      "teams": [
       {
        "id": "2",
@@ -10832,10 +10832,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.0859,
-     "away": 0.9141,
+     "home": 0.045,
+     "away": 0.955,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NHL",
@@ -10932,10 +10932,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 1118.0,
+     "clock": 926.0,
      "state": "in",
      "completed": false,
-     "detail": "18:38 - 3rd",
+     "detail": "15:26 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -11070,10 +11070,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.905,
-     "away": 0.095,
+     "home": 0.915,
+     "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-22T01:46Z"
+     "t": "2026-10-22T01:55Z"
     }
    },
    "sport": "NHL",
@@ -16164,6 +16164,6 @@
   "PointsBet": 159.75,
   "theScore": 0.8
  },
- "hash": "cfa4d6a805d5e579db5706389ac8bb1254eeda9d",
- "generated_at": "2026-10-21T21:46:34-04:00"
+ "hash": "1e4ff9491890021ca2ed367033bee05272b4ef25",
+ "generated_at": "2026-10-21T21:55:44-04:00"
 }
