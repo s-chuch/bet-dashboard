@@ -236,6 +236,8 @@ function propMean(stat,path,P){const f=P.flat,gp=P.gp,pg=(...ks)=>{for(const x o
   const A=(n)=>f[n]!=null?f[n]/gp:null;
   if(path==="hockey/nhl"){if(stat==="sog")return f.avgShots!=null?f.avgShots:A("shotsTotal");if(stat==="goals")return A("goals");if(stat==="assists")return A("assists");
     if(stat==="pts")return f.goals!=null&&f.assists!=null?(f.goals+f.assists)/gp:null;if(stat==="hits")return A("hits");if(stat==="saves")return f.avgSaves!=null?f.avgSaves:A("saves");return null}
+  if(/^basketball/.test(path)&&/^(pra|pr|pa|ra|stocks|stl|blk)$/.test(stat)){const P={pts:f.avgPoints!=null?f.avgPoints:A("points"),reb:f.avgRebounds!=null?f.avgRebounds:A("rebounds"),ast:f.avgAssists!=null?f.avgAssists:A("assists"),stl:f.avgSteals!=null?f.avgSteals:A("steals"),blk:f.avgBlocks!=null?f.avgBlocks:A("blocks")};
+    const parts={pra:["pts","reb","ast"],pr:["pts","reb"],pa:["pts","ast"],ra:["reb","ast"],stocks:["stl","blk"],stl:["stl"],blk:["blk"]}[stat];if(parts.some(k=>P[k]==null))return null;return parts.reduce((t,k)=>t+P[k],0)}
   if(/^basketball/.test(path)){if(stat==="pts")return f.avgPoints!=null?f.avgPoints:A("points");if(stat==="reb")return f.avgRebounds!=null?f.avgRebounds:A("rebounds");
     if(stat==="assists")return f.avgAssists!=null?f.avgAssists:A("assists");if(stat==="threes")return f.avgThreePointFieldGoalsMade!=null?f.avgThreePointFieldGoalsMade:A("threePointFieldGoalsMade");return null}
   if(path==="football/nfl"){if(stat==="passYds")return f.netPassingYardsPerGame!=null?f.netPassingYardsPerGame:A("passingYards");if(stat==="rushYds")return f.rushingYardsPerGame!=null?f.rushingYardsPerGame:A("rushingYards");
@@ -298,6 +300,8 @@ function legStatus(L,g,sport,matchId){
   if(g.state==="post"&&!g.completed)return{s:"NOT STARTED",n:g.detail||"postponed"};
   const fin=g.completed, sc=g.teams.map(t=>Number(t.score||0)), W=fin?"WON":"WINNING", Lo=fin?"LOST":"LOSING";
   if(L.type==="draw")return sc[0]===sc[1]?{s:W,n:`level ${sc[0]}–${sc[1]}`}:{s:Lo,n:`${sc[0]}–${sc[1]}, needs an equaliser`};
+  if(L.type==="btts"){const both=sc[0]>0&&sc[1]>0;if(L.yes)return both?{s:"WON",n:`${sc[0]}–${sc[1]}, both scored`}:{s:Lo,n:`${sc[0]}–${sc[1]}, needs ${sc[0]===0&&sc[1]===0?"both teams":"the other team"} to score`};
+    return both?{s:"LOST",n:`${sc[0]}–${sc[1]}, both scored`}:{s:W,n:`${sc[0]}–${sc[1]}`}}
   if(L.type==="ml"||L.type==="spread"){const i=sideIdx(g,L.team);if(i<0)return{s:"?",n:"team not matched"};
     const m=sc[i]-sc[1-i]+(L.type==="spread"?L.line:0);
     if(m>0)return{s:W,n:L.type==="spread"?`covering by ${m}`:""};
@@ -364,6 +368,8 @@ const PROP={ // stat -> [value(stats, ctx), unit]
   goals:[(s,c)=>SOCCER(c.path)?s.totalGoals:s.goals,"goals"],goal:[s=>s.totalGoals,"goal"],
   assists:[(s,c)=>SOCCER(c.path)?s.goalAssists:s.assists,"ast"],goalOrAssist:[s=>sumK(s,"totalGoals","goalAssists"),"G+A"],
   sog:[(s,c)=>SOCCER(c.path)?s.shotsOnTarget:s.shotsTotal,"SOG"],shots:[(s,c)=>SOCCER(c.path)?s.totalShots:s.shotsTotal,"shots"],sot:[s=>s.shotsOnTarget,"SOT"],
+  pra:[s=>sumK(s,"points","rebounds","assists"),"pts+reb+ast"],pr:[s=>sumK(s,"points","rebounds"),"pts+reb"],pa:[s=>sumK(s,"points","assists"),"pts+ast"],
+  ra:[s=>sumK(s,"rebounds","assists"),"reb+ast"],stl:[s=>s.steals,"stl"],blk:[s=>s.blocks,"blk"],stocks:[s=>sumK(s,"steals","blocks"),"stl+blk"],
   reb:[s=>s.rebounds,"reb"],threes:[s=>s.threePointFieldGoalsMade,"3PM"],saves:[s=>s.saves,"saves"],
   hits:[s=>s.hits,"hits"],hr:[s=>s.homeRuns,"HR"],rbi:[s=>s.RBIs,"RBI"],runs:[s=>s.runs,"runs"],walks:[s=>s.walks,"BB"],sb:[s=>s.stolenBases,"SB"],
   k:[s=>s.p_strikeouts!=null?s.p_strikeouts:s.strikeouts,"K"],hrr:[s=>sumK(s,"hits","runs","RBIs"),"H+R+RBI"],
@@ -601,7 +607,8 @@ function poisGE(l,k){if(k<=0)return 1;let t=Math.exp(-l),c=t;for(let i=1;i<k;i++
 // soccer: remaining goals are Poisson (about 1.35 per team per 90 minutes); results are decided by goal difference / total goals
 function soccerP(L,g,f){const lam=1.35*f,sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1];
   if(L.type==="total"){const need=L.line-S;let po;if(need<0)po=1;else po=pOverPois(2*lam,Number.isInteger(need)?need:Math.floor(need)+0.5);return L.side==="under"?1-po:po}
-  if(L.type==="draw"){const d=diffDist(lam,lam);return d[sc[1]-sc[0]]||0}   // diff in the remaining goals must exactly undo the current gap
+  if(L.type==="draw"){const d=diffDist(lam,lam);return d[sc[1]-sc[0]]||0}
+  if(L.type==="btts"){const p0=Math.exp(-lam),a=sc[0]>0?1:1-p0,b=sc[1]>0?1:1-p0;return L.yes?a*b:1-a*b}   // diff in the remaining goals must exactly undo the current gap
   const pt=pickTeam(g,L);if(!pt)return null;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0),d=diffDist(lam,lam);let w=0,push=0;
   for(const k in d){const v=cur+ +k;if(v>0)w+=d[k];else if(v===0)push+=d[k]}
   return L.type==="ml"?w:w/Math.max(1e-9,1-push)}
@@ -609,7 +616,7 @@ function approxLeg(b,L,x){if(x.s==="WON")return 1;if(x.s==="LOST")return 0;const
   if(g.state!=="in"&&L.type==="prop"){const pp=propPre(L,m);if(pp!=null)return pp}
   if(g.state!=="in"){if(L.type==="ml"){const pg=pregameLive[m.id]||m.pregame,pt=pickTeam(g,L);if(pg&&pt)return(pt.T.home?pg.home:pg.away)/100}return 0.5}
   const lg=localGame(g,m),f=fracLeft(m,lg),e=1-f,[sdm,sdt]=SDX[m.path]||[12,14],sc=g.teams.map(t=>Number(t.score||0)),S=sc[0]+sc[1],soc=SOCCER(m.path);
-  if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total"||L.type==="draw")){const v=soccerP(L,lg,f);if(v!=null)return v}
+  if(soc&&(L.type==="ml"||L.type==="spread"||L.type==="total"||L.type==="draw"||L.type==="btts")){const v=soccerP(L,lg,f);if(v!=null)return v}
   const w=Math.min(0.75,e); // trust the observed pace more as the game goes on (never fully)
   const overP=(cur,line,sd0)=>{if(f<0.004)return cur>line?1:cur<line?0:0.5;const pace=e>0.02?cur/e:line,rem=f*(w*pace+(1-w)*line),sd=Math.max(0.5,sd0*Math.sqrt(f));return 1-Phi((line-cur-rem)/sd)};
   if(L.type==="ml"||L.type==="spread"){const pt=pickTeam(g,L);if(!pt)return 0.5;const cur=Number(pt.T.score||0)-Number(pt.O.score||0)+(L.type==="spread"?L.line:0);

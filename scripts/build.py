@@ -107,6 +107,13 @@ PROP_STATS = [
     (r"rec(?:eiving)?\s*(?:yds|yards|yd)", "recYds"),
     (r"rec(?:eiving)?\s*(?:TDs?|touchdowns?)", "recTD"),
     (r"receptions?|rec|catches", "receptions"),
+    (r"(?:pts|points?)\s*(?:\+|and|&|,)\s*(?:reb|rebounds?)\s*(?:\+|and|&|,)\s*(?:ast|assists?)|PRA|P\+R\+A", "pra"),
+    (r"(?:pts|points?)\s*(?:\+|and|&)\s*(?:reb|rebounds?)|P\+R|PR", "pr"),
+    (r"(?:pts|points?)\s*(?:\+|and|&)\s*(?:ast|assists?)|P\+A|PA", "pa"),
+    (r"(?:reb|rebounds?)\s*(?:\+|and|&)\s*(?:ast|assists?)|R\+A|RA", "ra"),
+    (r"(?:stl|steals?)\s*(?:\+|and|&)\s*(?:blk|blocks?)|stocks", "stocks"),
+    (r"steals?|stl", "stl"),
+    (r"blocks?|blk", "blk"),
     (r"pts|points?", "pts"),
     (r"goals?", "goals"),
     (r"assists?|ast", "assists"),
@@ -138,9 +145,12 @@ def _prop_stat(words):
 
 def parse_leg(text, market):
     t = text.strip()
+    t = re.sub(r"\s*\((?:SGP|same game|boosted|boost|bonus)[^)]*\)\s*$", "", t, flags=re.I).strip() or t   # trailing slip notes like "(SGP)"
     if re.fullmatch(r"draw|tie|the draw", t, re.I): return {"type": "draw", "text": t}   # 3-way soccer market
+    # corners / cards totals: ESPN scores can't grade them
+    if re.match(r"^(Over|Under|O|U)\s*[\d.]+\s+(?:total\s+)?(?:corners|cards|bookings)\b", t, re.I): return {"type": "unknown", "text": t, "note": "corners/cards: settle by hand"}
     # team totals: "Over 6.5", "Under 56.5", "U56.5", "O 4.5 runs"
-    m = re.match(r"^(Over|Under|O|U)\s*([\d.]+)(?:\s+(?:runs|goals|points|pts|total))?$", t, re.I)
+    m = re.match(r"^(Over|Under|O|U)\s*([\d.]+)(?:\s+(?:total\s+|game\s+)?(?:runs|goals|points|pts|total))?$", t, re.I)
     if m:
         side = "over" if m[1].lower().startswith("o") else "under"
         return {"type": "total", "side": side, "line": float(m[2]), "text": t}
@@ -164,6 +174,9 @@ def parse_leg(text, market):
             team, women = clean_team(m[1])
             return {"type": "teamtotal", "team": team, "side": "over", "line": int(m[2]) - 0.5,
                     "unit": (m[3] or "").lower() or None, "women": women, "text": t}
+    # both teams to score: "Yes Both Teams To Score", "BTTS - No"
+    m = re.fullmatch(r"(?:(yes|no)\s*[-:]?\s*)?(?:both teams to score|BTTS)(?:\s*[-:]?\s*(yes|no))?", t, re.I)
+    if m: return {"type": "btts", "yes": (m[1] or m[2] or "yes").lower() == "yes", "text": t}
     # soccer: anytime goalscorer / score or assist
     m = re.match(r"^(.+?)\s+(?:AGS|anytime goal\s*scorer|anytime goal|to score)$", t, re.I)
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "goal", "op": "min", "min": 1, "text": t}
@@ -197,7 +210,7 @@ def parse_leg(text, market):
     if m:
         team, women = clean_team(m[1])
         return {"type": "spread", "team": team, "line": float(m[2]), "women": women, "text": t}
-    if re.search(r"\bML\b|moneyline", t + " " + market, re.I):
+    if re.search(r"\bML\b|moneyline|money line|match result|1X2|3-?way|full.?time result", t + " " + market, re.I) and not re.search(r"\d", t):
         team, women = clean_team(t)
         return {"type": "ml", "team": team, "women": women, "text": t}
     # single-bet player props worded as "Josh Hoover 2+ passing TDs" already handled above
