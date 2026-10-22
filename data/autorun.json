@@ -69,24 +69,6 @@
    "legs": []
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
@@ -94,18 +76,18 @@
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
    "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "f0a25e0b",
+   "book": "PointsBet",
+   "pick": "Riga FC",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "RIG 1-1 PAF",
+   "at": "2026-10-22 14:40"
+  },
   {
    "bet_id": "5febfd46",
    "book": "PointsBet",
@@ -321,17 +303,8 @@
    "pnl": -0.2,
    "final": "COL 2-3 PHI",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "8307d992",
-   "book": "theScore",
-   "pick": "Mika Zibanejad O0.5 pts + Cutter Gauthier U3.5 SOG + Mika Zibanejad U2.5 SOG + Alex Killorn U0.5 goals",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "ANA 2-5 NYR",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 14:36 ET"
+ "last_change_at": "2026-10-22 14:40 ET"
 }

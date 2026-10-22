@@ -95,72 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "f0a25e0b",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Paphos FC v Riga FC",
-   "market": "3-Way Moneyline (bonus bet $33.46)",
-   "pick": "Riga FC",
-   "start": "Thu Oct 22 12:45 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 33.46,
-   "stake_note": "",
-   "to_win": 167.3,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Riga FC",
-     "women": false,
-     "text": "Riga FC",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.europa.conf",
-    "date": "20261022",
-    "groups": null,
-    "id": "401915838",
-    "snapshot": {
-     "date": "2026-10-22T16:45Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'",
-     "teams": [
-      {
-       "id": "22281",
-       "name": "Pafos",
-       "abbr": "PAF",
-       "short": "Pafos",
-       "nick": "Pafos",
-       "location": "Pafos",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "19246",
-       "name": "Riga FC",
-       "abbr": "RIG",
-       "short": "Riga FC",
-       "nick": "Riga FC",
-       "location": "Riga FC",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 167.3,
-   "payout_est": false,
-   "start_ts": "2026-10-22T16:45Z"
-  },
-  {
    "bet_id": "383dd8ea",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -195,7 +129,7 @@
      "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "90'",
+     "detail": "90'+4'",
      "teams": [
       {
        "id": "997",
@@ -1137,7 +1071,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1848,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2576,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2876,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3172,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "MLB",
@@ -4586,7 +4520,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T18:37Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5317,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6256,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7024,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7304,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:36Z"
+     "t": "2026-10-22T18:40Z"
     }
    },
    "sport": "MLB",
@@ -8177,6 +8111,16 @@
   },
   {
    "date": "2026-10-18",
+   "book": "PointsBet",
+   "event": "Paphos FC v Riga FC",
+   "pick": "Riga FC",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 33.46,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
    "book": "bet365",
    "event": "Houston Texans @ Jacksonville Jaguars",
    "pick": "Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions",
@@ -8738,9 +8682,9 @@
  ],
  "pnl_total": 94.44,
  "unsettled": {
-  "n": 36,
+  "n": 35,
   "cash_stake": 19.0,
-  "max_payout": 1040.13,
+  "max_payout": 872.83,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -8750,16 +8694,16 @@
    "overall": {
     "n": 124,
     "w": 35,
-    "l": 48,
+    "l": 49,
     "p": 0,
-    "pending": 41,
-    "win_pct": 42.2,
+    "pending": 40,
+    "win_pct": 41.7,
     "units": 20.54,
     "roi_pct": 28.5,
     "roi_n": 72,
     "exp_roi_pct": 11.2,
-    "exp_wins": 29.6,
-    "exp_wins_n": 83,
+    "exp_wins": 29.8,
+    "exp_wins_n": 84,
     "wins_with_fair": 35
    },
    "by_promo": {
@@ -8796,16 +8740,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 3,
+     "l": 4,
      "p": 0,
-     "pending": 10,
-     "win_pct": 62.5,
+     "pending": 9,
+     "win_pct": 55.6,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.3,
-     "exp_wins_n": 8,
+     "exp_wins": 1.5,
+     "exp_wins_n": 9,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -9008,16 +8952,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 10,
+     "l": 11,
      "p": 0,
-     "pending": 19,
-     "win_pct": 44.4,
+     "pending": 18,
+     "win_pct": 42.1,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 4.2,
-     "exp_wins_n": 18,
+     "exp_wins": 4.4,
+     "exp_wins_n": 19,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -9070,16 +9014,16 @@
     "yes": {
      "n": 73,
      "w": 25,
-     "l": 39,
+     "l": 40,
      "p": 0,
-     "pending": 9,
-     "win_pct": 39.1,
+     "pending": 8,
+     "win_pct": 38.5,
      "units": 20.78,
      "roi_pct": 35.8,
      "roi_n": 58,
      "exp_roi_pct": 12.7,
-     "exp_wins": 23.2,
-     "exp_wins_n": 64,
+     "exp_wins": 23.4,
+     "exp_wins_n": 65,
      "wins_with_fair": 25
     },
     "no": {
@@ -10099,11 +10043,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.960; power devig 0.919); cash EV +15.2%; Pin Pafos -151 / draw +291 / Riga +391; pulled 8:00 PM ET; yes at +417",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "be91fe22",
@@ -12317,24 +12261,6 @@
     "legs": []
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
@@ -12342,18 +12268,18 @@
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
     "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "f0a25e0b",
+    "book": "PointsBet",
+    "pick": "Riga FC",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "RIG 1-1 PAF",
+    "at": "2026-10-22 14:40"
+   },
    {
     "bet_id": "5febfd46",
     "book": "PointsBet",
@@ -12569,28 +12495,19 @@
     "pnl": -0.2,
     "final": "COL 2-3 PHI",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "8307d992",
-    "book": "theScore",
-    "pick": "Mika Zibanejad O0.5 pts + Cutter Gauthier U3.5 SOG + Mika Zibanejad U2.5 SOG + Alex Killorn U0.5 goals",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "ANA 2-5 NYR",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 14:36 ET"
+  "last_change_at": "2026-10-22 14:40 ET"
  },
- "open_live_n": 30,
+ "open_live_n": 29,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 20.2,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 123.32,
+  "PointsBet": 89.86,
   "theScore": 0.2
  },
- "hash": "5f1f758da20a8b4a6a0e22fde9a49fb7524ba511",
- "generated_at": "2026-10-22T14:37:27-04:00"
+ "hash": "0a1d80dfda929504977973d582fadf9f0f449c01",
+ "generated_at": "2026-10-22T14:40:32-04:00"
 }
