@@ -6,28 +6,45 @@
   var DUR = 1400;
 
   function isWon(s) { return s === 'WON' || s === 'HIT'; }
-  function ringHTML(x) {
-    var pv = x.pv, pt = x.pt, won = x.s === 'WON', lost = x.s === 'LOST';
-    var frac = Math.max(0, Math.min(1, pv / Math.max(1, pt)));
-    var col = won ? 'var(--win)' : lost ? 'var(--lose)' : (pt - pv === 1 ? 'var(--push)' : '#6b7488');
-    var st = '--p:' + (frac * 100).toFixed(1) + '%;--c:' + col;
-    var txt = pv + '/' + pt, sz = txt.length <= 5 ? '' : txt.length <= 7 ? ' u7' : ' u9';
-    if (txt.length > 7) txt = String(pv);   // yards etc.: just the number, the full 'pv of pt' is in the tooltip
-    return '<span class="uring' + sz + '" style="' + st + '" title="' + pv + ' of ' + pt + '"><i>' + txt + '</i></span>';
+  // one ring for EVERY leg: count legs fill to pv/pt, "under" legs fill to pv/limit, everything else (ML, spread, ...) fills to its win chance
+  function legInfo(x, b) {
+    var L = x.L || {}, g = x.g, ov = L.side !== 'under' && L.op !== 'under';
+    if (L.type === 'prop' && ov && typeof x.pv === 'number' && typeof x.pt === 'number' && x.pt > 0) return { kind: 'count', pv: x.pv, pt: x.pt, s: x.s };
+    if ((L.type === 'total' || L.type === 'teamtotal') && ov && typeof L.line === 'number' && typeof x.pv === 'number') return { kind: 'count', pv: x.pv, pt: Math.floor(L.line) + 1, s: x.s };
+    if ((L.type === 'prop' || L.type === 'total' || L.type === 'teamtotal') && !ov && typeof L.line === 'number' && typeof x.pv === 'number') return { kind: 'under', pv: x.pv, pt: Math.max(1, Math.ceil(L.line) - 1), s: x.s };
+    var p = null;
+    if (g && g.state !== 'pre') { try { p = legP(b, L, x.s, x); } catch (e) {} }
+    if (x.s === 'WON') p = 1; else if (x.s === 'LOST') p = 0;
+    return { kind: 'prob', p: (typeof p === 'number' && isFinite(p)) ? p : null, s: x.s };
   }
-  function decorateRing(row, x) {
-    var L = x.L;
+  function ringHTML(x) {
+    var won = x.s === 'WON', lost = x.s === 'LOST', frac, col, txt, cls = '', title;
+    if (x.kind === 'count') {
+      frac = Math.max(0, Math.min(1, x.pv / Math.max(1, x.pt)));
+      col = won ? 'var(--win)' : lost ? 'var(--lose)' : (x.pt - x.pv === 1 ? 'var(--push)' : '#6b7488');
+      txt = x.pv + '/' + x.pt; title = x.pv + ' of ' + x.pt;
+    } else if (x.kind === 'under') {
+      frac = Math.max(0, Math.min(1, x.pv / x.pt));
+      col = lost || x.pv > x.pt ? 'var(--lose)' : x.pv >= x.pt ? 'var(--push)' : 'var(--win)';
+      txt = x.pv + '/' + x.pt; title = x.pv + ' of max ' + x.pt;
+    } else {
+      var p = x.p;
+      frac = p == null ? 0 : p;
+      col = won ? 'var(--win)' : lost ? 'var(--lose)' : p == null ? '#6b7488' : p >= 0.55 ? 'var(--win)' : p <= 0.45 ? 'var(--lose)' : 'var(--push)';
+      txt = p == null ? '–' : (won ? '✓' : lost ? '✗' : Math.round(p * 100) + '%'); title = p == null ? 'not started' : 'win chance ' + Math.round(p * 100) + '%';
+      cls = ' up' + (p == null ? ' none' : '');
+    }
+    var sz = txt.length <= 5 ? '' : txt.length <= 7 ? ' u7' : ' u9';
+    if (txt.length > 7) txt = String(x.pv);
+    return '<span class="uring' + sz + cls + '" style="--p:' + (frac * 100).toFixed(1) + '%;--c:' + col + '" title="' + title + '"><i>' + txt + '</i></span>';
+  }
+  function decorateRing(row, x, b) {
     var old = row.querySelector(':scope > .uring');
     if (old) old.remove();
     row.classList.remove('uir');
-    if (!L) return;
-    // every "reach N or more" leg gets a ring: over props, and over game / team totals (target = line rounded up)
-    var pt = null;
-    if (L.type === 'prop' && L.op !== 'under') pt = x.pt;
-    else if ((L.type === 'total' || L.type === 'teamtotal') && L.side !== 'under' && typeof L.line === 'number') pt = Math.floor(L.line) + 1;
-    if (typeof x.pv !== 'number' || typeof pt !== 'number' || !isFinite(x.pv) || !isFinite(pt) || pt <= 0) return;
+    if (!x || !x.L) return;
     row.classList.add('uir');
-    row.insertAdjacentHTML('afterbegin', ringHTML({ pv: x.pv, pt: pt, s: x.s }));
+    row.insertAdjacentHTML('afterbegin', ringHTML(legInfo(x, b)));
   }
   function setFx(el, kind, until) {
     var left = until - Date.now();
@@ -74,7 +91,7 @@
           for (var r = 0; r < rows.length; r++) {
             var li = +rows[r].dataset.li, x = ls[li];
             if (!x) continue;
-            decorateRing(rows[r], x);
+            decorateRing(rows[r], x, b);
             var ev = rec.ev[li];
             rows[r].classList.remove('hit', 'bust');
             if (ev && ev.until > now) setFx(rows[r], ev.t, ev.until);
@@ -108,7 +125,7 @@
         var card = row.closest('.card[data-bi]'), b = card && DATA.open[+card.dataset.bi];
         if (!b) continue;
         var x = legStatsFor(b)[+row.dataset.li];
-        if (x) decorateRing(row, x);
+        if (x) decorateRing(row, x, b);
       } catch (e) {}
     }
   }
