@@ -125,11 +125,11 @@
     "id": "401915838",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 5220.0,
      "state": "in",
      "completed": false,
-     "detail": "HT",
+     "detail": "87'",
      "teams": [
       {
        "id": "22281",
@@ -139,7 +139,7 @@
        "nick": "Pafos",
        "location": "Pafos",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "19246",
@@ -149,7 +149,7 @@
        "nick": "Riga FC",
        "location": "Riga FC",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -191,11 +191,11 @@
     "id": "401915745",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 5220.0,
      "state": "in",
      "completed": false,
-     "detail": "HT",
+     "detail": "87'",
      "teams": [
       {
        "id": "997",
@@ -205,7 +205,7 @@
        "nick": "Trabzonspor",
        "location": "Trabzonspor",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "262",
@@ -257,11 +257,11 @@
     "id": "401915839",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "HT",
+     "detail": "90'+1'",
      "teams": [
       {
        "id": "20703",
@@ -271,7 +271,7 @@
        "nick": "Inter D'Escaldes",
        "location": "Inter D'Escaldes",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "8089",
@@ -281,7 +281,7 @@
        "nick": "CSU Craiova",
        "location": "CSU Craiova",
        "home": false,
-       "score": "2"
+       "score": "3"
       }
      ]
     }
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:35Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:33Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:33Z"
     }
    },
    "sport": "MLB",
@@ -4586,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T17:46Z"
+     "t": "2026-10-22T18:33Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5383,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:35Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6322,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:35Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7090,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:35Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7370,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T17:45Z"
+     "t": "2026-10-22T18:33Z"
     }
    },
    "sport": "MLB",
@@ -12582,6 +12582,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "7caeeefeb828af9fd8ccd4a11071dfa17d67ab2f",
- "generated_at": "2026-10-22T13:46:19-04:00"
+ "hash": "b6f7c9a8a68defb4f77857503e349e4b8aab1948",
+ "generated_at": "2026-10-22T14:36:03-04:00"
 }
