@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T14:59Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T14:59Z"
     }
    },
    "sport": "MLB",
@@ -3594,49 +3594,13 @@
    "legs": [
     {
      "type": "ml",
-     "team": "Remo",
+     "team": "Clube do Remo",
      "women": false,
-     "text": "Clube do Remo",
-     "team_ok": true
+     "text": "Clube do Remo"
     }
    ],
-   "match": {
-    "path": "soccer/bra.1",
-    "date": "20261023",
-    "groups": null,
-    "id": "401841287",
-    "snapshot": {
-     "date": "2026-10-23T23:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "2022",
-       "name": "Cruzeiro",
-       "abbr": "CRU",
-       "short": "Cruzeiro",
-       "nick": "Cruzeiro",
-       "location": "Cruzeiro",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "4936",
-       "name": "Remo",
-       "abbr": "REMO",
-       "short": "Remo",
-       "nick": "Remo",
-       "location": "Remo",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
+   "match": null,
+   "sport": null,
    "cash_stake": 0.0,
    "payout": 17.5,
    "payout_est": false,
@@ -4586,7 +4550,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5347,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6286,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7054,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T15:00Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7334,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T13:59Z"
+     "t": "2026-10-22T14:59Z"
     }
    },
    "sport": "MLB",
@@ -7534,10 +7498,7 @@
      "stat": "shots",
      "op": "min",
      "min": 2,
-     "text": "Chris Wood 2+ shots",
-     "pteam": "NFO",
-     "pname": "Chris Wood",
-     "pid": "134190"
+     "text": "Chris Wood 2+ shots"
     },
     {
      "type": "prop",
@@ -7545,48 +7506,10 @@
      "stat": "shots",
      "op": "min",
      "min": 1,
-     "text": "Abdoul Ouattara 1+ shots",
-     "pteam": "IPS",
-     "pname": "Abdoul Ouattara",
-     "pid": "336794"
+     "text": "Abdoul Ouattara 1+ shots"
     }
    ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261023",
-    "groups": null,
-    "id": "401879253",
-    "snapshot": {
-     "date": "2026-10-23T19:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
-     "completed": false,
-     "detail": "Scheduled",
-     "teams": [
-      {
-       "id": "373",
-       "name": "Ipswich Town",
-       "abbr": "IPS",
-       "short": "Ipswich",
-       "nick": "Ipswich Town",
-       "location": "Ipswich Town",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "393",
-       "name": "Nottingham Forest",
-       "abbr": "NFO",
-       "short": "Nottm Forest",
-       "nick": "Nottingham Forest",
-       "location": "Nottingham Forest",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
+   "match": null,
    "sport": "Soccer",
    "cash_stake": 0.5,
    "payout": 1.32,
@@ -12582,6 +12505,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "3a68971273050acdf080b596a2f9d79e47bb1c86",
- "generated_at": "2026-10-22T09:59:54-04:00"
+ "hash": "24556d3b33d85afb64ae8a99ec7a489b64c7764b",
+ "generated_at": "2026-10-22T11:00:05-04:00"
 }
