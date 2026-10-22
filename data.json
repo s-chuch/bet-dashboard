@@ -195,7 +195,7 @@
      "clock": 2700.0,
      "state": "in",
      "completed": false,
-     "detail": "45'",
+     "detail": "45'+1'",
      "teams": [
       {
        "id": "997",
@@ -4586,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T17:31Z"
+     "t": "2026-10-22T17:32Z"
     }
    },
    "sport": "NCAAF",
@@ -12582,6 +12582,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "5904244d9b24f881ebd1f3333e003f1e7b2b403d",
- "generated_at": "2026-10-22T13:31:13-04:00"
+ "hash": "3231dfeba2d9dc21c4a3821eafd56e3223029cb2",
+ "generated_at": "2026-10-22T13:32:45-04:00"
 }
