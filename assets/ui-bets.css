@@ -1,1 +1,17 @@
 /* ui-bets */
+.uring{--p:0%;--c:#6b7488;flex:0 0 34px;width:34px;height:34px;border-radius:50%;align-self:flex-start;display:grid;place-items:center;background:conic-gradient(var(--c) var(--p),#232938 0)}
+.uring i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--card2,#161b26);display:grid;place-items:center;font-size:9.5px;font-weight:700;color:#e8ecf4;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.leg.uir{align-items:flex-start}
+.leg.uir .lbar{display:none}
+.uone{display:inline-block;margin:1px 0 0;padding:1px 6px;border-radius:999px;font-size:9.5px;font-weight:800;letter-spacing:.06em;color:#1a1400;background:var(--push,#f5c542);line-height:1.5}
+.card.oneaway{border-left-color:var(--push,#f5c542);box-shadow:0 2px 10px rgba(0,0,0,.22),0 0 14px rgba(245,197,66,.22)}
+@keyframes uiHitRow{0%{background:rgba(52,211,153,.55)}100%{background:rgba(52,211,153,0)}}
+@keyframes uiPop{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+@keyframes uiBust{0%{background:rgba(239,68,68,.35)}100%{background:rgba(239,68,68,0)}}
+@keyframes uiCard{0%{box-shadow:0 0 0 0 rgba(52,211,153,.7)}100%{box-shadow:0 0 0 14px rgba(52,211,153,0)}}
+.leg.hit{animation:uiHitRow 1.2s ease-out both;border-radius:6px}
+.leg.hit .pill{animation:uiPop .6s ease-out both}
+.leg.hit .pill::before{content:"\2713 "}
+.leg.bust{animation:uiBust 1.2s ease-out both;border-radius:6px}
+.card.hit{animation:uiCard 1.2s ease-out both}
+.card.bust{animation:uiBust 1.2s ease-out both}
