@@ -11,18 +11,23 @@
     var frac = Math.max(0, Math.min(1, pv / Math.max(1, pt)));
     var col = won ? 'var(--win)' : lost ? 'var(--lose)' : (pt - pv === 1 ? 'var(--push)' : '#6b7488');
     var st = '--p:' + (frac * 100).toFixed(1) + '%;--c:' + col;
-    return '<span class="uring" style="' + st + '" title="' + pv + ' of ' + pt + '"><i>' + pv + '/' + pt + '</i></span>';
+    var txt = pv + '/' + pt, sz = txt.length <= 5 ? '' : txt.length <= 7 ? ' u7' : ' u9';
+    if (txt.length > 7) txt = String(pv);   // yards etc.: just the number, the full 'pv of pt' is in the tooltip
+    return '<span class="uring' + sz + '" style="' + st + '" title="' + pv + ' of ' + pt + '"><i>' + txt + '</i></span>';
   }
   function decorateRing(row, x) {
     var L = x.L;
     var old = row.querySelector(':scope > .uring');
     if (old) old.remove();
     row.classList.remove('uir');
-    if (!L || L.type !== 'prop' || L.op === 'under') return;
-    if (typeof x.pv !== 'number' || typeof x.pt !== 'number' || !isFinite(x.pv) || !isFinite(x.pt)) return;
-    if (x.pt > 15 || x.pt <= 0) return;
+    if (!L) return;
+    // every "reach N or more" leg gets a ring: over props, and over game / team totals (target = line rounded up)
+    var pt = null;
+    if (L.type === 'prop' && L.op !== 'under') pt = x.pt;
+    else if ((L.type === 'total' || L.type === 'teamtotal') && L.side !== 'under' && typeof L.line === 'number') pt = Math.floor(L.line) + 1;
+    if (typeof x.pv !== 'number' || typeof pt !== 'number' || !isFinite(x.pv) || !isFinite(pt) || pt <= 0) return;
     row.classList.add('uir');
-    row.insertAdjacentHTML('afterbegin', ringHTML(x));
+    row.insertAdjacentHTML('afterbegin', ringHTML({ pv: x.pv, pt: pt, s: x.s }));
   }
   function setFx(el, kind, until) {
     var left = until - Date.now();
