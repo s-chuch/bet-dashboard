@@ -285,3 +285,5 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-22 16:49,PointsBet,f0094ba2,settled,0.00,"lost, no return"
 2026-10-22 18:55,bet365,,anchor,61.88,"app balance before Safety Net SGP (Shawn slip, Oct 22)"
 2026-10-22 18:55,bet365,6b91bd67,stake,-10.00,stake
+2026-10-22 19:40,FanDuel,,anchor,154.92,"app balance before boosted SGP (Shawn, Oct 22)"
+2026-10-22 19:40,FanDuel,05e56633,stake,-1.00,stake
