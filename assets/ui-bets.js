@@ -78,9 +78,9 @@
             var rest = ls.filter(function (x) { return !isWon(x.s); });
             if (rest.length === 1 && rest[0].s !== 'LOST' && !(rest[0].g && rest[0].g.completed)) {
               card.classList.add('oneaway');
-              var mid = card.querySelector('.cmid');
+              var mid = card.querySelector('.sl3') || card.querySelector('.cmid');
               if (mid && !mid.querySelector('.uone')) {
-                var lbl = mid.querySelector('.clbl');
+                var lbl = mid.querySelector('.sld') || mid.querySelector('.clbl');
                 var t = document.createElement('span'); t.className = 'uone'; t.textContent = '1 LEG LEFT';
                 if (lbl) lbl.insertAdjacentElement('afterend', t); else mid.appendChild(t);
               }
