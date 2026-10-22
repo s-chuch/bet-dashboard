@@ -212,6 +212,9 @@ def main(a):
             print(f"REJECTED duplicate: matches {clash[0]['bet_id']} ({clash[0]['book']} | {clash[0]['event']} | "
                   f"{clash[0]['pick']} | ${clash[0]['stake']}). Re-run with --force if it really is a second bet."); sys.exit(2)
         rows.append(r); assign_ids(rows); place(rows, led, r); print(f"logged {r['bet_id']}")
+        try:
+            import clv; clv.record_placed(r["bet_id"])   # placed_at for CLV/timing (data/clv.csv; bets.csv untouched)
+        except Exception as e: print("clv placed_at not recorded:", e)
     else: sys.exit(__doc__)
     save_bets(rows, cols); write_balances(led); show()
 

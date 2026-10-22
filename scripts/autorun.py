@@ -89,6 +89,12 @@ def run(dry=False, fast=False):
     except Exception as e:
         errors.append(f"rec grade: {e}"); traceback.print_exc()
     try:
+        import clv as C
+        n = C.capture(verbose=False)
+        if n: log(f"clv: captured closing line for {n} bet(s)")
+    except Exception as e:
+        log("clv capture skipped:", e)   # network hiccup: not an autorun error (retried next pass)
+    try:
         import archive as A
         moved = A.archive()
         if moved: log(f"archived {len(moved)} old settled bets")

@@ -30,6 +30,9 @@ SPORT = {"mlb": ("BASEBALL", "MLB"), "nfl": ("FOOTBALL", "NFL"), "ncaaf": ("FOOT
          "nhl": ("HOCKEY", "NHL"), "nba": ("BASKETBALL", "NBA"), "wnba": ("BASKETBALL", "WNBA"),
          "soccer": ("SOCCER", "SOCCER")}
 THR, STAKE_PCT = 0.02, 0.005
+THR_3WAY = 0.04            # cash 3-way (90-minute) moneylines need +4% EV (Oct 22 game plan)
+BONUS_MIN, BONUS_MAX, BONUS_FLOOR = 300, 500, 0.60   # bonus-bet section: +300..+500, playable while return >= 60% of face
+BOOST_MIN, BOOST_MAX = 100, 300                      # profit-boost helper pool
 
 # ---------- math ----------
 def implied(a): return -a / (-a + 100) if a < 0 else 100 / (a + 100)
@@ -44,6 +47,23 @@ def kill_price(fair, thr=THR):
     if dmin >= 2: return math.ceil(round((dmin - 1) * 100, 9))
     return -math.floor(round(100 / (dmin - 1), 9))
 def classify(ev): return "BET" if ev >= THR - 1e-12 else ("SKIP" if ev >= 0 else "NO")
+def cash_rule(market, odds, three_way, ev):
+    """(class, caution, reason) for a CASH pick under the game-plan rules.
+    3-way moneylines need +4% EV. Spreads and favourites at -150 or shorter still need +2% (the normal bar) and carry a caution label."""
+    cls = classify(ev); caution = ""; reason = ""
+    if market == "Moneyline" and three_way and cls == "BET" and ev < THR_3WAY - 1e-12:
+        cls = "SKIP"; reason = "3-way moneyline: needs +4% EV for cash"
+    if market == "Spread": caution = "Spread: your cash spreads are -36% ROI so far. Only at +2% EV or better, normal stake."
+    elif odds <= -150: caution = "Short favourite (-150 or shorter): your cash favs are -20% ROI so far. Only at +2% EV or better."
+    elif market == "Moneyline" and three_way: caution = "3-way moneyline (a draw loses): cash needs +4% EV."
+    return cls, caution, reason
+def bonus_return(fair, odds): return fair * (am2dec(odds) - 1)
+def bonus_floor(fair, floor=BONUS_FLOOR):
+    """Shortest American price that still returns >= floor of face on a bonus bet (None if under +100)."""
+    a = math.ceil(round(100 * floor / fair, 9)); return a if a >= 100 else None
+def boosted_ev(fair, odds, boost_pct):
+    return fair * (1 + (am2dec(odds) - 1) * (1 + boost_pct / 100.0)) - 1
+
 def book_allowed(book, odds): return not (book == "bet365" and odds < 100)
 
 # ---------- tracker (read only) ----------
@@ -183,7 +203,9 @@ def evaluate(lg, an, pin, stats, bal):
                      "market": market, "app_market": app_market(lg, market, three_way and market == "Moneyline"),
                      "selection": sel, "book": book, "book_app": BOOK_APP[book], "odds": odds,
                      "fair_pct": round(fair * 100, 2), "fair_odds": dec2am(1 / fair), "ev_pct": round(ev * 100, 2),
-                     "class": classify(ev), "kill_price": kill_price(fair),
+                     "class": cash_rule(market, odds, three_way, ev)[0], "kill_price": kill_price(fair, THR_3WAY if (market == "Moneyline" and three_way) else THR),
+                     "caution": cash_rule(market, odds, three_way, ev)[1], "skip_reason": cash_rule(market, odds, three_way, ev)[2],
+                     "three_way": bool(three_way and market == "Moneyline"),
                      "pin_prices": " / ".join(f"{s} {pmk['prices'][s]:+d}" for s in need),
                      "pin_line_type": "alt" if pmk["alt"] else "main",
                      "balance": b, "stake": stake, "stake_pct": STAKE_PCT * 100,
@@ -244,13 +266,31 @@ def scan(leagues, hours, root=ROOT):
                 r = evaluate(lg, g, p, st, bal); st["prices"] += len(r); rows += r
         counts[lg] = st
     rows.sort(key=lambda r: -r["ev_pct"])
+    bonus, seen_b = [], set()
+    for r in sorted(rows, key=lambda r: -bonus_return(r["fair_pct"] / 100, r["odds"])):
+        if not (BONUS_MIN <= r["odds"] <= BONUS_MAX): continue
+        k = (r["event"], r["market"], r["selection"])
+        if k in seen_b: continue
+        seen_b.add(k); f = r["fair_pct"] / 100
+        bonus.append({**r, "bonus_ret_pct": round(bonus_return(f, r["odds"]) * 100, 1), "yes_at": r["odds"], "bonus_floor": bonus_floor(f)})
+    bonus = [b for b in bonus if b["bonus_ret_pct"] >= BONUS_FLOOR * 100][:10]
+    pool, seen_p = {}, {}
+    for r in rows:
+        if not (BOOST_MIN <= r["odds"] <= BOOST_MAX): continue
+        k = (r["event"], r["market"], r["selection"])
+        cur = pool.get(k)
+        if cur is None or r["odds"] > cur["odds"]:
+            pool[k] = {x: r[x] for x in ("league", "event", "start_et", "start_utc", "market", "app_market", "selection", "book_app", "odds", "fair_pct", "fair_odds", "wins_if", "three_way")}
+        if r["book"] == "bet365": pool[k]["bet365_odds"] = max(r["odds"], pool[k].get("bet365_odds") or -9999)
+    boost_pool = sorted(pool.values(), key=lambda p: -p["fair_pct"] * am2dec(p["odds"]))[:150]
     bets = [r for r in rows if r["class"] == "BET"]
-    near = [r for r in rows if r["class"] == "SKIP"][:10]
+    near = [r for r in rows if r["class"] == "SKIP"][:10]   # includes 3-way MLs between +2% and +4% (skip_reason says why)
     return {"ok": True, "scanned_et": now.strftime("%a %b %d, %Y %-I:%M %p ET"), "scanned_utc": now.astimezone(dt.timezone.utc).isoformat(timespec="seconds"),
-            "window_hours": hours, "rules": {"bet_ev_pct": THR * 100, "stake_pct": STAKE_PCT * 100, "books": list(BOOK_APP.values()), "bet365_min_odds": 100},
+            "window_hours": hours, "rules": {"bet_ev_pct": THR * 100, "stake_pct": STAKE_PCT * 100, "books": list(BOOK_APP.values()), "bet365_min_odds": 100,
+                      "three_way_ev_pct": THR_3WAY * 100, "bonus_range": [BONUS_MIN, BONUS_MAX], "bonus_floor_pct": BONUS_FLOOR * 100, "boost_range": [BOOST_MIN, BOOST_MAX]},
             "balances": {b: bal.get(b) for b in BOOKS.values()}, "counts": counts,
             "totals": {"prices": len(rows), "bet": len(bets), "skip": sum(r["class"] == "SKIP" for r in rows), "no": sum(r["class"] == "NO" for r in rows)},
-            "bets": bets, "near_misses": near, "notes": notes, "errors": errors}
+            "bets": bets, "near_misses": near, "bonus": bonus, "boost_pool": boost_pool, "notes": notes, "errors": errors}
 
 def main():
     ap = argparse.ArgumentParser()

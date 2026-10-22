@@ -19,3 +19,8 @@
 .err{color:var(--lose)}
 .app{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.03em;padding:3px 10px;border-radius:999px;margin-bottom:7px;color:#fff}
 .app-FanDuel{background:#1493ff}.app-DraftKings{background:#53d337;color:#0b0d12}.app-bet365{background:#027b5b;color:#ffdf1b}.app-theScore{background:#6c2bd9}
+
+.caution{color:#fbbf24}
+.bb-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:6px}
+.bb-row label{display:flex;gap:6px;align-items:center}
+.bb-row select,.bb-row input{background:var(--card2,#151923);color:inherit;border:1px solid var(--line,#2a2f3a);border-radius:8px;padding:6px 8px;font:inherit;font-size:16px;max-width:120px}

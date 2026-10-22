@@ -667,6 +667,14 @@ def build(verbose=True):
     rows = all_bets()   # live bets.csv + archive (full history for totals)
     open_rows = [r for r in rows if r["result"].strip().lower() == "open"]
     with ThreadPoolExecutor(8) as ex: bets = list(ex.map(build_bet, open_rows))
+    try:
+        import clv as _C; _cm = _C.load()
+    except Exception: _cm = {}
+    def _clv(bid):
+        c = _cm.get(bid) or {}
+        return {"placed_at": c.get("placed_at") or None, "close_price": c.get("close_price") or None,
+                "clv_pct": float(c["clv_pct"]) if c.get("clv_pct") else None} if c else None
+    for b in bets: b["clv"] = _clv(b["bet_id"])
     attach_pregame(bets)
     attach_live_ids(bets)
     bal = list(csv.DictReader(open(BAL)))
@@ -677,7 +685,7 @@ def build(verbose=True):
     recent_cut = (now_et().date() - datetime.timedelta(days=5)).isoformat()
     settled = [{"date": r["date"], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r["event"]),
                 "pick": r["pick"], "result": r["result"], "pnl": num(r["pnl"]), "stake": num(r["stake"]),
-                "auto": "auto" in (r.get("settled_by") or "")}
+                "auto": "auto" in (r.get("settled_by") or ""), "clv": _clv(r.get("bet_id"))}
                for r in rows if r["result"].strip().lower() not in ("open", "") and r["date"] >= recent_cut]
     pnl_total = round(sum(num(r["pnl"]) or 0 for r in rows if r["result"].strip().lower() not in ("open", "")), 2)
     auto = json.load(open(AUTO)) if os.path.exists(AUTO) else {}

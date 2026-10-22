@@ -384,6 +384,39 @@
     wrap.appendChild(st); node.appendChild(wrap);
   }
 
+
+  // ---------- game plan (stats.json game_plan, recomputed every build) ----------
+  var PLAN_TABS = [['by_type', 'Type'], ['by_book', 'Book'], ['by_band', 'Odds'], ['by_money', 'Cash/boost/bonus'], ['by_source', 'My picks vs own'], ['by_legs', 'Legs']];
+  state.planTab = 'by_type';
+  function renderPlan() {
+    var g = obj(obj(state.data).game_plan), host = $('plan'); clear(host);
+    if (!arr(g.rules).length) { host.appendChild(el('div', { class: 'empty', text: 'Game plan appears after the next update' })); return; }
+    arr(g.rules).forEach(function (r) {
+      host.appendChild(el('div', { class: 'prule ' + (r.ok ? 'ok' : 'warn') }, [
+        el('span', { class: 'pn', text: (r.ok ? '\u2713 ' : '! ') + r.n }),
+        el('div', {}, [el('div', { class: 'pr', text: r.rule }), el('div', { class: 'pt', text: r.track })])]));
+    });
+    var lbl = {}; PLAN_TABS.forEach(function (t) { lbl[t[0]] = t[1]; });
+    segment($('plan-seg'), PLAN_TABS.map(function (t) { return t[0]; }), state.planTab, function (v) { state.planTab = v; renderPlan(); }, lbl);
+    var rows = arr(g[state.planTab]), tab = $('plan-tab'); clear(tab);
+    var t = el('table', { class: 'ptab' });
+    var hd = el('tr', {}, ['', 'Bets', 'W-L', 'P/L', 'ROI'].map(function (h) { return el('th', { text: h }); }));
+    t.appendChild(hd);
+    rows.forEach(function (r) {
+      t.appendChild(el('tr', {}, [el('td', { text: r.key }), el('td', { text: String(r.bets) }), el('td', { text: r.won + '-' + r.lost }),
+        el('td', { class: cls(r.pnl), text: pnl(r.pnl) }), el('td', { class: cls(r.roi), text: num(r.staked) ? pct(r.roi, true) : '\u2013' })]));
+    });
+    tab.appendChild(rows.length ? t : el('div', { class: 'empty', text: 'No settled bets yet' }));
+    var b = obj(g.bonus);
+    $('plan-note').textContent = (b.n ? 'Bonus bets: ' + money(b.returned) + ' back from ' + money(b.face) + ' face (' + (b.conv_pct == null ? '\u2013' : Math.round(b.conv_pct) + '%') + '; good is 60%+). ' : '') + 'ROI is on cash staked; bonus bets risk no cash. ' + (g.note || '');
+    var c = obj(g.clv), ch = $('clv'); clear(ch);
+    if (!num(c.n)) { ch.appendChild(el('div', { class: 'empty', text: 'No closing lines captured yet. Straight ML / spread / total bets get one in the hour before start (' + num(c.tracked) + ' bets have a logged time).' })); return; }
+    ch.appendChild(el('div', { class: 'pt', text: c.n + ' bets graded \u00b7 average CLV ' + pct(c.avg, true) + ' \u00b7 beat the close ' + Math.round(num(c.beat_pct)) + '% (' + c.beat + '/' + c.n + ')' }));
+    arr(c.recent).forEach(function (x) {
+      ch.appendChild(el('div', { class: 'brow' }, [el('span', { class: 'nm', text: x.book + ' \u00b7 ' + x.pick }), el('span', { class: 'rec', text: x.price + ' vs close ' + x.close_price }), el('span', { class: 'val ' + cls(x.clv_pct), text: pct(x.clv_pct, true) })]));
+    });
+  }
+
   function renderAll() {
     if (!state.data) return;
     var daily = filteredDaily();
@@ -392,6 +425,7 @@
     renderBank();
     renderBreakdowns();
     renderPicks();
+    renderPlan();
     var g = obj(state.data).generated_at, d = g ? new Date(g) : null;
     $('updated').textContent = d && !isNaN(d) ? 'Updated ' + tsFmt(g, { hour: 'numeric', minute: '2-digit' }) + ' ET' : 'Updated recently';
   }

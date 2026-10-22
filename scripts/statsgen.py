@@ -112,6 +112,83 @@ def picks_summary():
             "win_rate": r2(won / (won + lost) * 100) if (won + lost) else None,
             "placed": sum(1 for r in recs if r.get("placed") == "yes")}
 
+
+# ---------- game plan (rules from the Oct 22 analysis, tracked live from the data) ----------
+def is_boost(r): return bool((r.get("boosted_price") or "").strip()) or bool(re.search(r"profit boost|odds boost|\bboost", r.get("market") or "", re.I))
+def money_kind(r): return "Bonus bet" if is_bonus(r) else ("Profit boost" if is_boost(r) else "Cash")
+def eff_price(r):
+    a = american(r.get("boosted_price"))
+    return a if a is not None else american(r.get("price"))
+def plan_band(r):
+    a = eff_price(r)
+    if a is None or "unconfirmed" in (r.get("price") or "").lower(): return "Price unconfirmed"
+    if a <= -150: return "Fav -150 or shorter"
+    if a <= 150: return "-149 to +150"
+    if a <= 400: return "+151 to +400"
+    return "+401 or longer"
+def legs_n(r):
+    m = re.search(r"(\d+)[- ]?leg", r.get("market") or "", re.I)
+    return int(m[1]) if m else len([x for x in re.split(r"\s+\+\s+", r.get("pick") or "") if x])
+
+def game_plan(rows):
+    st = [r for r in rows if is_settled(r)]
+    cut = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    wk = [r for r in rows if (r.get("date") or "") >= cut]
+    recs = read_csv(RECS)[0]; rec_ids = set()
+    for x in recs:
+        rec_ids.update(i.strip() for i in (x.get("bet_ids") or "").split(";") if i.strip())
+    bonus = [r for r in st if is_bonus(r)]
+    face = sum(num(r.get("stake")) for r in bonus); ret = sum(max(0.0, num(r.get("pnl"))) for r in bonus)
+    conv = r2(ret / face * 100) if face else None
+    pb_roll = [r for r in st if r["book"] == "PointsBet" and re.search(r"WELCOMEDM|rollover", r.get("market") or "", re.I)]
+    pb_cash_wk = [r for r in wk if r["book"] == "PointsBet" and money_kind(r) == "Cash" and not re.search(r"WELCOMEDM|rollover", r.get("market") or "", re.I)]
+    cz = [r for r in st if r["book"] == "Caesars" and is_boost(r)]
+    sgp = [r for r in st if market_bucket(r) == "Parlay/SGP"]; sgp_wk = [r for r in wk if market_bucket(r) == "Parlay/SGP"]
+    fav_sp = [r for r in st if money_kind(r) == "Cash" and (plan_band(r) == "Fav -150 or shorter" or market_bucket(r) == "Spread")]
+    fav_sp_wk = [r for r in wk if money_kind(r) == "Cash" and (plan_band(r) == "Fav -150 or shorter" or market_bucket(r) == "Spread")]
+    b3h = [r for r in st if r["book"] in ("bet365", "Hard Rock") and is_boost(r)]
+    unconf = [r for r in rows if "unconfirmed" in ((r.get("price") or "") + " " + (r.get("pick") or "") + " " + (r.get("stake") or "")).lower()]
+    try:
+        import clv as C; cs = C.summary(rows)
+    except Exception: cs = {"n": 0, "avg": None, "beat": 0, "beat_pct": None, "tracked": 0}
+    A = agg
+    def line(rs): a = A(rs); return f"{a['bets']} bets, {money(a['pnl'])}" + (f" ({a['roi']:+.1f}% ROI)" if a["staked"] else "")
+    rules = [
+        {"n": 1, "rule": "Finish the PointsBet rollover cheaply (near-even prices, fair-checked), then no new cash at PointsBet.",
+         "track": f"Rollover so far: {line(pb_roll)}. New PointsBet cash bets in the last 7 days: {len(pb_cash_wk)}.",
+         "ok": len(pb_cash_wk) == 0},
+        {"n": 2, "rule": "Take every Caesars 100% profit boost, full size, on +100 to +300 prices.",
+         "track": f"Caesars boosts: {line(cz)}.", "ok": A(cz)["pnl"] >= 0},
+        {"n": 3, "rule": "Bonus bets: one at a time, +300 to +500, fair-checked (Bet Finder > Bonus bet). Target 60%+ of face back over time.",
+         "track": f"Bonus bets returned {money(ret).lstrip('+')} of {money(face).lstrip('+')} face" + (f" = {conv:.0f}%" if conv is not None else "") + f" ({len(bonus)} settled).",
+         "ok": conv is None or conv >= 60},
+        {"n": 4, "rule": "Cut tiny SGPs. Keep only boosted 2-leg SGPs.",
+         "track": f"Parlays/SGPs: {line(sgp)}. Placed in the last 7 days: {len(sgp_wk)}.", "ok": len(sgp_wk) <= 5},
+        {"n": 5, "rule": "No plain cash favourites at -150 or shorter, and no cash spreads, unless the Finder shows +2% EV.",
+         "track": f"Cash favs/spreads: {line(fav_sp)}. Last 7 days: {len(fav_sp_wk)}.", "ok": len(fav_sp_wk) == 0},
+        {"n": 6, "rule": "Use the profit-boost routine at bet365 and Hard Rock too (Bet Finder > Profit boost).",
+         "track": f"bet365 + Hard Rock boosts: {line(b3h)}.", "ok": A(b3h)["pnl"] >= 0},
+        {"n": 7, "rule": "Log every bet when placed so CLV (vs Pinnacle's closing no-vig line) is tracked; confirm unconfirmed prices.",
+         "track": (f"CLV on {cs['n']} bet(s): avg {cs['avg']:+.1f}%, beat the close {cs['beat_pct']:.0f}%." if cs["n"] else "No closing lines captured yet.")
+                  + f" Bets with an unconfirmed price: {len(unconf)}.", "ok": len(unconf) == 0},
+    ]
+    followed = [r for r in st if r.get("bet_id") in rec_ids]; own = [r for r in st if r.get("bet_id") not in rec_ids]
+    band_order = ["Fav -150 or shorter", "-149 to +150", "+151 to +400", "+401 or longer", "Price unconfirmed"]
+    return {"rules": rules,
+            "by_type": group(st, market_bucket, "key"),
+            "by_book": group(st, lambda r: r["book"], "key"),
+            "by_band": group(st, plan_band, "key", band_order),
+            "by_money": group(st, money_kind, "key", ["Cash", "Profit boost", "Bonus bet"]),
+            "by_source": [{"key": "Followed my picks", **A(followed)}, {"key": "Own picks", **A(own)}],
+            "by_legs": group([r for r in st if market_bucket(r) == "Parlay/SGP"], lambda r: f"{legs_n(r)} legs", "key"),
+            "bonus": {"n": len(bonus), "face": r2(face), "returned": r2(ret), "conv_pct": conv},
+            "clv": cs, "unconfirmed": len(unconf),
+            "unconfirmed_list": [{"bet_id": r.get("bet_id", ""), "date": r["date"], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r.get("event") or ""),
+                                  "market": r.get("market", ""), "pick": r["pick"], "price": r.get("price", ""), "boosted_price": r.get("boosted_price", ""),
+                                  "stake": r.get("stake", ""), "result": r.get("result", ""), "pnl": r2(num(r.get("pnl")))}
+                                 for r in sorted(unconf, key=lambda r: r["date"], reverse=True)],
+            "note": "Small sample: treat splits under ~30 bets as signals, not proof."}
+
 def build_stats(rows, led):
     st = sorted([r for r in rows if is_settled(r)], key=lambda r: (r["date"], r.get("start_et", ""), r.get("bet_id", "")))
     opn = [r for r in rows if not is_settled(r)]
@@ -151,7 +228,7 @@ def build_stats(rows, led):
             "by_odds": group(st, odds_bucket, "bucket", odds_order),
             "by_weekday": group(st, wd, "day", days),
             "boosted": {"boosted": agg(bo), "regular": agg(reg)},
-            "bankroll": bankroll(led), "picks": picks_summary()}
+            "bankroll": bankroll(led), "picks": picks_summary(), "game_plan": game_plan(rows)}
 
 def build_archive(arch):
     bets = []

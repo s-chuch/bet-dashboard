@@ -57,3 +57,16 @@
 .seg button{min-height:30px}
 @media(min-width:760px){.hero{grid-template-columns:1.2fr 1fr;align-items:center}.hero-grid{border-top:0;padding-top:0;border-left:1px solid var(--line);padding-left:18px}}
 .grid2>.panel,.grid2>.panel+.panel{margin-top:0}.grid2{align-items:start}
+
+/* game plan */
+.prule{display:grid;grid-template-columns:34px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.prule:last-child{border-bottom:0}
+.prule .pn{font-weight:800;font-size:13px}
+.prule.ok .pn{color:var(--win)}.prule.warn .pn{color:var(--lose)}
+.prule .pr{font-size:13px;font-weight:600}
+.pt{font-size:12px;color:var(--mut);margin-top:2px}
+.ptab{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;table-layout:fixed}
+.ptab th{font-size:10.5px;color:var(--mut);text-transform:uppercase;font-weight:700;text-align:right;padding:4px 2px}
+.ptab td{padding:6px 2px;border-top:1px solid var(--line);text-align:right;white-space:nowrap}
+.ptab th:first-child,.ptab td:first-child{text-align:left;width:38%;overflow:hidden;text-overflow:ellipsis}
+#plan-seg{flex-wrap:wrap}

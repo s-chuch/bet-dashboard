@@ -920,6 +920,8 @@ function barsFor(b){const out=[];let mini=null;
   return{html:out.filter(Boolean).join(""),mini}}
 const BOOKS={PointsBet:"PB",Caesars:"CZR",FanDuel:"FD",DraftKings:"DK",bet365:"365",theScore:"SCORE","Hard Rock":"HR",BetMGM:"MGM"};
 const bookTag=b=>BOOKS[b]||b;
+// CLV chip: price taken vs Pinnacle no-vig close (data/clv.csv via data.json). Hidden until a close was captured.
+const clvTag=c=>c&&c.clv_pct!=null?` · <span class="${c.clv_pct>=0?"pos":"neg"}" title="Closing line value vs Pinnacle no-vig close ${esc(c.close_price||"")}">CLV ${c.clv_pct>=0?"+":""}${c.clv_pct.toFixed(1)}%</span>`:"";
 const cardKey=b=>[b.date,b.book,b.event,b.pick].join("|");
 let OPEN=new Set(), SECS=new Set(), FINSEEN=new Set(), FINAL_BI=new Set();
 try{OPEN=new Set(JSON.parse(localStorage.getItem("bd_open")||"[]"));SECS=new Set(JSON.parse(localStorage.getItem("bd_secs")||"[]"));FINSEEN=new Set(JSON.parse(localStorage.getItem("bd_fin")||"[]"))}catch(e){}
@@ -990,7 +992,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     const mini=mv!=null?`<div class="mini" style="width:${Math.max(0,Math.min(100,mv))}%;background:${mv>50?"var(--win)":mv<50?"var(--lose)":"var(--push)"}"></div>`:"";
     const rs=rowScore(b,g,legStats);
     const crowDef=`${pillHTML(b,status,legStats)}
-      <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}</div><div class="cneed">🎯 ${needLines(b).map(esc).join(" &nbsp;•&nbsp; ")}</div></div>
+      <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}${clvTag(b.clv)}</div><div class="cneed">🎯 ${needLines(b).map(esc).join(" &nbsp;•&nbsp; ")}</div></div>
       <div class="cright">${rs}</div><span class="chev">›</span>${mini}`;
     const crowHTML=(LiveUI.crow&&(()=>{try{return LiveUI.crow(b,{status,legStats,g,firstG,price,mini,mv,rs,BR,k,def:crowDef})}catch(e){return null}})())||crowDef;
     let html=`<div class="card ${cls(pillState(b,status,legStats).cls)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow">${crowHTML}</div><div class="cbody">
@@ -1026,7 +1028,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
   setHTML($("bets"),byStart(upCards)||'<div class="meta">Nothing upcoming.</div>');
   $("liveN").textContent=liveCards.length||"";$("upN").textContent=upCards.length||"";
   $("wonCards").innerHTML=wonCards.length?`<div class="meta" style="margin:0 2px 6px">Final, not settled in the tracker yet</div>`+byBook(wonCards):"";
-  const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${/void/i.test(s.result)?"Void · stake back":s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
+  const row=s=>`<div class="set"><span>${esc(s.date.slice(5))} ${esc(s.book)} · ${esc(s.pick)}${clvTag(s.clv)}</span><b class="${(s.pnl||0)>=0?"pos":"neg"}">${/void/i.test(s.result)?"Void · stake back":s.pnl==null?esc(s.result):((s.pnl>=0?"+":"−")+money(Math.abs(s.pnl)))}</b></div>`;
   const st=D.settled_recent||[], lostS=st.filter(s=>/lost|loss/i.test(s.result)), wonS=st.filter(s=>!/lost|loss/i.test(s.result));
   const wonSum=wonS.reduce((a,s)=>a+(s.pnl||0),0), lostSum=lostS.reduce((a,s)=>a-(s.pnl||0),0);
   $("won").innerHTML=(wonS.length?`<div class="meta" style="margin:8px 2px 2px">Settled recently</div>`:"")+byBook(wonS.map(s=>({html:row(s),book:s.book,stake:setStake(s)})))||(wonCards.length?"":'<div class="meta">None settled recently.</div>');

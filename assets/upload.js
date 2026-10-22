@@ -56,6 +56,18 @@
   }
   function slim(b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; }
   // whole history like the server (scripts/add_bets.py uses all_bets(): live + settled + archived)
+  // bets logged with a guessed "unconfirmed (~price)" price (stats.json game_plan.unconfirmed_list): flagged so they get confirmed
+  function loadUnconfirmed() {
+    fetch('stats.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (st) {
+      var list = ((st && st.game_plan) || {}).unconfirmed_list || [], box = document.getElementById('confirm');
+      if (!box || !list.length) return;
+      document.getElementById('confirm-rows').innerHTML = list.map(function (b) {
+        var res = b.result === 'open' ? 'open' : b.result + ' ' + (b.pnl >= 0 ? '+' : '\u2212') + '$' + Math.abs(b.pnl).toFixed(2);
+        return '<div class="cfm"><b>\u26a0 ' + esc(b.date.slice(5) + ' ' + b.book) + '</b> \u00b7 ' + esc(b.pick) + '<div class="muted small">' + esc(b.market) + ' \u00b7 price ' + esc(b.price || '?') + ' \u00b7 stake ' + esc(b.stake) + ' \u00b7 ' + esc(res) + ' \u00b7 id ' + esc(b.bet_id) + '</div></div>';
+      }).join('');
+      box.hidden = false;
+    }).catch(function () {});
+  }
   function loadExisting() {
     fetch('archive.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (a) {
       S.archived = (a.bets || []).map(slim); S.existing = (S.live || []).concat(S.archived); S.drafts.forEach(function (x) { x._seen = 0; }); renderDrafts(true);
@@ -641,5 +653,5 @@
     el.innerHTML = '<span>Your account names (friend check):</span> <input type="text" id="own-in" value="' + esc(owners().join(', ')) + '" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:160px"> <button class="btn sm" type="button" id="own-save">Save</button>';
     $('own-save').onclick = function () { var v = $('own-in').value.split(',').map(function (x) { return x.trim(); }).filter(Boolean); if (v.length) setOwners(v); renderOwners(); };
   }
-  renderOwners(); renderGh(); renderAi(); loadExisting(); updateSend(); restore();
+  renderOwners(); renderGh(); renderAi(); loadExisting(); loadUnconfirmed(); updateSend(); restore();
 })();

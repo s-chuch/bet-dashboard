@@ -26,14 +26,52 @@
       '<li><b>Start:</b> ' + esc(r.start_et) + '</li>' +
       '<li><b>Fair:</b> ' + am(r.fair_odds) + ' (' + r.fair_pct + '% to win), <span class="ev">+' + r.ev_pct + '% EV</span>' + (r.ev_dollars != null ? ' (about ' + money(r.ev_dollars) + ' expected profit)' : '') + '. Pinnacle: ' + esc(r.pin_prices) + '.' + line + '</li>' +
       '<li><b>Wins if:</b> ' + esc(r.wins_if) + '</li>' +
+      (r.caution ? '<li class="caution">\u26a0 ' + esc(r.caution) + '</li>' : '') +
       '</ul></article>';
   }
   function short(r) {
-    return '<article class="pick near">' + header(r) + '<p><b>' + esc(r.book_app) + '</b> ' + am(r.odds) + ' \u00b7 fair ' + am(r.fair_odds) + ' \u00b7 ' + r.ev_pct + '% EV \u00b7 needs ' + am(r.kill_price) + ' \u00b7 ' + esc(r.start_et) + '</p></article>';
+    return '<article class="pick near">' + header(r) + '<p><b>' + esc(r.book_app) + '</b> ' + am(r.odds) + ' \u00b7 fair ' + am(r.fair_odds) + ' \u00b7 ' + r.ev_pct + '% EV \u00b7 needs ' + am(r.kill_price) + ' \u00b7 ' + esc(r.start_et) + '</p>' + (r.skip_reason ? '<p class="caution small">' + esc(r.skip_reason) + '</p>' : '') + '</article>';
   }
+
+  // ---------- Bonus bet mode: +300..+500 ranked by bonus-bet return p*(dec-1) ----------
+  function bonusCard(r, i) {
+    return '<article class="pick bonus">' + header(r) + '<ul>' +
+      '<li><b>#' + (i + 1) + ' \u00b7 Bonus return:</b> ' + r.bonus_ret_pct + '% of the bonus face (expected cash back per $1 of bonus)</li>' +
+      '<li><b>Yes at:</b> ' + am(r.yes_at) + ' (now at ' + esc(r.book_app) + ')' + (r.bonus_floor ? '; still OK at ' + am(r.bonus_floor) + ' or longer (60% return)' : '') + '</li>' +
+      '<li><b>Bet type:</b> <b>' + esc(r.app_market) + '</b> \u2192 \u201c' + esc(r.selection.replace(/ to win$/, '')) + '\u201d. Same pick at another book is fine if its price is at least the floor.</li>' +
+      '<li><b>Fair:</b> ' + am(r.fair_odds) + ' (' + r.fair_pct + '% to win) \u00b7 <b>Start:</b> ' + esc(r.start_et) + '</li>' +
+      '<li><b>Wins if:</b> ' + esc(r.wins_if) + '</li></ul></article>';
+  }
+  function renderBonus(d) {
+    var b = (d && d.bonus) || [];
+    $('bonus').innerHTML = b.length ? '<p class="muted small">Use one bonus bet at a time. Ranked by return on the bonus (you keep only the profit).</p>' + b.map(bonusCard).join('') : '<p class="empty">No +300 to +500 price returns 60%+ of face in this scan.</p>';
+  }
+
+  // ---------- Profit boost helper: book + boost % -> +100..+300 picks ranked by boosted EV ----------
+  var POOL = [];
+  function dec(a) { return a > 0 ? 1 + a / 100 : 1 + 100 / -a; }
+  function renderBoost() {
+    var book = $('bb-book').value, pctv = Number($('bb-pct').value), out = $('boost');
+    if (!(pctv > 0 && pctv <= 200)) { out.innerHTML = '<p class="empty err">Enter a boost between 1 and 200%.</p>'; return; }
+    if (!POOL.length) { out.innerHTML = '<p class="empty">No +100 to +300 prices in this scan.</p>'; return; }
+    var rows = POOL.map(function (p) {
+      var price = book === 'bet365' && p.bet365_odds != null ? p.bet365_odds : p.odds, f = p.fair_pct / 100;
+      var ev = f * (1 + (dec(price) - 1) * (1 + pctv / 100)) - 1;
+      var need = Math.ceil(100 * (((1.02 / f) - 1) / (1 + pctv / 100)));   // shortest + price that keeps +2% boosted EV
+      return { p: p, price: price, ev: ev, need: need, b365: book === 'bet365' && p.bet365_odds != null };
+    }).filter(function (x) { return x.ev > 0; }).sort(function (a, b) { return b.ev - a.ev; }).slice(0, 8);
+    out.innerHTML = rows.length ? rows.map(function (x, i) {
+      var p = x.p, boosted = Math.round((dec(x.price) - 1) * (1 + pctv / 100) * 100);
+      return '<article class="pick near"><h4>' + esc('#' + (i + 1) + ' ' + p.league + ': ' + p.selection + ' (' + p.event + ')') + '</h4><p>' + esc(p.app_market) + ' \u00b7 ' +
+        (x.b365 ? 'bet365 ' : 'best feed price (' + esc(p.book_app) + ') ') + am(x.price) + ' \u2192 boosted ' + am(boosted) + ' \u00b7 fair ' + am(p.fair_odds) + ' \u00b7 <span class="ev">+' + (x.ev * 100).toFixed(1) + '% boosted EV</span></p>' +
+        '<p class="small muted">' + (book === 'bet365' ? '' : 'Check ' + esc(book) + '\u2019s own price: ') + 'still +2% if its unboosted price is ' + (x.need >= 100 ? am(x.need) : '+100') + ' or longer. ' + esc(p.start_et) + (p.three_way ? ' \u00b7 3-way: a draw loses' : '') + '</p></article>';
+    }).join('') : '<p class="empty">No +100 to +300 pick is +EV even with this boost.</p>';
+  }
+
   function render(d) {
     if (!d || !d.ok) { $('scan-time').textContent = d && d.scanned_et ? d.scanned_et : 'never'; $('bets').innerHTML = '<p class="empty err">' + esc(d && d.error ? 'Last scan failed: ' + d.error : 'No scan yet. Tap Scan now.') + '</p>'; return; }
     $('scan-time').textContent = d.scanned_et;
+    renderBonus(d); POOL = d.boost_pool || []; renderBoost();
     $('bets').innerHTML = d.bets.length ? d.bets.map(full).join('') : '<p class="empty">Nothing reached +2% EV in this scan. No filler bets.</p>';
     $('near').innerHTML = d.near_misses.length ? d.near_misses.map(short).join('') : '<p class="empty">None.</p>';
     var c = d.counts || {}, rows = Object.keys(c).map(function (k) { var s = c[k]; return '<li>' + esc(k.toUpperCase()) + ': ' + s.games + ' games, ' + s.prices + ' prices compared, ' + s.exposed + ' skipped (your bets), ' + s.not_confirmed + ' not confirmed by Pinnacle</li>'; });
@@ -79,6 +117,7 @@
     }, n ? 5000 : 4000);
   }
   $('scan-now').onclick = scanNow;
+  $('bb-book').onchange = renderBoost; $('bb-pct').oninput = renderBoost;
   renderTok();
   load(false);
 })();

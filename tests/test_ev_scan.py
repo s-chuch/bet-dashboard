@@ -37,4 +37,23 @@ class T(unittest.TestCase):
         self.assertIn("45 or more", E.wins_if("ncaaf", "Total", "over", None, 44.5, False))
         self.assertIn("more than 1.5", E.wins_if("nhl", "Spread", "home", "Leafs", -1.5, False))
 
+class Plan(unittest.TestCase):
+    def test_three_way_needs_4pct(self):
+        self.assertEqual(E.cash_rule("Moneyline", 250, True, 0.03)[0], "SKIP")
+        self.assertIn("4%", E.cash_rule("Moneyline", 250, True, 0.03)[2])
+        self.assertEqual(E.cash_rule("Moneyline", 250, True, 0.041)[0], "BET")
+        self.assertEqual(E.cash_rule("Moneyline", 250, False, 0.03)[0], "BET")
+    def test_caution(self):
+        self.assertIn("Spread", E.cash_rule("Spread", -110, False, 0.03)[1])
+        self.assertIn("favourite", E.cash_rule("Moneyline", -150, False, 0.03)[1])
+        self.assertEqual(E.cash_rule("Moneyline", -149, False, 0.03)[1], "")
+        self.assertEqual(E.cash_rule("Spread", -110, False, 0.01)[0], "SKIP")
+    def test_bonus(self):
+        self.assertAlmostEqual(E.bonus_return(0.2, 400), 0.8)
+        f = E.bonus_floor(0.15); self.assertGreaterEqual(E.bonus_return(0.15, f), 0.6 - 1e-9); self.assertLess(E.bonus_return(0.15, f - 1), 0.6)
+        self.assertIsNone(E.bonus_floor(0.9))
+    def test_boost(self):
+        self.assertAlmostEqual(E.boosted_ev(0.5, 100, 100), 0.5)
+        self.assertAlmostEqual(E.boosted_ev(0.5, 100, 0), 0.0)
+
 if __name__ == "__main__": unittest.main()

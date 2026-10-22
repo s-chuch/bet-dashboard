@@ -15,7 +15,7 @@
 <nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html">Upload</a><a href="finder.html" aria-current="page">Bet Finder</a></div></div></nav>
 <main class="wrap">
   <h1 class="page-title">Bet Finder</h1>
-  <p class="page-sub">+EV scan: FanDuel, DraftKings, bet365 and theScore Bet priced against Pinnacle's no-vig line (same market, exact same line). BET at +2% EV or more. Stake is 0.5% of that book's balance. Games you already have a bet on are left out.</p>
+  <p class="page-sub">+EV scan: FanDuel, DraftKings, bet365 and theScore Bet priced against Pinnacle's no-vig line (same market, exact same line). BET at +2% EV or more (3-way moneylines need +4%; spreads and favourites at -150 or shorter carry a caution). Stake is 0.5% of that book's balance. Games you already have a bet on are left out.</p>
   <section class="panel" id="scanbar">
     <div class="sb-row"><div><div class="lbl">Last scan</div><div id="scan-time" class="sb-time">…</div></div>
     <button class="btn pri" id="scan-now" type="button">Scan now</button></div>
@@ -27,6 +27,15 @@
   <div id="bets"></div>
   <h2 class="sec-title">Near misses (0 to 1.9%, skip)</h2>
   <div id="near"></div>
+  <h2 class="sec-title">Bonus bet (+300 to +500)</h2>
+  <div id="bonus"></div>
+  <h2 class="sec-title">Profit boost helper</h2>
+  <section class="panel small" id="boostbar">
+    <div class="bb-row"><label>Book <select id="bb-book"><option>Caesars</option><option>bet365</option><option>Hard Rock</option></select></label>
+    <label>Boost % <input id="bb-pct" type="number" inputmode="decimal" min="1" max="200" value="100"></label></div>
+    <p class="muted">Ranks +100 to +300 picks by EV after the profit boost, priced against Pinnacle no-vig. Caesars and Hard Rock aren’t in the feed, so it uses the best feed price; check your book’s price against the “still +2%” line.</p>
+  </section>
+  <div id="boost"></div>
   <h2 class="sec-title">Scan details</h2>
   <div id="details" class="panel small muted"></div>
 </main>
