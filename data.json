@@ -2690,10 +2690,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 3,
-     "clock": 233.0,
+     "clock": 220.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 3rd",
+     "detail": "3:40 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -3810,10 +3810,10 @@
     "snapshot": {
      "date": "2026-10-22T01:00Z",
      "period": 1,
-     "clock": 2220.0,
+     "clock": 2280.0,
      "state": "in",
      "completed": false,
-     "detail": "37'",
+     "detail": "38'",
      "teams": [
       {
        "id": "223",
@@ -5603,10 +5603,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 202.0,
+     "clock": 192.0,
      "state": "in",
      "completed": false,
-     "detail": "3:22 - 3rd",
+     "detail": "3:12 - 3rd",
      "teams": [
       {
        "id": "28",
@@ -6284,10 +6284,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 3,
-     "clock": 233.0,
+     "clock": 220.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 3rd",
+     "detail": "3:40 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -7525,9 +7525,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5074,
-     "away": 0.4926,
-     "spread": 0.02,
+     "home": 0.555,
+     "away": 0.445,
+     "spread": 0.03,
      "t": "2026-10-22T01:39Z"
     }
    },
@@ -10393,9 +10393,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5074,
-     "away": 0.4926,
-     "spread": 0.02,
+     "home": 0.555,
+     "away": 0.445,
+     "spread": 0.03,
      "t": "2026-10-22T01:39Z"
     }
    },
@@ -12115,10 +12115,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 202.0,
+     "clock": 192.0,
      "state": "in",
      "completed": false,
-     "detail": "3:22 - 3rd",
+     "detail": "3:12 - 3rd",
      "teams": [
       {
        "id": "28",
@@ -13509,10 +13509,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 3,
-     "clock": 233.0,
+     "clock": 220.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 3rd",
+     "detail": "3:40 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -13813,10 +13813,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 855.0,
+     "clock": 846.0,
      "state": "in",
      "completed": false,
-     "detail": "14:15 - 3rd",
+     "detail": "14:06 - 3rd",
      "teams": [
       {
        "id": "2",
@@ -19849,6 +19849,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "ed77141927a183ce1559d7271c83fc552daf6c81",
- "generated_at": "2026-10-21T21:39:27-04:00"
+ "hash": "1e4ebd3247170fd8d8011af1c60c2c40a8d2065f",
+ "generated_at": "2026-10-21T21:39:56-04:00"
 }
