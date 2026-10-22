@@ -12548,12 +12548,39 @@
     "legs": []
    },
    {
+    "bet_id": "2d46e615",
+    "book": "Caesars",
+    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
+    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
+    "stake": "0.20",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
     "pick": "Kawhi Leonard 40+ pts+reb+ast",
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
+    "legs": []
+   },
+   {
+    "bet_id": "ef269fe1",
+    "book": "bet365",
+    "event": "Ferencvarosi TC v Torreeense",
+    "pick": "Torreeense ML",
+    "stake": "0.2",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -12795,6 +12822,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "19accac23e5f1b0bf132782bb7b4c94b2d5086bc",
- "generated_at": "2026-10-21T23:03:19-04:00"
+ "hash": "62f4585efd111b8de747b5bb97521a3ed0ad09d9",
+ "generated_at": "2026-10-21T23:03:41-04:00"
 }
