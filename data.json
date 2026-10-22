@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T00:37Z"
+     "t": "2026-10-22T00:38Z"
     }
    },
    "sport": "NFL",
@@ -2690,10 +2690,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 1,
-     "clock": 11.9,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "11.9 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "20",
@@ -4725,7 +4725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T00:37Z"
+     "t": "2026-10-22T00:38Z"
     }
    },
    "sport": "NCAAF",
@@ -6284,10 +6284,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 1,
-     "clock": 11.9,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "11.9 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "20",
@@ -6376,10 +6376,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 482.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 3rd",
+     "detail": "8:00 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -6389,7 +6389,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "61"
       },
       {
        "id": "15",
@@ -6888,8 +6888,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -6936,10 +6936,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 633.0,
+     "clock": 628.0,
      "state": "in",
      "completed": false,
-     "detail": "10:33 - 3rd",
+     "detail": "10:28 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -7470,8 +7470,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.285,
-     "away": 0.715,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -7715,10 +7715,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 482.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 3rd",
+     "detail": "8:00 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -7728,7 +7728,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "61"
       },
       {
        "id": "15",
@@ -8227,8 +8227,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -9101,10 +9101,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 482.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 3rd",
+     "detail": "8:00 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -9114,7 +9114,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "61"
       },
       {
        "id": "15",
@@ -9613,8 +9613,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -9694,10 +9694,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 633.0,
+     "clock": 628.0,
      "state": "in",
      "completed": false,
-     "detail": "10:33 - 3rd",
+     "detail": "10:28 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -10228,8 +10228,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.285,
-     "away": 0.715,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -11346,10 +11346,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 482.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 3rd",
+     "detail": "8:00 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -11359,7 +11359,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "61"
       },
       {
        "id": "15",
@@ -11858,8 +11858,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -12674,10 +12674,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 482.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 3rd",
+     "detail": "8:00 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -12687,7 +12687,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "61"
       },
       {
        "id": "15",
@@ -13186,8 +13186,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-22T00:37Z"
     }
@@ -13256,10 +13256,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 1,
-     "clock": 11.9,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "11.9 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "20",
@@ -13549,10 +13549,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 2,
-     "clock": 1138.0,
+     "clock": 1108.0,
      "state": "in",
      "completed": false,
-     "detail": "18:58 - 2nd",
+     "detail": "18:28 - 2nd",
      "teams": [
       {
        "id": "2",
@@ -18701,6 +18701,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "cff1ec2e049422b6b53f958a70586234fbf00588",
- "generated_at": "2026-10-21T20:37:18-04:00"
+ "hash": "8d56d48f21ee5dfe9559311ca3dabbbd186b433a",
+ "generated_at": "2026-10-21T20:38:45-04:00"
 }
