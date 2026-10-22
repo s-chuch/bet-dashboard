@@ -1,5 +1,5 @@
 /* LiveUI: extension points for the ui-*.js modules (all optional). scoreBox(g) may return replacement HTML; afterRender(ctx) runs after every render() once the DOM is updated. */
-window.LiveUI={scoreBox:null,afterRender:[]};
+window.LiveUI={scoreBox:null,crow:null,afterRender:[],tick:[]};
 const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
 const TZ="America/Toronto";
 let DATA=null, games={}, summaries={};
@@ -843,6 +843,7 @@ function tick1s(){if(!DATA||document.hidden)return;refreshLegs();
     const cs=b.cash_stake||0;let p=payoutP(b,LAST_STATUS[i]);if(p==null)p=impliedP(b);if(p==null){tbc++;return}
     exp+=p==="push"?cs:pay*p});
   try{livePL()}catch(e){}
+  for(const f of LiveUI.tick){try{f()}catch(e){}}   // ui-*.js per-second hooks
   const ep=$("expPay"),el=$("expPL");if(ep){ep.textContent=moneyC(U.max_payout);$("expSub").textContent=`${U.n!=null?U.n:DATA.open.length} bet${(U.n!=null?U.n:DATA.open.length)===1?"":"s"} · expected ≈ ${moneyC(exp)} (est.)${tbc?` · ${tbc} TBC`:""}`}
   if(el){const v=exp-(U.cash_stake||0);el.textContent=(v>=0?"+":"−")+money(Math.abs(v));el.className=v>=0?"pos":"neg"}}
 setInterval(tick1s,1000);
@@ -988,9 +989,11 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     const k=cardKey(b), isOpen=OPEN.has(k), BR=barsFor(b), mv=BR.mini;
     const mini=mv!=null?`<div class="mini" style="width:${Math.max(0,Math.min(100,mv))}%;background:${mv>50?"var(--win)":mv<50?"var(--lose)":"var(--push)"}"></div>`:"";
     const rs=rowScore(b,g,legStats);
-    let html=`<div class="card ${cls(pillState(b,status,legStats).cls)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow">${pillHTML(b,status,legStats)}
+    const crowDef=`${pillHTML(b,status,legStats)}
       <div class="cmid"><div class="clbl">${esc(shortLabel(b,g||firstG))}</div><div class="csub">${esc(bookTag(b.book))} · <b>${money(b.stake)}</b>${b.to_win!=null?` → ${money(b.to_win)}`:""}</div><div class="cneed">🎯 ${needLines(b).map(esc).join(" &nbsp;•&nbsp; ")}</div></div>
-      <div class="cright">${rs}</div><span class="chev">›</span>${mini}</div><div class="cbody">
+      <div class="cright">${rs}</div><span class="chev">›</span>${mini}`;
+    const crowHTML=(LiveUI.crow&&(()=>{try{return LiveUI.crow(b,{status,legStats,g,firstG,price,mini,mv,rs,BR,k,def:crowDef})}catch(e){return null}})())||crowDef;
+    let html=`<div class="card ${cls(pillState(b,status,legStats).cls)}${isOpen?" open":""}" data-k="${esc(k)}" data-bi="${D.open.indexOf(b)}"><div class="crow">${crowHTML}</div><div class="cbody">
       <div class="top" style="margin-top:8px"><span class="tag">${esc(b.sport||"?")} · ${esc(b.book)}</span></div>
       <div class="ev">${esc(b.event)} · ${esc(b.market)}</div>
       <div class="nums"><span>Price <b>${price}</b></span><span>Stake <b>${money(b.stake)}</b>${b.stake_note?" (unconf.)":""}</span><span>To win <b>${b.to_win==null?"TBC":money(b.to_win)}</b></span><span>Start <b>${esc(fmtStart(firstG,b.start))}</b></span></div>`;
