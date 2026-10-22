@@ -1005,7 +1005,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -1782,7 +1782,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -2510,7 +2510,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -2810,7 +2810,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "MLB",
@@ -3106,7 +3106,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "MLB",
@@ -4388,7 +4388,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NCAAF",
@@ -5185,7 +5185,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -6124,7 +6124,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -6892,7 +6892,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "NFL",
@@ -7172,7 +7172,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:49Z"
+     "t": "2026-10-22T20:50Z"
     }
    },
    "sport": "MLB",
@@ -12204,12 +12204,39 @@
     "legs": []
    },
    {
+    "bet_id": "2d46e615",
+    "book": "Caesars",
+    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
+    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
+    "stake": "0.20",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
     "pick": "Kawhi Leonard 40+ pts+reb+ast",
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
+    "legs": []
+   },
+   {
+    "bet_id": "ef269fe1",
+    "book": "bet365",
+    "event": "Ferencvarosi TC v Torreeense",
+    "pick": "Torreeense ML",
+    "stake": "0.2",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -12440,7 +12467,7 @@
     "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 16:49 ET"
+  "last_change_at": "2026-10-22 16:50 ET"
  },
  "open_live_n": 27,
  "open_stake_by_book": {
@@ -12451,6 +12478,6 @@
   "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "d433c854e31aa30995e5cfec3b8e2bc874166e41",
- "generated_at": "2026-10-22T16:49:55-04:00"
+ "hash": "8aba2c6794e629f67257502f52d0422c21b940c5",
+ "generated_at": "2026-10-22T16:50:11-04:00"
 }
