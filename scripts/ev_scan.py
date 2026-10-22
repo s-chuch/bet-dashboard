@@ -234,6 +234,16 @@ def evaluate(lg, an, pin, stats, bal):
             add("Total", f'{o["side"].title()} {v:g}', book, o["odds"], pm.get(("tot", v)), o["side"], ["over", "under"], None, v)
     return rows
 
+def pick_key(r):
+    """Stable id of a Finder pick for the day (game date + event + selection); the Skip button stores it."""
+    return f'{(r.get("start_utc") or "")[:10]}|{r.get("event", "")}|{r.get("selection", "")}'
+
+def skipped_today(root, now):
+    p = os.path.join(root, "data", "finder_skips.csv")
+    if not os.path.exists(p): return set()
+    import csv
+    return {x["key"] for x in csv.DictReader(open(p)) if x.get("date_et") == now.strftime("%Y-%m-%d")}
+
 def scan(leagues, hours, root=ROOT):
     now = dt.datetime.now(ET); until = now + dt.timedelta(hours=hours)
     bal = balances(os.path.join(root, "data", "balances.csv"))
@@ -265,6 +275,10 @@ def scan(leagues, hours, root=ROOT):
                 if not p: st["unmatched"] += 1; continue
                 r = evaluate(lg, g, p, st, bal); st["prices"] += len(r); rows += r
         counts[lg] = st
+    skips = skipped_today(root, now)
+    for r in rows: r["key"] = pick_key(r)
+    if skips: notes.append(f"{sum(r['key'] in skips for r in rows)} price(s) hidden: you skipped them in Bet Finder today")
+    rows = [r for r in rows if r["key"] not in skips]
     rows.sort(key=lambda r: -r["ev_pct"])
     bonus, seen_b = [], set()
     for r in sorted(rows, key=lambda r: -bonus_return(r["fair_pct"] / 100, r["odds"])):
@@ -280,7 +294,7 @@ def scan(leagues, hours, root=ROOT):
         k = (r["event"], r["market"], r["selection"])
         cur = pool.get(k)
         if cur is None or r["odds"] > cur["odds"]:
-            pool[k] = {x: r[x] for x in ("league", "event", "start_et", "start_utc", "market", "app_market", "selection", "book_app", "odds", "fair_pct", "fair_odds", "wins_if", "three_way")}
+            pool[k] = {x: r[x] for x in ("key", "league", "event", "start_et", "start_utc", "market", "app_market", "selection", "book_app", "odds", "fair_pct", "fair_odds", "wins_if", "three_way")}
         if r["book"] == "bet365": pool[k]["bet365_odds"] = max(r["odds"], pool[k].get("bet365_odds") or -9999)
     boost_pool = sorted(pool.values(), key=lambda p: -p["fair_pct"] * am2dec(p["odds"]))[:150]
     bets = [r for r in rows if r["class"] == "BET"]
