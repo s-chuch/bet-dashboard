@@ -262,3 +262,6 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-21 13:02,theScore,4def2dde,stake,-0.20,stake
 2026-10-21 13:02,theScore,8460d5d9,stake,-0.20,stake
 2026-10-21 20:24,Caesars,3f3089f2,settled,0.00,"lost, no return"
+2026-10-21 21:38,bet365,0abd747b,stake,-0.20,stake
+2026-10-21 21:38,bet365,ef269fe1,stake,-0.20,stake
+2026-10-21 21:38,bet365,97a63232,stake,-0.20,stake

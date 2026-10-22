@@ -58,6 +58,15 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "ef269fe1",
+   "book": "bet365",
+   "event": "Ferencvarosi TC v Torreeense",
+   "pick": "Torreeense ML",
+   "stake": "0.2",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -288,5 +297,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 20:24 ET"
+ "last_change_at": "2026-10-21 21:39 ET"
 }
