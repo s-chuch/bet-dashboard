@@ -42,6 +42,15 @@
    "legs": []
   },
   {
+   "bet_id": "8659fd16",
+   "book": "DraftKings",
+   "event": "Chicago Bulls @ Toronto Raptors",
+   "pick": "Scottie Barnes 30+ pts+reb+ast",
+   "stake": "0.20",
+   "reason": "leg \"Scottie Barnes 30+ pts+reb+ast\": stat pra missing for Scottie Barnes",
+   "legs": []
+  },
+  {
    "bet_id": "6b6a71e7",
    "book": "DraftKings",
    "event": "Atlanta Hawks @ Orlando Magic",
@@ -49,9 +58,45 @@
    "stake": "0.20",
    "reason": "leg \"Franz Wagner 30+ pts+reb+ast\": stat pra missing for Franz Wagner",
    "legs": []
+  },
+  {
+   "bet_id": "9ad39183",
+   "book": "PointsBet",
+   "event": "Kawhi Leonard Specials (NBA)",
+   "pick": "Kawhi Leonard 40+ pts+reb+ast",
+   "stake": "0.50",
+   "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "34bb5692",
+   "book": "DraftKings",
+   "pick": "Matthew Tkachuk 2+ SOG + Carter Verhaeghe 2+ SOG + Brady Tkachuk 3+ SOG",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "FLA 1-5 OTT",
+   "at": "2026-10-21 22:26"
+  },
+  {
+   "bet_id": "4def2dde",
+   "book": "theScore",
+   "pick": "Brady Tkachuk U3.5 SOG + Sam Reinhart O0.5 pts + Linus Ullmark O23.5 saves + Senators +1.5",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "FLA 1-5 OTT",
+   "at": "2026-10-21 22:26"
+  },
+  {
+   "bet_id": "97a63232",
+   "book": "bet365",
+   "pick": "Tim Stutzle: 1+ Points + Brady Tkachuk: 3+ Shots on Goal + Dylan Cozens: 1+ Shots on Goal",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "FLA 1-5 OTT",
+   "at": "2026-10-21 22:26"
+  },
   {
    "bet_id": "0e0f4610",
    "book": "Caesars",
@@ -249,35 +294,8 @@
    "pnl": -2.0,
    "final": "CLE 3-7 TB",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "0d1b2254",
-   "book": "bet365",
-   "pick": "Nathan MacKinnon 1+ pts + Jack Hughes 1+ pts + Nathan MacKinnon 3+ SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "COL 3-4 NJ",
-   "at": "2026-10-21 09:10"
-  },
-  {
-   "bet_id": "6b1b2e1e",
-   "book": "theScore",
-   "pick": "Blue Jackets ML + Adam Fantilli O3.5 SOG + Zach Werenski O2.5 SOG + Adam Fantilli U1.5 pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "TOR 6-2 CBJ",
-   "at": "2026-10-21 09:10"
-  },
-  {
-   "bet_id": "0b6fbbde",
-   "book": "DraftKings",
-   "pick": "Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "OKC 116-104 SA",
-   "at": "2026-10-21 00:25"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 22:20 ET"
+ "last_change_at": "2026-10-21 22:26 ET"
 }
