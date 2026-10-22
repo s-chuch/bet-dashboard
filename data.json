@@ -2690,10 +2690,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 2,
-     "clock": 538.0,
+     "clock": 519.0,
      "state": "in",
      "completed": false,
-     "detail": "8:58 - 2nd",
+     "detail": "8:39 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -5603,10 +5603,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 2,
-     "clock": 239.0,
+     "clock": 237.0,
      "state": "in",
      "completed": false,
-     "detail": "3:59 - 2nd",
+     "detail": "3:57 - 2nd",
      "teams": [
       {
        "id": "28",
@@ -6284,10 +6284,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 2,
-     "clock": 538.0,
+     "clock": 519.0,
      "state": "in",
      "completed": false,
-     "detail": "8:58 - 2nd",
+     "detail": "8:39 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -6376,10 +6376,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 419.0,
+     "clock": 390.0,
      "state": "in",
      "completed": false,
-     "detail": "6:59 - 3rd",
+     "detail": "6:30 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -6399,7 +6399,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "69"
+       "score": "71"
       }
      ]
     },
@@ -6888,9 +6888,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
-     "spread": 0.01,
+     "home": 0.44,
+     "away": 0.56,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -6936,10 +6936,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 540.0,
+     "clock": 526.0,
      "state": "in",
      "completed": false,
-     "detail": "9:00 - 3rd",
+     "detail": "8:46 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -7470,8 +7470,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
+     "home": 0.225,
+     "away": 0.775,
      "spread": 0.01,
      "t": "2026-10-22T00:43Z"
     }
@@ -7715,10 +7715,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 419.0,
+     "clock": 390.0,
      "state": "in",
      "completed": false,
-     "detail": "6:59 - 3rd",
+     "detail": "6:30 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -7738,7 +7738,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "69"
+       "score": "71"
       }
      ]
     },
@@ -8227,9 +8227,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
-     "spread": 0.01,
+     "home": 0.44,
+     "away": 0.56,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -9101,10 +9101,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 419.0,
+     "clock": 390.0,
      "state": "in",
      "completed": false,
-     "detail": "6:59 - 3rd",
+     "detail": "6:30 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -9124,7 +9124,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "69"
+       "score": "71"
       }
      ]
     },
@@ -9613,9 +9613,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
-     "spread": 0.01,
+     "home": 0.44,
+     "away": 0.56,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -9694,10 +9694,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 540.0,
+     "clock": 526.0,
      "state": "in",
      "completed": false,
-     "detail": "9:00 - 3rd",
+     "detail": "8:46 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -10228,8 +10228,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
+     "home": 0.225,
+     "away": 0.775,
      "spread": 0.01,
      "t": "2026-10-22T00:43Z"
     }
@@ -11346,10 +11346,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 419.0,
+     "clock": 390.0,
      "state": "in",
      "completed": false,
-     "detail": "6:59 - 3rd",
+     "detail": "6:30 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -11369,7 +11369,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "69"
+       "score": "71"
       }
      ]
     },
@@ -11858,9 +11858,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
-     "spread": 0.01,
+     "home": 0.44,
+     "away": 0.56,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -11906,10 +11906,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 2,
-     "clock": 239.0,
+     "clock": 237.0,
      "state": "in",
      "completed": false,
-     "detail": "3:59 - 2nd",
+     "detail": "3:57 - 2nd",
      "teams": [
       {
        "id": "28",
@@ -12674,10 +12674,10 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 3,
-     "clock": 419.0,
+     "clock": 390.0,
      "state": "in",
      "completed": false,
-     "detail": "6:59 - 3rd",
+     "detail": "6:30 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -12697,7 +12697,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "69"
+       "score": "71"
       }
      ]
     },
@@ -13186,9 +13186,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
-     "spread": 0.01,
+     "home": 0.44,
+     "away": 0.56,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -13256,10 +13256,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 2,
-     "clock": 538.0,
+     "clock": 519.0,
      "state": "in",
      "completed": false,
-     "detail": "8:58 - 2nd",
+     "detail": "8:39 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -13549,10 +13549,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 2,
-     "clock": 848.0,
+     "clock": 830.0,
      "state": "in",
      "completed": false,
-     "detail": "14:08 - 2nd",
+     "detail": "13:50 - 2nd",
      "teams": [
       {
        "id": "2",
@@ -13676,9 +13676,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.275,
-     "away": 0.725,
-     "spread": 0.01,
+     "home": 0.2786,
+     "away": 0.7214,
+     "spread": 0.02,
      "t": "2026-10-22T00:43Z"
     }
    },
@@ -18701,6 +18701,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "4fcfc78187511fedf5bd7a268a20a27206850fd7",
- "generated_at": "2026-10-21T20:43:09-04:00"
+ "hash": "60edfd38c6613dcfa1c9f7cf4e3387d0a38c8690",
+ "generated_at": "2026-10-21T20:43:31-04:00"
 }
