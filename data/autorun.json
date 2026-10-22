@@ -33,15 +33,6 @@
    ]
   },
   {
-   "bet_id": "3f3089f2",
-   "book": "Caesars",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Cade Cunningham 22+ (market label cut off) + Jayson Tatum 24+ pts",
-   "stake": "0.80",
-   "reason": "leg \"Cade Cunningham 22+\": market/stat not recognised",
-   "legs": []
-  },
-  {
    "bet_id": "277f7bfc",
    "book": "Caesars",
    "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
@@ -70,6 +61,15 @@
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "3f3089f2",
+   "book": "Caesars",
+   "pick": "Cade Cunningham 22+ pts + Jayson Tatum 24+ pts",
+   "result": "lost",
+   "pnl": -0.8,
+   "final": "BOS 113-121 DET",
+   "at": "2026-10-21 20:24"
+  },
   {
    "bet_id": "f8f45202",
    "book": "Caesars",
@@ -285,17 +285,8 @@
    "pnl": -0.5,
    "final": "AEK 1-5 MNC",
    "at": "2026-10-20 16:51"
-  },
-  {
-   "bet_id": "c55174ee",
-   "book": "PointsBet",
-   "pick": "Over 51.5",
-   "result": "lost",
-   "pnl": -25.0,
-   "final": "WSH 17-23 SF",
-   "at": "2026-10-19 23:22"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 20:10 ET"
+ "last_change_at": "2026-10-21 20:24 ET"
 }

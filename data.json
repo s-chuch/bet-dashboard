@@ -497,7 +497,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
+     "pulled": "2026-10-21 20:24 ET",
      "ml_home": 0.6025,
      "spread_home_line": -3.0,
      "spread_home_fair": 0.5046,
@@ -1274,10 +1274,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.7945,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.7963,
      "spread_home_line": -10.5,
-     "spread_home_fair": 0.492,
+     "spread_home_fair": 0.4954,
      "total_line": 43.5,
      "total_over_fair": 0.4758
     },
@@ -2002,10 +2002,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.6638,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.659,
      "spread_home_line": -4.5,
-     "spread_home_fair": 0.4977,
+     "spread_home_fair": 0.4908,
      "total_line": 39.5,
      "total_over_fair": 0.4844
     },
@@ -2815,10 +2815,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.5933,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.5971,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.3831,
+     "spread_home_fair": 0.3865,
      "total_line": 6.0,
      "total_over_fair": 0.5136
     },
@@ -3111,10 +3111,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.5933,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.5971,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.3831,
+     "spread_home_fair": 0.3865,
      "total_line": 6.0,
      "total_over_fair": 0.5136
     },
@@ -3909,10 +3909,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.9051,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.9056,
      "spread_home_line": -20.0,
-     "spread_home_fair": 0.4854,
+     "spread_home_fair": 0.4887,
      "total_line": 49.0,
      "total_over_fair": 0.4955
     },
@@ -4811,97 +4811,6 @@
    "start_ts": "2026-10-23T00:15Z"
   },
   {
-   "bet_id": "3f3089f2",
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "market": "SGP 2-leg (profit boost)",
-   "pick": "Cade Cunningham 22+ (market label cut off) + Jayson Tatum 24+ pts",
-   "start": "Tue Oct 20 03:00 PM ET",
-   "price": "+110",
-   "boosted_price": "+143",
-   "stake": 0.8,
-   "stake_note": "",
-   "to_win": 1.14,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Cade Cunningham",
-     "stat": null,
-     "op": "min",
-     "min": 22,
-     "text": "Cade Cunningham 22+ (market label cut off)",
-     "stat_raw": "(market label cut off)",
-     "pteam": "DET",
-     "pname": "Cade Cunningham",
-     "pid": "4432166"
-    },
-    {
-     "type": "prop",
-     "player": "Jayson Tatum",
-     "stat": "pts",
-     "op": "min",
-     "min": 24,
-     "text": "Jayson Tatum 24+ pts",
-     "pteam": "BOS",
-     "pname": "Jayson Tatum",
-     "pid": "4065648"
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261020",
-    "groups": null,
-    "id": "401909088",
-    "snapshot": {
-     "date": "2026-10-20T19:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "8",
-       "name": "Detroit Pistons",
-       "abbr": "DET",
-       "short": "Pistons",
-       "nick": "Pistons",
-       "location": "Detroit",
-       "home": true,
-       "score": "121"
-      },
-      {
-       "id": "2",
-       "name": "Boston Celtics",
-       "abbr": "BOS",
-       "short": "Celtics",
-       "nick": "Celtics",
-       "location": "Boston",
-       "home": false,
-       "score": "113"
-      }
-     ]
-    },
-    "pin": {
-     "ml_home": 0.4738,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.4977,
-     "total_line": 220.5,
-     "total_over_fair": 0.5046,
-     "src": "Pinnacle no-vig (saved scan)",
-     "pulled": "2026-10-20 14:04 ET"
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.8,
-   "payout": 1.94,
-   "payout_est": false,
-   "start_ts": "2026-10-20T19:00Z"
-  },
-  {
    "bet_id": "49bab689",
    "date": "2026-10-19",
    "book": "Caesars",
@@ -4973,7 +4882,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
+     "pulled": "2026-10-21 20:24 ET",
      "ml_home": 0.6025,
      "spread_home_line": -3.0,
      "spread_home_fair": 0.5046,
@@ -5952,6 +5861,28 @@
        "tokens": [
         "62177867301300942649348271379572292843209532066584957349138515102690432766782",
         "53318015452828610430478421873503326876272151829763577274259431740084935243962"
+       ]
+      },
+      {
+       "line": -27.5,
+       "outcomes": [
+        "Raptors",
+        "Bulls"
+       ],
+       "tokens": [
+        "41758340502538964169394780765690317024480342751690773927366610631904948167487",
+        "37201924389695454187862200296493296744579815593575233597987656711727039109097"
+       ]
+      },
+      {
+       "line": -28.5,
+       "outcomes": [
+        "Raptors",
+        "Bulls"
+       ],
+       "tokens": [
+        "66651988683692542830479214775870303300422771062018208228113212892350925670622",
+        "104765350321553134831655756941921692677468549058594242519735015428231259924305"
        ]
       }
      ],
@@ -8360,7 +8291,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
+     "pulled": "2026-10-21 20:24 ET",
      "ml_home": 0.6025,
      "spread_home_line": -3.0,
      "spread_home_fair": 0.5046,
@@ -10325,7 +10256,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
+     "pulled": "2026-10-21 20:24 ET",
      "ml_home": 0.6025,
      "spread_home_line": -3.0,
      "spread_home_fair": 0.5046,
@@ -11045,10 +10976,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.5933,
+     "pulled": "2026-10-21 20:24 ET",
+     "ml_home": 0.5971,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.3831,
+     "spread_home_fair": 0.3865,
      "total_line": 6.0,
      "total_over_fair": 0.5136
     },
@@ -12178,6 +12109,28 @@
        "tokens": [
         "62177867301300942649348271379572292843209532066584957349138515102690432766782",
         "53318015452828610430478421873503326876272151829763577274259431740084935243962"
+       ]
+      },
+      {
+       "line": -27.5,
+       "outcomes": [
+        "Raptors",
+        "Bulls"
+       ],
+       "tokens": [
+        "41758340502538964169394780765690317024480342751690773927366610631904948167487",
+        "37201924389695454187862200296493296744579815593575233597987656711727039109097"
+       ]
+      },
+      {
+       "line": -28.5,
+       "outcomes": [
+        "Raptors",
+        "Bulls"
+       ],
+       "tokens": [
+        "66651988683692542830479214775870303300422771062018208228113212892350925670622",
+        "104765350321553134831655756941921692677468549058594242519735015428231259924305"
        ]
       }
      ],
@@ -13742,6 +13695,16 @@
   {
    "date": "2026-10-18",
    "book": "Caesars",
+   "event": "Boston Celtics @ Detroit Pistons",
+   "pick": "Cade Cunningham 22+ pts + Jayson Tatum 24+ pts",
+   "result": "lost",
+   "pnl": -0.8,
+   "stake": 0.8,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "Caesars",
    "event": "Washington Commanders @ San Francisco 49ers",
    "pick": "Under 52 + Brock Purdy 250+ pass yds",
    "result": "won",
@@ -14840,15 +14803,15 @@
    "auto": false
   }
  ],
- "pnl_total": 93.75,
+ "pnl_total": 92.95,
  "unsettled": {
-  "n": 49,
-  "cash_stake": 23.2,
-  "max_payout": 1074.44,
+  "n": 48,
+  "cash_stake": 22.4,
+  "max_payout": 1072.5,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 23.2,
+ "open_stake": 22.4,
  "recs": {
   "stats": {
    "overall": {
@@ -18385,15 +18348,6 @@
     ]
    },
    {
-    "bet_id": "3f3089f2",
-    "book": "Caesars",
-    "event": "Boston Celtics @ Detroit Pistons",
-    "pick": "Cade Cunningham 22+ (market label cut off) + Jayson Tatum 24+ pts",
-    "stake": "0.80",
-    "reason": "leg \"Cade Cunningham 22+\": market/stat not recognised",
-    "legs": []
-   },
-   {
     "bet_id": "277f7bfc",
     "book": "Caesars",
     "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
@@ -18422,6 +18376,15 @@
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "3f3089f2",
+    "book": "Caesars",
+    "pick": "Cade Cunningham 22+ pts + Jayson Tatum 24+ pts",
+    "result": "lost",
+    "pnl": -0.8,
+    "final": "BOS 113-121 DET",
+    "at": "2026-10-21 20:24"
+   },
    {
     "bet_id": "f8f45202",
     "book": "Caesars",
@@ -18637,18 +18600,9 @@
     "pnl": -0.5,
     "final": "AEK 1-5 MNC",
     "at": "2026-10-20 16:51"
-   },
-   {
-    "bet_id": "c55174ee",
-    "book": "PointsBet",
-    "pick": "Over 51.5",
-    "result": "lost",
-    "pnl": -25.0,
-    "final": "WSH 17-23 SF",
-    "at": "2026-10-19 23:22"
    }
   ],
-  "last_change_at": "2026-10-21 20:10 ET"
+  "last_change_at": "2026-10-21 20:24 ET"
  },
  "open_live_n": 46,
  "open_stake_by_book": {
@@ -18659,6 +18613,6 @@
   "PointsBet": 160.25,
   "theScore": 1.0
  },
- "hash": "768fe28f7297fa15cfdc156f429de0a2a7c41c96",
- "generated_at": "2026-10-21T20:24:29-04:00"
+ "hash": "758e9b3ddbda8477564487d55008538c06887e7a",
+ "generated_at": "2026-10-21T20:24:55-04:00"
 }
