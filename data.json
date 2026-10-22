@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "MLB",
@@ -3704,72 +3704,6 @@
    "payout": 11.25,
    "payout_est": false,
    "start_ts": "2026-10-23T01:00Z"
-  },
-  {
-   "bet_id": "5febfd46",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Toluca v Tijuana",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Tijuana",
-   "start": "Wed Oct 21 09:00 PM ET",
-   "price": "+650",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 16.25,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Tijuana",
-     "women": false,
-     "text": "Tijuana",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/mex.1",
-    "date": "20261021",
-    "groups": null,
-    "id": "401876931",
-    "snapshot": {
-     "date": "2026-10-22T01:00Z",
-     "period": 2,
-     "clock": 4320.0,
-     "state": "in",
-     "completed": false,
-     "detail": "72'",
-     "teams": [
-      {
-       "id": "223",
-       "name": "Toluca",
-       "abbr": "TOL",
-       "short": "Toluca",
-       "nick": "Toluca",
-       "location": "Toluca",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "10125",
-       "name": "Tijuana",
-       "abbr": "TIJ",
-       "short": "Tijuana",
-       "nick": "Tijuana",
-       "location": "Tijuana",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 16.25,
-   "payout_est": false,
-   "start_ts": "2026-10-22T01:00Z"
   },
   {
    "bet_id": "35f28c8c",
@@ -4652,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NCAAF",
@@ -5449,7 +5383,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -6388,7 +6322,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -7156,7 +7090,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "NFL",
@@ -7436,7 +7370,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:35Z"
+     "t": "2026-10-22T03:03Z"
     }
    },
    "sport": "MLB",
@@ -7949,6 +7883,16 @@
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
+   "event": "Toluca v Tijuana",
+   "pick": "Tijuana",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
    "auto": true
   },
   {
@@ -9034,9 +8978,9 @@
  ],
  "pnl_total": 94.44,
  "unsettled": {
-  "n": 37,
+  "n": 36,
   "cash_stake": 19.0,
-  "max_payout": 1056.38,
+  "max_payout": 1040.13,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -9046,16 +8990,16 @@
    "overall": {
     "n": 124,
     "w": 35,
-    "l": 47,
+    "l": 48,
     "p": 0,
-    "pending": 42,
-    "win_pct": 42.7,
+    "pending": 41,
+    "win_pct": 42.2,
     "units": 20.54,
     "roi_pct": 28.5,
     "roi_n": 72,
     "exp_roi_pct": 11.2,
-    "exp_wins": 29.5,
-    "exp_wins_n": 82,
+    "exp_wins": 29.6,
+    "exp_wins_n": 83,
     "wins_with_fair": 35
    },
    "by_promo": {
@@ -9092,16 +9036,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 2,
+     "l": 3,
      "p": 0,
-     "pending": 11,
-     "win_pct": 71.4,
+     "pending": 10,
+     "win_pct": 62.5,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.2,
-     "exp_wins_n": 7,
+     "exp_wins": 1.3,
+     "exp_wins_n": 8,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -9304,16 +9248,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 9,
+     "l": 10,
      "p": 0,
-     "pending": 20,
-     "win_pct": 47.1,
+     "pending": 19,
+     "win_pct": 44.4,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 4.1,
-     "exp_wins_n": 17,
+     "exp_wins": 4.2,
+     "exp_wins_n": 18,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -9366,16 +9310,16 @@
     "yes": {
      "n": 73,
      "w": 25,
-     "l": 38,
+     "l": 39,
      "p": 0,
-     "pending": 10,
-     "win_pct": 39.7,
+     "pending": 9,
+     "win_pct": 39.1,
      "units": 20.78,
      "roi_pct": 35.8,
      "roi_n": 58,
      "exp_roi_pct": 12.7,
-     "exp_wins": 23.0,
-     "exp_wins_n": 63,
+     "exp_wins": 23.2,
+     "exp_wins_n": 64,
      "wins_with_fair": 25
     },
     "no": {
@@ -9912,11 +9856,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "TIJ 2-2 TOL (FT)",
     "source": "rec.py add",
     "notes": "PointsBet Deposit Match bonus bet token $2.50 (stake not returned); ev = bonus value per $1 x100 (0.904); Pin -266 / draw +445 / +580; pulled 2:20 PM ET Oct 20; yes at +619",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "96c9e4f3",
@@ -12604,24 +12548,6 @@
     "legs": []
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
@@ -12629,18 +12555,18 @@
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
     "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "5febfd46",
+    "book": "PointsBet",
+    "pick": "Tijuana",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "TIJ 2-2 TOL",
+    "at": "2026-10-21 23:03"
+   },
    {
     "bet_id": "34bb5692",
     "book": "DraftKings",
@@ -12856,28 +12782,19 @@
     "pnl": -0.2,
     "final": "ANA 2-5 NYR",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "d6857658",
-    "book": "theScore",
-    "pick": "Guardians ML + Freddy Peralta 4+ K + Jonathan Aranda 1+ hits",
-    "result": "lost",
-    "pnl": -2.0,
-    "final": "CLE 3-7 TB",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-21 22:34 ET"
+  "last_change_at": "2026-10-21 23:03 ET"
  },
- "open_live_n": 32,
+ "open_live_n": 31,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 20.2,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 159.25,
+  "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "21a3eff9e3736fc7ac6574accafc346eef64b2eb",
- "generated_at": "2026-10-21T22:35:28-04:00"
+ "hash": "19accac23e5f1b0bf132782bb7b4c94b2d5086bc",
+ "generated_at": "2026-10-21T23:03:19-04:00"
 }

@@ -128,7 +128,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-20,PointsBet,Lillestrom v Real Sociedad (UEFA Europa League),Thu Oct 22 03:00 PM ET,Match Result (bonus bet $2.50),Lillestrom,+500,,2.50 (bonus),12.50,17.7,,open,,f0094ba2,,
 2026-10-20,PointsBet,Cruzeiro v Clube do Remo (Brazil Serie A),Fri Oct 23 07:00 PM ET,Match Result (bonus bet $2.50),Clube do Remo,+700,,2.50 (bonus),17.50,12.6,,open,,cd55ea08,,
 2026-10-20,PointsBet,Atletico Nacional v Deportivo Pasto (Colombian Primera A),Thu Oct 22 09:00 PM ET,Match Result (bonus bet $2.50),Draw,+450,,2.50 (bonus),11.25,,,open,,ff63a89d,,
-2026-10-20,PointsBet,Toluca v Tijuana (Liga MX),Wed Oct 21 09:00 PM ET,Match Result (bonus bet $2.50),Tijuana,+650,,2.50 (bonus),16.25,13.9,,open,,5febfd46,,
+2026-10-20,PointsBet,Toluca v Tijuana (Liga MX),Wed Oct 21 09:00 PM ET,Match Result (bonus bet $2.50),Tijuana,+650,,2.50 (bonus),16.25,13.9,,lost,0.00,5febfd46,2026-10-21 23:03,auto
 2026-10-20,Caesars,Pittsburgh Panthers @ Miami (FL) Hurricanes (NCAAF),Sat Oct 24 12:00 PM ET,Moneyline (bonus bet $15.00),Pittsburgh Panthers,+1000,,15.00 (bonus),150.00,9.6,,open,,35f28c8c,,
 2026-10-20,bet365,Colorado Avalanche @ New Jersey Devils,Tue Oct 20 07:07 PM ET,SGP 3-leg (30% profit boost),Nathan MacKinnon 1+ pts + Jack Hughes 1+ pts + Nathan MacKinnon 3+ SOG,+110,+140,0.20,0.28,,,lost,-0.20,0d1b2254,2026-10-21 09:10,auto
 2026-10-20,bet365,NBA Futures,Jun 2027,Futures E/W 1/2 2 places (30% profit boost; $0.20 x2 units),Oklahoma City Thunder to win NBA Championship 2026/27 (each way),+260,+338,0.40,0.93,,,open,,bf9a8c79,,

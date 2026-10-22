@@ -60,24 +60,6 @@
    "legs": []
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
@@ -85,18 +67,18 @@
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
    "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "5febfd46",
+   "book": "PointsBet",
+   "pick": "Tijuana",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "TIJ 2-2 TOL",
+   "at": "2026-10-21 23:03"
+  },
   {
    "bet_id": "34bb5692",
    "book": "DraftKings",
@@ -312,17 +294,8 @@
    "pnl": -0.2,
    "final": "ANA 2-5 NYR",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "d6857658",
-   "book": "theScore",
-   "pick": "Guardians ML + Freddy Peralta 4+ K + Jonathan Aranda 1+ hits",
-   "result": "lost",
-   "pnl": -2.0,
-   "final": "CLE 3-7 TB",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 22:34 ET"
+ "last_change_at": "2026-10-21 23:03 ET"
 }
