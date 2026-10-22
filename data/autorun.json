@@ -40,36 +40,63 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "8c57b3b2",
+   "book": "DraftKings",
+   "pick": "Trae Young 18+ pts + Anthony Davis 20+ pts + Tyler Herro 20+ pts",
+   "result": "won",
+   "pnl": 0.91,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
+  {
+   "bet_id": "c6045ccd",
+   "book": "DraftKings",
+   "pick": "AJ Green 2+ threes",
+   "result": "won",
+   "pnl": 0.15,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
+  {
+   "bet_id": "a5e01f20",
+   "book": "Caesars",
+   "pick": "Tyler Herro 22+ pts + Ryan Rollins 16+ pts + Trae Young 18+ pts + Anthony Davis 20+ pts",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
+  {
+   "bet_id": "fb81e3b2",
+   "book": "PointsBet",
+   "pick": "Anthony Davis 17+ pts + Trae Young 15+ pts + Tyler Herro 16+ pts",
+   "result": "won",
+   "pnl": 0.53,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
+  {
+   "bet_id": "4dfdc722",
+   "book": "theScore",
+   "pick": "Anthony Davis 20+ pts + Trae Young 20+ pts + Ryan Rollins 15+ pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
+  {
+   "bet_id": "0abd747b",
+   "book": "bet365",
+   "pick": "Kel'el Ware: 5+ Rebounds + Trae Young: 7+ Assists + Tyler Herro: 20+ Points",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "MIL 116-128 WSH",
+   "at": "2026-10-21 21:43"
+  },
   {
    "bet_id": "3f3089f2",
    "book": "Caesars",
@@ -240,62 +267,8 @@
    "pnl": -0.2,
    "final": "BOS 113-121 DET",
    "at": "2026-10-20 17:37"
-  },
-  {
-   "bet_id": "d1b6d899",
-   "book": "DraftKings",
-   "pick": "Celtics ML + Paul George 16+ pts + Jayson Tatum 25+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "BOS 113-121 DET",
-   "at": "2026-10-20 17:36"
-  },
-  {
-   "bet_id": "3f1b4171",
-   "book": "FanDuel",
-   "pick": "Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "BOS 113-121 DET",
-   "at": "2026-10-20 17:36"
-  },
-  {
-   "bet_id": "f5365e03",
-   "book": "PointsBet",
-   "pick": "Cade Cunningham 8+ ast + Jayson Tatum 4+ ast + Payton Pritchard 4+ ast",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "BOS 113-121 DET",
-   "at": "2026-10-20 17:36"
-  },
-  {
-   "bet_id": "c8cabe33",
-   "book": "Hard Rock",
-   "pick": "PSV Eindhoven",
-   "result": "won",
-   "pnl": 19.0,
-   "final": "PSV 1-0 FCP",
-   "at": "2026-10-20 16:53"
-  },
-  {
-   "bet_id": "5df01cb0",
-   "book": "Caesars",
-   "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
-   "result": "won",
-   "pnl": 3.29,
-   "final": "AEK 1-5 MNC",
-   "at": "2026-10-20 16:51"
-  },
-  {
-   "bet_id": "52414b40",
-   "book": "FanDuel",
-   "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "AEK 1-5 MNC",
-   "at": "2026-10-20 16:51"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 21:39 ET"
+ "last_change_at": "2026-10-21 21:43 ET"
 }
