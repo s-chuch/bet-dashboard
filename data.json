@@ -1005,7 +1005,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "NFL",
@@ -1782,7 +1782,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:18Z"
     }
    },
    "sport": "NFL",
@@ -2510,7 +2510,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:18Z"
     }
    },
    "sport": "NFL",
@@ -2810,7 +2810,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "MLB",
@@ -3106,7 +3106,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "MLB",
@@ -3409,11 +3409,11 @@
     "id": "401915540",
     "snapshot": {
      "date": "2026-10-22T19:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1020.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "17'",
      "teams": [
       {
        "id": "987",
@@ -4454,7 +4454,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "NCAAF",
@@ -5251,7 +5251,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "NFL",
@@ -6190,7 +6190,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "NFL",
@@ -6958,7 +6958,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "NFL",
@@ -7238,7 +7238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:43Z"
+     "t": "2026-10-22T19:17Z"
     }
    },
    "sport": "MLB",
@@ -8636,11 +8636,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 124,
+    "n": 126,
     "w": 35,
     "l": 50,
     "p": 0,
-    "pending": 39,
+    "pending": 41,
     "win_pct": 41.2,
     "units": 20.54,
     "roi_pct": 28.5,
@@ -8727,11 +8727,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 24,
+     "n": 26,
      "w": 11,
      "l": 12,
      "p": 0,
-     "pending": 1,
+     "pending": 3,
      "win_pct": 47.8,
      "units": 16.61,
      "roi_pct": 72.2,
@@ -8849,11 +8849,11 @@
      "wins_with_fair": 5
     },
     "NCAAF": {
-     "n": 28,
+     "n": 29,
      "w": 9,
      "l": 15,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 37.5,
      "units": 15.87,
      "roi_pct": 66.1,
@@ -8879,11 +8879,11 @@
      "wins_with_fair": 4
     },
     "NHL": {
-     "n": 8,
+     "n": 9,
      "w": 5,
      "l": 3,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 62.5,
      "units": 2.31,
      "roi_pct": 28.9,
@@ -8971,11 +8971,11 @@
      "wins_with_fair": 25
     },
     "no": {
-     "n": 51,
+     "n": 53,
      "w": 10,
      "l": 9,
      "p": 0,
-     "pending": 32,
+     "pending": 34,
      "win_pct": 52.6,
      "units": -0.24,
      "roi_pct": -1.7,
@@ -9004,6 +9004,52 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "2c8b2df3",
+    "rec_date": "2026-10-22",
+    "rec_time_et": "15:17",
+    "sport": "NCAAF",
+    "event": "James Madison Dukes @ Appalachian State Mountaineers",
+    "market": "Total",
+    "selection": "Under 57.5",
+    "book": "theScore",
+    "rec_price": "-110",
+    "eff_price": "-110",
+    "fair_pct": "53.51",
+    "ev_pct": "2.15",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 scan; Pinnacle alt over +105/under -128; yes-at -110",
+    "units": null
+   },
+   {
+    "rec_id": "b0c1535b",
+    "rec_date": "2026-10-22",
+    "rec_time_et": "15:17",
+    "sport": "NHL",
+    "event": "Anaheim Ducks @ New Jersey Devils",
+    "market": "Total",
+    "selection": "Over 6.5",
+    "book": "theScore",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "53.46",
+    "ev_pct": "4.37",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 scan; Pinnacle main over -122/under +109; yes-at -110",
+    "units": null
+   },
    {
     "rec_id": "6bea291a",
     "rec_date": "2026-10-21",
@@ -12205,12 +12251,39 @@
     "legs": []
    },
    {
+    "bet_id": "2d46e615",
+    "book": "Caesars",
+    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
+    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
+    "stake": "0.20",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
     "pick": "Kawhi Leonard 40+ pts+reb+ast",
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
+    "legs": []
+   },
+   {
+    "bet_id": "ef269fe1",
+    "book": "bet365",
+    "event": "Ferencvarosi TC v Torreeense",
+    "pick": "Torreeense ML",
+    "stake": "0.2",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -12441,7 +12514,7 @@
     "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 14:43 ET"
+  "last_change_at": "2026-10-22 15:17 ET"
  },
  "open_live_n": 28,
  "open_stake_by_book": {
@@ -12452,6 +12525,6 @@
   "PointsBet": 56.43,
   "theScore": 0.2
  },
- "hash": "8d50390bc4d2863fa69fc22cc95cea2f881294dd",
- "generated_at": "2026-10-22T14:43:31-04:00"
+ "hash": "3ca67a4e92e8331303259d7ce7fae6d7775c0f0d",
+ "generated_at": "2026-10-22T15:18:27-04:00"
 }
