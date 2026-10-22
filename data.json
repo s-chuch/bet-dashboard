@@ -125,11 +125,11 @@
     "id": "401915838",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'+1'",
      "teams": [
       {
        "id": "22281",
@@ -191,11 +191,11 @@
     "id": "401915745",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "997",
@@ -205,7 +205,7 @@
        "nick": "Trabzonspor",
        "location": "Trabzonspor",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "262",
@@ -257,11 +257,11 @@
     "id": "401915839",
     "snapshot": {
      "date": "2026-10-22T16:45Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'+1'",
      "teams": [
       {
        "id": "20703",
@@ -281,7 +281,7 @@
        "nick": "CSU Craiova",
        "location": "CSU Craiova",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     }
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "MLB",
@@ -4586,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5383,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6322,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7090,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7370,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T16:35Z"
+     "t": "2026-10-22T17:31Z"
     }
    },
    "sport": "MLB",
@@ -12582,6 +12582,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "5bad9d6f33f5cca857f49ffc11b67346edeb5644",
- "generated_at": "2026-10-22T12:35:33-04:00"
+ "hash": "5904244d9b24f881ebd1f3333e003f1e7b2b403d",
+ "generated_at": "2026-10-22T13:31:13-04:00"
 }
