@@ -1,3 +1,5 @@
+/* LiveUI: extension points for the ui-*.js modules (all optional). scoreBox(g) may return replacement HTML; afterRender(ctx) runs after every render() once the DOM is updated. */
+window.LiveUI={scoreBox:null,afterRender:[]};
 const ESPN="https://site.api.espn.com/apis/site/v2/sports/";
 const TZ="America/Toronto";
 let DATA=null, games={}, summaries={};
@@ -17,7 +19,7 @@ function pickOdds(od){const o=od&&od[0];if(!o)return null;const n=v=>{const x=pa
   return r.ml||r.sp||r.tot?r:null}
 function fromEvent(ev){const c=ev.competitions?ev.competitions[0]:ev.header.competitions[0];const st=ev.status||c.status;
   return {id:ev.id,date:ev.date||c.date,period:st.period,clock:st.clock,outs:c.situation&&c.situation.outs,lastPlay:c.situation&&c.situation.lastPlay&&c.situation.lastPlay.text||"",longDetail:st.type.detail||"",state:st.type.state,completed:st.type.completed,detail:st.type.shortDetail,
-    sit:pickSit(c.situation),teams:c.competitors.map(x=>({id:x.team.id||x.id,name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score,ls:(x.linescores||[]).map(l=>l.displayValue!=null?l.displayValue:l.value),st:Object.fromEntries((x.statistics||[]).map(q=>[q.name,q.displayValue]))})),odds:pickOdds(c.odds)}}
+    sit:pickSit(c.situation),teams:c.competitors.map(x=>({id:x.team.id||x.id,name:x.team.displayName,abbr:x.team.abbreviation,short:x.team.shortDisplayName,color:x.team.color||"",alt:x.team.alternateColor||"",location:x.team.location,nick:x.team.name,home:x.homeAway==="home",score:x.score&&typeof x.score==="object"?x.score.displayValue:x.score,ls:(x.linescores||[]).map(l=>l.displayValue!=null?l.displayValue:l.value),st:Object.fromEntries((x.statistics||[]).map(q=>[q.name,q.displayValue]))})),odds:pickOdds(c.odds)}}
 // keep only the small, flat situation fields (+ batter/pitcher names) from the scoreboard
 function pickSit(si){if(!si)return null;const o={};for(const[k,v]of Object.entries(si)){if(v==null||k==="lastPlay")continue;
     if(typeof v!=="object")o[k]=v;else if((k==="batter"||k==="pitcher")&&v.athlete)o[k]={n:v.athlete.shortName||v.athlete.displayName,s:v.summary||""};
@@ -404,7 +406,7 @@ function combine(st){if(st.some(s=>s==="LOST"))return"LOST";if(st.every(s=>s==="
   if(st.some(s=>s==="TIED"||s==="PUSH"))return"TIED";return"LIVE"}
 const cls=s=>String(s).replace(/\s/g,"_").replace(/[^\w-]/g,"");
 function fmtStart(g,raw){if(g&&g.date){const d=new Date(g.date);return d.toLocaleString("en-CA",{timeZone:TZ,weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})+" ET"}return raw}
-function scoreBox(g){if(!g)return"";const live=g.state==="in";
+function scoreBox(g){if(!g)return"";if(LiveUI.scoreBox){try{const h=LiveUI.scoreBox(g);if(h)return h}catch(e){}}const live=g.state==="in";
   const order=[...g.teams].sort((a,b)=>a.home-b.home);
   return `<div class="score">${order.map(t=>`<div class="row"><span>${esc(t.name)}</span><b>${g.state==="pre"?"":esc(t.score)}</b></div>`).join("")}
     <div class="det">${live?'<span class="live">● LIVE</span> ':""}${g.state==="pre"?"Not started":g.completed?esc(g.detail):`<span data-clk="${esc(g.id)}" data-sep=" - ">${esc(clockText(g," - "))}</span>`}</div>${g.completed?"":stBadge(g)}</div>`}
@@ -1037,6 +1039,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
   syncUI();tick1s();if(Math.abs(window.scrollY-sy)>2)window.scrollTo(0,sy);
   $("meta").textContent=`Scores updated ${now} ET · scores every ${FAST/1000|0}s · bets as of ${gen} ET`;
   try{autoSettleCheck()}catch(e){}
+  for(const f of LiveUI.afterRender){try{f({DATA:D,games,liveCards:liveCards.length,upCards:upCards.length})}catch(e){}}
 }
 let FAST=10000, fastTimer=null, loading=false;
 async function loadData(){try{const d=await getJSON("data.json?t="+Date.now());if(!d||typeof d!=="object"||!Array.isArray(d.open)||!Array.isArray(d.settled_recent)||!d.balances||typeof d.balances!=="object")throw new Error("bad data");DATA=d}catch(e){if(!DATA){$("meta").textContent="Couldn't load data.json";return false}}return true}
