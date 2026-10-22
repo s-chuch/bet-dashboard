@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -2650,79 +2650,6 @@
    "payout": 2.29,
    "payout_est": false,
    "start_ts": "2026-10-25T17:00Z"
-  },
-  {
-   "bet_id": "0e0f4610",
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "market": "SGP 2-leg (30% profit boost)",
-   "pick": "Over 150.5 + Valkyries -3.5",
-   "start": "Wed Oct 21 08:00 PM ET",
-   "price": "+425",
-   "boosted_price": "+554",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 2.77,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "over",
-     "line": 150.5,
-     "text": "Over 150.5"
-    },
-    {
-     "type": "spread",
-     "team": "Golden State Valkyries",
-     "line": -3.5,
-     "women": false,
-     "text": "Valkyries -3.5",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/wnba",
-    "date": "20261021",
-    "groups": null,
-    "id": "401918307",
-    "snapshot": {
-     "date": "2026-10-22T00:00Z",
-     "period": 4,
-     "clock": 273.0,
-     "state": "in",
-     "completed": false,
-     "detail": "4:33 - 4th",
-     "teams": [
-      {
-       "id": "20",
-       "name": "Atlanta Dream",
-       "abbr": "ATL",
-       "short": "Dream",
-       "nick": "Dream",
-       "location": "Atlanta",
-       "home": true,
-       "score": "86"
-      },
-      {
-       "id": "129689",
-       "name": "Golden State Valkyries",
-       "abbr": "GS",
-       "short": "Valkyries",
-       "nick": "Valkyries",
-       "location": "Golden State",
-       "home": false,
-       "score": "65"
-      }
-     ]
-    }
-   },
-   "sport": "WNBA",
-   "cash_stake": 0.5,
-   "payout": 3.27,
-   "payout_est": false,
-   "start_ts": "2026-10-22T00:00Z"
   },
   {
    "bet_id": "4ca058ce",
@@ -3015,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "MLB",
@@ -3810,10 +3737,10 @@
     "snapshot": {
      "date": "2026-10-22T01:00Z",
      "period": 2,
-     "clock": 2820.0,
+     "clock": 3480.0,
      "state": "in",
      "completed": false,
-     "detail": "47'",
+     "detail": "58'",
      "teams": [
       {
        "id": "223",
@@ -4725,7 +4652,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:21Z"
     }
    },
    "sport": "NCAAF",
@@ -5522,7 +5449,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -5603,10 +5530,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 4,
-     "clock": 299.0,
+     "clock": 59.7,
      "state": "in",
      "completed": false,
-     "detail": "4:59 - 4th",
+     "detail": "59.7 - 4th",
      "teams": [
       {
        "id": "28",
@@ -5616,7 +5543,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "127"
+       "score": "135"
       },
       {
        "id": "4",
@@ -5626,7 +5553,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "85"
+       "score": "90"
       }
      ]
     },
@@ -6217,7 +6144,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NBA",
@@ -6225,98 +6152,6 @@
    "payout": 0.41,
    "payout_est": false,
    "start_ts": "2026-10-21T23:40Z"
-  },
-  {
-   "bet_id": "efbb0a5b",
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "market": "SGP 3-leg (price from payout)",
-   "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
-   "start": "Wed Oct 21 08:10 PM ET",
-   "price": "+425",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.85,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Gabby Williams",
-     "stat": "pts",
-     "op": "min",
-     "min": 19,
-     "text": "Gabby Williams 19+ pts",
-     "pteam": "GS",
-     "pname": "Gabby Williams",
-     "pid": "3142328"
-    },
-    {
-     "type": "prop",
-     "player": "Rhyne Howard",
-     "stat": "pts",
-     "op": "min",
-     "min": 15,
-     "text": "Rhyne Howard 15+ pts",
-     "pteam": "ATL",
-     "pname": "Rhyne Howard",
-     "pid": "4398674"
-    },
-    {
-     "type": "prop",
-     "player": "Allisha Gray",
-     "stat": "pts",
-     "op": "min",
-     "min": 15,
-     "text": "Allisha Gray 15+ pts",
-     "pteam": "ATL",
-     "pname": "Allisha Gray",
-     "pid": "3058901"
-    }
-   ],
-   "match": {
-    "path": "basketball/wnba",
-    "date": "20261021",
-    "groups": null,
-    "id": "401918307",
-    "snapshot": {
-     "date": "2026-10-22T00:00Z",
-     "period": 4,
-     "clock": 273.0,
-     "state": "in",
-     "completed": false,
-     "detail": "4:33 - 4th",
-     "teams": [
-      {
-       "id": "20",
-       "name": "Atlanta Dream",
-       "abbr": "ATL",
-       "short": "Dream",
-       "nick": "Dream",
-       "location": "Atlanta",
-       "home": true,
-       "score": "86"
-      },
-      {
-       "id": "129689",
-       "name": "Golden State Valkyries",
-       "abbr": "GS",
-       "short": "Valkyries",
-       "nick": "Valkyries",
-       "location": "Golden State",
-       "home": false,
-       "score": "65"
-      }
-     ]
-    }
-   },
-   "sport": "WNBA",
-   "cash_stake": 0.2,
-   "payout": 1.05,
-   "payout_est": false,
-   "start_ts": "2026-10-22T00:10Z"
   },
   {
    "bet_id": "6b6a71e7",
@@ -6354,7 +6189,7 @@
     "snapshot": {
      "date": "2026-10-21T23:00Z",
      "period": 4,
-     "clock": 0.0,
+     "clock": 720.0,
      "state": "post",
      "completed": true,
      "detail": "Final",
@@ -6455,10 +6290,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 476.0,
+     "clock": 126.0,
      "state": "in",
      "completed": false,
-     "detail": "7:56 - 3rd",
+     "detail": "2:06 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -6468,7 +6303,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "4"
+       "score": "5"
       },
       {
        "id": "26",
@@ -6537,6 +6372,17 @@
        "tokens": [
         "37825575376233435011670369461123540638104599708997204350130967466922536600033",
         "31455377976976703211096957575362023423405418799836951720337670616525410727626"
+       ]
+      },
+      {
+       "line": -4.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "88224149195084836284628917925645323662849078071598417076402837401644272852907",
+        "58351746303092972144283481771746751930394182285872424317848784872948050806246"
        ]
       }
      ],
@@ -6607,7 +6453,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NHL",
@@ -7352,7 +7198,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -8120,7 +7966,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NFL",
@@ -8400,7 +8246,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "MLB",
@@ -8493,10 +8339,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 4,
-     "clock": 299.0,
+     "clock": 59.7,
      "state": "in",
      "completed": false,
-     "detail": "4:59 - 4th",
+     "detail": "59.7 - 4th",
      "teams": [
       {
        "id": "28",
@@ -8506,7 +8352,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "127"
+       "score": "135"
       },
       {
        "id": "4",
@@ -8516,7 +8362,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "85"
+       "score": "90"
       }
      ]
     },
@@ -9107,7 +8953,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NBA",
@@ -9204,98 +9050,6 @@
    "start_ts": "2026-10-23T19:00Z"
   },
   {
-   "bet_id": "9fe55674",
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "market": "SGP 3-leg (WNBA 30% SGP Profit Boost)",
-   "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
-   "start": "Wed Oct 21 08:00 PM ET",
-   "price": "+333",
-   "boosted_price": "+435",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.87,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Allisha Gray",
-     "stat": "pts",
-     "op": "min",
-     "min": 15,
-     "text": "Allisha Gray 15+ pts",
-     "pteam": "ATL",
-     "pname": "Allisha Gray",
-     "pid": "3058901"
-    },
-    {
-     "type": "prop",
-     "player": "Angel Reese",
-     "stat": "pts",
-     "op": "min",
-     "min": 15,
-     "text": "Angel Reese 15+ pts",
-     "pteam": "ATL",
-     "pname": "Angel Reese",
-     "pid": "4433402"
-    },
-    {
-     "type": "prop",
-     "player": "Gabby Williams",
-     "stat": "pts",
-     "op": "min",
-     "min": 18,
-     "text": "Gabby Williams 18+ pts",
-     "pteam": "GS",
-     "pname": "Gabby Williams",
-     "pid": "3142328"
-    }
-   ],
-   "match": {
-    "path": "basketball/wnba",
-    "date": "20261021",
-    "groups": null,
-    "id": "401918307",
-    "snapshot": {
-     "date": "2026-10-22T00:00Z",
-     "period": 4,
-     "clock": 273.0,
-     "state": "in",
-     "completed": false,
-     "detail": "4:33 - 4th",
-     "teams": [
-      {
-       "id": "20",
-       "name": "Atlanta Dream",
-       "abbr": "ATL",
-       "short": "Dream",
-       "nick": "Dream",
-       "location": "Atlanta",
-       "home": true,
-       "score": "86"
-      },
-      {
-       "id": "129689",
-       "name": "Golden State Valkyries",
-       "abbr": "GS",
-       "short": "Valkyries",
-       "nick": "Valkyries",
-       "location": "Golden State",
-       "home": false,
-       "score": "65"
-      }
-     ]
-    }
-   },
-   "sport": "WNBA",
-   "cash_stake": 0.2,
-   "payout": 1.07,
-   "payout_est": false,
-   "start_ts": "2026-10-22T00:00Z"
-  },
-  {
    "bet_id": "4def2dde",
    "date": "2026-10-21",
    "book": "theScore",
@@ -9361,10 +9115,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 476.0,
+     "clock": 126.0,
      "state": "in",
      "completed": false,
-     "detail": "7:56 - 3rd",
+     "detail": "2:06 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9374,7 +9128,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "4"
+       "score": "5"
       },
       {
        "id": "26",
@@ -9443,6 +9197,17 @@
        "tokens": [
         "37825575376233435011670369461123540638104599708997204350130967466922536600033",
         "31455377976976703211096957575362023423405418799836951720337670616525410727626"
+       ]
+      },
+      {
+       "line": -4.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "88224149195084836284628917925645323662849078071598417076402837401644272852907",
+        "58351746303092972144283481771746751930394182285872424317848784872948050806246"
        ]
       }
      ],
@@ -9513,7 +9278,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NHL",
@@ -9610,10 +9375,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 476.0,
+     "clock": 126.0,
      "state": "in",
      "completed": false,
-     "detail": "7:56 - 3rd",
+     "detail": "2:06 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9623,7 +9388,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "4"
+       "score": "5"
       },
       {
        "id": "26",
@@ -9692,6 +9457,17 @@
        "tokens": [
         "37825575376233435011670369461123540638104599708997204350130967466922536600033",
         "31455377976976703211096957575362023423405418799836951720337670616525410727626"
+       ]
+      },
+      {
+       "line": -4.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "88224149195084836284628917925645323662849078071598417076402837401644272852907",
+        "58351746303092972144283481771746751930394182285872424317848784872948050806246"
        ]
       }
      ],
@@ -9762,7 +9538,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T02:10Z"
+     "t": "2026-10-22T02:20Z"
     }
    },
    "sport": "NHL",
@@ -9788,6 +9564,16 @@
    "book": "theScore",
    "event": "Philadelphia Flyers @ Buffalo Sabres",
    "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-21",
+   "book": "theScore",
+   "event": "Golden State Valkyries @ Atlanta Dream",
+   "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
@@ -9850,6 +9636,16 @@
    "pick": "Trae Young 18+ pts + Anthony Davis 20+ pts + Tyler Herro 20+ pts",
    "result": "won",
    "pnl": 0.91,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-21",
+   "book": "DraftKings",
+   "event": "Golden State Valkyries @ Atlanta Dream",
+   "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
+   "result": "lost",
+   "pnl": -0.2,
    "stake": 0.2,
    "auto": true
   },
@@ -10088,6 +9884,16 @@
    "book": "Caesars",
    "event": "Los Angeles Kings @ Washington Capitals",
    "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "Caesars",
+   "event": "Golden State Valkyries @ Atlanta Dream",
+   "pick": "Over 150.5 + Valkyries -3.5",
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
@@ -11054,15 +10860,15 @@
    "auto": false
   }
  ],
- "pnl_total": 95.94,
+ "pnl_total": 95.04,
  "unsettled": {
-  "n": 43,
-  "cash_stake": 20.5,
-  "max_payout": 1064.21,
+  "n": 40,
+  "cash_stake": 19.6,
+  "max_payout": 1058.82,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 20.5,
+ "open_stake": 19.6,
  "recs": {
   "stats": {
    "overall": {
@@ -14619,6 +14425,33 @@
   ],
   "last_settled": [
    {
+    "bet_id": "0e0f4610",
+    "book": "Caesars",
+    "pick": "Over 150.5 + Valkyries -3.5",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "GS 71-97 ATL",
+    "at": "2026-10-21 22:20"
+   },
+   {
+    "bet_id": "efbb0a5b",
+    "book": "DraftKings",
+    "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "GS 71-97 ATL",
+    "at": "2026-10-21 22:20"
+   },
+   {
+    "bet_id": "9fe55674",
+    "book": "theScore",
+    "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "GS 71-97 ATL",
+    "at": "2026-10-21 22:20"
+   },
+   {
     "bet_id": "8460d5d9",
     "book": "theScore",
     "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
@@ -14815,46 +14648,19 @@
     "pnl": -0.2,
     "final": "OKC 116-104 SA",
     "at": "2026-10-21 00:25"
-   },
-   {
-    "bet_id": "caa33d4c",
-    "book": "Caesars",
-    "pick": "Isaiah Myers 70+ rec yds + Da'Wain Lofton 50+ rec yds + Sean Wilson 50+ rec yds",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "MOST 38-61 DEL",
-    "at": "2026-10-20 22:31"
-   },
-   {
-    "bet_id": "c8bea3fa",
-    "book": "theScore",
-    "pick": "Jalen Brunson 25+ pts + Jaylen Brown 20+ pts + Joel Embiid 8+ reb",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "PHI 106-100 NY",
-    "at": "2026-10-20 22:00"
-   },
-   {
-    "bet_id": "b1069fc2",
-    "book": "PointsBet",
-    "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "TOR 6-2 CBJ",
-    "at": "2026-10-20 21:44"
    }
   ],
-  "last_change_at": "2026-10-21 22:09 ET"
+  "last_change_at": "2026-10-21 22:20 ET"
  },
- "open_live_n": 40,
+ "open_live_n": 37,
  "open_stake_by_book": {
   "bet365": 0.8,
-  "Caesars": 20.7,
-  "DraftKings": 0.7,
+  "Caesars": 20.2,
+  "DraftKings": 0.5,
   "FanDuel": 2.1,
   "PointsBet": 159.75,
-  "theScore": 0.6
+  "theScore": 0.4
  },
- "hash": "425c4cc3c82bad2d999398014b9ebeb8bca7aea9",
- "generated_at": "2026-10-21T22:10:24-04:00"
+ "hash": "a6223a523ffe30c17c7e9413eda8578fb5a5efa1",
+ "generated_at": "2026-10-21T22:21:08-04:00"
 }

@@ -53,6 +53,33 @@
  ],
  "last_settled": [
   {
+   "bet_id": "0e0f4610",
+   "book": "Caesars",
+   "pick": "Over 150.5 + Valkyries -3.5",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "GS 71-97 ATL",
+   "at": "2026-10-21 22:20"
+  },
+  {
+   "bet_id": "efbb0a5b",
+   "book": "DraftKings",
+   "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "GS 71-97 ATL",
+   "at": "2026-10-21 22:20"
+  },
+  {
+   "bet_id": "9fe55674",
+   "book": "theScore",
+   "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "GS 71-97 ATL",
+   "at": "2026-10-21 22:20"
+  },
+  {
    "bet_id": "8460d5d9",
    "book": "theScore",
    "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
@@ -249,35 +276,8 @@
    "pnl": -0.2,
    "final": "OKC 116-104 SA",
    "at": "2026-10-21 00:25"
-  },
-  {
-   "bet_id": "caa33d4c",
-   "book": "Caesars",
-   "pick": "Isaiah Myers 70+ rec yds + Da'Wain Lofton 50+ rec yds + Sean Wilson 50+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "MOST 38-61 DEL",
-   "at": "2026-10-20 22:31"
-  },
-  {
-   "bet_id": "c8bea3fa",
-   "book": "theScore",
-   "pick": "Jalen Brunson 25+ pts + Jaylen Brown 20+ pts + Joel Embiid 8+ reb",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "PHI 106-100 NY",
-   "at": "2026-10-20 22:00"
-  },
-  {
-   "bet_id": "b1069fc2",
-   "book": "PointsBet",
-   "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "TOR 6-2 CBJ",
-   "at": "2026-10-20 21:44"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 22:09 ET"
+ "last_change_at": "2026-10-21 22:20 ET"
 }
