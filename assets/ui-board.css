@@ -1,1 +1,22 @@
 /* ui-board */
+.score.board{padding:8px 10px}
+.score .brow{display:flex;align-items:center;gap:10px;padding:3px 0}
+.tbadge{flex:none;width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;letter-spacing:-.02em;border:2px solid transparent;box-sizing:border-box;line-height:1;text-transform:uppercase}
+.tbadge.sm{font-size:8px;letter-spacing:-.04em}
+.score .bname{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;color:var(--txt)}
+.score .bscore{font-size:24px;line-height:1;font-weight:800;font-variant-numeric:tabular-nums;min-width:1.4em;text-align:right;border-radius:6px;padding:2px 4px;margin:-2px -4px -2px 0}
+.brow.trail .bscore,.brow.trail .bname{color:var(--mut);font-weight:500}
+.brow.trail .bscore{font-weight:600}
+.brow.lead .bscore{color:var(--txt)}
+.brow.tie .bscore{color:var(--txt);font-weight:700}
+.score .bdet{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:6px}
+.livepill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--win);background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.35);border-radius:999px;padding:2px 8px 2px 7px}
+.ldot{width:7px;height:7px;border-radius:50%;background:var(--win);animation:lbPulse 1.6s ease-in-out infinite}
+@keyframes lbPulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.7);opacity:1}70%{box-shadow:0 0 0 6px rgba(52,211,153,0);opacity:.6}100%{box-shadow:0 0 0 0 rgba(52,211,153,0);opacity:1}}
+.pchip{font-size:12px;color:var(--mut);background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-variant-numeric:tabular-nums}
+.pchip.fin{color:var(--txt);font-weight:600}
+.flash{animation:lbFlash 1.2s ease-out}
+@keyframes lbFlash{0%{background:rgba(251,191,36,.55);color:#fff;transform:scale(1.18)}40%{background:rgba(251,191,36,.3);transform:scale(1.06)}100%{background:transparent;transform:scale(1)}}
+.tick li.newplay{animation:lbPlay 1.2s ease-out}
+@keyframes lbPlay{0%{background:rgba(129,140,248,.35)}100%{background:transparent}}
+@media (prefers-reduced-motion:reduce){.ldot,.flash,.tick li.newplay{animation:none!important}}
