@@ -271,3 +271,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-21 21:43,PointsBet,fb81e3b2,return,1.03,won
 2026-10-21 21:43,theScore,4dfdc722,settled,0.00,"lost, no return"
 2026-10-21 21:43,bet365,0abd747b,settled,0.00,"lost, no return"
+2026-10-21 21:55,Caesars,ce73de3f,return,3.00,won
