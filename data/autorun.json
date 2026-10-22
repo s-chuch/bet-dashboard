@@ -42,6 +42,15 @@
    ]
   },
   {
+   "bet_id": "3eabcc58",
+   "book": "PointsBet",
+   "event": "Union St Gilloise v Hapoel Beer Sheva (UEFA Europa League)",
+   "pick": "Hapoel Beer Sheva",
+   "stake": "2.50 (bonus)",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
    "bet_id": "277f7bfc",
    "book": "Caesars",
    "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
@@ -69,24 +78,6 @@
    "legs": []
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
@@ -94,18 +85,18 @@
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
    "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "f0094ba2",
+   "book": "PointsBet",
+   "pick": "Lillestrom",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "RSO 6-0 LSK",
+   "at": "2026-10-22 16:49"
+  },
   {
    "bet_id": "383dd8ea",
    "book": "PointsBet",
@@ -321,17 +312,8 @@
    "pnl": -0.2,
    "final": "SJ 1-3 TOR",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "341fb871",
-   "book": "theScore",
-   "pick": "Junior Caminero 2+ TB + Freddy Peralta 4+ K + Guardians +1.5",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "CLE 3-7 TB",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 15:17 ET"
+ "last_change_at": "2026-10-22 16:49 ET"
 }

@@ -1005,7 +1005,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -1782,7 +1782,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -2510,7 +2510,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -2807,10 +2807,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.601,
-     "away": 0.399,
+     "home": 0.625,
+     "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "MLB",
@@ -3103,10 +3103,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.601,
-     "away": 0.399,
+     "home": 0.625,
+     "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "MLB",
@@ -3377,72 +3377,6 @@
    "payout": 13.75,
    "payout_est": false,
    "start_ts": "2026-10-25T14:00Z"
-  },
-  {
-   "bet_id": "f0094ba2",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Lillestrom v Real Sociedad",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Lillestrom",
-   "start": "Thu Oct 22 03:00 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 12.5,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Lillestrom",
-     "women": false,
-     "text": "Lillestrom",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.europa",
-    "date": "20261022",
-    "groups": null,
-    "id": "401915540",
-    "snapshot": {
-     "date": "2026-10-22T19:00Z",
-     "period": 2,
-     "clock": 4380.0,
-     "state": "in",
-     "completed": false,
-     "detail": "73'",
-     "teams": [
-      {
-       "id": "987",
-       "name": "Lillestrom",
-       "abbr": "LSK",
-       "short": "Lillestrom",
-       "nick": "Lillestrom",
-       "location": "Lillestrom",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "89",
-       "name": "Real Sociedad",
-       "abbr": "RSO",
-       "short": "Real Sociedad",
-       "nick": "Real Sociedad",
-       "location": "Real Sociedad",
-       "home": false,
-       "score": "5"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 12.5,
-   "payout_est": false,
-   "start_ts": "2026-10-22T19:00Z"
   },
   {
    "bet_id": "cd55ea08",
@@ -4454,7 +4388,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NCAAF",
@@ -5251,7 +5185,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -6190,7 +6124,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -6958,7 +6892,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "NFL",
@@ -7235,10 +7169,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.601,
-     "away": 0.399,
+     "home": 0.625,
+     "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-22T20:28Z"
+     "t": "2026-10-22T20:49Z"
     }
    },
    "sport": "MLB",
@@ -7758,6 +7692,16 @@
    "book": "PointsBet",
    "event": "Toluca v Tijuana",
    "pick": "Tijuana",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": true
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
+   "event": "Lillestrom v Real Sociedad",
+   "pick": "Lillestrom",
    "result": "lost",
    "pnl": 0.0,
    "stake": 2.5,
@@ -8626,9 +8570,9 @@
  ],
  "pnl_total": 94.44,
  "unsettled": {
-  "n": 34,
+  "n": 33,
   "cash_stake": 19.0,
-  "max_payout": 672.25,
+  "max_payout": 659.75,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -8638,16 +8582,16 @@
    "overall": {
     "n": 126,
     "w": 35,
-    "l": 50,
+    "l": 51,
     "p": 0,
-    "pending": 41,
-    "win_pct": 41.2,
+    "pending": 40,
+    "win_pct": 40.7,
     "units": 20.54,
     "roi_pct": 28.5,
     "roi_n": 72,
     "exp_roi_pct": 11.2,
-    "exp_wins": 30.0,
-    "exp_wins_n": 85,
+    "exp_wins": 30.2,
+    "exp_wins_n": 86,
     "wins_with_fair": 35
    },
    "by_promo": {
@@ -8684,16 +8628,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 5,
+     "l": 6,
      "p": 0,
-     "pending": 8,
-     "win_pct": 50.0,
+     "pending": 7,
+     "win_pct": 45.5,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.7,
-     "exp_wins_n": 10,
+     "exp_wins": 1.8,
+     "exp_wins_n": 11,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -8896,16 +8840,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 12,
+     "l": 13,
      "p": 0,
-     "pending": 17,
-     "win_pct": 40.0,
+     "pending": 16,
+     "win_pct": 38.1,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 4.5,
-     "exp_wins_n": 20,
+     "exp_wins": 4.7,
+     "exp_wins_n": 21,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -8958,16 +8902,16 @@
     "yes": {
      "n": 73,
      "w": 25,
-     "l": 41,
+     "l": 42,
      "p": 0,
-     "pending": 7,
-     "win_pct": 37.9,
+     "pending": 6,
+     "win_pct": 37.3,
      "units": 20.78,
      "roi_pct": 35.8,
      "roi_n": 58,
      "exp_roi_pct": 12.7,
-     "exp_wins": 23.5,
-     "exp_wins_n": 66,
+     "exp_wins": 23.7,
+     "exp_wins_n": 67,
      "wins_with_fair": 25
     },
     "no": {
@@ -9573,11 +9517,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "RSO 6-0 LSK (FT)",
     "source": "rec.py add",
     "notes": "PointsBet Deposit Match bonus bet token $2.50 (stake not returned); ev = bonus value per $1 x100 (0.884); Pin +436 / draw +364 / -189; pulled 2:20 PM ET Oct 20; yes at +466",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "bc12cd1b",
@@ -12224,6 +12168,15 @@
     ]
    },
    {
+    "bet_id": "3eabcc58",
+    "book": "PointsBet",
+    "event": "Union St Gilloise v Hapoel Beer Sheva (UEFA Europa League)",
+    "pick": "Hapoel Beer Sheva",
+    "stake": "2.50 (bonus)",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "277f7bfc",
     "book": "Caesars",
     "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
@@ -12251,24 +12204,6 @@
     "legs": []
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
@@ -12276,18 +12211,18 @@
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
     "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "f0094ba2",
+    "book": "PointsBet",
+    "pick": "Lillestrom",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "RSO 6-0 LSK",
+    "at": "2026-10-22 16:49"
+   },
    {
     "bet_id": "383dd8ea",
     "book": "PointsBet",
@@ -12503,28 +12438,19 @@
     "pnl": -0.2,
     "final": "SJ 1-3 TOR",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "341fb871",
-    "book": "theScore",
-    "pick": "Junior Caminero 2+ TB + Freddy Peralta 4+ K + Guardians +1.5",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "CLE 3-7 TB",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 15:17 ET"
+  "last_change_at": "2026-10-22 16:49 ET"
  },
- "open_live_n": 28,
+ "open_live_n": 27,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 20.2,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 56.43,
+  "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "9466d5d4176454970f3f8ca538d70c1debf0bdbe",
- "generated_at": "2026-10-22T16:28:32-04:00"
+ "hash": "d433c854e31aa30995e5cfec3b8e2bc874166e41",
+ "generated_at": "2026-10-22T16:49:55-04:00"
 }
