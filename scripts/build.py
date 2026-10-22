@@ -246,6 +246,21 @@ def resolve_props(bet):
             if len(hits) == 1: L["pname"], L["pid"] = hits[0][1]["name"], hits[0][1]["id"]
             else: L["pcands"] = [a["name"] for _, a in hits]
 
+PLAYER_PATHS = ["basketball/nba", "hockey/nhl", "football/nfl", "baseball/mlb", "basketball/wnba"]
+def find_player_game(player, date):
+    """Player-only bets ("Kawhi Leonard Specials"): the one game on that day whose roster has exactly this player."""
+    if not player or not date: return None
+    hits = []
+    for path in PLAYER_PATHS:
+        for ev in fetch(sb_url(path, date.strftime("%Y%m%d"))).get("events", []):
+            for c in ev["competitions"][0]["competitors"]:
+                if any(player_match(player, a["name"]) and len(name_parts(player)[1] or "") > 2 and name_parts(player)[0] for a in team_roster(path, c["team"].get("id"))):
+                    hits.append((path, ev))
+        if hits: break
+    if len({ev["id"] for _, ev in hits}) != 1: return None
+    path, ev = hits[0]
+    return {"path": path, "date": date.strftime("%Y%m%d"), "groups": None, "id": ev["id"], "snapshot": snapshot(ev)}
+
 def candidate_paths(event, market):
     tag = re.search(r"\(([^)]*)\)", event)
     if tag:
@@ -375,6 +390,13 @@ def build_bet(row):
         for L in legs:
             if L.get("team"): L["match"] = find_game([L["team"]], paths, date, L.get("women", False))
             elif L.get("game"): L["match"] = find_game(L["game"], paths, date)
+    if not bet["match"] and not any(L.get("match") for L in legs):
+        players = {L.get("player") for L in legs if L.get("type") == "prop" and L.get("player")}
+        if len(players) == 1 and all(L.get("type") == "prop" for L in legs):
+            try:
+                pm = find_player_game(players.pop(), date)
+                if pm: bet["match"] = pm; bet["start"] = ""   # the slip time was the placement time: take the game's start
+            except Exception as e: print("player game lookup failed", e, file=sys.stderr)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
     if m and not str(bet.get("start") or "").strip() and ET:   # kickoff missing on the slip: take it from the matched game
         try:
