@@ -126,10 +126,10 @@
     "snapshot": {
      "date": "2026-10-22T16:45Z",
      "period": 2,
-     "clock": 5220.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "87'",
+     "detail": "90'",
      "teams": [
       {
        "id": "22281",
@@ -192,10 +192,10 @@
     "snapshot": {
      "date": "2026-10-22T16:45Z",
      "period": 2,
-     "clock": 5220.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "87'",
+     "detail": "90'",
      "teams": [
       {
        "id": "997",
@@ -259,9 +259,9 @@
      "date": "2026-10-22T16:45Z",
      "period": 2,
      "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+1'",
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "20703",
@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:35Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:33Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:33Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "MLB",
@@ -4586,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T18:33Z"
+     "t": "2026-10-22T18:37Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5383,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:35Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6322,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:35Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7090,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:35Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7370,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:33Z"
+     "t": "2026-10-22T18:36Z"
     }
    },
    "sport": "MLB",
@@ -12249,6 +12249,15 @@
  "auto": {
   "needs_review": [
    {
+    "bet_id": "3258bda0",
+    "book": "PointsBet",
+    "event": "Inter Club de Escaldes v Universitatea Craiova (UEFA Conference League)",
+    "pick": "Inter Club de Escaldes",
+    "stake": "33.43 (bonus)",
+    "reason": "team \"Inter Club de Escaldes\" not matched to exactly one side (0 hits)",
+    "legs": []
+   },
+   {
     "bet_id": "11be1d03",
     "book": "bet365",
     "event": "Bayern Munich v Arsenal",
@@ -12571,17 +12580,17 @@
     "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-21 23:03 ET"
+  "last_change_at": "2026-10-22 14:36 ET"
  },
- "open_live_n": 31,
+ "open_live_n": 30,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 20.2,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 156.75,
+  "PointsBet": 123.32,
   "theScore": 0.2
  },
- "hash": "b6f7c9a8a68defb4f77857503e349e4b8aab1948",
- "generated_at": "2026-10-22T14:36:03-04:00"
+ "hash": "5f1f758da20a8b4a6a0e22fde9a49fb7524ba511",
+ "generated_at": "2026-10-22T14:37:27-04:00"
 }
