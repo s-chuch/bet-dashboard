@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -1911,10 +1911,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.805,
-     "away": 0.195,
-     "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "home": 0.801,
+     "away": 0.199,
+     "spread": 0.02,
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -2942,7 +2942,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "MLB",
@@ -3238,7 +3238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "MLB",
@@ -4586,7 +4586,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NCAAF",
@@ -5383,7 +5383,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -6322,7 +6322,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -7090,7 +7090,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "NFL",
@@ -7370,7 +7370,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T04:21Z"
+     "t": "2026-10-22T05:55Z"
     }
    },
    "sport": "MLB",
@@ -9101,16 +9101,16 @@
    "friend": {
     "n": 12,
     "w": 3,
-    "l": 8,
+    "l": 9,
     "p": 0,
-    "pending": 1,
-    "win_pct": 27.3,
-    "units": 2.24,
-    "roi_pct": 20.4,
-    "roi_n": 11,
-    "exp_roi_pct": 55.8,
-    "exp_wins": 3.6,
-    "exp_wins_n": 11,
+    "pending": 0,
+    "win_pct": 25.0,
+    "units": 1.24,
+    "roi_pct": 10.3,
+    "roi_n": 12,
+    "exp_roi_pct": 55.6,
+    "exp_wins": 4.0,
+    "exp_wins_n": 12,
     "wins_with_fair": 3
    },
    "clv": "not available: no closing Pinnacle prices are stored"
@@ -10490,11 +10490,11 @@
     "promo": "profit boost",
     "friend": "yes",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "SAC 96-121 LAC (Final)",
     "source": "rec.py add",
     "notes": "Friend's Caesars 100% profit boost; Caesars ON price from Action Network feed (est.), pulled 5:35 PM ET",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "abc39b7c",
@@ -12582,6 +12582,6 @@
   "PointsBet": 156.75,
   "theScore": 0.2
  },
- "hash": "b9cad6f45b676b15bc5daaf8e8e97fa0659fb802",
- "generated_at": "2026-10-22T00:21:04-04:00"
+ "hash": "1654aab810d1f1171391c3695983a78134fac8d6",
+ "generated_at": "2026-10-22T01:55:35-04:00"
 }
