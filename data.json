@@ -95,72 +95,6 @@
    "start_ts": null
   },
   {
-   "bet_id": "383dd8ea",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Trabzonspor v Hearts",
-   "market": "3-Way Moneyline (bonus bet $33.43)",
-   "pick": "Hearts",
-   "start": "Thu Oct 22 12:45 PM ET",
-   "price": "+600",
-   "boosted_price": "",
-   "stake": 33.43,
-   "stake_note": "",
-   "to_win": 200.58,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Heart of Midlothian",
-     "women": false,
-     "text": "Hearts",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.europa.conf",
-    "date": "20261022",
-    "groups": null,
-    "id": "401915745",
-    "snapshot": {
-     "date": "2026-10-22T16:45Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+4'",
-     "teams": [
-      {
-       "id": "997",
-       "name": "Trabzonspor",
-       "abbr": "TRAB",
-       "short": "Trabzonspor",
-       "nick": "Trabzonspor",
-       "location": "Trabzonspor",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "262",
-       "name": "Heart of Midlothian",
-       "abbr": "HOM",
-       "short": "Hearts",
-       "nick": "Heart of Midlothian",
-       "location": "Heart of Midlothian",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 200.58,
-   "payout_est": false,
-   "start_ts": "2026-10-22T16:45Z"
-  },
-  {
    "bet_id": "3258bda0",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -1071,7 +1005,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -1848,7 +1782,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -2576,7 +2510,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -2876,7 +2810,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "MLB",
@@ -3172,7 +3106,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "MLB",
@@ -4520,7 +4454,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NCAAF",
@@ -5317,7 +5251,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -6256,7 +6190,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -7024,7 +6958,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "NFL",
@@ -7304,7 +7238,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T18:40Z"
+     "t": "2026-10-22T18:43Z"
     }
    },
    "sport": "MLB",
@@ -8112,6 +8046,16 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Trabzonspor v Hearts",
+   "pick": "Hearts",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 33.43,
+   "auto": true
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Paphos FC v Riga FC",
    "pick": "Riga FC",
    "result": "lost",
@@ -8682,9 +8626,9 @@
  ],
  "pnl_total": 94.44,
  "unsettled": {
-  "n": 35,
+  "n": 34,
   "cash_stake": 19.0,
-  "max_payout": 872.83,
+  "max_payout": 672.25,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -8694,16 +8638,16 @@
    "overall": {
     "n": 124,
     "w": 35,
-    "l": 49,
+    "l": 50,
     "p": 0,
-    "pending": 40,
-    "win_pct": 41.7,
+    "pending": 39,
+    "win_pct": 41.2,
     "units": 20.54,
     "roi_pct": 28.5,
     "roi_n": 72,
     "exp_roi_pct": 11.2,
-    "exp_wins": 29.8,
-    "exp_wins_n": 84,
+    "exp_wins": 30.0,
+    "exp_wins_n": 85,
     "wins_with_fair": 35
    },
    "by_promo": {
@@ -8740,16 +8684,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 4,
+     "l": 5,
      "p": 0,
-     "pending": 9,
-     "win_pct": 55.6,
+     "pending": 8,
+     "win_pct": 50.0,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.5,
-     "exp_wins_n": 9,
+     "exp_wins": 1.7,
+     "exp_wins_n": 10,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -8952,16 +8896,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 11,
+     "l": 12,
      "p": 0,
-     "pending": 18,
-     "win_pct": 42.1,
+     "pending": 17,
+     "win_pct": 40.0,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 4.4,
-     "exp_wins_n": 19,
+     "exp_wins": 4.5,
+     "exp_wins_n": 20,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -9014,16 +8958,16 @@
     "yes": {
      "n": 73,
      "w": 25,
-     "l": 40,
+     "l": 41,
      "p": 0,
-     "pending": 8,
-     "win_pct": 38.5,
+     "pending": 7,
+     "win_pct": 37.9,
      "units": 20.78,
      "roi_pct": 35.8,
      "roi_n": 58,
      "exp_roi_pct": 12.7,
-     "exp_wins": 23.4,
-     "exp_wins_n": 65,
+     "exp_wins": 23.5,
+     "exp_wins_n": 66,
      "wins_with_fair": 25
     },
     "no": {
@@ -10020,11 +9964,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "HOM 0-2 TRAB (FT)",
     "source": "rec.py add",
     "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.950; power 0.882); cash EV +10.8%; Pin Trabzonspor -227 / draw +398 / Hearts +494; pulled 8:00 PM ET; yes at +521",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "939032ea",
@@ -12272,6 +12216,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "383dd8ea",
+    "book": "PointsBet",
+    "pick": "Hearts",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "HOM 0-2 TRAB",
+    "at": "2026-10-22 14:43"
+   },
+   {
     "bet_id": "f0a25e0b",
     "book": "PointsBet",
     "pick": "Riga FC",
@@ -12486,28 +12439,19 @@
     "pnl": -0.2,
     "final": "CLE 3-7 TB",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "551f70e9",
-    "book": "theScore",
-    "pick": "Nazem Kadri O0.5 pts + Nathan MacKinnon O0.5 goals + Trevor Zegras O1.5 SOG",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "COL 2-3 PHI",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 14:40 ET"
+  "last_change_at": "2026-10-22 14:43 ET"
  },
- "open_live_n": 29,
+ "open_live_n": 28,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 20.2,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 89.86,
+  "PointsBet": 56.43,
   "theScore": 0.2
  },
- "hash": "0a1d80dfda929504977973d582fadf9f0f449c01",
- "generated_at": "2026-10-22T14:40:32-04:00"
+ "hash": "8d50390bc4d2863fa69fc22cc95cea2f881294dd",
+ "generated_at": "2026-10-22T14:43:31-04:00"
 }

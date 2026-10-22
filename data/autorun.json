@@ -80,6 +80,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "383dd8ea",
+   "book": "PointsBet",
+   "pick": "Hearts",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "HOM 0-2 TRAB",
+   "at": "2026-10-22 14:43"
+  },
+  {
    "bet_id": "f0a25e0b",
    "book": "PointsBet",
    "pick": "Riga FC",
@@ -294,17 +303,8 @@
    "pnl": -0.2,
    "final": "CLE 3-7 TB",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "551f70e9",
-   "book": "theScore",
-   "pick": "Nazem Kadri O0.5 pts + Nathan MacKinnon O0.5 goals + Trevor Zegras O1.5 SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "COL 2-3 PHI",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 14:40 ET"
+ "last_change_at": "2026-10-22 14:43 ET"
 }
