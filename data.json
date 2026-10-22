@@ -1137,7 +1137,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -1914,7 +1914,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -2642,7 +2642,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -2690,10 +2690,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 4,
-     "clock": 439.0,
+     "clock": 273.0,
      "state": "in",
      "completed": false,
-     "detail": "7:19 - 4th",
+     "detail": "4:33 - 4th",
      "teams": [
       {
        "id": "20",
@@ -2703,7 +2703,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "77"
+       "score": "86"
       },
       {
        "id": "129689",
@@ -2713,7 +2713,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "60"
+       "score": "65"
       }
      ]
     }
@@ -3015,7 +3015,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:58Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "MLB",
@@ -3311,7 +3311,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:58Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "MLB",
@@ -3809,11 +3809,11 @@
     "id": "401876931",
     "snapshot": {
      "date": "2026-10-22T01:00Z",
-     "period": 1,
-     "clock": 2700.0,
+     "period": 2,
+     "clock": 2820.0,
      "state": "in",
      "completed": false,
-     "detail": "HT",
+     "detail": "47'",
      "teams": [
       {
        "id": "223",
@@ -4725,7 +4725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NCAAF",
@@ -5522,7 +5522,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -5603,10 +5603,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 4,
-     "clock": 492.0,
+     "clock": 299.0,
      "state": "in",
      "completed": false,
-     "detail": "8:12 - 4th",
+     "detail": "4:59 - 4th",
      "teams": [
       {
        "id": "28",
@@ -5616,7 +5616,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "121"
+       "score": "127"
       },
       {
        "id": "4",
@@ -5626,7 +5626,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "75"
+       "score": "85"
       }
      ]
     },
@@ -6217,7 +6217,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NBA",
@@ -6284,10 +6284,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 4,
-     "clock": 439.0,
+     "clock": 273.0,
      "state": "in",
      "completed": false,
-     "detail": "7:19 - 4th",
+     "detail": "4:33 - 4th",
      "teams": [
       {
        "id": "20",
@@ -6297,7 +6297,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "77"
+       "score": "86"
       },
       {
        "id": "129689",
@@ -6307,7 +6307,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "60"
+       "score": "65"
       }
      ]
     }
@@ -6455,10 +6455,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 811.0,
+     "clock": 476.0,
      "state": "in",
      "completed": false,
-     "detail": "13:31 - 3rd",
+     "detail": "7:56 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -6468,7 +6468,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "3"
+       "score": "4"
       },
       {
        "id": "26",
@@ -6526,6 +6526,17 @@
        "tokens": [
         "73624238499717265615953426222727939827122087753547289686872992125082039993950",
         "26415539749088666085475917775392634963020549547109558499686317890565120038453"
+       ]
+      },
+      {
+       "line": -3.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "37825575376233435011670369461123540638104599708997204350130967466922536600033",
+        "31455377976976703211096957575362023423405418799836951720337670616525410727626"
        ]
       }
      ],
@@ -6593,10 +6604,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.995,
+     "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NHL",
@@ -7341,7 +7352,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -8109,7 +8120,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NFL",
@@ -8389,7 +8400,7 @@
      "home": 0.601,
      "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-22T01:58Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "MLB",
@@ -8482,10 +8493,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 4,
-     "clock": 492.0,
+     "clock": 299.0,
      "state": "in",
      "completed": false,
-     "detail": "8:12 - 4th",
+     "detail": "4:59 - 4th",
      "teams": [
       {
        "id": "28",
@@ -8495,7 +8506,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "121"
+       "score": "127"
       },
       {
        "id": "4",
@@ -8505,7 +8516,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "75"
+       "score": "85"
       }
      ]
     },
@@ -9096,7 +9107,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NBA",
@@ -9250,10 +9261,10 @@
     "snapshot": {
      "date": "2026-10-22T00:00Z",
      "period": 4,
-     "clock": 439.0,
+     "clock": 273.0,
      "state": "in",
      "completed": false,
-     "detail": "7:19 - 4th",
+     "detail": "4:33 - 4th",
      "teams": [
       {
        "id": "20",
@@ -9263,7 +9274,7 @@
        "nick": "Dream",
        "location": "Atlanta",
        "home": true,
-       "score": "77"
+       "score": "86"
       },
       {
        "id": "129689",
@@ -9273,7 +9284,7 @@
        "nick": "Valkyries",
        "location": "Golden State",
        "home": false,
-       "score": "60"
+       "score": "65"
       }
      ]
     }
@@ -9350,10 +9361,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 811.0,
+     "clock": 476.0,
      "state": "in",
      "completed": false,
-     "detail": "13:31 - 3rd",
+     "detail": "7:56 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9363,7 +9374,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "3"
+       "score": "4"
       },
       {
        "id": "26",
@@ -9421,6 +9432,17 @@
        "tokens": [
         "73624238499717265615953426222727939827122087753547289686872992125082039993950",
         "26415539749088666085475917775392634963020549547109558499686317890565120038453"
+       ]
+      },
+      {
+       "line": -3.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "37825575376233435011670369461123540638104599708997204350130967466922536600033",
+        "31455377976976703211096957575362023423405418799836951720337670616525410727626"
        ]
       }
      ],
@@ -9488,219 +9510,15 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.995,
+     "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NHL",
    "cash_stake": 0.2,
    "payout": 1.4,
-   "payout_est": false,
-   "start_ts": "2026-10-21T23:30Z"
-  },
-  {
-   "bet_id": "8460d5d9",
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Philadelphia Flyers @ Buffalo Sabres",
-   "market": "SGP 3-leg (NHL 20% Parlay Profit Boost)",
-   "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
-   "start": "Wed Oct 21 07:30 PM ET",
-   "price": "+328",
-   "boosted_price": "+395",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.79,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Buffalo Sabres",
-     "women": false,
-     "text": "Sabres ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Tage Thompson",
-     "stat": "sog",
-     "op": "under",
-     "line": 3.5,
-     "text": "Tage Thompson U3.5 SOG",
-     "pteam": "BUF",
-     "pname": "Tage Thompson",
-     "pid": "4024988"
-    },
-    {
-     "type": "prop",
-     "player": "Rasmus Dahlin",
-     "stat": "pts",
-     "op": "under",
-     "line": 0.5,
-     "text": "Rasmus Dahlin U0.5 pts",
-     "pteam": "BUF",
-     "pname": "Rasmus Dahlin",
-     "pid": "4294163"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261021",
-    "groups": null,
-    "id": "401892550",
-    "snapshot": {
-     "date": "2026-10-21T23:30Z",
-     "period": 3,
-     "clock": 337.0,
-     "state": "in",
-     "completed": false,
-     "detail": "5:37 - 3rd",
-     "teams": [
-      {
-       "id": "2",
-       "name": "Buffalo Sabres",
-       "abbr": "BUF",
-       "short": "Sabres",
-       "nick": "Sabres",
-       "location": "Buffalo",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "15",
-       "name": "Philadelphia Flyers",
-       "abbr": "PHI",
-       "short": "Flyers",
-       "nick": "Flyers",
-       "location": "Philadelphia",
-       "home": false,
-       "score": "3"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.6311,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.4012,
-     "total_line": 6.0,
-     "total_over_fair": 0.4977
-    },
-    "pm": {
-     "slug": "nhl-phi-buf-2026-10-21",
-     "title": "Flyers vs. Sabres",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Sabres",
-        "Flyers"
-       ],
-       "tokens": [
-        "56183613372658131448780146164571062990274743980382194574266831512723536640575",
-        "94532792516816947634405395339645933621308651172094866809422830240158371836436"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Flyers",
-        "Sabres"
-       ],
-       "tokens": [
-        "62729947443306139876217473305584462268425090517412660915939136133761339818253",
-        "96964812835299975946794420249976373156492790586254604132667476375686882068799"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Flyers",
-        "Sabres"
-       ],
-       "tokens": [
-        "15492555278236603207084370231916861066530057652416249975848599444353364264119",
-        "47945344591181924262027385174220362087453143109756303155849896504140852717310"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "33280022106065691688536241014836209115903610510016581829810825102439432397538",
-        "9245215232293263945446478005139560670882049858932689208924758171953050548298"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "112632142497784273342944345132505866843193633477312082400695626181286396213536",
-        "78741533717950800307169542447270818739851249299768634126542012351906114910410"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "62224804985519494615348151416984616665789369251738922354573200772684688180262",
-        "44660234322687709711668111565436262299952478154334942330556179734248449605195"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "40240325449061036189149128462243950971565068408052074581484836038999296094386",
-        "77336983354808084145090191389292209708809922396929189279292132358107491412523"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Flyers",
-       "Sabres"
-      ],
-      "tokens": [
-       "27931492123723515904936894792099954551071108138035835518364062014443625648926",
-       "97395659161386210368754628126439734793411523466915252222150588288597312596385"
-      ]
-     }
-    },
-    "an": {
-     "id": 293450,
-     "home_team_id": 227,
-     "away_team_id": 245
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.035,
-     "away": 0.965,
-     "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.2,
-   "payout": 0.99,
    "payout_est": false,
    "start_ts": "2026-10-21T23:30Z"
   },
@@ -9792,10 +9610,10 @@
     "snapshot": {
      "date": "2026-10-21T23:30Z",
      "period": 3,
-     "clock": 811.0,
+     "clock": 476.0,
      "state": "in",
      "completed": false,
-     "detail": "13:31 - 3rd",
+     "detail": "7:56 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9805,7 +9623,7 @@
        "nick": "Senators",
        "location": "Ottawa",
        "home": true,
-       "score": "3"
+       "score": "4"
       },
       {
        "id": "26",
@@ -9863,6 +9681,17 @@
        "tokens": [
         "73624238499717265615953426222727939827122087753547289686872992125082039993950",
         "26415539749088666085475917775392634963020549547109558499686317890565120038453"
+       ]
+      },
+      {
+       "line": -3.5,
+       "outcomes": [
+        "Senators",
+        "Panthers"
+       ],
+       "tokens": [
+        "37825575376233435011670369461123540638104599708997204350130967466922536600033",
+        "31455377976976703211096957575362023423405418799836951720337670616525410727626"
        ]
       }
      ],
@@ -9930,10 +9759,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.995,
+     "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-22T01:59Z"
+     "t": "2026-10-22T02:10Z"
     }
    },
    "sport": "NHL",
@@ -9949,6 +9778,16 @@
    "book": "bet365",
    "event": "MIL Bucks @ WAS Wizards",
    "pick": "Kel'el Ware: 5+ Rebounds + Trae Young: 7+ Assists + Tyler Herro: 20+ Points",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": true
+  },
+  {
+   "date": "2026-10-21",
+   "book": "theScore",
+   "event": "Philadelphia Flyers @ Buffalo Sabres",
+   "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
@@ -11215,15 +11054,15 @@
    "auto": false
   }
  ],
- "pnl_total": 96.14,
+ "pnl_total": 95.94,
  "unsettled": {
-  "n": 44,
-  "cash_stake": 20.7,
-  "max_payout": 1065.2,
+  "n": 43,
+  "cash_stake": 20.5,
+  "max_payout": 1064.21,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 20.7,
+ "open_stake": 20.5,
  "recs": {
   "stats": {
    "overall": {
@@ -14776,36 +14615,18 @@
     "stake": "0.20",
     "reason": "leg \"Franz Wagner 30+ pts+reb+ast\": stat pra missing for Franz Wagner",
     "legs": []
-   },
-   {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "8460d5d9",
+    "book": "theScore",
+    "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "PHI 3-1 BUF",
+    "at": "2026-10-21 22:09"
+   },
    {
     "bet_id": "ce73de3f",
     "book": "Caesars",
@@ -15021,28 +14842,19 @@
     "pnl": -0.5,
     "final": "TOR 6-2 CBJ",
     "at": "2026-10-20 21:44"
-   },
-   {
-    "bet_id": "9d91f35f",
-    "book": "Caesars",
-    "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "LA 5-2 WSH",
-    "at": "2026-10-20 21:37"
    }
   ],
-  "last_change_at": "2026-10-21 21:58 ET"
+  "last_change_at": "2026-10-21 22:09 ET"
  },
- "open_live_n": 41,
+ "open_live_n": 40,
  "open_stake_by_book": {
   "bet365": 0.8,
   "Caesars": 20.7,
   "DraftKings": 0.7,
   "FanDuel": 2.1,
   "PointsBet": 159.75,
-  "theScore": 0.8
+  "theScore": 0.6
  },
- "hash": "3353b5077a09afe8f11574b6c1e3040629b293a4",
- "generated_at": "2026-10-21T21:59:03-04:00"
+ "hash": "425c4cc3c82bad2d999398014b9ebeb8bca7aea9",
+ "generated_at": "2026-10-21T22:10:24-04:00"
 }

@@ -49,36 +49,18 @@
    "stake": "0.20",
    "reason": "leg \"Franz Wagner 30+ pts+reb+ast\": stat pra missing for Franz Wagner",
    "legs": []
-  },
-  {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "8460d5d9",
+   "book": "theScore",
+   "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "PHI 3-1 BUF",
+   "at": "2026-10-21 22:09"
+  },
   {
    "bet_id": "ce73de3f",
    "book": "Caesars",
@@ -294,17 +276,8 @@
    "pnl": -0.5,
    "final": "TOR 6-2 CBJ",
    "at": "2026-10-20 21:44"
-  },
-  {
-   "bet_id": "9d91f35f",
-   "book": "Caesars",
-   "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "LA 5-2 WSH",
-   "at": "2026-10-20 21:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-21 21:58 ET"
+ "last_change_at": "2026-10-21 22:09 ET"
 }
