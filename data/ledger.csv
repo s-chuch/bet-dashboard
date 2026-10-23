@@ -288,3 +288,17 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-22 19:40,FanDuel,,anchor,154.92,"app balance before boosted SGP (Shawn, Oct 22)"
 2026-10-22 19:40,FanDuel,05e56633,stake,-1.00,stake
 2026-10-22 20:27,Hard Rock,a4058418,stake,0.00,"bonus bet token, no cash deducted"
+2026-10-22 20:29,Caesars,0c8f76ba,stake,-1.00,stake
+2026-10-22 20:33,bet365,aa301657,stake,-0.30,stake
+2026-10-22 20:33,bet365,f95c029e,stake,-0.30,stake
+2026-10-22 20:33,bet365,8961cb58,stake,-0.30,stake
+2026-10-22 20:33,FanDuel,9d28b51b,stake,-0.50,stake
+2026-10-22 20:33,FanDuel,e44026f6,stake,-0.50,stake
+2026-10-22 20:33,FanDuel,3941a9ad,stake,-0.50,stake
+2026-10-22 20:33,DraftKings,0ae1f272,stake,-0.30,stake
+2026-10-22 20:33,DraftKings,b46166e5,stake,-0.30,stake
+2026-10-22 20:33,DraftKings,d59ae63a,stake,-0.30,stake
+2026-10-22 20:33,DraftKings,541e7eb8,stake,-0.20,stake
+2026-10-22 20:33,Caesars,b8714d0e,stake,-0.10,stake
+2026-10-22 20:33,Caesars,5f4df7f4,stake,-0.10,stake
+2026-10-22 20:33,bet365,,anchor,51.88,"re-anchor: app balance after 6b91bd67; aa301657/f95c029e/8961cb58 placed before 18:55 anchor, logged late"
