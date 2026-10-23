@@ -1054,7 +1054,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NFL",
@@ -1783,7 +1783,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NFL",
@@ -2084,7 +2084,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "MLB",
@@ -2381,7 +2381,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "MLB",
@@ -3606,7 +3606,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T03:24Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NCAAF",
@@ -4401,7 +4401,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "MLB",
@@ -4692,10 +4692,10 @@
     "snapshot": {
      "date": "2026-10-23T02:00Z",
      "period": 2,
-     "clock": 474.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "7:54 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "22",
@@ -4715,7 +4715,7 @@
        "nick": "Red Wings",
        "location": "Detroit",
        "home": false,
-       "score": "3"
+       "score": "4"
       }
      ]
     },
@@ -4799,10 +4799,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.095,
-     "away": 0.905,
+     "home": 0.025,
+     "away": 0.975,
      "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NHL",
@@ -4814,163 +4814,6 @@
     "placed_at": "2026-10-22 20:25",
     "close_price": "+364",
     "clv_pct": -3.05
-   }
-  },
-  {
-   "bet_id": "0c8f76ba",
-   "date": "2026-10-22",
-   "book": "Caesars",
-   "event": "Minnesota Wild @ Calgary Flames",
-   "market": "Puck Line (Thursday Bet Reset: up to $5 refund as bonus if it loses)",
-   "pick": "Calgary Flames -1.5",
-   "start": "Thu Oct 22 09:08 PM ET",
-   "price": "+334",
-   "boosted_price": "",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 3.34,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Calgary Flames",
-     "line": -1.5,
-     "women": false,
-     "text": "Calgary Flames -1.5",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401892560",
-    "snapshot": {
-     "date": "2026-10-23T01:00Z",
-     "period": 3,
-     "clock": 352.0,
-     "state": "in",
-     "completed": false,
-     "detail": "5:52 - 3rd",
-     "teams": [
-      {
-       "id": "3",
-       "name": "Calgary Flames",
-       "abbr": "CGY",
-       "short": "Flames",
-       "nick": "Flames",
-       "location": "Calgary",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "30",
-       "name": "Minnesota Wild",
-       "abbr": "MIN",
-       "short": "Wild",
-       "nick": "Wild",
-       "location": "Minnesota",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-min-cal-2026-10-22",
-     "title": "Wild vs. Flames",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Wild",
-        "Flames"
-       ],
-       "tokens": [
-        "100326544252702455958011718615739633528522456362501707342717145833912518928810",
-        "33107496164753009344262380929013724102653192357210187147595846765679694436488"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "44017196842593508656557758856930518765077061026891299183296030876555924972855",
-        "96392470210042084102523071578686338379102137621804151667563707874974683226065"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "102204303040581498481385695347943130044479749025148765761894988459456958635422",
-        "44589118111943871920784595310069347304724192124878793142532707238037725107405"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "98540134988189791242871355077393877821291367981625454341477747265588427343590",
-        "24058322097855475838692062894164867377348754748679021888188035250213029321092"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "32849189763721842678003949989661439038942826997899053154297259482822132922990",
-        "103861359436899578259405995159131312170838032152652691796612489990414904329496"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Wild",
-       "Flames"
-      ],
-      "tokens": [
-       "76544039693610680852559978909740407850538069847409022328410996752490288784816",
-       "115093558249666462654743973555146862850182329859539433883737268643331830872969"
-      ]
-     }
-    },
-    "an": {
-     "id": 293460,
-     "home_team_id": 221,
-     "away_team_id": 226
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.805,
-     "away": 0.195,
-     "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 1.0,
-   "payout": 4.34,
-   "payout_est": false,
-   "start_ts": "2026-10-23T01:08Z",
-   "clv": {
-    "placed_at": "2026-10-22 20:23",
-    "close_price": "+443",
-    "clv_pct": -20.01
    }
   },
   {
@@ -5031,10 +4874,10 @@
     "snapshot": {
      "date": "2026-10-23T01:30Z",
      "period": 3,
-     "clock": 310.0,
+     "clock": 54.8,
      "state": "in",
      "completed": false,
-     "detail": "5:10 - 3rd",
+     "detail": "54.8 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -5044,7 +4887,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "58"
+       "score": "67"
       },
       {
        "id": "7",
@@ -5054,7 +4897,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "60"
+       "score": "62"
       }
      ]
     },
@@ -5391,10 +5234,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.605,
-     "away": 0.395,
-     "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "home": 0.75,
+     "away": 0.25,
+     "spread": 0.02,
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NBA",
@@ -5441,10 +5284,7 @@
      "stat": "sog",
      "op": "min",
      "min": 2,
-     "text": "Jimmy Snuggerud 2+ Shots on Goal",
-     "pteam": "STL",
-     "pname": "Jimmy Snuggerud",
-     "pid": "5080171"
+     "text": "Jimmy Snuggerud 2+ Shots on Goal"
     },
     {
      "type": "unknown",
@@ -5530,10 +5370,10 @@
     "snapshot": {
      "date": "2026-10-23T01:30Z",
      "period": 3,
-     "clock": 310.0,
+     "clock": 54.8,
      "state": "in",
      "completed": false,
-     "detail": "5:10 - 3rd",
+     "detail": "54.8 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -5543,7 +5383,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "58"
+       "score": "67"
       },
       {
        "id": "7",
@@ -5553,7 +5393,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "60"
+       "score": "62"
       }
      ]
     },
@@ -5890,10 +5730,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.605,
-     "away": 0.395,
-     "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "home": 0.75,
+     "away": 0.25,
+     "spread": 0.02,
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NBA",
@@ -6073,10 +5913,10 @@
     "snapshot": {
      "date": "2026-10-23T01:30Z",
      "period": 3,
-     "clock": 310.0,
+     "clock": 54.8,
      "state": "in",
      "completed": false,
-     "detail": "5:10 - 3rd",
+     "detail": "54.8 - 3rd",
      "teams": [
       {
        "id": "25",
@@ -6086,7 +5926,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "58"
+       "score": "67"
       },
       {
        "id": "7",
@@ -6096,7 +5936,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "60"
+       "score": "62"
       }
      ]
     },
@@ -6433,10 +6273,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.605,
-     "away": 0.395,
-     "spread": 0.01,
-     "t": "2026-10-23T03:23Z"
+     "home": 0.75,
+     "away": 0.25,
+     "spread": 0.02,
+     "t": "2026-10-23T03:37Z"
     }
    },
    "sport": "NBA",
@@ -6630,6 +6470,21 @@
     "placed_at": "2026-10-22 18:47",
     "close_price": null,
     "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "book": "Caesars",
+   "event": "Minnesota Wild @ Calgary Flames",
+   "pick": "Calgary Flames -1.5",
+   "result": "lost",
+   "pnl": -1.0,
+   "stake": 1.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-22 20:23",
+    "close_price": "+443",
+    "clv_pct": -20.01
    }
   },
   {
@@ -7954,15 +7809,15 @@
    "clv": null
   }
  ],
- "pnl_total": 115.54,
+ "pnl_total": 114.54,
  "unsettled": {
-  "n": 38,
-  "cash_stake": 21.1,
-  "max_payout": 726.14,
+  "n": 37,
+  "cash_stake": 20.1,
+  "max_payout": 721.8,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 21.1,
+ "open_stake": 20.1,
  "recs": {
   "stats": {
    "overall": {
@@ -11734,6 +11589,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "0c8f76ba",
+    "book": "Caesars",
+    "pick": "Calgary Flames -1.5",
+    "result": "lost",
+    "pnl": -1.0,
+    "final": "MIN 1-2 CGY",
+    "at": "2026-10-22 23:36"
+   },
+   {
     "bet_id": "ecfed1e1",
     "book": "Caesars",
     "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
@@ -11948,29 +11812,20 @@
     "pnl": 0.91,
     "final": "MIL 116-128 WSH",
     "at": "2026-10-21 21:43"
-   },
-   {
-    "bet_id": "c6045ccd",
-    "book": "DraftKings",
-    "pick": "AJ Green 2+ threes",
-    "result": "won",
-    "pnl": 0.15,
-    "final": "MIL 116-128 WSH",
-    "at": "2026-10-21 21:43"
    }
   ],
-  "last_change_at": "2026-10-22 23:23 ET"
+  "last_change_at": "2026-10-22 23:36 ET"
  },
- "open_live_n": 27,
+ "open_live_n": 26,
  "open_stake_by_book": {
   "bet365": 0.9,
-  "Caesars": 19.7,
+  "Caesars": 18.7,
   "DraftKings": 0.4,
   "FanDuel": 2.6,
   "Hard Rock": 20.0,
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "a00ecb9ecfd274fa2779f446f8ed4f1075b03f8c",
- "generated_at": "2026-10-22T23:24:00-04:00"
+ "hash": "0fa4cd60f2df1ee7665cbbc522b10e2e189e05d8",
+ "generated_at": "2026-10-22T23:37:11-04:00"
 }

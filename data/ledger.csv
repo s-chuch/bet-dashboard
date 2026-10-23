@@ -313,3 +313,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-22 23:23,DraftKings,b46166e5,settled,0.00,"lost, no return"
 2026-10-22 23:23,Caesars,b8714d0e,settled,0.00,"lost, no return"
 2026-10-22 23:23,Caesars,5f4df7f4,return,0.41,won
+2026-10-22 23:36,Caesars,0c8f76ba,settled,0.00,"lost, no return"

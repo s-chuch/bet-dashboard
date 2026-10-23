@@ -153,6 +153,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "0c8f76ba",
+   "book": "Caesars",
+   "pick": "Calgary Flames -1.5",
+   "result": "lost",
+   "pnl": -1.0,
+   "final": "MIN 1-2 CGY",
+   "at": "2026-10-22 23:36"
+  },
+  {
    "bet_id": "ecfed1e1",
    "book": "Caesars",
    "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
@@ -367,17 +376,8 @@
    "pnl": 0.91,
    "final": "MIL 116-128 WSH",
    "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "c6045ccd",
-   "book": "DraftKings",
-   "pick": "AJ Green 2+ threes",
-   "result": "won",
-   "pnl": 0.15,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 23:23 ET"
+ "last_change_at": "2026-10-22 23:36 ET"
 }
