@@ -338,10 +338,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -2820,7 +2820,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:53Z"
+     "t": "2026-10-23T00:54Z"
     }
    },
    "sport": "MLB",
@@ -3117,7 +3117,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:53Z"
+     "t": "2026-10-23T00:54Z"
     }
    },
    "sport": "MLB",
@@ -4410,7 +4410,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T00:53Z"
+     "t": "2026-10-23T00:54Z"
     }
    },
    "sport": "NCAAF",
@@ -4537,10 +4537,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -5480,10 +5480,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -6250,10 +6250,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -7204,7 +7204,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:53Z"
+     "t": "2026-10-23T00:54Z"
     }
    },
    "sport": "MLB",
@@ -7500,10 +7500,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -8248,10 +8248,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 1,
-     "clock": 98.0,
+     "clock": 92.0,
      "state": "in",
      "completed": false,
-     "detail": "1:38 - 1st",
+     "detail": "1:32 - 1st",
      "teams": [
       {
        "id": "3",
@@ -9078,7 +9078,7 @@
      "home": 0.3911,
      "away": 0.6089,
      "spread": 0.01,
-     "t": "2026-10-23T00:53Z"
+     "t": "2026-10-23T00:54Z"
     }
    },
    "sport": "NHL",
@@ -14329,6 +14329,6 @@
   "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "74cbe1527c155ad5ebc2a88d1fba1558b4b376af",
- "generated_at": "2026-10-22T20:54:03-04:00"
+ "hash": "5adfc66348bca2be2ed5eb2b32b4fbffead3c3ca",
+ "generated_at": "2026-10-22T20:54:30-04:00"
 }
