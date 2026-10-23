@@ -1054,7 +1054,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:57Z"
     }
    },
    "sport": "NFL",
@@ -1783,7 +1783,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:57Z"
     }
    },
    "sport": "NFL",
@@ -2084,7 +2084,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:57Z"
     }
    },
    "sport": "MLB",
@@ -2381,7 +2381,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:57Z"
     }
    },
    "sport": "MLB",
@@ -3513,7 +3513,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:58Z"
     }
    },
    "sport": "NCAAF",
@@ -4028,7 +4028,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:49Z"
+     "t": "2026-10-23T05:57Z"
     }
    },
    "sport": "MLB",
@@ -5523,18 +5523,18 @@
   "stats": {
    "overall": {
     "n": 129,
-    "w": 37,
+    "w": 38,
     "l": 53,
     "p": 0,
-    "pending": 39,
-    "win_pct": 41.1,
-    "units": 21.94,
-    "roi_pct": 28.9,
-    "roi_n": 76,
-    "exp_roi_pct": 10.8,
-    "exp_wins": 31.6,
-    "exp_wins_n": 89,
-    "wins_with_fair": 36
+    "pending": 38,
+    "win_pct": 41.8,
+    "units": 22.94,
+    "roi_pct": 29.8,
+    "roi_n": 77,
+    "exp_roi_pct": 10.6,
+    "exp_wins": 32.1,
+    "exp_wins_n": 90,
+    "wins_with_fair": 37
    },
    "by_promo": {
     "Bet Reset $5": {
@@ -5614,18 +5614,18 @@
     },
     "cash": {
      "n": 27,
-     "w": 11,
+     "w": 12,
      "l": 14,
      "p": 0,
-     "pending": 2,
-     "win_pct": 44.0,
-     "units": 14.61,
-     "roi_pct": 58.4,
-     "roi_n": 25,
-     "exp_roi_pct": 6.1,
-     "exp_wins": 9.0,
-     "exp_wins_n": 25,
-     "wins_with_fair": 11
+     "pending": 1,
+     "win_pct": 46.2,
+     "units": 15.61,
+     "roi_pct": 60.0,
+     "roi_n": 26,
+     "exp_roi_pct": 6.0,
+     "exp_wins": 9.5,
+     "exp_wins_n": 26,
+     "wins_with_fair": 12
     },
     "live boost": {
      "n": 1,
@@ -5766,18 +5766,18 @@
     },
     "NHL": {
      "n": 10,
-     "w": 5,
+     "w": 6,
      "l": 4,
      "p": 0,
-     "pending": 1,
-     "win_pct": 55.6,
-     "units": 1.31,
-     "roi_pct": 14.6,
-     "roi_n": 9,
-     "exp_roi_pct": 13.7,
-     "exp_wins": 4.4,
-     "exp_wins_n": 9,
-     "wins_with_fair": 5
+     "pending": 0,
+     "win_pct": 60.0,
+     "units": 2.31,
+     "roi_pct": 23.1,
+     "roi_n": 10,
+     "exp_roi_pct": 12.5,
+     "exp_wins": 4.9,
+     "exp_wins_n": 10,
+     "wins_with_fair": 6
     },
     "Soccer": {
      "n": 37,
@@ -5858,18 +5858,18 @@
     },
     "no": {
      "n": 54,
-     "w": 10,
+     "w": 11,
      "l": 11,
      "p": 0,
-     "pending": 33,
-     "win_pct": 47.6,
-     "units": -2.24,
-     "roi_pct": -14.0,
-     "roi_n": 16,
-     "exp_roi_pct": 4.7,
-     "exp_wins": 7.5,
-     "exp_wins_n": 21,
-     "wins_with_fair": 10
+     "pending": 32,
+     "win_pct": 50.0,
+     "units": -1.24,
+     "roi_pct": -7.3,
+     "roi_n": 17,
+     "exp_roi_pct": 4.6,
+     "exp_wins": 8.1,
+     "exp_wins_n": 22,
+     "wins_with_fair": 11
     }
    },
    "friend": {
@@ -5953,11 +5953,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "UTA 3-5 SEA (Final)",
     "source": "rec.py add",
     "notes": "5:47 scan; Pinnacle main over -111/under -102; yes-at +100",
-    "units": null
+    "units": 1.0
    },
    {
     "rec_id": "2c8b2df3",
@@ -9485,6 +9485,6 @@
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "eaee04851415a32ee13e0d683d0b8af5bf6660bc",
- "generated_at": "2026-10-23T00:49:26-04:00"
+ "hash": "42ee8dfc6377f1b474db9b42747699135902a764",
+ "generated_at": "2026-10-23T01:58:00-04:00"
 }
