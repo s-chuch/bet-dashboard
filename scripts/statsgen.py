@@ -235,6 +235,11 @@ def build_stats(rows, led):
     for d, v in sorted(bydate.items()):
         g = agg(v); cum += g["pnl"]
         daily.append({"date": d, "bets": g["bets"], "won": g["won"], "lost": g["lost"], "staked": g["staked"], "pnl": g["pnl"], "cum_pnl": r2(cum)})
+    for x in daily[-30:]:  # per-bet detail for the "Recent settled days" tiles (tap to expand)
+        x["items"] = [{"book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r.get("event") or ""), "market": r.get("market", ""),
+                       "pick": r.get("pick", ""), "price": r.get("price", ""), "boosted_price": r.get("boosted_price", ""),
+                       "stake": r.get("stake", ""), "result": r.get("result", ""), "pnl": r2(num(r.get("pnl"))), "kind": money_kind(r)}
+                      for r in bydate[x["date"]]]
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     def wd(r):
         try: return days[datetime.date.fromisoformat(r["date"]).weekday()]

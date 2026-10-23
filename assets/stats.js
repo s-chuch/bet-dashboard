@@ -296,7 +296,41 @@
       var p = num(d.pnl), k = p > 0 ? 'w' : p < 0 ? 'l' : 'z';
       var c = el('div', { class: 'cell ' + k, role: 'listitem', title: fmtDate(d.date, true) + ': ' + pnl(p), 'aria-label': fmtDate(d.date, true) + ', ' + (p > 0 ? 'profit ' : p < 0 ? 'loss ' : 'break-even ') + pnl(p), text: p > 0 ? 'W' : p < 0 ? 'L' : '–' });
       c.style.setProperty('--a', (0.2 + 0.6 * Math.abs(p) / mx).toFixed(2));
+      c.setAttribute('tabindex', '0'); c.setAttribute('role', 'button');
+      if (state.day === d.date) c.className += ' sel';
+      c.addEventListener('click', function () { state.day = state.day === d.date ? null : d.date; renderCharts(daily); });
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); } });
       heat.appendChild(c);
+    });
+    renderDay(recent);
+  }
+
+  // ---------- day detail (tap a heat tile) ----------
+  function renderDay(recent) {
+    var box = $('heat-day'); if (!box) { box = el('div', { id: 'heat-day', class: 'dayd' }); $('heat').parentNode.appendChild(box); }
+    clear(box);
+    var d = recent.filter(function (x) { return x.date === state.day; })[0];
+    if (!d) { state.day = null; box.hidden = true; return; }
+    box.hidden = false;
+    var st = num(d.staked), p = num(d.pnl), push = num(d.bets) - num(d.won) - num(d.lost);
+    var close = el('button', { class: 'dayx', type: 'button', 'aria-label': 'Close day details', text: '×' });
+    close.addEventListener('click', function () { state.day = null; var t = recent; renderDay(t); Array.prototype.forEach.call(document.querySelectorAll('#heat .cell.sel'), function (n) { n.classList.remove('sel'); }); });
+    box.appendChild(el('div', { class: 'row sb' }, [el('strong', { text: fmtDate(d.date, true) }), close]));
+    var kv = function (k, v, c) { return el('div', { class: 'daykv' }, [el('span', { class: 'muted small', text: k }), el('b', { class: 'num ' + (c || ''), text: v })]); };
+    box.appendChild(el('div', { class: 'daystats' }, [
+      kv('Net P/L', pnl(p), cls(p)), kv('Staked', money(st)), kv('ROI', st ? pct(p / st * 100, true) : '–', cls(p)),
+      kv('W-L', num(d.won) + '-' + num(d.lost) + (push ? '-' + push : ''))]));
+    var items = arr(d.items);
+    if (!items.length) { box.appendChild(el('div', { class: 'muted small', text: num(d.bets) + ' bets (details appear after the next refresh)' })); return; }
+    items.forEach(function (b) {
+      var r = String(b.result || '').toLowerCase(), price = b.boosted_price ? b.price + ' → ' + b.boosted_price : b.price;
+      box.appendChild(el('div', { class: 'dayb' }, [
+        el('div', { class: 'row sb' }, [el('span', { class: 'dayp', text: b.pick || b.market }), el('b', { class: 'num ' + cls(b.pnl), text: pnl(b.pnl) })]),
+        el('div', { class: 'muted small', text: [b.book, b.event].filter(Boolean).join(' · ') }),
+        el('div', { class: 'small' }, [
+          el('span', { class: 'num', text: (price || '') + ' · ' + (has(b.stake) ? money(b.stake) : (b.stake || '')) + ' · ' }),
+          el('span', { class: r === 'won' ? 'pos' : r === 'lost' ? 'neg' : 'muted', text: (b.result || '').toUpperCase() }),
+          el('span', { class: 'daytag', text: b.kind || '' })])]));
     });
   }
 

@@ -73,3 +73,14 @@
 .ptab tr.sub2 td{font-size:11px;color:var(--mut);border-top:0;padding-top:2px;padding-bottom:2px}.ptab tr.sub2 td:first-child{padding-left:26px}
 .ptab th:first-child,.ptab td:first-child{text-align:left;width:33%;overflow-wrap:anywhere}
 #plan-seg{flex-wrap:wrap}
+.cell[role=button]{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cell.sel{outline:2px solid var(--text,#fff);outline-offset:1px}
+.dayd{margin-top:10px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:visible}
+.dayx{background:none;border:0;color:var(--dim);font-size:22px;line-height:1;padding:0 4px;cursor:pointer}
+.daystats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:8px 0}
+.daykv{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dayb{border-top:1px solid var(--line);padding:7px 0;display:flex;flex-direction:column;gap:2px;overflow-wrap:anywhere}
+.dayp{font-weight:700;font-size:13px;min-width:0;padding-right:8px}
+.daytag{margin-left:6px;font-size:10px;padding:1px 6px;border-radius:6px;border:1px solid var(--line2);color:var(--dim)}
+.dayb .row b{white-space:nowrap;flex:0 0 auto}
+.dayb .row{align-items:flex-start}
