@@ -304,3 +304,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-22 20:33,bet365,,anchor,51.88,"re-anchor: app balance after 6b91bd67; aa301657/f95c029e/8961cb58 placed before 18:55 anchor, logged late"
 2026-10-22 21:34,bet365,aa301657,return,0.81,won
 2026-10-22 21:41,bet365,f95c029e,settled,0.00,"lost, no return"
+2026-10-22 21:54,FanDuel,9d28b51b,return,1.20,won
