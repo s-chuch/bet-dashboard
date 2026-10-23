@@ -2017,7 +2017,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:59Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "MLB",
@@ -2314,7 +2314,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:59Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "MLB",
@@ -3339,7 +3339,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-23T20:59Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "NCAAF",
@@ -3698,7 +3698,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:59Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "MLB",
@@ -8629,6 +8629,15 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -8858,7 +8867,7 @@
     "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 16:58 ET"
+  "last_change_at": "2026-10-23 17:00 ET"
  },
  "open_live_n": 17,
  "open_stake_by_book": {
@@ -8868,6 +8877,6 @@
   "FanDuel": 2.1,
   "PointsBet": 48.43
  },
- "hash": "00fe6e914b2fb738be5a16e46469a9d8157a69d9",
- "generated_at": "2026-10-23T17:00:00-04:00"
+ "hash": "bf6c41eacc196d8833d52a87e2e0ef6c853dbaa4",
+ "generated_at": "2026-10-23T17:00:19-04:00"
 }

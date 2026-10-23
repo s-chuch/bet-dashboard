@@ -8,6 +8,15 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "ec6db8a6",
+   "book": "Caesars",
+   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -238,5 +247,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 16:58 ET"
+ "last_change_at": "2026-10-23 17:00 ET"
 }
