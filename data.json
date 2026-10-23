@@ -97,73 +97,6 @@
    "clv": null
   },
   {
-   "bet_id": "3258bda0",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Inter Club de Escaldes v Universitatea Craiova",
-   "market": "3-Way Moneyline (bonus bet $33.43)",
-   "pick": "Inter Club de Escaldes",
-   "start": "Thu Oct 22 12:45 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 33.43,
-   "stake_note": "",
-   "to_win": 167.15,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Inter D'Escaldes",
-     "women": false,
-     "text": "Inter Club de Escaldes",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.europa.conf",
-    "date": "20261022",
-    "groups": null,
-    "id": "401915839",
-    "snapshot": {
-     "date": "2026-10-22T16:45Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "20703",
-       "name": "Inter D'Escaldes",
-       "abbr": "IDE",
-       "short": "Inter D'Escaldes",
-       "nick": "Inter D'Escaldes",
-       "location": "Inter D'Escaldes",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "8089",
-       "name": "CSU Craiova",
-       "abbr": "UCRA",
-       "short": "CSU Craiova",
-       "nick": "CSU Craiova",
-       "location": "CSU Craiova",
-       "home": false,
-       "score": "3"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 167.15,
-   "payout_est": false,
-   "start_ts": "2026-10-22T16:45Z",
-   "clv": null
-  },
-  {
    "bet_id": "f5ba9f28",
    "date": "2026-10-18",
    "book": "PointsBet",
@@ -414,7 +347,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
+     "pulled": "2026-10-23 09:59 ET",
      "ml_home": 0.7963,
      "spread_home_line": -10.5,
      "spread_home_fair": 0.4954,
@@ -1054,7 +987,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T13:45Z"
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "NFL",
@@ -1143,7 +1076,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
+     "pulled": "2026-10-23 09:59 ET",
      "ml_home": 0.6624,
      "spread_home_line": -4.5,
      "spread_home_fair": 0.4954,
@@ -1783,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T13:45Z"
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "NFL",
@@ -1884,12 +1817,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.6324,
+     "pulled": "2026-10-23 09:59 ET",
+     "ml_home": 0.6247,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.4204,
+     "spread_home_fair": 0.4218,
      "total_line": 6.5,
-     "total_over_fair": 0.5136
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -2084,7 +2017,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T13:45Z"
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "MLB",
@@ -2181,12 +2114,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.6324,
+     "pulled": "2026-10-23 09:59 ET",
+     "ml_home": 0.6247,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.4204,
+     "spread_home_fair": 0.4218,
      "total_line": 6.5,
-     "total_over_fair": 0.5136
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -2381,7 +2314,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T13:45Z"
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "MLB",
@@ -2389,113 +2322,6 @@
    "payout": 2.72,
    "payout_est": false,
    "start_ts": "2026-10-24T00:00Z",
-   "clv": null
-  },
-  {
-   "bet_id": "c4caca25",
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Lille v Galatasaray",
-   "market": "SGP 3-leg (30% Profit Boost for Soccer)",
-   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
-   "start": "Wed Oct 21 12:45 PM ET",
-   "price": "+360",
-   "boosted_price": "+470",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.94,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "under",
-     "line": 3.5,
-     "text": "Under 3.5 Total Goals"
-    },
-    {
-     "type": "btts",
-     "yes": true,
-     "text": "Yes Both Teams To Score"
-    },
-    {
-     "type": "unknown",
-     "text": "Under 10.5 Total Corners",
-     "note": "corners/cards: settle by hand"
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261021",
-    "groups": null,
-    "id": "401915396",
-    "snapshot": {
-     "date": "2026-10-21T16:45Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "166",
-       "name": "Lille",
-       "abbr": "LILL",
-       "short": "Lille",
-       "nick": "Lille",
-       "location": "Lille",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "432",
-       "name": "Galatasaray",
-       "abbr": "GAL",
-       "short": "Galatasaray",
-       "nick": "Galatasaray",
-       "location": "Galatasaray",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.2,
-   "payout": 1.14,
-   "payout_est": false,
-   "start_ts": "2026-10-21T16:45Z",
-   "clv": null
-  },
-  {
-   "bet_id": "3eabcc58",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Union St Gilloise v Hapoel Beer Sheva",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Hapoel Beer Sheva",
-   "start": "Thu Oct 22 12:45 PM ET",
-   "price": "+800",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 20.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Hapoel Beer Sheva",
-     "women": false,
-     "text": "Hapoel Beer Sheva"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.0,
-   "payout": 20.0,
-   "payout_est": false,
-   "start_ts": "2026-10-22T16:45Z",
    "clv": null
   },
   {
@@ -2697,7 +2523,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
+     "pulled": "2026-10-23 09:59 ET",
      "ml_home": 0.9072,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5,
@@ -3510,10 +3336,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9154,
-     "away": 0.0846,
-     "spread": 0.02,
-     "t": "2026-10-23T13:45Z"
+     "home": 0.9158,
+     "away": 0.0842,
+     "spread": 0.01,
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "NCAAF",
@@ -3602,162 +3428,6 @@
    "clv": null
   },
   {
-   "bet_id": "febb32ba",
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "New England Patriots @ Chicago Bears",
-   "market": "SGP 4-leg (50% Profit Boost for NFL)",
-   "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
-   "start": "Thu Oct 22 08:15 PM ET",
-   "price": "+410",
-   "boosted_price": "+615",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.23,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Caleb Williams",
-     "stat": "passYds",
-     "op": "min",
-     "min": 225,
-     "text": "Caleb Williams 225+ pass yds",
-     "pteam": "CHI",
-     "pname": "Caleb Williams",
-     "pid": "4431611"
-    },
-    {
-     "type": "prop",
-     "player": "Drake Maye 2+ pass",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "Drake Maye 2+ pass TD"
-    },
-    {
-     "type": "prop",
-     "player": "Caleb Williams 2+ pass",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "Caleb Williams 2+ pass TD"
-    },
-    {
-     "type": "prop",
-     "player": "Rhamondre Stevenson",
-     "stat": "rushYds",
-     "op": "min",
-     "min": 40,
-     "text": "Rhamondre Stevenson 40+ rush yds",
-     "pteam": "NE",
-     "pname": "Rhamondre Stevenson",
-     "pid": "4569173"
-    }
-   ],
-   "match": {
-    "path": "football/nfl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401873010",
-    "snapshot": {
-     "date": "2026-10-23T00:15Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "3",
-       "name": "Chicago Bears",
-       "abbr": "CHI",
-       "short": "Bears",
-       "nick": "Bears",
-       "location": "Chicago",
-       "home": true,
-       "score": "30"
-      },
-      {
-       "id": "17",
-       "name": "New England Patriots",
-       "abbr": "NE",
-       "short": "Patriots",
-       "nick": "Patriots",
-       "location": "New England",
-       "home": false,
-       "score": "24"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.5907,
-     "spread_home_line": -3.0,
-     "spread_home_fair": 0.4896,
-     "total_line": 50.5,
-     "total_over_fair": 0.5138
-    }
-   },
-   "sport": "NFL",
-   "cash_stake": 0.2,
-   "payout": 1.43,
-   "payout_est": false,
-   "start_ts": "2026-10-23T00:15Z",
-   "clv": null
-  },
-  {
-   "bet_id": "2d46e615",
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "market": "Super Parlay 3-leg (20% profit boost)",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "start": "",
-   "price": "+405",
-   "boosted_price": "+485",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.97,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Nicolas Jackson",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Nicolas Jackson AGS"
-    },
-    {
-     "type": "prop",
-     "player": "Tammy Abraham",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Tammy Abraham AGS"
-    },
-    {
-     "type": "prop",
-     "player": "Carlos Espi",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Carlos Espi AGS"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.2,
-   "payout": 1.17,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": null
-  },
-  {
    "bet_id": "b991223f",
    "date": "2026-10-21",
    "book": "Caesars",
@@ -3828,12 +3498,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.6324,
+     "pulled": "2026-10-23 09:59 ET",
+     "ml_home": 0.6247,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.4204,
+     "spread_home_fair": 0.4218,
      "total_line": 6.5,
-     "total_over_fair": 0.5136
+     "total_over_fair": 0.5057
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -4028,7 +3698,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T13:45Z"
+     "t": "2026-10-23T13:59Z"
     }
    },
    "sport": "MLB",
@@ -4085,86 +3755,6 @@
    "payout": 1.8,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
-  },
-  {
-   "bet_id": "9ad39183",
-   "date": "2026-10-21",
-   "book": "PointsBet",
-   "event": "Kawhi Leonard Specials",
-   "market": "Player special (50% Kawhi Leonard profit boost)",
-   "pick": "Kawhi Leonard 40+ pts+reb+ast",
-   "start": "Wed Oct 21 07:30 PM ET",
-   "price": "+230",
-   "boosted_price": "+345",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.73,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Kawhi Leonard",
-     "stat": "pra",
-     "op": "min",
-     "min": 40,
-     "text": "Kawhi Leonard 40+ pts+reb+ast",
-     "pteam": "TOR",
-     "pname": "Kawhi Leonard",
-     "pid": "6450"
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261021",
-    "groups": null,
-    "id": "401909837",
-    "snapshot": {
-     "date": "2026-10-21T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "28",
-       "name": "Toronto Raptors",
-       "abbr": "TOR",
-       "short": "Raptors",
-       "nick": "Raptors",
-       "location": "Toronto",
-       "home": true,
-       "score": "135"
-      },
-      {
-       "id": "4",
-       "name": "Chicago Bulls",
-       "abbr": "CHI",
-       "short": "Bulls",
-       "nick": "Bulls",
-       "location": "Chicago",
-       "home": false,
-       "score": "92"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.7941,
-     "spread_home_line": -10.5,
-     "spread_home_fair": 0.5,
-     "total_line": 238.0,
-     "total_over_fair": 0.5023
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.5,
-   "payout": 2.23,
-   "payout_est": false,
-   "start_ts": "2026-10-21T23:30Z",
    "clv": null
   },
   {
@@ -4254,127 +3844,6 @@
    "payout_est": false,
    "start_ts": "2026-10-23T19:00Z",
    "clv": null
-  },
-  {
-   "bet_id": "ef269fe1",
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "market": "Money Line 3-way",
-   "pick": "Torreeense ML",
-   "start": "",
-   "price": "+850",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.7,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Torreeense",
-     "women": false,
-     "text": "Torreeense ML"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.2,
-   "payout": 1.9,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": null
-  },
-  {
-   "bet_id": "e44026f6",
-   "date": "2026-10-22",
-   "book": "FanDuel",
-   "event": "Vegas Golden Knights @ St. Louis Blues",
-   "market": "SGP 3-leg (40% profit boost)",
-   "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
-   "start": "Thu Oct 22 08:10 PM ET",
-   "price": "+108",
-   "boosted_price": "+150",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.75,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Jack Eichel",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Jack Eichel 2+ Shots on Goal",
-     "pteam": "VGK",
-     "pname": "Jack Eichel",
-     "pid": "3648002"
-    },
-    {
-     "type": "prop",
-     "player": "Jimmy Snuggerud",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Jimmy Snuggerud 2+ Shots on Goal",
-     "pteam": "STL",
-     "pname": "Jimmy Snuggerud",
-     "pid": "5080171"
-    },
-    {
-     "type": "unknown",
-     "text": "Over 4.5 Alternate Total Goals"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401892558",
-    "snapshot": {
-     "date": "2026-10-23T00:00Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "19",
-       "name": "St. Louis Blues",
-       "abbr": "STL",
-       "short": "Blues",
-       "nick": "Blues",
-       "location": "St. Louis",
-       "home": true,
-       "score": "6"
-      },
-      {
-       "id": "37",
-       "name": "Vegas Golden Knights",
-       "abbr": "VGK",
-       "short": "Golden Knights",
-       "nick": "Golden Knights",
-       "location": "Vegas",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 1.25,
-   "payout_est": false,
-   "start_ts": "2026-10-23T00:10Z",
-   "clv": {
-    "placed_at": "2026-10-22 19:44",
-    "close_price": null,
-    "clv_pct": null
-   }
   }
  ],
  "settled_recent": [
@@ -4481,6 +3950,21 @@
     "placed_at": "2026-10-22 19:44",
     "close_price": "+267",
     "clv_pct": -0.66
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "book": "FanDuel",
+   "event": "Vegas Golden Knights @ St. Louis Blues",
+   "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-22 19:44",
+    "close_price": null,
+    "clv_pct": null
    }
   },
   {
@@ -4617,6 +4101,17 @@
   {
    "date": "2026-10-21",
    "book": "bet365",
+   "event": "Ferencvarosi TC v Torreeense",
+   "pick": "Torreeense ML",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "bet365",
    "event": "MIL Bucks @ WAS Wizards",
    "pick": "Kel'el Ware: 5+ Rebounds + Trae Young: 7+ Assists + Tyler Herro: 20+ Points",
    "result": "lost",
@@ -4672,6 +4167,17 @@
   {
    "date": "2026-10-21",
    "book": "PointsBet",
+   "event": "Kawhi Leonard Specials",
+   "pick": "Kawhi Leonard 40+ pts+reb+ast",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "PointsBet",
    "event": "Milwaukee Bucks @ Washington Wizards",
    "pick": "Anthony Davis 17+ pts + Trae Young 15+ pts + Tyler Herro 16+ pts",
    "result": "won",
@@ -4711,6 +4217,28 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": true,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "Caesars",
+   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
+   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "theScore",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
    "clv": null
   },
   {
@@ -4983,6 +4511,17 @@
   },
   {
    "date": "2026-10-20",
+   "book": "PointsBet",
+   "event": "Union St Gilloise v Hapoel Beer Sheva",
+   "pick": "Hapoel Beer Sheva",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-20",
    "book": "theScore",
    "event": "PHI 76ers @ NY Knicks",
    "pick": "Jalen Brunson 25+ pts + Jaylen Brown 20+ pts + Joel Embiid 8+ reb",
@@ -5001,6 +4540,17 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": true,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "theScore",
+   "event": "Lille v Galatasaray",
+   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
    "clv": null
   },
   {
@@ -5314,6 +4864,17 @@
   {
    "date": "2026-10-18",
    "book": "PointsBet",
+   "event": "Inter Club de Escaldes v Universitatea Craiova",
+   "pick": "Inter Club de Escaldes",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 33.43,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-18",
+   "book": "PointsBet",
    "event": "Trabzonspor v Hearts",
    "pick": "Hearts",
    "result": "lost",
@@ -5510,30 +5071,30 @@
    "clv": null
   }
  ],
- "pnl_total": 114.53,
+ "pnl_total": 112.73,
  "unsettled": {
-  "n": 26,
-  "cash_stake": 16.9,
-  "max_payout": 634.29,
+  "n": 18,
+  "cash_stake": 15.1,
+  "max_payout": 438.02,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.9,
+ "open_stake": 15.1,
  "recs": {
   "stats": {
    "overall": {
     "n": 129,
     "w": 38,
-    "l": 53,
+    "l": 55,
     "p": 0,
-    "pending": 38,
-    "win_pct": 41.8,
+    "pending": 36,
+    "win_pct": 40.9,
     "units": 22.94,
     "roi_pct": 29.8,
     "roi_n": 77,
     "exp_roi_pct": 10.6,
-    "exp_wins": 32.1,
-    "exp_wins_n": 90,
+    "exp_wins": 32.4,
+    "exp_wins_n": 92,
     "wins_with_fair": 37
    },
    "by_promo": {
@@ -5570,16 +5131,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 6,
+     "l": 8,
      "p": 0,
-     "pending": 7,
-     "win_pct": 45.5,
+     "pending": 5,
+     "win_pct": 38.5,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 1.8,
-     "exp_wins_n": 11,
+     "exp_wins": 2.1,
+     "exp_wins_n": 13,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -5782,16 +5343,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 13,
+     "l": 15,
      "p": 0,
-     "pending": 16,
-     "win_pct": 38.1,
+     "pending": 14,
+     "win_pct": 34.8,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 4.7,
-     "exp_wins_n": 21,
+     "exp_wins": 5.0,
+     "exp_wins_n": 23,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -5844,16 +5405,16 @@
     "yes": {
      "n": 75,
      "w": 27,
-     "l": 42,
+     "l": 44,
      "p": 0,
-     "pending": 6,
-     "win_pct": 39.1,
+     "pending": 4,
+     "win_pct": 38.0,
      "units": 24.18,
      "roi_pct": 40.3,
      "roi_n": 60,
      "exp_roi_pct": 12.4,
-     "exp_wins": 24.0,
-     "exp_wins_n": 68,
+     "exp_wins": 24.3,
+     "exp_wins_n": 70,
      "wins_with_fair": 26
     },
     "no": {
@@ -6482,11 +6043,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "PointsBet Deposit Match bonus bet token $2.50 (stake not returned); ev = bonus value per $1 x100 (0.891); Pin -326 / draw +474 / +749; pulled 2:20 PM ET Oct 20; yes at +798",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "87ddb639",
@@ -6942,11 +6503,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.911; power 0.866); cash EV +9.3%; Pin Escaldes +417 / draw +307 / Craiova -165; pulled 8:00 PM ET; yes at +442",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "7e88d331",
@@ -9138,66 +8699,11 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "3258bda0",
-    "book": "PointsBet",
-    "event": "Inter Club de Escaldes v Universitatea Craiova (UEFA Conference League)",
-    "pick": "Inter Club de Escaldes",
-    "stake": "33.43 (bonus)",
-    "reason": "team \"Inter Club de Escaldes\" not matched to exactly one side (0 hits)",
-    "legs": []
-   },
-   {
-    "bet_id": "c4caca25",
-    "book": "theScore",
-    "event": "Lille v Galatasaray",
-    "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
-    "stake": "0.2",
-    "reason": "grader error: KeyError: 'team'",
-    "legs": [
-     {
-      "leg": "Under 3.5 Total Goals",
-      "result": "lost"
-     }
-    ]
-   },
-   {
-    "bet_id": "3eabcc58",
-    "book": "PointsBet",
-    "event": "Union St Gilloise v Hapoel Beer Sheva (UEFA Europa League)",
-    "pick": "Hapoel Beer Sheva",
-    "stake": "2.50 (bonus)",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "c772a455",
     "book": "Caesars",
     "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers (NFL)",
     "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
     "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "febb32ba",
-    "book": "theScore",
-    "event": "New England Patriots @ Chicago Bears",
-    "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
-    "stake": "0.20",
-    "reason": "leg \"Drake Maye 2+ pass TD\": player \"Drake Maye 2+ pass\" not in any box score (DNP void, or name mismatch?)",
-    "legs": [
-     {
-      "leg": "Caleb Williams 225+ pass yds",
-      "result": "won"
-     }
-    ]
-   },
-   {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
     "reason": "no ESPN game matched",
     "legs": []
    },
@@ -9209,42 +8715,6 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "9ad39183",
-    "book": "PointsBet",
-    "event": "Kawhi Leonard Specials (NBA)",
-    "pick": "Kawhi Leonard 40+ pts+reb+ast",
-    "stake": "0.50",
-    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-    "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "e44026f6",
-    "book": "FanDuel",
-    "event": "Vegas Golden Knights @ St. Louis Blues",
-    "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
-    "stake": "0.50",
-    "reason": "leg \"Over 4.5 Alternate Total Goals\": market/stat not recognised",
-    "legs": [
-     {
-      "leg": "Jack Eichel 2+ Shots on Goal",
-      "result": "won"
-     },
-     {
-      "leg": "Jimmy Snuggerud 2+ Shots on Goal",
-      "result": "lost"
-     }
-    ]
    }
   ],
   "last_settled": [
@@ -9474,17 +8944,16 @@
     "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 00:46 ET"
+  "last_change_at": "2026-10-23 09:59 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 18,
  "open_stake_by_book": {
-  "bet365": 0.6,
-  "Caesars": 18.2,
+  "bet365": 0.4,
+  "Caesars": 18.0,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 51.43,
-  "theScore": 0
+  "PointsBet": 48.93
  },
- "hash": "0d7b338eb11c7922cf1142cd9870938ea1a7431d",
- "generated_at": "2026-10-23T09:45:52-04:00"
+ "hash": "a319fb9aa8d6ce74b73192a0e4b16392bc7e5a0e",
+ "generated_at": "2026-10-23T09:59:23-04:00"
 }

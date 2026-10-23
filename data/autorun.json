@@ -1,66 +1,11 @@
 {
  "needs_review": [
   {
-   "bet_id": "3258bda0",
-   "book": "PointsBet",
-   "event": "Inter Club de Escaldes v Universitatea Craiova (UEFA Conference League)",
-   "pick": "Inter Club de Escaldes",
-   "stake": "33.43 (bonus)",
-   "reason": "team \"Inter Club de Escaldes\" not matched to exactly one side (0 hits)",
-   "legs": []
-  },
-  {
-   "bet_id": "c4caca25",
-   "book": "theScore",
-   "event": "Lille v Galatasaray",
-   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
-   "stake": "0.2",
-   "reason": "grader error: KeyError: 'team'",
-   "legs": [
-    {
-     "leg": "Under 3.5 Total Goals",
-     "result": "lost"
-    }
-   ]
-  },
-  {
-   "bet_id": "3eabcc58",
-   "book": "PointsBet",
-   "event": "Union St Gilloise v Hapoel Beer Sheva (UEFA Europa League)",
-   "pick": "Hapoel Beer Sheva",
-   "stake": "2.50 (bonus)",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "c772a455",
    "book": "Caesars",
    "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers (NFL)",
    "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
    "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "febb32ba",
-   "book": "theScore",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
-   "stake": "0.20",
-   "reason": "leg \"Drake Maye 2+ pass TD\": player \"Drake Maye 2+ pass\" not in any box score (DNP void, or name mismatch?)",
-   "legs": [
-    {
-     "leg": "Caleb Williams 225+ pass yds",
-     "result": "won"
-    }
-   ]
-  },
-  {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
    "reason": "no ESPN game matched",
    "legs": []
   },
@@ -72,42 +17,6 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "9ad39183",
-   "book": "PointsBet",
-   "event": "Kawhi Leonard Specials (NBA)",
-   "pick": "Kawhi Leonard 40+ pts+reb+ast",
-   "stake": "0.50",
-   "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "e44026f6",
-   "book": "FanDuel",
-   "event": "Vegas Golden Knights @ St. Louis Blues",
-   "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
-   "stake": "0.50",
-   "reason": "leg \"Over 4.5 Alternate Total Goals\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Jack Eichel 2+ Shots on Goal",
-     "result": "won"
-    },
-    {
-     "leg": "Jimmy Snuggerud 2+ Shots on Goal",
-     "result": "lost"
-    }
-   ]
   }
  ],
  "last_settled": [
@@ -338,5 +247,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:46 ET"
+ "last_change_at": "2026-10-23 09:59 ET"
 }
