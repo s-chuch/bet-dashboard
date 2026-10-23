@@ -338,10 +338,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -361,7 +361,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -1008,10 +1008,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -1790,7 +1790,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -2519,7 +2519,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -2820,7 +2820,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "MLB",
@@ -3117,7 +3117,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "MLB",
@@ -3490,10 +3490,10 @@
     "snapshot": {
      "date": "2026-10-23T01:00Z",
      "period": 1,
-     "clock": 180.0,
+     "clock": 480.0,
      "state": "in",
      "completed": false,
-     "detail": "3'",
+     "detail": "8'",
      "teams": [
       {
        "id": "5264",
@@ -4410,7 +4410,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NCAAF",
@@ -4537,10 +4537,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -4560,7 +4560,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -5207,10 +5207,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -5480,10 +5480,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -5503,7 +5503,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -6150,10 +6150,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -6250,10 +6250,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -6273,7 +6273,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -6920,10 +6920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -7204,7 +7204,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "MLB",
@@ -7500,10 +7500,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -7523,7 +7523,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -8170,10 +8170,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -8248,10 +8248,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -8271,7 +8271,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -8918,10 +8918,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -9078,7 +9078,7 @@
      "home": 0.3911,
      "away": 0.6089,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NHL",
@@ -9124,11 +9124,11 @@
     "id": "401892560",
     "snapshot": {
      "date": "2026-10-23T01:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1183.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/22 - 9:00 PM EDT",
+     "detail": "19:43 - 1st",
      "teams": [
       {
        "id": "3",
@@ -9235,7 +9235,7 @@
      "home": 0.345,
      "away": 0.655,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NHL",
@@ -9307,10 +9307,10 @@
     "snapshot": {
      "date": "2026-10-22T23:00Z",
      "period": 3,
-     "clock": 887.0,
+     "clock": 692.0,
      "state": "in",
      "completed": false,
-     "detail": "14:47 - 3rd",
+     "detail": "11:32 - 3rd",
      "teams": [
       {
        "id": "11",
@@ -9447,10 +9447,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.955,
-     "away": 0.045,
-     "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "home": 0.87,
+     "away": 0.13,
+     "spread": 0.02,
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NHL",
@@ -9521,11 +9521,11 @@
     "id": "401892554",
     "snapshot": {
      "date": "2026-10-22T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1076.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "17:56 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9676,7 +9676,7 @@
      "home": 0.045,
      "away": 0.955,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NHL",
@@ -10111,7 +10111,7 @@
      "home": 0.735,
      "away": 0.265,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:09Z"
     }
    },
    "sport": "NBA",
@@ -10158,10 +10158,10 @@
     "snapshot": {
      "date": "2026-10-22T23:00Z",
      "period": 3,
-     "clock": 211.0,
+     "clock": 77.0,
      "state": "in",
      "completed": false,
-     "detail": "3:31 - 3rd",
+     "detail": "1:17 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -10171,7 +10171,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "77"
+       "score": "82"
       },
       {
        "id": "5",
@@ -10181,7 +10181,7 @@
        "nick": "Cavaliers",
        "location": "Cleveland",
        "home": false,
-       "score": "82"
+       "score": "86"
       }
      ]
     },
@@ -10727,10 +10727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.4394,
-     "away": 0.5606,
+     "home": 0.405,
+     "away": 0.595,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:09Z"
     }
    },
    "sport": "NBA",
@@ -10795,10 +10795,10 @@
     "snapshot": {
      "date": "2026-10-23T00:00Z",
      "period": 2,
-     "clock": 1200.0,
+     "clock": 980.0,
      "state": "in",
      "completed": false,
-     "detail": "20:00 - 2nd",
+     "detail": "16:20 - 2nd",
      "teams": [
       {
        "id": "19",
@@ -10902,10 +10902,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.785,
-     "away": 0.215,
+     "home": 0.805,
+     "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NHL",
@@ -11314,7 +11314,7 @@
      "home": 0.735,
      "away": 0.265,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:09Z"
     }
    },
    "sport": "NBA",
@@ -11375,10 +11375,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -11398,7 +11398,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -12045,10 +12045,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -12120,10 +12120,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -12143,7 +12143,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -12790,10 +12790,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -13241,7 +13241,7 @@
      "home": 0.735,
      "away": 0.265,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:09Z"
     }
    },
    "sport": "NBA",
@@ -13297,10 +13297,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -13320,7 +13320,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -13967,10 +13967,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -14020,10 +14020,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -14043,7 +14043,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -14690,10 +14690,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -14743,10 +14743,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 697.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "11:37 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -14766,7 +14766,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -15413,10 +15413,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
-     "t": "2026-10-23T01:03Z"
+     "t": "2026-10-23T01:08Z"
     }
    },
    "sport": "NFL",
@@ -20667,6 +20667,6 @@
   "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "e8e527f55d9c55ec9faf3c757c40605f3b2c6287",
- "generated_at": "2026-10-22T21:03:18-04:00"
+ "hash": "1a19230ede0cb8500740f9c15c738aab48905e47",
+ "generated_at": "2026-10-22T21:09:00-04:00"
 }
