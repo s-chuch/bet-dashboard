@@ -22,8 +22,8 @@
   },
   {
    "book": "DraftKings",
-   "balance": 62.83,
-   "updated": "2026-10-23 00:45"
+   "balance": 63.43,
+   "updated": "2026-10-23 00:46"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 676.97,
+ "total": 677.57,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -4375,101 +4375,6 @@
     "close_price": null,
     "clv_pct": null
    }
-  },
-  {
-   "bet_id": "0ae1f272",
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "market": "Player Prop Specials (odds boost from +80)",
-   "pick": "Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards",
-   "start": "Thu Oct 22 08:15 PM ET",
-   "price": "+100",
-   "boosted_price": "",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 0.3,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Drake Maye",
-     "stat": "passYds",
-     "op": "min",
-     "min": 210,
-     "text": "Drake Maye 210+ Passing Yards",
-     "pteam": "NE",
-     "pname": "Drake Maye",
-     "pid": "4431452"
-    },
-    {
-     "type": "prop",
-     "player": "Caleb Williams",
-     "stat": "passYds",
-     "op": "min",
-     "min": 210,
-     "text": "Caleb Williams 210+ Passing Yards",
-     "pteam": "CHI",
-     "pname": "Caleb Williams",
-     "pid": "4431611"
-    }
-   ],
-   "match": {
-    "path": "football/nfl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401873010",
-    "snapshot": {
-     "date": "2026-10-23T00:15Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "3",
-       "name": "Chicago Bears",
-       "abbr": "CHI",
-       "short": "Bears",
-       "nick": "Bears",
-       "location": "Chicago",
-       "home": true,
-       "score": "30"
-      },
-      {
-       "id": "17",
-       "name": "New England Patriots",
-       "abbr": "NE",
-       "short": "Patriots",
-       "nick": "Patriots",
-       "location": "New England",
-       "home": false,
-       "score": "24"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.5907,
-     "spread_home_line": -3.0,
-     "spread_home_fair": 0.4896,
-     "total_line": 50.5,
-     "total_over_fair": 0.5138
-    }
-   },
-   "sport": "NFL",
-   "cash_stake": 0.3,
-   "payout": 0.6,
-   "payout_est": false,
-   "start_ts": "2026-10-23T00:15Z",
-   "clv": {
-    "placed_at": "2026-10-22 19:46",
-    "close_price": null,
-    "clv_pct": null
-   }
   }
  ],
  "settled_recent": [
@@ -4544,6 +4449,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-22 19:48",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "book": "DraftKings",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards",
+   "result": "won",
+   "pnl": 0.3,
+   "stake": 0.3,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-22 19:46",
     "close_price": null,
     "clv_pct": null
    }
@@ -5590,15 +5510,15 @@
    "clv": null
   }
  ],
- "pnl_total": 114.23,
+ "pnl_total": 114.53,
  "unsettled": {
-  "n": 27,
-  "cash_stake": 17.2,
-  "max_payout": 634.89,
+  "n": 26,
+  "cash_stake": 16.9,
+  "max_payout": 634.29,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 17.2,
+ "open_stake": 16.9,
  "recs": {
   "stats": {
    "overall": {
@@ -9325,15 +9245,6 @@
       "result": "lost"
      }
     ]
-   },
-   {
-    "bet_id": "0ae1f272",
-    "book": "DraftKings",
-    "event": "New England Patriots @ Chicago Bears",
-    "pick": "Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards",
-    "stake": "0.30",
-    "reason": "leg \"Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards\": market/stat not recognised",
-    "legs": []
    }
   ],
   "last_settled": [
@@ -9574,6 +9485,6 @@
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "bb0fa9ba2c4a47572e53a0ee688e96679a95aed3",
- "generated_at": "2026-10-23T00:46:11-04:00"
+ "hash": "ed9c0299d56a4f1ce617d723cac3c2f08c05c419",
+ "generated_at": "2026-10-23T00:46:39-04:00"
 }
