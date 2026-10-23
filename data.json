@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:46Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:46Z"
     }
    },
    "sport": "NFL",
@@ -2017,7 +2017,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:45Z"
     }
    },
    "sport": "MLB",
@@ -2314,7 +2314,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:45Z"
     }
    },
    "sport": "MLB",
@@ -3339,7 +3339,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:47Z"
     }
    },
    "sport": "NCAAF",
@@ -3698,7 +3698,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T18:50Z"
+     "t": "2026-10-23T19:45Z"
     }
    },
    "sport": "MLB",
@@ -3809,11 +3809,11 @@
     "id": "401879253",
     "snapshot": {
      "date": "2026-10-23T19:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "373",
@@ -3823,7 +3823,7 @@
        "nick": "Ipswich Town",
        "location": "Ipswich Town",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "393",
@@ -3833,7 +3833,7 @@
        "nick": "Nottingham Forest",
        "location": "Nottingham Forest",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -8954,6 +8954,6 @@
   "FanDuel": 2.1,
   "PointsBet": 48.93
  },
- "hash": "cf81a6662d18730898421ae32bda609124c147c4",
- "generated_at": "2026-10-23T14:50:24-04:00"
+ "hash": "5a169520900a1f10f0be6f22c1799963c1a750e3",
+ "generated_at": "2026-10-23T15:47:23-04:00"
 }
