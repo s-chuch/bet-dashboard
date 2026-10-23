@@ -337,11 +337,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -361,7 +361,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -1008,10 +1008,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -1790,7 +1790,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -2519,7 +2519,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -2820,7 +2820,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:50Z"
     }
    },
    "sport": "MLB",
@@ -3117,7 +3117,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:50Z"
     }
    },
    "sport": "MLB",
@@ -3460,74 +3460,6 @@
    "payout_est": false,
    "start_ts": "2026-10-23T23:00Z",
    "clv": null
-  },
-  {
-   "bet_id": "ff63a89d",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Atletico Nacional v Deportivo Pasto",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Draw",
-   "start": "Thu Oct 22 09:00 PM ET",
-   "price": "+450",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 11.25,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "draw",
-     "text": "Draw"
-    }
-   ],
-   "match": {
-    "path": "soccer/col.1",
-    "date": "20261022",
-    "groups": null,
-    "id": "401877877",
-    "snapshot": {
-     "date": "2026-10-23T01:00Z",
-     "period": 2,
-     "clock": 3540.0,
-     "state": "in",
-     "completed": false,
-     "detail": "59'",
-     "teams": [
-      {
-       "id": "5264",
-       "name": "Atl\u00e9tico Nacional",
-       "abbr": "NAL",
-       "short": "Atl. Nacional",
-       "nick": "Atl\u00e9tico Nacional",
-       "location": "Atl\u00e9tico Nacional",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "5485",
-       "name": "Deportivo Pasto",
-       "abbr": "PAS",
-       "short": "Pasto",
-       "nick": "Deportivo Pasto",
-       "location": "Deportivo Pasto",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 11.25,
-   "payout_est": false,
-   "start_ts": "2026-10-23T01:00Z",
-   "clv": {
-    "placed_at": null,
-    "close_price": "+421",
-    "clv_pct": 5.49
-   }
   },
   {
    "bet_id": "35f28c8c",
@@ -4410,7 +4342,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NCAAF",
@@ -4536,11 +4468,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -4560,7 +4492,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -5207,10 +5139,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -5479,11 +5411,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -5503,7 +5435,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -6150,10 +6082,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -6249,11 +6181,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -6273,7 +6205,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -6920,10 +6852,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -7204,7 +7136,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:50Z"
     }
    },
    "sport": "MLB",
@@ -7499,11 +7431,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -7523,7 +7455,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -8170,10 +8102,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -8247,11 +8179,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -8271,7 +8203,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -8918,10 +8850,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -8968,10 +8900,10 @@
     "snapshot": {
      "date": "2026-10-23T02:00Z",
      "period": 1,
-     "clock": 850.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "14:10 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "22",
@@ -8981,7 +8913,7 @@
        "nick": "Canucks",
        "location": "Vancouver",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "5",
@@ -8991,7 +8923,7 @@
        "nick": "Red Wings",
        "location": "Detroit",
        "home": false,
-       "score": "1"
+       "score": "3"
       }
      ]
     },
@@ -9075,10 +9007,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.255,
-     "away": 0.745,
+     "home": 0.135,
+     "away": 0.865,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:50Z"
     }
    },
    "sport": "NHL",
@@ -9125,10 +9057,10 @@
     "snapshot": {
      "date": "2026-10-23T01:00Z",
      "period": 2,
-     "clock": 744.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "12:24 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "3",
@@ -9232,10 +9164,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7222,
-     "away": 0.2778,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:50Z"
     }
    },
    "sport": "NHL",
@@ -9306,11 +9238,11 @@
     "id": "401909094",
     "snapshot": {
      "date": "2026-10-23T01:30Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 4.8,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "4.8 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -9320,7 +9252,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "24"
+       "score": "44"
       },
       {
        "id": "7",
@@ -9330,7 +9262,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "27"
+       "score": "48"
       }
      ]
     },
@@ -9667,10 +9599,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
+     "home": 0.575,
+     "away": 0.425,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NBA",
@@ -9735,10 +9667,10 @@
     "snapshot": {
      "date": "2026-10-23T00:00Z",
      "period": 3,
-     "clock": 614.0,
-     "state": "in",
-     "completed": false,
-     "detail": "10:14 - 3rd",
+     "clock": 0.0,
+     "state": "post",
+     "completed": true,
+     "detail": "Final",
      "teams": [
       {
        "id": "19",
@@ -9748,7 +9680,7 @@
        "nick": "Blues",
        "location": "St. Louis",
        "home": true,
-       "score": "4"
+       "score": "6"
       },
       {
        "id": "37",
@@ -9761,91 +9693,6 @@
        "score": "2"
       }
      ]
-    },
-    "pm": {
-     "slug": "nhl-las-stl-2026-10-22",
-     "title": "Golden Knights vs. Blues",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Golden Knights",
-        "Blues"
-       ],
-       "tokens": [
-        "972191776819818943877264492978869316379313316881746091752478427118661497509",
-        "71929313581953787988026235274530420986334646452335059525309633964667231823515"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "8471048757953893964323625816024938102349317370764152545848821304165294712736",
-        "31803929814490880313264836851423271915827065987952481298980482853970068951190"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "31750299927887907066678933210213418720213852487067118519016917924054318910915",
-        "77871250707531945095967061215144081884324367732201961460682414253843793497623"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "67292674044484958537749703020076755308139340344855272911041466044940781237805",
-        "91177042589220472755485799405673406213302126985111816329225260049473985305898"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "58210758837560670167472403880375592281672620841947478411773848512108996729717",
-        "78866531458519414028699715623808015656021136877940793630323490319765896138328"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Golden Knights",
-       "Blues"
-      ],
-      "tokens": [
-       "50930676518207645155645293701025573628249951950168394645284419388112336000481",
-       "37865377808363706749695634537831044819898005659923866162613464178122755770088"
-      ]
-     }
-    },
-    "an": {
-     "id": 293458,
-     "home_team_id": 231,
-     "away_team_id": 1345
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.935,
-     "away": 0.065,
-     "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
     }
    },
    "sport": "NHL",
@@ -9890,11 +9737,11 @@
     "id": "401909094",
     "snapshot": {
      "date": "2026-10-23T01:30Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 4.8,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "4.8 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -9904,7 +9751,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "24"
+       "score": "44"
       },
       {
        "id": "7",
@@ -9914,7 +9761,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "27"
+       "score": "48"
       }
      ]
     },
@@ -10251,10 +10098,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
+     "home": 0.575,
+     "away": 0.425,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NBA",
@@ -10314,11 +10161,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -10338,7 +10185,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -10985,10 +10832,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -11059,11 +10906,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -11083,7 +10930,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -11730,10 +11577,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -11817,11 +11664,11 @@
     "id": "401909094",
     "snapshot": {
      "date": "2026-10-23T01:30Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 4.8,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "4.8 - 2nd",
      "teams": [
       {
        "id": "25",
@@ -11831,7 +11678,7 @@
        "nick": "Thunder",
        "location": "Oklahoma City",
        "home": true,
-       "score": "24"
+       "score": "44"
       },
       {
        "id": "7",
@@ -11841,7 +11688,7 @@
        "nick": "Nuggets",
        "location": "Denver",
        "home": false,
-       "score": "27"
+       "score": "48"
       }
      ]
     },
@@ -12178,10 +12025,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
+     "home": 0.575,
+     "away": 0.425,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NBA",
@@ -12236,11 +12083,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -12260,7 +12107,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -12907,10 +12754,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -12959,11 +12806,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -12983,7 +12830,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -13630,10 +13477,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -13682,11 +13529,11 @@
     "id": "401873010",
     "snapshot": {
      "date": "2026-10-23T00:15Z",
-     "period": 3,
-     "clock": 412.0,
+     "period": 4,
+     "clock": 481.0,
      "state": "in",
      "completed": false,
-     "detail": "6:52 - 3rd",
+     "detail": "8:01 - 4th",
      "teams": [
       {
        "id": "3",
@@ -13706,7 +13553,7 @@
        "nick": "Patriots",
        "location": "New England",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -14353,10 +14200,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.815,
-     "away": 0.185,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-23T02:16Z"
+     "t": "2026-10-23T02:51Z"
     }
    },
    "sport": "NFL",
@@ -14713,6 +14560,21 @@
    "stake": 2.5,
    "auto": true,
    "clv": null
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
+   "event": "Atletico Nacional v Deportivo Pasto",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": true,
+   "clv": {
+    "placed_at": null,
+    "close_price": "+421",
+    "clv_pct": 5.49
+   }
   },
   {
    "date": "2026-10-20",
@@ -15674,9 +15536,9 @@
  ],
  "pnl_total": 95.35,
  "unsettled": {
-  "n": 46,
+  "n": 45,
   "cash_stake": 33.6,
-  "max_payout": 774.98,
+  "max_payout": 763.73,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -19377,24 +19239,6 @@
     "legs": []
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
@@ -19404,16 +19248,34 @@
     "legs": []
    },
    {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
+    "bet_id": "e44026f6",
+    "book": "FanDuel",
+    "event": "Vegas Golden Knights @ St. Louis Blues",
+    "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
+    "stake": "0.50",
+    "reason": "leg \"Over 4.5 Alternate Total Goals\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Jack Eichel 2+ Shots on Goal",
+      "result": "won"
+     },
+     {
+      "leg": "Jimmy Snuggerud 2+ Shots on Goal",
+      "result": "lost"
+     }
+    ]
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "ff63a89d",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "PAS 0-3 NAL",
+    "at": "2026-10-22 22:50"
+   },
    {
     "bet_id": "9d28b51b",
     "book": "FanDuel",
@@ -19629,29 +19491,20 @@
     "pnl": -0.2,
     "final": "ATL 79-65 GS",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "bc1db943",
-    "book": "DraftKings",
-    "pick": "Nathan MacKinnon anytime goal",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "COL 2-3 PHI",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 21:56 ET"
+  "last_change_at": "2026-10-22 22:50 ET"
  },
- "open_live_n": 40,
+ "open_live_n": 38,
  "open_stake_by_book": {
   "bet365": 10.9,
   "Caesars": 21.4,
   "DraftKings": 1.2,
-  "FanDuel": 4.1,
+  "FanDuel": 3.6,
   "Hard Rock": 20.0,
-  "PointsBet": 53.93,
+  "PointsBet": 51.43,
   "theScore": 0.2
  },
- "hash": "7df7dbaa5acb50e54ff7d14f7b450613c5524456",
- "generated_at": "2026-10-22T22:16:59-04:00"
+ "hash": "81f07625a44c35ea45f2069cb2248a4c00e9c9e3",
+ "generated_at": "2026-10-22T22:51:05-04:00"
 }

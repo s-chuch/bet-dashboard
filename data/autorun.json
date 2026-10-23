@@ -78,24 +78,6 @@
    "legs": []
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
@@ -105,16 +87,34 @@
    "legs": []
   },
   {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
-   "legs": []
+   "bet_id": "e44026f6",
+   "book": "FanDuel",
+   "event": "Vegas Golden Knights @ St. Louis Blues",
+   "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
+   "stake": "0.50",
+   "reason": "leg \"Over 4.5 Alternate Total Goals\": market/stat not recognised",
+   "legs": [
+    {
+     "leg": "Jack Eichel 2+ Shots on Goal",
+     "result": "won"
+    },
+    {
+     "leg": "Jimmy Snuggerud 2+ Shots on Goal",
+     "result": "lost"
+    }
+   ]
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "ff63a89d",
+   "book": "PointsBet",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "PAS 0-3 NAL",
+   "at": "2026-10-22 22:50"
+  },
   {
    "bet_id": "9d28b51b",
    "book": "FanDuel",
@@ -330,17 +330,8 @@
    "pnl": -0.2,
    "final": "ATL 79-65 GS",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "bc1db943",
-   "book": "DraftKings",
-   "pick": "Nathan MacKinnon anytime goal",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "COL 2-3 PHI",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 21:56 ET"
+ "last_change_at": "2026-10-22 22:50 ET"
 }
