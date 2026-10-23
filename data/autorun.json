@@ -42,20 +42,6 @@
    "legs": []
   },
   {
-   "bet_id": "49bab689",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Under 50 + Drake Maye 2+ pass TD",
-   "stake": "0.50",
-   "reason": "leg \"Drake Maye 2+ pass TD\": player \"Drake Maye 2+ pass\" not in any box score (DNP void, or name mismatch?)",
-   "legs": [
-    {
-     "leg": "Under 50",
-     "result": "lost"
-    }
-   ]
-  },
-  {
    "bet_id": "8659fd16",
    "book": "DraftKings",
    "event": "Chicago Bulls @ Toronto Raptors",
@@ -379,5 +365,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:42 ET"
+ "last_change_at": "2026-10-23 00:44 ET"
 }
