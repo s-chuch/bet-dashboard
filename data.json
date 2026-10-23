@@ -22,8 +22,8 @@
   },
   {
    "book": "DraftKings",
-   "balance": 60.8,
-   "updated": "2026-10-22 20:33"
+   "balance": 62.06,
+   "updated": "2026-10-23 00:30"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 674.38,
+ "total": 675.64,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1054,7 +1054,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T04:30Z"
+     "t": "2026-10-23T04:31Z"
     }
    },
    "sport": "NFL",
@@ -3606,7 +3606,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T04:30Z"
+     "t": "2026-10-23T04:31Z"
     }
    },
    "sport": "NCAAF",
@@ -4843,96 +4843,6 @@
     "close_price": null,
     "clv_pct": null
    }
-  },
-  {
-   "bet_id": "541e7eb8",
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "market": "SGP 2-pick parlay (20% parlay boost)",
-   "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
-   "start": "Thu Oct 22 08:15 PM ET",
-   "price": "+440",
-   "boosted_price": "+528",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.06,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "D'Andre Swift First TD Scorer",
-     "note": "first/last TD scorer: settle by hand",
-     "player": "D'Andre Swift"
-    },
-    {
-     "type": "prop",
-     "player": "A.J. Brown",
-     "stat": "recYds",
-     "op": "min",
-     "min": 25,
-     "text": "A.J. Brown 25+ rec yds",
-     "pteam": "NE",
-     "pname": "A.J. Brown",
-     "pid": "4047646"
-    }
-   ],
-   "match": {
-    "path": "football/nfl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401873010",
-    "snapshot": {
-     "date": "2026-10-23T00:15Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "3",
-       "name": "Chicago Bears",
-       "abbr": "CHI",
-       "short": "Bears",
-       "nick": "Bears",
-       "location": "Chicago",
-       "home": true,
-       "score": "30"
-      },
-      {
-       "id": "17",
-       "name": "New England Patriots",
-       "abbr": "NE",
-       "short": "Patriots",
-       "nick": "Patriots",
-       "location": "New England",
-       "home": false,
-       "score": "24"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 20:03 ET",
-     "ml_home": 0.5907,
-     "spread_home_line": -3.0,
-     "spread_home_fair": 0.4896,
-     "total_line": 50.5,
-     "total_over_fair": 0.5138
-    }
-   },
-   "sport": "NFL",
-   "cash_stake": 0.2,
-   "payout": 1.26,
-   "payout_est": false,
-   "start_ts": "2026-10-23T00:15Z",
-   "clv": {
-    "placed_at": "2026-10-22 19:54",
-    "close_price": null,
-    "clv_pct": null
-   }
   }
  ],
  "settled_recent": [
@@ -4962,6 +4872,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-22 20:16",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "book": "DraftKings",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
+   "result": "won",
+   "pnl": 1.06,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-22 19:54",
     "close_price": null,
     "clv_pct": null
    }
@@ -5983,15 +5908,15 @@
    "clv": null
   }
  ],
- "pnl_total": 113.44,
+ "pnl_total": 114.5,
  "unsettled": {
-  "n": 33,
-  "cash_stake": 19.0,
-  "max_payout": 646.93,
+  "n": 32,
+  "cash_stake": 18.8,
+  "max_payout": 645.67,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 19.0,
+ "open_stake": 18.8,
  "recs": {
   "stats": {
    "overall": {
@@ -9786,15 +9711,6 @@
     "stake": "0.30",
     "reason": "leg \"Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards\": market/stat not recognised",
     "legs": []
-   },
-   {
-    "bet_id": "541e7eb8",
-    "book": "DraftKings",
-    "event": "New England Patriots @ Chicago Bears",
-    "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
-    "stake": "0.20",
-    "reason": "leg \"D'Andre Swift First TD Scorer\": market/stat not recognised",
-    "legs": []
    }
   ],
   "last_settled": [
@@ -10024,7 +9940,7 @@
     "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 00:29 ET"
+  "last_change_at": "2026-10-23 00:30 ET"
  },
  "open_live_n": 22,
  "open_stake_by_book": {
@@ -10035,6 +9951,6 @@
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "4aa1c1ea89fd234ea14f86aa5e1cc5b8ab614d7c",
- "generated_at": "2026-10-23T00:30:12-04:00"
+ "hash": "b3b98390592e320f09e844dba05e3e5556c54c3c",
+ "generated_at": "2026-10-23T00:31:01-04:00"
 }

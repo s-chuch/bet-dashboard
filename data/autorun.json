@@ -176,15 +176,6 @@
    "stake": "0.30",
    "reason": "leg \"Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards\": market/stat not recognised",
    "legs": []
-  },
-  {
-   "bet_id": "541e7eb8",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
-   "stake": "0.20",
-   "reason": "leg \"D'Andre Swift First TD Scorer\": market/stat not recognised",
-   "legs": []
   }
  ],
  "last_settled": [
@@ -415,5 +406,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:29 ET"
+ "last_change_at": "2026-10-23 00:30 ET"
 }
