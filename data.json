@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NFL",
@@ -2050,7 +2050,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "MLB",
@@ -2380,7 +2380,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "MLB",
@@ -2489,10 +2489,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 1,
-     "clock": 1440.0,
+     "clock": 2640.0,
      "state": "in",
      "completed": false,
-     "detail": "24'",
+     "detail": "44'",
      "teams": [
       {
        "id": "2022",
@@ -3409,7 +3409,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3801,7 +3801,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "MLB",
@@ -3896,10 +3896,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 1,
-     "clock": 355.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "5:55 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "27",
@@ -3909,7 +3909,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "8"
+       "score": "21"
       },
       {
        "id": "28",
@@ -3919,7 +3919,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": false,
-       "score": "14"
+       "score": "34"
       }
      ]
     },
@@ -4617,10 +4617,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.195,
-     "away": 0.805,
+     "home": 0.115,
+     "away": 0.885,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:45Z"
     }
    },
    "sport": "NBA",
@@ -4936,7 +4936,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "MLB",
@@ -5030,11 +5030,11 @@
     "id": "401909845",
     "snapshot": {
      "date": "2026-10-23T23:00Z",
-     "period": 1,
-     "clock": 313.0,
+     "period": 2,
+     "clock": 571.0,
      "state": "in",
      "completed": false,
-     "detail": "5:13 - 1st",
+     "detail": "9:31 - 2nd",
      "teams": [
       {
        "id": "19",
@@ -5044,7 +5044,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "5"
+       "score": "22"
       },
       {
        "id": "16",
@@ -5054,7 +5054,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "14"
+       "score": "35"
       }
      ]
     },
@@ -5752,10 +5752,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.335,
-     "away": 0.665,
+     "home": 0.245,
+     "away": 0.755,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:45Z"
     }
    },
    "sport": "NBA",
@@ -6160,7 +6160,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NHL",
@@ -6913,7 +6913,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NCAAF",
@@ -7694,7 +7694,7 @@
      "home": 0.205,
      "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NBA",
@@ -7743,11 +7743,11 @@
     "id": "401867955",
     "snapshot": {
      "date": "2026-10-23T21:00Z",
-     "period": 3,
-     "clock": 386.0,
+     "period": 4,
+     "clock": 808.0,
      "state": "in",
      "completed": false,
-     "detail": "6:26 - 3rd",
+     "detail": "13:28 - 4th",
      "teams": [
       {
        "id": "2169",
@@ -7767,7 +7767,7 @@
        "nick": "Eagles",
        "location": "North Carolina Central",
        "home": false,
-       "score": "17"
+       "score": "24"
       }
      ]
     },
@@ -8001,10 +8001,10 @@
     "an": null,
     "kal": {
      "src": "Kalshi",
-     "home": 0.145,
-     "away": 0.855,
+     "home": 0.015,
+     "away": 0.985,
      "spread": 0.01,
-     "t": "2026-10-23T23:25Z"
+     "t": "2026-10-23T23:46Z"
     }
    },
    "sport": "NCAAF",
@@ -13288,6 +13288,6 @@
   "FanDuel": 4.6,
   "PointsBet": 48.43
  },
- "hash": "6ef79532ad3864480605ba970f95fb9a99e82b0c",
- "generated_at": "2026-10-23T19:25:06-04:00"
+ "hash": "0d189c082c5857614fd2567e6373896490621825",
+ "generated_at": "2026-10-23T19:46:18-04:00"
 }
