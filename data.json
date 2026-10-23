@@ -6945,9 +6945,9 @@
     "an": null,
     "kal": {
      "src": "Kalshi",
-     "home": 0.4428,
-     "away": 0.5572,
-     "spread": 0.02,
+     "home": 0.445,
+     "away": 0.555,
+     "spread": 0.01,
      "t": "2026-10-23T22:51Z"
     }
    },
@@ -12232,6 +12232,6 @@
   "FanDuel": 4.6,
   "PointsBet": 48.43
  },
- "hash": "5c69a716ec20c0e62a77d66397a671677cdea513",
- "generated_at": "2026-10-23T18:51:16-04:00"
+ "hash": "1ced0abcff54bd5c6a0584c431f4d4817b57b0ee",
+ "generated_at": "2026-10-23T18:51:50-04:00"
 }
