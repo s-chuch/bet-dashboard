@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 80.69,
-   "updated": "2026-10-22 23:23"
+   "balance": 81.25,
+   "updated": "2026-10-23 00:40"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 675.64,
+ "total": 676.2,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1054,7 +1054,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "NFL",
@@ -1783,7 +1783,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "NFL",
@@ -2084,7 +2084,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "MLB",
@@ -2381,7 +2381,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "MLB",
@@ -2389,99 +2389,6 @@
    "payout": 2.72,
    "payout_est": false,
    "start_ts": "2026-10-24T00:00Z",
-   "clv": null
-  },
-  {
-   "bet_id": "11be1d03",
-   "date": "2026-10-20",
-   "book": "bet365",
-   "event": "Bayern Munich v Arsenal",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots",
-   "start": "Wed Oct 21 03:00 PM ET",
-   "price": "+120",
-   "boosted_price": "+180",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.36,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Harry Kane",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Harry Kane 1+ SOT",
-     "pteam": "MUN",
-     "pname": "Harry Kane",
-     "pid": "142200"
-    },
-    {
-     "type": "prop",
-     "player": "Harry Kane",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Harry Kane 3+ shots",
-     "pteam": "MUN",
-     "pname": "Harry Kane",
-     "pid": "142200"
-    },
-    {
-     "type": "prop",
-     "player": "Jamal Musiala",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Jamal Musiala 3+ shots",
-     "pteam": "MUN",
-     "pname": "Jamal Musiala",
-     "pid": "303821"
-    }
-   ],
-   "match": {
-    "path": "soccer/uefa.champions",
-    "date": "20261021",
-    "groups": null,
-    "id": "401915312",
-    "snapshot": {
-     "date": "2026-10-21T19:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "132",
-       "name": "Bayern Munich",
-       "abbr": "MUN",
-       "short": "Bayern",
-       "nick": "Bayern Munich",
-       "location": "Bayern Munich",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "359",
-       "name": "Arsenal",
-       "abbr": "ARS",
-       "short": "Arsenal",
-       "nick": "Arsenal",
-       "location": "Arsenal",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.2,
-   "payout": 0.56,
-   "payout_est": false,
-   "start_ts": "2026-10-21T19:00Z",
    "clv": null
   },
   {
@@ -3606,7 +3513,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "NCAAF",
@@ -4401,7 +4308,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:36Z"
+     "t": "2026-10-23T04:40Z"
     }
    },
    "sport": "MLB",
@@ -5425,6 +5332,17 @@
   },
   {
    "date": "2026-10-20",
+   "book": "bet365",
+   "event": "Bayern Munich v Arsenal",
+   "pick": "Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots",
+   "result": "won",
+   "pnl": 0.36,
+   "stake": 0.2,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-20",
    "book": "PointsBet",
    "event": "Boston Celtics @ Detroit Pistons",
    "pick": "Cade Cunningham 8+ ast + Jayson Tatum 4+ ast + Payton Pritchard 4+ ast",
@@ -5908,15 +5826,15 @@
    "clv": null
   }
  ],
- "pnl_total": 114.5,
+ "pnl_total": 114.86,
  "unsettled": {
-  "n": 32,
-  "cash_stake": 18.8,
-  "max_payout": 645.67,
+  "n": 31,
+  "cash_stake": 18.6,
+  "max_payout": 645.11,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 18.8,
+ "open_stake": 18.6,
  "recs": {
   "stats": {
    "overall": {
@@ -9545,24 +9463,6 @@
     "legs": []
    },
    {
-    "bet_id": "11be1d03",
-    "book": "bet365",
-    "event": "Bayern Munich v Arsenal",
-    "pick": "Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots",
-    "stake": "0.20",
-    "reason": "leg \"Jamal Musiala 3+ shots\": player \"Jamal Musiala\" not in any box score (DNP void, or name mismatch?)",
-    "legs": [
-     {
-      "leg": "Harry Kane 1+ SOT",
-      "result": "won"
-     },
-     {
-      "leg": "Harry Kane 3+ shots",
-      "result": "won"
-     }
-    ]
-   },
-   {
     "bet_id": "c4caca25",
     "book": "theScore",
     "event": "Lille v Galatasaray",
@@ -9940,7 +9840,7 @@
     "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 00:30 ET"
+  "last_change_at": "2026-10-23 00:40 ET"
  },
  "open_live_n": 22,
  "open_stake_by_book": {
@@ -9951,6 +9851,6 @@
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "6fe4146bd59a1d50b49e65bbaa952ac881276235",
- "generated_at": "2026-10-23T00:36:36-04:00"
+ "hash": "8fa89e7035b553a3d82dffbedddef9dfcdb682e2",
+ "generated_at": "2026-10-23T00:40:43-04:00"
 }
