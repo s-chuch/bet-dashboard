@@ -115,39 +115,12 @@
    ]
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
    "pick": "Kawhi Leonard 40+ pts+reb+ast",
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
    "legs": []
   },
   {
@@ -188,6 +161,15 @@
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "a4058418",
+   "book": "Hard Rock",
+   "pick": "Vancouver Canucks -1.5",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "DET 5-2 VAN",
+   "at": "2026-10-23 00:29"
+  },
   {
    "bet_id": "8961cb58",
    "book": "bet365",
@@ -403,17 +385,8 @@
    "pnl": -0.2,
    "final": "GS 71-97 ATL",
    "at": "2026-10-21 22:20"
-  },
-  {
-   "bet_id": "9fe55674",
-   "book": "theScore",
-   "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "GS 71-97 ATL",
-   "at": "2026-10-21 22:20"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:28 ET"
+ "last_change_at": "2026-10-23 00:29 ET"
 }

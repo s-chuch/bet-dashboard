@@ -1054,7 +1054,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "NFL",
@@ -1783,7 +1783,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "NFL",
@@ -2084,7 +2084,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "MLB",
@@ -2381,7 +2381,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "MLB",
@@ -3606,7 +3606,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "NCAAF",
@@ -4401,7 +4401,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
+     "t": "2026-10-23T04:29Z"
     }
    },
    "sport": "MLB",
@@ -4658,163 +4658,6 @@
    "payout_est": false,
    "start_ts": null,
    "clv": null
-  },
-  {
-   "bet_id": "a4058418",
-   "date": "2026-10-22",
-   "book": "Hard Rock",
-   "event": "Detroit Red Wings @ Vancouver Canucks",
-   "market": "Puck Line (bonus bet $20.00)",
-   "pick": "Vancouver Canucks -1.5",
-   "start": "Thu Oct 22 10:00 PM ET",
-   "price": "+350",
-   "boosted_price": "",
-   "stake": 20.0,
-   "stake_note": "",
-   "to_win": 70.0,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Vancouver Canucks",
-     "line": -1.5,
-     "women": false,
-     "text": "Vancouver Canucks -1.5",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401892563",
-    "snapshot": {
-     "date": "2026-10-23T02:00Z",
-     "period": 3,
-     "clock": 10.0,
-     "state": "in",
-     "completed": false,
-     "detail": "0:10 - 3rd",
-     "teams": [
-      {
-       "id": "22",
-       "name": "Vancouver Canucks",
-       "abbr": "VAN",
-       "short": "Canucks",
-       "nick": "Canucks",
-       "location": "Vancouver",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "5",
-       "name": "Detroit Red Wings",
-       "abbr": "DET",
-       "short": "Red Wings",
-       "nick": "Red Wings",
-       "location": "Detroit",
-       "home": false,
-       "score": "5"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-det-van-2026-10-22",
-     "title": "Red Wings vs. Canucks",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Red Wings",
-        "Canucks"
-       ],
-       "tokens": [
-        "40413583804980423689089171016269722867118897749332149350217061379737573861920",
-        "64137524930813641561447350568765983565146120584993900942535722891749038865942"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "68424837981908602594574848512217658851131025291862125404163647262622127272274",
-        "29289901256104784623045194624990631927757819858090504893176201706016633614348"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "56834331725761212338280202275349307217172712025371153268867765195002613825682",
-        "13145333251420078493138322541516851540571458132739684495727140054297935468316"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "88584826411626999157596994315297482572088585652401407930170461815995333652659",
-        "47749862293615429189491576188131586832944137753849687198939308343713210152903"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "27238425451722627147948738530391390040111938163812633237128785507848948434946",
-        "62363176797899418953783550162971659979060744217172494135205787070713089935828"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Red Wings",
-       "Canucks"
-      ],
-      "tokens": [
-       "48456058132529851495528307735995542205018783041965459356002071896381093322130",
-       "64696540428362643250071579933588816115662000158696203542737728293983522334666"
-      ]
-     }
-    },
-    "an": {
-     "id": 293463,
-     "home_team_id": 220,
-     "away_team_id": 232
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.005,
-     "away": 0.995,
-     "spread": 0.01,
-     "t": "2026-10-23T04:28Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.0,
-   "payout": 70.0,
-   "payout_est": false,
-   "start_ts": "2026-10-23T02:00Z",
-   "clv": {
-    "placed_at": "2026-10-22 20:25",
-    "close_price": "+364",
-    "clv_pct": -3.05
-   }
   },
   {
    "bet_id": "e44026f6",
@@ -5241,6 +5084,21 @@
     "placed_at": "2026-10-22 20:23",
     "close_price": "+443",
     "clv_pct": -20.01
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "book": "Hard Rock",
+   "event": "Detroit Red Wings @ Vancouver Canucks",
+   "pick": "Vancouver Canucks -1.5",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 20.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-22 20:25",
+    "close_price": "+364",
+    "clv_pct": -3.05
    }
   },
   {
@@ -6127,9 +5985,9 @@
  ],
  "pnl_total": 113.44,
  "unsettled": {
-  "n": 34,
+  "n": 33,
   "cash_stake": 19.0,
-  "max_payout": 716.93,
+  "max_payout": 646.93,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -9867,39 +9725,12 @@
     ]
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
     "pick": "Kawhi Leonard 40+ pts+reb+ast",
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-    "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
     "legs": []
    },
    {
@@ -9940,6 +9771,15 @@
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "a4058418",
+    "book": "Hard Rock",
+    "pick": "Vancouver Canucks -1.5",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "DET 5-2 VAN",
+    "at": "2026-10-23 00:29"
+   },
    {
     "bet_id": "8961cb58",
     "book": "bet365",
@@ -10155,29 +9995,19 @@
     "pnl": -0.2,
     "final": "GS 71-97 ATL",
     "at": "2026-10-21 22:20"
-   },
-   {
-    "bet_id": "9fe55674",
-    "book": "theScore",
-    "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "GS 71-97 ATL",
-    "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 00:28 ET"
+  "last_change_at": "2026-10-23 00:29 ET"
  },
- "open_live_n": 23,
+ "open_live_n": 22,
  "open_stake_by_book": {
   "bet365": 0.6,
   "Caesars": 18.7,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "Hard Rock": 20.0,
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "a44c3c68cf45833cfd8d0c2111921c85d477d83f",
- "generated_at": "2026-10-23T00:28:27-04:00"
+ "hash": "4c849d7d64303822b048c3638559288cf5c3f07b",
+ "generated_at": "2026-10-23T00:29:34-04:00"
 }
