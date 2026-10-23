@@ -89,6 +89,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "f95c029e",
+   "book": "bet365",
+   "pick": "Macklin Celebrini: 1+ Points + Tim Stutzle: 1+ Points + Dylan Cozens: 2+ Shots on Goal",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "SJ 6-2 OTT",
+   "at": "2026-10-22 21:41"
+  },
+  {
    "bet_id": "aa301657",
    "book": "bet365",
    "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
@@ -303,17 +312,8 @@
    "pnl": -0.2,
    "final": "SLP 2-2 FEN",
    "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "ded63a12",
-   "book": "theScore",
-   "pick": "Utah ML + Mikhail Sergachev O1.5 SOG + Anders Lee U1.5 SOG + Nick Schmaltz O0.5 pts",
-   "result": "won",
-   "pnl": 1.08,
-   "final": "PIT 4-5 UTA",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 21:34 ET"
+ "last_change_at": "2026-10-22 21:41 ET"
 }
