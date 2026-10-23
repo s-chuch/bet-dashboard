@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 208.75,
-   "updated": "2026-10-23 18:24"
+   "balance": 208.1,
+   "updated": "2026-10-23 18:27"
   },
   {
    "book": "FanDuel",
@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 78.85,
-   "updated": "2026-10-23 18:24"
+   "balance": 78.95,
+   "updated": "2026-10-23 18:27"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 672.97,
+ "total": 672.42,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -347,7 +347,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.795,
      "spread_home_line": -10.5,
      "spread_home_fair": 0.492,
@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NFL",
@@ -1076,7 +1076,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.6613,
      "spread_home_line": -4.5,
      "spread_home_fair": 0.4943,
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NFL",
@@ -1817,7 +1817,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.6306,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.419,
@@ -2050,7 +2050,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "MLB",
@@ -2147,7 +2147,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.6306,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.419,
@@ -2380,7 +2380,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "MLB",
@@ -2593,7 +2593,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.908,
      "spread_home_line": -20.0,
      "spread_home_fair": 0.5023,
@@ -3409,7 +3409,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NCAAF",
@@ -3568,7 +3568,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.6306,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.419,
@@ -3801,7 +3801,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "MLB",
@@ -3925,7 +3925,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.2648,
      "spread_home_line": 8.5,
      "spread_home_fair": 0.5,
@@ -4279,7 +4279,7 @@
      "home": 0.255,
      "away": 0.745,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NBA",
@@ -4362,7 +4362,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.6306,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.419,
@@ -4595,7 +4595,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "MLB",
@@ -4719,7 +4719,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.5286,
      "spread_home_line": -1.0,
      "spread_home_fair": 0.5139,
@@ -5051,7 +5051,7 @@
      "home": 0.525,
      "away": 0.475,
      "spread": 0.01,
-     "t": "2026-10-23T22:25Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NBA",
@@ -5241,10 +5241,10 @@
     "snapshot": {
      "date": "2026-10-23T20:00Z",
      "period": 4,
-     "clock": 202.0,
+     "clock": 182.0,
      "state": "in",
      "completed": false,
-     "detail": "3:22 - 4th",
+     "detail": "3:02 - 4th",
      "teams": [
       {
        "id": "15",
@@ -5264,7 +5264,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "120"
+       "score": "122"
       }
      ]
     },
@@ -5795,10 +5795,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.545,
-     "away": 0.455,
-     "spread": 0.03,
-     "t": "2026-10-23T22:26Z"
+     "home": 0.495,
+     "away": 0.505,
+     "spread": 0.01,
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NBA",
@@ -5995,7 +5995,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.3998,
      "spread_home_line": 1.5,
      "spread_home_fair": 0.6239,
@@ -6085,7 +6085,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NHL",
@@ -6838,7 +6838,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NCAAF",
@@ -6913,7 +6913,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:24 ET",
+     "pulled": "2026-10-23 18:27 ET",
      "ml_home": 0.2193,
      "spread_home_line": 10.0,
      "spread_home_fair": 0.5023,
@@ -7267,7 +7267,7 @@
      "home": 0.197,
      "away": 0.803,
      "spread": 0.01,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NBA",
@@ -7574,10 +7574,10 @@
     "an": null,
     "kal": {
      "src": "Kalshi",
-     "home": 0.4726,
-     "away": 0.5274,
+     "home": 0.5025,
+     "away": 0.4975,
      "spread": 0.02,
-     "t": "2026-10-23T22:26Z"
+     "t": "2026-10-23T22:27Z"
     }
    },
    "sport": "NCAAF",
@@ -7593,6 +7593,141 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-21",
+   "book": "bet365",
+   "event": "Atlanta Hawks @ Orlando Magic",
+   "pick": "Paolo Banchero 20+ Points + Jalen Johnson 5+ Assists + Jalen Johnson 7+ Rebounds",
+   "result": "won",
+   "pnl": 0.25,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "book": "bet365",
+   "event": "Golden State Warriors @ Los Angeles Lakers",
+   "pick": "Austin Reaves 20+ Points + Luka Doncic 25+ Points + Draymond Green 5+ Assists",
+   "result": "won",
+   "pnl": 0.25,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "book": "bet365",
+   "event": "Minnesota Timberwolves @ Miami Heat",
+   "pick": "Giannis Antetokounmpo 20+ Points + Anthony Edwards 20+ Points + Bobby Portis 5+ Rebounds",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "book": "bet365",
+   "event": "Golden State Valkyries @ Atlanta Dream",
+   "pick": "Rhyne Howard 2+ Threes Made + 2 hidden legs",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-18",
+   "book": "Caesars",
+   "event": "Washington Commanders @ San Francisco 49ers",
+   "pick": "Washington Commanders",
+   "result": "lost",
+   "pnl": -0.1,
+   "stake": 0.1,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-18",
+   "book": "Caesars",
+   "event": "Chicago Bulls @ Toronto Raptors",
+   "pick": "Chicago Bulls",
+   "result": "lost",
+   "pnl": -0.1,
+   "stake": 0.1,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-18",
+   "book": "Caesars",
+   "event": "Dallas Mavericks @ Houston Rockets",
+   "pick": "Dallas Mavericks",
+   "result": "lost",
+   "pnl": -0.1,
+   "stake": 0.1,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-19",
+   "book": "Caesars",
+   "event": "Philadelphia 76ers @ New York Knicks",
+   "pick": "Philadelphia 76ers",
+   "result": "won",
+   "pnl": 0.15,
+   "stake": 0.1,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-19",
+   "book": "Caesars",
+   "event": "San Jose Sharks @ Toronto Maple Leafs",
+   "pick": "Sharks +1.5 + Maple Leafs -0.5 (cut off) + Auston Matthews 2+ (cut off)",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
   {
    "date": "2026-10-22",
    "book": "Caesars",
@@ -8828,7 +8963,7 @@
    "clv": null
   }
  ],
- "pnl_total": 112.23,
+ "pnl_total": 111.68,
  "unsettled": {
   "n": 31,
   "cash_stake": 19.2,
@@ -12711,6 +12846,6 @@
   "FanDuel": 4.6,
   "PointsBet": 48.43
  },
- "hash": "2f5a4e574a343310826d93b0aa31a6e2117fb561",
- "generated_at": "2026-10-23T18:26:02-04:00"
+ "hash": "602065d8f48671749930dfad67826f199e94c3ab",
+ "generated_at": "2026-10-23T18:27:58-04:00"
 }
