@@ -12,7 +12,7 @@ try:
 except Exception:  # pragma: no cover
     ET = None
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = os.environ.get("BETS_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # BETS_ROOT: per-user export dir (publish_snapshots.py)
 DATA = os.path.join(REPO, "data")
 BETS = os.path.join(DATA, "bets.csv")
 LEDGER = os.path.join(DATA, "ledger.csv")

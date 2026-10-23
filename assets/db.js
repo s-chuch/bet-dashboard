@@ -29,6 +29,22 @@
     return DB.client.auth.signInWithOtp({ email: email, options: { shouldCreateUser: false, emailRedirectTo: back } });
   };
 
+  /* Signed-in visitors get their own private copy of data/stats/log/archive from the `snapshots` table;
+     the page code keeps calling fetch('data.json') etc. unchanged. No snapshot yet (or signed out) -> the public file. */
+  var realFetch = window.fetch.bind(window), SNAP = /(?:^|\/)(data|stats|log|archive)\.json(?:\?|$)/;
+  window.fetch = function (input, init) {
+    var u = typeof input === 'string' ? input : (input && input.url) || '';
+    var m = SNAP.exec(u.split('#')[0]);
+    if (!m || /^[a-z]+:\/\//i.test(u) && u.indexOf(location.origin) !== 0) return realFetch(input, init);
+    return DB.getUser().then(function (user) {
+      if (!user) return realFetch(input, init);
+      return DB.client.from('snapshots').select('payload').eq('kind', m[1]).maybeSingle().then(function (r) {
+        if (r.error || !r.data) return realFetch(input, init);
+        return new Response(JSON.stringify(r.data.payload), { status: 200, headers: { 'Content-Type': 'application/json' } });
+      });
+    }).catch(function () { return realFetch(input, init); });
+  };
+
   function chip() {
     var nav = document.querySelector('.site-nav .in'); if (!nav) return;
     var a = nav.querySelector('.acct');
