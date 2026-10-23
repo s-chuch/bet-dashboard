@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T21:00Z"
     }
    },
    "sport": "NFL",
@@ -2017,7 +2017,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T20:59Z"
     }
    },
    "sport": "MLB",
@@ -2314,7 +2314,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T20:59Z"
     }
    },
    "sport": "MLB",
@@ -3339,7 +3339,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T20:59Z"
     }
    },
    "sport": "NCAAF",
@@ -3698,7 +3698,7 @@
      "home": 0.6313,
      "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-23T20:43Z"
+     "t": "2026-10-23T20:59Z"
     }
    },
    "sport": "MLB",
@@ -3755,94 +3755,6 @@
    "payout": 1.8,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
-  },
-  {
-   "bet_id": "ca4be7d4",
-   "date": "2026-10-21",
-   "book": "PointsBet",
-   "event": "Ipswich v Nottm Forest",
-   "market": "SGP 3-leg (50% Soccer profit boost)",
-   "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
-   "start": "Fri Oct 23 03:00 PM ET",
-   "price": "+110",
-   "boosted_price": "+165",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.82,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "total",
-     "side": "under",
-     "line": 4.5,
-     "text": "Under 4.5 goals"
-    },
-    {
-     "type": "prop",
-     "player": "Chris Wood",
-     "stat": "shots",
-     "op": "min",
-     "min": 2,
-     "text": "Chris Wood 2+ shots",
-     "pteam": "NFO",
-     "pname": "Chris Wood",
-     "pid": "134190"
-    },
-    {
-     "type": "prop",
-     "player": "Abdoul Ouattara",
-     "stat": "shots",
-     "op": "min",
-     "min": 1,
-     "text": "Abdoul Ouattara 1+ shots",
-     "pteam": "IPS",
-     "pname": "Abdoul Ouattara",
-     "pid": "336794"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261023",
-    "groups": null,
-    "id": "401879253",
-    "snapshot": {
-     "date": "2026-10-23T19:00Z",
-     "period": 2,
-     "clock": 4980.0,
-     "state": "in",
-     "completed": false,
-     "detail": "83'",
-     "teams": [
-      {
-       "id": "373",
-       "name": "Ipswich Town",
-       "abbr": "IPS",
-       "short": "Ipswich",
-       "nick": "Ipswich Town",
-       "location": "Ipswich Town",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "393",
-       "name": "Nottingham Forest",
-       "abbr": "NFO",
-       "short": "Nottm Forest",
-       "nick": "Nottingham Forest",
-       "location": "Nottingham Forest",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.5,
-   "payout": 1.32,
-   "payout_est": false,
-   "start_ts": "2026-10-23T19:00Z",
    "clv": null
   }
  ],
@@ -4161,6 +4073,17 @@
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
+   "auto": true,
+   "clv": null
+  },
+  {
+   "date": "2026-10-21",
+   "book": "PointsBet",
+   "event": "Ipswich v Nottm Forest",
+   "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
    "auto": true,
    "clv": null
   },
@@ -5071,15 +4994,15 @@
    "clv": null
   }
  ],
- "pnl_total": 112.73,
+ "pnl_total": 112.23,
  "unsettled": {
-  "n": 18,
-  "cash_stake": 15.1,
-  "max_payout": 438.02,
+  "n": 17,
+  "cash_stake": 14.6,
+  "max_payout": 436.7,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.1,
+ "open_stake": 14.6,
  "recs": {
   "stats": {
    "overall": {
@@ -8706,18 +8629,18 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "ca4be7d4",
+    "book": "PointsBet",
+    "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "NFO 1-1 IPS",
+    "at": "2026-10-23 16:58"
+   },
    {
     "bet_id": "a4058418",
     "book": "Hard Rock",
@@ -8933,27 +8856,18 @@
     "pnl": -0.5,
     "final": "GS 71-97 ATL",
     "at": "2026-10-21 22:20"
-   },
-   {
-    "bet_id": "efbb0a5b",
-    "book": "DraftKings",
-    "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "GS 71-97 ATL",
-    "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 09:59 ET"
+  "last_change_at": "2026-10-23 16:58 ET"
  },
- "open_live_n": 18,
+ "open_live_n": 17,
  "open_stake_by_book": {
   "bet365": 0.4,
   "Caesars": 18.0,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
-  "PointsBet": 48.93
+  "PointsBet": 48.43
  },
- "hash": "19f97ce84e0e70b64b2ba718d479d2ae68c19515",
- "generated_at": "2026-10-23T16:43:09-04:00"
+ "hash": "00fe6e914b2fb738be5a16e46469a9d8157a69d9",
+ "generated_at": "2026-10-23T17:00:00-04:00"
 }

@@ -8,18 +8,18 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "ca4be7d4",
+   "book": "PointsBet",
+   "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "NFO 1-1 IPS",
+   "at": "2026-10-23 16:58"
+  },
   {
    "bet_id": "a4058418",
    "book": "Hard Rock",
@@ -235,17 +235,8 @@
    "pnl": -0.5,
    "final": "GS 71-97 ATL",
    "at": "2026-10-21 22:20"
-  },
-  {
-   "bet_id": "efbb0a5b",
-   "book": "DraftKings",
-   "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "GS 71-97 ATL",
-   "at": "2026-10-21 22:20"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 09:59 ET"
+ "last_change_at": "2026-10-23 16:58 ET"
 }
