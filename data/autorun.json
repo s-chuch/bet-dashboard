@@ -56,15 +56,6 @@
    ]
   },
   {
-   "bet_id": "277f7bfc",
-   "book": "Caesars",
-   "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
-   "pick": "Nathan MacKinnon + Pavel Dorofeyev + Auston Matthews anytime goal (labels 'An...')",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "8659fd16",
    "book": "DraftKings",
    "event": "Chicago Bulls @ Toronto Raptors",
@@ -388,5 +379,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:40 ET"
+ "last_change_at": "2026-10-23 00:42 ET"
 }
