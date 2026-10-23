@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0d12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://jzlfbpxcqerwtiurzsmu.supabase.co; base-uri 'none'; form-action 'none'">
+<title>Settings · Bet Tracker</title>
+<link rel="stylesheet" href="assets/site.css?v=20261023-1">
+<link rel="stylesheet" href="assets/login.css">
+<link rel="stylesheet" href="assets/settings.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html">Upload</a><a href="finder.html">Bet Finder</a><a href="settings.html" aria-current="page">Settings</a></div></div></nav>
+<main class="wrap">
+  <h1 class="page-title">Settings</h1>
+  <p class="page-sub">Your own account settings. Only you can see or change them.</p>
+  <form id="f" class="card lg" autocomplete="off" hidden>
+    <label for="dn">Display name</label><input id="dn" type="text" maxlength="40">
+    <label for="sp">Stake per bet (% of that book's balance)</label><input id="sp" type="number" inputmode="decimal" min="0.05" max="5" step="0.05">
+    <label for="ev">Bet only at this EV or better (%)</label><input id="ev" type="number" inputmode="decimal" min="0" max="20" step="0.1">
+    <label for="ow">Your names on bet slips (comma separated, used to spot someone else's slip)</label><input id="ow" type="text" maxlength="200">
+    <button id="go" type="submit">Save</button>
+    <p id="msg" role="status" aria-live="polite"></p>
+  </form>
+  <section id="rules" class="card lg" hidden><h2>Your rules</h2><pre id="rj"></pre></section>
+</main>
+<script src="assets/vendor/supabase/supabase.js"></script>
+<script src="assets/db.js?v=4"></script>
+<script src="assets/settings.js"></script>
+</body>
+</html>
