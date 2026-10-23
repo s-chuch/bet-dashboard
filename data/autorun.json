@@ -51,6 +51,15 @@
    "legs": []
   },
   {
+   "bet_id": "c772a455",
+   "book": "Caesars",
+   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers (NFL)",
+   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
    "bet_id": "49bab689",
    "book": "Caesars",
    "event": "New England Patriots @ Chicago Bears",
@@ -106,39 +115,12 @@
    ]
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "9ad39183",
    "book": "PointsBet",
    "event": "Kawhi Leonard Specials (NBA)",
    "pick": "Kawhi Leonard 40+ pts+reb+ast",
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
    "legs": []
   },
   {
@@ -179,6 +161,33 @@
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "8961cb58",
+   "book": "bet365",
+   "pick": "Shai Gilgeous-Alexander: 25+ Points + Nikola Jokic: 20+ Points + Jamal Murray: 5+ Assists",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "DEN 84-96 OKC",
+   "at": "2026-10-23 00:20"
+  },
+  {
+   "bet_id": "3941a9ad",
+   "book": "FanDuel",
+   "pick": "Denver Nuggets",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "DEN 84-96 OKC",
+   "at": "2026-10-23 00:20"
+  },
+  {
+   "bet_id": "d59ae63a",
+   "book": "DraftKings",
+   "pick": "Nikola Jokic 12+ reb + Isaiah Hartenstein 7+ reb + Jalen Williams 5+ reb + Chet Holmgren 7+ reb",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "DEN 84-96 OKC",
+   "at": "2026-10-23 00:20"
+  },
   {
    "bet_id": "0c8f76ba",
    "book": "Caesars",
@@ -376,35 +385,8 @@
    "pnl": -0.2,
    "final": "GS 71-97 ATL",
    "at": "2026-10-21 22:20"
-  },
-  {
-   "bet_id": "8460d5d9",
-   "book": "theScore",
-   "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "PHI 3-1 BUF",
-   "at": "2026-10-21 22:09"
-  },
-  {
-   "bet_id": "ce73de3f",
-   "book": "Caesars",
-   "pick": "Jalen Johnson 20+ pts + Franz Wagner 20+ pts + Nickeil Alexander-Walker 18+ pts + Paolo Banchero 21+ pts",
-   "result": "won",
-   "pnl": 2.5,
-   "final": "ATL 132-125 ORL",
-   "at": "2026-10-21 21:55"
-  },
-  {
-   "bet_id": "8c57b3b2",
-   "book": "DraftKings",
-   "pick": "Trae Young 18+ pts + Anthony Davis 20+ pts + Tyler Herro 20+ pts",
-   "result": "won",
-   "pnl": 0.91,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 23:49 ET"
+ "last_change_at": "2026-10-23 00:20 ET"
 }
