@@ -79,3 +79,25 @@ def all_bets():
     live = read_csv(BETS)[0]
     seen = {r.get("bet_id") for r in live if r.get("bet_id")}
     return live + [r for r in archive_rows() if r.get("bet_id") not in seen]
+
+# ---------- profit boost size ----------
+BOOST_SIZES = (10, 15, 20, 25, 30, 33, 40, 50, 60, 75, 100)
+def _am(s):
+    import re as _re
+    m = _re.search(r"[+-]?\d{3,}", str(s or "").replace("\u2212", "-"))
+    return int(m[0]) if m else None
+def boost_pct(market="", price="", boosted_price=""):
+    """Boost size in %: from the market text ('50% Profit Boost'), else from unboosted vs boosted odds
+    (profit ratio within 2 points of a standard size). None = unknown."""
+    import re as _re
+    t = str(market or "")
+    m = _re.search(r"(\d{1,3})\s*%\s*(?:profit\s*|odds\s*|sgp\s*|parlay\s*)*boost", t, _re.I) or _re.search(r"boost[^%\d]{0,20}(\d{1,3})\s*%", t, _re.I)
+    if m and 0 < int(m.group(1)) <= 200: return int(m.group(1))
+    if "unconfirmed" in str(boosted_price).lower(): return None
+    a, b = _am(price), _am(boosted_price)
+    if a is None or b is None: return None
+    pa = a / 100 if a > 0 else 100 / -a; pb = b / 100 if b > 0 else 100 / -b
+    if pa <= 0 or pb <= pa: return None
+    x = (pb / pa - 1) * 100
+    near = min(BOOST_SIZES, key=lambda s: abs(s - x))
+    return near if abs(near - x) <= 2.5 else None

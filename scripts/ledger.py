@@ -207,6 +207,10 @@ def main(a):
     elif cmd == "log":
         kv = dict(x.split("=", 1) for x in a[1:] if "=" in x)
         r = {c: "" for c in cols}; r.update(kv); r.setdefault("result", "open"); r["result"] = r["result"] or "open"
+        if r.get("boosted_price") and not re.search(r"\d\s*%", r.get("market", "")):   # store the boost size with every boosted bet
+            from common import boost_pct
+            bp = boost_pct("", r.get("price"), r.get("boosted_price"))
+            if bp: r["market"] = (r["market"] + f" ({bp}% profit boost)").strip()
         k = dup_key(r); clash = [x for x in all_bets() if dup_key(x) == k]
         if clash and "--force" not in a:
             print(f"REJECTED duplicate: matches {clash[0]['bet_id']} ({clash[0]['book']} | {clash[0]['event']} | "

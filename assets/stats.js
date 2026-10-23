@@ -403,7 +403,7 @@
     var hd = el('tr', {}, ['', 'Bets', 'W-L', 'P/L', 'ROI'].map(function (h) { return el('th', { text: h }); }));
     t.appendChild(hd);
     rows.forEach(function (r) {
-      t.appendChild(el('tr', {}, [el('td', { text: r.key }), el('td', { text: String(r.bets) }), el('td', { text: r.won + '-' + r.lost }),
+      t.appendChild(el('tr', { class: r.sub ? 'sub' + r.sub : '' }, [el('td', { text: (r.sub === 1 ? '\u21b3 ' : r.sub === 2 ? '\u00b7 ' : '') + r.key }), el('td', { text: String(r.bets) }), el('td', { text: r.won + '-' + r.lost }),
         el('td', { class: cls(r.pnl), text: pnl(r.pnl) }), el('td', { class: cls(r.roi), text: num(r.staked) ? pct(r.roi, true) : '\u2013' })]));
     });
     tab.appendChild(rows.length ? t : el('div', { class: 'empty', text: 'No settled bets yet' }));

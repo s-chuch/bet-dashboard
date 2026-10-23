@@ -130,6 +130,25 @@ def legs_n(r):
     m = re.search(r"(\d+)[- ]?leg", r.get("market") or "", re.I)
     return int(m[1]) if m else len([x for x in re.split(r"\s+\+\s+", r.get("pick") or "") if x])
 
+def boost_size(r):
+    from common import boost_pct
+    p = boost_pct(r.get("market"), r.get("price"), r.get("boosted_price")); return f"{p}%" if p else "unknown %"
+
+def by_money(st):
+    """Cash / Profit boost / Bonus bet, with the boost row broken down by boost size (and by book inside each size)."""
+    out = []
+    for g in group(st, money_kind, "key", ["Cash", "Profit boost", "Bonus bet"]):
+        out.append(g)
+        if g["key"] != "Profit boost": continue
+        bs = [r for r in st if money_kind(r) == "Profit boost"]
+        order = sorted({boost_size(r) for r in bs}, key=lambda k: (k == "unknown %", int(k[:-1]) if k[:-1].isdigit() else 0))
+        for s in group(bs, boost_size, "key", order):
+            out.append({**s, "sub": 1})
+            sz = [r for r in bs if boost_size(r) == s["key"]]
+            books = group(sz, lambda r: r["book"], "key")
+            if len(books) > 1: out += [{**b, "sub": 2} for b in books]
+    return out
+
 def game_plan(rows):
     st = [r for r in rows if is_settled(r)]
     cut = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
@@ -178,7 +197,7 @@ def game_plan(rows):
             "by_type": group(st, market_bucket, "key"),
             "by_book": group(st, lambda r: r["book"], "key"),
             "by_band": group(st, plan_band, "key", band_order),
-            "by_money": group(st, money_kind, "key", ["Cash", "Profit boost", "Bonus bet"]),
+            "by_money": by_money(st),
             "by_source": [{"key": "Followed my picks", **A(followed)}, {"key": "Own picks", **A(own)}],
             "by_legs": group([r for r in st if market_bucket(r) == "Parlay/SGP"], lambda r: f"{legs_n(r)} legs", "key"),
             "bonus": {"n": len(bonus), "face": r2(face), "returned": r2(ret), "conv_pct": conv},

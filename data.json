@@ -371,12 +371,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -1011,7 +1011,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -1150,7 +1150,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
+     "pulled": "2026-10-22 20:00 ET",
      "ml_home": 0.7963,
      "spread_home_line": -10.5,
      "spread_home_fair": 0.4954,
@@ -1790,7 +1790,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -1879,7 +1879,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
+     "pulled": "2026-10-22 20:00 ET",
      "ml_home": 0.6624,
      "spread_home_line": -4.5,
      "spread_home_fair": 0.4954,
@@ -2519,7 +2519,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -2620,12 +2620,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
+     "pulled": "2026-10-22 20:00 ET",
      "ml_home": 0.6324,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4204,
      "total_line": 6.5,
-     "total_over_fair": 0.5146
+     "total_over_fair": 0.5136
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -2820,7 +2820,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "MLB",
@@ -2917,12 +2917,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
+     "pulled": "2026-10-22 20:00 ET",
      "ml_home": 0.6324,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4204,
      "total_line": 6.5,
-     "total_over_fair": 0.5146
+     "total_over_fair": 0.5136
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -3117,7 +3117,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "MLB",
@@ -3523,11 +3523,7 @@
    "payout": 11.25,
    "payout_est": false,
    "start_ts": "2026-10-23T01:00Z",
-   "clv": {
-    "placed_at": null,
-    "close_price": "+476",
-    "clv_pct": -4.5
-   }
+   "clv": null
   },
   {
    "bet_id": "35f28c8c",
@@ -3594,12 +3590,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.907,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.9072,
      "spread_home_line": -20.0,
-     "spread_home_fair": 0.4977,
+     "spread_home_fair": 0.5,
      "total_line": 48.0,
-     "total_over_fair": 0.5111
+     "total_over_fair": 0.5156
     },
     "pm": {
      "slug": "cfb-pitt-mia-2026-10-24",
@@ -4410,7 +4406,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NCAAF",
@@ -4570,12 +4566,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -5210,7 +5206,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -5513,12 +5509,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -6153,7 +6149,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -6283,12 +6279,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -6923,7 +6919,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -7004,12 +7000,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
+     "pulled": "2026-10-22 20:00 ET",
      "ml_home": 0.6324,
      "spread_home_line": -1.5,
      "spread_home_fair": 0.4204,
      "total_line": 6.5,
-     "total_over_fair": 0.5146
+     "total_over_fair": 0.5136
     },
     "pm": {
      "slug": "mlb-tb-mil-2026-10-23",
@@ -7204,7 +7200,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "MLB",
@@ -7533,12 +7529,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -8173,7 +8169,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -8281,12 +8277,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-22 19:40 ET",
-     "ml_home": 0.59,
+     "pulled": "2026-10-22 20:00 ET",
+     "ml_home": 0.5907,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4896,
      "total_line": 50.5,
-     "total_over_fair": 0.5161
+     "total_over_fair": 0.5138
     },
     "pm": {
      "slug": "nfl-ne-chi-2026-10-23",
@@ -8921,7 +8917,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-23T00:02Z"
+     "t": "2026-10-23T00:01Z"
     }
    },
    "sport": "NFL",
@@ -14171,6 +14167,6 @@
   "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "e00c5a57ec27ec6449dc656a7b1644bd2a7e9093",
- "generated_at": "2026-10-22T20:02:24-04:00"
+ "hash": "5eed25f8abc9d1742ea56f664de8107570bcfc6f",
+ "generated_at": "2026-10-22T20:01:39-04:00"
 }

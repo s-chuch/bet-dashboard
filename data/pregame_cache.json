@@ -321,16 +321,16 @@
  },
  "401873010": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-22 19:40 ET",
-  "ml_home": 0.59,
+  "pulled": "2026-10-22 20:00 ET",
+  "ml_home": 0.5907,
   "spread_home_line": -3.0,
-  "spread_home_fair": 0.4884,
+  "spread_home_fair": 0.4896,
   "total_line": 50.5,
-  "total_over_fair": 0.5161
+  "total_over_fair": 0.5138
  },
  "401873016": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-22 19:40 ET",
+  "pulled": "2026-10-22 20:00 ET",
   "ml_home": 0.7963,
   "spread_home_line": -10.5,
   "spread_home_fair": 0.4954,
@@ -339,7 +339,7 @@
  },
  "401873015": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-22 19:40 ET",
+  "pulled": "2026-10-22 20:00 ET",
   "ml_home": 0.6624,
   "spread_home_line": -4.5,
   "spread_home_fair": 0.4954,
@@ -348,21 +348,21 @@
  },
  "401908042": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-22 19:40 ET",
+  "pulled": "2026-10-22 20:00 ET",
   "ml_home": 0.6324,
   "spread_home_line": -1.5,
   "spread_home_fair": 0.4204,
   "total_line": 6.5,
-  "total_over_fair": 0.5146
+  "total_over_fair": 0.5136
  },
  "401858274": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-22 19:40 ET",
-  "ml_home": 0.907,
+  "pulled": "2026-10-22 20:00 ET",
+  "ml_home": 0.9072,
   "spread_home_line": -20.0,
-  "spread_home_fair": 0.4977,
+  "spread_home_fair": 0.5,
   "total_line": 48.0,
-  "total_over_fair": 0.5111
+  "total_over_fair": 0.5156
  },
  "401909088": {
   "ml_home": 0.4738,
