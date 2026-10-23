@@ -1,0 +1,7 @@
+.lg{max-width:420px;margin:12px auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.lg label{font-size:12px;font-weight:700;color:var(--mut)}
+.lg input{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--txt)}
+.lg button{font:inherit;font-weight:800;padding:12px;border:0;border-radius:12px;background:var(--grad);color:#0b0d12;cursor:pointer}
+.lg button:disabled{opacity:.6}
+#msg{margin:0;font-size:13px;color:var(--mut);min-height:18px;overflow-wrap:anywhere}
+#msg.err{color:#ff6b6b}#msg.ok{color:#3ddc97}

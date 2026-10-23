@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0b0d12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://jzlfbpxcqerwtiurzsmu.supabase.co; base-uri 'none'; form-action 'none'">
+<title>Sign in · Bet Tracker</title>
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/login.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html">Upload</a><a href="finder.html">Bet Finder</a></div></div></nav>
+<main class="wrap">
+  <h1 class="page-title">Sign in</h1>
+  <p class="page-sub">Invite-only. Enter the email you were invited with and we'll send you a one-tap sign-in link.</p>
+  <div id="who" class="card lg" hidden></div>
+  <form id="f" class="card lg" autocomplete="on">
+    <label for="em">Email</label>
+    <input id="em" type="email" inputmode="email" autocomplete="email" required placeholder="you@example.com">
+    <button id="go" type="submit">Send sign-in link</button>
+    <p id="msg" role="status" aria-live="polite"></p>
+  </form>
+</main>
+<script src="assets/vendor/supabase/supabase.js"></script>
+<script src="assets/db.js"></script>
+<script src="assets/login.js"></script>
+</body>
+</html>
