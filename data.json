@@ -22,7 +22,7 @@
   },
   {
    "book": "DraftKings",
-   "balance": 62.42,
+   "balance": 62.83,
    "updated": "2026-10-23 00:45"
   },
   {
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 676.56,
+ "total": 676.97,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1054,7 +1054,7 @@
      "home": 0.803,
      "away": 0.197,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "NFL",
@@ -1783,7 +1783,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "NFL",
@@ -2084,7 +2084,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "MLB",
@@ -2381,7 +2381,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "MLB",
@@ -3513,7 +3513,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3599,86 +3599,6 @@
    "payout": 2.38,
    "payout_est": false,
    "start_ts": "2026-10-23T00:15Z",
-   "clv": null
-  },
-  {
-   "bet_id": "8659fd16",
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Chicago Bulls @ Toronto Raptors",
-   "market": "Player prop (price from payout)",
-   "pick": "Scottie Barnes 30+ pts+reb+ast",
-   "start": "Wed Oct 21 07:40 PM ET",
-   "price": "+105",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 0.21,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Scottie Barnes",
-     "stat": "pra",
-     "op": "min",
-     "min": 30,
-     "text": "Scottie Barnes 30+ pts+reb+ast",
-     "pteam": "TOR",
-     "pname": "Scottie Barnes",
-     "pid": "4433134"
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261021",
-    "groups": null,
-    "id": "401909837",
-    "snapshot": {
-     "date": "2026-10-21T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "28",
-       "name": "Toronto Raptors",
-       "abbr": "TOR",
-       "short": "Raptors",
-       "nick": "Raptors",
-       "location": "Toronto",
-       "home": true,
-       "score": "135"
-      },
-      {
-       "id": "4",
-       "name": "Chicago Bulls",
-       "abbr": "CHI",
-       "short": "Bulls",
-       "nick": "Bulls",
-       "location": "Chicago",
-       "home": false,
-       "score": "92"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-21 13:02 ET",
-     "ml_home": 0.7941,
-     "spread_home_line": -10.5,
-     "spread_home_fair": 0.5,
-     "total_line": 238.0,
-     "total_over_fair": 0.5023
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.2,
-   "payout": 0.41,
-   "payout_est": false,
-   "start_ts": "2026-10-21T23:40Z",
    "clv": null
   },
   {
@@ -4108,7 +4028,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T04:45Z"
+     "t": "2026-10-23T04:46Z"
     }
    },
    "sport": "MLB",
@@ -4929,6 +4849,17 @@
    "clv": null
   },
   {
+   "date": "2026-10-21",
+   "book": "DraftKings",
+   "event": "Chicago Bulls @ Toronto Raptors",
+   "pick": "Scottie Barnes 30+ pts+reb+ast",
+   "result": "won",
+   "pnl": 0.21,
+   "stake": 0.2,
+   "auto": false,
+   "clv": null
+  },
+  {
    "date": "2026-10-18",
    "book": "theScore",
    "event": "Cleveland Guardians @ Tampa Bay Rays",
@@ -5659,15 +5590,15 @@
    "clv": null
   }
  ],
- "pnl_total": 114.02,
+ "pnl_total": 114.23,
  "unsettled": {
-  "n": 28,
-  "cash_stake": 17.4,
-  "max_payout": 635.3,
+  "n": 27,
+  "cash_stake": 17.2,
+  "max_payout": 634.89,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 17.4,
+ "open_stake": 17.2,
  "recs": {
   "stats": {
    "overall": {
@@ -9328,15 +9259,6 @@
     "legs": []
    },
    {
-    "bet_id": "8659fd16",
-    "book": "DraftKings",
-    "event": "Chicago Bulls @ Toronto Raptors",
-    "pick": "Scottie Barnes 30+ pts+reb+ast",
-    "stake": "0.20",
-    "reason": "leg \"Scottie Barnes 30+ pts+reb+ast\": stat pra missing for Scottie Barnes",
-    "legs": []
-   },
-   {
     "bet_id": "febb32ba",
     "book": "theScore",
     "event": "New England Patriots @ Chicago Bears",
@@ -9641,7 +9563,7 @@
     "at": "2026-10-21 22:20"
    }
   ],
-  "last_change_at": "2026-10-23 00:45 ET"
+  "last_change_at": "2026-10-23 00:46 ET"
  },
  "open_live_n": 21,
  "open_stake_by_book": {
@@ -9652,6 +9574,6 @@
   "PointsBet": 51.43,
   "theScore": 0
  },
- "hash": "0365e334d1bbaa19fe5ee602482d015707f5aa88",
- "generated_at": "2026-10-23T00:45:47-04:00"
+ "hash": "bb0fa9ba2c4a47572e53a0ee688e96679a95aed3",
+ "generated_at": "2026-10-23T00:46:11-04:00"
 }

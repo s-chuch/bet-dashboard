@@ -42,15 +42,6 @@
    "legs": []
   },
   {
-   "bet_id": "8659fd16",
-   "book": "DraftKings",
-   "event": "Chicago Bulls @ Toronto Raptors",
-   "pick": "Scottie Barnes 30+ pts+reb+ast",
-   "stake": "0.20",
-   "reason": "leg \"Scottie Barnes 30+ pts+reb+ast\": stat pra missing for Scottie Barnes",
-   "legs": []
-  },
-  {
    "bet_id": "febb32ba",
    "book": "theScore",
    "event": "New England Patriots @ Chicago Bears",
@@ -356,5 +347,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:45 ET"
+ "last_change_at": "2026-10-23 00:46 ET"
 }
