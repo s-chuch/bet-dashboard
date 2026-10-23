@@ -22,8 +22,8 @@
   },
   {
    "book": "bet365",
-   "balance": 51.88,
-   "updated": "2026-10-22 20:33"
+   "balance": 52.69,
+   "updated": "2026-10-22 21:34"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 639.68,
+ "total": 640.49,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -338,10 +338,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -1008,10 +1008,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -1790,7 +1790,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -2519,7 +2519,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -2820,7 +2820,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "MLB",
@@ -3117,7 +3117,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "MLB",
@@ -3490,10 +3490,10 @@
     "snapshot": {
      "date": "2026-10-23T01:00Z",
      "period": 1,
-     "clock": 1920.0,
+     "clock": 2040.0,
      "state": "in",
      "completed": false,
-     "detail": "32'",
+     "detail": "34'",
      "teams": [
       {
        "id": "5264",
@@ -4410,7 +4410,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NCAAF",
@@ -4537,10 +4537,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -5207,10 +5207,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -5480,10 +5480,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -6150,10 +6150,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -6250,10 +6250,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -6920,10 +6920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -7204,7 +7204,7 @@
      "home": 0.625,
      "away": 0.375,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "MLB",
@@ -7500,10 +7500,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -8170,10 +8170,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -8248,10 +8248,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -8918,10 +8918,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -9078,7 +9078,7 @@
      "home": 0.3911,
      "away": 0.6089,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NHL",
@@ -9125,10 +9125,10 @@
     "snapshot": {
      "date": "2026-10-23T01:00Z",
      "period": 1,
-     "clock": 446.0,
+     "clock": 398.0,
      "state": "in",
      "completed": false,
-     "detail": "7:26 - 1st",
+     "detail": "6:38 - 1st",
      "teams": [
       {
        "id": "3",
@@ -9232,10 +9232,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.505,
-     "away": 0.495,
+     "home": 0.535,
+     "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NHL",
@@ -9247,221 +9247,6 @@
     "placed_at": "2026-10-22 20:23",
     "close_price": "+443",
     "clv_pct": -20.01
-   }
-  },
-  {
-   "bet_id": "aa301657",
-   "date": "2026-10-22",
-   "book": "bet365",
-   "event": "Anaheim Ducks @ New Jersey Devils",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
-   "start": "Thu Oct 22 07:07 PM ET",
-   "price": "+115",
-   "boosted_price": "+170",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 0.51,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Jack Hughes:",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Jack Hughes: 1+ Points",
-     "pteam": "NJ",
-     "pname": "Jack Hughes",
-     "pid": "4565222"
-    },
-    {
-     "type": "prop",
-     "player": "Jesper Bratt:",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Jesper Bratt: 1+ Points",
-     "pteam": "NJ",
-     "pname": "Jesper Bratt",
-     "pid": "4268771"
-    },
-    {
-     "type": "prop",
-     "player": "Timo Meier:",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Timo Meier: 2+ Shots on Goal",
-     "pteam": "NJ",
-     "pname": "Timo Meier",
-     "pid": "3899978"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261022",
-    "groups": null,
-    "id": "401892555",
-    "snapshot": {
-     "date": "2026-10-22T23:00Z",
-     "period": 3,
-     "clock": 6.0,
-     "state": "in",
-     "completed": false,
-     "detail": "0:06 - 3rd",
-     "teams": [
-      {
-       "id": "11",
-       "name": "New Jersey Devils",
-       "abbr": "NJ",
-       "short": "Devils",
-       "nick": "Devils",
-       "location": "New Jersey",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "25",
-       "name": "Anaheim Ducks",
-       "abbr": "ANA",
-       "short": "Ducks",
-       "nick": "Ducks",
-       "location": "Anaheim",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-ana-nj-2026-10-22",
-     "title": "Ducks vs. Devils",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Devils",
-        "Ducks"
-       ],
-       "tokens": [
-        "87894763262156269551440646601961726740476998850920386656646872994658353154821",
-        "89138372975172370372401738481587273747499459587251454263027590542115285028937"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Devils",
-        "Ducks"
-       ],
-       "tokens": [
-        "23788630005767397620467211392628106320823688938261183670914602302883599153303",
-        "40164653468843794848904672991488103606699541955068365112878649859520332298698"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Devils",
-        "Ducks"
-       ],
-       "tokens": [
-        "83698083172741505884979506614194111167922601660508090352084241042307074528238",
-        "91121172747589788263536605310143348496005644301602336692282308565101677503501"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "20935670986945383440542924220702765129474933495596314670856770646386576936618",
-        "2667258092538660104217864511605464797313668149364186026140044188535226035487"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "676348377419137976018004086407316344775935229346076284843659475284548626097",
-        "23951926355109088346784398150033747906830339556680203147399067677479523316748"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "96702451319929268552978145546158571960648101230841457283925109844160095607049",
-        "74041211685173083338571107745620706045690880362995161883454944669719077180872"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "3429894243021636350051637043226549392336252362608232532580538970160658265744",
-        "109950074480308137456227943450645325400198213065997173002702954691408332917973"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "561321309319724618723061487211674058974785579256680291170122441339074947385",
-        "79133209090990082762085931633827690383693268488401489843239235858163092674239"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Ducks",
-       "Devils"
-      ],
-      "tokens": [
-       "99091263339295281295227559438182958210652196207238478412914918340056112860604",
-       "5212664173594517784612159676787262250869566721483308247821261962188340752855"
-      ]
-     }
-    },
-    "an": {
-     "id": 293455,
-     "home_team_id": 239,
-     "away_team_id": 223
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.995,
-     "away": 0.005,
-     "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.3,
-   "payout": 0.81,
-   "payout_est": false,
-   "start_ts": "2026-10-22T23:07Z",
-   "clv": {
-    "placed_at": "2026-10-22 18:47",
-    "close_price": null,
-    "clv_pct": null
    }
   },
   {
@@ -9522,10 +9307,10 @@
     "snapshot": {
      "date": "2026-10-22T23:00Z",
      "period": 3,
-     "clock": 292.0,
+     "clock": 268.0,
      "state": "in",
      "completed": false,
-     "detail": "4:52 - 3rd",
+     "detail": "4:28 - 3rd",
      "teams": [
       {
        "id": "14",
@@ -9673,10 +9458,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.025,
-     "away": 0.975,
+     "home": 0.0253,
+     "away": 0.9747,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NHL",
@@ -10108,10 +9893,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.735,
-     "away": 0.265,
+     "home": 0.7277,
+     "away": 0.2723,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NBA",
@@ -10158,10 +9943,10 @@
     "snapshot": {
      "date": "2026-10-22T23:00Z",
      "period": 4,
-     "clock": 314.0,
+     "clock": 298.0,
      "state": "in",
      "completed": false,
-     "detail": "5:14 - 4th",
+     "detail": "4:58 - 4th",
      "teams": [
       {
        "id": "20",
@@ -10171,7 +9956,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "100"
+       "score": "102"
       },
       {
        "id": "5",
@@ -10718,6 +10503,17 @@
         "46290814703062427772017940293177694338115437826909605110264028697849762934430",
         "59324014370769051286159300375885347790763749993309504151985610363896838417600"
        ]
+      },
+      {
+       "line": 223.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "66201201869426841324427811998785223103898940585510475461020020598488928833391",
+        "86846849616010364296169477105592310342738743760572763857698608328146903835397"
+       ]
       }
      ],
      "ml": {
@@ -10738,10 +10534,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.855,
-     "away": 0.145,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NBA",
@@ -10806,10 +10602,10 @@
     "snapshot": {
      "date": "2026-10-23T00:00Z",
      "period": 2,
-     "clock": 342.0,
+     "clock": 248.0,
      "state": "in",
      "completed": false,
-     "detail": "5:42 - 2nd",
+     "detail": "4:08 - 2nd",
      "teams": [
       {
        "id": "19",
@@ -10913,10 +10709,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.865,
-     "away": 0.135,
+     "home": 0.875,
+     "away": 0.125,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NHL",
@@ -11322,10 +11118,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.735,
-     "away": 0.265,
+     "home": 0.7277,
+     "away": 0.2723,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NBA",
@@ -11386,10 +11182,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -12056,10 +11852,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -12131,10 +11927,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -12801,10 +12597,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -13249,10 +13045,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.735,
-     "away": 0.265,
+     "home": 0.7277,
+     "away": 0.2723,
      "spread": 0.01,
-     "t": "2026-10-23T01:32Z"
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NBA",
@@ -13308,10 +13104,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -13978,10 +13774,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -14031,10 +13827,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -14701,10 +14497,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -14754,10 +14550,10 @@
     "snapshot": {
      "date": "2026-10-23T00:15Z",
      "period": 2,
-     "clock": 170.0,
+     "clock": 163.0,
      "state": "in",
      "completed": false,
-     "detail": "2:50 - 2nd",
+     "detail": "2:43 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -15424,10 +15220,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7839,
-     "away": 0.2161,
-     "spread": 0.02,
-     "t": "2026-10-23T01:32Z"
+     "home": 0.795,
+     "away": 0.205,
+     "spread": 0.01,
+     "t": "2026-10-23T01:34Z"
     }
    },
    "sport": "NFL",
@@ -15443,6 +15239,21 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-22",
+   "book": "bet365",
+   "event": "Anaheim Ducks @ New Jersey Devils",
+   "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
+   "result": "won",
+   "pnl": 0.51,
+   "stake": 0.3,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-22 18:47",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
   {
    "date": "2026-10-21",
    "book": "bet365",
@@ -16698,15 +16509,15 @@
    "clv": null
   }
  ],
- "pnl_total": 94.44,
+ "pnl_total": 94.95,
  "unsettled": {
-  "n": 49,
-  "cash_stake": 34.7,
-  "max_payout": 777.78,
+  "n": 48,
+  "cash_stake": 34.4,
+  "max_payout": 776.97,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 34.7,
+ "open_stake": 34.4,
  "recs": {
   "stats": {
    "overall": {
@@ -20403,24 +20214,6 @@
     "legs": []
    },
    {
-    "bet_id": "2d46e615",
-    "book": "Caesars",
-    "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-    "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "9ad39183",
     "book": "PointsBet",
     "event": "Kawhi Leonard Specials (NBA)",
@@ -20428,18 +20221,18 @@
     "stake": "0.50",
     "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
     "legs": []
-   },
-   {
-    "bet_id": "ef269fe1",
-    "book": "bet365",
-    "event": "Ferencvarosi TC v Torreeense",
-    "pick": "Torreeense ML",
-    "stake": "0.2",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "aa301657",
+    "book": "bet365",
+    "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
+    "result": "won",
+    "pnl": 0.51,
+    "final": "ANA 1-4 NJ",
+    "at": "2026-10-22 21:34"
+   },
    {
     "bet_id": "f0094ba2",
     "book": "PointsBet",
@@ -20655,22 +20448,13 @@
     "pnl": 1.08,
     "final": "PIT 4-5 UTA",
     "at": "2026-10-21 10:37"
-   },
-   {
-    "bet_id": "bc891117",
-    "book": "theScore",
-    "pick": "Maple Leafs ML + Macklin Celebrini U1.5 pts + Darren Raddysh U0.5 pts",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "SJ 1-3 TOR",
-    "at": "2026-10-21 10:37"
    }
   ],
-  "last_change_at": "2026-10-22 20:28 ET"
+  "last_change_at": "2026-10-22 21:34 ET"
  },
- "open_live_n": 43,
+ "open_live_n": 42,
  "open_stake_by_book": {
-  "bet365": 11.5,
+  "bet365": 11.2,
   "Caesars": 21.4,
   "DraftKings": 1.2,
   "FanDuel": 4.6,
@@ -20678,6 +20462,6 @@
   "PointsBet": 53.93,
   "theScore": 0.2
  },
- "hash": "1dc6b96def7539bbff043ae29a6e3fe2bd136df4",
- "generated_at": "2026-10-22T21:32:36-04:00"
+ "hash": "2d8150ff6983909e9a2be37c3a4de4242e91c7c6",
+ "generated_at": "2026-10-22T21:34:18-04:00"
 }
