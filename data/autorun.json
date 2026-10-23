@@ -51,6 +51,20 @@
    "legs": []
   },
   {
+   "bet_id": "49bab689",
+   "book": "Caesars",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "Under 50 + Drake Maye 2+ pass TD",
+   "stake": "0.50",
+   "reason": "leg \"Drake Maye 2+ pass TD\": player \"Drake Maye 2+ pass\" not in any box score (DNP void, or name mismatch?)",
+   "legs": [
+    {
+     "leg": "Under 50",
+     "result": "lost"
+    }
+   ]
+  },
+  {
    "bet_id": "277f7bfc",
    "book": "Caesars",
    "event": "COL @ PHI / ANA @ NYR / SJ @ TOR (NHL)",
@@ -78,22 +92,18 @@
    "legs": []
   },
   {
-   "bet_id": "2d46e615",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
+   "bet_id": "febb32ba",
+   "book": "theScore",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
    "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
+   "reason": "leg \"Drake Maye 2+ pass TD\": player \"Drake Maye 2+ pass\" not in any box score (DNP void, or name mismatch?)",
+   "legs": [
+    {
+     "leg": "Caleb Williams 225+ pass yds",
+     "result": "won"
+    }
+   ]
   },
   {
    "bet_id": "9ad39183",
@@ -102,15 +112,6 @@
    "pick": "Kawhi Leonard 40+ pts+reb+ast",
    "stake": "0.50",
    "reason": "leg \"Kawhi Leonard 40+ pts+reb+ast\": stat pra missing for Kawhi Leonard",
-   "legs": []
-  },
-  {
-   "bet_id": "ef269fe1",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "stake": "0.2",
-   "reason": "no ESPN game matched",
    "legs": []
   },
   {
@@ -130,9 +131,90 @@
      "result": "lost"
     }
    ]
+  },
+  {
+   "bet_id": "0ae1f272",
+   "book": "DraftKings",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards",
+   "stake": "0.30",
+   "reason": "leg \"Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards\": market/stat not recognised",
+   "legs": []
+  },
+  {
+   "bet_id": "541e7eb8",
+   "book": "DraftKings",
+   "event": "New England Patriots @ Chicago Bears",
+   "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
+   "stake": "0.20",
+   "reason": "leg \"D'Andre Swift First TD Scorer\": market/stat not recognised",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "ecfed1e1",
+   "book": "Caesars",
+   "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
+   "result": "won",
+   "pnl": 1.18,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "b9ff4408",
+   "book": "Caesars",
+   "pick": "Patriots ML + Over 52.5",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "6b91bd67",
+   "book": "bet365",
+   "pick": "Bears ML + Over 50.5",
+   "result": "won",
+   "pnl": 18.0,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "05e56633",
+   "book": "FanDuel",
+   "pick": "Chicago Bears +6.5 + Caleb Williams 175+ pass yds + Over 40.5 + Drake Maye 200+ pass yds",
+   "result": "won",
+   "pnl": 1.6,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "b46166e5",
+   "book": "DraftKings",
+   "pick": "Rhamondre Stevenson 40+ rush yds + D'Andre Swift 50+ rush yds + Roschon Johnson 25+ rush yds",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "b8714d0e",
+   "book": "Caesars",
+   "pick": "D'Andre Swift 2+ Touchdowns",
+   "result": "lost",
+   "pnl": -0.1,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
+  {
+   "bet_id": "5f4df7f4",
+   "book": "Caesars",
+   "pick": "Drake Maye 310+ Passing Yards",
+   "result": "won",
+   "pnl": 0.31,
+   "final": "NE 24-30 CHI",
+   "at": "2026-10-22 23:23"
+  },
   {
    "bet_id": "ff63a89d",
    "book": "PointsBet",
@@ -294,71 +376,8 @@
    "pnl": 0.15,
    "final": "MIL 116-128 WSH",
    "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "a5e01f20",
-   "book": "Caesars",
-   "pick": "Tyler Herro 22+ pts + Ryan Rollins 16+ pts + Trae Young 18+ pts + Anthony Davis 20+ pts",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "fb81e3b2",
-   "book": "PointsBet",
-   "pick": "Anthony Davis 17+ pts + Trae Young 15+ pts + Tyler Herro 16+ pts",
-   "result": "won",
-   "pnl": 0.53,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "4dfdc722",
-   "book": "theScore",
-   "pick": "Anthony Davis 20+ pts + Trae Young 20+ pts + Ryan Rollins 15+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "0abd747b",
-   "book": "bet365",
-   "pick": "Kel'el Ware: 5+ Rebounds + Trae Young: 7+ Assists + Tyler Herro: 20+ Points",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "MIL 116-128 WSH",
-   "at": "2026-10-21 21:43"
-  },
-  {
-   "bet_id": "3f3089f2",
-   "book": "Caesars",
-   "pick": "Cade Cunningham 22+ pts + Jayson Tatum 24+ pts",
-   "result": "lost",
-   "pnl": -0.8,
-   "final": "BOS 113-121 DET",
-   "at": "2026-10-21 20:24"
-  },
-  {
-   "bet_id": "f8f45202",
-   "book": "Caesars",
-   "pick": "Under 52 + Brock Purdy 250+ pass yds",
-   "result": "won",
-   "pnl": 2.17,
-   "final": "WSH 17-23 SF",
-   "at": "2026-10-21 10:37"
-  },
-  {
-   "bet_id": "e4267b6c",
-   "book": "DraftKings",
-   "pick": "GS Valkyries ML + Rhyne Howard 15+ pts + Gabby Williams 18+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "ATL 79-65 GS",
-   "at": "2026-10-21 10:37"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-22 22:53 ET"
+ "last_change_at": "2026-10-22 23:23 ET"
 }
