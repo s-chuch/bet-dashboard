@@ -51,15 +51,6 @@
    "legs": []
   },
   {
-   "bet_id": "6b6a71e7",
-   "book": "DraftKings",
-   "event": "Atlanta Hawks @ Orlando Magic",
-   "pick": "Franz Wagner 30+ pts+reb+ast",
-   "stake": "0.20",
-   "reason": "leg \"Franz Wagner 30+ pts+reb+ast\": stat pra missing for Franz Wagner",
-   "legs": []
-  },
-  {
    "bet_id": "febb32ba",
    "book": "theScore",
    "event": "New England Patriots @ Chicago Bears",
@@ -365,5 +356,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 00:44 ET"
+ "last_change_at": "2026-10-23 00:45 ET"
 }
