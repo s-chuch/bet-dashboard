@@ -117,6 +117,17 @@
   }
   document.addEventListener('click', onAct);
   function loadSkips() {
+    if (window.DB && DB.ready) {   /* signed-in, cut-over accounts keep their skips in Supabase (private); others use the public CSV below */
+      return DB.cutover().then(function (on) {
+        if (!on) return loadSkipsCsv();
+        return DB.client.from('skips').select('rec_key').eq('day', today()).then(function (r) {
+          SERVER_SKIPS = {}; (r.data || []).forEach(function (x) { SERVER_SKIPS[x.rec_key] = 1; });
+        });
+      }).catch(function () {});
+    }
+    return loadSkipsCsv();
+  }
+  function loadSkipsCsv() {
     return fetch('data/finder_skips.csv?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (t) {
       var d = today(); SERVER_SKIPS = {};
       t.split('\n').slice(1).forEach(function (l) { var m = l.match(/^(\d{4}-\d{2}-\d{2}),[^,]*,("(?:[^"]|"")*"|[^,]*)/); if (m && m[1] === d) SERVER_SKIPS[m[2].replace(/^"|"$/g, '').replace(/""/g, '"')] = 1; });
