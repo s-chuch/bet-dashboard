@@ -131,7 +131,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-23,bet365,Chicago Bulls @ Milwaukee Bucks,,SGP 3-leg (30% profit boost),Josh Giddey 7+ Assists + Tyler Herro 5+ Assists + Leonard Miller 3+ Rebounds,+110,+143,0.40,0.57,,,lost,-0.40,6388e853,2026-10-23 18:50,auto
 2026-10-23,bet365,Winnipeg Blue Bombers @ BC Lions (CFL),Fri Oct 23 10:00 PM ET,SGP 3-leg (50% profit boost),Blue Bombers ML + BC Lions +24.5 + Over 46.5,+100,+150,0.40,0.60,,,open,,60d543b0,,
 2026-10-23,bet365,Montreal Alouettes @ Toronto Argonauts (CFL),Fri Oct 23 07:00 PM ET,SGP 3-leg (50% profit boost),Over 36.5 + Argonauts +19.0 + Alouettes ML,+125,+188,0.40,0.75,,,open,,022381e8,,
-2026-10-23,bet365,Montreal Canadiens @ Chicago Blackhawks,Fri Oct 23 08:07 PM ET,SGP 3-leg (30% profit boost),Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal,+110,+143,0.40,0.57,,,open,,0db400ce,,
+2026-10-23,bet365,Montreal Canadiens @ Chicago Blackhawks,Fri Oct 23 08:07 PM ET,SGP 3-leg (30% profit boost),Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal,+110,+143,0.40,0.57,,,lost,-0.40,0db400ce,2026-10-23 22:45,auto
 2026-10-23,bet365,Arsenal v Everton (EPL),Sat Oct 24 10:00 AM ET,SGP 3-leg (50% profit boost),Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks,+105,+158,0.40,0.63,,,open,,53cb007b,,
 2026-10-23,Caesars,Ole Miss Rebels @ Texas Longhorns (NCAAF),Sat Oct 24 07:30 PM ET,SGP 2-leg (25% profit boost),Texas Longhorns ML + Kewan Lacy anytime TD,+254,+318,0.50,1.59,,,open,,90a7ff90,,
 2026-10-23,Caesars,Portland Trail Blazers @ Sacramento Kings,Fri Oct 23 10:00 PM ET,Moneyline (bonus bet $1.00),Sacramento Kings,+345,,1.00 (bonus),3.45,,,open,,3ec732ca,,

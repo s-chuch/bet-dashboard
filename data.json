@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "NFL",
@@ -1783,11 +1783,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 7,
+     "period": 8,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 7th",
+     "detail": "Top 8th",
      "teams": [
       {
        "id": "8",
@@ -1797,7 +1797,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "30",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.896,
+     "away": 0.104,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "MLB",
@@ -2113,11 +2113,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 7,
+     "period": 8,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 7th",
+     "detail": "Top 8th",
      "teams": [
       {
        "id": "8",
@@ -2127,7 +2127,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "30",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.896,
+     "away": 0.104,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "MLB",
@@ -3338,7 +3338,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3463,11 +3463,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 7,
+     "period": 8,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 7th",
+     "detail": "Top 8th",
      "teams": [
       {
        "id": "8",
@@ -3477,7 +3477,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "30",
@@ -3727,10 +3727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.896,
+     "away": 0.104,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "MLB",
@@ -3824,11 +3824,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 7,
+     "period": 8,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 7th",
+     "detail": "Top 8th",
      "teams": [
       {
        "id": "8",
@@ -3838,7 +3838,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "30",
@@ -4088,10 +4088,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.896,
+     "away": 0.104,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "MLB",
@@ -4358,197 +4358,6 @@
    "payout": 1.15,
    "payout_est": false,
    "start_ts": "2026-10-23T23:00Z",
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "0db400ce",
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Montreal Canadiens @ Chicago Blackhawks",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
-   "start": "Fri Oct 23 08:07 PM ET",
-   "price": "+110",
-   "boosted_price": "+143",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.57,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Cole Caufield",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Cole Caufield 1+ Points",
-     "pteam": "MTL",
-     "pname": "Cole Caufield",
-     "pid": "4565236"
-    },
-    {
-     "type": "prop",
-     "player": "Lane Hutson",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Lane Hutson 1+ Points",
-     "pteam": "MTL",
-     "pname": "Lane Hutson",
-     "pid": "5080230"
-    },
-    {
-     "type": "prop",
-     "player": "Patrick Kane",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Patrick Kane 2+ Shots on Goal",
-     "pteam": "CHI",
-     "pname": "Patrick Kane",
-     "pid": "3735"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261023",
-    "groups": null,
-    "id": "401892564",
-    "snapshot": {
-     "date": "2026-10-24T00:00Z",
-     "period": 3,
-     "clock": 352.0,
-     "state": "in",
-     "completed": false,
-     "detail": "5:52 - 3rd",
-     "teams": [
-      {
-       "id": "4",
-       "name": "Chicago Blackhawks",
-       "abbr": "CHI",
-       "short": "Blackhawks",
-       "nick": "Blackhawks",
-       "location": "Chicago",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "10",
-       "name": "Montreal Canadiens",
-       "abbr": "MTL",
-       "short": "Canadiens",
-       "nick": "Canadiens",
-       "location": "Montreal",
-       "home": false,
-       "score": "3"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-23 18:27 ET",
-     "ml_home": 0.3998,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.6239,
-     "total_line": 6.5,
-     "total_over_fair": 0.474
-    },
-    "pm": {
-     "slug": "nhl-mon-chi-2026-10-23",
-     "title": "Canadiens vs. Blackhawks",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Canadiens",
-        "Blackhawks"
-       ],
-       "tokens": [
-        "33894099235303043914470734968940339180962817048024924294860696824403929936050",
-        "63392685175892059611200699197747169122466246755552530306207080430425173757545"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "75785252962195663341717955679930425511628310705982641774613311697869021732931",
-        "76412722475043715305424736970924929436705492790802663502333405156294787584966"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "92446682190612195233941812903834582435596746824695617203976984066468887157430",
-        "89483405446214147615888892827320902351254156677726434009053940413626704890726"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "72905667843450640402733119534229164385100850753731191129263153639428338237908",
-        "21701853076408768177257044062819490954282806985875726469441954712715175024478"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "77055647319779805023684977030683194804274877382164749741543558134560535446324",
-        "36726318119851465296186671733498188465938819900674930140447126881359222650233"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Canadiens",
-       "Blackhawks"
-      ],
-      "tokens": [
-       "73565957582824494868473597573528972878665650060685302365036859445910690812194",
-       "372529223121431553959620701244942984937720655947030943757285243439467088876"
-      ]
-     }
-    },
-    "an": {
-     "id": 293464,
-     "home_team_id": 228,
-     "away_team_id": 236
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.015,
-     "away": 0.985,
-     "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.4,
-   "payout": 0.97,
-   "payout_est": false,
-   "start_ts": "2026-10-24T00:07Z",
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -5294,7 +5103,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "NCAAF",
@@ -5339,11 +5148,11 @@
     "id": "401909852",
     "snapshot": {
      "date": "2026-10-24T02:00Z",
-     "period": 1,
-     "clock": 210.0,
+     "period": 2,
+     "clock": 682.0,
      "state": "in",
      "completed": false,
-     "detail": "3:30 - 1st",
+     "detail": "11:22 - 2nd",
      "teams": [
       {
        "id": "23",
@@ -5353,7 +5162,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "27"
+       "score": "33"
       },
       {
        "id": "22",
@@ -5363,7 +5172,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "17"
+       "score": "29"
       }
      ]
     },
@@ -6072,10 +5881,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.295,
+     "away": 0.705,
      "spread": 0.01,
-     "t": "2026-10-24T02:34Z"
+     "t": "2026-10-24T02:46Z"
     }
    },
    "sport": "NBA",
@@ -6297,6 +6106,21 @@
    "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "book": "bet365",
+   "event": "Montreal Canadiens @ Chicago Blackhawks",
+   "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
+   "result": "lost",
+   "pnl": -0.4,
+   "stake": 0.4,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-23 18:24",
     "close_price": null,
     "clv_pct": null
    }
@@ -7596,15 +7420,15 @@
    "clv": null
   }
  ],
- "pnl_total": 110.68,
+ "pnl_total": 110.28,
  "unsettled": {
-  "n": 27,
-  "cash_stake": 18.2,
-  "max_payout": 437.21,
+  "n": 26,
+  "cash_stake": 17.8,
+  "max_payout": 436.24,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 18.2,
+ "open_stake": 17.8,
  "recs": {
   "stats": {
    "overall": {
@@ -11231,32 +11055,18 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "c352d06d",
-    "book": "FanDuel",
-    "event": "North Carolina Central @ Delaware State (NCAAF)",
-    "pick": "Delaware State ML + Over 48.5 alt total",
-    "stake": "0.50",
-    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-    "legs": [
-     {
-      "leg": "Delaware State ML",
-      "result": "lost"
-     }
-    ]
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "0db400ce",
+    "book": "bet365",
+    "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
+    "result": "lost",
+    "pnl": -0.4,
+    "final": "MTL 4-1 CHI",
+    "at": "2026-10-23 22:45"
+   },
    {
     "bet_id": "442ed624",
     "book": "DraftKings",
@@ -11472,27 +11282,18 @@
     "pnl": 0.0,
     "final": "RIG 1-1 PAF",
     "at": "2026-10-22 14:40"
-   },
-   {
-    "bet_id": "5febfd46",
-    "book": "PointsBet",
-    "pick": "Tijuana",
-    "result": "lost",
-    "pnl": 0.0,
-    "final": "TIJ 2-2 TOL",
-    "at": "2026-10-21 23:03"
    }
   ],
-  "last_change_at": "2026-10-23 21:53 ET"
+  "last_change_at": "2026-10-23 22:45 ET"
  },
- "open_live_n": 26,
+ "open_live_n": 25,
  "open_stake_by_book": {
-  "bet365": 2.4,
+  "bet365": 2.0,
   "Caesars": 19.5,
   "DraftKings": 0.7,
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "c8350b2392baebc8b724efa8ed20baa8f28f5d74",
- "generated_at": "2026-10-23T22:34:35-04:00"
+ "hash": "1db6200fcf41537cee2a6d791b61733228b21ade",
+ "generated_at": "2026-10-23T22:46:10-04:00"
 }
