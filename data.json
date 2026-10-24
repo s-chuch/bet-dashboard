@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NFL",
@@ -2859,7 +2859,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NCAAF",
@@ -3823,7 +3823,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NBA",
@@ -3886,10 +3886,10 @@
     "snapshot": {
      "date": "2026-10-24T19:30Z",
      "period": 2,
-     "clock": 4920.0,
-     "state": "in",
-     "completed": false,
-     "detail": "82'",
+     "clock": 5400.0,
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "183",
@@ -3979,10 +3979,10 @@
     "snapshot": {
      "date": "2026-10-24T19:00Z",
      "period": 4,
-     "clock": 892.0,
+     "clock": 143.0,
      "state": "in",
      "completed": false,
-     "detail": "14:52 - 4th",
+     "detail": "2:23 - 4th",
      "teams": [
       {
        "id": "356",
@@ -3992,7 +3992,7 @@
        "nick": "Fighting Illini",
        "location": "Illinois",
        "home": true,
-       "score": "14"
+       "score": "21"
       },
       {
        "id": "2483",
@@ -4605,10 +4605,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.53,
-     "away": 0.47,
-     "spread": 0.02,
-     "t": "2026-10-24T21:22Z"
+     "home": 0.985,
+     "away": 0.015,
+     "spread": 0.01,
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NCAAF",
@@ -5309,7 +5309,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NCAAF",
@@ -5489,7 +5489,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NHL",
@@ -5816,7 +5816,7 @@
      "home": 0.5297,
      "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "MLB",
@@ -5899,10 +5899,10 @@
     "snapshot": {
      "date": "2026-10-24T19:30Z",
      "period": 3,
-     "clock": 970.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "16:10 - 3rd",
+     "detail": "End of 3rd",
      "teams": [
       {
        "id": "11",
@@ -5912,7 +5912,7 @@
        "nick": "Devils",
        "location": "New Jersey",
        "home": true,
-       "score": "1"
+       "score": "3"
       },
       {
        "id": "8",
@@ -5959,6 +5959,17 @@
        "tokens": [
         "49119935903704138658070684930899879330850059988820947174700584369914982356565",
         "15335738684094532327930604756111369743967655647040138821337687786500629692289"
+       ]
+      },
+      {
+       "line": -2.5,
+       "outcomes": [
+        "Devils",
+        "Kings"
+       ],
+       "tokens": [
+        "87193073751690309941449477991725603823370509051659023900362202362035513644933",
+        "47128105234805786442039389603827842384288514794072281596149095588138930637076"
        ]
       }
      ],
@@ -6059,10 +6070,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.57,
-     "away": 0.43,
-     "spread": 0.02,
-     "t": "2026-10-24T21:22Z"
+     "home": 0.995,
+     "away": 0.005,
+     "spread": 0.01,
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NHL",
@@ -6743,7 +6754,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NCAAF",
@@ -7063,7 +7074,7 @@
      "home": 0.5297,
      "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "MLB",
@@ -7845,10 +7856,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NBA",
@@ -8007,10 +8018,10 @@
     "snapshot": {
      "date": "2026-10-24T19:30Z",
      "period": 3,
-     "clock": 824.0,
+     "clock": 120.0,
      "state": "in",
      "completed": false,
-     "detail": "13:44 - 3rd",
+     "detail": "2:00 - 3rd",
      "teams": [
       {
        "id": "344",
@@ -8020,7 +8031,7 @@
        "nick": "Bulldogs",
        "location": "Mississippi State",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "201",
@@ -8030,7 +8041,7 @@
        "nick": "Sooners",
        "location": "Oklahoma",
        "home": false,
-       "score": "17"
+       "score": "20"
       }
      ]
     },
@@ -8633,10 +8644,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.045,
-     "away": 0.955,
-     "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "home": 0.0647,
+     "away": 0.9353,
+     "spread": 0.02,
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NCAAF",
@@ -9451,7 +9462,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NFL",
@@ -10252,10 +10263,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-24T21:22Z"
+     "t": "2026-10-24T21:55Z"
     }
    },
    "sport": "NBA",
@@ -11523,11 +11534,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 133,
+    "n": 136,
     "w": 38,
     "l": 58,
     "p": 0,
-    "pending": 37,
+    "pending": 40,
     "win_pct": 39.6,
     "units": 22.94,
     "roi_pct": 29.8,
@@ -11614,11 +11625,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 31,
+     "n": 34,
      "w": 12,
      "l": 14,
      "p": 0,
-     "pending": 5,
+     "pending": 8,
      "win_pct": 46.2,
      "units": 15.61,
      "roi_pct": 60.0,
@@ -11736,11 +11747,11 @@
      "wins_with_fair": 5
     },
     "NCAAF": {
-     "n": 30,
+     "n": 32,
      "w": 9,
      "l": 16,
      "p": 0,
-     "pending": 5,
+     "pending": 7,
      "win_pct": 36.0,
      "units": 14.87,
      "roi_pct": 59.5,
@@ -11766,11 +11777,11 @@
      "wins_with_fair": 5
     },
     "NHL": {
-     "n": 11,
+     "n": 12,
      "w": 6,
      "l": 4,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": 60.0,
      "units": 2.31,
      "roi_pct": 23.1,
@@ -11858,11 +11869,11 @@
      "wins_with_fair": 26
     },
     "no": {
-     "n": 58,
+     "n": 61,
      "w": 11,
      "l": 12,
      "p": 0,
-     "pending": 35,
+     "pending": 38,
      "win_pct": 47.8,
      "units": -1.24,
      "roi_pct": -7.3,
@@ -11891,6 +11902,75 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "424c5842",
+    "rec_date": "2026-10-24",
+    "rec_time_et": "17:55",
+    "sport": "NCAAF",
+    "event": "Iowa State Cyclones @ Arizona Wildcats",
+    "market": "Moneyline",
+    "selection": "Iowa State Cyclones",
+    "book": "FanDuel",
+    "rec_price": "+320",
+    "eff_price": "+320",
+    "fair_pct": "24.39",
+    "ev_pct": "2.45",
+    "stake": "0.79",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "5:47 PM scan; Pin home -352 / away +298; yes at +318; same price at theScore",
+    "units": null
+   },
+   {
+    "rec_id": "bde7eeaa",
+    "rec_date": "2026-10-24",
+    "rec_time_et": "17:55",
+    "sport": "NHL",
+    "event": "Nashville Predators @ Pittsburgh Penguins",
+    "market": "Moneyline",
+    "selection": "Nashville Predators",
+    "book": "theScore",
+    "rec_price": "+115",
+    "eff_price": "+115",
+    "fair_pct": "47.6",
+    "ev_pct": "2.34",
+    "stake": "0.16",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "5:47 PM scan; Pin home -116 / away +105; yes at +114",
+    "units": null
+   },
+   {
+    "rec_id": "d24ecb90",
+    "rec_date": "2026-10-24",
+    "rec_time_et": "17:55",
+    "sport": "NCAAF",
+    "event": "San Diego State Aztecs @ Colorado State Rams",
+    "market": "Total",
+    "selection": "Under 58.5",
+    "book": "FanDuel",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "52.7",
+    "ev_pct": "2.89",
+    "stake": "0.79",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "5:47 PM scan; Pin(alt) over +102 / under -123; yes at -107",
+    "units": null
+   },
    {
     "rec_id": "07289edc",
     "rec_date": "2026-10-24",
@@ -15285,6 +15365,28 @@
     "legs": []
    },
    {
+    "bet_id": "024963a9",
+    "book": "bet365",
+    "event": "Columbus Crew v Toronto FC (MLS)",
+    "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
+    "stake": "0.40",
+    "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
+    "legs": [
+     {
+      "leg": "Columbus Crew ML",
+      "result": "won"
+     },
+     {
+      "leg": "Over 1.5",
+      "result": "won"
+     },
+     {
+      "leg": "Josef Martinez 1+ Shots on Target",
+      "result": "void"
+     }
+    ]
+   },
+   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -15521,16 +15623,16 @@
     "at": "2026-10-22 23:23"
    }
   ],
-  "last_change_at": "2026-10-24 16:24 ET"
+  "last_change_at": "2026-10-24 17:55 ET"
  },
- "open_live_n": 37,
+ "open_live_n": 36,
  "open_stake_by_book": {
-  "bet365": 4.8,
+  "bet365": 4.4,
   "Caesars": 3.9,
   "DraftKings": 0.4,
   "FanDuel": 7.1,
   "PointsBet": 13.5
  },
- "hash": "05e668bb347b275f3c4d80d931f4fc52ee501c39",
- "generated_at": "2026-10-24T17:22:23-04:00"
+ "hash": "5f59c65e51db6a14e8e67159c42203825fa4051c",
+ "generated_at": "2026-10-24T17:55:21-04:00"
 }
