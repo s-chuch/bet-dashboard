@@ -111,7 +111,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-23,bet365,Arsenal v Everton (EPL),Sat Oct 24 10:00 AM ET,SGP 3-leg (50% profit boost),Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks,+105,+158,0.40,0.63,,,open,,53cb007b,,
 2026-10-23,Caesars,Ole Miss Rebels @ Texas Longhorns (NCAAF),Sat Oct 24 07:30 PM ET,SGP 2-leg (25% profit boost),Texas Longhorns ML + Kewan Lacy anytime TD,+254,+318,0.50,1.59,,,open,,90a7ff90,,
 2026-10-23,Caesars,Portland Trail Blazers @ Sacramento Kings,Fri Oct 23 10:00 PM ET,Moneyline (bonus bet $1.00),Sacramento Kings,+345,,1.00 (bonus),3.45,,,lost,0.00,3ec732ca,2026-10-24 00:40,auto
-2026-10-23,FanDuel,North Carolina Central @ Delaware State (NCAAF),,SGP (2 legs) (30% profit boost),Delaware State ML + Over 48.5 alt total,+123,+159,0.50,0.80,,,open,,c352d06d,,
+2026-10-23,FanDuel,North Carolina Central @ Delaware State (NCAAF),,SGP (2 legs) (30% profit boost),Delaware State ML + Over 48.5 alt total,+123,+159,0.50,0.80,,,lost,-0.50,c352d06d,2026-10-24 12:07,auto
 2026-10-19,Caesars,San Jose Sharks @ Toronto Maple Leafs,Sun Oct 19 07:30 PM ET,SGP 3-leg (profit boost) (30% profit boost),Sharks +1.5 + Maple Leafs -0.5 (cut off) + Auston Matthews 2+ (cut off),+300,+390,0.50,1.95,,,lost,-0.50,0fe543c7,2026-10-23 18:27,
 2026-10-19,Caesars,Philadelphia 76ers @ New York Knicks,Tue Oct 20 07:00 PM ET,Moneyline,Philadelphia 76ers,+152,,0.10,0.15,,,won,0.15,fddbd967,2026-10-23 18:27,
 2026-10-21,bet365,Golden State Valkyries @ Atlanta Dream (WNBA),Wed Oct 21 08:00 PM ET,SGP 3-leg (30% profit boost),Rhyne Howard 2+ Threes Made + 2 hidden legs,+100,+130,0.20,0.26,,,lost,-0.20,f56bae61,2026-10-23 18:27,

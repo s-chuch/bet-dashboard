@@ -53,23 +53,18 @@
    "stake": "0.40",
    "reason": "leg \"Over 20.5 match shots\": market/stat not recognised",
    "legs": []
-  },
-  {
-   "bet_id": "c352d06d",
-   "book": "FanDuel",
-   "event": "North Carolina Central @ Delaware State (NCAAF)",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "stake": "0.50",
-   "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Delaware State ML",
-     "result": "lost"
-    }
-   ]
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "c352d06d",
+   "book": "FanDuel",
+   "pick": "Delaware State ML + Over 48.5 alt total",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "NCCU 31-12 DSU",
+   "at": "2026-10-24 12:07"
+  },
   {
    "bet_id": "f5ba9f28",
    "book": "PointsBet",
@@ -285,17 +280,8 @@
    "pnl": 0.31,
    "final": "NE 24-30 CHI",
    "at": "2026-10-22 23:23"
-  },
-  {
-   "bet_id": "ff63a89d",
-   "book": "PointsBet",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "PAS 0-3 NAL",
-   "at": "2026-10-22 22:50"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 12:05 ET"
+ "last_change_at": "2026-10-24 12:07 ET"
 }
