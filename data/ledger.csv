@@ -378,3 +378,22 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-24 00:40,Caesars,3ec732ca,settled,0.00,"lost, no return"
 2026-10-24 11:56,PointsBet,f5ba9f28,settled,0.00,"lost, no return"
 2026-10-24 12:07,FanDuel,c352d06d,settled,0.00,"lost, no return"
+2026-10-24 14:54,bet365,80b13e8e,stake,-0.40,stake
+2026-10-24 14:54,bet365,fa459703,stake,-0.40,stake
+2026-10-24 14:54,bet365,0e1e4da6,stake,-0.40,stake
+2026-10-24 14:54,bet365,024963a9,stake,-0.40,stake
+2026-10-24 14:54,bet365,9be2483a,stake,-0.40,stake
+2026-10-24 14:54,bet365,1c6e8a75,stake,-0.40,stake
+2026-10-24 14:54,bet365,affcdcba,stake,-0.40,stake
+2026-10-24 14:54,bet365,e3ec8310,stake,-0.40,stake
+2026-10-24 14:54,FanDuel,605a8aad,stake,-0.50,stake
+2026-10-24 14:54,FanDuel,7da8824a,stake,-0.50,stake
+2026-10-24 14:54,FanDuel,febe6211,stake,-0.50,stake
+2026-10-24 14:54,FanDuel,e0f0a593,stake,-0.50,stake
+2026-10-24 14:54,FanDuel,c077f229,stake,-0.50,stake
+2026-10-24 14:54,FanDuel,8ed4e0d5,stake,-0.50,stake
+2026-10-24 14:54,Caesars,e65b4c69,stake,-0.50,stake
+2026-10-24 14:54,Caesars,8305b93d,stake,-0.20,stake
+2026-10-24 14:54,Caesars,d91a6de4,stake,-0.50,stake
+2026-10-24 14:54,Caesars,f2b81794,stake,-0.50,stake
+2026-10-24 14:54,Caesars,62b3a254,stake,-0.20,stake
