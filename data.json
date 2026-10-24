@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NFL",
@@ -1783,11 +1783,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 5,
+     "period": 6,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Top 6th",
      "teams": [
       {
        "id": "8",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.698,
-     "away": 0.302,
+     "home": 0.725,
+     "away": 0.275,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "MLB",
@@ -2113,11 +2113,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 5,
+     "period": 6,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Top 6th",
      "teams": [
       {
        "id": "8",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.698,
-     "away": 0.302,
+     "home": 0.725,
+     "away": 0.275,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "MLB",
@@ -3338,7 +3338,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NCAAF",
@@ -3463,11 +3463,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 5,
+     "period": 6,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Top 6th",
      "teams": [
       {
        "id": "8",
@@ -3727,10 +3727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.698,
-     "away": 0.302,
+     "home": 0.725,
+     "away": 0.275,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "MLB",
@@ -3824,11 +3824,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 5,
+     "period": 6,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Top 6th",
      "teams": [
       {
        "id": "8",
@@ -4088,10 +4088,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.698,
-     "away": 0.302,
+     "home": 0.725,
+     "away": 0.275,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "MLB",
@@ -4422,10 +4422,10 @@
     "snapshot": {
      "date": "2026-10-24T00:00Z",
      "period": 2,
-     "clock": 347.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "5:47 - 2nd",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "4",
@@ -4445,7 +4445,7 @@
        "nick": "Canadiens",
        "location": "Montreal",
        "home": false,
-       "score": "2"
+       "score": "3"
       }
      ]
     },
@@ -4538,10 +4538,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.225,
-     "away": 0.775,
+     "home": 0.075,
+     "away": 0.925,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NHL",
@@ -5294,7 +5294,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NCAAF",
@@ -6072,10 +6072,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2129,
-     "away": 0.7871,
+     "home": 0.205,
+     "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-24T01:39Z"
+     "t": "2026-10-24T01:53Z"
     }
    },
    "sport": "NBA",
@@ -11231,6 +11231,29 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "c352d06d",
+    "book": "FanDuel",
+    "event": "North Carolina Central @ Delaware State (NCAAF)",
+    "pick": "Delaware State ML + Over 48.5 alt total",
+    "stake": "0.50",
+    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Delaware State ML",
+      "result": "lost"
+     }
+    ]
    }
   ],
   "last_settled": [
@@ -11460,7 +11483,7 @@
     "at": "2026-10-21 23:03"
    }
   ],
-  "last_change_at": "2026-10-23 21:39 ET"
+  "last_change_at": "2026-10-23 21:53 ET"
  },
  "open_live_n": 26,
  "open_stake_by_book": {
@@ -11470,6 +11493,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "c563fcdd9769cc7d92f1008dee60798f192e4b6d",
- "generated_at": "2026-10-23T21:39:58-04:00"
+ "hash": "5eacc7f932e960794b82f2466f19636373ee09f4",
+ "generated_at": "2026-10-23T21:53:41-04:00"
 }
