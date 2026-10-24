@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NFL",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6881,
-     "away": 0.3119,
-     "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "home": 0.6847,
+     "away": 0.3153,
+     "spread": 0.02,
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "MLB",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6881,
-     "away": 0.3119,
-     "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "home": 0.6847,
+     "away": 0.3153,
+     "spread": 0.02,
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "MLB",
@@ -3338,7 +3338,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NCAAF",
@@ -3727,10 +3727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6881,
-     "away": 0.3119,
-     "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "home": 0.6847,
+     "away": 0.3153,
+     "spread": 0.02,
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "MLB",
@@ -3825,10 +3825,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 4,
-     "clock": 82.0,
+     "clock": 34.3,
      "state": "in",
      "completed": false,
-     "detail": "1:22 - 4th",
+     "detail": "34.3 - 4th",
      "teams": [
       {
        "id": "27",
@@ -3838,7 +3838,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "99"
+       "score": "101"
       },
       {
        "id": "28",
@@ -4549,7 +4549,7 @@
      "home": 0.005,
      "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NBA",
@@ -4862,10 +4862,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6881,
-     "away": 0.3119,
-     "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "home": 0.6847,
+     "away": 0.3153,
+     "spread": 0.02,
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "MLB",
@@ -5196,10 +5196,10 @@
     "snapshot": {
      "date": "2026-10-24T00:00Z",
      "period": 2,
-     "clock": 451.0,
+     "clock": 366.0,
      "state": "in",
      "completed": false,
-     "detail": "7:31 - 2nd",
+     "detail": "6:06 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -5312,10 +5312,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.215,
-     "away": 0.785,
+     "home": 0.225,
+     "away": 0.775,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NHL",
@@ -6068,7 +6068,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T01:36Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NCAAF",
@@ -6849,7 +6849,7 @@
      "home": 0.2129,
      "away": 0.7871,
      "spread": 0.01,
-     "t": "2026-10-24T01:35Z"
+     "t": "2026-10-24T01:38Z"
     }
    },
    "sport": "NBA",
@@ -11990,6 +11990,29 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "c352d06d",
+    "book": "FanDuel",
+    "event": "North Carolina Central @ Delaware State (NCAAF)",
+    "pick": "Delaware State ML + Over 48.5 alt total",
+    "stake": "0.50",
+    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Delaware State ML",
+      "result": "lost"
+     }
+    ]
    }
   ],
   "last_settled": [
@@ -12219,7 +12242,7 @@
     "at": "2026-10-21 22:26"
    }
   ],
-  "last_change_at": "2026-10-23 21:35 ET"
+  "last_change_at": "2026-10-23 21:38 ET"
  },
  "open_live_n": 27,
  "open_stake_by_book": {
@@ -12229,6 +12252,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "0aec4ece527c72944ccdac4322485444e43f2459",
- "generated_at": "2026-10-23T21:36:14-04:00"
+ "hash": "670f2593c9c89e574498d317ff76fbc5d2107ec5",
+ "generated_at": "2026-10-23T21:38:13-04:00"
 }
