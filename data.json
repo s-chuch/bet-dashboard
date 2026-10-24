@@ -7761,10 +7761,10 @@
     "snapshot": {
      "date": "2026-10-24T19:30Z",
      "period": 3,
-     "clock": 84.0,
+     "clock": 80.0,
      "state": "in",
      "completed": false,
-     "detail": "1:24 - 3rd",
+     "detail": "1:20 - 3rd",
      "teams": [
       {
        "id": "344",
@@ -8387,9 +8387,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.035,
-     "away": 0.965,
-     "spread": 0.01,
+     "home": 0.0452,
+     "away": 0.9548,
+     "spread": 0.02,
      "t": "2026-10-24T21:56Z"
     }
    },
@@ -15078,6 +15078,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -15134,6 +15143,15 @@
       "result": "void"
      }
     ]
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
@@ -15363,7 +15381,7 @@
     "at": "2026-10-22 23:23"
    }
   ],
-  "last_change_at": "2026-10-24 17:55 ET"
+  "last_change_at": "2026-10-24 17:56 ET"
  },
  "open_live_n": 35,
  "open_stake_by_book": {
@@ -15373,6 +15391,6 @@
   "FanDuel": 6.6,
   "PointsBet": 13.5
  },
- "hash": "c60ac73a60b1585cddfa684a696258dbf8d8239d",
- "generated_at": "2026-10-24T17:56:06-04:00"
+ "hash": "eed1588ce4366b54e6cb516e7b02eb1418040a61",
+ "generated_at": "2026-10-24T17:56:37-04:00"
 }
