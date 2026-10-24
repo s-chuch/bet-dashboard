@@ -90,14 +90,15 @@ async function espn(u){if(!/^https:\/\/(site\.api|sports\.core\.api)\.espn\.com\
 const corePath=m=>{const[sp,lg]=m.path.split("/");return`https://sports.core.api.espn.com/v2/sports/${sp}/leagues/${lg}/events/${m.id}/competitions/${m.id}`};
 // full=true: every unfinished game (60s cycle); full=false: only live / about-to-start games (10s cycle)
 async function refreshScores(full){
-  const need={};for(const m of allMatches()){const g=gameFor(m);if(g&&g.completed)continue;if(!full&&!isActive(m))continue;need[key(m)]=m}
+  const need={};for(const m of allMatches()){const g=gameFor(m);if(g&&g.completed&&!g.bfinal)continue;if(!full&&!isActive(m))continue;need[key(m)]=m}
   await Promise.all(Object.values(need).map(async m=>{
     const d=await espn(`${ESPN}${m.path}/scoreboard?dates=${m.date}`+(m.groups?`&groups=${m.groups}`:""));
     for(const ev of (d&&d.events)||[]){const old=games[ev.id],nw=fromEvent(ev);
       // ESPN's CDN sometimes serves an older copy: same period, clock higher, same score -> ignore it
       if(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof old.clock==="number"&&typeof nw.clock==="number"&&nw.clock>old.clock+0.5&&
          old.teams.map(t=>t.score).join()===nw.teams.map(t=>t.score).join()&&CLOCK_SPORTS.has(m.path))continue;
-      if(old&&old.state==="post"&&nw.state!=="post")continue;
+      if(old&&old.state==="post"&&nw.state!=="post"&&!old.bfinal)continue;
+      if(old&&old.backup&&!old.bfinal&&nw.state!=="post"&&advance(old,nw)>0)continue;   // a faster feed is ahead of ESPN: keep it until ESPN catches up
       games[ev.id]=nw;
       // local clock: only run it if the last two fetches showed the clock moving (football clocks stop a lot)
       const moving=!!(old&&old.state==="in"&&nw.state==="in"&&old.period===nw.period&&typeof nw.clock==="number"&&typeof old.clock==="number"&&nw.clock<old.clock&&nw.clock>0&&!/end|half|intermission|delay/i.test(nw.detail||""));
@@ -118,6 +119,10 @@ async function refreshScores(full){
     const d=await espn(`${ESPN}${m.path}/summary?event=${m.id}`);if(!d||(!d.boxscore&&!d.plays&&!d.drives))return;
     const fin=(S&&S.fin||0)+(g.completed?1:0);summaries[m.id]={d,t:Date.now(),path:m.path,fin,done:fin>=3}}));
 }
+// How far along game a is compared with game b: >0 a is ahead, <0 behind, 0 same. Order: state, then total score (a score never goes down).
+const STATE_RANK={pre:0,in:1,post:2};
+const scoreSum=g=>(g&&g.teams||[]).reduce((n,t)=>n+(parseInt(t.score,10)||0),0);
+function advance(a,b){const d=(STATE_RANK[a.state]||0)-(STATE_RANK[b.state]||0);if(d)return d;return scoreSum(a)-scoreSum(b)}
 // Free backup score source: MLB's own StatsAPI. ESPN sometimes lists an MLB game as "Scheduled" for many minutes after the first pitch
 // (or as in-progress after the last out); when MLB says the game is further along, advance the game state. ESPN stays the primary.
 const MLB_API="https://statsapi.mlb.com/api/v1/schedule?sportId=1&hydrate=linescore&date=";
@@ -131,7 +136,9 @@ async function mlbBackup(ms){const list=ms.filter(m=>m.path==="baseball/mlb"),da
       const sc=g.teams.map(y=>{const o=y.home?ls.teams&&ls.teams.home:ls.teams&&ls.teams.away;return{...y,score:o&&o.runs!=null?String(o.runs):y.score}});
       if(st==="Final"&&g.state!=="post"&&hit.status.detailedState==="Final")games[m.id]={...g,state:"post",completed:true,detail:"Final",teams:sc};
       else if(st==="Live"&&g.state==="pre"&&ls.currentInning){const top=ls.inningHalf==="Top",half=ls.isTopInning===true||top?"Top":"Bot";
-        games[m.id]={...g,state:"in",completed:false,period:ls.currentInning,outs:ls.outs,detail:`${half} ${ordn(ls.currentInning)}`,teams:sc};CLK[m.id]={clock:null,t:Date.now(),moving:false}}}}}
+        games[m.id]={...g,state:"in",completed:false,period:ls.currentInning,outs:ls.outs,detail:`${half} ${ordn(ls.currentInning)}`,teams:sc};CLK[m.id]={clock:null,t:Date.now(),moving:false}}
+      else if(st==="Live"&&g.state==="in"&&ls.currentInning&&(scoreSum({teams:sc})>scoreSum(g)||ls.currentInning>(g.period||0))){   // MLB's own feed is ahead of ESPN: take its score and inning
+        const top=ls.inningHalf==="Top"||ls.isTopInning===true;games[m.id]={...g,period:ls.currentInning,outs:ls.outs,detail:`${top?"Top":"Bot"} ${ordn(ls.currentInning)} · via MLB`,teams:sc,backup:"MLB StatsAPI"}}}}}
 // Backup game status when ESPN is slow to flip a game live: only games past their listed start that ESPN still calls "pre".
 // ESPN stays primary (it takes over the moment it reports the game live) and the server never settles on a backup alone.
 function lateGames(ms){return ms.filter(m=>{const g=gameFor(m);return g&&!g.completed&&g.state==="pre"&&g.date&&Date.now()>=Date.parse(g.date)-60000&&Date.now()-Date.parse(g.date)<4*3600e3})}
@@ -153,12 +160,21 @@ async function anBackup(ms){const late=lateGames(ms);if(!late.length)return;
 // 2) Official league feeds that block browser requests (NHL api-web.nhle.com): fetched by the GitHub live loop into live_status.json
 //    on the live-feed branch (scripts/live_status.py), read here through the contents API only while a game is late.
 const LS_URL="https://api.github.com/repos/s-chuch/bet-dashboard/contents/live_status.json?ref=live-feed";let LS={t:0,games:{}},LS_AT=0;
-async function feedBackup(ms){const late=lateGames(ms).filter(m=>{const g=gameFor(m);return g&&g.state==="pre"});if(!late.length)return;
+async function feedBackup(ms){const cand=ms.filter(m=>{const g=gameFor(m);if(!g||(g.completed&&!g.bfinal)||g.bfinal)return false;
+    if(g.state==="in")return true;return g.state==="pre"&&g.date&&Date.now()>=Date.parse(g.date)-60000&&Date.now()-Date.parse(g.date)<4*3600e3});if(!cand.length)return;
   let tok="";try{tok=localStorage.getItem("bt.gh.settle")||""}catch(e){}
+  if(tok==="supabase_session_no_github_token")tok="";
   if(Date.now()-LS_AT>(tok?15000:70000)){LS_AT=Date.now();
     try{const r=await tfetch(LS_URL,{cache:"no-store",headers:{Accept:"application/vnd.github.raw",...(tok?{Authorization:"Bearer "+tok}:{})}});if(!r.ok)throw 0;const j=await r.json();LS={t:Date.parse(j.t)||0,games:j.games||{}};FEED.lsf={ok:Date.now()}}catch(e){FEED.lsf={bad:"no live feed yet"}}}
   if(!LS.t||Date.now()-LS.t>180000)return;
-  for(const m of late){const x=LS.games[m.id],g=gameFor(m);if(x&&x.state==="in"&&g)applyBackup(m,g,x.away,x.home,x.detail,x.src||"league feed")}}
+  for(const m of cand){const x=LS.games[m.id],g=gameFor(m);if(!x||!g)continue;
+    const away=Number(x.away),home=Number(x.home),src=x.src||"league feed";
+    if(x.state==="post"&&g.state!=="post"&&isFinite(away)&&isFinite(home)){   // display only: the server still waits for ESPN's final before settling
+      games[m.id]={...g,state:"post",completed:true,bfinal:true,backup:src,detail:`Final · settling (via ${src})`,teams:g.teams.map(y=>({...y,score:String(y.home?home:away)}))};continue}
+    if(x.state!=="in")continue;
+    if(g.state==="pre")applyBackup(m,g,x.away,x.home,x.detail,src);
+    else if(g.state==="in"&&isFinite(away)&&isFinite(home)&&away+home>scoreSum(g))   // the league feed already has a newer score than ESPN
+      games[m.id]={...g,teams:g.teams.map(y=>({...y,score:String(y.home?home:away)})),detail:`${x.detail||g.detail} · via ${src}`,backup:src}}}
 // Free backup for soccer: SofaScore's public live feed covers leagues ESPN never updates (FA Cup qualifying, lower divisions, ...).
 // Unofficial API, so it is only used when ESPN still says "not started" after kickoff, and ESPN takes over as soon as it reports the game live.
 const SOFA="https://api.sofascore.com/api/v1/";const SOFA_ID={};let SOFA_LIVE={t:0,ev:[]},SOFA_FIN={};
