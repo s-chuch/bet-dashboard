@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T03:30Z"
+     "t": "2026-10-24T04:26Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T03:30Z"
+     "t": "2026-10-24T04:26Z"
     }
    },
    "sport": "NFL",
@@ -2671,10 +2671,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.925,
-     "away": 0.075,
+     "home": 0.915,
+     "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-24T03:30Z"
+     "t": "2026-10-24T04:26Z"
     }
    },
    "sport": "NCAAF",
@@ -3809,7 +3809,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T03:31Z"
+     "t": "2026-10-24T04:26Z"
     }
    },
    "sport": "NCAAF",
@@ -3854,11 +3854,11 @@
     "id": "401909852",
     "snapshot": {
      "date": "2026-10-24T02:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 110.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "1:50 - 4th",
      "teams": [
       {
        "id": "23",
@@ -3868,7 +3868,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "64"
+       "score": "117"
       },
       {
        "id": "22",
@@ -3878,7 +3878,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "59"
+       "score": "125"
       }
      ]
     },
@@ -4587,10 +4587,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.375,
-     "away": 0.625,
+     "home": 0.045,
+     "away": 0.955,
      "spread": 0.01,
-     "t": "2026-10-24T03:30Z"
+     "t": "2026-10-24T04:26Z"
     }
    },
    "sport": "NBA",
@@ -4734,51 +4734,6 @@
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Washington Commanders",
-   "result": "lost",
-   "pnl": -0.1,
-   "stake": 0.1,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Chicago Bulls @ Toronto Raptors",
-   "pick": "Chicago Bulls",
-   "result": "lost",
-   "pnl": -0.1,
-   "stake": 0.1,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Dallas Mavericks @ Houston Rockets",
-   "pick": "Dallas Mavericks",
-   "result": "lost",
-   "pnl": -0.1,
-   "stake": 0.1,
    "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:27",
@@ -5374,17 +5329,6 @@
    "clv": null
   },
   {
-   "date": "2026-10-18",
-   "book": "theScore",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "pick": "Guardians ML + Freddy Peralta 4+ K + Jonathan Aranda 1+ hits",
-   "result": "lost",
-   "pnl": -2.0,
-   "stake": 2.0,
-   "auto": true,
-   "clv": null
-  },
-  {
    "date": "2026-10-19",
    "book": "theScore",
    "event": "Anaheim Ducks @ New York Rangers",
@@ -5492,28 +5436,6 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Cade Cunningham 22+ pts + Jayson Tatum 24+ pts",
-   "result": "lost",
-   "pnl": -0.8,
-   "stake": 0.8,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Caesars",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Under 52 + Brock Purdy 250+ pass yds",
-   "result": "won",
-   "pnl": 2.17,
-   "stake": 0.5,
-   "auto": true,
    "clv": null
   },
   {
@@ -5951,226 +5873,6 @@
    "pnl": -0.5,
    "stake": 0.5,
    "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "Hard Rock",
-   "event": "FC Porto v PSV Eindhoven",
-   "pick": "PSV Eindhoven",
-   "result": "won",
-   "pnl": 19.0,
-   "stake": 5.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Inter Club de Escaldes v Universitatea Craiova",
-   "pick": "Inter Club de Escaldes",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 33.43,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Trabzonspor v Hearts",
-   "pick": "Hearts",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 33.43,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Paphos FC v Riga FC",
-   "pick": "Riga FC",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 33.46,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "bet365",
-   "event": "Houston Texans @ Jacksonville Jaguars",
-   "pick": "Nico Collins 50+ rec yds + Parker Washington 50+ rec yds + Parker Washington 4+ receptions",
-   "result": "won",
-   "pnl": 0.33,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "bet365",
-   "event": "Columbus Blue Jackets @ Minnesota Wild",
-   "pick": "Kirill Kaprizov 1+ pts + Matthew Boldy 1+ pts + Matthew Boldy 3+ SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Over 51.5",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Rodez v Montpellier HSC",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "San Telmo v Defensores de Belgrano",
-   "pick": "Draw",
-   "result": "won",
-   "pnl": 15.5,
-   "stake": 10.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Al-Fayha FC v Al Ahli Jeddah",
-   "pick": "Al-Fayha FC",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Al-Kuwait v Al Sulaibikhat",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Phnom Penh Crown v Life FC SihanoukVille",
-   "pick": "Draw",
-   "result": "won",
-   "pnl": 60.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Tai Po FC v Southern District",
-   "pick": "Southern District RSA",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Panteras de Aguascalientes v Lobos Plateados",
-   "pick": "Panteras de Aguascalientes",
-   "result": "lost",
-   "pnl": -25.0,
-   "stake": 25.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Cienciano v UTC Cajamarca",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Houston Texans @ Jacksonville Jaguars",
-   "pick": "SGP 3-leg C $0.50 (legs not shown in screenshot)",
-   "result": "won",
-   "pnl": 0.56,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Cesena v Avellino",
-   "pick": "Draw",
-   "result": "won",
-   "pnl": 22.5,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Celta Vigo v Alaves",
-   "pick": "Alaves",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Chicago Red Stars Women v Seattle Reign Women",
-   "pick": "Chicago Red Stars Women",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Tennessee Titans @ Indianapolis Colts",
-   "pick": "Tennessee Titans +14.5",
-   "result": "won",
-   "pnl": 8.33,
-   "stake": 25.0,
-   "auto": false,
    "clv": null
   }
  ],
@@ -10089,6 +9791,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "205e3466f4ed5f321c5640ee2d538c49e6ed3e19",
- "generated_at": "2026-10-23T23:31:01-04:00"
+ "hash": "0df501e65659329a812d13ea9885d6853214bca7",
+ "generated_at": "2026-10-24T00:26:21-04:00"
 }
