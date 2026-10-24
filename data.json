@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:33Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:33Z"
     }
    },
    "sport": "NFL",
@@ -1783,11 +1783,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 6,
+     "period": 7,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 6th",
+     "detail": "Bot 7th",
      "teams": [
       {
        "id": "8",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.725,
-     "away": 0.275,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "MLB",
@@ -2113,11 +2113,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 6,
+     "period": 7,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 6th",
+     "detail": "Bot 7th",
      "teams": [
       {
        "id": "8",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.725,
-     "away": 0.275,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "MLB",
@@ -3338,7 +3338,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "NCAAF",
@@ -3463,11 +3463,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 6,
+     "period": 7,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 6th",
+     "detail": "Bot 7th",
      "teams": [
       {
        "id": "8",
@@ -3727,10 +3727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.725,
-     "away": 0.275,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "MLB",
@@ -3824,11 +3824,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 6,
+     "period": 7,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 6th",
+     "detail": "Bot 7th",
      "teams": [
       {
        "id": "8",
@@ -4088,10 +4088,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.725,
-     "away": 0.275,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "MLB",
@@ -4421,11 +4421,11 @@
     "id": "401892564",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 355.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "5:55 - 3rd",
      "teams": [
       {
        "id": "4",
@@ -4538,10 +4538,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.075,
-     "away": 0.925,
+     "home": 0.025,
+     "away": 0.975,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:33Z"
     }
    },
    "sport": "NHL",
@@ -5294,7 +5294,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:33Z"
     }
    },
    "sport": "NCAAF",
@@ -5339,11 +5339,11 @@
     "id": "401909852",
     "snapshot": {
      "date": "2026-10-24T02:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 233.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/23 - 10:00 PM EDT",
+     "detail": "3:53 - 1st",
      "teams": [
       {
        "id": "23",
@@ -5353,7 +5353,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "0"
+       "score": "25"
       },
       {
        "id": "22",
@@ -5363,7 +5363,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "0"
+       "score": "17"
       }
      ]
     },
@@ -6072,10 +6072,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.205,
-     "away": 0.795,
+     "home": 0.3485,
+     "away": 0.6515,
      "spread": 0.01,
-     "t": "2026-10-24T01:53Z"
+     "t": "2026-10-24T02:34Z"
     }
    },
    "sport": "NBA",
@@ -11493,6 +11493,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "5eacc7f932e960794b82f2466f19636373ee09f4",
- "generated_at": "2026-10-23T21:53:41-04:00"
+ "hash": "d79199985605197b8174625078f6cfc6ca917918",
+ "generated_at": "2026-10-23T22:34:09-04:00"
 }
