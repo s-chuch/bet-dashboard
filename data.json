@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T03:28Z"
+     "t": "2026-10-24T03:29Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T03:28Z"
+     "t": "2026-10-24T03:29Z"
     }
    },
    "sport": "NFL",
@@ -2674,7 +2674,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T03:28Z"
+     "t": "2026-10-24T03:30Z"
     }
    },
    "sport": "NCAAF",
@@ -3809,7 +3809,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T03:28Z"
+     "t": "2026-10-24T03:30Z"
     }
    },
    "sport": "NCAAF",
@@ -4590,7 +4590,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-24T03:28Z"
+     "t": "2026-10-24T03:29Z"
     }
    },
    "sport": "NBA",
@@ -9811,6 +9811,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -9827,6 +9836,20 @@
     "stake": "0.40",
     "reason": "no ESPN game matched",
     "legs": []
+   },
+   {
+    "bet_id": "c352d06d",
+    "book": "FanDuel",
+    "event": "North Carolina Central @ Delaware State (NCAAF)",
+    "pick": "Delaware State ML + Over 48.5 alt total",
+    "stake": "0.50",
+    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Delaware State ML",
+      "result": "lost"
+     }
+    ]
    }
   ],
   "last_settled": [
@@ -10056,7 +10079,7 @@
     "at": "2026-10-22 21:41"
    }
   ],
-  "last_change_at": "2026-10-23 23:27 ET"
+  "last_change_at": "2026-10-23 23:29 ET"
  },
  "open_live_n": 21,
  "open_stake_by_book": {
@@ -10066,6 +10089,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "2ff9e75b5a9d25071f295188202fb6b1a0ee3d04",
- "generated_at": "2026-10-23T23:28:13-04:00"
+ "hash": "42779395dea5722740a937949a8a2ccf9721839a",
+ "generated_at": "2026-10-23T23:30:28-04:00"
 }
