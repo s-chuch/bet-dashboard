@@ -124,11 +124,11 @@
     "id": "401878768",
     "snapshot": {
      "date": "2026-10-24T14:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "359",
@@ -138,7 +138,7 @@
        "nick": "Arsenal",
        "location": "Arsenal",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "368",
@@ -991,7 +991,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T13:51Z"
+     "t": "2026-10-24T14:45Z"
     }
    },
    "sport": "NFL",
@@ -1720,7 +1720,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T13:51Z"
+     "t": "2026-10-24T14:45Z"
     }
    },
    "sport": "NFL",
@@ -2678,7 +2678,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-24T13:51Z"
+     "t": "2026-10-24T14:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3110,11 +3110,11 @@
     "id": "401878768",
     "snapshot": {
      "date": "2026-10-24T14:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "359",
@@ -3124,7 +3124,7 @@
        "nick": "Arsenal",
        "location": "Arsenal",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "368",
@@ -3813,7 +3813,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T13:51Z"
+     "t": "2026-10-24T14:46Z"
     }
    },
    "sport": "NCAAF",
@@ -9038,6 +9038,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "807999c6836150d33b92fbb3786a9bfbdcbc3d69",
- "generated_at": "2026-10-24T09:51:05-04:00"
+ "hash": "a878f6d5c162876370d0a85705f8fac7c7dfa236",
+ "generated_at": "2026-10-24T10:46:00-04:00"
 }
