@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NFL",
@@ -1783,11 +1783,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 1st",
+     "detail": "Top 2nd",
      "teams": [
       {
        "id": "8",
@@ -1797,7 +1797,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "30",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "MLB",
@@ -2113,11 +2113,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 1st",
+     "detail": "Top 2nd",
      "teams": [
       {
        "id": "8",
@@ -2127,7 +2127,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "30",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "MLB",
@@ -2489,10 +2489,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 2,
-     "clock": 3660.0,
+     "clock": 4680.0,
      "state": "in",
      "completed": false,
-     "detail": "61'",
+     "detail": "78'",
      "teams": [
       {
        "id": "2022",
@@ -3409,7 +3409,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NCAAF",
@@ -3534,11 +3534,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 1st",
+     "detail": "Top 2nd",
      "teams": [
       {
        "id": "8",
@@ -3548,7 +3548,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "30",
@@ -3798,10 +3798,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "MLB",
@@ -3895,11 +3895,11 @@
     "id": "401909846",
     "snapshot": {
      "date": "2026-10-23T23:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 524.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "8:44 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -3909,7 +3909,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "52"
+       "score": "59"
       },
       {
        "id": "28",
@@ -3919,7 +3919,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": false,
-       "score": "60"
+       "score": "64"
       }
      ]
     },
@@ -4617,10 +4617,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.155,
-     "away": 0.845,
+     "home": 0.2426,
+     "away": 0.7574,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NBA",
@@ -4669,11 +4669,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Mid 1st",
+     "detail": "Top 2nd",
      "teams": [
       {
        "id": "8",
@@ -4683,7 +4683,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "30",
@@ -4933,10 +4933,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "MLB",
@@ -5031,10 +5031,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 3,
-     "clock": 717.0,
+     "clock": 304.0,
      "state": "in",
      "completed": false,
-     "detail": "11:57 - 3rd",
+     "detail": "5:04 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -5044,7 +5044,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "45"
+       "score": "57"
       },
       {
        "id": "16",
@@ -5054,7 +5054,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "57"
+       "score": "71"
       }
      ]
     },
@@ -5752,10 +5752,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.215,
-     "away": 0.785,
+     "home": 0.125,
+     "away": 0.875,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NBA",
@@ -6041,10 +6041,10 @@
     "snapshot": {
      "date": "2026-10-24T00:00Z",
      "period": 1,
-     "clock": 728.0,
+     "clock": 302.0,
      "state": "in",
      "completed": false,
-     "detail": "12:08 - 1st",
+     "detail": "5:02 - 1st",
      "teams": [
       {
        "id": "4",
@@ -6157,10 +6157,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.555,
-     "away": 0.445,
+     "home": 0.565,
+     "away": 0.435,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NHL",
@@ -6913,7 +6913,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NCAAF",
@@ -7694,7 +7694,7 @@
      "home": 0.205,
      "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-24T00:24Z"
+     "t": "2026-10-24T00:42Z"
     }
    },
    "sport": "NBA",
@@ -13067,6 +13067,6 @@
   "FanDuel": 4.1,
   "PointsBet": 48.43
  },
- "hash": "376f02f43fd706bd906f6a2f605fb02affd26568",
- "generated_at": "2026-10-23T20:24:52-04:00"
+ "hash": "922cd533a0586a503649caa7f50ab6a190f43311",
+ "generated_at": "2026-10-23T20:42:41-04:00"
 }
