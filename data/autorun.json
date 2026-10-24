@@ -8,32 +8,18 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "c352d06d",
-   "book": "FanDuel",
-   "event": "North Carolina Central @ Delaware State (NCAAF)",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "stake": "0.50",
-   "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Delaware State ML",
-     "result": "lost"
-    }
-   ]
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "442ed624",
+   "book": "DraftKings",
+   "pick": "Anthony Davis 13+ Rebounds",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "TOR 112-102 WSH",
+   "at": "2026-10-23 21:39"
+  },
   {
    "bet_id": "f43fe5ec",
    "book": "DraftKings",
@@ -249,17 +235,8 @@
    "pnl": 0.0,
    "final": "TIJ 2-2 TOL",
    "at": "2026-10-21 23:03"
-  },
-  {
-   "bet_id": "34bb5692",
-   "book": "DraftKings",
-   "pick": "Matthew Tkachuk 2+ SOG + Carter Verhaeghe 2+ SOG + Brady Tkachuk 3+ SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "FLA 1-5 OTT",
-   "at": "2026-10-21 22:26"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 21:38 ET"
+ "last_change_at": "2026-10-23 21:39 ET"
 }

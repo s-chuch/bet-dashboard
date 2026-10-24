@@ -122,7 +122,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-22,DraftKings,New England Patriots @ Chicago Bears,Thu Oct 22 08:15 PM ET,SGP 2-pick parlay (20% parlay boost),D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds,+440,+528,0.20,1.06,,,won,1.06,541e7eb8,2026-10-23 00:30,manual
 2026-10-22,Caesars,New England Patriots @ Chicago Bears,Thu Oct 22 08:16 PM ET,Player prop,D'Andre Swift 2+ Touchdowns,+325,,0.10,0.33,,,lost,-0.10,b8714d0e,2026-10-22 23:23,auto
 2026-10-22,Caesars,New England Patriots @ Chicago Bears,Thu Oct 22 08:16 PM ET,Player prop (live),Drake Maye 310+ Passing Yards,+305,,0.10,0.31,,,won,0.31,5f4df7f4,2026-10-22 23:23,auto
-2026-10-23,DraftKings,Toronto Raptors @ Washington Wizards,Fri Oct 23 07:00 PM ET,Player prop (50% boost),Anthony Davis 13+ Rebounds,+164,+246,0.30,0.73,,,open,,442ed624,,
+2026-10-23,DraftKings,Toronto Raptors @ Washington Wizards,Fri Oct 23 07:00 PM ET,Player prop (50% boost),Anthony Davis 13+ Rebounds,+164,+246,0.30,0.73,,,lost,-0.30,442ed624,2026-10-23 21:39,auto
 2026-10-23,DraftKings,Tampa Bay Rays @ Milwaukee Brewers,Fri Oct 23 08:00 PM ET,Player prop (30% boost),Jake Bauers 2+ Total Bases,+162,+211,0.30,0.63,,,open,,2b9c8188,,
 2026-10-23,DraftKings,Montreal Alouettes @ Toronto Argonauts (CFL),Fri Oct 23 07:00 PM ET,SGP 3-pick parlay (60% parlay boost),Alouettes ML + Argonauts +14.5 alt spread + Under 50.5,+305,+488,0.30,1.46,,,open,,3ce29562,,
 2026-10-23,DraftKings,Minnesota Timberwolves @ Orlando Magic,Fri Oct 23 07:00 PM ET,Player prop (50% boost),Rudy Gobert 14+ Rebounds,+166,+249,0.30,0.74,,,lost,-0.30,f43fe5ec,2026-10-23 21:35,auto
