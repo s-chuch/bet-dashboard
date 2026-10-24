@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T15:56Z"
+     "t": "2026-10-24T16:05Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T15:56Z"
+     "t": "2026-10-24T16:05Z"
     }
    },
    "sport": "NFL",
@@ -2610,7 +2610,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-24T15:56Z"
+     "t": "2026-10-24T16:05Z"
     }
    },
    "sport": "NCAAF",
@@ -3048,9 +3048,9 @@
      "date": "2026-10-24T14:00Z",
      "period": 2,
      "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+8'",
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "359",
@@ -3749,7 +3749,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T15:56Z"
+     "t": "2026-10-24T16:05Z"
     }
    },
    "sport": "NCAAF",
@@ -8687,6 +8687,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -8721,6 +8730,20 @@
     "stake": "0.40",
     "reason": "leg \"Over 20.5 match shots\": market/stat not recognised",
     "legs": []
+   },
+   {
+    "bet_id": "c352d06d",
+    "book": "FanDuel",
+    "event": "North Carolina Central @ Delaware State (NCAAF)",
+    "pick": "Delaware State ML + Over 48.5 alt total",
+    "stake": "0.50",
+    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Delaware State ML",
+      "result": "lost"
+     }
+    ]
    }
   ],
   "last_settled": [
@@ -8950,16 +8973,16 @@
     "at": "2026-10-22 22:50"
    }
   ],
-  "last_change_at": "2026-10-24 11:56 ET"
+  "last_change_at": "2026-10-24 12:05 ET"
  },
- "open_live_n": 19,
+ "open_live_n": 18,
  "open_stake_by_book": {
-  "bet365": 2.0,
+  "bet365": 1.6,
   "Caesars": 17.0,
   "DraftKings": 0.4,
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "978133c0af1c1287360995360317304a61ac1f60",
- "generated_at": "2026-10-24T11:56:59-04:00"
+ "hash": "a0e55caac36025ccb3ace0f7587adc26b192bd2f",
+ "generated_at": "2026-10-24T12:05:30-04:00"
 }
