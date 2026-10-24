@@ -8,9 +8,63 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "3ce29562",
+   "book": "DraftKings",
+   "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
+   "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
+   "stake": "0.30",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "022381e8",
+   "book": "bet365",
+   "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
+   "pick": "Over 36.5 + Argonauts +19.0 + Alouettes ML",
+   "stake": "0.40",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "4ca058ce",
+   "book": "Caesars",
+   "pick": "Jackson Chourio U1.5 TB + Jonathan Aranda O0.5 TB + Christian Yelich O0.5 TB",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "TB 2-3 MIL",
+   "at": "2026-10-23 23:27"
+  },
+  {
+   "bet_id": "c4cc09ea",
+   "book": "Caesars",
+   "pick": "Brewers ML + Junior Caminero 1+ hits + William Contreras U1.5 TB",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "TB 2-3 MIL",
+   "at": "2026-10-23 23:27"
+  },
+  {
+   "bet_id": "b991223f",
+   "book": "Caesars",
+   "pick": "Brewers ML + Over 8.5",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "TB 2-3 MIL",
+   "at": "2026-10-23 23:27"
+  },
+  {
+   "bet_id": "2b9c8188",
+   "book": "DraftKings",
+   "pick": "Jake Bauers 2+ Total Bases",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "TB 2-3 MIL",
+   "at": "2026-10-23 23:27"
+  },
   {
    "bet_id": "0db400ce",
    "book": "bet365",
@@ -199,44 +253,8 @@
    "pnl": -0.3,
    "final": "SJ 6-2 OTT",
    "at": "2026-10-22 21:41"
-  },
-  {
-   "bet_id": "aa301657",
-   "book": "bet365",
-   "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
-   "result": "won",
-   "pnl": 0.51,
-   "final": "ANA 1-4 NJ",
-   "at": "2026-10-22 21:34"
-  },
-  {
-   "bet_id": "f0094ba2",
-   "book": "PointsBet",
-   "pick": "Lillestrom",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "RSO 6-0 LSK",
-   "at": "2026-10-22 16:49"
-  },
-  {
-   "bet_id": "383dd8ea",
-   "book": "PointsBet",
-   "pick": "Hearts",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "HOM 0-2 TRAB",
-   "at": "2026-10-22 14:43"
-  },
-  {
-   "bet_id": "f0a25e0b",
-   "book": "PointsBet",
-   "pick": "Riga FC",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "RIG 1-1 PAF",
-   "at": "2026-10-22 14:40"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 22:45 ET"
+ "last_change_at": "2026-10-23 23:27 ET"
 }
