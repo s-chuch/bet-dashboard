@@ -10,15 +10,6 @@
    "legs": []
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "3ce29562",
    "book": "DraftKings",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -84,18 +75,18 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "e65b4c69",
+   "book": "Caesars",
+   "pick": "Fluff Bothwell anytime TD + John Mateer 260+ pass yds",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "OU 23-15 MSST",
+   "at": "2026-10-24 18:54"
+  },
   {
    "bet_id": "9be2483a",
    "book": "bet365",
@@ -311,17 +302,8 @@
    "pnl": 18.0,
    "final": "NE 24-30 CHI",
    "at": "2026-10-22 23:23"
-  },
-  {
-   "bet_id": "05e56633",
-   "book": "FanDuel",
-   "pick": "Chicago Bears +6.5 + Caleb Williams 175+ pass yds + Over 40.5 + Drake Maye 200+ pass yds",
-   "result": "won",
-   "pnl": 1.6,
-   "final": "NE 24-30 CHI",
-   "at": "2026-10-22 23:23"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 18:37 ET"
+ "last_change_at": "2026-10-24 18:54 ET"
 }
