@@ -17,6 +17,20 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "c352d06d",
+   "book": "FanDuel",
+   "event": "North Carolina Central @ Delaware State (NCAAF)",
+   "pick": "Delaware State ML + Over 48.5 alt total",
+   "stake": "0.50",
+   "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
+   "legs": [
+    {
+     "leg": "Delaware State ML",
+     "result": "lost"
+    }
+   ]
   }
  ],
  "last_settled": [
@@ -247,5 +261,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 18:50 ET"
+ "last_change_at": "2026-10-23 20:23 ET"
 }
