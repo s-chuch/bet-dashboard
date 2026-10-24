@@ -398,3 +398,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-24 14:54,Caesars,f2b81794,stake,-0.50,stake
 2026-10-24 14:54,Caesars,62b3a254,stake,-0.20,stake
 2026-10-24 14:59,PointsBet,9fd9a5aa,stake,-1.00,stake
+2026-10-24 15:45,Caesars,35f28c8c,settled,0.00,"lost, no return"
