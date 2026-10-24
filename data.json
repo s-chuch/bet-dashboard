@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T05:22Z"
+     "t": "2026-10-24T06:17Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T05:22Z"
+     "t": "2026-10-24T06:17Z"
     }
    },
    "sport": "NFL",
@@ -2674,7 +2674,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-24T05:22Z"
+     "t": "2026-10-24T06:17Z"
     }
    },
    "sport": "NCAAF",
@@ -3809,7 +3809,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T05:22Z"
+     "t": "2026-10-24T06:17Z"
     }
    },
    "sport": "NCAAF",
@@ -8765,6 +8765,15 @@
     "legs": []
    },
    {
+    "bet_id": "60d543b0",
+    "book": "bet365",
+    "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
+    "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
+    "stake": "0.40",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "022381e8",
     "book": "bet365",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -9015,7 +9024,7 @@
     "at": "2026-10-22 21:54"
    }
   ],
-  "last_change_at": "2026-10-24 01:21 ET"
+  "last_change_at": "2026-10-24 02:17 ET"
  },
  "open_live_n": 20,
  "open_stake_by_book": {
@@ -9025,6 +9034,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "bd61c3deda481af292654a7902f534b0069c3b52",
- "generated_at": "2026-10-24T01:22:19-04:00"
+ "hash": "887b39c41a5d74b8ff2bd8fd0bfc65933437600d",
+ "generated_at": "2026-10-24T02:17:39-04:00"
 }
