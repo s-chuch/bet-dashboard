@@ -125,10 +125,10 @@
     "snapshot": {
      "date": "2026-10-24T14:00Z",
      "period": 2,
-     "clock": 4020.0,
+     "clock": 4980.0,
      "state": "in",
      "completed": false,
-     "detail": "67'",
+     "detail": "83'",
      "teams": [
       {
        "id": "359",
@@ -138,7 +138,7 @@
        "nick": "Arsenal",
        "location": "Arsenal",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "368",
@@ -991,7 +991,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T15:25Z"
+     "t": "2026-10-24T15:41Z"
     }
    },
    "sport": "NFL",
@@ -1720,7 +1720,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T15:25Z"
+     "t": "2026-10-24T15:41Z"
     }
    },
    "sport": "NFL",
@@ -2678,7 +2678,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-24T15:25Z"
+     "t": "2026-10-24T15:41Z"
     }
    },
    "sport": "NCAAF",
@@ -3115,10 +3115,10 @@
     "snapshot": {
      "date": "2026-10-24T14:00Z",
      "period": 2,
-     "clock": 4020.0,
+     "clock": 4980.0,
      "state": "in",
      "completed": false,
-     "detail": "67'",
+     "detail": "83'",
      "teams": [
       {
        "id": "359",
@@ -3128,7 +3128,7 @@
        "nick": "Arsenal",
        "location": "Arsenal",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "368",
@@ -3817,7 +3817,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T15:25Z"
+     "t": "2026-10-24T15:41Z"
     }
    },
    "sport": "NCAAF",
@@ -9042,6 +9042,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "ed2a820580b17fa1e4ebf10f9f4042e4baf746fb",
- "generated_at": "2026-10-24T11:25:12-04:00"
+ "hash": "be5f013dde098c91428a4193409a30a69814bddf",
+ "generated_at": "2026-10-24T11:41:46-04:00"
 }
