@@ -335,7 +335,22 @@ function legStatus(L,g,sport,matchId){
   if(L.type==="prop")return propStatus(L,g,matchId);
   if(L.type==="teamtotal")return teamTotalStatus(L,g,sport);
   if(L.type==="unknown"&&sport==="Soccer"&&matchId)return soccerStat(L,g,matchId);
-  return{s:"?",n:L.note||"can't compute"}}
+  if(L.type==="unknown"){const f=oddLeg(L,g,sport,matchId);if(f)return f}
+  return{s:"?",n:L.note||(/outright|to win .*(cup|championship|title|league|finals?)|runner.?up|mvp|relegat|promot|each way|\b20\d\d[\/-]\d\d\b/i.test(L.text||"")?"season-long market, settles when it closes":/strikes|takedown|submission|round|method/i.test(L.text||"")?"fight stats aren't in the live feed, settle by hand":"not tracked live, settle by hand")}}
+// markets without a stat parser: first-inning runs (MLB) and the first touchdown of an NFL game
+function oddLeg(L,g,sport,matchId){const t=String(L.text||"");
+  let m=t.match(/\b(under|over|u|o)\s*(\d+(?:\.\d+)?)\s+(?:1st|first)\s+inning\s+runs?/i);
+  if(m&&sport==="MLB"){const over=/^o/i.test(m[1]),line=Number(m[2]),aw=g.teams.find(x=>!x.home),ho=g.teams.find(x=>x.home);
+    const r=x=>x&&x.ls&&x.ls[0]!=null&&x.ls[0]!==""?Number(x.ls[0]):null,a=r(aw),h=r(ho),done=a!=null&&h!=null&&(g.period>1||g.completed),sum=(a||0)+(h||0);
+    const n=`1st inning: ${a==null?"–":a} / ${h==null?"–":h} runs`;
+    if(over){if(sum>line)return{s:"WON",n};return done?{s:"LOST",n}:{s:"LIVE",n}}
+    if(sum>line)return{s:"LOST",n};return done?{s:"WON",n}:{s:"LIVE",n:n+" · on track"}}
+  if(/\b(1st|first)\s+(td|touchdown)\s+(in|of)\s+(the\s+)?(1st|first)\s+(quarter|qtr)\b/i.test(t)&&sport==="NFL"){
+    const S=matchId&&summaries[matchId];if(!S)return{s:"LIVE",n:"loading plays…"};
+    const tds=(S.d.scoringPlays||[]).filter(p=>(p.type&&p.type.abbreviation==="TD")||/touchdown/i.test((p.type&&p.type.text)||""));
+    const q=p=>p.period&&p.period.number;if(tds.length){const first=q(tds[0]);return first===1?{s:"WON",n:"first TD came in the 1st quarter"}:{s:"LOST",n:`first TD came in quarter ${first}`}}
+    if(g.completed||g.period>1)return{s:"LOST",n:"no TD in the 1st quarter"};return{s:"LIVE",n:"no TD yet in the 1st quarter"}}
+  return null}
 // soccer match-stat totals ("Over 20.5 match shots", "Over 5.5 shots on target", "Over 23.5 free kicks"): graded from ESPN's team box score, both teams added
 function soccerStat(L,g,matchId){
   const t=String(L.text||""),mm=t.match(/\b(over|under|o|u)\s*(\d+(?:\.\d+)?)/i);if(!mm)return{s:"?",n:"can't compute"};
@@ -412,6 +427,7 @@ const PROP={ // stat -> [value(stats, ctx), unit]
   ra:[s=>sumK(s,"rebounds","assists"),"reb+ast"],stl:[s=>s.steals,"stl"],blk:[s=>s.blocks,"blk"],stocks:[s=>sumK(s,"steals","blocks"),"stl+blk"],
   foulsC:[s=>s.foulsCommitted,"fouls"],foulsD:[s=>s.foulsSuffered,"fouled"],yellow:[s=>s.yellowCards,"YC"],cards:[s=>sumK(s,"yellowCards","redCards"),"cards"],offsides:[s=>s.offsides,"offsides"],
   tackles:[s=>s.totalTackles!=null?s.totalTackles:s.tackles,"tackles"],   // ESPN soccer box score has team tackles only: stays ungraded (no stats) unless a feed ever adds it
+  dd:[s=>["points","rebounds","assists","steals","blocks"].filter(k=>(s[k]||0)>=10).length,"categories at 10+"],
   reb:[s=>s.rebounds,"reb"],threes:[s=>s.threePointFieldGoalsMade,"3PM"],saves:[s=>s.saves,"saves"],
   hits:[s=>s.hits,"hits"],hr:[s=>s.homeRuns,"HR"],rbi:[s=>s.RBIs,"RBI"],runs:[s=>s.runs,"runs"],walks:[s=>s.walks,"BB"],sb:[s=>s.stolenBases,"SB"],
   k:[s=>s.p_strikeouts!=null?s.p_strikeouts:s.strikeouts,"K"],hrr:[s=>sumK(s,"hits","runs","RBIs"),"H+R+RBI"],

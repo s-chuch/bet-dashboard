@@ -206,6 +206,9 @@ def parse_leg(text, market):
         if words and not st: out["stat_raw"] = words
         if re.fullmatch(r"(any\s*)?player|anyone", player, re.I): out["player"] = None
         return out
+    m = re.match(r"^(.+?)\s+(double|triple)[- ]double$", t, re.I)     # "Jalen Johnson double double": 2 (or 3) box-score categories at 10+
+    if m:
+        return {"type": "prop", "player": m[1].strip(), "stat": "dd", "op": "min", "min": 3 if m[2].lower() == "triple" else 2, "text": t}
     # "Yandy Diaz U0.5 doubles", "C. Simpson O1.5", "Caminero Under 1.5 total bases"
     m = re.match(r"^(.+?)\s+(Over|Under|O|U)\s*(\d+(?:\.\d+)?)\s*(.*)$", t, re.I)
     if m:
@@ -252,11 +255,11 @@ def team_roster(path, team_id):
     return out
 
 def resolve_props(bet):
-    m = bet.get("match")
-    if not m: return
     props = [L for L in bet["legs"] if L["type"] == "prop" and L.get("player")]
     if not props: return
     for L in props:
+        m = L.get("match") or bet.get("match")
+        if not m: continue
         hits = []
         for t in m["snapshot"]["teams"]:
             for a in team_roster(m["path"], t.get("id")):
@@ -418,6 +421,11 @@ def build_bet(row):
                 pm = find_player_game(players.pop(), date)
                 if pm: bet["match"] = pm; bet["start"] = ""   # the slip time was the placement time: take the game's start
             except Exception as e: print("player game lookup failed", e, file=sys.stderr)
+        elif len(players) > 1 and all(L.get("type") == "prop" for L in legs):   # a parlay of players from different games: each leg gets its own game
+            for L in legs:
+                try:
+                    L["match"] = find_player_game(L.get("player"), date)
+                except Exception as e: print("player game lookup failed", e, file=sys.stderr)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
     if m and not str(bet.get("start") or "").strip() and ET:   # kickoff missing on the slip: take it from the matched game
         try:
