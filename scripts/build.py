@@ -146,6 +146,8 @@ def _prop_stat(words):
 def parse_leg(text, market):
     t = text.strip()
     t = re.sub(r"\s*\((?:SGP|same game|boosted|boost|bonus)[^)]*\)\s*$", "", t, flags=re.I).strip() or t   # trailing slip notes like "(SGP)"
+    t = re.sub(r"\s+alt(?:ernate)?\.?\s+(?:spread|total|line)s?$", "", t, flags=re.I).strip() or t   # "Over 48.5 alt total"
+    t = re.sub(r"\s*\(3-?way\)\s*$", "", t, flags=re.I).strip() or t                                  # "Volkanovski ML (3-way)"
     if re.fullmatch(r"draw|tie|the draw", t, re.I): return {"type": "draw", "text": t}   # 3-way soccer market
     # corners / cards totals: ESPN scores can't grade them
     if re.match(r"^(Over|Under|O|U)\s*[\d.]+\s+(?:total\s+)?(?:corners|cards|bookings)\b", t, re.I): return {"type": "unknown", "text": t, "note": "corners/cards: settle by hand"}
