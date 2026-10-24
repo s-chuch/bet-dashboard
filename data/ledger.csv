@@ -367,3 +367,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-23 18:27,bet365,d3dfc859,stake,-0.20,stake
 2026-10-23 18:27,bet365,d3dfc859,return,0.45,won
 2026-10-23 18:50,bet365,6388e853,settled,0.00,"lost, no return"
+2026-10-23 20:59,PointsBet,cd55ea08,settled,0.00,"lost, no return"

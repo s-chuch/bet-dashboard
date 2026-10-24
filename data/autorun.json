@@ -8,32 +8,18 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "c352d06d",
-   "book": "FanDuel",
-   "event": "North Carolina Central @ Delaware State (NCAAF)",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "stake": "0.50",
-   "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Delaware State ML",
-     "result": "lost"
-    }
-   ]
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "cd55ea08",
+   "book": "PointsBet",
+   "pick": "Clube do Remo",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "REMO 0-1 CRU",
+   "at": "2026-10-23 20:59"
+  },
   {
    "bet_id": "6388e853",
    "book": "bet365",
@@ -249,17 +235,8 @@
    "pnl": -0.2,
    "final": "FLA 1-5 OTT",
    "at": "2026-10-21 22:26"
-  },
-  {
-   "bet_id": "97a63232",
-   "book": "bet365",
-   "pick": "Tim Stutzle: 1+ Points + Brady Tkachuk: 3+ Shots on Goal + Dylan Cozens: 1+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "FLA 1-5 OTT",
-   "at": "2026-10-21 22:26"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-23 20:23 ET"
+ "last_change_at": "2026-10-23 20:59 ET"
 }

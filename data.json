@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T00:43Z"
+     "t": "2026-10-24T01:00Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T00:43Z"
+     "t": "2026-10-24T01:00Z"
     }
    },
    "sport": "NFL",
@@ -1783,11 +1783,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "8",
@@ -2047,10 +2047,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.845,
-     "away": 0.155,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "MLB",
@@ -2113,11 +2113,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "8",
@@ -2377,10 +2377,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.845,
-     "away": 0.155,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "MLB",
@@ -2456,77 +2456,6 @@
    "payout_est": false,
    "start_ts": "2026-10-25T14:00Z",
    "clv": null
-  },
-  {
-   "bet_id": "cd55ea08",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Cruzeiro v Clube do Remo",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Clube do Remo",
-   "start": "Fri Oct 23 07:00 PM ET",
-   "price": "+700",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 17.5,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Remo",
-     "women": false,
-     "text": "Clube do Remo",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/bra.1",
-    "date": "20261023",
-    "groups": null,
-    "id": "401841287",
-    "snapshot": {
-     "date": "2026-10-23T23:00Z",
-     "period": 2,
-     "clock": 4740.0,
-     "state": "in",
-     "completed": false,
-     "detail": "79'",
-     "teams": [
-      {
-       "id": "2022",
-       "name": "Cruzeiro",
-       "abbr": "CRU",
-       "short": "Cruzeiro",
-       "nick": "Cruzeiro",
-       "location": "Cruzeiro",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "4936",
-       "name": "Remo",
-       "abbr": "REMO",
-       "short": "Remo",
-       "nick": "Remo",
-       "location": "Remo",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 17.5,
-   "payout_est": false,
-   "start_ts": "2026-10-23T23:00Z",
-   "clv": {
-    "placed_at": null,
-    "close_price": "+886",
-    "clv_pct": -18.88
-   }
   },
   {
    "bet_id": "35f28c8c",
@@ -3409,7 +3338,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T00:43Z"
+     "t": "2026-10-24T01:00Z"
     }
    },
    "sport": "NCAAF",
@@ -3534,11 +3463,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "8",
@@ -3798,10 +3727,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.845,
-     "away": 0.155,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "MLB",
@@ -3896,10 +3825,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 3,
-     "clock": 518.0,
+     "clock": 170.0,
      "state": "in",
      "completed": false,
-     "detail": "8:38 - 3rd",
+     "detail": "2:50 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -3909,7 +3838,7 @@
        "nick": "Wizards",
        "location": "Washington",
        "home": true,
-       "score": "59"
+       "score": "66"
       },
       {
        "id": "28",
@@ -3919,7 +3848,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": false,
-       "score": "64"
+       "score": "76"
       }
      ]
     },
@@ -4617,10 +4546,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.245,
-     "away": 0.755,
+     "home": 0.125,
+     "away": 0.875,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "NBA",
@@ -4669,11 +4598,11 @@
     "id": "401908042",
     "snapshot": {
      "date": "2026-10-24T00:00Z",
-     "period": 2,
+     "period": 3,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 2nd",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "8",
@@ -4933,10 +4862,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.845,
-     "away": 0.155,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "MLB",
@@ -5031,10 +4960,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 3,
-     "clock": 266.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:26 - 3rd",
+     "detail": "End of 3rd",
      "teams": [
       {
        "id": "19",
@@ -5044,7 +4973,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": true,
-       "score": "57"
+       "score": "60"
       },
       {
        "id": "16",
@@ -5054,7 +4983,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "73"
+       "score": "86"
       }
      ]
     },
@@ -5752,10 +5681,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.085,
-     "away": 0.915,
+     "home": 0.015,
+     "away": 0.985,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "NBA",
@@ -6041,10 +5970,10 @@
     "snapshot": {
      "date": "2026-10-24T00:00Z",
      "period": 1,
-     "clock": 302.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "5:02 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "4",
@@ -6064,7 +5993,7 @@
        "nick": "Canadiens",
        "location": "Montreal",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     },
@@ -6157,10 +6086,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.565,
-     "away": 0.435,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "NHL",
@@ -6913,7 +6842,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T00:43Z"
+     "t": "2026-10-24T01:00Z"
     }
    },
    "sport": "NCAAF",
@@ -7694,7 +7623,7 @@
      "home": 0.205,
      "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:59Z"
     }
    },
    "sport": "NBA",
@@ -8600,6 +8529,21 @@
   {
    "date": "2026-10-20",
    "book": "PointsBet",
+   "event": "Cruzeiro v Clube do Remo",
+   "pick": "Clube do Remo",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": true,
+   "clv": {
+    "placed_at": null,
+    "close_price": "+886",
+    "clv_pct": -18.88
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
    "event": "Lillestrom v Real Sociedad",
    "pick": "Lillestrom",
    "result": "lost",
@@ -9172,9 +9116,9 @@
  ],
  "pnl_total": 111.28,
  "unsettled": {
-  "n": 30,
+  "n": 29,
   "cash_stake": 18.8,
-  "max_payout": 456.78,
+  "max_payout": 439.28,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -9184,16 +9128,16 @@
    "overall": {
     "n": 129,
     "w": 38,
-    "l": 55,
+    "l": 56,
     "p": 0,
-    "pending": 36,
-    "win_pct": 40.9,
+    "pending": 35,
+    "win_pct": 40.4,
     "units": 22.94,
     "roi_pct": 29.8,
     "roi_n": 77,
     "exp_roi_pct": 10.6,
-    "exp_wins": 32.4,
-    "exp_wins_n": 92,
+    "exp_wins": 32.5,
+    "exp_wins_n": 93,
     "wins_with_fair": 37
    },
    "by_promo": {
@@ -9230,16 +9174,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 8,
+     "l": 9,
      "p": 0,
-     "pending": 5,
-     "win_pct": 38.5,
+     "pending": 4,
+     "win_pct": 35.7,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 2.1,
-     "exp_wins_n": 13,
+     "exp_wins": 2.3,
+     "exp_wins_n": 14,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -9442,16 +9386,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 15,
+     "l": 16,
      "p": 0,
-     "pending": 14,
-     "win_pct": 34.8,
+     "pending": 13,
+     "win_pct": 33.3,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 5.0,
-     "exp_wins_n": 23,
+     "exp_wins": 5.1,
+     "exp_wins_n": 24,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -9504,16 +9448,16 @@
     "yes": {
      "n": 75,
      "w": 27,
-     "l": 44,
+     "l": 45,
      "p": 0,
-     "pending": 4,
-     "win_pct": 38.0,
+     "pending": 3,
+     "win_pct": 37.5,
      "units": 24.18,
      "roi_pct": 40.3,
      "roi_n": 60,
      "exp_roi_pct": 12.4,
-     "exp_wins": 24.3,
-     "exp_wins_n": 70,
+     "exp_wins": 24.4,
+     "exp_wins_n": 71,
      "wins_with_fair": 26
     },
     "no": {
@@ -10211,11 +10155,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "REMO 0-1 CRU (FT)",
     "source": "rec.py add",
     "notes": "PointsBet Deposit Match bonus bet token $2.50 (stake not returned); ev = bonus value per $1 x100 (0.883); Pin -274 / draw +434 / +653; pulled 2:20 PM ET Oct 20; yes at +692",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "ca890ee5",
@@ -12805,32 +12749,18 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
-    "bet_id": "c352d06d",
-    "book": "FanDuel",
-    "event": "North Carolina Central @ Delaware State (NCAAF)",
-    "pick": "Delaware State ML + Over 48.5 alt total",
-    "stake": "0.50",
-    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-    "legs": [
-     {
-      "leg": "Delaware State ML",
-      "result": "lost"
-     }
-    ]
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "cd55ea08",
+    "book": "PointsBet",
+    "pick": "Clube do Remo",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "REMO 0-1 CRU",
+    "at": "2026-10-23 20:59"
+   },
    {
     "bet_id": "6388e853",
     "book": "bet365",
@@ -13046,27 +12976,18 @@
     "pnl": -0.2,
     "final": "FLA 1-5 OTT",
     "at": "2026-10-21 22:26"
-   },
-   {
-    "bet_id": "97a63232",
-    "book": "bet365",
-    "pick": "Tim Stutzle: 1+ Points + Brady Tkachuk: 3+ Shots on Goal + Dylan Cozens: 1+ Shots on Goal",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "FLA 1-5 OTT",
-    "at": "2026-10-21 22:26"
    }
   ],
-  "last_change_at": "2026-10-23 20:23 ET"
+  "last_change_at": "2026-10-23 20:59 ET"
  },
- "open_live_n": 29,
+ "open_live_n": 28,
  "open_stake_by_book": {
   "bet365": 2.4,
   "Caesars": 19.5,
   "DraftKings": 1.3,
   "FanDuel": 4.1,
-  "PointsBet": 48.43
+  "PointsBet": 45.93
  },
- "hash": "47d49133dffb54555c78f047f962706cb078230c",
- "generated_at": "2026-10-23T20:43:01-04:00"
+ "hash": "1747e62bd1666e256127f01f3e7bc824a5b0356f",
+ "generated_at": "2026-10-23T21:00:55-04:00"
 }
