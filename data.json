@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T17:34Z"
+     "t": "2026-10-24T18:26Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T17:35Z"
+     "t": "2026-10-24T18:26Z"
     }
    },
    "sport": "NFL",
@@ -1760,11 +1760,11 @@
     "id": "401858274",
     "snapshot": {
      "date": "2026-10-24T16:00Z",
-     "period": 2,
-     "clock": 55.0,
+     "period": 3,
+     "clock": 454.0,
      "state": "in",
      "completed": false,
-     "detail": "0:55 - 2nd",
+     "detail": "7:34 - 3rd",
      "teams": [
       {
        "id": "2390",
@@ -1774,7 +1774,7 @@
        "nick": "Hurricanes",
        "location": "Miami",
        "home": true,
-       "score": "24"
+       "score": "38"
       },
       {
        "id": "221",
@@ -1784,7 +1784,7 @@
        "nick": "Panthers",
        "location": "Pittsburgh",
        "home": false,
-       "score": "7"
+       "score": "14"
       }
      ]
     },
@@ -2610,7 +2610,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-24T17:34Z"
+     "t": "2026-10-24T18:26Z"
     }
    },
    "sport": "NCAAF",
@@ -3754,7 +3754,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T17:34Z"
+     "t": "2026-10-24T18:26Z"
     }
    },
    "sport": "NCAAF",
@@ -8914,6 +8914,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "b90e8330791039e69dacc40979e2b05198898e18",
- "generated_at": "2026-10-24T13:35:04-04:00"
+ "hash": "655e99c80bd0b262d3e96a1eab5e162ed92697ed",
+ "generated_at": "2026-10-24T14:26:49-04:00"
 }
