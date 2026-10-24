@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T18:30Z"
+     "t": "2026-10-24T18:32Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T18:30Z"
+     "t": "2026-10-24T18:32Z"
     }
    },
    "sport": "NFL",
@@ -1761,10 +1761,10 @@
     "snapshot": {
      "date": "2026-10-24T16:00Z",
      "period": 3,
-     "clock": 375.0,
+     "clock": 345.0,
      "state": "in",
      "completed": false,
-     "detail": "6:15 - 3rd",
+     "detail": "5:45 - 3rd",
      "teams": [
       {
        "id": "2390",
@@ -3754,7 +3754,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T18:31Z"
+     "t": "2026-10-24T18:32Z"
     }
    },
    "sport": "NCAAF",
@@ -8914,6 +8914,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "90a41dde0f837debeb876a273c1a9275d03d7d8a",
- "generated_at": "2026-10-24T14:32:20-04:00"
+ "hash": "680f2b0f48bde5372bb16eac9592de9a54bbe578",
+ "generated_at": "2026-10-24T14:32:49-04:00"
 }
