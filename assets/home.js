@@ -318,7 +318,29 @@ function legStatus(L,g,sport,matchId){
     return{s:over?Lo:W,n:`total ${t}, ${(-d).toFixed(1)} under the line`,pv:t}}
   if(L.type==="prop")return propStatus(L,g,matchId);
   if(L.type==="teamtotal")return teamTotalStatus(L,g,sport);
+  if(L.type==="unknown"&&sport==="Soccer"&&matchId)return soccerStat(L,g,matchId);
   return{s:"?",n:L.note||"can't compute"}}
+// soccer match-stat totals ("Over 20.5 match shots", "Over 5.5 shots on target", "Over 23.5 free kicks"): graded from ESPN's team box score, both teams added
+function soccerStat(L,g,matchId){
+  const t=String(L.text||""),mm=t.match(/\b(over|under|o|u)\s*(\d+(?:\.\d+)?)/i);if(!mm)return{s:"?",n:"can't compute"};
+  const over=/^o/i.test(mm[1]),line=Number(mm[2]);
+  let key,unit,approx=false;
+  if(/shots? on (target|goal)|\bsot\b/i.test(t)){key=["shotsOnTarget"];unit="shots on target"}
+  else if(/(match|total)\s+shots?|\bshots?\b/i.test(t)){key=["totalShots"];unit="shots"}
+  else if(/free kicks?|fouls?/i.test(t)){key=["foulsCommitted"];unit="free kicks (fouls)";approx=true}
+  else if(/corners?/i.test(t)){key=["wonCorners"];unit="corners"}
+  else return{s:"?",n:"can't compute"};
+  const S=summaries[matchId];if(!S)return{s:"LIVE",n:"loading box score…"};
+  const tm=(S.d.boxscore&&S.d.boxscore.teams)||[];if(!tm.length)return{s:"LIVE",n:"loading box score…"};
+  let v=0,found=false;for(const x of tm)for(const st of x.statistics||[])if(st.name===key[0]){v+=Number(st.value!=null?st.value:st.displayValue)||0;found=true}
+  if(!found)return{s:"LIVE",n:"stat not in feed yet"};
+  const fin=g.completed,tgt=over?Math.floor(line)+1:line,base={pv:v,pt:tgt,unit};
+  const n=`${v}/${tgt} ${unit}${approx?" (approx.)":""}`;
+  if(over){if(v>line)return approx&&fin?{s:"?",n:n+" — free kicks aren't in the feed exactly, settle by hand"}:{...base,s:"WON",n};
+    if(fin)return approx?{s:"?",n:n+" — free kicks aren't in the feed exactly, settle by hand"}:{...base,s:"LOST",n};
+    return{...base,s:"LIVE",n:n+` · needs ${tgt-v} more`}}
+  if(v>line)return{...base,s:"LOST",n};
+  return{...base,s:fin?"WON":"LIVE",n:fin?n:n+" · on track"}}
 // team totals ("Valkyries O78.5 team pts"): graded from that team's own score
 const ttUnit=(L,sport)=>({NHL:"goals",MLB:"runs",Soccer:"goals"}[sport]||"pts");
 const ttName=(L,g)=>{const i=g?sideIdx(g,L.team):-1;return i<0?L.team:(g.teams[i].nick||g.teams[i].short||g.teams[i].name)};
