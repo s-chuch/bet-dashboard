@@ -2047,9 +2047,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6847,
-     "away": 0.3153,
-     "spread": 0.02,
+     "home": 0.705,
+     "away": 0.295,
+     "spread": 0.01,
      "t": "2026-10-24T01:38Z"
     }
    },
@@ -2377,9 +2377,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6847,
-     "away": 0.3153,
-     "spread": 0.02,
+     "home": 0.705,
+     "away": 0.295,
+     "spread": 0.01,
      "t": "2026-10-24T01:38Z"
     }
    },
@@ -3727,9 +3727,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6847,
-     "away": 0.3153,
-     "spread": 0.02,
+     "home": 0.705,
+     "away": 0.295,
+     "spread": 0.01,
      "t": "2026-10-24T01:38Z"
     }
    },
@@ -3825,10 +3825,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 4,
-     "clock": 34.3,
+     "clock": 27.2,
      "state": "in",
      "completed": false,
-     "detail": "34.3 - 4th",
+     "detail": "27.2 - 4th",
      "teams": [
       {
        "id": "27",
@@ -4862,9 +4862,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6847,
-     "away": 0.3153,
-     "spread": 0.02,
+     "home": 0.705,
+     "away": 0.295,
+     "spread": 0.01,
      "t": "2026-10-24T01:38Z"
     }
    },
@@ -5196,10 +5196,10 @@
     "snapshot": {
      "date": "2026-10-24T00:00Z",
      "period": 2,
-     "clock": 366.0,
+     "clock": 347.0,
      "state": "in",
      "completed": false,
-     "detail": "6:06 - 2nd",
+     "detail": "5:47 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -12252,6 +12252,6 @@
   "FanDuel": 4.1,
   "PointsBet": 45.93
  },
- "hash": "670f2593c9c89e574498d317ff76fbc5d2107ec5",
- "generated_at": "2026-10-23T21:38:13-04:00"
+ "hash": "c7b8829c5ccc3c6b0b753036dee0ff79b15f3d35",
+ "generated_at": "2026-10-23T21:38:38-04:00"
 }
