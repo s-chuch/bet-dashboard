@@ -1,7 +1,6 @@
 date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,ev_pct,result,pnl,bet_id,settled_at,settled_by
 2026-10-15,DraftKings,NBA Cup 2026 (futures),Fri Dec 11 07:00 PM ET,Futures (30% profit boost),OKC Thunder to win NBA Cup,+290,+377,0.10,0.37,,,open,,9c0f1d9f,,
 2026-10-17,FanDuel,EPL 2026/27 Outrights,EPL 2026/27 season end,Futures (Relegation),Tottenham to be relegated,+2500,,0.10,2.50,,,open,,d46d9fcb,,
-2026-10-18,PointsBet,Arsenal v Everton (EPL),Sat Oct 24 10:00 AM ET,3-Way Draw (bonus bet $33.43),Draw,+400,,33.43 (bonus),133.72,21.3,,open,,f5ba9f28,,
 2026-10-19,FanDuel,Washington Commanders @ San Francisco 49ers,Mon Oct 19 08:15 PM ET,SGP 5-leg (40% profit boost),Christian McCaffrey 50+ rush yds + Rachaad White 30+ rush yds + Jayden Daniels 175+ pass yds + Terry McLaurin 15+ rec yds + Brock Purdy 225+ pass yds,+337,+471,0.50,2.36,,,lost,-0.50,fb168e73,2026-10-19 23:22,auto
 2026-10-19,FanDuel,NBA Futures,Jun 18 2027 08:40 PM ET,Futures (100% profit boost),Oklahoma City Thunder 26-27 NBA Finals Runner Up,+600,+1200,0.50,6.00,,,open,,537c5a5e,,
 2026-10-19,FanDuel,NBA Player Awards,Apr 14 2027 07:00 PM ET,Futures (50% profit boost),Victor Wembanyama 26-27 NBA Regular Season MVP,+200,+300,0.50,1.50,,,open,,8d3075bb,,

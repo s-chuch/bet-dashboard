@@ -97,74 +97,6 @@
    "clv": null
   },
   {
-   "bet_id": "f5ba9f28",
-   "date": "2026-10-18",
-   "book": "PointsBet",
-   "event": "Arsenal v Everton",
-   "market": "3-Way Draw (bonus bet $33.43)",
-   "pick": "Draw",
-   "start": "Sat Oct 24 10:00 AM ET",
-   "price": "+400",
-   "boosted_price": "",
-   "stake": 33.43,
-   "stake_note": "",
-   "to_win": 133.72,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "draw",
-     "text": "Draw"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261024",
-    "groups": null,
-    "id": "401878768",
-    "snapshot": {
-     "date": "2026-10-24T14:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+1'",
-     "teams": [
-      {
-       "id": "359",
-       "name": "Arsenal",
-       "abbr": "ARS",
-       "short": "Arsenal",
-       "nick": "Arsenal",
-       "location": "Arsenal",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "368",
-       "name": "Everton",
-       "abbr": "EVE",
-       "short": "Everton",
-       "nick": "Everton",
-       "location": "Everton",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 133.72,
-   "payout_est": false,
-   "start_ts": "2026-10-24T14:00Z",
-   "clv": {
-    "placed_at": null,
-    "close_price": "+457",
-    "clv_pct": -10.17
-   }
-  },
-  {
    "bet_id": "537c5a5e",
    "date": "2026-10-19",
    "book": "FanDuel",
@@ -991,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T15:49Z"
+     "t": "2026-10-24T15:56Z"
     }
    },
    "sport": "NFL",
@@ -1720,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T15:49Z"
+     "t": "2026-10-24T15:56Z"
     }
    },
    "sport": "NFL",
@@ -2678,7 +2610,7 @@
      "home": 0.9158,
      "away": 0.0842,
      "spread": 0.01,
-     "t": "2026-10-24T15:49Z"
+     "t": "2026-10-24T15:56Z"
     }
    },
    "sport": "NCAAF",
@@ -3118,7 +3050,7 @@
      "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "90'+1'",
+     "detail": "90'+8'",
      "teams": [
       {
        "id": "359",
@@ -3817,7 +3749,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T15:49Z"
+     "t": "2026-10-24T15:56Z"
     }
    },
    "sport": "NCAAF",
@@ -5120,9 +5052,9 @@
  ],
  "pnl_total": 108.48,
  "unsettled": {
-  "n": 21,
+  "n": 20,
   "cash_stake": 16.0,
-  "max_payout": 423.2,
+  "max_payout": 289.48,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -5132,16 +5064,16 @@
    "overall": {
     "n": 129,
     "w": 38,
-    "l": 56,
+    "l": 57,
     "p": 0,
-    "pending": 35,
-    "win_pct": 40.4,
+    "pending": 34,
+    "win_pct": 40.0,
     "units": 22.94,
     "roi_pct": 29.8,
     "roi_n": 77,
     "exp_roi_pct": 10.6,
-    "exp_wins": 32.5,
-    "exp_wins_n": 93,
+    "exp_wins": 32.7,
+    "exp_wins_n": 94,
     "wins_with_fair": 37
    },
    "by_promo": {
@@ -5178,16 +5110,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 9,
+     "l": 10,
      "p": 0,
-     "pending": 4,
-     "win_pct": 35.7,
+     "pending": 3,
+     "win_pct": 33.3,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 2.3,
-     "exp_wins_n": 14,
+     "exp_wins": 2.5,
+     "exp_wins_n": 15,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -5390,16 +5322,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 16,
+     "l": 17,
      "p": 0,
-     "pending": 13,
-     "win_pct": 33.3,
+     "pending": 12,
+     "win_pct": 32.0,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 5.1,
-     "exp_wins_n": 24,
+     "exp_wins": 5.3,
+     "exp_wins_n": 25,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -5452,16 +5384,16 @@
     "yes": {
      "n": 75,
      "w": 27,
-     "l": 45,
+     "l": 46,
      "p": 0,
-     "pending": 3,
-     "win_pct": 37.5,
+     "pending": 2,
+     "win_pct": 37.0,
      "units": 24.18,
      "roi_pct": 40.3,
      "roi_n": 60,
      "exp_roi_pct": 12.4,
-     "exp_wins": 24.4,
-     "exp_wins_n": 71,
+     "exp_wins": 24.7,
+     "exp_wins_n": 72,
      "wins_with_fair": 26
     },
     "no": {
@@ -6619,11 +6551,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "rec.py add",
     "notes": "PointsBet WELCOMEDM bonus bet token (stake not returned); ev = bonus value per $1 x100 (0.852; power 0.823); cash EV +6.5%; Pin Arsenal -240 / draw +352 / Everton +797; pulled 8:00 PM ET; yes at +372",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "55f649f7",
@@ -8755,15 +8687,6 @@
     "legs": []
    },
    {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -8791,21 +8714,25 @@
     "legs": []
    },
    {
-    "bet_id": "c352d06d",
-    "book": "FanDuel",
-    "event": "North Carolina Central @ Delaware State (NCAAF)",
-    "pick": "Delaware State ML + Over 48.5 alt total",
-    "stake": "0.50",
-    "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-    "legs": [
-     {
-      "leg": "Delaware State ML",
-      "result": "lost"
-     }
-    ]
+    "bet_id": "53cb007b",
+    "book": "bet365",
+    "event": "Arsenal v Everton (EPL)",
+    "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
+    "stake": "0.40",
+    "reason": "leg \"Over 20.5 match shots\": market/stat not recognised",
+    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "f5ba9f28",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "EVE 0-2 ARS",
+    "at": "2026-10-24 11:56"
+   },
    {
     "bet_id": "3ec732ca",
     "book": "Caesars",
@@ -9021,27 +8948,18 @@
     "pnl": 0.0,
     "final": "PAS 0-3 NAL",
     "at": "2026-10-22 22:50"
-   },
-   {
-    "bet_id": "9d28b51b",
-    "book": "FanDuel",
-    "pick": "Philadelphia 76ers +6.5",
-    "result": "won",
-    "pnl": 0.7,
-    "final": "CLE 106-114 PHI",
-    "at": "2026-10-22 21:54"
    }
   ],
-  "last_change_at": "2026-10-24 02:17 ET"
+  "last_change_at": "2026-10-24 11:56 ET"
  },
- "open_live_n": 20,
+ "open_live_n": 19,
  "open_stake_by_book": {
   "bet365": 2.0,
   "Caesars": 17.0,
   "DraftKings": 0.4,
   "FanDuel": 4.1,
-  "PointsBet": 45.93
+  "PointsBet": 12.5
  },
- "hash": "7076455067f8a9a8f3752ff864a0fcb66ae55917",
- "generated_at": "2026-10-24T11:49:18-04:00"
+ "hash": "978133c0af1c1287360995360317304a61ac1f60",
+ "generated_at": "2026-10-24T11:56:59-04:00"
 }

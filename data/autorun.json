@@ -10,15 +10,6 @@
    "legs": []
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "3ce29562",
    "book": "DraftKings",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -46,21 +37,25 @@
    "legs": []
   },
   {
-   "bet_id": "c352d06d",
-   "book": "FanDuel",
-   "event": "North Carolina Central @ Delaware State (NCAAF)",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "stake": "0.50",
-   "reason": "leg \"Over 48.5 alt total\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Delaware State ML",
-     "result": "lost"
-    }
-   ]
+   "bet_id": "53cb007b",
+   "book": "bet365",
+   "event": "Arsenal v Everton (EPL)",
+   "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
+   "stake": "0.40",
+   "reason": "leg \"Over 20.5 match shots\": market/stat not recognised",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "f5ba9f28",
+   "book": "PointsBet",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "EVE 0-2 ARS",
+   "at": "2026-10-24 11:56"
+  },
   {
    "bet_id": "3ec732ca",
    "book": "Caesars",
@@ -276,17 +271,8 @@
    "pnl": 0.0,
    "final": "PAS 0-3 NAL",
    "at": "2026-10-22 22:50"
-  },
-  {
-   "bet_id": "9d28b51b",
-   "book": "FanDuel",
-   "pick": "Philadelphia 76ers +6.5",
-   "result": "won",
-   "pnl": 0.7,
-   "final": "CLE 106-114 PHI",
-   "at": "2026-10-22 21:54"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 02:17 ET"
+ "last_change_at": "2026-10-24 11:56 ET"
 }
