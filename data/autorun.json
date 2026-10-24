@@ -77,6 +77,15 @@
    ]
   },
   {
+   "bet_id": "8ed4e0d5",
+   "book": "FanDuel",
+   "event": "UFC multi (Pico v Keita / Yan v Dvalishvili / Volkanovski v Evloev)",
+   "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
    "bet_id": "d91a6de4",
    "book": "Caesars",
    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -314,5 +323,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 18:17 ET"
+ "last_change_at": "2026-10-24 18:37 ET"
 }
