@@ -987,7 +987,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:43Z"
     }
    },
    "sport": "NFL",
@@ -1716,7 +1716,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:43Z"
     }
    },
    "sport": "NFL",
@@ -2489,10 +2489,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 2,
-     "clock": 4680.0,
+     "clock": 4740.0,
      "state": "in",
      "completed": false,
-     "detail": "78'",
+     "detail": "79'",
      "teams": [
       {
        "id": "2022",
@@ -3409,7 +3409,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:43Z"
     }
    },
    "sport": "NCAAF",
@@ -3896,10 +3896,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 3,
-     "clock": 524.0,
+     "clock": 518.0,
      "state": "in",
      "completed": false,
-     "detail": "8:44 - 3rd",
+     "detail": "8:38 - 3rd",
      "teams": [
       {
        "id": "27",
@@ -4617,8 +4617,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2426,
-     "away": 0.7574,
+     "home": 0.245,
+     "away": 0.755,
      "spread": 0.01,
      "t": "2026-10-24T00:42Z"
     }
@@ -5031,10 +5031,10 @@
     "snapshot": {
      "date": "2026-10-23T23:00Z",
      "period": 3,
-     "clock": 304.0,
+     "clock": 266.0,
      "state": "in",
      "completed": false,
-     "detail": "5:04 - 3rd",
+     "detail": "4:26 - 3rd",
      "teams": [
       {
        "id": "19",
@@ -5054,7 +5054,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "71"
+       "score": "73"
       }
      ]
     },
@@ -5752,8 +5752,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.125,
-     "away": 0.875,
+     "home": 0.085,
+     "away": 0.915,
      "spread": 0.01,
      "t": "2026-10-24T00:42Z"
     }
@@ -6913,7 +6913,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T00:42Z"
+     "t": "2026-10-24T00:43Z"
     }
    },
    "sport": "NCAAF",
@@ -13067,6 +13067,6 @@
   "FanDuel": 4.1,
   "PointsBet": 48.43
  },
- "hash": "922cd533a0586a503649caa7f50ab6a190f43311",
- "generated_at": "2026-10-23T20:42:41-04:00"
+ "hash": "47d49133dffb54555c78f047f962706cb078230c",
+ "generated_at": "2026-10-23T20:43:01-04:00"
 }
