@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NFL",
@@ -2859,7 +2859,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NCAAF",
@@ -3823,7 +3823,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NBA",
@@ -3979,10 +3979,10 @@
     "snapshot": {
      "date": "2026-10-24T19:00Z",
      "period": 4,
-     "clock": 143.0,
+     "clock": 120.0,
      "state": "in",
      "completed": false,
-     "detail": "2:23 - 4th",
+     "detail": "2:00 - 4th",
      "teams": [
       {
        "id": "356",
@@ -4605,10 +4605,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.985,
-     "away": 0.015,
+     "home": 0.975,
+     "away": 0.025,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NCAAF",
@@ -5309,7 +5309,7 @@
      "home": 0.795,
      "away": 0.205,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NCAAF",
@@ -5489,7 +5489,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NHL",
@@ -5816,7 +5816,7 @@
      "home": 0.5297,
      "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "MLB",
@@ -5826,263 +5826,6 @@
    "start_ts": "2026-10-25T00:00Z",
    "clv": {
     "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "605a8aad",
-   "date": "2026-10-24",
-   "book": "FanDuel",
-   "event": "Los Angeles Kings @ New Jersey Devils",
-   "market": "SGP 4-leg (40% profit boost)",
-   "pick": "Jack Hughes 1+ Points + Jack Hughes 2+ Shots on Goal + Timo Meier 2+ Shots on Goal + Adrian Kempe 2+ Shots on Goal",
-   "start": "Sat Oct 24 03:40 PM ET",
-   "price": "+128",
-   "boosted_price": "+178",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.89,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Jack Hughes",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Jack Hughes 1+ Points",
-     "pteam": "NJ",
-     "pname": "Jack Hughes",
-     "pid": "4565222"
-    },
-    {
-     "type": "prop",
-     "player": "Jack Hughes",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Jack Hughes 2+ Shots on Goal",
-     "pteam": "NJ",
-     "pname": "Jack Hughes",
-     "pid": "4565222"
-    },
-    {
-     "type": "prop",
-     "player": "Timo Meier",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Timo Meier 2+ Shots on Goal",
-     "pteam": "NJ",
-     "pname": "Timo Meier",
-     "pid": "3899978"
-    },
-    {
-     "type": "prop",
-     "player": "Adrian Kempe",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Adrian Kempe 2+ Shots on Goal",
-     "pteam": "LA",
-     "pname": "Adrian Kempe",
-     "pid": "3114802"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261024",
-    "groups": null,
-    "id": "401892567",
-    "snapshot": {
-     "date": "2026-10-24T19:30Z",
-     "period": 3,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "End of 3rd",
-     "teams": [
-      {
-       "id": "11",
-       "name": "New Jersey Devils",
-       "abbr": "NJ",
-       "short": "Devils",
-       "nick": "Devils",
-       "location": "New Jersey",
-       "home": true,
-       "score": "3"
-      },
-      {
-       "id": "8",
-       "name": "Los Angeles Kings",
-       "abbr": "LA",
-       "short": "Kings",
-       "nick": "Kings",
-       "location": "Los Angeles",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-24 14:59 ET",
-     "ml_home": 0.6376,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.4033,
-     "total_line": 6.0,
-     "total_over_fair": 0.4762
-    },
-    "pm": {
-     "slug": "nhl-lak-nj-2026-10-24",
-     "title": "Kings vs. Devils",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Devils",
-        "Kings"
-       ],
-       "tokens": [
-        "28859395823903143043875208313299608747532772410114298208072197392267731083246",
-        "3525293499283005088758287364490932186384615609572010245700693741594890944957"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Kings",
-        "Devils"
-       ],
-       "tokens": [
-        "49119935903704138658070684930899879330850059988820947174700584369914982356565",
-        "15335738684094532327930604756111369743967655647040138821337687786500629692289"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Devils",
-        "Kings"
-       ],
-       "tokens": [
-        "87193073751690309941449477991725603823370509051659023900362202362035513644933",
-        "47128105234805786442039389603827842384288514794072281596149095588138930637076"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "81040249636543631492310853596272821128697716536196537799101791415937555670374",
-        "23254565019717379736997452962864966134461787783997600843283314849921180223530"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "4966784419988530342610535975806829906415527683918656489864978048831484163283",
-        "107147371681392155286829405746897101252579021743991511846231714819675121897416"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "15748579956729775854147803720871912986067747395060978204010253033382802400228",
-        "96579383827454133286773195788182322404408474419551923602224486993901644593679"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "108212716371822563951667002683265809198070314338227523372347749503093655725264",
-        "77942773364817904764082344372911600260247237538249851964692122656677434869101"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "16487782118343193788486008079212749991667353547104722408599333602397593385534",
-        "16462176256345044748596413252245886610551219407534207263945043788204520833598"
-       ]
-      },
-      {
-       "line": 2.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "51478049908801800205185496997348980009076143954971161850433230444326762057404",
-        "55231314315090584850120886055696357150097659650791889513976736448994065178941"
-       ]
-      },
-      {
-       "line": 1.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "38472025339228273451958261856552932643781433136130078464396316255671580276544",
-        "115308462559228303226327598059555261905105244360930606644048959546149477357445"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Kings",
-       "Devils"
-      ],
-      "tokens": [
-       "113129453360689563122930269351077598322975690891378086817887187603497330776576",
-       "29088913867876881982637752948862679726738478979583679982474084198576107728111"
-      ]
-     }
-    },
-    "an": {
-     "id": 293467,
-     "home_team_id": 239,
-     "away_team_id": 217
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.995,
-     "away": 0.005,
-     "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 1.39,
-   "payout_est": false,
-   "start_ts": "2026-10-24T19:40Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:27",
     "close_price": null,
     "clv_pct": null
    }
@@ -6754,7 +6497,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NCAAF",
@@ -7074,7 +6817,7 @@
      "home": 0.5297,
      "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "MLB",
@@ -7859,7 +7602,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NBA",
@@ -8018,10 +7761,10 @@
     "snapshot": {
      "date": "2026-10-24T19:30Z",
      "period": 3,
-     "clock": 120.0,
+     "clock": 84.0,
      "state": "in",
      "completed": false,
-     "detail": "2:00 - 3rd",
+     "detail": "1:24 - 3rd",
      "teams": [
       {
        "id": "344",
@@ -8644,10 +8387,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.0647,
-     "away": 0.9353,
-     "spread": 0.02,
-     "t": "2026-10-24T21:55Z"
+     "home": 0.035,
+     "away": 0.965,
+     "spread": 0.01,
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NCAAF",
@@ -9462,7 +9205,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NFL",
@@ -10266,7 +10009,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-24T21:55Z"
+     "t": "2026-10-24T21:56Z"
     }
    },
    "sport": "NBA",
@@ -10282,6 +10025,21 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-24",
+   "book": "FanDuel",
+   "event": "Los Angeles Kings @ New Jersey Devils",
+   "pick": "Jack Hughes 1+ Points + Jack Hughes 2+ Shots on Goal + Timo Meier 2+ Shots on Goal + Adrian Kempe 2+ Shots on Goal",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-24 14:27",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
   {
    "date": "2026-10-21",
    "book": "bet365",
@@ -11522,15 +11280,15 @@
    "clv": null
   }
  ],
- "pnl_total": 107.98,
+ "pnl_total": 107.48,
  "unsettled": {
-  "n": 38,
-  "cash_stake": 24.6,
-  "max_payout": 173.3,
+  "n": 37,
+  "cash_stake": 24.1,
+  "max_payout": 171.91,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 24.6,
+ "open_stake": 24.1,
  "recs": {
   "stats": {
    "overall": {
@@ -15320,15 +15078,6 @@
     "legs": []
    },
    {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -15385,18 +15134,18 @@
       "result": "void"
      }
     ]
-   },
-   {
-    "bet_id": "d91a6de4",
-    "book": "Caesars",
-    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "605a8aad",
+    "book": "FanDuel",
+    "pick": "Jack Hughes 1+ Points + Jack Hughes 2+ Shots on Goal + Timo Meier 2+ Shots on Goal + Adrian Kempe 2+ Shots on Goal",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "LA 1-3 NJ",
+    "at": "2026-10-24 17:55"
+   },
    {
     "bet_id": "35f28c8c",
     "book": "Caesars",
@@ -15612,27 +15361,18 @@
     "pnl": -0.3,
     "final": "NE 24-30 CHI",
     "at": "2026-10-22 23:23"
-   },
-   {
-    "bet_id": "b8714d0e",
-    "book": "Caesars",
-    "pick": "D'Andre Swift 2+ Touchdowns",
-    "result": "lost",
-    "pnl": -0.1,
-    "final": "NE 24-30 CHI",
-    "at": "2026-10-22 23:23"
    }
   ],
   "last_change_at": "2026-10-24 17:55 ET"
  },
- "open_live_n": 36,
+ "open_live_n": 35,
  "open_stake_by_book": {
   "bet365": 4.4,
   "Caesars": 3.9,
   "DraftKings": 0.4,
-  "FanDuel": 7.1,
+  "FanDuel": 6.6,
   "PointsBet": 13.5
  },
- "hash": "5f59c65e51db6a14e8e67159c42203825fa4051c",
- "generated_at": "2026-10-24T17:55:21-04:00"
+ "hash": "c60ac73a60b1585cddfa684a696258dbf8d8239d",
+ "generated_at": "2026-10-24T17:56:06-04:00"
 }
