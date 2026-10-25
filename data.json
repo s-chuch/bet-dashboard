@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -1661,77 +1661,6 @@
    "payout_est": false,
    "start_ts": "2026-10-25T17:00Z",
    "clv": null
-  },
-  {
-   "bet_id": "3ce5384a",
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Palermo v Carrarese",
-   "market": "Match Result (bonus bet $2.50)",
-   "pick": "Carrarese",
-   "start": "Sun Oct 25 10:00 AM ET",
-   "price": "+550",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 13.75,
-   "ev_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Carrarese",
-     "women": false,
-     "text": "Carrarese",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/ita.2",
-    "date": "20261025",
-    "groups": null,
-    "id": "401899582",
-    "snapshot": {
-     "date": "2026-10-25T14:00Z",
-     "period": 2,
-     "clock": 5340.0,
-     "state": "in",
-     "completed": false,
-     "detail": "89'",
-     "teams": [
-      {
-       "id": "2923",
-       "name": "Palermo",
-       "abbr": "PAL",
-       "short": "Palermo",
-       "nick": "Palermo",
-       "location": "Palermo",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "3988",
-       "name": "Carrarese",
-       "abbr": "CAR",
-       "short": "Carrarese",
-       "nick": "Carrarese",
-       "location": "Carrarese",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 13.75,
-   "payout_est": false,
-   "start_ts": "2026-10-25T14:00Z",
-   "clv": {
-    "placed_at": null,
-    "close_price": "+563",
-    "clv_pct": -1.99
-   }
   },
   {
    "bet_id": "bf9a8c79",
@@ -1945,7 +1874,7 @@
      "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "90'",
+     "detail": "90'+5'",
      "teams": [
       {
        "id": "384",
@@ -2826,7 +2755,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -3596,7 +3525,7 @@
      "home": 0.3971,
      "away": 0.6029,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NBA",
@@ -3787,7 +3716,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NHL",
@@ -3854,11 +3783,11 @@
     "id": "401873011",
     "snapshot": {
      "date": "2026-10-25T13:30Z",
-     "period": 3,
-     "clock": 14.0,
+     "period": 4,
+     "clock": 900.0,
      "state": "in",
      "completed": false,
-     "detail": "0:14 - 3rd",
+     "detail": "15:00 - 4th",
      "teams": [
       {
        "id": "18",
@@ -4516,10 +4445,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2778,
-     "away": 0.7222,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -4597,11 +4526,11 @@
     "id": "401873011",
     "snapshot": {
      "date": "2026-10-25T13:30Z",
-     "period": 3,
-     "clock": 14.0,
+     "period": 4,
+     "clock": 900.0,
      "state": "in",
      "completed": false,
-     "detail": "0:14 - 3rd",
+     "detail": "15:00 - 4th",
      "teams": [
       {
        "id": "18",
@@ -5259,10 +5188,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2778,
-     "away": 0.7222,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -5449,7 +5378,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NHL",
@@ -6230,7 +6159,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NBA",
@@ -6982,7 +6911,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-25T15:47Z"
+     "t": "2026-10-25T15:52Z"
     }
    },
    "sport": "NFL",
@@ -8160,6 +8089,21 @@
   {
    "date": "2026-10-20",
    "book": "PointsBet",
+   "event": "Palermo v Carrarese",
+   "pick": "Carrarese",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": true,
+   "clv": {
+    "placed_at": null,
+    "close_price": "+563",
+    "clv_pct": -1.99
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "book": "PointsBet",
    "event": "Union St Gilloise v Hapoel Beer Sheva",
    "pick": "Hapoel Beer Sheva",
    "result": "lost",
@@ -8347,9 +8291,9 @@
  ],
  "pnl_total": 106.96,
  "unsettled": {
-  "n": 23,
+  "n": 22,
   "cash_stake": 22.6,
-  "max_payout": 153.15,
+  "max_payout": 139.4,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -8359,16 +8303,16 @@
    "overall": {
     "n": 136,
     "w": 39,
-    "l": 64,
+    "l": 65,
     "p": 0,
-    "pending": 33,
-    "win_pct": 37.9,
+    "pending": 32,
+    "win_pct": 37.5,
     "units": 18.24,
     "roi_pct": 21.7,
     "roi_n": 84,
     "exp_roi_pct": 10.1,
-    "exp_wins": 35.1,
-    "exp_wins_n": 102,
+    "exp_wins": 35.3,
+    "exp_wins_n": 103,
     "wins_with_fair": 38
    },
    "by_promo": {
@@ -8405,16 +8349,16 @@
     "bonus bet": {
      "n": 18,
      "w": 5,
-     "l": 11,
+     "l": 12,
      "p": 0,
-     "pending": 2,
-     "win_pct": 31.2,
+     "pending": 1,
+     "win_pct": 29.4,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 2.6,
-     "exp_wins_n": 16,
+     "exp_wins": 2.7,
+     "exp_wins_n": 17,
      "wins_with_fair": 5
     },
     "bonus bet $15 (min +300)": {
@@ -8617,16 +8561,16 @@
     "Soccer": {
      "n": 37,
      "w": 8,
-     "l": 18,
+     "l": 19,
      "p": 0,
-     "pending": 11,
-     "win_pct": 30.8,
+     "pending": 10,
+     "win_pct": 29.6,
      "units": 1.17,
      "roi_pct": 9.8,
      "roi_n": 12,
      "exp_roi_pct": 2.6,
-     "exp_wins": 5.4,
-     "exp_wins_n": 26,
+     "exp_wins": 5.6,
+     "exp_wins_n": 27,
      "wins_with_fair": 8
     },
     "WNBA": {
@@ -8679,16 +8623,16 @@
     "yes": {
      "n": 75,
      "w": 27,
-     "l": 46,
+     "l": 47,
      "p": 0,
-     "pending": 2,
-     "win_pct": 37.0,
+     "pending": 1,
+     "win_pct": 36.5,
      "units": 24.18,
      "roi_pct": 40.3,
      "roi_n": 60,
      "exp_roi_pct": 12.4,
-     "exp_wins": 24.7,
-     "exp_wins_n": 72,
+     "exp_wins": 24.8,
+     "exp_wins_n": 73,
      "wins_with_fair": 26
     },
     "no": {
@@ -9570,11 +9514,11 @@
     "promo": "bonus bet",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "CAR 1-2 PAL (FT)",
     "source": "rec.py add",
     "notes": "PointsBet Deposit Match bonus bet token $2.50 (stake not returned); ev = bonus value per $1 x100 (0.886); Pin -210 / draw +379 / +488; pulled 2:20 PM ET Oct 20; yes at +521",
-    "units": null
+    "units": 0.0
    },
    {
     "rec_id": "da6c3aa0",
@@ -12134,15 +12078,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "fa459703",
     "book": "bet365",
     "event": "Athletic Club v Getafe (La Liga)",
@@ -12150,18 +12085,18 @@
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
     "legs": []
-   },
-   {
-    "bet_id": "d91a6de4",
-    "book": "Caesars",
-    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "3ce5384a",
+    "book": "PointsBet",
+    "pick": "Carrarese",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "CAR 1-2 PAL",
+    "at": "2026-10-25 11:52"
+   },
    {
     "bet_id": "e3ec8310",
     "book": "bet365",
@@ -12377,27 +12312,18 @@
     "pnl": -0.4,
     "final": "CHI 132-125 MIL",
     "at": "2026-10-23 18:50"
-   },
-   {
-    "bet_id": "ca4be7d4",
-    "book": "PointsBet",
-    "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "NFO 1-1 IPS",
-    "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 11:25 ET"
+  "last_change_at": "2026-10-25 11:52 ET"
  },
- "open_live_n": 22,
+ "open_live_n": 21,
  "open_stake_by_book": {
   "bet365": 2.0,
   "Caesars": 2.0,
   "DraftKings": 0.1,
   "FanDuel": 11.1,
-  "PointsBet": 12.5
+  "PointsBet": 10.0
  },
- "hash": "42aa0381b2a6cc6a3cbeb63f93a5732234b12cda",
- "generated_at": "2026-10-25T11:47:24-04:00"
+ "hash": "169a0a29507ee663cbad80e34feae7f991ab02e8",
+ "generated_at": "2026-10-25T11:52:21-04:00"
 }

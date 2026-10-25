@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "fa459703",
    "book": "bet365",
    "event": "Athletic Club v Getafe (La Liga)",
@@ -17,18 +8,18 @@
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "3ce5384a",
+   "book": "PointsBet",
+   "pick": "Carrarese",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "CAR 1-2 PAL",
+   "at": "2026-10-25 11:52"
+  },
   {
    "bet_id": "e3ec8310",
    "book": "bet365",
@@ -244,17 +235,8 @@
    "pnl": -0.4,
    "final": "CHI 132-125 MIL",
    "at": "2026-10-23 18:50"
-  },
-  {
-   "bet_id": "ca4be7d4",
-   "book": "PointsBet",
-   "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "NFO 1-1 IPS",
-   "at": "2026-10-23 16:58"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 11:25 ET"
+ "last_change_at": "2026-10-25 11:52 ET"
 }
