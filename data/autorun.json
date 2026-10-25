@@ -33,15 +33,6 @@
    ]
   },
   {
-   "bet_id": "c077f229",
-   "book": "FanDuel",
-   "event": "Edmonton Elks @ Saskatchewan Roughriders (CFL)",
-   "pick": "Elks +15.5 + Over 37.5 + Roughriders ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "d91a6de4",
    "book": "Caesars",
    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -279,5 +270,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 00:36 ET"
+ "last_change_at": "2026-10-25 00:37 ET"
 }

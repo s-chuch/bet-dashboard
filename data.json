@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:36Z"
+     "t": "2026-10-25T04:37Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:36Z"
+     "t": "2026-10-25T04:37Z"
     }
    },
    "sport": "NFL",
@@ -2207,54 +2207,6 @@
    "start_ts": "2026-10-25T00:00Z",
    "clv": {
     "placed_at": "2026-10-24 14:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "c077f229",
-   "date": "2026-10-24",
-   "book": "FanDuel",
-   "event": "Edmonton Elks @ Saskatchewan Roughriders",
-   "market": "SGP 3-leg (60% profit boost)",
-   "pick": "Elks +15.5 + Over 37.5 + Roughriders ML",
-   "start": "Sat Oct 24 03:05 PM ET",
-   "price": "+173",
-   "boosted_price": "+276",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.38,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Elks",
-     "line": 15.5,
-     "women": false,
-     "text": "Elks +15.5"
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 37.5,
-     "text": "Over 37.5"
-    },
-    {
-     "type": "ml",
-     "team": "Roughriders",
-     "women": false,
-     "text": "Roughriders ML"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.5,
-   "payout": 1.88,
-   "payout_est": false,
-   "start_ts": "2026-10-24T19:05Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:23",
     "close_price": null,
     "clv_pct": null
    }
@@ -3007,7 +2959,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:36Z"
+     "t": "2026-10-25T04:37Z"
     }
    },
    "sport": "NFL",
@@ -3094,6 +3046,21 @@
    "auto": false,
    "clv": {
     "placed_at": "2026-10-24 14:21",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "FanDuel",
+   "event": "Edmonton Elks @ Saskatchewan Roughriders",
+   "pick": "Elks +15.5 + Over 37.5 + Roughriders ML",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:23",
     "close_price": null,
     "clv_pct": null
    }
@@ -4247,15 +4214,15 @@
    "clv": null
   }
  ],
- "pnl_total": 107.96,
+ "pnl_total": 107.46,
  "unsettled": {
-  "n": 18,
-  "cash_stake": 15.9,
-  "max_payout": 138.42,
+  "n": 17,
+  "cash_stake": 15.4,
+  "max_payout": 136.54,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.9,
+ "open_stake": 15.4,
  "recs": {
   "stats": {
    "overall": {
@@ -8068,15 +8035,6 @@
     ]
    },
    {
-    "bet_id": "c077f229",
-    "book": "FanDuel",
-    "event": "Edmonton Elks @ Saskatchewan Roughriders (CFL)",
-    "pick": "Elks +15.5 + Over 37.5 + Roughriders ML",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -8313,16 +8271,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:36 ET"
+  "last_change_at": "2026-10-25 00:37 ET"
  },
- "open_live_n": 17,
+ "open_live_n": 16,
  "open_stake_by_book": {
   "bet365": 1.2,
   "Caesars": 2.5,
   "DraftKings": 0.1,
-  "FanDuel": 4.6,
+  "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "12b5d225561e8abb3b81f6bd15b069477eb37cd5",
- "generated_at": "2026-10-25T00:36:53-04:00"
+ "hash": "a86e1786d042a22a76eae1f502b3bd6d18ad4a4b",
+ "generated_at": "2026-10-25T00:37:18-04:00"
 }
