@@ -28,15 +28,6 @@
    "legs": []
   },
   {
-   "bet_id": "ec978aa7",
-   "book": "bet365",
-   "event": "Alexander Volkanovski v Movsar Evloev (UFC 333)",
-   "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
-   "stake": "0.40",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "60d543b0",
    "book": "bet365",
    "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
@@ -351,5 +342,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 00:22 ET"
+ "last_change_at": "2026-10-25 00:24 ET"
 }

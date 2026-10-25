@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:22Z"
+     "t": "2026-10-25T04:24Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:22Z"
+     "t": "2026-10-25T04:24Z"
     }
    },
    "sport": "NFL",
@@ -1975,49 +1975,6 @@
    "payout": 2.97,
    "payout_est": false,
    "start_ts": "2026-10-25T13:30Z",
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "ec978aa7",
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Alexander Volkanovski v Movsar Evloev",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
-   "start": "Sat Oct 24 04:00 PM ET",
-   "price": "+160",
-   "boosted_price": "+240",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.96,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Volkanovski",
-     "women": false,
-     "text": "Volkanovski ML"
-    },
-    {
-     "type": "unknown",
-     "text": "Volkanovski most strikes landed"
-    },
-    {
-     "type": "unknown",
-     "text": "Volkanovski most sig strikes landed"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.4,
-   "payout": 1.36,
-   "payout_est": false,
-   "start_ts": "2026-10-24T20:00Z",
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -3373,7 +3330,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:22Z"
+     "t": "2026-10-25T04:24Z"
     }
    },
    "sport": "NFL",
@@ -3724,6 +3681,21 @@
    "pnl": -0.4,
    "stake": 0.4,
    "auto": true,
+   "clv": {
+    "placed_at": "2026-10-23 18:24",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "book": "bet365",
+   "event": "Alexander Volkanovski v Movsar Evloev",
+   "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
+   "result": "lost",
+   "pnl": -0.4,
+   "stake": 0.4,
+   "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -4534,15 +4506,15 @@
    "clv": null
   }
  ],
- "pnl_total": 103.0,
+ "pnl_total": 102.6,
  "unsettled": {
-  "n": 26,
-  "cash_stake": 18.7,
-  "max_payout": 152.28,
+  "n": 25,
+  "cash_stake": 18.3,
+  "max_payout": 150.92,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 18.7,
+ "open_stake": 18.3,
  "recs": {
   "stats": {
    "overall": {
@@ -8350,15 +8322,6 @@
     "legs": []
    },
    {
-    "bet_id": "ec978aa7",
-    "book": "bet365",
-    "event": "Alexander Volkanovski v Movsar Evloev (UFC 333)",
-    "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
-    "stake": "0.40",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "60d543b0",
     "book": "bet365",
     "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
@@ -8672,16 +8635,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:22 ET"
+  "last_change_at": "2026-10-25 00:24 ET"
  },
- "open_live_n": 24,
+ "open_live_n": 23,
  "open_stake_by_book": {
-  "bet365": 2.4,
+  "bet365": 2.0,
   "Caesars": 2.9,
   "DraftKings": 0.4,
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "f3c08b3226d171c4d5feaaa51a8e82fb0b849716",
- "generated_at": "2026-10-25T00:22:14-04:00"
+ "hash": "7c8c76e67eeb8d767d5526902cfd1382a52eca46",
+ "generated_at": "2026-10-25T00:24:24-04:00"
 }
