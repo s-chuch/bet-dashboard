@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T13:46Z"
+     "t": "2026-10-25T14:41Z"
     }
    },
    "sport": "NFL",
@@ -1649,10 +1649,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6616,
-     "away": 0.3384,
+     "home": 0.655,
+     "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-25T13:46Z"
+     "t": "2026-10-25T14:41Z"
     }
    },
    "sport": "NFL",
@@ -1693,11 +1693,11 @@
     "id": "401899582",
     "snapshot": {
      "date": "2026-10-25T14:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2400.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "40'",
      "teams": [
       {
        "id": "2923",
@@ -1707,7 +1707,7 @@
        "nick": "Palermo",
        "location": "Palermo",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "3988",
@@ -1941,11 +1941,11 @@
     "id": "401879254",
     "snapshot": {
      "date": "2026-10-25T14:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2460.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "41'",
      "teams": [
       {
        "id": "384",
@@ -2038,11 +2038,11 @@
     "id": "401882835",
     "snapshot": {
      "date": "2026-10-25T13:00Z",
-     "period": 1,
-     "clock": 2640.0,
+     "period": 2,
+     "clock": 4800.0,
      "state": "in",
      "completed": false,
-     "detail": "44'",
+     "detail": "80'",
      "teams": [
       {
        "id": "93",
@@ -2052,7 +2052,7 @@
        "nick": "Athletic Club",
        "location": "Athletic Club",
        "home": true,
-       "score": "2"
+       "score": "3"
       },
       {
        "id": "2922",
@@ -2826,7 +2826,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T13:46Z"
+     "t": "2026-10-25T14:41Z"
     }
    },
    "sport": "NFL",
@@ -8151,6 +8151,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "69e23734380ed9ed6353f7a4d015350d801b3118",
- "generated_at": "2026-10-25T09:46:14-04:00"
+ "hash": "f3d00cead17bde59affccc5343e6b644ccf4311d",
+ "generated_at": "2026-10-25T10:41:25-04:00"
 }
