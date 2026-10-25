@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "c772a455",
-   "book": "Caesars",
-   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers (NFL)",
-   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "ec6db8a6",
    "book": "Caesars",
    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",

@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 208.44,
-   "updated": "2026-10-25 00:29"
+   "balance": 208.94,
+   "updated": "2026-10-25 00:37"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 672.0,
+ "total": 672.5,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1756,55 +1756,6 @@
    "payout": 1.33,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
-  },
-  {
-   "bet_id": "c772a455",
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers",
-   "market": "Parlay 3-leg (profit boost)",
-   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
-   "start": "Thu Oct 22 08:15 PM ET",
-   "price": "+314",
-   "boosted_price": "+376",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.88,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "D'Andre Swift",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "D'Andre Swift ATTD"
-    },
-    {
-     "type": "prop",
-     "player": "Jaylen Warren",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "Jaylen Warren ATTD"
-    },
-    {
-     "type": "prop",
-     "player": "Chuba Hubbard",
-     "stat": "td",
-     "op": "min",
-     "min": 1,
-     "text": "Chuba Hubbard ATTD"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.5,
-   "payout": 2.38,
-   "payout_est": false,
-   "start_ts": "2026-10-23T00:15Z",
    "clv": null
   },
   {
@@ -3866,6 +3817,17 @@
   },
   {
    "date": "2026-10-20",
+   "book": "Caesars",
+   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers",
+   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
+   "result": "void",
+   "pnl": 0.0,
+   "stake": 0.5,
+   "auto": false,
+   "clv": null
+  },
+  {
+   "date": "2026-10-20",
    "book": "theScore",
    "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
    "pick": "Blue Jackets ML + Adam Fantilli O3.5 SOG + Zach Werenski O2.5 SOG + Adam Fantilli U1.5 pts",
@@ -4143,13 +4105,13 @@
  ],
  "pnl_total": 106.96,
  "unsettled": {
-  "n": 16,
-  "cash_stake": 14.9,
-  "max_payout": 135.2,
+  "n": 15,
+  "cash_stake": 14.4,
+  "max_payout": 132.82,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 14.9,
+ "open_stake": 14.4,
  "recs": {
   "stats": {
    "overall": {
@@ -7930,15 +7892,6 @@
  "auto": {
   "needs_review": [
    {
-    "bet_id": "c772a455",
-    "book": "Caesars",
-    "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers (NFL)",
-    "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "ec6db8a6",
     "book": "Caesars",
     "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
@@ -8186,14 +8139,14 @@
   ],
   "last_change_at": "2026-10-25 00:37 ET"
  },
- "open_live_n": 16,
+ "open_live_n": 15,
  "open_stake_by_book": {
   "bet365": 1.2,
-  "Caesars": 2.5,
+  "Caesars": 2.0,
   "DraftKings": 0.1,
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "fc5c0d755dc7f2aff39af98eb85f73286636c35d",
- "generated_at": "2026-10-25T00:37:37-04:00"
+ "hash": "81c353b5fb3761636f040d1ac43a40e25c4fa397",
+ "generated_at": "2026-10-25T00:37:57-04:00"
 }

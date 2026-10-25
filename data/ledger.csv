@@ -421,3 +421,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-25 00:36,FanDuel,8ed4e0d5,return,3.34,won
 2026-10-25 00:37,FanDuel,c077f229,settled,0.00,"lost, no return"
 2026-10-25 00:37,FanDuel,febe6211,settled,0.00,"lost, no return"
+2026-10-25 00:37,Caesars,c772a455,return,0.50,void
