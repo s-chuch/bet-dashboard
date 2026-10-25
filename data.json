@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:27Z"
+     "t": "2026-10-25T04:29Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:27Z"
+     "t": "2026-10-25T04:29Z"
     }
    },
    "sport": "NFL",
@@ -2353,59 +2353,6 @@
    "start_ts": "2026-10-24T18:25Z",
    "clv": {
     "placed_at": "2026-10-24 14:21",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "8305b93d",
-   "date": "2026-10-24",
-   "book": "Caesars",
-   "event": "NHL multi",
-   "market": "Parlay 3-leg (20% profit boost)",
-   "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
-   "start": "Sat Oct 24 07:07 PM ET",
-   "price": "+740",
-   "boosted_price": "+888",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 1.78,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Connor McDavid",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Connor McDavid anytime goal scorer"
-    },
-    {
-     "type": "prop",
-     "player": "Kirill Kaprizov",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Kirill Kaprizov anytime goal scorer"
-    },
-    {
-     "type": "prop",
-     "player": "David Pastrnak",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "David Pastrnak anytime goal scorer"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.2,
-   "payout": 1.98,
-   "payout_est": false,
-   "start_ts": "2026-10-24T23:07Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:38",
     "close_price": null,
     "clv_pct": null
    }
@@ -3158,7 +3105,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:27Z"
+     "t": "2026-10-25T04:29Z"
     }
    },
    "sport": "NFL",
@@ -3226,6 +3173,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-24 14:46",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "Caesars",
+   "event": "NHL multi",
+   "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:38",
     "close_price": null,
     "clv_pct": null
    }
@@ -4379,15 +4341,15 @@
    "clv": null
   }
  ],
- "pnl_total": 103.58,
+ "pnl_total": 103.38,
  "unsettled": {
-  "n": 22,
-  "cash_stake": 17.1,
-  "max_payout": 147.74,
+  "n": 21,
+  "cash_stake": 16.9,
+  "max_payout": 145.76,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 17.1,
+ "open_stake": 16.9,
  "recs": {
   "stats": {
    "overall": {
@@ -8227,15 +8189,6 @@
     "legs": []
    },
    {
-    "bet_id": "8305b93d",
-    "book": "Caesars",
-    "event": "NHL multi (TOR@EDM / MIN@SEA / SJ@BOS)",
-    "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -8481,16 +8434,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:27 ET"
+  "last_change_at": "2026-10-25 00:28 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "bet365": 1.2,
-  "Caesars": 2.9,
+  "Caesars": 2.7,
   "DraftKings": 0.4,
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "de8825df8dafe4e51566e5c9a72647df43ce187c",
- "generated_at": "2026-10-25T00:27:42-04:00"
+ "hash": "74bef6c401e3bcf97fec4bd7d1d7c2e860c76b95",
+ "generated_at": "2026-10-25T00:29:13-04:00"
 }

@@ -60,15 +60,6 @@
    "legs": []
   },
   {
-   "bet_id": "8305b93d",
-   "book": "Caesars",
-   "event": "NHL multi (TOR@EDM / MIN@SEA / SJ@BOS)",
-   "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "d91a6de4",
    "book": "Caesars",
    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -315,5 +306,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 00:27 ET"
+ "last_change_at": "2026-10-25 00:28 ET"
 }
