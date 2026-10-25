@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T12:50Z"
+     "t": "2026-10-25T13:45Z"
     }
    },
    "sport": "NFL",
@@ -1649,10 +1649,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.6616,
+     "away": 0.3384,
      "spread": 0.01,
-     "t": "2026-10-25T12:50Z"
+     "t": "2026-10-25T13:45Z"
     }
    },
    "sport": "NFL",
@@ -1727,7 +1727,11 @@
    "payout": 13.75,
    "payout_est": false,
    "start_ts": "2026-10-25T14:00Z",
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": "+563",
+    "clv_pct": -1.99
+   }
   },
   {
    "bet_id": "bf9a8c79",
@@ -2034,11 +2038,11 @@
     "id": "401882835",
     "snapshot": {
      "date": "2026-10-25T13:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2640.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "44'",
      "teams": [
       {
        "id": "93",
@@ -2048,7 +2052,7 @@
        "nick": "Athletic Club",
        "location": "Athletic Club",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "2922",
@@ -2822,7 +2826,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T12:50Z"
+     "t": "2026-10-25T13:45Z"
     }
    },
    "sport": "NFL",
@@ -8147,6 +8151,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "44f217c2285d42df2805fd735c81db4876ae1e2a",
- "generated_at": "2026-10-25T08:50:28-04:00"
+ "hash": "c7a585ecf6d96ae7d4d8f6d19128f9b355c88a6b",
+ "generated_at": "2026-10-25T09:45:56-04:00"
 }
