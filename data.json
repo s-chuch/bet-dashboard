@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T03:50Z"
+     "t": "2026-10-25T04:16Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T03:50Z"
+     "t": "2026-10-25T04:16Z"
     }
    },
    "sport": "NFL",
@@ -3461,7 +3461,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T03:50Z"
+     "t": "2026-10-25T04:16Z"
     }
    },
    "sport": "NFL",
@@ -3721,36 +3721,6 @@
    "result": "lost",
    "pnl": -0.2,
    "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "Philadelphia 76ers @ New York Knicks",
-   "pick": "Philadelphia 76ers",
-   "result": "won",
-   "pnl": 0.15,
-   "stake": 0.1,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "San Jose Sharks @ Toronto Maple Leafs",
-   "pick": "Sharks +1.5 + Maple Leafs -0.5 (cut off) + Auston Matthews 2+ (cut off)",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
    "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:27",
@@ -4361,116 +4331,6 @@
    "clv": null
   },
   {
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Anaheim Ducks @ New York Rangers",
-   "pick": "Mika Zibanejad O0.5 pts + Cutter Gauthier U3.5 SOG + Mika Zibanejad U2.5 SOG + Alex Killorn U0.5 goals",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Colorado Avalanche @ Philadelphia Flyers",
-   "pick": "Nazem Kadri O0.5 pts + Nathan MacKinnon O0.5 goals + Trevor Zegras O1.5 SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "pick": "Junior Caminero 2+ TB + Freddy Peralta 4+ K + Guardians +1.5",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "San Jose Sharks @ Toronto Maple Leafs",
-   "pick": "Maple Leafs ML + Macklin Celebrini U1.5 pts + Darren Raddysh U0.5 pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "theScore",
-   "event": "Pittsburgh Penguins @ Utah Mammoth",
-   "pick": "Utah ML + Mikhail Sergachev O1.5 SOG + Anders Lee U1.5 SOG + Nick Schmaltz O0.5 pts",
-   "result": "won",
-   "pnl": 1.08,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Fenerbahce v Slavia Prague",
-   "pick": "Fenerbahce",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Colorado Avalanche @ Philadelphia Flyers",
-   "pick": "Nathan MacKinnon anytime goal",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Atlanta Dream @ Golden State Valkyries",
-   "pick": "GS Valkyries ML + Rhyne Howard 15+ pts + Gabby Williams 18+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "COL @ PHI / ANA @ NYR / SJ @ TOR",
-   "pick": "Nathan MacKinnon + Pavel Dorofeyev + Auston Matthews anytime goal (labels 'An...')",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Under 50 + Drake Maye 2+ pass TD",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
    "date": "2026-10-20",
    "book": "theScore",
    "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
@@ -4740,182 +4600,6 @@
    "book": "Caesars",
    "event": "Golden State Valkyries @ Atlanta Dream",
    "pick": "Over 150.5 + Valkyries -3.5",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Fenerbahce v Slavia Prague",
-   "pick": "Mason Greenwood 1+ SOT + Vedat Muriqi 1+ SOT + Marco Asensio 3+ shots",
-   "result": "won",
-   "pnl": 0.33,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Anstey Nomads v Macclesfield FC",
-   "pick": "Anstey Nomads",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Forest Green v Chesham Utd",
-   "pick": "Chesham Utd",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Harrogate Town v Bury",
-   "pick": "Bury",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "PointsBet",
-   "event": "Yeovil v Leatherhead",
-   "pick": "Leatherhead",
-   "result": "lost",
-   "pnl": -10.0,
-   "stake": 10.0,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "Tottenham vs Coventry City",
-   "pick": "Tottenham ML + Omar Marmoush score or assist + Sidiki Cherif 2+ shots",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "FanDuel",
-   "event": "Colorado Avalanche @ Philadelphia Flyers",
-   "pick": "Colorado Avalanche ML + Cale Makar 2+ SOG + Nathan MacKinnon 2+ SOG",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Christian McCaffrey First TD Scorer",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Christian McCaffrey anytime TD + Mike Evans 40+ rec yds + George Kittle 50+ rec yds",
-   "result": "won",
-   "pnl": 0.33,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Under 55.5 + Drake Maye 220+ pass yds + Caleb Williams 220+ pass yds",
-   "result": "won",
-   "pnl": 1.18,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "pick": "Over 3.5 runs + TB Rays ML + CLE Guardians Over 0.5 team runs",
-   "result": "won",
-   "pnl": 0.42,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Atlanta Dream @ Golden State Valkyries",
-   "pick": "Kiah Stokes 5+ rebounds + Angel Reese 7+ rebounds + Jordin Canada 7+ assists",
-   "result": "won",
-   "pnl": 0.28,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "bet365",
-   "event": "Anaheim Ducks @ New York Rangers",
-   "pick": "Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG",
-   "result": "won",
-   "pnl": 0.29,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "SF 49ers ML + Brock Purdy 280+ pass yds + Christian McCaffrey anytime TD",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "DraftKings",
-   "event": "Cleveland Guardians @ Tampa Bay Rays",
-   "pick": "TB Rays ML + CLE Guardians +2.5 + Chase DeLauter 1+ hits",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-19",
-   "book": "FanDuel",
-   "event": "Washington Commanders @ San Francisco 49ers",
-   "pick": "Christian McCaffrey 50+ rush yds + Rachaad White 30+ rush yds + Jayden Daniels 175+ pass yds + Terry McLaurin 15+ rec yds + Brock Purdy 225+ pass yds",
    "result": "lost",
    "pnl": -0.5,
    "stake": 0.5,
@@ -9093,6 +8777,6 @@
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "d7428d43ead162be237f5881a7ed6ea3157f7802",
- "generated_at": "2026-10-24T23:50:05-04:00"
+ "hash": "3bcb0b9c01557303b12cd4619851095555bdd50a",
+ "generated_at": "2026-10-25T00:16:09-04:00"
 }
