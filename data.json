@@ -249,11 +249,11 @@
     "id": "401873016",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 2,
-     "clock": 34.0,
+     "period": 3,
+     "clock": 146.0,
      "state": "in",
      "completed": false,
-     "detail": "0:34 - 2nd",
+     "detail": "2:26 - 3rd",
      "teams": [
       {
        "id": "34",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.635,
-     "away": 0.365,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NFL",
@@ -982,11 +982,11 @@
     "id": "401873015",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 537.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "8:57 - 4th",
      "teams": [
       {
        "id": "20",
@@ -996,7 +996,7 @@
        "nick": "Jets",
        "location": "New York",
        "home": true,
-       "score": "7"
+       "score": "17"
       },
       {
        "id": "15",
@@ -1653,10 +1653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.175,
-     "away": 0.825,
+     "home": 0.325,
+     "away": 0.675,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NFL",
@@ -2759,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NFL",
@@ -3529,7 +3529,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NBA",
@@ -3600,11 +3600,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1031.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 3:00 PM EDT",
+     "detail": "17:11 - 1st",
      "teams": [
       {
        "id": "4",
@@ -3614,7 +3614,7 @@
        "nick": "Blackhawks",
        "location": "Chicago",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "26",
@@ -3717,10 +3717,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.365,
-     "away": 0.635,
+     "home": 0.505,
+     "away": 0.495,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NHL",
@@ -3787,11 +3787,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1031.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 3:00 PM EDT",
+     "detail": "17:11 - 1st",
      "teams": [
       {
        "id": "4",
@@ -3801,7 +3801,7 @@
        "nick": "Blackhawks",
        "location": "Chicago",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "26",
@@ -3904,10 +3904,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.365,
-     "away": 0.635,
+     "home": 0.505,
+     "away": 0.495,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NHL",
@@ -4688,7 +4688,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NBA",
@@ -4766,11 +4766,11 @@
     "id": "401873018",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 721.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "12:01 - 4th",
      "teams": [
       {
        "id": "29",
@@ -4790,7 +4790,7 @@
        "nick": "Buccaneers",
        "location": "Tampa Bay",
        "home": false,
-       "score": "33"
+       "score": "36"
       }
      ]
     },
@@ -5437,10 +5437,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.025,
-     "away": 0.975,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-25T18:32Z"
+     "t": "2026-10-25T19:21Z"
     }
    },
    "sport": "NFL",
@@ -10928,6 +10928,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "fbd273740706c85d16eb8f88fef5d9422cd9b5da",
- "generated_at": "2026-10-25T14:32:17-04:00"
+ "hash": "55f733742fe70f7cde1ea3ca371c259766cdd189",
+ "generated_at": "2026-10-25T15:21:28-04:00"
 }
