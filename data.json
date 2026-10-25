@@ -952,7 +952,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T22:32Z"
+     "t": "2026-10-25T23:05Z"
     }
    },
    "sport": "NFL",
@@ -1722,7 +1722,7 @@
      "home": 0.405,
      "away": 0.595,
      "spread": 0.01,
-     "t": "2026-10-25T22:32Z"
+     "t": "2026-10-25T23:05Z"
     }
    },
    "sport": "NBA",
@@ -1800,11 +1800,11 @@
     "id": "401909861",
     "snapshot": {
      "date": "2026-10-25T21:00Z",
-     "period": 3,
-     "clock": 641.0,
+     "period": 4,
+     "clock": 665.0,
      "state": "in",
      "completed": false,
-     "detail": "10:41 - 3rd",
+     "detail": "11:05 - 4th",
      "teams": [
       {
        "id": "26",
@@ -1814,7 +1814,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "73"
+       "score": "102"
       },
       {
        "id": "13",
@@ -1824,7 +1824,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "77"
+       "score": "105"
       }
      ]
     },
@@ -2500,10 +2500,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2172,
-     "away": 0.7828,
+     "home": 0.275,
+     "away": 0.725,
      "spread": 0.01,
-     "t": "2026-10-25T22:32Z"
+     "t": "2026-10-25T23:05Z"
     }
    },
    "sport": "NBA",
@@ -2669,7 +2669,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T22:32Z"
+     "t": "2026-10-25T23:05Z"
     }
    },
    "sport": "NHL",
@@ -8258,6 +8258,6 @@
   "FanDuel": 2.1,
   "PointsBet": 10.0
  },
- "hash": "f24663691aa20b52c89d9482de1d25b50d1b0f31",
- "generated_at": "2026-10-25T18:32:52-04:00"
+ "hash": "11df2bd5ed719c4d676d30c503851fac73e0662c",
+ "generated_at": "2026-10-25T19:05:09-04:00"
 }
