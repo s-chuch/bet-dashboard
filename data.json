@@ -250,10 +250,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 4,
-     "clock": 405.0,
+     "clock": 187.0,
      "state": "in",
      "completed": false,
-     "detail": "6:45 - 4th",
+     "detail": "3:07 - 4th",
      "teams": [
       {
        "id": "34",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.197,
-     "away": 0.803,
+     "home": 0.385,
+     "away": 0.615,
      "spread": 0.01,
-     "t": "2026-10-25T19:49Z"
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NFL",
@@ -983,10 +983,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 4,
-     "clock": 204.0,
+     "clock": 73.0,
      "state": "in",
      "completed": false,
-     "detail": "3:24 - 4th",
+     "detail": "1:13 - 4th",
      "teams": [
       {
        "id": "20",
@@ -1653,10 +1653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.195,
-     "away": 0.805,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-25T19:49Z"
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NFL",
@@ -2759,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T19:49Z"
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NFL",
@@ -3529,7 +3529,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T19:49Z"
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NBA",
@@ -3601,10 +3601,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 1,
-     "clock": 281.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:41 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "4",
@@ -3661,6 +3661,17 @@
        "tokens": [
         "73053185029004745403049768572169336552788142391175713155993053124666062362762",
         "87273902519935825147291831744013129655726922606311712425429873562087177820304"
+       ]
+      },
+      {
+       "line": -2.5,
+       "outcomes": [
+        "Panthers",
+        "Blackhawks"
+       ],
+       "tokens": [
+        "65032138178855185549238938454287172899053788207006076910405677402086734899316",
+        "104806455579253900472706484699633469845760465057530543102948629145687487285636"
        ]
       }
      ],
@@ -3728,10 +3739,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.201,
-     "away": 0.799,
-     "spread": 0.02,
-     "t": "2026-10-25T19:49Z"
+     "home": 0.215,
+     "away": 0.785,
+     "spread": 0.01,
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NHL",
@@ -3799,10 +3810,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 1,
-     "clock": 281.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:41 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "4",
@@ -3859,6 +3870,17 @@
        "tokens": [
         "73053185029004745403049768572169336552788142391175713155993053124666062362762",
         "87273902519935825147291831744013129655726922606311712425429873562087177820304"
+       ]
+      },
+      {
+       "line": -2.5,
+       "outcomes": [
+        "Panthers",
+        "Blackhawks"
+       ],
+       "tokens": [
+        "65032138178855185549238938454287172899053788207006076910405677402086734899316",
+        "104806455579253900472706484699633469845760465057530543102948629145687487285636"
        ]
       }
      ],
@@ -3926,10 +3948,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.201,
-     "away": 0.799,
-     "spread": 0.02,
-     "t": "2026-10-25T19:49Z"
+     "home": 0.215,
+     "away": 0.785,
+     "spread": 0.01,
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NHL",
@@ -4710,7 +4732,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T19:49Z"
+     "t": "2026-10-25T19:57Z"
     }
    },
    "sport": "NBA",
@@ -9922,6 +9944,15 @@
  "auto": {
   "needs_review": [
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "fd0d2273",
     "book": "FanDuel",
     "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -9955,6 +9986,15 @@
     "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -10185,7 +10225,7 @@
     "at": "2026-10-23 21:39"
    }
   ],
-  "last_change_at": "2026-10-25 15:49 ET"
+  "last_change_at": "2026-10-25 15:57 ET"
  },
  "open_live_n": 17,
  "open_stake_by_book": {
@@ -10195,6 +10235,6 @@
   "FanDuel": 10.1,
   "PointsBet": 10.0
  },
- "hash": "b47f8d2c900f6e433bb129188ec0e26fbc02d67d",
- "generated_at": "2026-10-25T15:49:38-04:00"
+ "hash": "da2992abc592f0d987c1a6c51eb3902c886eb016",
+ "generated_at": "2026-10-25T15:57:45-04:00"
 }
