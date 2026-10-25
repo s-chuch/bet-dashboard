@@ -1,51 +1,5 @@
 {
- "needs_review": [
-  {
-   "bet_id": "48cfe23a",
-   "book": "Caesars",
-   "event": "Miami Dolphins @ New York Jets",
-   "pick": "NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter",
-   "stake": "0.50",
-   "reason": "leg \"1st TD in 1st quarter\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "NY Jets U26.5 team pts",
-     "result": "won"
-    },
-    {
-     "leg": "NY Jets ML",
-     "result": "lost"
-    }
-   ]
-  },
-  {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "fd0d2273",
-   "book": "FanDuel",
-   "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
-   "pick": "Tyler Shough 175+ pass yds + Daniel Jones 125+ pass yds + Brock Purdy 150+ pass yds + Deshaun Watson 150+ pass yds + Geno Smith 175+ pass yds + Baker Mayfield 150+ pass yds",
-   "stake": "2.00 (bonus)",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  }
- ],
+ "needs_review": [],
  "last_settled": [
   {
    "bet_id": "bf9db4ab",
@@ -274,5 +228,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 18:29 ET"
+ "last_change_at": "2026-10-25 18:32 ET"
 }

@@ -5,7 +5,6 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-19,FanDuel,NBA Player Awards,Apr 14 2027 07:00 PM ET,Futures (50% profit boost),Victor Wembanyama 26-27 NBA Regular Season MVP,+200,+300,0.50,1.50,,,open,,8d3075bb,,
 2026-10-19,PointsBet,Barcelona v Alaves (Spanish La Liga),Sat Oct 31 04:00 PM ET,3-Way Draw (WELCOMEDM rollover),Draw,+800,,10.00,80.00,,,open,,5db8dfe1,,
 2026-10-20,FanDuel,New York Giants @ Houston Texans (NFL),Sun Oct 25 1:00 PM ET,"Moneyline (bonus bet $1.00; price unconfirmed, est.)",New York Giants,+370,,1.00 (bonus),3.70,21.2,78.6,won,3.70,cfd5b49a,2026-10-25 16:22,auto
-2026-10-19,Caesars,Miami Dolphins @ New York Jets,Sun Oct 25 01:00 PM ET,SGP 3-leg (10% profit boost),NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter,+325,+358,0.50,1.79,,,lost,-0.50,48cfe23a,2026-10-25 18:31,
 2026-10-20,Caesars,Golden State Valkyries @ Atlanta Dream,Wed Oct 21 08:00 PM ET,SGP 2-leg (30% profit boost),Over 150.5 + Valkyries -3.5,+425,+554,0.50,2.77,,,lost,-0.50,0e0f4610,2026-10-21 22:20,auto
 2026-10-20,Caesars,Tampa Bay Rays @ Milwaukee Brewers,Fri Oct 23 08:00 PM ET,SGP 3-leg (25% profit boost),Jackson Chourio U1.5 TB + Jonathan Aranda O0.5 TB + Christian Yelich O0.5 TB,+315,+394,0.50,1.97,,,lost,-0.50,4ca058ce,2026-10-23 23:27,auto
 2026-10-20,Caesars,Tampa Bay Rays @ Milwaukee Brewers,Fri Oct 23 08:00 PM ET,SGP 3-leg (25% profit boost),Brewers ML + Junior Caminero 1+ hits + William Contreras U1.5 TB,+355,+444,0.50,2.22,,,lost,-0.50,c4cc09ea,2026-10-23 23:27,auto
