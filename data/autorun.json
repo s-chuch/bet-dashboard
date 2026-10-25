@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "80b13e8e",
    "book": "bet365",
    "event": "Crystal Palace v Newcastle (EPL)",
@@ -35,18 +26,27 @@
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "d7e25555",
+   "book": "bet365",
+   "pick": "Steelers ML + Aaron Rodgers 200+ Passing Yards + Tyler Shough 225+ Passing Yards",
+   "result": "won",
+   "pnl": 0.66,
+   "final": "PIT 16-10 NO",
+   "at": "2026-10-25 12:35"
+  },
+  {
+   "bet_id": "d54a26b4",
+   "book": "FanDuel",
+   "pick": "Steelers ML + Tyler Shough 225+ pass yds + DK Metcalf 60+ rec yds + Devaughn Vele 40+ rec yds",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "PIT 16-10 NO",
+   "at": "2026-10-25 12:35"
+  },
   {
    "bet_id": "3ce5384a",
    "book": "PointsBet",
@@ -253,26 +253,8 @@
    "pnl": -0.3,
    "final": "MIN 115-93 ORL",
    "at": "2026-10-23 21:35"
-  },
-  {
-   "bet_id": "cd55ea08",
-   "book": "PointsBet",
-   "pick": "Clube do Remo",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "REMO 0-1 CRU",
-   "at": "2026-10-23 20:59"
-  },
-  {
-   "bet_id": "6388e853",
-   "book": "bet365",
-   "pick": "Josh Giddey 7+ Assists + Tyler Herro 5+ Assists + Leonard Miller 3+ Rebounds",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "CHI 132-125 MIL",
-   "at": "2026-10-23 18:50"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 12:32 ET"
+ "last_change_at": "2026-10-25 12:35 ET"
 }
