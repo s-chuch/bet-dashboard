@@ -19,15 +19,6 @@
    ]
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "fd0d2273",
    "book": "FanDuel",
    "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -62,18 +53,27 @@
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "e0abeedc",
+   "book": "bet365",
+   "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
+   "result": "won",
+   "pnl": 0.8,
+   "final": "FLA 3-2 CHI",
+   "at": "2026-10-25 17:49"
+  },
+  {
+   "bet_id": "5d2d6e7a",
+   "book": "FanDuel",
+   "pick": "Panthers ML + Brady Tkachuk 2+ Shots on Goal + Connor Bedard 2+ Shots on Goal",
+   "result": "lost",
+   "pnl": -5.0,
+   "final": "FLA 3-2 CHI",
+   "at": "2026-10-25 17:49"
+  },
   {
    "bet_id": "cfd5b49a",
    "book": "FanDuel",
@@ -280,26 +280,8 @@
    "pnl": -0.5,
    "final": "TB 2-3 MIL",
    "at": "2026-10-23 23:27"
-  },
-  {
-   "bet_id": "2b9c8188",
-   "book": "DraftKings",
-   "pick": "Jake Bauers 2+ Total Bases",
-   "result": "lost",
-   "pnl": -0.3,
-   "final": "TB 2-3 MIL",
-   "at": "2026-10-23 23:27"
-  },
-  {
-   "bet_id": "0db400ce",
-   "book": "bet365",
-   "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "MTL 4-1 CHI",
-   "at": "2026-10-23 22:45"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 16:40 ET"
+ "last_change_at": "2026-10-25 17:49 ET"
 }

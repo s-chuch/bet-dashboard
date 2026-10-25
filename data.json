@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 78.71,
-   "updated": "2026-10-25 12:35"
+   "balance": 79.91,
+   "updated": "2026-10-25 17:49"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 668.56,
+ "total": 669.76,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T21:14Z"
+     "t": "2026-10-25T21:49Z"
     }
    },
    "sport": "NFL",
@@ -2170,7 +2170,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
+     "t": "2026-10-25T21:49Z"
     }
    },
    "sport": "NBA",
@@ -2180,428 +2180,6 @@
    "start_ts": "2026-10-26T01:00Z",
    "clv": {
     "placed_at": "2026-10-25 11:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "e0abeedc",
-   "date": "2026-10-25",
-   "book": "bet365",
-   "event": "Florida Panthers @ Chicago Blackhawks",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
-   "start": "Sun Oct 25 03:07 PM ET",
-   "price": "+155",
-   "boosted_price": "+202",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.8,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Matthew Tkachuk",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Matthew Tkachuk 1+ Points",
-     "pteam": "FLA",
-     "pname": "Matthew Tkachuk",
-     "pid": "4024854"
-    },
-    {
-     "type": "prop",
-     "player": "Brady Tkachuk",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Brady Tkachuk 1+ Points",
-     "pteam": "FLA",
-     "pname": "Brady Tkachuk",
-     "pid": "4319858"
-    },
-    {
-     "type": "prop",
-     "player": "Connor Bedard",
-     "stat": "pts",
-     "op": "min",
-     "min": 1,
-     "text": "Connor Bedard 1+ Points",
-     "pteam": "CHI",
-     "pname": "Connor Bedard",
-     "pid": "5149125"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261025",
-    "groups": null,
-    "id": "401892578",
-    "snapshot": {
-     "date": "2026-10-25T19:00Z",
-     "period": 3,
-     "clock": 1194.0,
-     "state": "in",
-     "completed": false,
-     "detail": "19:54 - 3rd",
-     "teams": [
-      {
-       "id": "4",
-       "name": "Chicago Blackhawks",
-       "abbr": "CHI",
-       "short": "Blackhawks",
-       "nick": "Blackhawks",
-       "location": "Chicago",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "26",
-       "name": "Florida Panthers",
-       "abbr": "FLA",
-       "short": "Panthers",
-       "nick": "Panthers",
-       "location": "Florida",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 11:45 ET",
-     "ml_home": 0.3663,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.5903,
-     "total_line": 6.5,
-     "total_over_fair": 0.4709
-    },
-    "pm": {
-     "slug": "nhl-fla-chi-2026-10-25",
-     "title": "Panthers vs. Blackhawks",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Panthers",
-        "Blackhawks"
-       ],
-       "tokens": [
-        "78305145190048807029830092855580735357664243215056009868001195609975123531035",
-        "60527735964131869371881022388470066290996080718372545158411711995947775977645"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Blackhawks",
-        "Panthers"
-       ],
-       "tokens": [
-        "73053185029004745403049768572169336552788142391175713155993053124666062362762",
-        "87273902519935825147291831744013129655726922606311712425429873562087177820304"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Panthers",
-        "Blackhawks"
-       ],
-       "tokens": [
-        "65032138178855185549238938454287172899053788207006076910405677402086734899316",
-        "104806455579253900472706484699633469845760465057530543102948629145687487285636"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "114883603105644827539978454516056046960744167166536265893460404347418739909493",
-        "86491955605389281977894685250183660163899592136219911470486365617867184145976"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "21098255159644102605061100712846314684739247179757885238358273643520289546325",
-        "96610299847198781976306856847231839770047963807396907996391237791125208954289"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "15172679000970018421070214311294860171094913602838992653566932177577404773798",
-        "109165817520653609584625737218521450908558548338190679047539097156175460048757"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "4832219845408592559793482050659289710108346462236137947664774378002437235809",
-        "90416787215647718154391653937721589315638544223042308423092969683845556050249"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Panthers",
-       "Blackhawks"
-      ],
-      "tokens": [
-       "104409605201796821042317488119710696917597258108168161158491962832499915594144",
-       "42806246731603541339295642649480569510692788269499843465532685182864533810403"
-      ]
-     }
-    },
-    "an": {
-     "id": 293478,
-     "home_team_id": 228,
-     "away_team_id": 238
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.4,
-   "payout": 1.2,
-   "payout_est": false,
-   "start_ts": "2026-10-25T19:07Z",
-   "clv": {
-    "placed_at": "2026-10-25 11:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "5d2d6e7a",
-   "date": "2026-10-25",
-   "book": "FanDuel",
-   "event": "Florida Panthers @ Chicago Blackhawks",
-   "market": "SGP 3-leg (Bet Reset Token)",
-   "pick": "Panthers ML + Brady Tkachuk 2+ Shots on Goal + Connor Bedard 2+ Shots on Goal",
-   "start": "Sun Oct 25 03:10 PM ET",
-   "price": "+128",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 6.43,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Florida Panthers",
-     "women": false,
-     "text": "Panthers ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Brady Tkachuk",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Brady Tkachuk 2+ Shots on Goal",
-     "pteam": "FLA",
-     "pname": "Brady Tkachuk",
-     "pid": "4319858"
-    },
-    {
-     "type": "prop",
-     "player": "Connor Bedard",
-     "stat": "sog",
-     "op": "min",
-     "min": 2,
-     "text": "Connor Bedard 2+ Shots on Goal",
-     "pteam": "CHI",
-     "pname": "Connor Bedard",
-     "pid": "5149125"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261025",
-    "groups": null,
-    "id": "401892578",
-    "snapshot": {
-     "date": "2026-10-25T19:00Z",
-     "period": 3,
-     "clock": 1194.0,
-     "state": "in",
-     "completed": false,
-     "detail": "19:54 - 3rd",
-     "teams": [
-      {
-       "id": "4",
-       "name": "Chicago Blackhawks",
-       "abbr": "CHI",
-       "short": "Blackhawks",
-       "nick": "Blackhawks",
-       "location": "Chicago",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "26",
-       "name": "Florida Panthers",
-       "abbr": "FLA",
-       "short": "Panthers",
-       "nick": "Panthers",
-       "location": "Florida",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 11:45 ET",
-     "ml_home": 0.3663,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.5903,
-     "total_line": 6.5,
-     "total_over_fair": 0.4709
-    },
-    "pm": {
-     "slug": "nhl-fla-chi-2026-10-25",
-     "title": "Panthers vs. Blackhawks",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Panthers",
-        "Blackhawks"
-       ],
-       "tokens": [
-        "78305145190048807029830092855580735357664243215056009868001195609975123531035",
-        "60527735964131869371881022388470066290996080718372545158411711995947775977645"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Blackhawks",
-        "Panthers"
-       ],
-       "tokens": [
-        "73053185029004745403049768572169336552788142391175713155993053124666062362762",
-        "87273902519935825147291831744013129655726922606311712425429873562087177820304"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Panthers",
-        "Blackhawks"
-       ],
-       "tokens": [
-        "65032138178855185549238938454287172899053788207006076910405677402086734899316",
-        "104806455579253900472706484699633469845760465057530543102948629145687487285636"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "114883603105644827539978454516056046960744167166536265893460404347418739909493",
-        "86491955605389281977894685250183660163899592136219911470486365617867184145976"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "21098255159644102605061100712846314684739247179757885238358273643520289546325",
-        "96610299847198781976306856847231839770047963807396907996391237791125208954289"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "15172679000970018421070214311294860171094913602838992653566932177577404773798",
-        "109165817520653609584625737218521450908558548338190679047539097156175460048757"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "4832219845408592559793482050659289710108346462236137947664774378002437235809",
-        "90416787215647718154391653937721589315638544223042308423092969683845556050249"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Panthers",
-       "Blackhawks"
-      ],
-      "tokens": [
-       "104409605201796821042317488119710696917597258108168161158491962832499915594144",
-       "42806246731603541339295642649480569510692788269499843465532685182864533810403"
-      ]
-     }
-    },
-    "an": {
-     "id": 293478,
-     "home_team_id": 228,
-     "away_team_id": 238
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
-     "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 5.0,
-   "payout": 11.43,
-   "payout_est": false,
-   "start_ts": "2026-10-25T19:10Z",
-   "clv": {
-    "placed_at": "2026-10-25 11:05",
     "close_price": null,
     "clv_pct": null
    }
@@ -2670,11 +2248,11 @@
     "id": "401909861",
     "snapshot": {
      "date": "2026-10-25T21:00Z",
-     "period": 1,
-     "clock": 644.0,
+     "period": 2,
+     "clock": 662.0,
      "state": "in",
      "completed": false,
-     "detail": "10:44 - 1st",
+     "detail": "11:02 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -2684,7 +2262,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "4"
+       "score": "49"
       },
       {
        "id": "13",
@@ -2694,7 +2272,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "2"
+       "score": "33"
       }
      ]
     },
@@ -3370,10 +2948,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3485,
-     "away": 0.6515,
+     "home": 0.665,
+     "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
+     "t": "2026-10-25T21:49Z"
     }
    },
    "sport": "NBA",
@@ -3430,10 +3008,10 @@
     "snapshot": {
      "date": "2026-10-25T20:00Z",
      "period": 2,
-     "clock": 3000.0,
+     "clock": 5160.0,
      "state": "in",
      "completed": false,
-     "detail": "50'",
+     "detail": "86'",
      "teams": [
       {
        "id": "83",
@@ -3443,7 +3021,7 @@
        "nick": "Barcelona",
        "location": "Barcelona",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "86",
@@ -3612,7 +3190,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
+     "t": "2026-10-25T21:49Z"
     }
    },
    "sport": "NHL",
@@ -3646,6 +3224,21 @@
   {
    "date": "2026-10-25",
    "book": "FanDuel",
+   "event": "Florida Panthers @ Chicago Blackhawks",
+   "pick": "Panthers ML + Brady Tkachuk 2+ Shots on Goal + Connor Bedard 2+ Shots on Goal",
+   "result": "lost",
+   "pnl": -5.0,
+   "stake": 5.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 11:05",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "book": "FanDuel",
    "event": "Pittsburgh Steelers @ New Orleans Saints",
    "pick": "Steelers ML + Tyler Shough 225+ pass yds + DK Metcalf 60+ rec yds + Devaughn Vele 40+ rec yds",
    "result": "lost",
@@ -3665,6 +3258,21 @@
    "pick": "Steelers ML + Aaron Rodgers 200+ Passing Yards + Tyler Shough 225+ Passing Yards",
    "result": "won",
    "pnl": 0.66,
+   "stake": 0.4,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 11:44",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "book": "bet365",
+   "event": "Florida Panthers @ Chicago Blackhawks",
+   "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
+   "result": "won",
+   "pnl": 0.8,
    "stake": 0.4,
    "auto": true,
    "clv": {
@@ -4968,15 +4576,15 @@
    }
   }
  ],
- "pnl_total": 110.32,
+ "pnl_total": 106.12,
  "unsettled": {
-  "n": 19,
-  "cash_stake": 21.7,
-  "max_payout": 132.64,
+  "n": 17,
+  "cash_stake": 16.3,
+  "max_payout": 120.01,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 21.7,
+ "open_stake": 16.3,
  "recs": {
   "stats": {
    "overall": {
@@ -8867,15 +8475,6 @@
     ]
    },
    {
-    "bet_id": "ec6db8a6",
-    "book": "Caesars",
-    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "fd0d2273",
     "book": "FanDuel",
     "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -8910,18 +8509,27 @@
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
     "legs": []
-   },
-   {
-    "bet_id": "d91a6de4",
-    "book": "Caesars",
-    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "e0abeedc",
+    "book": "bet365",
+    "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
+    "result": "won",
+    "pnl": 0.8,
+    "final": "FLA 3-2 CHI",
+    "at": "2026-10-25 17:49"
+   },
+   {
+    "bet_id": "5d2d6e7a",
+    "book": "FanDuel",
+    "pick": "Panthers ML + Brady Tkachuk 2+ Shots on Goal + Connor Bedard 2+ Shots on Goal",
+    "result": "lost",
+    "pnl": -5.0,
+    "final": "FLA 3-2 CHI",
+    "at": "2026-10-25 17:49"
+   },
    {
     "bet_id": "cfd5b49a",
     "book": "FanDuel",
@@ -9128,36 +8736,18 @@
     "pnl": -0.5,
     "final": "TB 2-3 MIL",
     "at": "2026-10-23 23:27"
-   },
-   {
-    "bet_id": "2b9c8188",
-    "book": "DraftKings",
-    "pick": "Jake Bauers 2+ Total Bases",
-    "result": "lost",
-    "pnl": -0.3,
-    "final": "TB 2-3 MIL",
-    "at": "2026-10-23 23:27"
-   },
-   {
-    "bet_id": "0db400ce",
-    "book": "bet365",
-    "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "MTL 4-1 CHI",
-    "at": "2026-10-23 22:45"
    }
   ],
-  "last_change_at": "2026-10-25 16:40 ET"
+  "last_change_at": "2026-10-25 17:49 ET"
  },
- "open_live_n": 16,
+ "open_live_n": 14,
  "open_stake_by_book": {
-  "bet365": 1.2,
+  "bet365": 0.8,
   "Caesars": 1.5,
   "DraftKings": 0.1,
-  "FanDuel": 9.6,
+  "FanDuel": 4.6,
   "PointsBet": 10.0
  },
- "hash": "2f3720f42fa3f1436b2ff29e0fa1eae74601b233",
- "generated_at": "2026-10-25T17:14:02-04:00"
+ "hash": "7d19f095dde9f76dedce2726093b76e233439911",
+ "generated_at": "2026-10-25T17:49:18-04:00"
 }
