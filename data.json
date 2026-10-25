@@ -312,10 +312,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 18:32 ET",
-     "ml_home": 0.5827,
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.5844,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4907,
      "total_line": 43.0,
      "total_over_fair": 0.5092
     },
@@ -952,7 +952,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NFL",
@@ -1049,12 +1049,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 18:32 ET",
-     "ml_home": 0.4096,
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.4102,
      "spread_home_line": 3.5,
      "spread_home_fair": 0.5139,
      "total_line": 235.0,
-     "total_over_fair": 0.4829
+     "total_over_fair": 0.4977
     },
     "pm": {
      "slug": "nba-mem-sac-2026-10-25",
@@ -1722,7 +1722,7 @@
      "home": 0.405,
      "away": 0.595,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NBA",
@@ -1801,10 +1801,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 4,
-     "clock": 12.5,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "12.5 - 4th",
+     "detail": "0.0 - 4th",
      "teams": [
       {
        "id": "26",
@@ -1824,7 +1824,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "131"
+       "score": "132"
       }
      ]
     },
@@ -2503,7 +2503,7 @@
      "home": 0.005,
      "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NBA",
@@ -2579,12 +2579,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 18:32 ET",
-     "ml_home": 0.6197,
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.613,
      "spread_home_line": -1.5,
-     "spread_home_fair": 0.4095,
+     "spread_home_fair": 0.4026,
      "total_line": 6.5,
-     "total_over_fair": 0.5169
+     "total_over_fair": 0.5191
     },
     "pm": {
      "slug": "nhl-det-edm-2026-10-26",
@@ -2669,7 +2669,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NHL",
@@ -2778,10 +2778,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 18:32 ET",
-     "ml_home": 0.5827,
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.5844,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4907,
      "total_line": 43.0,
      "total_over_fair": 0.5092
     },
@@ -3418,7 +3418,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NFL",
@@ -3497,10 +3497,10 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 18:32 ET",
-     "ml_home": 0.5827,
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.5844,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4884,
+     "spread_home_fair": 0.4907,
      "total_line": 43.0,
      "total_over_fair": 0.5092
     },
@@ -4137,7 +4137,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NFL",
@@ -4307,6 +4307,15 @@
     "pregame": {
      "home": 30.8,
      "away": 69.0
+    },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-25 19:37 ET",
+     "ml_home": 0.3326,
+     "spread_home_line": 4.5,
+     "spread_home_fair": 0.4954,
+     "total_line": 44.0,
+     "total_over_fair": 0.5
     },
     "pm": {
      "slug": "nfl-dal-phi-2026-10-27",
@@ -4941,7 +4950,7 @@
      "home": 0.3317,
      "away": 0.6683,
      "spread": 0.02,
-     "t": "2026-10-25T23:36Z"
+     "t": "2026-10-25T23:37Z"
     }
    },
    "sport": "NFL",
@@ -10530,6 +10539,6 @@
   "FanDuel": 7.6,
   "PointsBet": 13.0
  },
- "hash": "d23a4082e35275f31351bce96e21b455463f282f",
- "generated_at": "2026-10-25T19:36:46-04:00"
+ "hash": "238eec9674e105dcfcb1e3330f54dcec05685381",
+ "generated_at": "2026-10-25T19:37:07-04:00"
 }
