@@ -249,11 +249,11 @@
     "id": "401873016",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 1,
-     "clock": 317.0,
+     "period": 2,
+     "clock": 65.0,
      "state": "in",
      "completed": false,
-     "detail": "5:17 - 1st",
+     "detail": "1:05 - 2nd",
      "teams": [
       {
        "id": "34",
@@ -263,7 +263,7 @@
        "nick": "Texans",
        "location": "Houston",
        "home": true,
-       "score": "3"
+       "score": "6"
       },
       {
        "id": "19",
@@ -273,7 +273,7 @@
        "nick": "Giants",
        "location": "New York",
        "home": false,
-       "score": "7"
+       "score": "14"
       }
      ]
     },
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.635,
-     "away": 0.365,
+     "home": 0.515,
+     "away": 0.485,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NFL",
@@ -982,11 +982,11 @@
     "id": "401873015",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 1,
-     "clock": 58.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "0:58 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "20",
@@ -1006,7 +1006,7 @@
        "nick": "Dolphins",
        "location": "Miami",
        "home": false,
-       "score": "14"
+       "score": "21"
       }
      ]
     },
@@ -1653,10 +1653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.475,
-     "away": 0.525,
+     "home": 0.175,
+     "away": 0.825,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NFL",
@@ -2759,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NFL",
@@ -3526,10 +3526,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.401,
+     "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NBA",
@@ -3717,10 +3717,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3713,
-     "away": 0.6287,
+     "home": 0.365,
+     "away": 0.635,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NHL",
@@ -3904,10 +3904,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3713,
-     "away": 0.6287,
+     "home": 0.365,
+     "away": 0.635,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NHL",
@@ -4685,10 +4685,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3065,
-     "away": 0.6935,
-     "spread": 0.02,
-     "t": "2026-10-25T17:30Z"
+     "home": 0.3081,
+     "away": 0.6919,
+     "spread": 0.01,
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NBA",
@@ -4766,11 +4766,11 @@
     "id": "401873018",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 1,
-     "clock": 47.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "0:47 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "29",
@@ -4780,7 +4780,7 @@
        "nick": "Panthers",
        "location": "Carolina",
        "home": true,
-       "score": "0"
+       "score": "6"
       },
       {
        "id": "27",
@@ -4790,7 +4790,7 @@
        "nick": "Buccaneers",
        "location": "Tampa Bay",
        "home": false,
-       "score": "7"
+       "score": "33"
       }
      ]
     },
@@ -5437,10 +5437,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.315,
-     "away": 0.685,
+     "home": 0.025,
+     "away": 0.975,
      "spread": 0.01,
-     "t": "2026-10-25T17:30Z"
+     "t": "2026-10-25T18:25Z"
     }
    },
    "sport": "NFL",
@@ -10928,6 +10928,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "3c31f0ebd2fb8ac2062cee8698724738bde53081",
- "generated_at": "2026-10-25T13:30:21-04:00"
+ "hash": "576339c7f89033c9b564def04bab3ed3a9836fd7",
+ "generated_at": "2026-10-25T14:25:46-04:00"
 }
