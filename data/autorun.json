@@ -1,15 +1,6 @@
 {
  "needs_review": [
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "fd0d2273",
    "book": "FanDuel",
    "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -44,18 +35,18 @@
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "3731f13d",
+   "book": "FanDuel",
+   "pick": "Panthers ML + Bryce Young 175+ pass yds + Baker Mayfield 150+ pass yds + Tetairoa McMillan 25+ rec yds",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "TB 43-13 CAR",
+   "at": "2026-10-25 15:49"
+  },
   {
    "bet_id": "d7e25555",
    "book": "bet365",
@@ -271,17 +262,8 @@
    "pnl": -0.3,
    "final": "TOR 112-102 WSH",
    "at": "2026-10-23 21:39"
-  },
-  {
-   "bet_id": "f43fe5ec",
-   "book": "DraftKings",
-   "pick": "Rudy Gobert 14+ Rebounds",
-   "result": "lost",
-   "pnl": -0.3,
-   "final": "MIN 115-93 ORL",
-   "at": "2026-10-23 21:35"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 13:30 ET"
+ "last_change_at": "2026-10-25 15:49 ET"
 }

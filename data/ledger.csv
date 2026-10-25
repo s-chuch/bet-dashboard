@@ -433,3 +433,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-25 11:52,PointsBet,3ce5384a,settled,0.00,"lost, no return"
 2026-10-25 12:35,bet365,d7e25555,return,1.06,won
 2026-10-25 12:35,FanDuel,d54a26b4,settled,0.00,"lost, no return"
+2026-10-25 15:49,FanDuel,3731f13d,settled,0.00,"lost, no return"
