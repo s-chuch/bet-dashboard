@@ -67,15 +67,6 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "62b3a254",
-   "book": "Caesars",
-   "event": "NBA multi (HOU@ATL / MIL@PHI / BKN@CLE)",
-   "pick": "Jalen Johnson double double + Joel Embiid double double + Evan Mobley double double",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
@@ -306,5 +297,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 00:28 ET"
+ "last_change_at": "2026-10-25 00:29 ET"
 }

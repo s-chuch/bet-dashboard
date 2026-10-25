@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 206.2,
-   "updated": "2026-10-24 14:54"
+   "balance": 208.44,
+   "updated": "2026-10-25 00:29"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 666.42,
+ "total": 668.66,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -3118,47 +3118,6 @@
     "close_price": null,
     "clv_pct": null
    }
-  },
-  {
-   "bet_id": "62b3a254",
-   "date": "2026-10-24",
-   "book": "Caesars",
-   "event": "NBA multi",
-   "market": "Parlay 3-leg (20% profit boost)",
-   "pick": "Jalen Johnson double double + Joel Embiid double double + Evan Mobley double double",
-   "start": "Sat Oct 24 07:30 PM ET",
-   "price": "+850",
-   "boosted_price": "+1020",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 2.04,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Jalen Johnson double double"
-    },
-    {
-     "type": "unknown",
-     "text": "Joel Embiid double double"
-    },
-    {
-     "type": "unknown",
-     "text": "Evan Mobley double double"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.2,
-   "payout": 2.24,
-   "payout_est": false,
-   "start_ts": "2026-10-24T23:30Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:44",
-    "close_price": null,
-    "clv_pct": null
-   }
   }
  ],
  "settled_recent": [
@@ -3173,6 +3132,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-24 14:46",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "Caesars",
+   "event": "NBA multi",
+   "pick": "Jalen Johnson double double + Joel Embiid double double + Evan Mobley double double",
+   "result": "won",
+   "pnl": 2.04,
+   "stake": 0.2,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:44",
     "close_price": null,
     "clv_pct": null
    }
@@ -4341,15 +4315,15 @@
    "clv": null
   }
  ],
- "pnl_total": 103.38,
+ "pnl_total": 105.42,
  "unsettled": {
-  "n": 21,
-  "cash_stake": 16.9,
-  "max_payout": 145.76,
+  "n": 20,
+  "cash_stake": 16.7,
+  "max_payout": 143.52,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.9,
+ "open_stake": 16.7,
  "recs": {
   "stats": {
    "overall": {
@@ -8196,15 +8170,6 @@
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
-   },
-   {
-    "bet_id": "62b3a254",
-    "book": "Caesars",
-    "event": "NBA multi (HOU@ATL / MIL@PHI / BKN@CLE)",
-    "pick": "Jalen Johnson double double + Joel Embiid double double + Evan Mobley double double",
-    "stake": "0.20",
-    "reason": "no ESPN game matched",
-    "legs": []
    }
   ],
   "last_settled": [
@@ -8434,16 +8399,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:28 ET"
+  "last_change_at": "2026-10-25 00:29 ET"
  },
- "open_live_n": 20,
+ "open_live_n": 19,
  "open_stake_by_book": {
   "bet365": 1.2,
-  "Caesars": 2.7,
+  "Caesars": 2.5,
   "DraftKings": 0.4,
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "74bef6c401e3bcf97fec4bd7d1d7c2e860c76b95",
- "generated_at": "2026-10-25T00:29:13-04:00"
+ "hash": "c3505f33eaa7cbd67237936962379fb41fa15fb9",
+ "generated_at": "2026-10-25T00:29:49-04:00"
 }
