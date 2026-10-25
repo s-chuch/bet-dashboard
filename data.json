@@ -2239,10 +2239,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 360.0,
+     "clock": 353.0,
      "state": "in",
      "completed": false,
-     "detail": "6:00 - 1st",
+     "detail": "5:53 - 1st",
      "teams": [
       {
        "id": "251",
@@ -2856,8 +2856,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6313,
-     "away": 0.3687,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
@@ -3121,10 +3121,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 2,
-     "clock": 717.0,
+     "clock": 689.0,
      "state": "in",
      "completed": false,
-     "detail": "11:57 - 2nd",
+     "detail": "11:29 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -3820,8 +3820,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.885,
-     "away": 0.115,
+     "home": 0.8636,
+     "away": 0.1364,
      "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
@@ -3972,10 +3972,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 100.0,
+     "clock": 73.0,
      "state": "in",
      "completed": false,
-     "detail": "1:40 - 1st",
+     "detail": "1:13 - 1st",
      "teams": [
       {
        "id": "96",
@@ -4609,9 +4609,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6802,
-     "away": 0.3198,
-     "spread": 0.02,
+     "home": 0.695,
+     "away": 0.305,
+     "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
    },
@@ -4673,10 +4673,10 @@
     "snapshot": {
      "date": "2026-10-24T23:00Z",
      "period": 2,
-     "clock": 1189.0,
+     "clock": 1165.0,
      "state": "in",
      "completed": false,
-     "detail": "19:49 - 2nd",
+     "detail": "19:25 - 2nd",
      "teams": [
       {
        "id": "6",
@@ -5127,8 +5127,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5198,
-     "away": 0.4802,
+     "home": 0.515,
+     "away": 0.485,
      "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
@@ -5191,10 +5191,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 360.0,
+     "clock": 353.0,
      "state": "in",
      "completed": false,
-     "detail": "6:00 - 1st",
+     "detail": "5:53 - 1st",
      "teams": [
       {
        "id": "251",
@@ -5808,8 +5808,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6313,
-     "away": 0.3687,
+     "home": 0.605,
+     "away": 0.395,
      "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
@@ -6128,8 +6128,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5198,
-     "away": 0.4802,
+     "home": 0.515,
+     "away": 0.485,
      "spread": 0.01,
      "t": "2026-10-25T00:11Z"
     }
@@ -6214,10 +6214,10 @@
     "snapshot": {
      "date": "2026-10-24T22:00Z",
      "period": 4,
-     "clock": 491.0,
+     "clock": 470.0,
      "state": "in",
      "completed": false,
-     "detail": "8:11 - 4th",
+     "detail": "7:50 - 4th",
      "teams": [
       {
        "id": "30",
@@ -6237,7 +6237,7 @@
        "nick": "Heat",
        "location": "Miami",
        "home": false,
-       "score": "91"
+       "score": "93"
       }
      ]
     },
@@ -7931,10 +7931,10 @@
     "snapshot": {
      "date": "2026-10-24T22:00Z",
      "period": 4,
-     "clock": 491.0,
+     "clock": 470.0,
      "state": "in",
      "completed": false,
-     "detail": "8:11 - 4th",
+     "detail": "7:50 - 4th",
      "teams": [
       {
        "id": "30",
@@ -7954,7 +7954,7 @@
        "nick": "Heat",
        "location": "Miami",
        "home": false,
-       "score": "91"
+       "score": "93"
       }
      ]
     },
@@ -14072,6 +14072,6 @@
   "FanDuel": 6.6,
   "PointsBet": 13.5
  },
- "hash": "978b77aa6997cd8f1f8c61918b551e9044724e50",
- "generated_at": "2026-10-24T20:11:08-04:00"
+ "hash": "f9f948115a8d26169f5aaee7b07e1fd355b658f2",
+ "generated_at": "2026-10-24T20:11:33-04:00"
 }
