@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -931,7 +931,11 @@
    "payout": 3.7,
    "payout_est": false,
    "start_ts": "2026-10-25T17:00Z",
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": "+365",
+    "clv_pct": 1.05
+   }
   },
   {
    "bet_id": "48cfe23a",
@@ -1649,10 +1653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
+     "home": 0.6485,
+     "away": 0.3515,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -1872,9 +1876,9 @@
      "date": "2026-10-25T14:00Z",
      "period": 2,
      "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+5'",
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "384",
@@ -2755,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -3522,10 +3526,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3971,
-     "away": 0.6029,
+     "home": 0.3911,
+     "away": 0.6089,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NBA",
@@ -3713,10 +3717,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.375,
-     "away": 0.625,
+     "home": 0.3713,
+     "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NHL",
@@ -3784,10 +3788,10 @@
     "snapshot": {
      "date": "2026-10-25T13:30Z",
      "period": 4,
-     "clock": 900.0,
+     "clock": 64.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 4th",
+     "detail": "1:04 - 4th",
      "teams": [
       {
        "id": "18",
@@ -4445,10 +4449,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.265,
-     "away": 0.735,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -4527,10 +4531,10 @@
     "snapshot": {
      "date": "2026-10-25T13:30Z",
      "period": 4,
-     "clock": 900.0,
+     "clock": 64.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 4th",
+     "detail": "1:04 - 4th",
      "teams": [
       {
        "id": "18",
@@ -5188,10 +5192,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.265,
-     "away": 0.735,
+     "home": 0.005,
+     "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -5375,10 +5379,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.375,
-     "away": 0.625,
+     "home": 0.3713,
+     "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NHL",
@@ -6159,7 +6163,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NBA",
@@ -6908,10 +6912,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.595,
-     "away": 0.405,
+     "home": 0.601,
+     "away": 0.399,
      "spread": 0.01,
-     "t": "2026-10-25T15:52Z"
+     "t": "2026-10-25T16:32Z"
     }
    },
    "sport": "NFL",
@@ -12078,12 +12082,48 @@
  "auto": {
   "needs_review": [
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "80b13e8e",
+    "book": "bet365",
+    "event": "Crystal Palace v Newcastle (EPL)",
+    "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
+    "stake": "0.40",
+    "reason": "leg \"Nico Gonzalez 1+ fouls committed\": market/stat not recognised",
+    "legs": [
+     {
+      "leg": "Harvey Barnes to score or assist",
+      "result": "won"
+     },
+     {
+      "leg": "Over 1.5",
+      "result": "won"
+     }
+    ]
+   },
+   {
     "bet_id": "fa459703",
     "book": "bet365",
     "event": "Athletic Club v Getafe (La Liga)",
     "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -12314,16 +12354,16 @@
     "at": "2026-10-23 18:50"
    }
   ],
-  "last_change_at": "2026-10-25 11:52 ET"
+  "last_change_at": "2026-10-25 12:32 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
-  "bet365": 2.0,
+  "bet365": 1.6,
   "Caesars": 2.0,
   "DraftKings": 0.1,
   "FanDuel": 11.1,
   "PointsBet": 10.0
  },
- "hash": "169a0a29507ee663cbad80e34feae7f991ab02e8",
- "generated_at": "2026-10-25T11:52:21-04:00"
+ "hash": "97650a1ee7f1d33364ea631421c556c3928751ba",
+ "generated_at": "2026-10-25T12:32:38-04:00"
 }

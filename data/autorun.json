@@ -1,12 +1,48 @@
 {
  "needs_review": [
   {
+   "bet_id": "ec6db8a6",
+   "book": "Caesars",
+   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "80b13e8e",
+   "book": "bet365",
+   "event": "Crystal Palace v Newcastle (EPL)",
+   "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
+   "stake": "0.40",
+   "reason": "leg \"Nico Gonzalez 1+ fouls committed\": market/stat not recognised",
+   "legs": [
+    {
+     "leg": "Harvey Barnes to score or assist",
+     "result": "won"
+    },
+    {
+     "leg": "Over 1.5",
+     "result": "won"
+    }
+   ]
+  },
+  {
    "bet_id": "fa459703",
    "book": "bet365",
    "event": "Athletic Club v Getafe (La Liga)",
    "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+   "legs": []
+  },
+  {
+   "bet_id": "d91a6de4",
+   "book": "Caesars",
+   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
    "legs": []
   }
  ],
@@ -238,5 +274,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 11:52 ET"
+ "last_change_at": "2026-10-25 12:32 ET"
 }
