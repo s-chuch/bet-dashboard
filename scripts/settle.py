@@ -143,8 +143,11 @@ def stat_value(stat, pl, s, m):
     sp = m["path"]
     if soccer(m):
         S = pl["stats"]; v = lambda k: S.get(k)
+        cards = None if v("yellowCards") is None and v("redCards") is None else (v("yellowCards") or 0) + (v("redCards") or 0)
+        # same stats as home.js: fouls committed/drawn, cards (yellow+red), offsides; ESPN has no per-player tackles (-> missing -> review)
         mp = {"goal": v("totalGoals"), "goals": v("totalGoals"), "assists": v("goalAssists"), "sot": v("shotsOnTarget"),
-              "shots": v("totalShots")}
+              "sog": v("shotsOnTarget"), "shots": v("totalShots"), "foulsC": v("foulsCommitted"), "foulsD": v("foulsSuffered"),
+              "offsides": v("offsides"), "cards": cards, "saves": v("saves")}
         if stat == "goalOrAssist":
             return None if v("totalGoals") is None or v("goalAssists") is None else (v("totalGoals") + v("goalAssists") > 0) * 1.0
         return mp.get(stat)
@@ -187,6 +190,24 @@ def stat_value(stat, pl, s, m):
         return None
     return None
 
+def _soccer_squad_dnp(name, games):
+    """True when `name` matches exactly one player on one of the game's two teams' season rosters but nobody in the
+    final matchday squad (starters + bench), so he did not play. Anything unclear (several matches, no roster,
+    roster fetch failure, non-soccer, matchday squad missing) -> False -> the caller sends it to review."""
+    try:
+        for m, s, st in games:
+            if not soccer(m): continue
+            squad = players_of(s, m)
+            if len(squad) < 14: continue                      # no real matchday squad published
+            hits = set()
+            for t in m["snapshot"]["teams"]:
+                for a in P.team_roster(m["path"], t["id"]):
+                    if P.player_match(name, a["name"]): hits.add(a["id"] or a["name"])
+            if len(hits) == 1: return True
+    except Exception:
+        return False
+    return False
+
 def cmp(val, L):
     if L["op"] == "min": return "won" if val >= L["min"] else "lost"
     if val == L["line"]: return "push"
@@ -203,6 +224,8 @@ def grade_leg(L, games, book, ctx):
         for m, s, st in games:
             for pl in players_of(s, m):
                 if P.player_match(L["player"], pl["name"]): cands.append((m, s, pl))
+        if len(cands) == 0 and _soccer_squad_dnp(L["player"], games):
+            return "void"   # on the team's season roster but not in the matchday squad: never played
         if len(cands) == 0:
             raise Review(f'leg "{L["text"]}": player "{L["player"]}" not in any box score (DNP void, or name mismatch?)')
         if len({c[2]["id"] or c[2]["name"] for c in cands}) > 1:
