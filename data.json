@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T15:25Z"
+     "t": "2026-10-25T15:37Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-25T15:25Z"
+     "t": "2026-10-25T15:37Z"
     }
    },
    "sport": "NFL",
@@ -1694,10 +1694,10 @@
     "snapshot": {
      "date": "2026-10-25T14:00Z",
      "period": 2,
-     "clock": 4080.0,
+     "clock": 4740.0,
      "state": "in",
      "completed": false,
-     "detail": "68'",
+     "detail": "79'",
      "teams": [
       {
        "id": "2923",
@@ -1717,7 +1717,7 @@
        "nick": "Carrarese",
        "location": "Carrarese",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -1942,10 +1942,10 @@
     "snapshot": {
      "date": "2026-10-25T14:00Z",
      "period": 2,
-     "clock": 4140.0,
+     "clock": 4800.0,
      "state": "in",
      "completed": false,
-     "detail": "69'",
+     "detail": "80'",
      "teams": [
       {
        "id": "384",
@@ -2826,7 +2826,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T15:26Z"
+     "t": "2026-10-25T15:37Z"
     }
    },
    "sport": "NFL",
@@ -8160,6 +8160,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "1eb3fa9acb342090a71bd8bbb10b72eef8c8d2c0",
- "generated_at": "2026-10-25T11:26:01-04:00"
+ "hash": "c9d10b8d647eca65cd8b5c475f731900f1b3a2ac",
+ "generated_at": "2026-10-25T11:37:07-04:00"
 }
