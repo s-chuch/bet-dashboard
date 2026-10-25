@@ -19,15 +19,6 @@
    ]
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "fd0d2273",
    "book": "FanDuel",
    "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -62,18 +53,18 @@
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "cfd5b49a",
+   "book": "FanDuel",
+   "pick": "New York Giants",
+   "result": "won",
+   "pnl": 3.7,
+   "final": "NYG 27-21 HOU",
+   "at": "2026-10-25 16:22"
+  },
   {
    "bet_id": "3731f13d",
    "book": "FanDuel",
@@ -289,17 +280,8 @@
    "pnl": -0.4,
    "final": "MTL 4-1 CHI",
    "at": "2026-10-23 22:45"
-  },
-  {
-   "bet_id": "442ed624",
-   "book": "DraftKings",
-   "pick": "Anthony Davis 13+ Rebounds",
-   "result": "lost",
-   "pnl": -0.3,
-   "final": "TOR 112-102 WSH",
-   "at": "2026-10-23 21:39"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 16:17 ET"
+ "last_change_at": "2026-10-25 16:22 ET"
 }
