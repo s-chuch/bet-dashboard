@@ -1801,10 +1801,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 3,
-     "clock": 672.0,
+     "clock": 662.0,
      "state": "in",
      "completed": false,
-     "detail": "11:12 - 3rd",
+     "detail": "11:02 - 3rd",
      "teams": [
       {
        "id": "26",
@@ -1824,7 +1824,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "74"
+       "score": "77"
       }
      ]
     },
@@ -2500,8 +2500,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.25,
-     "away": 0.75,
+     "home": 0.225,
+     "away": 0.775,
      "spread": 0.01,
      "t": "2026-10-25T22:32Z"
     }
@@ -8258,6 +8258,6 @@
   "FanDuel": 2.1,
   "PointsBet": 10.0
  },
- "hash": "37b69c836272b3b768c8f576838cc19f9204dfd8",
- "generated_at": "2026-10-25T18:32:12-04:00"
+ "hash": "6562ec1bfae9431234c234d08ef642b0ca52186e",
+ "generated_at": "2026-10-25T18:32:32-04:00"
 }
