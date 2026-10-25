@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -1694,10 +1694,10 @@
     "snapshot": {
      "date": "2026-10-25T14:00Z",
      "period": 2,
-     "clock": 5280.0,
+     "clock": 5340.0,
      "state": "in",
      "completed": false,
-     "detail": "88'",
+     "detail": "89'",
      "teams": [
       {
        "id": "2923",
@@ -1942,10 +1942,10 @@
     "snapshot": {
      "date": "2026-10-25T14:00Z",
      "period": 2,
-     "clock": 5340.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "89'",
+     "detail": "90'",
      "teams": [
       {
        "id": "384",
@@ -2826,7 +2826,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -3596,7 +3596,7 @@
      "home": 0.3971,
      "away": 0.6029,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NBA",
@@ -3787,7 +3787,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NHL",
@@ -3855,10 +3855,10 @@
     "snapshot": {
      "date": "2026-10-25T13:30Z",
      "period": 3,
-     "clock": 50.0,
+     "clock": 14.0,
      "state": "in",
      "completed": false,
-     "detail": "0:50 - 3rd",
+     "detail": "0:14 - 3rd",
      "teams": [
       {
        "id": "18",
@@ -3878,7 +3878,7 @@
        "nick": "Steelers",
        "location": "Pittsburgh",
        "home": false,
-       "score": "13"
+       "score": "16"
       }
      ]
     },
@@ -4516,10 +4516,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.285,
-     "away": 0.715,
+     "home": 0.2778,
+     "away": 0.7222,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -4598,10 +4598,10 @@
     "snapshot": {
      "date": "2026-10-25T13:30Z",
      "period": 3,
-     "clock": 50.0,
+     "clock": 14.0,
      "state": "in",
      "completed": false,
-     "detail": "0:50 - 3rd",
+     "detail": "0:14 - 3rd",
      "teams": [
       {
        "id": "18",
@@ -4621,7 +4621,7 @@
        "nick": "Steelers",
        "location": "Pittsburgh",
        "home": false,
-       "score": "13"
+       "score": "16"
       }
      ]
     },
@@ -5259,10 +5259,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.285,
-     "away": 0.715,
+     "home": 0.2778,
+     "away": 0.7222,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -5449,7 +5449,7 @@
      "home": 0.375,
      "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NHL",
@@ -6230,7 +6230,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NBA",
@@ -6982,7 +6982,7 @@
      "home": 0.595,
      "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-25T15:46Z"
+     "t": "2026-10-25T15:47Z"
     }
    },
    "sport": "NFL",
@@ -12398,6 +12398,6 @@
   "FanDuel": 11.1,
   "PointsBet": 12.5
  },
- "hash": "17b79c443f1873c0a52f4af33cac513642d5efdb",
- "generated_at": "2026-10-25T11:46:10-04:00"
+ "hash": "42aa0381b2a6cc6a3cbeb63f93a5732234b12cda",
+ "generated_at": "2026-10-25T11:47:24-04:00"
 }
