@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "c4db9120",
+   "book": "FanDuel",
+   "pick": "Lakers ML + Luka Doncic 20+ Points + Lauri Markkanen 15+ Points + Austin Reaves 20+ Points",
+   "result": "won",
+   "pnl": 0.96,
+   "final": "LAL 132-123 UTAH",
+   "at": "2026-10-25 19:37"
+  },
+  {
    "bet_id": "bf9db4ab",
    "book": "FanDuel",
    "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
@@ -216,17 +225,8 @@
    "pnl": -0.5,
    "final": "TB 2-3 MIL",
    "at": "2026-10-23 23:27"
-  },
-  {
-   "bet_id": "c4cc09ea",
-   "book": "Caesars",
-   "pick": "Brewers ML + Junior Caminero 1+ hits + William Contreras U1.5 TB",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "TB 2-3 MIL",
-   "at": "2026-10-23 23:27"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 18:32 ET"
+ "last_change_at": "2026-10-25 19:37 ET"
 }

@@ -449,3 +449,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-25 19:36,FanDuel,e5353699,stake,0.00,"bonus bet token, no cash deducted"
 2026-10-25 19:36,PointsBet,9552cc6f,stake,0.00,"bonus bet token, no cash deducted"
 2026-10-25 19:36,PointsBet,38cdf546,stake,-0.50,stake
+2026-10-25 19:37,FanDuel,c4db9120,return,1.46,won
