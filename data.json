@@ -250,10 +250,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 4,
-     "clock": 120.0,
+     "clock": 52.0,
      "state": "in",
      "completed": false,
-     "detail": "2:00 - 4th",
+     "detail": "0:52 - 4th",
      "teams": [
       {
        "id": "34",
@@ -263,7 +263,7 @@
        "nick": "Texans",
        "location": "Houston",
        "home": true,
-       "score": "14"
+       "score": "20"
       },
       {
        "id": "19",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.475,
+     "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NFL",
@@ -2120,7 +2120,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NFL",
@@ -2890,7 +2890,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NBA",
@@ -3100,10 +3100,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.215,
-     "away": 0.785,
+     "home": 0.2071,
+     "away": 0.7929,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NHL",
@@ -3309,10 +3309,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.215,
-     "away": 0.785,
+     "home": 0.2071,
+     "away": 0.7929,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NHL",
@@ -4093,7 +4093,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T19:59Z"
+     "t": "2026-10-25T20:05Z"
     }
    },
    "sport": "NBA",
@@ -4149,11 +4149,11 @@
     "id": "401882832",
     "snapshot": {
      "date": "2026-10-25T20:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 240.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "4'",
      "teams": [
       {
        "id": "83",
@@ -5528,11 +5528,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 136,
+    "n": 137,
     "w": 39,
     "l": 65,
     "p": 0,
-    "pending": 32,
+    "pending": 33,
     "win_pct": 37.5,
     "units": 18.24,
     "roi_pct": 21.7,
@@ -5619,11 +5619,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 34,
+     "n": 35,
      "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": 39.4,
      "units": 10.91,
      "roi_pct": 33.1,
@@ -5726,11 +5726,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 23,
+     "n": 24,
      "w": 5,
      "l": 12,
      "p": 0,
-     "pending": 6,
+     "pending": 7,
      "win_pct": 29.4,
      "units": -3.38,
      "roi_pct": -24.1,
@@ -5863,11 +5863,11 @@
      "wins_with_fair": 26
     },
     "no": {
-     "n": 61,
+     "n": 62,
      "w": 12,
      "l": 18,
      "p": 0,
-     "pending": 31,
+     "pending": 32,
      "win_pct": 40.0,
      "units": -5.94,
      "roi_pct": -24.7,
@@ -5896,6 +5896,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "a5337ed6",
+    "rec_date": "2026-10-25",
+    "rec_time_et": "16:05",
+    "sport": "NBA",
+    "event": "Indiana Pacers @ Brooklyn Nets",
+    "market": "cash",
+    "selection": "Brooklyn Nets to win",
+    "book": "DraftKings",
+    "rec_price": "+225",
+    "eff_price": "+225",
+    "fair_pct": "32.08",
+    "ev_pct": "4.26",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: 200",
+    "units": null
+   },
    {
     "rec_id": "424c5842",
     "rec_date": "2026-10-24",
@@ -9614,6 +9637,6 @@
   "FanDuel": 10.1,
   "PointsBet": 10.0
  },
- "hash": "77c2c17756a34fffb6a50bdd63d166865a69af0f",
- "generated_at": "2026-10-25T15:59:33-04:00"
+ "hash": "565dbba1033d8531e84169ba4c1d1876270af689",
+ "generated_at": "2026-10-25T16:05:55-04:00"
 }
