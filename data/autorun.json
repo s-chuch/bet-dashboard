@@ -10,15 +10,6 @@
    "legs": []
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "3ce29562",
    "book": "DraftKings",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -86,6 +77,20 @@
    ]
   },
   {
+   "bet_id": "febe6211",
+   "book": "FanDuel",
+   "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
+   "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
+   "stake": "0.50",
+   "reason": "leg \"Under 0.5 1st inning runs\": market/stat not recognised",
+   "legs": [
+    {
+     "leg": "Chandler Simpson 1+ hits",
+     "result": "won"
+    }
+   ]
+  },
+  {
    "bet_id": "c077f229",
    "book": "FanDuel",
    "event": "Edmonton Elks @ Saskatchewan Roughriders (CFL)",
@@ -113,15 +118,6 @@
    "legs": []
   },
   {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "62b3a254",
    "book": "Caesars",
    "event": "NBA multi (HOU@ATL / MIL@PHI / BKN@CLE)",
@@ -132,6 +128,15 @@
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "e3ec8310",
+   "book": "bet365",
+   "pick": "Brewers +1.5 + Rays +1.5 + Under 7.5",
+   "result": "lost",
+   "pnl": -0.4,
+   "final": "TB 4-5 MIL",
+   "at": "2026-10-24 23:49"
+  },
   {
    "bet_id": "90a7ff90",
    "book": "Caesars",
@@ -347,17 +352,8 @@
    "pnl": -0.5,
    "final": "NFO 1-1 IPS",
    "at": "2026-10-23 16:58"
-  },
-  {
-   "bet_id": "a4058418",
-   "book": "Hard Rock",
-   "pick": "Vancouver Canucks -1.5",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "DET 5-2 VAN",
-   "at": "2026-10-23 00:29"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 23:37 ET"
+ "last_change_at": "2026-10-24 23:49 ET"
 }
