@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T03:49Z"
+     "t": "2026-10-25T03:50Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T03:49Z"
+     "t": "2026-10-25T03:50Z"
     }
    },
    "sport": "NFL",
@@ -3461,7 +3461,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T03:49Z"
+     "t": "2026-10-25T03:50Z"
     }
    },
    "sport": "NFL",
@@ -8721,6 +8721,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -8825,6 +8834,15 @@
     "event": "NHL multi (TOR@EDM / MIN@SEA / SJ@BOS)",
     "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
     "stake": "0.20",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
    },
@@ -9075,6 +9093,6 @@
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "1992b53e8c955fe3e6bbe5a7aabf2a86ad962e17",
- "generated_at": "2026-10-24T23:49:43-04:00"
+ "hash": "d7428d43ead162be237f5881a7ed6ea3157f7802",
+ "generated_at": "2026-10-24T23:50:05-04:00"
 }
