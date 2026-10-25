@@ -10,15 +10,6 @@
    "legs": []
   },
   {
-   "bet_id": "ec6db8a6",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "3ce29562",
    "book": "DraftKings",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -102,18 +93,18 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
-  },
-  {
-   "bet_id": "d91a6de4",
-   "book": "Caesars",
-   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "0e1e4da6",
+   "book": "bet365",
+   "pick": "Joel Embiid 20+ Points + Tyrese Maxey 5+ Assists + VJ Edgecombe 5+ Rebounds",
+   "result": "lost",
+   "pnl": -0.4,
+   "final": "MIL 116-127 PHI",
+   "at": "2026-10-24 22:03"
+  },
   {
    "bet_id": "affcdcba",
    "book": "bet365",
@@ -329,17 +320,8 @@
    "pnl": -0.3,
    "final": "DEN 84-96 OKC",
    "at": "2026-10-23 00:20"
-  },
-  {
-   "bet_id": "0c8f76ba",
-   "book": "Caesars",
-   "pick": "Calgary Flames -1.5",
-   "result": "lost",
-   "pnl": -1.0,
-   "final": "MIN 1-2 CGY",
-   "at": "2026-10-22 23:36"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 22:02 ET"
+ "last_change_at": "2026-10-24 22:04 ET"
 }
