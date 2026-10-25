@@ -249,11 +249,11 @@
     "id": "401873016",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 317.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 1:00 PM EDT",
+     "detail": "5:17 - 1st",
      "teams": [
       {
        "id": "34",
@@ -263,7 +263,7 @@
        "nick": "Texans",
        "location": "Houston",
        "home": true,
-       "score": "0"
+       "score": "3"
       },
       {
        "id": "19",
@@ -273,7 +273,7 @@
        "nick": "Giants",
        "location": "New York",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.805,
-     "away": 0.195,
+     "home": 0.635,
+     "away": 0.365,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NFL",
@@ -982,11 +982,11 @@
     "id": "401873015",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 58.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 1:00 PM EDT",
+     "detail": "0:58 - 1st",
      "teams": [
       {
        "id": "20",
@@ -996,7 +996,7 @@
        "nick": "Jets",
        "location": "New York",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "15",
@@ -1006,7 +1006,7 @@
        "nick": "Dolphins",
        "location": "Miami",
        "home": false,
-       "score": "0"
+       "score": "13"
       }
      ]
     },
@@ -1653,10 +1653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.645,
-     "away": 0.355,
+     "home": 0.475,
+     "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NFL",
@@ -2759,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NFL",
@@ -3526,10 +3526,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3911,
-     "away": 0.6089,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NBA",
@@ -3720,7 +3720,7 @@
      "home": 0.3713,
      "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NHL",
@@ -3907,7 +3907,7 @@
      "home": 0.3713,
      "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NHL",
@@ -4685,10 +4685,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.315,
-     "away": 0.685,
-     "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "home": 0.3065,
+     "away": 0.6935,
+     "spread": 0.02,
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NBA",
@@ -4766,11 +4766,11 @@
     "id": "401873018",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 107.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 1:00 PM EDT",
+     "detail": "1:47 - 1st",
      "teams": [
       {
        "id": "29",
@@ -4790,7 +4790,7 @@
        "nick": "Buccaneers",
        "location": "Tampa Bay",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -5437,10 +5437,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.601,
-     "away": 0.399,
+     "home": 0.315,
+     "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T16:35Z"
+     "t": "2026-10-25T17:29Z"
     }
    },
    "sport": "NFL",
@@ -10637,6 +10637,15 @@
  "auto": {
   "needs_review": [
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "80b13e8e",
     "book": "bet365",
     "event": "Crystal Palace v Newcastle (EPL)",
@@ -10661,6 +10670,15 @@
     "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -10891,7 +10909,7 @@
     "at": "2026-10-23 21:35"
    }
   ],
-  "last_change_at": "2026-10-25 12:35 ET"
+  "last_change_at": "2026-10-25 13:29 ET"
  },
  "open_live_n": 18,
  "open_stake_by_book": {
@@ -10901,6 +10919,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "adfe617494bd00a6836d7cad447b0d0ab70b3973",
- "generated_at": "2026-10-25T12:35:33-04:00"
+ "hash": "d8f817e02b2b3d0dec0b0b0d8ebb8b35e3d3508a",
+ "generated_at": "2026-10-25T13:29:57-04:00"
 }

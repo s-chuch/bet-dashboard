@@ -1,6 +1,15 @@
 {
  "needs_review": [
   {
+   "bet_id": "ec6db8a6",
+   "book": "Caesars",
+   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
    "bet_id": "80b13e8e",
    "book": "bet365",
    "event": "Crystal Palace v Newcastle (EPL)",
@@ -25,6 +34,15 @@
    "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
    "stake": "0.40",
    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+   "legs": []
+  },
+  {
+   "bet_id": "d91a6de4",
+   "book": "Caesars",
+   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
    "legs": []
   }
  ],
@@ -256,5 +274,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 12:35 ET"
+ "last_change_at": "2026-10-25 13:29 ET"
 }
