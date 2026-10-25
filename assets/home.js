@@ -394,13 +394,19 @@ const PROP={ // stat -> [value(stats, ctx), unit]
   sog:[(s,c)=>SOCCER(c.path)?s.shotsOnTarget:s.shotsTotal,"SOG"],shots:[(s,c)=>SOCCER(c.path)?s.totalShots:s.shotsTotal,"shots"],sot:[s=>s.shotsOnTarget,"SOT"],
   pra:[s=>sumK(s,"points","rebounds","assists"),"pts+reb+ast"],pr:[s=>sumK(s,"points","rebounds"),"pts+reb"],pa:[s=>sumK(s,"points","assists"),"pts+ast"],
   ra:[s=>sumK(s,"rebounds","assists"),"reb+ast"],stl:[s=>s.steals,"stl"],blk:[s=>s.blocks,"blk"],stocks:[s=>sumK(s,"steals","blocks"),"stl+blk"],
+  foulsC:[s=>s.foulsCommitted,"fouls"],foulsD:[s=>s.foulsSuffered,"fouled"],yellow:[s=>s.yellowCards,"YC"],cards:[s=>sumK(s,"yellowCards","redCards"),"cards"],offsides:[s=>s.offsides,"offsides"],
+  tackles:[s=>s.totalTackles!=null?s.totalTackles:s.tackles,"tackles"],   // ESPN soccer box score has team tackles only: stays ungraded (no stats) unless a feed ever adds it
   reb:[s=>s.rebounds,"reb"],threes:[s=>s.threePointFieldGoalsMade,"3PM"],saves:[s=>s.saves,"saves"],
   hits:[s=>s.hits,"hits"],hr:[s=>s.homeRuns,"HR"],rbi:[s=>s.RBIs,"RBI"],runs:[s=>s.runs,"runs"],walks:[s=>s.walks,"BB"],sb:[s=>s.stolenBases,"SB"],
   k:[s=>s.p_strikeouts!=null?s.p_strikeouts:s.strikeouts,"K"],hrr:[s=>sumK(s,"hits","runs","RBIs"),"H+R+RBI"],
   doubles:[(s,c)=>s._double!=null?s._double:(c.plays&&s.hits!=null?0:null),"2B"],triples:[(s,c)=>s._triple!=null?s._triple:(c.plays&&s.hits!=null?0:null),"3B"],
   singles:[(s,c)=>s._single!=null?s._single:(c.plays&&s.hits!=null?0:null),"1B"],
   tb:[(s,c)=>c.plays&&s.hits!=null?(s._single||0)+2*(s._double||0)+3*(s._triple||0)+4*(s["_home-run"]||0):null,"TB"]};
-function propStatus(L,g,matchId){
+const STATRX=[[/fouls?\s*(?:drawn|won|suffered)|was fouled|fouled/i,"foulsD"],[/fouls?(?:\s*(?:committed|conceded))?|free kicks? conceded/i,"foulsC"],
+  [/shots?\s*on\s*(?:target|goal)|\bsot\b/i,"sot"],[/(?:total\s+)?shots?/i,"shots"],[/tackles?/i,"tackles"],[/offsides?/i,"offsides"],[/yellow|bookings?|carded|cards?/i,"cards"],
+  [/saves?/i,"saves"],[/assists?/i,"assists"],[/goals?/i,"goals"]];
+function inferStat(L){const w=String(L.stat_raw||"").trim();if(w){for(const[rx,k]of STATRX)if(rx.test(w))return k}return null}
+function propStatus(L,g,matchId){L=L.stat?L:{...L,stat:inferStat(L)};
   if(!L.player)return{s:"?",lbl:"?",n:"stat not found (player not named in the bet log)"};
   const who=(String(L.player).trim().split(/\s+/).pop()||L.player);
   if(!L.stat||!PROP[L.stat])return{s:"?",lbl:"?",n:`stat not found (log doesn't say which ${who} stat${L.stat_raw?": "+L.stat_raw:""})`};
@@ -410,10 +416,15 @@ function propStatus(L,g,matchId){
   if(!c.length)c=ath.filter(a=>playerMatch(L.pname||L.player,a.name)&&(!L.pteam||!a.team||a.team===L.pteam));
   if(c.length>1){const ib=c.filter(a=>a.inBox);if(ib.length)c=ib}
   if(c.length>1){const wv=c.filter(a=>fn(a.s,ctx)!=null);if(wv.length)c=wv}
+  if(!c.length){const ln=nameW(L.pname||L.player).slice(-1)[0],u=ath.filter(a=>ln&&ln.length>2&&nameW(a.name).includes(ln)&&(!L.pteam||!a.team||a.team===L.pteam));if(u.length===1)c=u}   // last-name fallback when it is unique on that team
   const A=c[0],supported=ath.some(a=>fn(a.s,ctx)!=null)||(L.stat==="td"&&(S.d.scoringPlays||[]).length>0);
   let v=A?fn(A.s,ctx):null;
   if(L.stat==="td"){const tp=tdPlays(S,L);if(tp>0||v!=null||A||L.pteam)v=Math.max(v||0,tp)}
-  if(v==null){if((A||L.pteam)&&supported)v=0;else return{s:"?",lbl:"?",n:`stat not found (${who} ${unit})`}}
+  if(v==null){const pt1=L.op==="under"?L.line:(L.op==="over"?Math.floor(L.line)+1:L.min);
+    if((A||L.pteam)&&supported)v=0;
+    else if(L.stat==="tackles")return{s:"?",lbl:"?",n:`${who}: ESPN has no per-player tackles — settle by hand`};
+    else return g.completed?{s:"?",lbl:"?",n:`${who}: no stats in the feed (did not play?)`}:{s:"LIVE",lbl:"LIVE",pt:pt1,unit,n:`${who}: no stats yet`}}
+  if(SOCCER(S.path)&&g.completed&&(!A||!A.inBox))return{s:"?",lbl:"?",n:`${who}: did not play (not in the squad or unused sub), the book usually voids this — settle by hand`};
   const fin=g.completed,none=!A||!A.inBox?" (no stats yet)":"",pt0=L.op==="under"?L.line:(L.op==="over"?Math.floor(L.line)+1:L.min);
   const HIT={s:"WON",lbl:"HIT",pv:v,pt:pt0,unit},MISS={s:"LOST",lbl:"MISSED",pv:v,pt:pt0,unit},LV={s:"LIVE",lbl:"LIVE",pv:v,pt:pt0,unit};
   if(L.op==="under"){const n=`${who} ${v} ${unit} (needs under ${L.line})`;
@@ -740,7 +751,8 @@ const STATLINE={"hockey/nhl":[["goals","G"],["assists","A"],["shotsTotal","SOG"]
   "basketball/wnba":[["points","PTS"],["rebounds","REB"],["assists","AST"],["threePointFieldGoalsMade","3PM"]],
   "football/nfl":[["passingYards","PASS"],["passingTouchdowns","PTD"],["rushingYards","RUSH"],["rushingTouchdowns","RTD"],["receptions","REC"],["receivingYards","RECYD"],["receivingTouchdowns","RTD"]],
   "football/college-football":[["passingYards","PASS"],["rushingYards","RUSH"],["receptions","REC"],["receivingYards","RECYD"]],
-  "baseball/mlb":[["hits","H"],["runs","R"],["RBIs","RBI"],["homeRuns","HR"],["strikeouts","K"],["p_strikeouts","K"]]};
+  "baseball/mlb":[["hits","H"],["runs","R"],["RBIs","RBI"],["homeRuns","HR"],["strikeouts","K"],["p_strikeouts","K"]],
+  soccer:[["totalGoals","G"],["goalAssists","A"],["totalShots","SH"],["shotsOnTarget","SOT"],["foulsCommitted","FC"],["foulsSuffered","FD"],["saves","SV"],["yellowCards","YC"]]};
 function athOf(L,S){const ath=athletesOf(S);let c=L.pid?ath.filter(a=>String(a.id)===String(L.pid)):[];
   if(!c.length)c=ath.filter(a=>playerMatch(L.pname||L.player,a.name)&&(!L.pteam||!a.team||a.team===L.pteam));
   if(c.length>1){const ib=c.filter(a=>a.inBox);if(ib.length)c=ib}return c[0]||null}
@@ -748,7 +760,7 @@ const surname=n=>(String(n||"").trim().split(/\s+/).pop()||"").toLowerCase();
 // each prop leg's player with the full live stat line, plus "closest to hitting" for parlays
 function playersHTML(b,legStats){const rows=[],need=[];
   legStats.forEach(x=>{const L=x.L;if(L.type!=="prop"||!x.g||x.g.state==="pre")return;const m=matchOfLeg(b,L),S=m&&summaries[m.id];if(!S)return;
-    const A=athOf(L,S);if(!A)return;const cfg=STATLINE[S.path]||[],seen=new Set(),chips=[];
+    const A=athOf(L,S);if(!A)return;const cfg=STATLINE[S.path]||(SOCCER(S.path)?STATLINE.soccer:[]),seen=new Set(),chips=[];
     for(const[k,lab]of cfg){const v=A.s[k];if(v==null||seen.has(lab))continue;seen.add(lab);chips.push(`<span${(x.pt!=null&&PROP[L.stat]&&PROP[L.stat][1]===lab)?' class="hl"':""}>${esc(lab)} <b>${esc(v)}</b></span>`)}
     const st=x.s==="WON"?"✓":x.s==="LOST"?"✗":x.pt!=null&&x.pv!=null?`${Math.max(0,x.pt-x.pv)} to go`:"";
     rows.push(`<div class="pl"><div class="pn">${esc(A.name)}<small> ${esc(A.team||"")}</small><i class="${x.s==="WON"?"pos":x.s==="LOST"?"neg":""}">${esc(st)}</i></div><div class="pc">${chips.join("")||'<span class="pm">no stats yet</span>'}</div></div>`);
