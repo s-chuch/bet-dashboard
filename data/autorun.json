@@ -10,6 +10,15 @@
    "legs": []
   },
   {
+   "bet_id": "ec6db8a6",
+   "book": "Caesars",
+   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
    "bet_id": "3ce29562",
    "book": "DraftKings",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -90,6 +99,15 @@
    "book": "FanDuel",
    "event": "UFC multi (Pico v Keita / Yan v Dvalishvili / Volkanovski v Evloev)",
    "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "d91a6de4",
+   "book": "Caesars",
+   "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
@@ -323,5 +341,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 21:47 ET"
+ "last_change_at": "2026-10-24 22:02 ET"
 }

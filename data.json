@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NFL",
@@ -2238,11 +2238,11 @@
     "id": "401856732",
     "snapshot": {
      "date": "2026-10-24T23:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 632.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "10:32 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -2262,7 +2262,7 @@
        "nick": "Rebels",
        "location": "Ole Miss",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -2856,10 +2856,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.945,
-     "away": 0.055,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NCAAF",
@@ -3121,10 +3121,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 4,
-     "clock": 304.0,
+     "clock": 29.9,
      "state": "in",
      "completed": false,
-     "detail": "5:04 - 4th",
+     "detail": "29.9 - 4th",
      "teams": [
       {
        "id": "20",
@@ -3134,7 +3134,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "116"
+       "score": "126"
       },
       {
        "id": "15",
@@ -3144,7 +3144,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "105"
+       "score": "116"
       }
      ]
     },
@@ -3820,10 +3820,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.985,
-     "away": 0.015,
+     "home": 0.995,
+     "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:02Z"
     }
    },
    "sport": "NBA",
@@ -3972,10 +3972,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 3,
-     "clock": 262.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:22 - 3rd",
+     "detail": "End of 3rd",
      "teams": [
       {
        "id": "96",
@@ -3985,7 +3985,7 @@
        "nick": "Wildcats",
        "location": "Kentucky",
        "home": true,
-       "score": "21"
+       "score": "24"
       },
       {
        "id": "238",
@@ -4609,10 +4609,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.8358,
-     "away": 0.1642,
-     "spread": 0.02,
-     "t": "2026-10-25T01:48Z"
+     "home": 0.925,
+     "away": 0.075,
+     "spread": 0.01,
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NCAAF",
@@ -4672,11 +4672,11 @@
     "id": "401908043",
     "snapshot": {
      "date": "2026-10-25T00:00Z",
-     "period": 4,
+     "period": 5,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 4th",
+     "detail": "Bot 5th",
      "teams": [
       {
        "id": "8",
@@ -4969,10 +4969,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.415,
-     "away": 0.585,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:02Z"
     }
    },
    "sport": "MLB",
@@ -5032,11 +5032,11 @@
     "id": "401856732",
     "snapshot": {
      "date": "2026-10-24T23:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 632.0,
      "state": "in",
      "completed": false,
-     "detail": "Halftime",
+     "detail": "10:32 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -5056,7 +5056,7 @@
        "nick": "Rebels",
        "location": "Ole Miss",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -5650,10 +5650,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.945,
-     "away": 0.055,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NCAAF",
@@ -5706,11 +5706,11 @@
     "id": "401908043",
     "snapshot": {
      "date": "2026-10-25T00:00Z",
-     "period": 4,
+     "period": 5,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 4th",
+     "detail": "Bot 5th",
      "teams": [
       {
        "id": "8",
@@ -6003,10 +6003,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.415,
-     "away": 0.585,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:02Z"
     }
    },
    "sport": "MLB",
@@ -6919,7 +6919,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T01:48Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NFL",
@@ -12104,6 +12104,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "3ce29562",
     "book": "DraftKings",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -12184,6 +12193,15 @@
     "book": "FanDuel",
     "event": "UFC multi (Pico v Keita / Yan v Dvalishvili / Volkanovski v Evloev)",
     "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
     "stake": "0.50",
     "reason": "no ESPN game matched",
     "legs": []
@@ -12416,7 +12434,7 @@
     "at": "2026-10-22 23:36"
    }
   ],
-  "last_change_at": "2026-10-24 21:47 ET"
+  "last_change_at": "2026-10-24 22:02 ET"
  },
  "open_live_n": 30,
  "open_stake_by_book": {
@@ -12426,6 +12444,6 @@
   "FanDuel": 6.1,
   "PointsBet": 12.5
  },
- "hash": "29bcf30cdc9e563b39a75d4ee8e79aa01cc165ce",
- "generated_at": "2026-10-24T21:48:17-04:00"
+ "hash": "07008904e2240e73df11477676c5b9cd72c98ac5",
+ "generated_at": "2026-10-24T22:03:03-04:00"
 }
