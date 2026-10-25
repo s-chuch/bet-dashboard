@@ -2239,10 +2239,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 3,
-     "clock": 632.0,
+     "clock": 606.0,
      "state": "in",
      "completed": false,
-     "detail": "10:32 - 3rd",
+     "detail": "10:06 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -3121,10 +3121,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 4,
-     "clock": 29.9,
+     "clock": 12.2,
      "state": "in",
      "completed": false,
-     "detail": "29.9 - 4th",
+     "detail": "12.2 - 4th",
      "teams": [
       {
        "id": "20",
@@ -3134,7 +3134,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "126"
+       "score": "127"
       },
       {
        "id": "15",
@@ -3823,7 +3823,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-25T02:02Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "NBA",
@@ -4972,7 +4972,7 @@
      "home": 0.435,
      "away": 0.565,
      "spread": 0.01,
-     "t": "2026-10-25T02:02Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "MLB",
@@ -5033,10 +5033,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 3,
-     "clock": 632.0,
+     "clock": 606.0,
      "state": "in",
      "completed": false,
-     "detail": "10:32 - 3rd",
+     "detail": "10:06 - 3rd",
      "teams": [
       {
        "id": "251",
@@ -6006,7 +6006,7 @@
      "home": 0.435,
      "away": 0.565,
      "spread": 0.01,
-     "t": "2026-10-25T02:02Z"
+     "t": "2026-10-25T02:03Z"
     }
    },
    "sport": "MLB",
@@ -12444,6 +12444,6 @@
   "FanDuel": 6.1,
   "PointsBet": 12.5
  },
- "hash": "07008904e2240e73df11477676c5b9cd72c98ac5",
- "generated_at": "2026-10-24T22:03:03-04:00"
+ "hash": "d9465da028b6ac62c4d76e14ddf658a22d95b050",
+ "generated_at": "2026-10-24T22:03:32-04:00"
 }
