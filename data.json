@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 76.67,
-   "updated": "2026-10-25 00:22"
+   "balance": 77.7,
+   "updated": "2026-10-25 00:24"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 664.24,
+ "total": 665.27,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -2078,82 +2078,6 @@
    }
   },
   {
-   "bet_id": "53cb007b",
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Arsenal v Everton",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
-   "start": "Sat Oct 24 10:00 AM ET",
-   "price": "+105",
-   "boosted_price": "+158",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.63,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "unknown",
-     "text": "Over 20.5 match shots"
-    },
-    {
-     "type": "unknown",
-     "text": "Over 5.5 shots on target"
-    },
-    {
-     "type": "unknown",
-     "text": "Over 23.5 free kicks"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261024",
-    "groups": null,
-    "id": "401878768",
-    "snapshot": {
-     "date": "2026-10-24T14:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "359",
-       "name": "Arsenal",
-       "abbr": "ARS",
-       "short": "Arsenal",
-       "nick": "Arsenal",
-       "location": "Arsenal",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "368",
-       "name": "Everton",
-       "abbr": "EVE",
-       "short": "Everton",
-       "nick": "Everton",
-       "location": "Everton",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.4,
-   "payout": 1.03,
-   "payout_est": false,
-   "start_ts": "2026-10-24T14:00Z",
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "80b13e8e",
    "date": "2026-10-24",
    "book": "bet365",
@@ -3660,6 +3584,21 @@
   {
    "date": "2026-10-23",
    "book": "bet365",
+   "event": "Arsenal v Everton",
+   "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
+   "result": "won",
+   "pnl": 0.63,
+   "stake": 0.4,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-23 18:24",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "book": "bet365",
    "event": "Montreal Canadiens @ Chicago Blackhawks",
    "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
    "result": "lost",
@@ -4506,15 +4445,15 @@
    "clv": null
   }
  ],
- "pnl_total": 102.6,
+ "pnl_total": 103.23,
  "unsettled": {
-  "n": 25,
-  "cash_stake": 18.3,
-  "max_payout": 150.92,
+  "n": 24,
+  "cash_stake": 17.9,
+  "max_payout": 149.89,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 18.3,
+ "open_stake": 17.9,
  "recs": {
   "stats": {
    "overall": {
@@ -8340,15 +8279,6 @@
     "legs": []
    },
    {
-    "bet_id": "53cb007b",
-    "book": "bet365",
-    "event": "Arsenal v Everton (EPL)",
-    "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
-    "stake": "0.40",
-    "reason": "leg \"Over 20.5 match shots\": market/stat not recognised",
-    "legs": []
-   },
-   {
     "bet_id": "febe6211",
     "book": "FanDuel",
     "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
@@ -8645,6 +8575,6 @@
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "7c8c76e67eeb8d767d5526902cfd1382a52eca46",
- "generated_at": "2026-10-25T00:24:24-04:00"
+ "hash": "7ed3334fd511f373e6820731173c7175eca742af",
+ "generated_at": "2026-10-25T00:24:41-04:00"
 }
