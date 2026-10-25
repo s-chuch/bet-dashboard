@@ -28,15 +28,6 @@
    "legs": []
   },
   {
-   "bet_id": "60d543b0",
-   "book": "bet365",
-   "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
-   "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
-   "stake": "0.40",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
    "bet_id": "022381e8",
    "book": "bet365",
    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -333,5 +324,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 00:24 ET"
+ "last_change_at": "2026-10-25 00:25 ET"
 }

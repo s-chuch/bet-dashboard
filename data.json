@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:24Z"
+     "t": "2026-10-25T04:26Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:24Z"
+     "t": "2026-10-25T04:25Z"
     }
    },
    "sport": "NFL",
@@ -1975,54 +1975,6 @@
    "payout": 2.97,
    "payout_est": false,
    "start_ts": "2026-10-25T13:30Z",
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "60d543b0",
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Winnipeg Blue Bombers @ BC Lions",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
-   "start": "Fri Oct 23 10:00 PM ET",
-   "price": "+100",
-   "boosted_price": "+150",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.6,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Blue Bombers",
-     "women": false,
-     "text": "Blue Bombers ML"
-    },
-    {
-     "type": "spread",
-     "team": "BC Lions",
-     "line": 24.5,
-     "women": false,
-     "text": "BC Lions +24.5"
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 46.5,
-     "text": "Over 46.5"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.4,
-   "payout": 1.0,
-   "payout_est": false,
-   "start_ts": "2026-10-24T02:00Z",
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -3254,7 +3206,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:24Z"
+     "t": "2026-10-25T04:26Z"
     }
    },
    "sport": "NFL",
@@ -3605,6 +3557,21 @@
    "pnl": -0.4,
    "stake": 0.4,
    "auto": true,
+   "clv": {
+    "placed_at": "2026-10-23 18:24",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "book": "bet365",
+   "event": "Winnipeg Blue Bombers @ BC Lions",
+   "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
+   "result": "lost",
+   "pnl": -0.4,
+   "stake": 0.4,
+   "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -4445,15 +4412,15 @@
    "clv": null
   }
  ],
- "pnl_total": 103.23,
+ "pnl_total": 102.83,
  "unsettled": {
-  "n": 24,
-  "cash_stake": 17.9,
-  "max_payout": 149.89,
+  "n": 23,
+  "cash_stake": 17.5,
+  "max_payout": 148.89,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 17.9,
+ "open_stake": 17.5,
  "recs": {
   "stats": {
    "overall": {
@@ -8261,15 +8228,6 @@
     "legs": []
    },
    {
-    "bet_id": "60d543b0",
-    "book": "bet365",
-    "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
-    "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
-    "stake": "0.40",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "022381e8",
     "book": "bet365",
     "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
@@ -8565,16 +8523,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:24 ET"
+  "last_change_at": "2026-10-25 00:25 ET"
  },
- "open_live_n": 23,
+ "open_live_n": 22,
  "open_stake_by_book": {
-  "bet365": 2.0,
+  "bet365": 1.6,
   "Caesars": 2.9,
   "DraftKings": 0.4,
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "7ed3334fd511f373e6820731173c7175eca742af",
- "generated_at": "2026-10-25T00:24:41-04:00"
+ "hash": "f64691716d72f806436e5e553f2024498ab6a127",
+ "generated_at": "2026-10-25T00:26:00-04:00"
 }
