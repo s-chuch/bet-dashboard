@@ -249,11 +249,11 @@
     "id": "401873016",
     "snapshot": {
      "date": "2026-10-25T17:00Z",
-     "period": 4,
-     "clock": 16.0,
+     "period": 5,
+     "clock": 557.0,
      "state": "in",
      "completed": false,
-     "detail": "0:16 - 4th",
+     "detail": "9:17 - OT",
      "teams": [
       {
        "id": "34",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.525,
-     "away": 0.475,
-     "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "home": 0.31,
+     "away": 0.69,
+     "spread": 0.02,
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NFL",
@@ -1218,11 +1218,10 @@
     {
      "type": "prop",
      "player": "Nico Gonzalez",
-     "stat": null,
+     "stat": "foulsC",
      "op": "min",
      "min": 1,
      "text": "Nico Gonzalez 1+ fouls committed",
-     "stat_raw": "fouls committed",
      "pteam": "NEW",
      "pname": "Nico Gonz\u00e1lez",
      "pid": "323986"
@@ -2120,7 +2119,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NFL",
@@ -2890,7 +2889,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NBA",
@@ -2961,11 +2960,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 1129.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "18:49 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -3100,10 +3099,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2071,
-     "away": 0.7929,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NHL",
@@ -3170,11 +3169,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 1129.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "18:49 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -3309,10 +3308,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2071,
-     "away": 0.7929,
+     "home": 0.265,
+     "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NHL",
@@ -4093,7 +4092,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NBA",
@@ -4150,10 +4149,10 @@
     "snapshot": {
      "date": "2026-10-25T20:00Z",
      "period": 1,
-     "clock": 420.0,
+     "clock": 900.0,
      "state": "in",
      "completed": false,
-     "detail": "7'",
+     "detail": "15'",
      "teams": [
       {
        "id": "83",
@@ -4332,7 +4331,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T20:09Z"
+     "t": "2026-10-25T20:17Z"
     }
    },
    "sport": "NHL",
@@ -9549,7 +9548,7 @@
     "event": "Crystal Palace v Newcastle (EPL)",
     "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
     "stake": "0.40",
-    "reason": "leg \"Nico Gonzalez 1+ fouls committed\": market/stat not recognised",
+    "reason": "leg \"Nico Gonzalez 1+ fouls committed\": stat foulsC missing for Nico Gonz\u00e1lez",
     "legs": [
      {
       "leg": "Harvey Barnes to score or assist",
@@ -9807,7 +9806,7 @@
     "at": "2026-10-23 21:39"
    }
   ],
-  "last_change_at": "2026-10-25 15:59 ET"
+  "last_change_at": "2026-10-25 16:17 ET"
  },
  "open_live_n": 17,
  "open_stake_by_book": {
@@ -9817,6 +9816,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "8d1cd6d1d49d517531e2f8c1435fa77eae961584",
- "generated_at": "2026-10-25T16:09:24-04:00"
+ "hash": "e8fd11a5f85c10a66c8fb783f3c3da9620ad4667",
+ "generated_at": "2026-10-25T16:17:17-04:00"
 }

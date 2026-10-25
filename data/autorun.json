@@ -42,7 +42,7 @@
    "event": "Crystal Palace v Newcastle (EPL)",
    "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
    "stake": "0.40",
-   "reason": "leg \"Nico Gonzalez 1+ fouls committed\": market/stat not recognised",
+   "reason": "leg \"Nico Gonzalez 1+ fouls committed\": stat foulsC missing for Nico Gonz\u00e1lez",
    "legs": [
     {
      "leg": "Harvey Barnes to score or assist",
@@ -301,5 +301,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 15:59 ET"
+ "last_change_at": "2026-10-25 16:17 ET"
 }
