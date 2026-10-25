@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:37Z"
+     "t": "2026-10-25T05:47Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:37Z"
+     "t": "2026-10-25T05:47Z"
     }
    },
    "sport": "NFL",
@@ -2822,7 +2822,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:37Z"
+     "t": "2026-10-25T05:47Z"
     }
    },
    "sport": "NFL",
@@ -4116,18 +4116,18 @@
   "stats": {
    "overall": {
     "n": 136,
-    "w": 38,
+    "w": 39,
     "l": 64,
     "p": 0,
-    "pending": 34,
-    "win_pct": 37.3,
-    "units": 16.94,
-    "roi_pct": 20.4,
-    "roi_n": 83,
-    "exp_roi_pct": 10.2,
-    "exp_wins": 34.6,
-    "exp_wins_n": 101,
-    "wins_with_fair": 37
+    "pending": 33,
+    "win_pct": 37.9,
+    "units": 18.24,
+    "roi_pct": 21.7,
+    "roi_n": 84,
+    "exp_roi_pct": 10.1,
+    "exp_wins": 35.1,
+    "exp_wins_n": 102,
+    "wins_with_fair": 38
    },
    "by_promo": {
     "Bet Reset $5": {
@@ -4207,18 +4207,18 @@
     },
     "cash": {
      "n": 34,
-     "w": 12,
+     "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 2,
-     "win_pct": 37.5,
-     "units": 9.61,
-     "roi_pct": 30.0,
-     "roi_n": 32,
+     "pending": 1,
+     "win_pct": 39.4,
+     "units": 10.91,
+     "roi_pct": 33.1,
+     "roi_n": 33,
      "exp_roi_pct": 5.7,
-     "exp_wins": 11.3,
-     "exp_wins_n": 32,
-     "wins_with_fair": 12
+     "exp_wins": 11.8,
+     "exp_wins_n": 33,
+     "wins_with_fair": 13
     },
     "live boost": {
      "n": 1,
@@ -4359,18 +4359,18 @@
     },
     "NHL": {
      "n": 12,
-     "w": 6,
+     "w": 7,
      "l": 5,
      "p": 0,
-     "pending": 1,
-     "win_pct": 54.5,
-     "units": 1.31,
-     "roi_pct": 11.9,
-     "roi_n": 11,
-     "exp_roi_pct": 11.6,
-     "exp_wins": 5.3,
-     "exp_wins_n": 11,
-     "wins_with_fair": 6
+     "pending": 0,
+     "win_pct": 58.3,
+     "units": 2.61,
+     "roi_pct": 21.8,
+     "roi_n": 12,
+     "exp_roi_pct": 11.1,
+     "exp_wins": 5.8,
+     "exp_wins_n": 12,
+     "wins_with_fair": 7
     },
     "Soccer": {
      "n": 37,
@@ -4451,18 +4451,18 @@
     },
     "no": {
      "n": 61,
-     "w": 11,
+     "w": 12,
      "l": 18,
      "p": 0,
-     "pending": 32,
-     "win_pct": 37.9,
-     "units": -7.24,
-     "roi_pct": -31.5,
-     "roi_n": 23,
-     "exp_roi_pct": 4.5,
-     "exp_wins": 10.0,
-     "exp_wins_n": 29,
-     "wins_with_fair": 11
+     "pending": 31,
+     "win_pct": 40.0,
+     "units": -5.94,
+     "roi_pct": -24.7,
+     "roi_n": 24,
+     "exp_roi_pct": 4.6,
+     "exp_wins": 10.4,
+     "exp_wins_n": 30,
+     "wins_with_fair": 12
     }
    },
    "friend": {
@@ -4592,11 +4592,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "DET 1-4 CGY (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan; Pin home +111 / away -122; yes at +120",
-    "units": null
+    "units": 1.3
    },
    {
     "rec_id": "8a535703",
@@ -8147,6 +8147,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "81c353b5fb3761636f040d1ac43a40e25c4fa397",
- "generated_at": "2026-10-25T00:37:57-04:00"
+ "hash": "78b4733afe67a30236e89a86508b2c1f05437e9d",
+ "generated_at": "2026-10-25T01:47:49-04:00"
 }
