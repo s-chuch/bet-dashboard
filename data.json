@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T22:01Z"
+     "t": "2026-10-25T22:09Z"
     }
    },
    "sport": "NFL",
@@ -2170,7 +2170,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T22:01Z"
+     "t": "2026-10-25T22:09Z"
     }
    },
    "sport": "NBA",
@@ -2249,10 +2249,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 2,
-     "clock": 348.0,
+     "clock": 115.0,
      "state": "in",
      "completed": false,
-     "detail": "5:48 - 2nd",
+     "detail": "1:55 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -2262,7 +2262,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "58"
+       "score": "68"
       },
       {
        "id": "13",
@@ -2272,7 +2272,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "50"
+       "score": "64"
       }
      ]
     },
@@ -2948,10 +2948,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.515,
-     "away": 0.485,
+     "home": 0.385,
+     "away": 0.615,
      "spread": 0.01,
-     "t": "2026-10-25T22:01Z"
+     "t": "2026-10-25T22:09Z"
     }
    },
    "sport": "NBA",
@@ -3108,7 +3108,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T22:01Z"
+     "t": "2026-10-25T22:09Z"
     }
    },
    "sport": "NHL",
@@ -8408,6 +8408,15 @@
     ]
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "fd0d2273",
     "book": "FanDuel",
     "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -8441,6 +8450,15 @@
     "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -8671,7 +8689,7 @@
     "at": "2026-10-23 23:27"
    }
   ],
-  "last_change_at": "2026-10-25 18:01 ET"
+  "last_change_at": "2026-10-25 18:09 ET"
  },
  "open_live_n": 13,
  "open_stake_by_book": {
@@ -8681,6 +8699,6 @@
   "FanDuel": 4.1,
   "PointsBet": 10.0
  },
- "hash": "aca33ae43b05171daf9186ac87b85734e7b1e6ee",
- "generated_at": "2026-10-25T18:01:35-04:00"
+ "hash": "43071fe9405471b5883062680954cf5d44ee3391",
+ "generated_at": "2026-10-25T18:09:29-04:00"
 }
