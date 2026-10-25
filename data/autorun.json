@@ -19,20 +19,6 @@
    "legs": []
   },
   {
-   "bet_id": "febe6211",
-   "book": "FanDuel",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
-   "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
-   "stake": "0.50",
-   "reason": "leg \"Under 0.5 1st inning runs\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Chandler Simpson 1+ hits",
-     "result": "won"
-    }
-   ]
-  },
-  {
    "bet_id": "d91a6de4",
    "book": "Caesars",
    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",

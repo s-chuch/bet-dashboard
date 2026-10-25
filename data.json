@@ -2124,94 +2124,6 @@
    }
   },
   {
-   "bet_id": "febe6211",
-   "date": "2026-10-24",
-   "book": "FanDuel",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "market": "SGP 2-leg (30% profit boost)",
-   "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
-   "start": "Sat Oct 24 08:00 PM ET",
-   "price": "+130",
-   "boosted_price": "+168",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.84,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Chandler Simpson",
-     "stat": "hits",
-     "op": "min",
-     "min": 1,
-     "text": "Chandler Simpson 1+ hits",
-     "pteam": "TB",
-     "pname": "Chandler Simpson",
-     "pid": "4679983"
-    },
-    {
-     "type": "unknown",
-     "text": "Under 0.5 1st inning runs"
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261024",
-    "groups": null,
-    "id": "401908043",
-    "snapshot": {
-     "date": "2026-10-25T00:00Z",
-     "period": 9,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "8",
-       "name": "Milwaukee Brewers",
-       "abbr": "MIL",
-       "short": "Brewers",
-       "nick": "Brewers",
-       "location": "Milwaukee",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-24 14:59 ET",
-     "ml_home": 0.5242,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.3313,
-     "total_line": 6.5,
-     "total_over_fair": 0.5069
-    }
-   },
-   "sport": "MLB",
-   "cash_stake": 0.5,
-   "payout": 1.34,
-   "payout_est": false,
-   "start_ts": "2026-10-25T00:00Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "d91a6de4",
    "date": "2026-10-24",
    "book": "Caesars",
@@ -3076,6 +2988,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-24 14:23",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "FanDuel",
+   "event": "Tampa Bay Rays @ Milwaukee Brewers",
+   "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:24",
     "close_price": null,
     "clv_pct": null
    }
@@ -4214,15 +4141,15 @@
    "clv": null
   }
  ],
- "pnl_total": 107.46,
+ "pnl_total": 106.96,
  "unsettled": {
-  "n": 17,
-  "cash_stake": 15.4,
-  "max_payout": 136.54,
+  "n": 16,
+  "cash_stake": 14.9,
+  "max_payout": 135.2,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.4,
+ "open_stake": 14.9,
  "recs": {
   "stats": {
    "overall": {
@@ -8021,20 +7948,6 @@
     "legs": []
    },
    {
-    "bet_id": "febe6211",
-    "book": "FanDuel",
-    "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
-    "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
-    "stake": "0.50",
-    "reason": "leg \"Under 0.5 1st inning runs\": market/stat not recognised",
-    "legs": [
-     {
-      "leg": "Chandler Simpson 1+ hits",
-      "result": "won"
-     }
-    ]
-   },
-   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -8281,6 +8194,6 @@
   "FanDuel": 4.1,
   "PointsBet": 12.5
  },
- "hash": "a86e1786d042a22a76eae1f502b3bd6d18ad4a4b",
- "generated_at": "2026-10-25T00:37:18-04:00"
+ "hash": "fc5c0d755dc7f2aff39af98eb85f73286636c35d",
+ "generated_at": "2026-10-25T00:37:37-04:00"
 }
