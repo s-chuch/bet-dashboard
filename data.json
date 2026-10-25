@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T21:13Z"
+     "t": "2026-10-25T21:14Z"
     }
    },
    "sport": "NFL",
@@ -2242,10 +2242,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 3,
-     "clock": 1200.0,
+     "clock": 1194.0,
      "state": "in",
      "completed": false,
-     "detail": "20:00 - 3rd",
+     "detail": "19:54 - 3rd",
      "teams": [
       {
        "id": "4",
@@ -2380,8 +2380,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.405,
+     "away": 0.595,
      "spread": 0.01,
      "t": "2026-10-25T21:13Z"
     }
@@ -2451,10 +2451,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 3,
-     "clock": 1200.0,
+     "clock": 1194.0,
      "state": "in",
      "completed": false,
-     "detail": "20:00 - 3rd",
+     "detail": "19:54 - 3rd",
      "teams": [
       {
        "id": "4",
@@ -2589,8 +2589,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.405,
+     "away": 0.595,
      "spread": 0.01,
      "t": "2026-10-25T21:13Z"
     }
@@ -2671,10 +2671,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 1,
-     "clock": 664.0,
+     "clock": 644.0,
      "state": "in",
      "completed": false,
-     "detail": "11:04 - 1st",
+     "detail": "10:44 - 1st",
      "teams": [
       {
        "id": "26",
@@ -2684,7 +2684,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "2"
+       "score": "4"
       },
       {
        "id": "13",
@@ -3370,8 +3370,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3218,
-     "away": 0.6782,
+     "home": 0.3485,
+     "away": 0.6515,
      "spread": 0.01,
      "t": "2026-10-25T21:13Z"
     }
@@ -9158,6 +9158,6 @@
   "FanDuel": 9.6,
   "PointsBet": 10.0
  },
- "hash": "c4cec4315edbbc0ed3fe9ef95f8634229b259478",
- "generated_at": "2026-10-25T17:13:16-04:00"
+ "hash": "2f3720f42fa3f1436b2ff29e0fa1eae74601b233",
+ "generated_at": "2026-10-25T17:14:02-04:00"
 }
