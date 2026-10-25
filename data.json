@@ -923,7 +923,7 @@
      "home": 0.635,
      "away": 0.365,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NFL",
@@ -1006,7 +1006,7 @@
        "nick": "Dolphins",
        "location": "Miami",
        "home": false,
-       "score": "13"
+       "score": "14"
       }
      ]
     },
@@ -1656,7 +1656,7 @@
      "home": 0.475,
      "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NFL",
@@ -2759,7 +2759,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NFL",
@@ -3529,7 +3529,7 @@
      "home": 0.395,
      "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NBA",
@@ -3720,7 +3720,7 @@
      "home": 0.3713,
      "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NHL",
@@ -3907,7 +3907,7 @@
      "home": 0.3713,
      "away": 0.6287,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NHL",
@@ -4688,7 +4688,7 @@
      "home": 0.3065,
      "away": 0.6935,
      "spread": 0.02,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NBA",
@@ -4767,10 +4767,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 1,
-     "clock": 107.0,
+     "clock": 47.0,
      "state": "in",
      "completed": false,
-     "detail": "1:47 - 1st",
+     "detail": "0:47 - 1st",
      "teams": [
       {
        "id": "29",
@@ -5440,7 +5440,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T17:29Z"
+     "t": "2026-10-25T17:30Z"
     }
    },
    "sport": "NFL",
@@ -10646,6 +10646,15 @@
     "legs": []
    },
    {
+    "bet_id": "fd0d2273",
+    "book": "FanDuel",
+    "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
+    "pick": "Tyler Shough 175+ pass yds + Daniel Jones 125+ pass yds + Brock Purdy 150+ pass yds + Deshaun Watson 150+ pass yds + Geno Smith 175+ pass yds + Baker Mayfield 150+ pass yds",
+    "stake": "2.00 (bonus)",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "80b13e8e",
     "book": "bet365",
     "event": "Crystal Palace v Newcastle (EPL)",
@@ -10909,7 +10918,7 @@
     "at": "2026-10-23 21:35"
    }
   ],
-  "last_change_at": "2026-10-25 13:29 ET"
+  "last_change_at": "2026-10-25 13:30 ET"
  },
  "open_live_n": 18,
  "open_stake_by_book": {
@@ -10919,6 +10928,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "d8f817e02b2b3d0dec0b0b0d8ebb8b35e3d3508a",
- "generated_at": "2026-10-25T13:29:57-04:00"
+ "hash": "3c31f0ebd2fb8ac2062cee8698724738bde53081",
+ "generated_at": "2026-10-25T13:30:21-04:00"
 }
