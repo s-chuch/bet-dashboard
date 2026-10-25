@@ -57,6 +57,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "bf9db4ab",
+   "book": "FanDuel",
+   "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "RMA 2-1 BAR",
+   "at": "2026-10-25 18:01"
+  },
+  {
    "bet_id": "e0abeedc",
    "book": "bet365",
    "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
@@ -271,17 +280,8 @@
    "pnl": -0.5,
    "final": "TB 2-3 MIL",
    "at": "2026-10-23 23:27"
-  },
-  {
-   "bet_id": "b991223f",
-   "book": "Caesars",
-   "pick": "Brewers ML + Over 8.5",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "TB 2-3 MIL",
-   "at": "2026-10-23 23:27"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 17:49 ET"
+ "last_change_at": "2026-10-25 18:01 ET"
 }

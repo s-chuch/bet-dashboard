@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T21:49Z"
+     "t": "2026-10-25T22:01Z"
     }
    },
    "sport": "NFL",
@@ -2170,7 +2170,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T21:49Z"
+     "t": "2026-10-25T22:01Z"
     }
    },
    "sport": "NBA",
@@ -2249,10 +2249,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 2,
-     "clock": 662.0,
+     "clock": 348.0,
      "state": "in",
      "completed": false,
-     "detail": "11:02 - 2nd",
+     "detail": "5:48 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -2262,7 +2262,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "49"
+       "score": "58"
       },
       {
        "id": "13",
@@ -2272,7 +2272,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "33"
+       "score": "50"
       }
      ]
     },
@@ -2948,10 +2948,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.515,
+     "away": 0.485,
      "spread": 0.01,
-     "t": "2026-10-25T21:49Z"
+     "t": "2026-10-25T22:01Z"
     }
    },
    "sport": "NBA",
@@ -2961,88 +2961,6 @@
    "start_ts": "2026-10-25T21:10Z",
    "clv": {
     "placed_at": "2026-10-25 10:59",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "bf9db4ab",
-   "date": "2026-10-25",
-   "book": "FanDuel",
-   "event": "Barcelona v Real Madrid",
-   "market": "SGP 2-leg (50% profit boost, Super Sub)",
-   "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
-   "start": "Sun Oct 25 04:00 PM ET",
-   "price": "+115",
-   "boosted_price": "+172",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.86,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Barcelona",
-     "women": false,
-     "text": "Barcelona ML",
-     "team_ok": true
-    },
-    {
-     "type": "prop",
-     "player": "Raphinha",
-     "stat": "goal",
-     "op": "min",
-     "min": 1,
-     "text": "Raphinha anytime goalscorer",
-     "pteam": "BAR",
-     "pname": "Raphinha",
-     "pid": "231050"
-    }
-   ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261025",
-    "groups": null,
-    "id": "401882832",
-    "snapshot": {
-     "date": "2026-10-25T20:00Z",
-     "period": 2,
-     "clock": 5160.0,
-     "state": "in",
-     "completed": false,
-     "detail": "86'",
-     "teams": [
-      {
-       "id": "83",
-       "name": "Barcelona",
-       "abbr": "BAR",
-       "short": "Barcelona",
-       "nick": "Barcelona",
-       "location": "Barcelona",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "86",
-       "name": "Real Madrid",
-       "abbr": "RMA",
-       "short": "Real Madrid",
-       "nick": "Real Madrid",
-       "location": "Real Madrid",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.5,
-   "payout": 1.36,
-   "payout_est": false,
-   "start_ts": "2026-10-25T20:00Z",
-   "clv": {
-    "placed_at": "2026-10-25 10:56",
     "close_price": null,
     "clv_pct": null
    }
@@ -3190,7 +3108,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T21:49Z"
+     "t": "2026-10-25T22:01Z"
     }
    },
    "sport": "NHL",
@@ -3206,6 +3124,21 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-25",
+   "book": "FanDuel",
+   "event": "Barcelona v Real Madrid",
+   "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 10:56",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
   {
    "date": "2026-10-25",
    "book": "FanDuel",
@@ -4576,15 +4509,15 @@
    }
   }
  ],
- "pnl_total": 106.12,
+ "pnl_total": 105.62,
  "unsettled": {
-  "n": 17,
-  "cash_stake": 16.3,
-  "max_payout": 120.01,
+  "n": 16,
+  "cash_stake": 15.8,
+  "max_payout": 118.65,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.3,
+ "open_stake": 15.8,
  "recs": {
   "stats": {
    "overall": {
@@ -8513,6 +8446,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "bf9db4ab",
+    "book": "FanDuel",
+    "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "RMA 2-1 BAR",
+    "at": "2026-10-25 18:01"
+   },
+   {
     "bet_id": "e0abeedc",
     "book": "bet365",
     "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
@@ -8727,27 +8669,18 @@
     "pnl": -0.5,
     "final": "TB 2-3 MIL",
     "at": "2026-10-23 23:27"
-   },
-   {
-    "bet_id": "b991223f",
-    "book": "Caesars",
-    "pick": "Brewers ML + Over 8.5",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "TB 2-3 MIL",
-    "at": "2026-10-23 23:27"
    }
   ],
-  "last_change_at": "2026-10-25 17:49 ET"
+  "last_change_at": "2026-10-25 18:01 ET"
  },
- "open_live_n": 14,
+ "open_live_n": 13,
  "open_stake_by_book": {
   "bet365": 0.8,
   "Caesars": 1.5,
   "DraftKings": 0.1,
-  "FanDuel": 4.6,
+  "FanDuel": 4.1,
   "PointsBet": 10.0
  },
- "hash": "7d19f095dde9f76dedce2726093b76e233439911",
- "generated_at": "2026-10-25T17:49:18-04:00"
+ "hash": "aca33ae43b05171daf9186ac87b85734e7b1e6ee",
+ "generated_at": "2026-10-25T18:01:35-04:00"
 }
