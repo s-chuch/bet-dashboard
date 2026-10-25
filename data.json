@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T20:41Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NFL",
@@ -2170,7 +2170,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T20:40Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NBA",
@@ -2241,11 +2241,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 2,
-     "clock": 310.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "5:10 - 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "4",
@@ -2380,10 +2380,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-25T20:40Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NHL",
@@ -2450,11 +2450,11 @@
     "id": "401892578",
     "snapshot": {
      "date": "2026-10-25T19:00Z",
-     "period": 2,
-     "clock": 310.0,
+     "period": 3,
+     "clock": 1200.0,
      "state": "in",
      "completed": false,
-     "detail": "5:10 - 2nd",
+     "detail": "20:00 - 3rd",
      "teams": [
       {
        "id": "4",
@@ -2589,10 +2589,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.385,
-     "away": 0.615,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-25T20:40Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NHL",
@@ -2670,11 +2670,11 @@
     "id": "401909861",
     "snapshot": {
      "date": "2026-10-25T21:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 676.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 5:00 PM EDT",
+     "detail": "11:16 - 1st",
      "teams": [
       {
        "id": "26",
@@ -2684,7 +2684,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "0"
+       "score": "2"
       },
       {
        "id": "13",
@@ -2694,7 +2694,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "0"
+       "score": "2"
       }
      ]
     },
@@ -3373,7 +3373,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T20:40Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NBA",
@@ -3429,11 +3429,11 @@
     "id": "401882832",
     "snapshot": {
      "date": "2026-10-25T20:00Z",
-     "period": 1,
-     "clock": 2280.0,
+     "period": 2,
+     "clock": 2940.0,
      "state": "in",
      "completed": false,
-     "detail": "38'",
+     "detail": "49'",
      "teams": [
       {
        "id": "83",
@@ -3453,7 +3453,7 @@
        "nick": "Real Madrid",
        "location": "Real Madrid",
        "home": false,
-       "score": "0"
+       "score": "1"
       }
      ]
     }
@@ -3612,7 +3612,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T20:40Z"
+     "t": "2026-10-25T21:12Z"
     }
    },
    "sport": "NHL",
@@ -9158,6 +9158,6 @@
   "FanDuel": 9.6,
   "PointsBet": 10.0
  },
- "hash": "dbf6e0d4e73668d183f39951f445fff015614734",
- "generated_at": "2026-10-25T16:41:20-04:00"
+ "hash": "3b4f3ace7523bcd3ffbe30200fe69f075fa90e2d",
+ "generated_at": "2026-10-25T17:12:48-04:00"
 }
