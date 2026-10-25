@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:29Z"
+     "t": "2026-10-25T04:34Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:29Z"
+     "t": "2026-10-25T04:34Z"
     }
    },
    "sport": "NFL",
@@ -1855,54 +1855,6 @@
    "payout_est": false,
    "start_ts": null,
    "clv": null
-  },
-  {
-   "bet_id": "3ce29562",
-   "date": "2026-10-23",
-   "book": "DraftKings",
-   "event": "Montreal Alouettes @ Toronto Argonauts",
-   "market": "SGP 3-pick parlay (60% parlay boost)",
-   "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
-   "start": "Fri Oct 23 07:00 PM ET",
-   "price": "+305",
-   "boosted_price": "+488",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 1.46,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Alouettes",
-     "women": false,
-     "text": "Alouettes ML"
-    },
-    {
-     "type": "spread",
-     "team": "Argonauts",
-     "line": 14.5,
-     "women": false,
-     "text": "Argonauts +14.5"
-    },
-    {
-     "type": "total",
-     "side": "under",
-     "line": 50.5,
-     "text": "Under 50.5"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.3,
-   "payout": 1.76,
-   "payout_est": false,
-   "start_ts": "2026-10-23T23:00Z",
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
   },
   {
    "bet_id": "fd0d2273",
@@ -3105,7 +3057,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:29Z"
+     "t": "2026-10-25T04:34Z"
     }
    },
    "sport": "NFL",
@@ -3520,6 +3472,21 @@
    "pnl": -0.3,
    "stake": 0.3,
    "auto": true,
+   "clv": {
+    "placed_at": "2026-10-23 18:24",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "book": "DraftKings",
+   "event": "Montreal Alouettes @ Toronto Argonauts",
+   "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
+   "result": "lost",
+   "pnl": -0.3,
+   "stake": 0.3,
+   "auto": false,
    "clv": {
     "placed_at": "2026-10-23 18:24",
     "close_price": null,
@@ -4315,30 +4282,30 @@
    "clv": null
   }
  ],
- "pnl_total": 105.42,
+ "pnl_total": 105.12,
  "unsettled": {
-  "n": 20,
-  "cash_stake": 16.7,
-  "max_payout": 143.52,
+  "n": 19,
+  "cash_stake": 16.4,
+  "max_payout": 141.76,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.7,
+ "open_stake": 16.4,
  "recs": {
   "stats": {
    "overall": {
     "n": 136,
     "w": 38,
-    "l": 63,
+    "l": 64,
     "p": 0,
-    "pending": 35,
-    "win_pct": 37.6,
-    "units": 17.94,
-    "roi_pct": 21.9,
-    "roi_n": 82,
-    "exp_roi_pct": 10.3,
-    "exp_wins": 34.4,
-    "exp_wins_n": 100,
+    "pending": 34,
+    "win_pct": 37.3,
+    "units": 16.94,
+    "roi_pct": 20.4,
+    "roi_n": 83,
+    "exp_roi_pct": 10.2,
+    "exp_wins": 34.6,
+    "exp_wins_n": 101,
     "wins_with_fair": 37
    },
    "by_promo": {
@@ -4420,16 +4387,16 @@
     "cash": {
      "n": 34,
      "w": 12,
-     "l": 19,
+     "l": 20,
      "p": 0,
-     "pending": 3,
-     "win_pct": 38.7,
-     "units": 10.61,
-     "roi_pct": 34.2,
-     "roi_n": 31,
+     "pending": 2,
+     "win_pct": 37.5,
+     "units": 9.61,
+     "roi_pct": 30.0,
+     "roi_n": 32,
      "exp_roi_pct": 5.7,
-     "exp_wins": 11.1,
-     "exp_wins_n": 31,
+     "exp_wins": 11.3,
+     "exp_wins_n": 32,
      "wins_with_fair": 12
     },
     "live boost": {
@@ -4527,16 +4494,16 @@
     "NBA": {
      "n": 23,
      "w": 5,
-     "l": 11,
+     "l": 12,
      "p": 0,
-     "pending": 7,
-     "win_pct": 31.2,
-     "units": -2.38,
-     "roi_pct": -18.3,
-     "roi_n": 13,
-     "exp_roi_pct": 9.0,
-     "exp_wins": 6.7,
-     "exp_wins_n": 16,
+     "pending": 6,
+     "win_pct": 29.4,
+     "units": -3.38,
+     "roi_pct": -24.1,
+     "roi_n": 14,
+     "exp_roi_pct": 8.7,
+     "exp_wins": 7.0,
+     "exp_wins_n": 17,
      "wins_with_fair": 5
     },
     "NCAAF": {
@@ -4664,16 +4631,16 @@
     "no": {
      "n": 61,
      "w": 11,
-     "l": 17,
+     "l": 18,
      "p": 0,
-     "pending": 33,
-     "win_pct": 39.3,
-     "units": -6.24,
-     "roi_pct": -28.4,
-     "roi_n": 22,
+     "pending": 32,
+     "win_pct": 37.9,
+     "units": -7.24,
+     "roi_pct": -31.5,
+     "roi_n": 23,
      "exp_roi_pct": 4.5,
-     "exp_wins": 9.7,
-     "exp_wins_n": 28,
+     "exp_wins": 10.0,
+     "exp_wins_n": 29,
      "wins_with_fair": 11
     }
    },
@@ -4781,11 +4748,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "GS 122-131 PHX (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan; Pin home -332 / away +291; yes at +308",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "7aefeca8",
@@ -8122,15 +8089,6 @@
     "legs": []
    },
    {
-    "bet_id": "3ce29562",
-    "book": "DraftKings",
-    "event": "Montreal Alouettes @ Toronto Argonauts (CFL)",
-    "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
-    "stake": "0.30",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "febe6211",
     "book": "FanDuel",
     "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
@@ -8399,16 +8357,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:29 ET"
+  "last_change_at": "2026-10-25 00:34 ET"
  },
- "open_live_n": 19,
+ "open_live_n": 18,
  "open_stake_by_book": {
   "bet365": 1.2,
   "Caesars": 2.5,
-  "DraftKings": 0.4,
+  "DraftKings": 0.1,
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "c3505f33eaa7cbd67237936962379fb41fa15fb9",
- "generated_at": "2026-10-25T00:29:49-04:00"
+ "hash": "ccc9304b09ea0dd2df1bf9215fda83bd4a335282",
+ "generated_at": "2026-10-25T00:34:50-04:00"
 }
