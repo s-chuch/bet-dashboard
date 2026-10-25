@@ -920,8 +920,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.345,
+     "away": 0.655,
      "spread": 0.01,
      "t": "2026-10-25T20:18Z"
     }
@@ -2119,7 +2119,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T20:17Z"
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NFL",
@@ -2889,7 +2889,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T20:17Z"
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NBA",
@@ -3099,10 +3099,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2513,
-     "away": 0.7487,
-     "spread": 0.02,
-     "t": "2026-10-25T20:17Z"
+     "home": 0.245,
+     "away": 0.755,
+     "spread": 0.01,
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NHL",
@@ -3308,10 +3308,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2513,
-     "away": 0.7487,
-     "spread": 0.02,
-     "t": "2026-10-25T20:17Z"
+     "home": 0.245,
+     "away": 0.755,
+     "spread": 0.01,
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NHL",
@@ -4092,7 +4092,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T20:17Z"
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NBA",
@@ -5684,11 +5684,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 138,
+    "n": 140,
     "w": 39,
     "l": 65,
     "p": 0,
-    "pending": 34,
+    "pending": 36,
     "win_pct": 37.5,
     "units": 18.24,
     "roi_pct": 21.7,
@@ -5775,11 +5775,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 36,
+     "n": 38,
      "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 3,
+     "pending": 5,
      "win_pct": 39.4,
      "units": 10.91,
      "roi_pct": 33.1,
@@ -5912,11 +5912,11 @@
      "wins_with_fair": 9
     },
     "NFL": {
-     "n": 16,
+     "n": 18,
      "w": 6,
      "l": 9,
      "p": 0,
-     "pending": 1,
+     "pending": 3,
      "win_pct": 40.0,
      "units": -0.94,
      "roi_pct": -7.2,
@@ -6019,11 +6019,11 @@
      "wins_with_fair": 26
     },
     "no": {
-     "n": 62,
+     "n": 64,
      "w": 12,
      "l": 18,
      "p": 0,
-     "pending": 32,
+     "pending": 34,
      "win_pct": 40.0,
      "units": -5.94,
      "roi_pct": -24.7,
@@ -6096,6 +6096,52 @@
     "final_score": "",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: 200",
+    "units": null
+   },
+   {
+    "rec_id": "dcfdbccf",
+    "rec_date": "2026-10-25",
+    "rec_time_et": "15:07",
+    "sport": "NFL",
+    "event": "Denver Broncos @ Arizona Cardinals",
+    "market": "Total",
+    "selection": "Over 42.5",
+    "book": "theScore",
+    "rec_price": "-120",
+    "eff_price": "-120",
+    "fair_pct": "56.9",
+    "ev_pct": "4.3",
+    "stake": "0.14",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan; fair -132; min price -126; seen -120",
+    "units": null
+   },
+   {
+    "rec_id": "e04e77d6",
+    "rec_date": "2026-10-25",
+    "rec_time_et": "15:07",
+    "sport": "NFL",
+    "event": "Los Angeles Rams @ Las Vegas Raiders",
+    "market": "Moneyline",
+    "selection": "Las Vegas Raiders",
+    "book": "theScore",
+    "rec_price": "+170",
+    "eff_price": "+170",
+    "fair_pct": "38.9",
+    "ev_pct": "4.9",
+    "stake": "0.14",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan; fair +157; min price +162; seen +170",
     "units": null
    },
    {
@@ -9816,6 +9862,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "be7638e88ed4aea489998b6d159868f38c2b4f4d",
- "generated_at": "2026-10-25T16:18:01-04:00"
+ "hash": "14fd8c0713f3d639b5e22e47ba82aefd5cd1dc93",
+ "generated_at": "2026-10-25T16:18:24-04:00"
 }
