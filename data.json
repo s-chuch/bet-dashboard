@@ -7,8 +7,8 @@
   },
   {
    "book": "FanDuel",
-   "balance": 152.72,
-   "updated": "2026-10-24 14:54"
+   "balance": 156.06,
+   "updated": "2026-10-25 00:36"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 668.66,
+ "total": 672.0,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:34Z"
+     "t": "2026-10-25T04:36Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:34Z"
+     "t": "2026-10-25T04:36Z"
     }
    },
    "sport": "NFL",
@@ -2255,56 +2255,6 @@
    "start_ts": "2026-10-24T19:05Z",
    "clv": {
     "placed_at": "2026-10-24 14:23",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "8ed4e0d5",
-   "date": "2026-10-24",
-   "book": "FanDuel",
-   "event": "UFC multi",
-   "market": "Parlay 3-leg (30% profit boost)",
-   "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
-   "start": "Sat Oct 24 02:25 PM ET",
-   "price": "+437",
-   "boosted_price": "+568",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 2.84,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Aaron Pico",
-     "women": false,
-     "text": "Aaron Pico ML",
-     "match": null
-    },
-    {
-     "type": "ml",
-     "team": "Petr Yan",
-     "women": false,
-     "text": "Petr Yan ML",
-     "match": null
-    },
-    {
-     "type": "ml",
-     "team": "Alexander Volkanovski",
-     "women": false,
-     "text": "Alexander Volkanovski ML",
-     "match": null
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.5,
-   "payout": 3.34,
-   "payout_est": false,
-   "start_ts": "2026-10-24T18:25Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:21",
     "close_price": null,
     "clv_pct": null
    }
@@ -3057,7 +3007,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:34Z"
+     "t": "2026-10-25T04:36Z"
     }
    },
    "sport": "NFL",
@@ -3129,6 +3079,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-24 14:35",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "FanDuel",
+   "event": "UFC multi",
+   "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
+   "result": "won",
+   "pnl": 2.84,
+   "stake": 0.5,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:21",
     "close_price": null,
     "clv_pct": null
    }
@@ -4282,15 +4247,15 @@
    "clv": null
   }
  ],
- "pnl_total": 105.12,
+ "pnl_total": 107.96,
  "unsettled": {
-  "n": 19,
-  "cash_stake": 16.4,
-  "max_payout": 141.76,
+  "n": 18,
+  "cash_stake": 15.9,
+  "max_payout": 138.42,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 16.4,
+ "open_stake": 15.9,
  "recs": {
   "stats": {
    "overall": {
@@ -8112,15 +8077,6 @@
     "legs": []
    },
    {
-    "bet_id": "8ed4e0d5",
-    "book": "FanDuel",
-    "event": "UFC multi (Pico v Keita / Yan v Dvalishvili / Volkanovski v Evloev)",
-    "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   },
-   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -8357,16 +8313,16 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-25 00:34 ET"
+  "last_change_at": "2026-10-25 00:36 ET"
  },
- "open_live_n": 18,
+ "open_live_n": 17,
  "open_stake_by_book": {
   "bet365": 1.2,
   "Caesars": 2.5,
   "DraftKings": 0.1,
-  "FanDuel": 5.1,
+  "FanDuel": 4.6,
   "PointsBet": 12.5
  },
- "hash": "ccc9304b09ea0dd2df1bf9215fda83bd4a335282",
- "generated_at": "2026-10-25T00:34:50-04:00"
+ "hash": "12b5d225561e8abb3b81f6bd15b069477eb37cd5",
+ "generated_at": "2026-10-25T00:36:53-04:00"
 }
