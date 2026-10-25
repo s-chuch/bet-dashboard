@@ -1400,7 +1400,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:41Z"
     }
    },
    "sport": "NFL",
@@ -2170,7 +2170,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:40Z"
     }
    },
    "sport": "NBA",
@@ -2242,10 +2242,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 2,
-     "clock": 980.0,
+     "clock": 310.0,
      "state": "in",
      "completed": false,
-     "detail": "16:20 - 2nd",
+     "detail": "5:10 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -2255,7 +2255,7 @@
        "nick": "Blackhawks",
        "location": "Chicago",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "26",
@@ -2380,10 +2380,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2172,
-     "away": 0.7828,
+     "home": 0.385,
+     "away": 0.615,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:40Z"
     }
    },
    "sport": "NHL",
@@ -2451,10 +2451,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 2,
-     "clock": 980.0,
+     "clock": 310.0,
      "state": "in",
      "completed": false,
-     "detail": "16:20 - 2nd",
+     "detail": "5:10 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -2464,7 +2464,7 @@
        "nick": "Blackhawks",
        "location": "Chicago",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "26",
@@ -2589,10 +2589,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2172,
-     "away": 0.7828,
+     "home": 0.385,
+     "away": 0.615,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:40Z"
     }
    },
    "sport": "NHL",
@@ -3370,10 +3370,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3081,
-     "away": 0.6919,
+     "home": 0.315,
+     "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:40Z"
     }
    },
    "sport": "NBA",
@@ -3430,10 +3430,10 @@
     "snapshot": {
      "date": "2026-10-25T20:00Z",
      "period": 1,
-     "clock": 1200.0,
+     "clock": 2280.0,
      "state": "in",
      "completed": false,
-     "detail": "20'",
+     "detail": "38'",
      "teams": [
       {
        "id": "83",
@@ -3612,7 +3612,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T20:22Z"
+     "t": "2026-10-25T20:40Z"
     }
    },
    "sport": "NHL",
@@ -8867,6 +8867,15 @@
     ]
    },
    {
+    "bet_id": "ec6db8a6",
+    "book": "Caesars",
+    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
+    "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "fd0d2273",
     "book": "FanDuel",
     "event": "NFL Week 7 multi (PIT@NO / IND@MIN / SF@ATL / CLE@TEN / MIA@NYJ / TB@CAR)",
@@ -8900,6 +8909,15 @@
     "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
     "stake": "0.40",
     "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
+    "legs": []
+   },
+   {
+    "bet_id": "d91a6de4",
+    "book": "Caesars",
+    "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
+    "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
     "legs": []
    }
   ],
@@ -9130,7 +9148,7 @@
     "at": "2026-10-23 22:45"
    }
   ],
-  "last_change_at": "2026-10-25 16:22 ET"
+  "last_change_at": "2026-10-25 16:40 ET"
  },
  "open_live_n": 16,
  "open_stake_by_book": {
@@ -9140,6 +9158,6 @@
   "FanDuel": 9.6,
   "PointsBet": 10.0
  },
- "hash": "e8e21a9736a6e008d7de4e3d5d7cac321cc0fd97",
- "generated_at": "2026-10-25T16:22:12-04:00"
+ "hash": "dbf6e0d4e73668d183f39951f445fff015614734",
+ "generated_at": "2026-10-25T16:41:20-04:00"
 }
