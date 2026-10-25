@@ -7,8 +7,8 @@
   },
   {
    "book": "FanDuel",
-   "balance": 149.06,
-   "updated": "2026-10-25 11:44"
+   "balance": 148.56,
+   "updated": "2026-10-25 16:08"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 665.36,
+ "total": 664.86,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -250,10 +250,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 4,
-     "clock": 52.0,
+     "clock": 22.0,
      "state": "in",
      "completed": false,
-     "detail": "0:52 - 4th",
+     "detail": "0:22 - 4th",
      "teams": [
       {
        "id": "34",
@@ -263,7 +263,7 @@
        "nick": "Texans",
        "location": "Houston",
        "home": true,
-       "score": "20"
+       "score": "21"
       },
       {
        "id": "19",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.475,
-     "away": 0.525,
+     "home": 0.525,
+     "away": 0.475,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NFL",
@@ -2120,7 +2120,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NFL",
@@ -2890,7 +2890,7 @@
      "home": 0.401,
      "away": 0.599,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NBA",
@@ -3103,7 +3103,7 @@
      "home": 0.2071,
      "away": 0.7929,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NHL",
@@ -3312,7 +3312,7 @@
      "home": 0.2071,
      "away": 0.7929,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NHL",
@@ -4093,7 +4093,7 @@
      "home": 0.3081,
      "away": 0.6919,
      "spread": 0.01,
-     "t": "2026-10-25T20:05Z"
+     "t": "2026-10-25T20:08Z"
     }
    },
    "sport": "NBA",
@@ -4150,10 +4150,10 @@
     "snapshot": {
      "date": "2026-10-25T20:00Z",
      "period": 1,
-     "clock": 240.0,
+     "clock": 360.0,
      "state": "in",
      "completed": false,
-     "detail": "4'",
+     "detail": "6'",
      "teams": [
       {
        "id": "83",
@@ -4185,6 +4185,163 @@
    "start_ts": "2026-10-25T20:00Z",
    "clv": {
     "placed_at": "2026-10-25 10:56",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "bet_id": "0579a4e1",
+   "date": "2026-10-25",
+   "book": "FanDuel",
+   "event": "Detroit Red Wings @ Edmonton Oilers",
+   "market": "Spread",
+   "pick": "Detroit Red Wings +1.5",
+   "start": "Mon Oct 26, 9:30 PM ET",
+   "price": "-142",
+   "boosted_price": "",
+   "stake": 0.5,
+   "stake_note": "",
+   "to_win": 0.35,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "Detroit Red Wings",
+     "line": 1.5,
+     "women": false,
+     "text": "Detroit Red Wings +1.5",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "hockey/nhl",
+    "date": "20261026",
+    "groups": null,
+    "id": "401892584",
+    "snapshot": {
+     "date": "2026-10-27T01:30Z",
+     "period": 0,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "10/26 - 9:30 PM EDT",
+     "teams": [
+      {
+       "id": "6",
+       "name": "Edmonton Oilers",
+       "abbr": "EDM",
+       "short": "Oilers",
+       "nick": "Oilers",
+       "location": "Edmonton",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "5",
+       "name": "Detroit Red Wings",
+       "abbr": "DET",
+       "short": "Red Wings",
+       "nick": "Red Wings",
+       "location": "Detroit",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    },
+    "pm": {
+     "slug": "nhl-det-edm-2026-10-26",
+     "title": "Red Wings vs. Oilers",
+     "spreads": [
+      {
+       "line": -1.5,
+       "outcomes": [
+        "Oilers",
+        "Red Wings"
+       ],
+       "tokens": [
+        "47789090979211648018139894184541199933275895125648170631628781039986077598660",
+        "61972908982253015083367162678954697697089019224383196670380453317179028891874"
+       ]
+      }
+     ],
+     "totals": [
+      {
+       "line": 4.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "32114604811438479602742879114137222246413549620677431506613341694221556876031",
+        "104701773877280500580049225464846485367063795628563159824237601790780762029848"
+       ]
+      },
+      {
+       "line": 5.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "45386949742217192775530786817678468318841312061679578432244624391125121465643",
+        "67839980908947744339986813975461820183350509156760397904808557734851727333868"
+       ]
+      },
+      {
+       "line": 6.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "94011450000143555961091180624688966616385749871129684450085433258413394824899",
+        "52743621121584882699774746546597495481183062077817381619214454592631038999804"
+       ]
+      },
+      {
+       "line": 7.5,
+       "outcomes": [
+        "Over",
+        "Under"
+       ],
+       "tokens": [
+        "40410276665042747796540538560576237022747282436930815089274877358505706675667",
+        "108430579724966052615190375087920253714241333503831241655819530584226213281947"
+       ]
+      }
+     ],
+     "ml": {
+      "outcomes": [
+       "Red Wings",
+       "Oilers"
+      ],
+      "tokens": [
+       "73623226117844861336305571325405851816606403315987269850635124067032119639068",
+       "70789054901558277681035489017929760685920015907300677306590815080035400070328"
+      ]
+     }
+    },
+    "an": {
+     "id": 293485,
+     "home_team_id": 222,
+     "away_team_id": 232
+    },
+    "kal": {
+     "src": "Kalshi",
+     "home": 0.6188,
+     "away": 0.3812,
+     "spread": 0.01,
+     "t": "2026-10-25T20:08Z"
+    }
+   },
+   "sport": "NHL",
+   "cash_stake": 0.5,
+   "payout": 0.85,
+   "payout_est": false,
+   "start_ts": null,
+   "clv": {
+    "placed_at": "2026-10-25 16:08",
     "close_price": null,
     "clv_pct": null
    }
@@ -5518,21 +5675,21 @@
  ],
  "pnl_total": 106.62,
  "unsettled": {
-  "n": 19,
-  "cash_stake": 21.2,
-  "max_payout": 135.49,
+  "n": 20,
+  "cash_stake": 21.7,
+  "max_payout": 136.34,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 21.2,
+ "open_stake": 21.7,
  "recs": {
   "stats": {
    "overall": {
-    "n": 137,
+    "n": 138,
     "w": 39,
     "l": 65,
     "p": 0,
-    "pending": 33,
+    "pending": 34,
     "win_pct": 37.5,
     "units": 18.24,
     "roi_pct": 21.7,
@@ -5619,11 +5776,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 35,
+     "n": 36,
      "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 39.4,
      "units": 10.91,
      "roi_pct": 33.1,
@@ -5771,11 +5928,11 @@
      "wins_with_fair": 5
     },
     "NHL": {
-     "n": 12,
+     "n": 13,
      "w": 7,
      "l": 5,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 58.3,
      "units": 2.61,
      "roi_pct": 21.8,
@@ -5848,11 +6005,11 @@
    },
    "by_placed": {
     "yes": {
-     "n": 75,
+     "n": 76,
      "w": 27,
      "l": 47,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": 36.5,
      "units": 24.18,
      "roi_pct": 40.3,
@@ -5896,6 +6053,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "2f83778e",
+    "rec_date": "2026-10-25",
+    "rec_time_et": "16:08",
+    "sport": "NHL",
+    "event": "Detroit Red Wings @ Edmonton Oilers",
+    "market": "Spread",
+    "selection": "Detroit Red Wings +1.5",
+    "book": "FanDuel",
+    "rec_price": "-134",
+    "eff_price": "-142",
+    "fair_pct": "58.55",
+    "ev_pct": "2.25",
+    "stake": "0.50",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "logged from Bet Finder (key 2026-10-27|Detroit Red Wings @ Edmonton Oilers|Detroit Red Wings +1.5)",
+    "units": null
+   },
    {
     "rec_id": "a5337ed6",
     "rec_date": "2026-10-25",
@@ -9629,14 +9809,14 @@
   ],
   "last_change_at": "2026-10-25 15:59 ET"
  },
- "open_live_n": 16,
+ "open_live_n": 17,
  "open_stake_by_book": {
   "bet365": 1.2,
   "Caesars": 1.5,
   "DraftKings": 0.1,
-  "FanDuel": 10.1,
+  "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "565dbba1033d8531e84169ba4c1d1876270af689",
- "generated_at": "2026-10-25T16:05:55-04:00"
+ "hash": "905769c0872e2563b30bf0a1707163fdbc144678",
+ "generated_at": "2026-10-25T16:08:58-04:00"
 }
