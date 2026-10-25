@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NFL",
@@ -1007,8 +1007,8 @@
      ]
     },
     "pregame": {
-     "home": 65.7,
-     "away": 34.0
+     "home": 65.1,
+     "away": 34.6
     },
     "pin": {
      "src": "Pinnacle no-vig",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NFL",
@@ -2239,10 +2239,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 588.0,
+     "clock": 360.0,
      "state": "in",
      "completed": false,
-     "detail": "9:48 - 1st",
+     "detail": "6:00 - 1st",
      "teams": [
       {
        "id": "251",
@@ -2252,7 +2252,7 @@
        "nick": "Longhorns",
        "location": "Texas",
        "home": true,
-       "score": "0"
+       "score": "3"
       },
       {
        "id": "145",
@@ -2262,7 +2262,7 @@
        "nick": "Rebels",
        "location": "Ole Miss",
        "home": false,
-       "score": "0"
+       "score": "3"
       }
      ]
     },
@@ -2856,10 +2856,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.695,
-     "away": 0.305,
+     "home": 0.6313,
+     "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NCAAF",
@@ -3120,11 +3120,11 @@
     "id": "401909855",
     "snapshot": {
      "date": "2026-10-24T23:30Z",
-     "period": 1,
-     "clock": 233.0,
+     "period": 2,
+     "clock": 717.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 1st",
+     "detail": "11:57 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -3134,7 +3134,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "24"
+       "score": "34"
       },
       {
        "id": "15",
@@ -3144,7 +3144,7 @@
        "nick": "Bucks",
        "location": "Milwaukee",
        "home": false,
-       "score": "18"
+       "score": "25"
       }
      ]
     },
@@ -3820,10 +3820,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.865,
-     "away": 0.135,
+     "home": 0.885,
+     "away": 0.115,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NBA",
@@ -3972,10 +3972,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 369.0,
+     "clock": 100.0,
      "state": "in",
      "completed": false,
-     "detail": "6:09 - 1st",
+     "detail": "1:40 - 1st",
      "teams": [
       {
        "id": "96",
@@ -3995,7 +3995,7 @@
        "nick": "Commodores",
        "location": "Vanderbilt",
        "home": false,
-       "score": "0"
+       "score": "3"
       }
      ]
     },
@@ -4609,10 +4609,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.715,
-     "away": 0.285,
-     "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "home": 0.6802,
+     "away": 0.3198,
+     "spread": 0.02,
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NCAAF",
@@ -4672,11 +4672,11 @@
     "id": "401892574",
     "snapshot": {
      "date": "2026-10-24T23:00Z",
-     "period": 1,
-     "clock": 0.0,
+     "period": 2,
+     "clock": 1189.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "19:49 - 2nd",
      "teams": [
       {
        "id": "6",
@@ -4803,7 +4803,7 @@
      "home": 0.385,
      "away": 0.615,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NHL",
@@ -4865,9 +4865,9 @@
      "date": "2026-10-25T00:00Z",
      "period": 1,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/24 - 8:00 PM EDT",
+     "detail": "Top 1st",
      "teams": [
       {
        "id": "8",
@@ -5130,7 +5130,7 @@
      "home": 0.5198,
      "away": 0.4802,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "MLB",
@@ -5191,10 +5191,10 @@
     "snapshot": {
      "date": "2026-10-24T23:30Z",
      "period": 1,
-     "clock": 588.0,
+     "clock": 360.0,
      "state": "in",
      "completed": false,
-     "detail": "9:48 - 1st",
+     "detail": "6:00 - 1st",
      "teams": [
       {
        "id": "251",
@@ -5204,7 +5204,7 @@
        "nick": "Longhorns",
        "location": "Texas",
        "home": true,
-       "score": "0"
+       "score": "3"
       },
       {
        "id": "145",
@@ -5214,7 +5214,7 @@
        "nick": "Rebels",
        "location": "Ole Miss",
        "home": false,
-       "score": "0"
+       "score": "3"
       }
      ]
     },
@@ -5808,10 +5808,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.695,
-     "away": 0.305,
+     "home": 0.6313,
+     "away": 0.3687,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NCAAF",
@@ -5866,9 +5866,9 @@
      "date": "2026-10-25T00:00Z",
      "period": 1,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/24 - 8:00 PM EDT",
+     "detail": "Top 1st",
      "teams": [
       {
        "id": "8",
@@ -6131,7 +6131,7 @@
      "home": 0.5198,
      "away": 0.4802,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "MLB",
@@ -6213,11 +6213,11 @@
     "id": "401909853",
     "snapshot": {
      "date": "2026-10-24T22:00Z",
-     "period": 3,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 491.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 3rd",
+     "detail": "8:11 - 4th",
      "teams": [
       {
        "id": "30",
@@ -6227,7 +6227,7 @@
        "nick": "Hornets",
        "location": "Charlotte",
        "home": true,
-       "score": "96"
+       "score": "100"
       },
       {
        "id": "14",
@@ -6237,7 +6237,7 @@
        "nick": "Heat",
        "location": "Miami",
        "home": false,
-       "score": "75"
+       "score": "91"
       }
      ]
     },
@@ -6913,10 +6913,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.955,
-     "away": 0.045,
+     "home": 0.745,
+     "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NBA",
@@ -7829,7 +7829,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NFL",
@@ -7930,11 +7930,11 @@
     "id": "401909853",
     "snapshot": {
      "date": "2026-10-24T22:00Z",
-     "period": 3,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 491.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 3rd",
+     "detail": "8:11 - 4th",
      "teams": [
       {
        "id": "30",
@@ -7944,7 +7944,7 @@
        "nick": "Hornets",
        "location": "Charlotte",
        "home": true,
-       "score": "96"
+       "score": "100"
       },
       {
        "id": "14",
@@ -7954,7 +7954,7 @@
        "nick": "Heat",
        "location": "Miami",
        "home": false,
-       "score": "75"
+       "score": "91"
       }
      ]
     },
@@ -8630,10 +8630,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.955,
-     "away": 0.045,
+     "home": 0.745,
+     "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-24T23:57Z"
+     "t": "2026-10-25T00:11Z"
     }
    },
    "sport": "NBA",
@@ -9948,16 +9948,16 @@
    "overall": {
     "n": 136,
     "w": 38,
-    "l": 58,
+    "l": 59,
     "p": 0,
-    "pending": 40,
-    "win_pct": 39.6,
-    "units": 22.94,
-    "roi_pct": 29.8,
-    "roi_n": 77,
+    "pending": 39,
+    "win_pct": 39.2,
+    "units": 21.94,
+    "roi_pct": 28.1,
+    "roi_n": 78,
     "exp_roi_pct": 10.6,
-    "exp_wins": 32.8,
-    "exp_wins_n": 95,
+    "exp_wins": 33.0,
+    "exp_wins_n": 96,
     "wins_with_fair": 37
    },
    "by_promo": {
@@ -10039,16 +10039,16 @@
     "cash": {
      "n": 34,
      "w": 12,
-     "l": 14,
+     "l": 15,
      "p": 0,
-     "pending": 8,
-     "win_pct": 46.2,
-     "units": 15.61,
-     "roi_pct": 60.0,
-     "roi_n": 26,
-     "exp_roi_pct": 6.0,
-     "exp_wins": 9.5,
-     "exp_wins_n": 26,
+     "pending": 7,
+     "win_pct": 44.4,
+     "units": 14.61,
+     "roi_pct": 54.1,
+     "roi_n": 27,
+     "exp_roi_pct": 5.9,
+     "exp_wins": 9.6,
+     "exp_wins_n": 27,
      "wins_with_fair": 12
     },
     "live boost": {
@@ -10161,16 +10161,16 @@
     "NCAAF": {
      "n": 32,
      "w": 9,
-     "l": 16,
+     "l": 17,
      "p": 0,
-     "pending": 7,
-     "win_pct": 36.0,
-     "units": 14.87,
-     "roi_pct": 59.5,
-     "roi_n": 25,
-     "exp_roi_pct": 12.9,
-     "exp_wins": 8.2,
-     "exp_wins_n": 25,
+     "pending": 6,
+     "win_pct": 34.6,
+     "units": 13.87,
+     "roi_pct": 53.3,
+     "roi_n": 26,
+     "exp_roi_pct": 12.6,
+     "exp_wins": 8.4,
+     "exp_wins_n": 26,
      "wins_with_fair": 9
     },
     "NFL": {
@@ -10283,16 +10283,16 @@
     "no": {
      "n": 61,
      "w": 11,
-     "l": 12,
+     "l": 13,
      "p": 0,
-     "pending": 38,
-     "win_pct": 47.8,
-     "units": -1.24,
-     "roi_pct": -7.3,
-     "roi_n": 17,
+     "pending": 37,
+     "win_pct": 45.8,
+     "units": -2.24,
+     "roi_pct": -12.4,
+     "roi_n": 18,
      "exp_roi_pct": 4.6,
-     "exp_wins": 8.1,
-     "exp_wins_n": 23,
+     "exp_wins": 8.3,
+     "exp_wins_n": 24,
      "wins_with_fair": 11
     }
    },
@@ -10469,11 +10469,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "ODU 0-26 LT (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan; Pin home -547 / away +436; yes at +464",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "28222517",
@@ -13750,6 +13750,15 @@
     "legs": []
    },
    {
+    "bet_id": "ec978aa7",
+    "book": "bet365",
+    "event": "Alexander Volkanovski v Movsar Evloev (UFC 333)",
+    "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
+    "stake": "0.40",
+    "reason": "no ESPN game matched",
+    "legs": []
+   },
+   {
     "bet_id": "60d543b0",
     "book": "bet365",
     "event": "Winnipeg Blue Bombers @ BC Lions (CFL)",
@@ -14053,7 +14062,7 @@
     "at": "2026-10-22 23:23"
    }
   ],
-  "last_change_at": "2026-10-24 19:13 ET"
+  "last_change_at": "2026-10-24 20:10 ET"
  },
  "open_live_n": 33,
  "open_stake_by_book": {
@@ -14063,6 +14072,6 @@
   "FanDuel": 6.6,
   "PointsBet": 13.5
  },
- "hash": "16ec6b3630bba4675ce2d49cbbf46da2b1684f41",
- "generated_at": "2026-10-24T19:57:49-04:00"
+ "hash": "978b77aa6997cd8f1f8c61918b551e9044724e50",
+ "generated_at": "2026-10-24T20:11:08-04:00"
 }
