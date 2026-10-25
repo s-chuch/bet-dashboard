@@ -64,28 +64,6 @@
    "legs": []
   },
   {
-   "bet_id": "024963a9",
-   "book": "bet365",
-   "event": "Columbus Crew v Toronto FC (MLS)",
-   "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
-   "stake": "0.40",
-   "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
-   "legs": [
-    {
-     "leg": "Columbus Crew ML",
-     "result": "won"
-    },
-    {
-     "leg": "Over 1.5",
-     "result": "won"
-    },
-    {
-     "leg": "Josef Martinez 1+ Shots on Target",
-     "result": "void"
-    }
-   ]
-  },
-  {
    "bet_id": "febe6211",
    "book": "FanDuel",
    "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
@@ -373,5 +351,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-24 23:49 ET"
+ "last_change_at": "2026-10-25 00:22 ET"
 }

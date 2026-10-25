@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 75.75,
-   "updated": "2026-10-24 14:54"
+   "balance": 76.67,
+   "updated": "2026-10-25 00:22"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 663.32,
+ "total": 664.24,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -923,7 +923,7 @@
      "home": 0.805,
      "away": 0.195,
      "spread": 0.01,
-     "t": "2026-10-25T04:20Z"
+     "t": "2026-10-25T04:22Z"
     }
    },
    "sport": "NFL",
@@ -1652,7 +1652,7 @@
      "home": 0.665,
      "away": 0.335,
      "spread": 0.01,
-     "t": "2026-10-25T04:20Z"
+     "t": "2026-10-25T04:22Z"
     }
    },
    "sport": "NFL",
@@ -2380,94 +2380,6 @@
    "payout": 1.07,
    "payout_est": false,
    "start_ts": "2026-10-25T13:00Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "024963a9",
-   "date": "2026-10-24",
-   "book": "bet365",
-   "event": "Columbus Crew v Toronto FC",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
-   "start": "Sat Oct 24 03:30 PM ET",
-   "price": "+100",
-   "boosted_price": "+130",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.52,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Columbus Crew",
-     "women": false,
-     "text": "Columbus Crew ML",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 1.5,
-     "text": "Over 1.5"
-    },
-    {
-     "type": "prop",
-     "player": "Josef Martinez",
-     "stat": "sot",
-     "op": "min",
-     "min": 1,
-     "text": "Josef Martinez 1+ Shots on Target",
-     "pteam": "CLB",
-     "pname": "Josef Mart\u00ednez",
-     "pid": "172688"
-    }
-   ],
-   "match": {
-    "path": "soccer/usa.1",
-    "date": "20261024",
-    "groups": null,
-    "id": "761890",
-    "snapshot": {
-     "date": "2026-10-24T19:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "183",
-       "name": "Columbus Crew",
-       "abbr": "CLB",
-       "short": "Columbus",
-       "nick": "Columbus Crew",
-       "location": "Columbus Crew",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "7318",
-       "name": "Toronto FC",
-       "abbr": "TOR",
-       "short": "Toronto",
-       "nick": "Toronto FC",
-       "location": "Toronto FC",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.4,
-   "payout": 0.92,
-   "payout_est": false,
-   "start_ts": "2026-10-24T19:30Z",
    "clv": {
     "placed_at": "2026-10-24 14:54",
     "close_price": null,
@@ -3461,7 +3373,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T04:20Z"
+     "t": "2026-10-25T04:22Z"
     }
    },
    "sport": "NFL",
@@ -3647,6 +3559,21 @@
    "pnl": -0.4,
    "stake": 0.4,
    "auto": true,
+   "clv": {
+    "placed_at": "2026-10-24 14:54",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "bet365",
+   "event": "Columbus Crew v Toronto FC",
+   "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
+   "result": "won",
+   "pnl": 0.52,
+   "stake": 0.4,
+   "auto": false,
    "clv": {
     "placed_at": "2026-10-24 14:54",
     "close_price": null,
@@ -4607,15 +4534,15 @@
    "clv": null
   }
  ],
- "pnl_total": 102.48,
+ "pnl_total": 103.0,
  "unsettled": {
-  "n": 27,
-  "cash_stake": 19.1,
-  "max_payout": 153.2,
+  "n": 26,
+  "cash_stake": 18.7,
+  "max_payout": 152.28,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 19.1,
+ "open_stake": 18.7,
  "recs": {
   "stats": {
    "overall": {
@@ -8459,28 +8386,6 @@
     "legs": []
    },
    {
-    "bet_id": "024963a9",
-    "book": "bet365",
-    "event": "Columbus Crew v Toronto FC (MLS)",
-    "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
-    "stake": "0.40",
-    "reason": "a leg voided/pushed and the rest won; the book reprices the parlay, payout unknown",
-    "legs": [
-     {
-      "leg": "Columbus Crew ML",
-      "result": "won"
-     },
-     {
-      "leg": "Over 1.5",
-      "result": "won"
-     },
-     {
-      "leg": "Josef Martinez 1+ Shots on Target",
-      "result": "void"
-     }
-    ]
-   },
-   {
     "bet_id": "febe6211",
     "book": "FanDuel",
     "event": "Tampa Bay Rays @ Milwaukee Brewers (MLB)",
@@ -8767,7 +8672,7 @@
     "at": "2026-10-23 16:58"
    }
   ],
-  "last_change_at": "2026-10-24 23:49 ET"
+  "last_change_at": "2026-10-25 00:22 ET"
  },
  "open_live_n": 24,
  "open_stake_by_book": {
@@ -8777,6 +8682,6 @@
   "FanDuel": 5.1,
   "PointsBet": 12.5
  },
- "hash": "6deaceb69c658f5ff1e25bc54b5daf18aefc5a26",
- "generated_at": "2026-10-25T00:20:01-04:00"
+ "hash": "f3c08b3226d171c4d5feaaa51a8e82fb0b849716",
+ "generated_at": "2026-10-25T00:22:14-04:00"
 }
