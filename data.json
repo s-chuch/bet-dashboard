@@ -250,10 +250,10 @@
     "snapshot": {
      "date": "2026-10-25T17:00Z",
      "period": 5,
-     "clock": 551.0,
+     "clock": 545.0,
      "state": "in",
      "completed": false,
-     "detail": "9:11 - OT",
+     "detail": "9:05 - OT",
      "teams": [
       {
        "id": "34",
@@ -920,10 +920,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.315,
-     "away": 0.685,
+     "home": 0.325,
+     "away": 0.675,
      "spread": 0.01,
-     "t": "2026-10-25T20:17Z"
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NFL",
@@ -2961,10 +2961,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 2,
-     "clock": 1129.0,
+     "clock": 1122.0,
      "state": "in",
      "completed": false,
-     "detail": "18:49 - 2nd",
+     "detail": "18:42 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -3099,9 +3099,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.255,
-     "away": 0.745,
-     "spread": 0.01,
+     "home": 0.2513,
+     "away": 0.7487,
+     "spread": 0.02,
      "t": "2026-10-25T20:17Z"
     }
    },
@@ -3170,10 +3170,10 @@
     "snapshot": {
      "date": "2026-10-25T19:00Z",
      "period": 2,
-     "clock": 1129.0,
+     "clock": 1122.0,
      "state": "in",
      "completed": false,
-     "detail": "18:49 - 2nd",
+     "detail": "18:42 - 2nd",
      "teams": [
       {
        "id": "4",
@@ -3308,9 +3308,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.255,
-     "away": 0.745,
-     "spread": 0.01,
+     "home": 0.2513,
+     "away": 0.7487,
+     "spread": 0.02,
      "t": "2026-10-25T20:17Z"
     }
    },
@@ -4149,10 +4149,10 @@
     "snapshot": {
      "date": "2026-10-25T20:00Z",
      "period": 1,
-     "clock": 900.0,
+     "clock": 960.0,
      "state": "in",
      "completed": false,
-     "detail": "15'",
+     "detail": "16'",
      "teams": [
       {
        "id": "83",
@@ -4331,7 +4331,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T20:17Z"
+     "t": "2026-10-25T20:18Z"
     }
    },
    "sport": "NHL",
@@ -9816,6 +9816,6 @@
   "FanDuel": 10.6,
   "PointsBet": 10.0
  },
- "hash": "3cef907d40cd48b6e0b430bfcab5877d4508c2bb",
- "generated_at": "2026-10-25T16:17:38-04:00"
+ "hash": "be7638e88ed4aea489998b6d159868f38c2b4f4d",
+ "generated_at": "2026-10-25T16:18:01-04:00"
 }
