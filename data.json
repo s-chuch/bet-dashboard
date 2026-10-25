@@ -952,7 +952,7 @@
      "home": 0.585,
      "away": 0.415,
      "spread": 0.01,
-     "t": "2026-10-25T23:05Z"
+     "t": "2026-10-25T23:20Z"
     }
    },
    "sport": "NFL",
@@ -962,8 +962,8 @@
    "start_ts": "2026-10-26T00:20Z",
    "clv": {
     "placed_at": "2026-10-24 14:39",
-    "close_price": null,
-    "clv_pct": null
+    "close_price": "+141",
+    "clv_pct": -6.08
    }
   },
   {
@@ -1722,7 +1722,7 @@
      "home": 0.405,
      "away": 0.595,
      "spread": 0.01,
-     "t": "2026-10-25T23:05Z"
+     "t": "2026-10-25T23:21Z"
     }
    },
    "sport": "NBA",
@@ -1801,10 +1801,10 @@
     "snapshot": {
      "date": "2026-10-25T21:00Z",
      "period": 4,
-     "clock": 657.0,
+     "clock": 381.0,
      "state": "in",
      "completed": false,
-     "detail": "10:57 - 4th",
+     "detail": "6:21 - 4th",
      "teams": [
       {
        "id": "26",
@@ -1814,7 +1814,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "102"
+       "score": "112"
       },
       {
        "id": "13",
@@ -1824,7 +1824,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": false,
-       "score": "105"
+       "score": "113"
       }
      ]
     },
@@ -2500,10 +2500,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.285,
-     "away": 0.715,
+     "home": 0.315,
+     "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-25T23:05Z"
+     "t": "2026-10-25T23:20Z"
     }
    },
    "sport": "NBA",
@@ -2669,7 +2669,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T23:05Z"
+     "t": "2026-10-25T23:20Z"
     }
    },
    "sport": "NHL",
@@ -8258,6 +8258,6 @@
   "FanDuel": 2.1,
   "PointsBet": 10.0
  },
- "hash": "90d2ac3e2d3c1da74051a24388a966a6f9558b75",
- "generated_at": "2026-10-25T19:05:27-04:00"
+ "hash": "04f89dbced6859768dfb3f3b22b55dcbea182774",
+ "generated_at": "2026-10-25T19:21:25-04:00"
 }
