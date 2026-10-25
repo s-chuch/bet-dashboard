@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 79.91,
-   "updated": "2026-10-25 17:49"
+   "balance": 81.21,
+   "updated": "2026-10-25 18:28"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 669.76,
+ "total": 671.06,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -464,195 +464,6 @@
    }
   },
   {
-   "bet_id": "80b13e8e",
-   "date": "2026-10-24",
-   "book": "bet365",
-   "event": "Crystal Palace v Newcastle",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
-   "start": "Sun Oct 25 10:00 AM ET",
-   "price": "+150",
-   "boosted_price": "+225",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.9,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Harvey Barnes",
-     "stat": "goalOrAssist",
-     "op": "min",
-     "min": 1,
-     "text": "Harvey Barnes to score or assist",
-     "pteam": "NEW",
-     "pname": "Harvey Barnes",
-     "pid": "243386"
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 1.5,
-     "text": "Over 1.5"
-    },
-    {
-     "type": "prop",
-     "player": "Nico Gonzalez",
-     "stat": "foulsC",
-     "op": "min",
-     "min": 1,
-     "text": "Nico Gonzalez 1+ fouls committed",
-     "pteam": "NEW",
-     "pname": "Nico Gonz\u00e1lez",
-     "pid": "323986"
-    }
-   ],
-   "match": {
-    "path": "soccer/eng.1",
-    "date": "20261025",
-    "groups": null,
-    "id": "401879254",
-    "snapshot": {
-     "date": "2026-10-25T14:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "384",
-       "name": "Crystal Palace",
-       "abbr": "CRY",
-       "short": "C Palace",
-       "nick": "Crystal Palace",
-       "location": "Crystal Palace",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "361",
-       "name": "Newcastle United",
-       "abbr": "NEW",
-       "short": "Newcastle",
-       "nick": "Newcastle United",
-       "location": "Newcastle United",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.4,
-   "payout": 1.3,
-   "payout_est": false,
-   "start_ts": "2026-10-25T14:00Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "fa459703",
-   "date": "2026-10-24",
-   "book": "bet365",
-   "event": "Athletic Club v Getafe",
-   "market": "SGP 3-leg (30% profit boost)",
-   "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
-   "start": "Sun Oct 25 09:00 AM ET",
-   "price": "+130",
-   "boosted_price": "+169",
-   "stake": 0.4,
-   "stake_note": "",
-   "to_win": 0.67,
-   "ev_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "prop",
-     "player": "Gorka Guruzeta",
-     "stat": "shots",
-     "op": "min",
-     "min": 2,
-     "text": "Gorka Guruzeta 2+ shots",
-     "pteam": "ATH",
-     "pname": "Gorka Guruzeta",
-     "pid": "231905"
-    },
-    {
-     "type": "prop",
-     "player": "Maroan Sannadi",
-     "stat": "shots",
-     "op": "min",
-     "min": 2,
-     "text": "Maroan Sannadi 2+ shots",
-     "pteam": "ATH",
-     "pname": "Maroan Sannadi",
-     "pid": "393762"
-    },
-    {
-     "type": "prop",
-     "player": "Inaki Williams",
-     "stat": "shots",
-     "op": "min",
-     "min": 3,
-     "text": "Inaki Williams 3+ shots",
-     "pteam": "ATH",
-     "pname": "I\u00f1aki Williams",
-     "pid": "214412"
-    }
-   ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261025",
-    "groups": null,
-    "id": "401882835",
-    "snapshot": {
-     "date": "2026-10-25T13:00Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "93",
-       "name": "Athletic Club",
-       "abbr": "ATH",
-       "short": "Athletic",
-       "nick": "Athletic Club",
-       "location": "Athletic Club",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "2922",
-       "name": "Getafe",
-       "abbr": "GET",
-       "short": "Getafe",
-       "nick": "Getafe",
-       "location": "Getafe",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.4,
-   "payout": 1.07,
-   "payout_est": false,
-   "start_ts": "2026-10-25T13:00Z",
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "d91a6de4",
    "date": "2026-10-24",
    "book": "Caesars",
@@ -760,12 +571,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 11:45 ET",
-     "ml_home": 0.5867,
+     "pulled": "2026-10-25 18:29 ET",
+     "ml_home": 0.5827,
      "spread_home_line": -3.0,
-     "spread_home_fair": 0.4954,
-     "total_line": 42.0,
-     "total_over_fair": 0.5193
+     "spread_home_fair": 0.4884,
+     "total_line": 43.0,
+     "total_over_fair": 0.5092
     },
     "pm": {
      "slug": "nfl-kc-sea-2026-10-26",
@@ -1497,12 +1308,12 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-25 11:45 ET",
-     "ml_home": 0.3984,
+     "pulled": "2026-10-25 18:29 ET",
+     "ml_home": 0.4096,
      "spread_home_line": 3.5,
-     "spread_home_fair": 0.493,
+     "spread_home_fair": 0.5139,
      "total_line": 235.0,
-     "total_over_fair": 0.4908
+     "total_over_fair": 0.4829
     },
     "pm": {
      "slug": "nba-mem-sac-2026-10-25",
@@ -3025,6 +2836,15 @@
       }
      ]
     },
+    "pin": {
+     "src": "Pinnacle no-vig",
+     "pulled": "2026-10-25 18:29 ET",
+     "ml_home": 0.6197,
+     "spread_home_line": -1.5,
+     "spread_home_fair": 0.4095,
+     "total_line": 6.5,
+     "total_over_fair": 0.5169
+    },
     "pm": {
      "slug": "nhl-det-edm-2026-10-26",
      "title": "Red Wings vs. Oilers",
@@ -3448,6 +3268,36 @@
    "pnl": -0.4,
    "stake": 0.4,
    "auto": true,
+   "clv": {
+    "placed_at": "2026-10-24 14:54",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "bet365",
+   "event": "Athletic Club v Getafe",
+   "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
+   "result": "lost",
+   "pnl": -0.4,
+   "stake": 0.4,
+   "auto": false,
+   "clv": {
+    "placed_at": "2026-10-24 14:54",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "book": "bet365",
+   "event": "Crystal Palace v Newcastle",
+   "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
+   "result": "won",
+   "pnl": 0.9,
+   "stake": 0.4,
+   "auto": false,
    "clv": {
     "placed_at": "2026-10-24 14:54",
     "close_price": null,
@@ -4509,15 +4359,15 @@
    }
   }
  ],
- "pnl_total": 105.62,
+ "pnl_total": 106.12,
  "unsettled": {
-  "n": 16,
-  "cash_stake": 15.8,
-  "max_payout": 118.65,
+  "n": 14,
+  "cash_stake": 15.0,
+  "max_payout": 116.28,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.8,
+ "open_stake": 15.0,
  "recs": {
   "stats": {
    "overall": {
@@ -8426,33 +8276,6 @@
     "legs": []
    },
    {
-    "bet_id": "80b13e8e",
-    "book": "bet365",
-    "event": "Crystal Palace v Newcastle (EPL)",
-    "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
-    "stake": "0.40",
-    "reason": "leg \"Nico Gonzalez 1+ fouls committed\": stat foulsC missing for Nico Gonz\u00e1lez",
-    "legs": [
-     {
-      "leg": "Harvey Barnes to score or assist",
-      "result": "won"
-     },
-     {
-      "leg": "Over 1.5",
-      "result": "won"
-     }
-    ]
-   },
-   {
-    "bet_id": "fa459703",
-    "book": "bet365",
-    "event": "Athletic Club v Getafe (La Liga)",
-    "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
-    "stake": "0.40",
-    "reason": "leg \"Gorka Guruzeta 2+ shots\": player \"Gorka Guruzeta\" not in any box score (DNP void, or name mismatch?)",
-    "legs": []
-   },
-   {
     "bet_id": "d91a6de4",
     "book": "Caesars",
     "event": "UFC multi (Volkov v Kuniev / Kavanagh v Temirov)",
@@ -8689,7 +8512,7 @@
     "at": "2026-10-23 23:27"
    }
   ],
-  "last_change_at": "2026-10-25 18:09 ET"
+  "last_change_at": "2026-10-25 18:29 ET"
  },
  "open_live_n": 13,
  "open_stake_by_book": {
@@ -8699,6 +8522,6 @@
   "FanDuel": 4.1,
   "PointsBet": 10.0
  },
- "hash": "27683a01bb53df403b3eaeb121b3c326402c5ef6",
- "generated_at": "2026-10-25T18:29:21-04:00"
+ "hash": "4125aef5844326b707d8284d910006b606eb54c1",
+ "generated_at": "2026-10-25T18:29:39-04:00"
 }
