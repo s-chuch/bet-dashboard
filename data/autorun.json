@@ -1,6 +1,24 @@
 {
  "needs_review": [
   {
+   "bet_id": "48cfe23a",
+   "book": "Caesars",
+   "event": "Miami Dolphins @ New York Jets",
+   "pick": "NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter",
+   "stake": "0.50",
+   "reason": "leg \"1st TD in 1st quarter\": market/stat not recognised",
+   "legs": [
+    {
+     "leg": "NY Jets U26.5 team pts",
+     "result": "won"
+    },
+    {
+     "leg": "NY Jets ML",
+     "result": "lost"
+    }
+   ]
+  },
+  {
    "bet_id": "ec6db8a6",
    "book": "Caesars",
    "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles (NFL)",
@@ -283,5 +301,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 15:57 ET"
+ "last_change_at": "2026-10-25 15:59 ET"
 }
