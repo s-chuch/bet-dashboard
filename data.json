@@ -7,8 +7,8 @@
   },
   {
    "book": "FanDuel",
-   "balance": 151.22,
-   "updated": "2026-10-26 08:02"
+   "balance": 150.72,
+   "updated": "2026-10-26 08:26"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 661.82,
+ "total": 661.32,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -399,7 +399,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T12:08Z"
+     "t": "2026-10-26T12:26Z"
     }
    },
    "sport": "NHL",
@@ -1212,7 +1212,7 @@
      "home": 0.3182,
      "away": 0.6818,
      "spread": 0.01,
-     "t": "2026-10-26T12:08Z"
+     "t": "2026-10-26T12:26Z"
     }
    },
    "sport": "NFL",
@@ -2025,10 +2025,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.8636,
-     "away": 0.1364,
+     "home": 0.855,
+     "away": 0.145,
      "spread": 0.01,
-     "t": "2026-10-26T12:08Z"
+     "t": "2026-10-26T12:26Z"
     }
    },
    "sport": "NBA",
@@ -2790,7 +2790,7 @@
      "home": 0.545,
      "away": 0.455,
      "spread": 0.01,
-     "t": "2026-10-26T12:08Z"
+     "t": "2026-10-26T12:26Z"
     }
    },
    "sport": "NBA",
@@ -3551,7 +3551,7 @@
      "home": 0.545,
      "away": 0.455,
      "spread": 0.01,
-     "t": "2026-10-26T12:08Z"
+     "t": "2026-10-26T12:26Z"
     }
    },
    "sport": "NBA",
@@ -3561,6 +3561,78 @@
    "start_ts": null,
    "clv": {
     "placed_at": "2026-10-26 07:59",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "bet_id": "024598cc",
+   "date": "2026-10-26",
+   "book": "FanDuel",
+   "event": "Osasuna @ Sevilla",
+   "market": "Spread",
+   "pick": "Sevilla -1.5",
+   "start": "Mon Oct 26, 4:00 PM ET",
+   "price": "+285",
+   "boosted_price": "",
+   "stake": 0.5,
+   "stake_note": "",
+   "to_win": 1.43,
+   "ev_pct": "",
+   "multi": false,
+   "legs": [
+    {
+     "type": "spread",
+     "team": "Sevilla",
+     "line": -1.5,
+     "women": false,
+     "text": "Sevilla -1.5",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/esp.1",
+    "date": "20261026",
+    "groups": null,
+    "id": "401882828",
+    "snapshot": {
+     "date": "2026-10-26T20:00Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "243",
+       "name": "Sevilla",
+       "abbr": "SEV",
+       "short": "Sevilla",
+       "nick": "Sevilla",
+       "location": "Sevilla",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "97",
+       "name": "Osasuna",
+       "abbr": "OSA",
+       "short": "Osasuna",
+       "nick": "Osasuna",
+       "location": "Osasuna",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.5,
+   "payout": 1.93,
+   "payout_est": false,
+   "start_ts": null,
+   "clv": {
+    "placed_at": "2026-10-26 08:26",
     "close_price": null,
     "clv_pct": null
    }
@@ -4794,21 +4866,21 @@
  ],
  "pnl_total": 106.97,
  "unsettled": {
-  "n": 13,
-  "cash_stake": 14.6,
-  "max_payout": 119.11,
+  "n": 14,
+  "cash_stake": 15.1,
+  "max_payout": 121.04,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 14.6,
+ "open_stake": 15.1,
  "recs": {
   "stats": {
    "overall": {
-    "n": 144,
+    "n": 145,
     "w": 41,
     "l": 67,
     "p": 0,
-    "pending": 36,
+    "pending": 37,
     "win_pct": 38.0,
     "units": 17.07,
     "roi_pct": 19.6,
@@ -4895,11 +4967,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 42,
+     "n": 43,
      "w": 14,
      "l": 22,
      "p": 0,
-     "pending": 6,
+     "pending": 7,
      "win_pct": 38.9,
      "units": 9.74,
      "roi_pct": 27.1,
@@ -5062,11 +5134,11 @@
      "wins_with_fair": 7
     },
     "SOCCER": {
-     "n": 1,
+     "n": 2,
      "w": 0,
      "l": 0,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": null,
      "units": 0,
      "roi_pct": null,
@@ -5139,11 +5211,11 @@
    },
    "by_placed": {
     "yes": {
-     "n": 79,
+     "n": 80,
      "w": 28,
      "l": 47,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 37.3,
      "units": 24.18,
      "roi_pct": 40.3,
@@ -5187,6 +5259,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "8552043e",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "08:26",
+    "sport": "SOCCER",
+    "event": "Osasuna @ Sevilla",
+    "market": "Spread",
+    "selection": "Sevilla -1.5",
+    "book": "FanDuel",
+    "rec_price": "+285",
+    "eff_price": "+285",
+    "fair_pct": "27.25",
+    "ev_pct": "4.9",
+    "stake": "0.50",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "logged from Bet Finder (key 2026-10-26|Osasuna @ Sevilla|Sevilla -1.5)",
+    "units": null
+   },
    {
     "rec_id": "8134fb3c",
     "rec_date": "2026-10-26",
@@ -9018,13 +9113,13 @@
   ],
   "last_change_at": "2026-10-25 23:31 ET"
  },
- "open_live_n": 12,
+ "open_live_n": 13,
  "open_stake_by_book": {
   "bet365": 0.4,
   "DraftKings": 0.1,
-  "FanDuel": 3.6,
+  "FanDuel": 4.1,
   "PointsBet": 13.0
  },
- "hash": "4fedcf08c0000181130ccccbac223a882e581e80",
- "generated_at": "2026-10-26T08:08:34-04:00"
+ "hash": "f6f64465d7d56ae93743bf758f6940f796395aa4",
+ "generated_at": "2026-10-26T08:26:28-04:00"
 }
