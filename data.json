@@ -278,11 +278,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 1,
-     "clock": 482.0,
+     "period": 2,
+     "clock": 104.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 1st",
+     "detail": "1:44 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -292,7 +292,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "0"
+       "score": "9"
       },
       {
        "id": "12",
@@ -949,10 +949,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6269,
-     "away": 0.3731,
-     "spread": 0.02,
-     "t": "2026-10-26T00:36Z"
+     "home": 0.815,
+     "away": 0.185,
+     "spread": 0.01,
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NFL",
@@ -1019,11 +1019,11 @@
     "id": "401909867",
     "snapshot": {
      "date": "2026-10-26T01:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 264.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 9:00 PM EDT",
+     "detail": "4:24 - 1st",
      "teams": [
       {
        "id": "23",
@@ -1033,7 +1033,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "0"
+       "score": "16"
       },
       {
        "id": "29",
@@ -1043,7 +1043,7 @@
        "nick": "Grizzlies",
        "location": "Memphis",
        "home": false,
-       "score": "0"
+       "score": "17"
       }
      ]
     },
@@ -1719,10 +1719,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.375,
-     "away": 0.625,
+     "home": 0.395,
+     "away": 0.605,
      "spread": 0.01,
-     "t": "2026-10-26T00:36Z"
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NBA",
@@ -1885,10 +1885,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6188,
-     "away": 0.3812,
+     "home": 0.615,
+     "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T00:36Z"
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NHL",
@@ -1963,11 +1963,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 1,
-     "clock": 482.0,
+     "period": 2,
+     "clock": 104.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 1st",
+     "detail": "1:44 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -1977,7 +1977,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "0"
+       "score": "9"
       },
       {
        "id": "12",
@@ -2634,10 +2634,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6269,
-     "away": 0.3731,
-     "spread": 0.02,
-     "t": "2026-10-26T00:36Z"
+     "home": 0.815,
+     "away": 0.185,
+     "spread": 0.01,
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NFL",
@@ -2682,11 +2682,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 1,
-     "clock": 482.0,
+     "period": 2,
+     "clock": 104.0,
      "state": "in",
      "completed": false,
-     "detail": "8:02 - 1st",
+     "detail": "1:44 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -2696,7 +2696,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "0"
+       "score": "9"
       },
       {
        "id": "12",
@@ -3353,10 +3353,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6269,
-     "away": 0.3731,
-     "spread": 0.02,
-     "t": "2026-10-26T00:36Z"
+     "home": 0.815,
+     "away": 0.185,
+     "spread": 0.01,
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NFL",
@@ -4169,7 +4169,7 @@
      "home": 0.33,
      "away": 0.67,
      "spread": 0.02,
-     "t": "2026-10-26T00:36Z"
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NFL",
@@ -4211,11 +4211,11 @@
     "id": "401909866",
     "snapshot": {
      "date": "2026-10-25T23:30Z",
-     "period": 2,
-     "clock": 263.0,
+     "period": 3,
+     "clock": 186.0,
      "state": "in",
      "completed": false,
-     "detail": "4:23 - 2nd",
+     "detail": "3:06 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -4225,7 +4225,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "33"
+       "score": "64"
       },
       {
        "id": "8",
@@ -4235,7 +4235,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": false,
-       "score": "45"
+       "score": "74"
       }
      ]
     },
@@ -4911,10 +4911,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.275,
-     "away": 0.725,
+     "home": 0.225,
+     "away": 0.775,
      "spread": 0.01,
-     "t": "2026-10-26T00:36Z"
+     "t": "2026-10-26T01:26Z"
     }
    },
    "sport": "NBA",
@@ -10518,6 +10518,6 @@
   "FanDuel": 7.1,
   "PointsBet": 14.0
  },
- "hash": "e7715459cd3751a728e09294f5089a4e099380ec",
- "generated_at": "2026-10-25T20:36:05-04:00"
+ "hash": "e34eaa860f1b775b0ea39a95a7e6f199968b1e10",
+ "generated_at": "2026-10-25T21:26:45-04:00"
 }
