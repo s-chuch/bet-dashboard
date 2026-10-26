@@ -12,6 +12,33 @@
  ],
  "last_settled": [
   {
+   "bet_id": "f2b81794",
+   "book": "Caesars",
+   "pick": "Kansas City Chiefs",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "KC 3-20 SEA",
+   "at": "2026-10-25 23:16"
+  },
+  {
+   "bet_id": "c3fa6c28",
+   "book": "FanDuel",
+   "pick": "Seahawks -2.5 + Seahawks 1H -0.5 + Seahawks Over 21.5 team total + Jaxon Smith-Njigba anytime TD",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "KC 3-20 SEA",
+   "at": "2026-10-25 23:16"
+  },
+  {
+   "bet_id": "e5353699",
+   "book": "FanDuel",
+   "pick": "Kansas City Chiefs",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "KC 3-20 SEA",
+   "at": "2026-10-25 23:16"
+  },
+  {
    "bet_id": "c4db9120",
    "book": "FanDuel",
    "pick": "Lakers ML + Luka Doncic 20+ Points + Lauri Markkanen 15+ Points + Austin Reaves 20+ Points",
@@ -208,35 +235,8 @@
    "pnl": -0.5,
    "final": "NCCU 31-12 DSU",
    "at": "2026-10-24 12:07"
-  },
-  {
-   "bet_id": "f5ba9f28",
-   "book": "PointsBet",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "EVE 0-2 ARS",
-   "at": "2026-10-24 11:56"
-  },
-  {
-   "bet_id": "3ec732ca",
-   "book": "Caesars",
-   "pick": "Sacramento Kings",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "POR 128-120 SAC",
-   "at": "2026-10-24 00:40"
-  },
-  {
-   "bet_id": "4ca058ce",
-   "book": "Caesars",
-   "pick": "Jackson Chourio U1.5 TB + Jonathan Aranda O0.5 TB + Christian Yelich O0.5 TB",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "TB 2-3 MIL",
-   "at": "2026-10-23 23:27"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 22:26 ET"
+ "last_change_at": "2026-10-25 23:16 ET"
 }
