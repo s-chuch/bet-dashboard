@@ -278,11 +278,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 520.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 8:20 PM EDT",
+     "detail": "8:40 - 1st",
      "teams": [
       {
        "id": "26",
@@ -949,10 +949,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.585,
-     "away": 0.415,
+     "home": 0.615,
+     "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NFL",
@@ -1719,10 +1719,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NBA",
@@ -1888,7 +1888,7 @@
      "home": 0.6188,
      "away": 0.3812,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NHL",
@@ -1963,11 +1963,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 520.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 8:20 PM EDT",
+     "detail": "8:40 - 1st",
      "teams": [
       {
        "id": "26",
@@ -2634,10 +2634,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.585,
-     "away": 0.415,
+     "home": 0.615,
+     "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NFL",
@@ -2682,11 +2682,11 @@
     "id": "401873022",
     "snapshot": {
      "date": "2026-10-26T00:20Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 520.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 8:20 PM EDT",
+     "detail": "8:40 - 1st",
      "teams": [
       {
        "id": "26",
@@ -3353,10 +3353,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.585,
-     "away": 0.415,
+     "home": 0.615,
+     "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NFL",
@@ -4166,10 +4166,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3317,
-     "away": 0.6683,
+     "home": 0.33,
+     "away": 0.67,
      "spread": 0.02,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NFL",
@@ -4211,11 +4211,11 @@
     "id": "401909866",
     "snapshot": {
      "date": "2026-10-25T23:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 263.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/25 - 7:30 PM EDT",
+     "detail": "4:23 - 2nd",
      "teams": [
       {
        "id": "20",
@@ -4225,7 +4225,7 @@
        "nick": "76ers",
        "location": "Philadelphia",
        "home": true,
-       "score": "0"
+       "score": "33"
       },
       {
        "id": "8",
@@ -4235,7 +4235,7 @@
        "nick": "Pistons",
        "location": "Detroit",
        "home": false,
-       "score": "0"
+       "score": "44"
       }
      ]
     },
@@ -4911,10 +4911,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.455,
-     "away": 0.545,
+     "home": 0.285,
+     "away": 0.715,
      "spread": 0.01,
-     "t": "2026-10-25T23:40Z"
+     "t": "2026-10-26T00:35Z"
     }
    },
    "sport": "NBA",
@@ -6415,16 +6415,16 @@
    "overall": {
     "n": 140,
     "w": 41,
-    "l": 66,
+    "l": 67,
     "p": 0,
-    "pending": 33,
-    "win_pct": 38.3,
-    "units": 18.07,
-    "roi_pct": 21.0,
-    "roi_n": 86,
-    "exp_roi_pct": 10.0,
-    "exp_wins": 36.4,
-    "exp_wins_n": 106,
+    "pending": 32,
+    "win_pct": 38.0,
+    "units": 17.07,
+    "roi_pct": 19.6,
+    "roi_n": 87,
+    "exp_roi_pct": 9.9,
+    "exp_wins": 36.7,
+    "exp_wins_n": 107,
     "wins_with_fair": 40
    },
    "by_promo": {
@@ -6506,16 +6506,16 @@
     "cash": {
      "n": 38,
      "w": 14,
-     "l": 21,
+     "l": 22,
      "p": 0,
-     "pending": 3,
-     "win_pct": 40.0,
-     "units": 10.74,
-     "roi_pct": 30.7,
-     "roi_n": 35,
+     "pending": 2,
+     "win_pct": 38.9,
+     "units": 9.74,
+     "roi_pct": 27.1,
+     "roi_n": 36,
      "exp_roi_pct": 5.6,
-     "exp_wins": 12.7,
-     "exp_wins_n": 35,
+     "exp_wins": 13.0,
+     "exp_wins_n": 36,
      "wins_with_fair": 14
     },
     "live boost": {
@@ -6613,16 +6613,16 @@
     "NBA": {
      "n": 24,
      "w": 5,
-     "l": 12,
+     "l": 13,
      "p": 0,
-     "pending": 7,
-     "win_pct": 29.4,
-     "units": -3.38,
-     "roi_pct": -24.1,
-     "roi_n": 14,
-     "exp_roi_pct": 8.7,
-     "exp_wins": 7.0,
-     "exp_wins_n": 17,
+     "pending": 6,
+     "win_pct": 27.8,
+     "units": -4.38,
+     "roi_pct": -29.2,
+     "roi_n": 15,
+     "exp_roi_pct": 8.4,
+     "exp_wins": 7.3,
+     "exp_wins_n": 18,
      "wins_with_fair": 5
     },
     "NCAAF": {
@@ -6750,16 +6750,16 @@
     "no": {
      "n": 64,
      "w": 13,
-     "l": 19,
+     "l": 20,
      "p": 0,
-     "pending": 32,
-     "win_pct": 40.6,
-     "units": -6.1,
-     "roi_pct": -23.5,
-     "roi_n": 26,
+     "pending": 31,
+     "win_pct": 39.4,
+     "units": -7.1,
+     "roi_pct": -26.3,
+     "roi_n": 27,
      "exp_roi_pct": 4.6,
-     "exp_wins": 11.4,
-     "exp_wins_n": 32,
+     "exp_wins": 11.7,
+     "exp_wins_n": 33,
      "wins_with_fair": 13
     }
    },
@@ -6821,11 +6821,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "IND 136-109 BKN (Final)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: 200",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "dcfdbccf",
@@ -10518,6 +10518,6 @@
   "FanDuel": 7.1,
   "PointsBet": 14.0
  },
- "hash": "e8d891c57bff6537277c84b671cdd718a1500730",
- "generated_at": "2026-10-25T19:40:09-04:00"
+ "hash": "39c71c472d866e4daeec404f479d18e71e1df67e",
+ "generated_at": "2026-10-25T20:35:45-04:00"
 }
