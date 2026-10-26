@@ -399,7 +399,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T12:06Z"
+     "t": "2026-10-26T12:08Z"
     }
    },
    "sport": "NHL",
@@ -1212,7 +1212,7 @@
      "home": 0.3182,
      "away": 0.6818,
      "spread": 0.01,
-     "t": "2026-10-26T12:06Z"
+     "t": "2026-10-26T12:08Z"
     }
    },
    "sport": "NFL",
@@ -2028,7 +2028,7 @@
      "home": 0.8636,
      "away": 0.1364,
      "spread": 0.01,
-     "t": "2026-10-26T12:06Z"
+     "t": "2026-10-26T12:08Z"
     }
    },
    "sport": "NBA",
@@ -2790,7 +2790,7 @@
      "home": 0.545,
      "away": 0.455,
      "spread": 0.01,
-     "t": "2026-10-26T12:06Z"
+     "t": "2026-10-26T12:08Z"
     }
    },
    "sport": "NBA",
@@ -3551,7 +3551,7 @@
      "home": 0.545,
      "away": 0.455,
      "spread": 0.01,
-     "t": "2026-10-26T12:06Z"
+     "t": "2026-10-26T12:08Z"
     }
    },
    "sport": "NBA",
@@ -4804,11 +4804,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 143,
+    "n": 144,
     "w": 41,
     "l": 67,
     "p": 0,
-    "pending": 35,
+    "pending": 36,
     "win_pct": 38.0,
     "units": 17.07,
     "roi_pct": 19.6,
@@ -4895,11 +4895,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 41,
+     "n": 42,
      "w": 14,
      "l": 22,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 38.9,
      "units": 9.74,
      "roi_pct": 27.1,
@@ -5061,6 +5061,21 @@
      "exp_wins_n": 12,
      "wins_with_fair": 7
     },
+    "SOCCER": {
+     "n": 1,
+     "w": 0,
+     "l": 0,
+     "p": 0,
+     "pending": 1,
+     "win_pct": null,
+     "units": 0,
+     "roi_pct": null,
+     "roi_n": 0,
+     "exp_roi_pct": null,
+     "exp_wins": null,
+     "exp_wins_n": 0,
+     "wins_with_fair": 0
+    },
     "Soccer": {
      "n": 37,
      "w": 8,
@@ -5139,11 +5154,11 @@
      "wins_with_fair": 27
     },
     "no": {
-     "n": 64,
+     "n": 65,
      "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 31,
+     "pending": 32,
      "win_pct": 39.4,
      "units": -7.1,
      "roi_pct": -26.3,
@@ -5172,6 +5187,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "8134fb3c",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "08:08",
+    "sport": "SOCCER",
+    "event": "Lyon @ Paris Saint-Germain",
+    "market": "cash",
+    "selection": "Paris Saint-Germain -1.5",
+    "book": "theScore",
+    "rec_price": "+110",
+    "eff_price": "+110",
+    "fair_pct": "49.3",
+    "ev_pct": "3.54",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: No Asian spread found",
+    "units": null
+   },
    {
     "rec_id": "f0b749e1",
     "rec_date": "2026-10-26",
@@ -8987,6 +9025,6 @@
   "FanDuel": 3.6,
   "PointsBet": 13.0
  },
- "hash": "5dee6a330b795babc66a97e7ad9ec497e0f06e92",
- "generated_at": "2026-10-26T08:06:19-04:00"
+ "hash": "4fedcf08c0000181130ccccbac223a882e581e80",
+ "generated_at": "2026-10-26T08:08:34-04:00"
 }
