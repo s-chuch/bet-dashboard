@@ -301,10 +301,10 @@
     "snapshot": {
      "date": "2026-10-26T01:00Z",
      "period": 4,
-     "clock": 268.0,
+     "clock": 180.0,
      "state": "in",
      "completed": false,
-     "detail": "4:28 - 4th",
+     "detail": "3:00 - 4th",
      "teams": [
       {
        "id": "23",
@@ -314,7 +314,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "106"
+       "score": "110"
       },
       {
        "id": "29",
@@ -324,7 +324,7 @@
        "nick": "Grizzlies",
        "location": "Memphis",
        "home": false,
-       "score": "114"
+       "score": "117"
       }
      ]
     },
@@ -1000,10 +1000,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1055,
-     "away": 0.8945,
-     "spread": 0.02,
-     "t": "2026-10-26T03:17Z"
+     "home": 0.055,
+     "away": 0.945,
+     "spread": 0.01,
+     "t": "2026-10-26T03:22Z"
     }
    },
    "sport": "NBA",
@@ -1169,7 +1169,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T03:17Z"
+     "t": "2026-10-26T03:22Z"
     }
    },
    "sport": "NHL",
@@ -1982,7 +1982,7 @@
      "home": 0.325,
      "away": 0.675,
      "spread": 0.01,
-     "t": "2026-10-26T03:17Z"
+     "t": "2026-10-26T03:22Z"
     }
    },
    "sport": "NFL",
@@ -7717,6 +7717,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "6ba1005f1347578b5efcc6f1fa70752d5d6824ad",
- "generated_at": "2026-10-25T23:17:06-04:00"
+ "hash": "13e199e51765d2b5a7ee81f631d21a0136b094f0",
+ "generated_at": "2026-10-25T23:22:37-04:00"
 }
