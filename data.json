@@ -498,7 +498,7 @@
      "home": 0.6089,
      "away": 0.3911,
      "spread": 0.01,
-     "t": "2026-10-26T21:13Z"
+     "t": "2026-10-26T21:55Z"
     }
    },
    "sport": "NHL",
@@ -1311,7 +1311,7 @@
      "home": 0.3317,
      "away": 0.6683,
      "spread": 0.01,
-     "t": "2026-10-26T21:13Z"
+     "t": "2026-10-26T21:55Z"
     }
    },
    "sport": "NFL",
@@ -2127,7 +2127,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-26T21:13Z"
+     "t": "2026-10-26T21:55Z"
     }
    },
    "sport": "NBA",
@@ -2886,10 +2886,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5779,
-     "away": 0.4221,
-     "spread": 0.02,
-     "t": "2026-10-26T21:13Z"
+     "home": 0.5808,
+     "away": 0.4192,
+     "spread": 0.01,
+     "t": "2026-10-26T21:55Z"
     }
    },
    "sport": "NBA",
@@ -3647,10 +3647,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5779,
-     "away": 0.4221,
-     "spread": 0.02,
-     "t": "2026-10-26T21:13Z"
+     "home": 0.5808,
+     "away": 0.4192,
+     "spread": 0.01,
+     "t": "2026-10-26T21:55Z"
     }
    },
    "sport": "NBA",
@@ -3697,10 +3697,10 @@
     "snapshot": {
      "date": "2026-10-26T20:00Z",
      "period": 2,
-     "clock": 3060.0,
+     "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "51'",
+     "detail": "90'+4'",
      "teams": [
       {
        "id": "243",
@@ -3710,7 +3710,7 @@
        "nick": "Sevilla",
        "location": "Sevilla",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "97",
@@ -4975,19 +4975,19 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 145,
-    "w": 41,
+    "n": 146,
+    "w": 42,
     "l": 67,
     "p": 0,
     "pending": 37,
-    "win_pct": 38.0,
-    "units": 17.07,
-    "roi_pct": 19.6,
-    "roi_n": 87,
+    "win_pct": 38.5,
+    "units": 18.17,
+    "roi_pct": 20.7,
+    "roi_n": 88,
     "exp_roi_pct": 9.9,
-    "exp_wins": 36.7,
-    "exp_wins_n": 107,
-    "wins_with_fair": 40
+    "exp_wins": 37.2,
+    "exp_wins_n": 108,
+    "wins_with_fair": 41
    },
    "by_promo": {
     "Bet Reset $5": {
@@ -5066,19 +5066,19 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 43,
-     "w": 14,
+     "n": 44,
+     "w": 15,
      "l": 22,
      "p": 0,
      "pending": 7,
-     "win_pct": 38.9,
-     "units": 9.74,
-     "roi_pct": 27.1,
-     "roi_n": 36,
-     "exp_roi_pct": 5.6,
-     "exp_wins": 13.0,
-     "exp_wins_n": 36,
-     "wins_with_fair": 14
+     "win_pct": 40.5,
+     "units": 10.84,
+     "roi_pct": 29.3,
+     "roi_n": 37,
+     "exp_roi_pct": 5.5,
+     "exp_wins": 13.5,
+     "exp_wins_n": 37,
+     "wins_with_fair": 15
     },
     "live boost": {
      "n": 1,
@@ -5173,11 +5173,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 27,
+     "n": 28,
      "w": 5,
      "l": 13,
      "p": 0,
-     "pending": 9,
+     "pending": 10,
      "win_pct": 27.8,
      "units": -4.38,
      "roi_pct": -29.2,
@@ -5234,18 +5234,18 @@
     },
     "SOCCER": {
      "n": 2,
-     "w": 0,
+     "w": 1,
      "l": 0,
      "p": 0,
-     "pending": 2,
-     "win_pct": null,
-     "units": 0,
-     "roi_pct": null,
-     "roi_n": 0,
-     "exp_roi_pct": null,
-     "exp_wins": null,
-     "exp_wins_n": 0,
-     "wins_with_fair": 0
+     "pending": 1,
+     "win_pct": 100.0,
+     "units": 1.1,
+     "roi_pct": 110.0,
+     "roi_n": 1,
+     "exp_roi_pct": 3.5,
+     "exp_wins": 0.5,
+     "exp_wins_n": 1,
+     "wins_with_fair": 1
     },
     "Soccer": {
      "n": 37,
@@ -5325,19 +5325,19 @@
      "wins_with_fair": 27
     },
     "no": {
-     "n": 65,
-     "w": 13,
+     "n": 66,
+     "w": 14,
      "l": 20,
      "p": 0,
      "pending": 32,
-     "win_pct": 39.4,
-     "units": -7.1,
-     "roi_pct": -26.3,
-     "roi_n": 27,
-     "exp_roi_pct": 4.6,
-     "exp_wins": 11.7,
-     "exp_wins_n": 33,
-     "wins_with_fair": 13
+     "win_pct": 41.2,
+     "units": -6.0,
+     "roi_pct": -21.4,
+     "roi_n": 28,
+     "exp_roi_pct": 4.5,
+     "exp_wins": 12.2,
+     "exp_wins_n": 34,
+     "wins_with_fair": 14
     }
    },
    "friend": {
@@ -5358,6 +5358,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "57e7164e",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "17:55",
+    "sport": "NBA",
+    "event": "Minnesota Timberwolves @ Cleveland Cavaliers",
+    "market": "Spread",
+    "selection": "Minnesota Timberwolves +4.5",
+    "book": "DraftKings",
+    "rec_price": "-112",
+    "eff_price": "-112",
+    "fair_pct": "55.36",
+    "ev_pct": "4.80",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "5:47 PM scan; Pinnacle alt +4.5 exact match; yes at -116 or better",
+    "units": null
+   },
    {
     "rec_id": "8552043e",
     "rec_date": "2026-10-26",
@@ -5398,11 +5421,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "LYON 0-2 PSG (FT)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: No Asian spread found",
-    "units": null
+    "units": 1.1
    },
    {
     "rec_id": "f0b749e1",
@@ -9219,6 +9242,6 @@
   "FanDuel": 4.1,
   "PointsBet": 13.0
  },
- "hash": "cbe0ca2077aaf36cfd88b7b4d42978472b0e3d5a",
- "generated_at": "2026-10-26T17:13:17-04:00"
+ "hash": "70cce1f7f4c55d51c83e844e784ec8747c91f564",
+ "generated_at": "2026-10-26T17:55:51-04:00"
 }
