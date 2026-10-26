@@ -12,6 +12,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "e7f9b5b9",
+   "book": "bet365",
+   "pick": "Grizzlies ML + Ty Jerome 15+ Points + Zach LaVine 15+ Points",
+   "result": "won",
+   "pnl": 0.57,
+   "final": "MEM 123-112 SAC",
+   "at": "2026-10-25 23:31"
+  },
+  {
    "bet_id": "f2b81794",
    "book": "Caesars",
    "pick": "Kansas City Chiefs",
@@ -226,17 +235,8 @@
    "pnl": 0.0,
    "final": "PITT 23-52 MIA",
    "at": "2026-10-24 15:45"
-  },
-  {
-   "bet_id": "c352d06d",
-   "book": "FanDuel",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "NCCU 31-12 DSU",
-   "at": "2026-10-24 12:07"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 23:16 ET"
+ "last_change_at": "2026-10-25 23:31 ET"
 }
