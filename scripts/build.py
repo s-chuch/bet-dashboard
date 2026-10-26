@@ -221,7 +221,7 @@ def parse_leg(text, market):
     if m:
         team, women = clean_team(m[1])
         return {"type": "spread", "team": team, "line": float(m[2]), "women": women, "text": t}
-    if re.search(r"\bML\b|moneyline|money line|match result|1X2|3-?way|full.?time result", t + " " + market, re.I) and not re.search(r"\d", t):
+    if re.search(r"\bML\b|moneyline|money line|match result|1X2|3-?way|full.?time result", t + " " + market, re.I) and not re.search(r"(?<![A-Za-z\d])\d+(?![A-Za-z\d])", t):   # a standalone number means a line; "76ers"/"49ers" are team names
         team, women = clean_team(t)
         return {"type": "ml", "team": team, "women": women, "text": t}
     # single-bet player props worded as "Josh Hoover 2+ passing TDs" already handled above

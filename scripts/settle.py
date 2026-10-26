@@ -56,7 +56,7 @@ def parse_leg(t, market):
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "k", "op": "min", "min": int(m[2]), "text": t}
     if re.fullmatch(r"draw|tie|the draw", t, re.I): return {"type": "draw", "text": t}
     L = P.parse_leg(t, market)
-    if L["type"] == "unknown" and not re.search(r"\d", t) and re.search(r"moneyline|3-way|ml\b", market, re.I):
+    if L["type"] == "unknown" and not re.search(r"(?<![A-Za-z\d])\d+(?![A-Za-z\d])", t) and re.search(r"moneyline|3-way|ml\b", market, re.I):
         team, women = P.clean_team(re.sub(r"\s+Women$", " W", t))
         L = {"type": "ml", "team": team, "women": women, "text": t}
     # 'prop' with no stat (e.g. "Caminero U1.5") is unknown; 'pts' etc. fine

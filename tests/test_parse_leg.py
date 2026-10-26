@@ -13,6 +13,7 @@ CASES = [
     ("Tammy Abraham AGS (SGP)", "", {"type": "prop", "stat": "goal", "player": "Tammy Abraham"}),
     ("Tijuana", "Match Result (bonus bet $2.50)", {"type": "ml", "team": "Tijuana"}),
     ("OKC Thunder to win NBA Cup", "Futures", {"type": "unknown"}),
+    ("Philadelphia 76ers", "Moneyline (NBA No Sweat bonus bet $1.00)", {"type": "ml", "team": "Philadelphia 76ers"}), ("San Francisco 49ers", "Moneyline", {"type": "ml"}),
     ("Celtics ML", "Moneyline", {"type": "ml"}), ("Raptors +4.5", "Spread", {"type": "spread", "line": 4.5}),
 ]
 fails = 0
