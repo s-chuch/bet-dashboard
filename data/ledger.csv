@@ -456,3 +456,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-25 23:16,FanDuel,e5353699,settled,0.00,"lost, no return"
 2026-10-25 23:31,bet365,e7f9b5b9,return,0.97,won
 2026-10-26 07:52,PointsBet,,anchor,100.80,reset to app $100.80 per Shawn (app screenshot Sun Oct 25 7:38 PM ET)
+2026-10-26 07:57,FanDuel,7b4b7086,stake,-0.50,stake
