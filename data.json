@@ -1367,10 +1367,10 @@
     "snapshot": {
      "date": "2026-10-26T23:30Z",
      "period": 1,
-     "clock": 553.0,
+     "clock": 551.0,
      "state": "in",
      "completed": false,
-     "detail": "9:13 - 1st",
+     "detail": "9:11 - 1st",
      "teams": [
       {
        "id": "2",
@@ -1390,7 +1390,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "7"
+       "score": "8"
       }
      ]
     },
@@ -2117,10 +2117,10 @@
     "snapshot": {
      "date": "2026-10-26T23:00Z",
      "period": 2,
-     "clock": 578.0,
+     "clock": 576.0,
      "state": "in",
      "completed": false,
-     "detail": "9:38 - 2nd",
+     "detail": "9:36 - 2nd",
      "teams": [
       {
        "id": "30",
@@ -2838,9 +2838,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.595,
-     "away": 0.405,
-     "spread": 0.01,
+     "home": 0.593,
+     "away": 0.407,
+     "spread": 0.02,
      "t": "2026-10-26T23:46Z"
     }
    },
@@ -2888,10 +2888,10 @@
     "snapshot": {
      "date": "2026-10-26T23:00Z",
      "period": 2,
-     "clock": 578.0,
+     "clock": 576.0,
      "state": "in",
      "completed": false,
-     "detail": "9:38 - 2nd",
+     "detail": "9:36 - 2nd",
      "teams": [
       {
        "id": "30",
@@ -3609,9 +3609,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.595,
-     "away": 0.405,
-     "spread": 0.01,
+     "home": 0.593,
+     "away": 0.407,
+     "spread": 0.02,
      "t": "2026-10-26T23:46Z"
     }
    },
@@ -5463,10 +5463,10 @@
       "snapshot": {
        "date": "2026-10-26T23:00Z",
        "period": 2,
-       "clock": 578.0,
+       "clock": 576.0,
        "state": "in",
        "completed": false,
-       "detail": "9:38 - 2nd",
+       "detail": "9:36 - 2nd",
        "teams": [
         {
          "id": "30",
@@ -6184,9 +6184,9 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.595,
-       "away": 0.405,
-       "spread": 0.01,
+       "home": 0.593,
+       "away": 0.407,
+       "spread": 0.02,
        "t": "2026-10-26T23:46Z"
       }
      },
@@ -6651,10 +6651,10 @@
     "snapshot": {
      "date": "2026-10-26T23:00Z",
      "period": 2,
-     "clock": 542.0,
+     "clock": 522.0,
      "state": "in",
      "completed": false,
-     "detail": "9:02 - 2nd",
+     "detail": "8:42 - 2nd",
      "teams": [
       {
        "id": "5",
@@ -6674,7 +6674,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "41"
+       "score": "43"
       }
      ]
     },
@@ -7350,8 +7350,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.405,
-     "away": 0.595,
+     "home": 0.3812,
+     "away": 0.6188,
      "spread": 0.01,
      "t": "2026-10-26T23:46Z"
     }
@@ -7400,10 +7400,10 @@
     "snapshot": {
      "date": "2026-10-26T23:30Z",
      "period": 1,
-     "clock": 553.0,
+     "clock": 551.0,
      "state": "in",
      "completed": false,
-     "detail": "9:13 - 1st",
+     "detail": "9:11 - 1st",
      "teams": [
       {
        "id": "2",
@@ -7423,7 +7423,7 @@
        "nick": "Bulls",
        "location": "Chicago",
        "home": false,
-       "score": "7"
+       "score": "8"
       }
      ]
     },
@@ -14764,6 +14764,6 @@
   "FanDuel": 3.6,
   "PointsBet": 13.0
  },
- "hash": "9cc6e45b7763632d85ec39214bdb550d2bb40323",
- "generated_at": "2026-10-26T19:46:13-04:00"
+ "hash": "f0d6e75073356c17107247551e8774a846bcbc88",
+ "generated_at": "2026-10-26T19:46:34-04:00"
 }
