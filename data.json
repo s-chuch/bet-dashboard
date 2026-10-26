@@ -399,7 +399,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T11:53Z"
+     "t": "2026-10-26T11:55Z"
     }
    },
    "sport": "NHL",
@@ -1212,7 +1212,7 @@
      "home": 0.3182,
      "away": 0.6818,
      "spread": 0.01,
-     "t": "2026-10-26T11:53Z"
+     "t": "2026-10-26T11:55Z"
     }
    },
    "sport": "NFL",
@@ -2542,11 +2542,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 140,
+    "n": 141,
     "w": 41,
     "l": 67,
     "p": 0,
-    "pending": 32,
+    "pending": 33,
     "win_pct": 38.0,
     "units": 17.07,
     "roi_pct": 19.6,
@@ -2633,11 +2633,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 38,
+     "n": 39,
      "w": 14,
      "l": 22,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 38.9,
      "units": 9.74,
      "roi_pct": 27.1,
@@ -2740,11 +2740,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 24,
+     "n": 25,
      "w": 5,
      "l": 13,
      "p": 0,
-     "pending": 6,
+     "pending": 7,
      "win_pct": 27.8,
      "units": -4.38,
      "roi_pct": -29.2,
@@ -2877,11 +2877,11 @@
      "wins_with_fair": 27
     },
     "no": {
-     "n": 64,
+     "n": 65,
      "w": 13,
      "l": 20,
      "p": 0,
-     "pending": 31,
+     "pending": 32,
      "win_pct": 39.4,
      "units": -7.1,
      "roi_pct": -26.3,
@@ -2910,6 +2910,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "f3374acf",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "07:55",
+    "sport": "NBA",
+    "event": "Chicago Bulls @ Boston Celtics",
+    "market": "cash",
+    "selection": "Chicago Bulls to win",
+    "book": "DraftKings",
+    "rec_price": "+575",
+    "eff_price": "+575",
+    "fair_pct": "15.51",
+    "ev_pct": "4.68",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: +525",
+    "units": null
+   },
    {
     "rec_id": "2f83778e",
     "rec_date": "2026-10-25",
@@ -6656,6 +6679,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "086eb99182b25d231fb843f35deb502a6a6a1bf3",
- "generated_at": "2026-10-26T07:53:42-04:00"
+ "hash": "c157fdef214290ba22c3e3ee201fe824b654e9a9",
+ "generated_at": "2026-10-26T07:55:56-04:00"
 }
