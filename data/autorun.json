@@ -8,6 +8,33 @@
    "stake": "1.00 (bonus)",
    "reason": "leg \"Philadelphia 76ers\": market/stat not recognised",
    "legs": []
+  },
+  {
+   "bet_id": "7b4b7086",
+   "book": "FanDuel",
+   "event": "Chicago Bulls @ Boston Celtics",
+   "pick": "Chicago Bulls ML",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "f94e9069",
+   "book": "FanDuel",
+   "event": "Washington Wizards @ Charlotte Hornets",
+   "pick": "Charlotte Hornets -1.5",
+   "stake": "0.80",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "ae6fff5d",
+   "book": "FanDuel",
+   "event": "Washington Wizards @ Charlotte Hornets",
+   "pick": "Charlotte Hornets ML",
+   "stake": "0.70",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
@@ -238,5 +265,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 23:31 ET"
+ "last_change_at": "2026-10-26 10:11 ET"
 }
