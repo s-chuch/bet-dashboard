@@ -580,21 +580,21 @@
  },
  "401892584": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-25 19:39 ET",
-  "ml_home": 0.613,
+  "pulled": "2026-10-26 07:53 ET",
+  "ml_home": 0.61,
   "spread_home_line": -1.5,
   "spread_home_fair": 0.4026,
   "total_line": 6.5,
-  "total_over_fair": 0.5191
+  "total_over_fair": 0.5169
  },
  "401873009": {
   "src": "Pinnacle no-vig",
-  "pulled": "2026-10-25 19:39 ET",
-  "ml_home": 0.3326,
+  "pulled": "2026-10-26 07:53 ET",
+  "ml_home": 0.3425,
   "spread_home_line": 4.5,
-  "spread_home_fair": 0.4954,
+  "spread_home_fair": 0.5115,
   "total_line": 44.0,
-  "total_over_fair": 0.5
+  "total_over_fair": 0.4821
  },
  "401909866": {
   "src": "Pinnacle no-vig",
