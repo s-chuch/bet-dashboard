@@ -399,7 +399,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T03:31Z"
+     "t": "2026-10-26T05:53Z"
     }
    },
    "sport": "NHL",
@@ -1212,7 +1212,7 @@
      "home": 0.3182,
      "away": 0.6818,
      "spread": 0.01,
-     "t": "2026-10-26T03:31Z"
+     "t": "2026-10-26T05:53Z"
     }
    },
    "sport": "NFL",
@@ -2519,154 +2519,6 @@
    "clv": null
   },
   {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers",
-   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
-   "result": "void",
-   "pnl": 0.0,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "theScore",
-   "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
-   "pick": "Blue Jackets ML + Adam Fantilli O3.5 SOG + Zach Werenski O2.5 SOG + Adam Fantilli U1.5 pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "bet365",
-   "event": "Colorado Avalanche @ New Jersey Devils",
-   "pick": "Nathan MacKinnon 1+ pts + Jack Hughes 1+ pts + Nathan MacKinnon 3+ SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Pittsburgh Panthers @ Miami Hurricanes",
-   "pick": "Pittsburgh Panthers",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 15.0,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Toluca v Tijuana",
-   "pick": "Tijuana",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Atletico Nacional v Deportivo Pasto",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": "+421",
-    "clv_pct": 5.49
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Cruzeiro v Clube do Remo",
-   "pick": "Clube do Remo",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": "+886",
-    "clv_pct": -18.88
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Lillestrom v Real Sociedad",
-   "pick": "Lillestrom",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Palermo v Carrarese",
-   "pick": "Carrarese",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": "+563",
-    "clv_pct": -1.99
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Union St Gilloise v Hapoel Beer Sheva",
-   "pick": "Hapoel Beer Sheva",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "theScore",
-   "event": "PHI 76ers @ NY Knicks",
-   "pick": "Jalen Brunson 25+ pts + Jaylen Brown 20+ pts + Joel Embiid 8+ reb",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Chicago Bears @ Delaware Blue Hens",
-   "pick": "Isaiah Myers 70+ rec yds + Da'Wain Lofton 50+ rec yds + Sean Wilson 50+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
    "date": "2026-10-21",
    "book": "theScore",
    "event": "Lille v Galatasaray",
@@ -2676,164 +2528,6 @@
    "stake": 0.2,
    "auto": false,
    "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "bet365",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Jayson Tatum 20+ pts + Cade Cunningham 20+ pts + Jayson Tatum 7+ rebounds",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "bet365",
-   "event": "Bayern Munich v Arsenal",
-   "pick": "Harry Kane 1+ SOT + Harry Kane 3+ shots + Jamal Musiala 3+ shots",
-   "result": "won",
-   "pnl": 0.36,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Cade Cunningham 8+ ast + Jayson Tatum 4+ ast + Payton Pritchard 4+ ast",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "PointsBet",
-   "event": "Toronto Maple Leafs @ Columbus Blue Jackets",
-   "pick": "Under 7.5 + Blue Jackets O1.5 team goals + Auston Matthews 3+ SOG",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "FanDuel",
-   "event": "Man City vs AEK Athens",
-   "pick": "Phil Foden 1+ SOT + Rayan Cherki 1+ SOT + Allan 3+ shots",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "FanDuel",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "DraftKings",
-   "event": "Boston Celtics @ Detroit Pistons",
-   "pick": "Celtics ML + Paul George 16+ pts + Jayson Tatum 25+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "DraftKings",
-   "event": "Oklahoma City Thunder @ San Antonio Spurs",
-   "pick": "Victor Wembanyama 25+ pts + Jalen Williams 15+ pts + Shai Gilgeous-Alexander 30+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Man City vs AEK Athens",
-   "pick": "Phil Foden 1+ goals + Rayan Cherki 1+ goals",
-   "result": "won",
-   "pnl": 3.29,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Los Angeles Kings @ Washington Capitals",
-   "pick": "Jakob Chychrun 2+ SOG + Adrian Kempe 3+ SOG + Alex Ovechkin 3+ SOG + Darcy Kuemper 24+ saves",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "pick": "Brewers ML + Junior Caminero 1+ hits + William Contreras U1.5 TB",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "pick": "Jackson Chourio U1.5 TB + Jonathan Aranda O0.5 TB + Christian Yelich O0.5 TB",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "Caesars",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "pick": "Over 150.5 + Valkyries -3.5",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-20",
-   "book": "FanDuel",
-   "event": "New York Giants @ Houston Texans",
-   "pick": "New York Giants",
-   "result": "won",
-   "pnl": 3.7,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": "+365",
-    "clv_pct": 1.05
-   }
   }
  ],
  "pnl_total": 106.97,
@@ -6962,6 +6656,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "947a09a9727efa697f68f257cb6cda1cfed92eba",
- "generated_at": "2026-10-25T23:31:10-04:00"
+ "hash": "b0f33dd28dd4983df0154ecb590ac4ddbb752cb4",
+ "generated_at": "2026-10-26T01:53:20-04:00"
 }
