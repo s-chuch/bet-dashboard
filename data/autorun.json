@@ -1,5 +1,15 @@
 {
- "needs_review": [],
+ "needs_review": [
+  {
+   "bet_id": "6a8a8c79",
+   "book": "PointsBet",
+   "event": "Detroit Pistons @ Philadelphia 76ers (NBA)",
+   "pick": "Philadelphia 76ers",
+   "stake": "1.00 (bonus)",
+   "reason": "leg \"Philadelphia 76ers\": market/stat not recognised",
+   "legs": []
+  }
+ ],
  "last_settled": [
   {
    "bet_id": "c4db9120",
@@ -228,5 +238,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-25 19:37 ET"
+ "last_change_at": "2026-10-25 22:26 ET"
 }
