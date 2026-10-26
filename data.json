@@ -279,10 +279,10 @@
     "snapshot": {
      "date": "2026-10-26T00:20Z",
      "period": 2,
-     "clock": 104.0,
+     "clock": 101.0,
      "state": "in",
      "completed": false,
-     "detail": "1:44 - 2nd",
+     "detail": "1:41 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -292,7 +292,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "9"
+       "score": "10"
       },
       {
        "id": "12",
@@ -952,7 +952,7 @@
      "home": 0.815,
      "away": 0.185,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NFL",
@@ -1020,10 +1020,10 @@
     "snapshot": {
      "date": "2026-10-26T01:00Z",
      "period": 1,
-     "clock": 264.0,
+     "clock": 172.0,
      "state": "in",
      "completed": false,
-     "detail": "4:24 - 1st",
+     "detail": "2:52 - 1st",
      "teams": [
       {
        "id": "23",
@@ -1033,7 +1033,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": true,
-       "score": "16"
+       "score": "21"
       },
       {
        "id": "29",
@@ -1043,7 +1043,7 @@
        "nick": "Grizzlies",
        "location": "Memphis",
        "home": false,
-       "score": "17"
+       "score": "19"
       }
      ]
     },
@@ -1719,10 +1719,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.465,
+     "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NBA",
@@ -1888,7 +1888,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NHL",
@@ -1964,10 +1964,10 @@
     "snapshot": {
      "date": "2026-10-26T00:20Z",
      "period": 2,
-     "clock": 104.0,
+     "clock": 101.0,
      "state": "in",
      "completed": false,
-     "detail": "1:44 - 2nd",
+     "detail": "1:41 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -1977,7 +1977,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "9"
+       "score": "10"
       },
       {
        "id": "12",
@@ -2637,7 +2637,7 @@
      "home": 0.815,
      "away": 0.185,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NFL",
@@ -2683,10 +2683,10 @@
     "snapshot": {
      "date": "2026-10-26T00:20Z",
      "period": 2,
-     "clock": 104.0,
+     "clock": 101.0,
      "state": "in",
      "completed": false,
-     "detail": "1:44 - 2nd",
+     "detail": "1:41 - 2nd",
      "teams": [
       {
        "id": "26",
@@ -2696,7 +2696,7 @@
        "nick": "Seahawks",
        "location": "Seattle",
        "home": true,
-       "score": "9"
+       "score": "10"
       },
       {
        "id": "12",
@@ -3356,7 +3356,7 @@
      "home": 0.815,
      "away": 0.185,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NFL",
@@ -4169,7 +4169,7 @@
      "home": 0.33,
      "away": 0.67,
      "spread": 0.02,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NFL",
@@ -4212,10 +4212,10 @@
     "snapshot": {
      "date": "2026-10-25T23:30Z",
      "period": 3,
-     "clock": 186.0,
+     "clock": 120.0,
      "state": "in",
      "completed": false,
-     "detail": "3:06 - 3rd",
+     "detail": "2:00 - 3rd",
      "teams": [
       {
        "id": "20",
@@ -4911,10 +4911,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.225,
-     "away": 0.775,
+     "home": 0.205,
+     "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-26T01:26Z"
+     "t": "2026-10-26T01:31Z"
     }
    },
    "sport": "NBA",
@@ -10518,6 +10518,6 @@
   "FanDuel": 7.1,
   "PointsBet": 14.0
  },
- "hash": "e34eaa860f1b775b0ea39a95a7e6f199968b1e10",
- "generated_at": "2026-10-25T21:26:45-04:00"
+ "hash": "e57c9af136819000b378a63771725273cd9cdd5c",
+ "generated_at": "2026-10-25T21:31:26-04:00"
 }
