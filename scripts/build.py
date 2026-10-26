@@ -362,6 +362,21 @@ def team_totals_from_props(bet):
         if L.get("type") == "teamtotal":
             L["team_ok"] = any(team_match(L["team"], _snap_comp(t)) for t in teams)
 
+_RECS = None
+def _rec_for(bet_id):
+    """The Bet Finder recommendation a bet was logged from (recommendations.csv bet_ids): gives the EV/fair chance at placement."""
+    global _RECS
+    if _RECS is None:
+        _RECS = {}
+        try:
+            from common import RECS, read_csv
+            for r in read_csv(RECS)[0]:
+                if (r.get("ev_pct") or "").strip():
+                    for i in (r.get("bet_ids") or "").split(";"):
+                        if i.strip(): _RECS[i.strip()] = r
+        except Exception as e: print("recs for ev failed", e, file=sys.stderr)
+    return _RECS.get(bet_id or "", {})
+
 def build_bet(row):
     ev_raw = row["event"]; market = row["market"]; pick = row["pick"]
     ev_clean = re.sub(r"\s*\([^)]*\)", "", ev_raw).strip()
@@ -382,7 +397,7 @@ def build_bet(row):
     bet = {"bet_id": row.get("bet_id", ""), "date": row["date"], "book": row["book"], "event": ev_clean, "market": market, "pick": pick,
            "start": row["start_et"], "price": row["price"], "boosted_price": row["boosted_price"],
            "stake": num(row["stake"]), "stake_note": "unconfirmed" if "unconfirmed" in row["stake"] else "",
-           "to_win": num(row["to_win"]), "ev_pct": row["ev_pct"], "multi": is_multi, "legs": legs, "match": None,
+           "to_win": num(row["to_win"]), "ev_pct": row["ev_pct"] or _rec_for(row.get("bet_id")).get("ev_pct", ""), "fair_pct": row.get("fair_pct") or _rec_for(row.get("bet_id")).get("fair_pct", ""), "multi": is_multi, "legs": legs, "match": None,
            "sport": None}
     try:
         import statsgen as SG

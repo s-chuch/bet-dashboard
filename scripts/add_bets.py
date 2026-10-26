@@ -176,6 +176,8 @@ def main():
             twin = next((x for x in known if same_bet(r, x)), None)
             if twin and not force:
                 dup += 1; print(f"skipped duplicate (same as {twin.get('bet_id') or 'an earlier row of this upload'}): {r['book']} | {r['pick'][:60]}"); continue
+            if f.get("fair") and not r.get("fair_pct"): r["fair_pct"] = f["fair"]     # keep the Finder's fair chance and EV on the bet itself,
+            if f.get("ev") and not r.get("ev_pct"): r["ev_pct"] = f["ev"]             # so the slip can colour the price by what it was worth
             argv = ["log"] + [f"{k}={v}" for k, v in r.items() if v != ""] + (["--force"] if force else [])
             buf = io.StringIO()
             try:

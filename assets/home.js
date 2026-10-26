@@ -699,6 +699,16 @@ function approxLeg(b,L,x){if(x.s==="WON")return 1;if(x.s==="LOST")return 0;const
     else po=1-Phi((line-v-rem)/Math.max(1,0.35*line*Math.sqrt(f)));                 // yards/points: normal on pace
     return L.op==="under"?1-po:po}
   return 0.5}
+// Was the price worth taking? EV% = fair chance x decimal price - 1, from (in order) the recorded fair chance / EV, then the pregame Pinnacle no-vig moneyline.
+// Green: +2% or better (the Game Plan "bet" line). Amber: 0 to 2%. Red: negative. No fair chance known (props, parlays, uploads): no colour.
+function decOf(a){const n=parseFloat(String(a||"").replace(/[^\d+.-]/g,""));if(!isFinite(n)||n===0)return null;return n>0?1+n/100:1+100/-n}
+function evInfo(b){const eff=b.boosted_price&&/^[+-]?\d/.test(b.boosted_price)?b.boosted_price:b.price,dec=decOf(eff);let ev=null,src="";
+  const rec=parseFloat(b.ev_pct);if(isFinite(rec)&&String(b.ev_pct).trim()!==""){ev=rec;src="recorded EV"}
+  else{let p=parseFloat(b.fair_pct);if(isFinite(p)&&String(b.fair_pct).trim()!==""&&dec){ev=(p/100*dec-1)*100;src="fair chance "+p+"%"}
+    else if(dec&&!b.multi&&b.legs&&b.legs.length===1&&b.legs[0].type==="ml"&&b.match&&b.match.pin&&b.match.pin.ml_home!=null){
+      const g=gameFor(b.match),i=g?sideIdx(g,b.legs[0].team):-1;if(i>=0){p=g.teams[i].home?b.match.pin.ml_home:1-b.match.pin.ml_home;ev=(p*dec-1)*100;src="Pinnacle no-vig "+(p*100).toFixed(1)+"%"}}}
+  if(ev==null)return{cls:"",tip:"No fair price known for this bet, so no EV colour"};
+  const cls=ev>=2?"px-g":ev<0?"px-r":"px-a";return{cls,tip:`EV ${ev>=0?"+":""}${ev.toFixed(1)}% (${src})`}}
 function legP(b,L,st,x){if(st==="WON")return 1;if(st==="LOST")return 0;const m=matchOfLeg(b,L),g=gameFor(m);if(!g)return null;
   x=x||{L,g,s:st};
   if(L.type==="prop"||L.type==="teamtotal"||st==="?")return approxLeg(b,L,x);
@@ -1052,7 +1062,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     const legStats=legStatsFor(b);
     let status=b.multi?combine(legStats.map(x=>x.s)):(legStats[0]?legStats[0].s:"?");LAST_STATUS[D.open.indexOf(b)]=status;
     const g=b.match?gameFor(b.match):null;
-    const price=b.boosted_price&&b.boosted_price!==b.price?`${esc(b.price)} → ${esc(b.boosted_price)}`:esc(b.price);
+    const evx=evInfo(b),price=`<span class="${evx.cls}" title="${esc(evx.tip)}">`+(b.boosted_price&&b.boosted_price!==b.price?`${esc(b.price)} → ${esc(b.boosted_price)}`:esc(b.price))+`</span>`;
     const firstG=g||legStats.map(x=>x.g).find(Boolean);
     const k=cardKey(b), isOpen=OPEN.has(k), BR=barsFor(b), mv=BR.mini;
     const mini=mv!=null?`<div class="mini" style="width:${Math.max(0,Math.min(100,mv))}%;background:${mv>50?"var(--win)":mv<50?"var(--lose)":"var(--push)"}"></div>`:"";
