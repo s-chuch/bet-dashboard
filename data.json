@@ -22,8 +22,8 @@
   },
   {
    "book": "DraftKings",
-   "balance": 61.73,
-   "updated": "2026-10-27 08:10"
+   "balance": 60.46,
+   "updated": "2026-10-27 11:32"
   },
   {
    "book": "theScore",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 664.0,
+ "total": 662.73,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1434,7 +1434,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T15:30Z"
+       "t": "2026-10-27T15:32Z"
       }
      },
      "pteam": "BAL",
@@ -1489,7 +1489,7 @@
       },
       "pin": {
        "src": "Pinnacle no-vig",
-       "pulled": "2026-10-27 11:29 ET",
+       "pulled": "2026-10-27 11:32 ET",
        "ml_home": 0.5544,
        "spread_home_line": -2.0,
        "spread_home_fair": 0.5046,
@@ -2129,7 +2129,7 @@
        "home": 0.545,
        "away": 0.455,
        "spread": 0.01,
-       "t": "2026-10-27T15:30Z"
+       "t": "2026-10-27T15:32Z"
       }
      },
      "pteam": "ATL",
@@ -2211,7 +2211,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-27 11:29 ET",
+     "pulled": "2026-10-27 11:32 ET",
      "ml_home": 0.904,
      "spread_home_line": -18.5,
      "spread_home_fair": 0.4977,
@@ -2851,7 +2851,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T15:30Z"
+     "t": "2026-10-27T15:32Z"
     }
    },
    "sport": "NBA",
@@ -2999,7 +2999,7 @@
     },
     "pin": {
      "src": "Pinnacle no-vig",
-     "pulled": "2026-10-27 11:29 ET",
+     "pulled": "2026-10-27 11:32 ET",
      "ml_home": 0.814,
      "spread_home_line": -11.5,
      "spread_home_fair": 0.5023,
@@ -3661,7 +3661,7 @@
      "home": 0.825,
      "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-27T15:30Z"
+     "t": "2026-10-27T15:32Z"
     }
    },
    "sport": "NBA",
@@ -9142,6 +9142,6 @@
   "FanDuel": 1.3,
   "PointsBet": 12.5
  },
- "hash": "83d33b1baafce108478eebc581e5f7b60627c0bf",
- "generated_at": "2026-10-27T11:30:18-04:00"
+ "hash": "8e5dfde7a444e7c995f66d3b7f7b3770bfe72285",
+ "generated_at": "2026-10-27T11:32:11-04:00"
 }
