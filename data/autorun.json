@@ -1,24 +1,5 @@
 {
- "needs_review": [
-  {
-   "bet_id": "f9e33ec4",
-   "book": "FanDuel",
-   "event": "Sacramento Kings @ San Antonio Spurs",
-   "pick": "Sacramento Kings ML",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "5ff31714",
-   "book": "DraftKings",
-   "event": "Brooklyn Nets @ Boston Celtics",
-   "pick": "Brooklyn Nets ML",
-   "stake": "0.30",
-   "reason": "no ESPN game matched",
-   "legs": []
-  }
- ],
+ "needs_review": [],
  "last_settled": [
   {
    "bet_id": "38cdf546",
