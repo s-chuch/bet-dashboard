@@ -649,5 +649,32 @@
   "spread_home_fair": 0.5162,
   "total_line": 234.0,
   "total_over_fair": 0.5069
+ },
+ "401909879": {
+  "src": "Pinnacle no-vig",
+  "pulled": "2026-10-27 11:29 ET",
+  "ml_home": 0.904,
+  "spread_home_line": -18.5,
+  "spread_home_fair": 0.4977,
+  "total_line": 232.0,
+  "total_over_fair": 0.5023
+ },
+ "401909877": {
+  "src": "Pinnacle no-vig",
+  "pulled": "2026-10-27 11:29 ET",
+  "ml_home": 0.814,
+  "spread_home_line": -11.5,
+  "spread_home_fair": 0.5023,
+  "total_line": 222.5,
+  "total_over_fair": 0.5102
+ },
+ "401873025": {
+  "src": "Pinnacle no-vig",
+  "pulled": "2026-10-27 11:29 ET",
+  "ml_home": 0.5544,
+  "spread_home_line": -2.0,
+  "spread_home_fair": 0.5046,
+  "total_line": 46.0,
+  "total_over_fair": 0.5045
  }
 }
