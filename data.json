@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T23:55Z"
+       "t": "2026-10-27T23:56Z"
       }
      },
      "pteam": "BAL",
@@ -2791,7 +2791,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NBA",
@@ -2910,10 +2910,10 @@
     "snapshot": {
      "date": "2026-10-27T23:30Z",
      "period": 1,
-     "clock": 300.0,
+     "clock": 270.0,
      "state": "in",
      "completed": false,
-     "detail": "5:00 - 1st",
+     "detail": "4:30 - 1st",
      "teams": [
       {
        "id": "2",
@@ -2933,7 +2933,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "14"
+       "score": "16"
       }
      ]
     },
@@ -3598,10 +3598,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.855,
-     "away": 0.145,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NBA",
@@ -4343,7 +4343,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NBA",
@@ -5092,7 +5092,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NBA",
@@ -5384,7 +5384,7 @@
      "home": 0.065,
      "away": 0.935,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NHL",
@@ -5448,10 +5448,10 @@
     "snapshot": {
      "date": "2026-10-27T23:30Z",
      "period": 1,
-     "clock": 300.0,
+     "clock": 270.0,
      "state": "in",
      "completed": false,
-     "detail": "5:00 - 1st",
+     "detail": "4:30 - 1st",
      "teams": [
       {
        "id": "2",
@@ -5471,7 +5471,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "14"
+       "score": "16"
       }
      ]
     },
@@ -6136,10 +6136,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.855,
-     "away": 0.145,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "NBA",
@@ -6469,7 +6469,7 @@
      "home": 0.475,
      "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-27T23:55Z"
+     "t": "2026-10-27T23:56Z"
     }
    },
    "sport": "MLB",
@@ -12011,6 +12011,6 @@
   "FanDuel": 2.8,
   "PointsBet": 10.0
  },
- "hash": "355e910475aa579b7f1f92050e0f8807ffbc6418",
- "generated_at": "2026-10-27T19:56:00-04:00"
+ "hash": "689efeea77f5969dfb00e982f13ece2155b48ef8",
+ "generated_at": "2026-10-27T19:56:21-04:00"
 }
