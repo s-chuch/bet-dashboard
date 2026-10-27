@@ -286,11 +286,11 @@
     "id": "401892584",
     "snapshot": {
      "date": "2026-10-27T01:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 1200.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/26 - 9:30 PM EDT",
+     "detail": "20:00 - 1st",
      "teams": [
       {
        "id": "6",
@@ -505,7 +505,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NHL",
@@ -647,10 +647,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 91.0,
+     "clock": 84.0,
      "state": "in",
      "completed": false,
-     "detail": "1:31 - 2nd",
+     "detail": "1:24 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -1320,7 +1320,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NFL",
@@ -1380,7 +1380,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "115"
+       "score": "116"
       },
       {
        "id": "4",
@@ -2069,7 +2069,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NBA",
@@ -2115,10 +2115,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 91.0,
+     "clock": 84.0,
      "state": "in",
      "completed": false,
-     "detail": "1:31 - 2nd",
+     "detail": "1:24 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -2788,7 +2788,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NFL",
@@ -2861,10 +2861,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 91.0,
+     "clock": 84.0,
      "state": "in",
      "completed": false,
-     "detail": "1:31 - 2nd",
+     "detail": "1:24 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -3534,7 +3534,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NFL",
@@ -3874,7 +3874,7 @@
      "home": 0.015,
      "away": 0.985,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "MLB",
@@ -3920,10 +3920,10 @@
       "snapshot": {
        "date": "2026-10-27T00:00Z",
        "period": 3,
-       "clock": 204.0,
+       "clock": 182.0,
        "state": "in",
        "completed": false,
-       "detail": "3:24 - 3rd",
+       "detail": "3:02 - 3rd",
        "teams": [
         {
          "id": "129689",
@@ -3943,7 +3943,7 @@
          "nick": "Dream",
          "location": "Atlanta",
          "home": false,
-         "score": "33"
+         "score": "36"
         }
        ]
       }
@@ -3967,10 +3967,10 @@
       "snapshot": {
        "date": "2026-10-27T00:00Z",
        "period": 3,
-       "clock": 204.0,
+       "clock": 182.0,
        "state": "in",
        "completed": false,
-       "detail": "3:24 - 3rd",
+       "detail": "3:02 - 3rd",
        "teams": [
         {
          "id": "129689",
@@ -3990,7 +3990,7 @@
          "nick": "Dream",
          "location": "Atlanta",
          "home": false,
-         "score": "33"
+         "score": "36"
         }
        ]
       }
@@ -4014,10 +4014,10 @@
       "snapshot": {
        "date": "2026-10-27T00:00Z",
        "period": 3,
-       "clock": 204.0,
+       "clock": 182.0,
        "state": "in",
        "completed": false,
-       "detail": "3:24 - 3rd",
+       "detail": "3:02 - 3rd",
        "teams": [
         {
          "id": "129689",
@@ -4037,7 +4037,7 @@
          "nick": "Dream",
          "location": "Atlanta",
          "home": false,
-         "score": "33"
+         "score": "36"
         }
        ]
       }
@@ -4347,7 +4347,7 @@
      "home": 0.005,
      "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NHL",
@@ -5119,10 +5119,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.525,
-     "away": 0.475,
+     "home": 0.5297,
+     "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NBA",
@@ -5182,7 +5182,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "115"
+       "score": "116"
       },
       {
        "id": "4",
@@ -5871,7 +5871,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NBA",
@@ -6277,10 +6277,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 91.0,
+     "clock": 84.0,
      "state": "in",
      "completed": false,
-     "detail": "1:31 - 2nd",
+     "detail": "1:24 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -6950,7 +6950,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-27T01:37Z"
+     "t": "2026-10-27T01:38Z"
     }
    },
    "sport": "NFL",
@@ -12563,6 +12563,6 @@
   "FanDuel": 2.1,
   "PointsBet": 13.0
  },
- "hash": "b57ad16da533315010f56417f973df5b53048e90",
- "generated_at": "2026-10-26T21:37:42-04:00"
+ "hash": "afd4c86e97d701531a718d1dc95be5c2d170689d",
+ "generated_at": "2026-10-26T21:38:05-04:00"
 }
