@@ -496,3 +496,5 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-27 11:29,FanDuel,,anchor,155.09,"app balance per Shawn (Rewards Hub screenshots Tue Oct 27 ~11:30 AM ET); ledger said 156.08, -0.99 unexplained"
 2026-10-27 11:31,DraftKings,,anchor,60.46,"app balance per Shawn (DK Profit Boost screenshot Tue Oct 27 ~11:30 AM ET); ledger said before anchor, see prior line"
 2026-10-27 11:32,DraftKings,,anchor,60.46,"app balance per Shawn (DK Profit Boost screenshot Tue Oct 27 ~11:30 AM ET); ledger said 61.73, -1.27 unexplained"
+2026-10-27 14:24,bet365,ccb8d094,stake,-0.30,stake
+2026-10-27 14:25,bet365,,anchor,80.11,"app balance per Shawn screenshot Tue Oct 27 ~2:25 PM ET (after ccb8d094; ledger already said 80.11, 0.00 adjustment)"
