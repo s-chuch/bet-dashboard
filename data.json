@@ -287,10 +287,10 @@
     "snapshot": {
      "date": "2026-10-27T01:30Z",
      "period": 1,
-     "clock": 456.0,
+     "clock": 431.0,
      "state": "in",
      "completed": false,
-     "detail": "7:36 - 1st",
+     "detail": "7:11 - 1st",
      "teams": [
       {
        "id": "6",
@@ -502,9 +502,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.745,
-     "away": 0.255,
-     "spread": 0.01,
+     "home": 0.7323,
+     "away": 0.2677,
+     "spread": 0.03,
      "t": "2026-10-27T02:01Z"
     }
    },
@@ -3491,87 +3491,6 @@
    }
   },
   {
-   "bet_id": "0d3d206e",
-   "date": "2026-10-26",
-   "book": "Caesars",
-   "event": "Chicago Bulls @ Boston Celtics",
-   "market": "Moneyline (bonus bet $5.00; bet id b0b14200-d17d-11f1-bbaa-9190\u2026)",
-   "pick": "Chicago Bulls ML",
-   "start": "Mon Oct 26 07:30 PM ET",
-   "price": "+550",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 27.5,
-   "ev_pct": "4.68",
-   "fair_pct": "15.51",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Chicago Bulls",
-     "women": false,
-     "text": "Chicago Bulls ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261026",
-    "groups": null,
-    "id": "401909870",
-    "snapshot": {
-     "date": "2026-10-26T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "2",
-       "name": "Boston Celtics",
-       "abbr": "BOS",
-       "short": "Celtics",
-       "nick": "Celtics",
-       "location": "Boston",
-       "home": true,
-       "score": "134"
-      },
-      {
-       "id": "4",
-       "name": "Chicago Bulls",
-       "abbr": "CHI",
-       "short": "Bulls",
-       "nick": "Bulls",
-       "location": "Chicago",
-       "home": false,
-       "score": "99"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-26 18:19 ET",
-     "ml_home": 0.8471,
-     "spread_home_line": -14.5,
-     "spread_home_fair": 0.4884,
-     "total_line": 232.5,
-     "total_over_fair": 0.5125
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.0,
-   "payout": 27.5,
-   "payout_est": false,
-   "start_ts": "2026-10-26T23:30Z",
-   "clv": {
-    "placed_at": "2026-10-26 18:19",
-    "close_price": "+569",
-    "clv_pct": -2.77
-   }
-  },
-  {
    "bet_id": "1e699888",
    "date": "2026-10-26",
    "book": "Caesars",
@@ -4694,6 +4613,21 @@
   }
  ],
  "settled_recent": [
+  {
+   "date": "2026-10-26",
+   "book": "Caesars",
+   "event": "Chicago Bulls @ Boston Celtics",
+   "pick": "Chicago Bulls ML",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 5.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 18:19",
+    "close_price": "+569",
+    "clv_pct": -2.77
+   }
+  },
   {
    "date": "2026-10-26",
    "book": "bet365",
@@ -6011,9 +5945,9 @@
  ],
  "pnl_total": 110.18,
  "unsettled": {
-  "n": 22,
+  "n": 21,
   "cash_stake": 15.5,
-  "max_payout": 325.2,
+  "max_payout": 297.7,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -6023,16 +5957,16 @@
    "overall": {
     "n": 146,
     "w": 46,
-    "l": 67,
+    "l": 68,
     "p": 0,
-    "pending": 33,
-    "win_pct": 40.7,
-    "units": 23.63,
-    "roi_pct": 25.7,
-    "roi_n": 92,
-    "exp_roi_pct": 9.6,
-    "exp_wins": 39.2,
-    "exp_wins_n": 112,
+    "pending": 32,
+    "win_pct": 40.4,
+    "units": 22.63,
+    "roi_pct": 24.3,
+    "roi_n": 93,
+    "exp_roi_pct": 9.5,
+    "exp_wins": 39.4,
+    "exp_wins_n": 113,
     "wins_with_fair": 45
    },
    "by_promo": {
@@ -6114,16 +6048,16 @@
     "cash": {
      "n": 44,
      "w": 19,
-     "l": 22,
+     "l": 23,
      "p": 0,
-     "pending": 3,
-     "win_pct": 46.3,
-     "units": 16.3,
-     "roi_pct": 39.7,
-     "roi_n": 41,
+     "pending": 2,
+     "win_pct": 45.2,
+     "units": 15.3,
+     "roi_pct": 36.4,
+     "roi_n": 42,
      "exp_roi_pct": 5.3,
-     "exp_wins": 15.5,
-     "exp_wins_n": 41,
+     "exp_wins": 15.7,
+     "exp_wins_n": 42,
      "wins_with_fair": 19
     },
     "live boost": {
@@ -6221,16 +6155,16 @@
     "NBA": {
      "n": 28,
      "w": 8,
-     "l": 13,
+     "l": 14,
      "p": 0,
-     "pending": 7,
-     "win_pct": 38.1,
-     "units": -1.77,
-     "roi_pct": -9.9,
-     "roi_n": 18,
-     "exp_roi_pct": 7.5,
-     "exp_wins": 9.0,
-     "exp_wins_n": 21,
+     "pending": 6,
+     "win_pct": 36.4,
+     "units": -2.77,
+     "roi_pct": -14.6,
+     "roi_n": 19,
+     "exp_roi_pct": 7.4,
+     "exp_wins": 9.1,
+     "exp_wins_n": 22,
      "wins_with_fair": 8
     },
     "NCAAF": {
@@ -6358,16 +6292,16 @@
     "yes": {
      "n": 80,
      "w": 31,
-     "l": 47,
+     "l": 48,
      "p": 0,
-     "pending": 2,
-     "win_pct": 39.7,
-     "units": 28.74,
-     "roi_pct": 45.6,
-     "roi_n": 63,
-     "exp_roi_pct": 11.9,
-     "exp_wins": 26.4,
-     "exp_wins_n": 77,
+     "pending": 1,
+     "win_pct": 39.2,
+     "units": 27.74,
+     "roi_pct": 43.3,
+     "roi_n": 64,
+     "exp_roi_pct": 11.8,
+     "exp_wins": 26.6,
+     "exp_wins_n": 78,
      "wins_with_fair": 30
     },
     "no": {
@@ -6536,11 +6470,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "CHI 99-134 BOS (Final)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: +525",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "2f83778e",
@@ -10044,6 +9978,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "0d3d206e",
+    "book": "Caesars",
+    "pick": "Chicago Bulls ML",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "CHI 99-134 BOS",
+    "at": "2026-10-26 22:01"
+   },
+   {
     "bet_id": "c0dd912a",
     "book": "bet365",
     "pick": "Anthony Edwards 20+ Points + Donovan Mitchell 20+ Points + LaMelo Ball 15+ Points",
@@ -10258,15 +10201,6 @@
     "pnl": -0.4,
     "final": "MIL 116-127 PHI",
     "at": "2026-10-24 22:03"
-   },
-   {
-    "bet_id": "affcdcba",
-    "book": "bet365",
-    "pick": "Maple Leafs +1.5 + Oilers +1.5 + Under 9.5",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "TOR 7-2 EDM",
-    "at": "2026-10-24 21:47"
    }
   ],
   "last_change_at": "2026-10-26 22:01 ET"
@@ -10279,6 +10213,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "6f7a08e6a04fbadae536a817dba5f9c56acd5db4",
- "generated_at": "2026-10-26T22:01:30-04:00"
+ "hash": "6eb22ef750121d6b3c589badd92e267e64303f96",
+ "generated_at": "2026-10-26T22:01:47-04:00"
 }

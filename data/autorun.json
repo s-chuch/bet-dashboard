@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "0d3d206e",
+   "book": "Caesars",
+   "pick": "Chicago Bulls ML",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "CHI 99-134 BOS",
+   "at": "2026-10-26 22:01"
+  },
+  {
    "bet_id": "c0dd912a",
    "book": "bet365",
    "pick": "Anthony Edwards 20+ Points + Donovan Mitchell 20+ Points + LaMelo Ball 15+ Points",
@@ -216,15 +225,6 @@
    "pnl": -0.4,
    "final": "MIL 116-127 PHI",
    "at": "2026-10-24 22:03"
-  },
-  {
-   "bet_id": "affcdcba",
-   "book": "bet365",
-   "pick": "Maple Leafs +1.5 + Oilers +1.5 + Under 9.5",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "TOR 7-2 EDM",
-   "at": "2026-10-24 21:47"
   }
  ],
  "errors": [],
