@@ -505,7 +505,7 @@
      "home": 0.615,
      "away": 0.385,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NHL",
@@ -647,10 +647,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 148.0,
+     "clock": 112.0,
      "state": "in",
      "completed": false,
-     "detail": "2:28 - 2nd",
+     "detail": "1:52 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -1317,10 +1317,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.3788,
+     "away": 0.6212,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NFL",
@@ -1366,11 +1366,11 @@
     "id": "401909870",
     "snapshot": {
      "date": "2026-10-26T23:30Z",
-     "period": 3,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 613.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 3rd",
+     "detail": "10:13 - 4th",
      "teams": [
       {
        "id": "2",
@@ -1380,7 +1380,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "105"
+       "score": "107"
       },
       {
        "id": "4",
@@ -2069,7 +2069,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NBA",
@@ -2115,10 +2115,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 148.0,
+     "clock": 112.0,
      "state": "in",
      "completed": false,
-     "detail": "2:28 - 2nd",
+     "detail": "1:52 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -2785,10 +2785,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.3788,
+     "away": 0.6212,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NFL",
@@ -2861,10 +2861,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 148.0,
+     "clock": 112.0,
      "state": "in",
      "completed": false,
-     "detail": "2:28 - 2nd",
+     "detail": "1:52 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -3531,10 +3531,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.3788,
+     "away": 0.6212,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NFL",
@@ -3579,10 +3579,11 @@
     {
      "type": "prop",
      "player": "Chandler Simpson",
-     "stat": "tb",
+     "stat": null,
      "op": "min",
      "min": 1,
      "text": "Chandler Simpson 1+ Total Bases",
+     "stat_raw": "Total Bases",
      "pteam": "TB",
      "pname": "Chandler Simpson",
      "pid": "4679983"
@@ -3610,7 +3611,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Mid 5th",
      "teams": [
       {
        "id": "30",
@@ -3870,10 +3871,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.245,
-     "away": 0.755,
+     "home": 0.205,
+     "away": 0.795,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "MLB",
@@ -3907,67 +3908,10 @@
     {
      "type": "prop",
      "player": "Gabby Williams",
-     "stat": null,
+     "stat": "threes",
      "op": "min",
      "min": 2,
      "text": "Gabby Williams 2+ Threes Made",
-     "stat_raw": "Threes Made",
-     "match": {
-      "path": "basketball/nba",
-      "date": "20261026",
-      "groups": null,
-      "id": "401909868",
-      "snapshot": {
-       "date": "2026-10-26T23:00Z",
-       "period": 4,
-       "clock": 0.0,
-       "state": "post",
-       "completed": true,
-       "detail": "Final",
-       "teams": [
-        {
-         "id": "30",
-         "name": "Charlotte Hornets",
-         "abbr": "CHA",
-         "short": "Hornets",
-         "nick": "Hornets",
-         "location": "Charlotte",
-         "home": true,
-         "score": "110"
-        },
-        {
-         "id": "27",
-         "name": "Washington Wizards",
-         "abbr": "WSH",
-         "short": "Wizards",
-         "nick": "Wizards",
-         "location": "Washington",
-         "home": false,
-         "score": "103"
-        }
-       ]
-      },
-      "pin": {
-       "src": "Pinnacle no-vig",
-       "pulled": "2026-10-26 18:19 ET",
-       "ml_home": 0.5814,
-       "spread_home_line": -2.5,
-       "spread_home_fair": 0.5196,
-       "total_line": 228.5,
-       "total_over_fair": 0.4829
-      }
-     },
-     "pteam": "CHA",
-     "pname": "Grant Williams",
-     "pid": "4066218"
-    },
-    {
-     "type": "prop",
-     "player": "Angel Reese",
-     "stat": "reb",
-     "op": "min",
-     "min": 10,
-     "text": "Angel Reese 10+ Rebounds",
      "match": {
       "path": "basketball/wnba",
       "date": "20261026",
@@ -3976,10 +3920,10 @@
       "snapshot": {
        "date": "2026-10-27T00:00Z",
        "period": 3,
-       "clock": 397.0,
+       "clock": 324.0,
        "state": "in",
        "completed": false,
-       "detail": "6:37 - 3rd",
+       "detail": "5:24 - 3rd",
        "teams": [
         {
          "id": "129689",
@@ -3999,7 +3943,54 @@
          "nick": "Dream",
          "location": "Atlanta",
          "home": false,
-         "score": "26"
+         "score": "28"
+        }
+       ]
+      }
+     },
+     "pteam": "GS",
+     "pname": "Gabby Williams",
+     "pid": "3142328"
+    },
+    {
+     "type": "prop",
+     "player": "Angel Reese",
+     "stat": "reb",
+     "op": "min",
+     "min": 10,
+     "text": "Angel Reese 10+ Rebounds",
+     "match": {
+      "path": "basketball/wnba",
+      "date": "20261026",
+      "groups": null,
+      "id": "401918309",
+      "snapshot": {
+       "date": "2026-10-27T00:00Z",
+       "period": 3,
+       "clock": 324.0,
+       "state": "in",
+       "completed": false,
+       "detail": "5:24 - 3rd",
+       "teams": [
+        {
+         "id": "129689",
+         "name": "Golden State Valkyries",
+         "abbr": "GS",
+         "short": "Valkyries",
+         "nick": "Valkyries",
+         "location": "Golden State",
+         "home": true,
+         "score": "34"
+        },
+        {
+         "id": "20",
+         "name": "Atlanta Dream",
+         "abbr": "ATL",
+         "short": "Dream",
+         "nick": "Dream",
+         "location": "Atlanta",
+         "home": false,
+         "score": "28"
         }
        ]
       }
@@ -4023,10 +4014,10 @@
       "snapshot": {
        "date": "2026-10-27T00:00Z",
        "period": 3,
-       "clock": 397.0,
+       "clock": 324.0,
        "state": "in",
        "completed": false,
-       "detail": "6:37 - 3rd",
+       "detail": "5:24 - 3rd",
        "teams": [
         {
          "id": "129689",
@@ -4046,7 +4037,7 @@
          "nick": "Dream",
          "location": "Atlanta",
          "home": false,
-         "score": "26"
+         "score": "28"
         }
        ]
       }
@@ -4057,7 +4048,7 @@
     }
    ],
    "match": null,
-   "sport": "NBA",
+   "sport": "WNBA",
    "cash_stake": 0.4,
    "payout": 0.99,
    "payout_est": false,
@@ -4127,10 +4118,10 @@
     "snapshot": {
      "date": "2026-10-26T23:00Z",
      "period": 3,
-     "clock": 549.0,
+     "clock": 407.0,
      "state": "in",
      "completed": false,
-     "detail": "9:09 - 3rd",
+     "detail": "6:47 - 3rd",
      "teams": [
       {
        "id": "13",
@@ -4356,7 +4347,7 @@
      "home": 0.005,
      "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NHL",
@@ -4429,10 +4420,10 @@
     "snapshot": {
      "date": "2026-10-26T23:00Z",
      "period": 4,
-     "clock": 26.4,
+     "clock": 10.4,
      "state": "in",
      "completed": false,
-     "detail": "26.4 - 4th",
+     "detail": "10.4 - 4th",
      "teams": [
       {
        "id": "5",
@@ -4442,7 +4433,7 @@
        "nick": "Cavaliers",
        "location": "Cleveland",
        "home": true,
-       "score": "111"
+       "score": "113"
       },
       {
        "id": "16",
@@ -4452,7 +4443,7 @@
        "nick": "Timberwolves",
        "location": "Minnesota",
        "home": false,
-       "score": "112"
+       "score": "113"
       }
      ]
     },
@@ -5128,10 +5119,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.235,
-     "away": 0.765,
-     "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "home": 0.3367,
+     "away": 0.6633,
+     "spread": 0.02,
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NBA",
@@ -5177,11 +5168,11 @@
     "id": "401909870",
     "snapshot": {
      "date": "2026-10-26T23:30Z",
-     "period": 3,
-     "clock": 0.0,
+     "period": 4,
+     "clock": 613.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 3rd",
+     "detail": "10:13 - 4th",
      "teams": [
       {
        "id": "2",
@@ -5191,7 +5182,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "105"
+       "score": "107"
       },
       {
        "id": "4",
@@ -5880,7 +5871,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NBA",
@@ -6286,10 +6277,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 2,
-     "clock": 148.0,
+     "clock": 112.0,
      "state": "in",
      "completed": false,
-     "detail": "2:28 - 2nd",
+     "detail": "1:52 - 2nd",
      "teams": [
       {
        "id": "21",
@@ -6956,10 +6947,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.325,
-     "away": 0.675,
+     "home": 0.3788,
+     "away": 0.6212,
      "spread": 0.01,
-     "t": "2026-10-27T01:26Z"
+     "t": "2026-10-27T01:31Z"
     }
    },
    "sport": "NFL",
@@ -12572,6 +12563,6 @@
   "FanDuel": 2.1,
   "PointsBet": 13.0
  },
- "hash": "d01a72a18f3655cd07255dde014e19cd3d5c2b7f",
- "generated_at": "2026-10-26T21:26:11-04:00"
+ "hash": "ca701c284364e71a290f2edcd3988cae5aa79da2",
+ "generated_at": "2026-10-26T21:31:04-04:00"
 }
