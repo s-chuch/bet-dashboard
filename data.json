@@ -282,11 +282,11 @@
     "id": "401874786",
     "snapshot": {
      "date": "2026-10-27T19:45Z",
-     "period": 1,
-     "clock": 2580.0,
+     "period": 2,
+     "clock": 4620.0,
      "state": "in",
      "completed": false,
-     "detail": "43'",
+     "detail": "77'",
      "teams": [
       {
        "id": "239",
@@ -1443,7 +1443,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T20:31Z"
+       "t": "2026-10-27T21:26Z"
       }
      },
      "pteam": "BAL",
@@ -2135,10 +2135,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.545,
-       "away": 0.455,
+       "home": 0.5505,
+       "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-27T20:31Z"
+       "t": "2026-10-27T21:26Z"
       }
      },
      "pteam": "ATL",
@@ -2860,7 +2860,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NBA",
@@ -3670,7 +3670,7 @@
      "home": 0.845,
      "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NBA",
@@ -4412,7 +4412,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NBA",
@@ -5161,7 +5161,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NBA",
@@ -5442,7 +5442,7 @@
      "home": 0.475,
      "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NHL",
@@ -6197,7 +6197,7 @@
      "home": 0.845,
      "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "NBA",
@@ -6527,7 +6527,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-27T20:31Z"
+     "t": "2026-10-27T21:26Z"
     }
    },
    "sport": "MLB",
@@ -11816,7 +11816,17 @@
   ]
  },
  "auto": {
-  "needs_review": [],
+  "needs_review": [
+   {
+    "bet_id": "18a957e1",
+    "book": "Caesars",
+    "event": "Lyon v Angers (French Ligue 1)",
+    "pick": "Angers",
+    "stake": "5.00 (bonus)",
+    "reason": "ESPN summary unavailable for soccer/fra.1 401876418",
+    "legs": []
+   }
+  ],
   "last_settled": [
    {
     "bet_id": "38cdf546",
@@ -12044,7 +12054,7 @@
     "at": "2026-10-25 15:49"
    }
   ],
-  "last_change_at": "2026-10-27 15:35 ET"
+  "last_change_at": "2026-10-27 17:26 ET"
  },
  "open_live_n": 21,
  "open_stake_by_book": {
@@ -12054,6 +12064,6 @@
   "FanDuel": 2.8,
   "PointsBet": 12.5
  },
- "hash": "eca7aab632c6969ba92c357526a10cd07f1a9e17",
- "generated_at": "2026-10-27T16:31:20-04:00"
+ "hash": "f3e894a19e51fcdf678d1fb6270b4dbc67ffd2e4",
+ "generated_at": "2026-10-27T17:26:42-04:00"
 }
