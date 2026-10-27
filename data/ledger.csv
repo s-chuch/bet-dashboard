@@ -484,3 +484,5 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-26 22:01,Caesars,0d3d206e,settled,0.00,"lost, no return"
 2026-10-26 22:18,bet365,ea264435,settled,0.00,"lost, no return"
 2026-10-26 22:20,FanDuel,7b4b7086,settled,0.00,"lost, no return"
+2026-10-26 23:19,bet365,628f8da7,settled,0.00,"lost, no return"
+2026-10-26 23:19,Caesars,5b1eb75f,return,1.08,won
