@@ -36,9 +36,27 @@
      "result": "won"
     }
    ]
+  },
+  {
+   "bet_id": "0a3a4d16",
+   "book": "Caesars",
+   "event": "NFL multi (DAL@PHI / BAL@BUF / ATL@TB)",
+   "pick": "Javonte Williams anytime TD (-170) + Derrick Henry anytime TD (-218) + Bijan Robinson anytime TD (-182)",
+   "stake": "0.50",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "0579a4e1",
+   "book": "FanDuel",
+   "pick": "Detroit Red Wings +1.5",
+   "result": "won",
+   "pnl": 0.35,
+   "final": "DET 4-3 EDM",
+   "at": "2026-10-27 00:24"
+  },
   {
    "bet_id": "628f8da7",
    "book": "bet365",
@@ -254,17 +272,8 @@
    "pnl": 0.0,
    "final": "CAR 1-2 PAL",
    "at": "2026-10-25 11:52"
-  },
-  {
-   "bet_id": "e3ec8310",
-   "book": "bet365",
-   "pick": "Brewers +1.5 + Rays +1.5 + Under 7.5",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "TB 4-5 MIL",
-   "at": "2026-10-24 23:49"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 23:19 ET"
+ "last_change_at": "2026-10-27 00:24 ET"
 }

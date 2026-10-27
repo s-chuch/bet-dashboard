@@ -7,8 +7,8 @@
   },
   {
    "book": "FanDuel",
-   "balance": 155.43,
-   "updated": "2026-10-26 21:26"
+   "balance": 156.28,
+   "updated": "2026-10-27 00:24"
   },
   {
    "book": "PointsBet",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 664.44,
+ "total": 665.29,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -252,272 +252,6 @@
    "payout_est": false,
    "start_ts": null,
    "clv": null
-  },
-  {
-   "bet_id": "0579a4e1",
-   "date": "2026-10-25",
-   "book": "FanDuel",
-   "event": "Detroit Red Wings @ Edmonton Oilers",
-   "market": "Spread",
-   "pick": "Detroit Red Wings +1.5",
-   "start": "Mon Oct 26, 9:30 PM ET",
-   "price": "-142",
-   "boosted_price": "",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 0.35,
-   "ev_pct": "2.25",
-   "fair_pct": "58.55",
-   "multi": false,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Detroit Red Wings",
-     "line": 1.5,
-     "women": false,
-     "text": "Detroit Red Wings +1.5",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261026",
-    "groups": null,
-    "id": "401892584",
-    "snapshot": {
-     "date": "2026-10-27T01:30Z",
-     "period": 2,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "End of 2nd",
-     "teams": [
-      {
-       "id": "6",
-       "name": "Edmonton Oilers",
-       "abbr": "EDM",
-       "short": "Oilers",
-       "nick": "Oilers",
-       "location": "Edmonton",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "5",
-       "name": "Detroit Red Wings",
-       "abbr": "DET",
-       "short": "Red Wings",
-       "nick": "Red Wings",
-       "location": "Detroit",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-26 18:19 ET",
-     "ml_home": 0.6129,
-     "spread_home_line": -1.5,
-     "spread_home_fair": 0.412,
-     "total_line": 6.5,
-     "total_over_fair": 0.5417
-    },
-    "pm": {
-     "slug": "nhl-det-edm-2026-10-26",
-     "title": "Red Wings vs. Oilers",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Oilers",
-        "Red Wings"
-       ],
-       "tokens": [
-        "47789090979211648018139894184541199933275895125648170631628781039986077598660",
-        "61972908982253015083367162678954697697089019224383196670380453317179028891874"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Oilers",
-        "Red Wings"
-       ],
-       "tokens": [
-        "29321097937448085944980958846645142708433732196328598543032481723024219477933",
-        "25625521483560475019038795580867203857959136055195866929402894164365422855581"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Oilers",
-        "Red Wings"
-       ],
-       "tokens": [
-        "11129499457420083821677582840058454035901670050176008049331136310549800470507",
-        "13234611764728348428746667903992099726917320581304236160178581658664066686676"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Red Wings",
-        "Oilers"
-       ],
-       "tokens": [
-        "17457454036059612526827045319322051833686174136201252566569029647713386638433",
-        "14633714810640153584673197196050384892131145362883444914716340945578203919946"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Red Wings",
-        "Oilers"
-       ],
-       "tokens": [
-        "4454140985484439895055572102500501344244067570423378864464212133636197257820",
-        "48493593937793302667939886948261873484056202825262514048986942336816232795308"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Red Wings",
-        "Oilers"
-       ],
-       "tokens": [
-        "40903325700578476034849285099772573474002297570530255888847124711243750399380",
-        "36160378535308648259647167893926601605624056170616383890567025368745665458994"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "32114604811438479602742879114137222246413549620677431506613341694221556876031",
-        "104701773877280500580049225464846485367063795628563159824237601790780762029848"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "45386949742217192775530786817678468318841312061679578432244624391125121465643",
-        "67839980908947744339986813975461820183350509156760397904808557734851727333868"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "94011450000143555961091180624688966616385749871129684450085433258413394824899",
-        "52743621121584882699774746546597495481183062077817381619214454592631038999804"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "40410276665042747796540538560576237022747282436930815089274877358505706675667",
-        "108430579724966052615190375087920253714241333503831241655819530584226213281947"
-       ]
-      },
-      {
-       "line": 2.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "1343500943530191194481518240596574478257373850840292110790261545059129713621",
-        "43571738876080796059792980481927801779344721110359971701196297497129824762510"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "65705201993013009692229651644134518846458223372104599442483356474031789051221",
-        "109574877624774408506467019092857154110526853208752810335160273241456873440642"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "93987851338973687882328068445113751169729302923939026942229815540691398070347",
-        "31281054048596654037274474895440835117368527137776812022963552670284045400483"
-       ]
-      },
-      {
-       "line": 9.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "23595065194225064495528225966520375010462128816816101938710173574449761414524",
-        "21090230080874999527238762434509392585258761940499143901098923537729577574559"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Red Wings",
-       "Oilers"
-      ],
-      "tokens": [
-       "73623226117844861336305571325405851816606403315987269850635124067032119639068",
-       "70789054901558277681035489017929760685920015907300677306590815080035400070328"
-      ]
-     }
-    },
-    "an": {
-     "id": 293485,
-     "home_team_id": 222,
-     "away_team_id": 232
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.5672,
-     "away": 0.4328,
-     "spread": 0.02,
-     "t": "2026-10-27T03:29Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 0.85,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-25 16:08",
-    "close_price": null,
-    "clv_pct": null
-   }
   },
   {
    "bet_id": "9552cc6f",
@@ -1485,6 +1219,21 @@
   {
    "date": "2026-10-25",
    "book": "FanDuel",
+   "event": "Detroit Red Wings @ Edmonton Oilers",
+   "pick": "Detroit Red Wings +1.5",
+   "result": "won",
+   "pnl": 0.35,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 16:08",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "book": "FanDuel",
    "event": "Barcelona v Real Madrid",
    "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
    "result": "lost",
@@ -1898,66 +1647,6 @@
    "auto": false,
    "clv": {
     "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Atlanta Hawks @ Orlando Magic",
-   "pick": "Paolo Banchero 20+ Points + Jalen Johnson 5+ Assists + Jalen Johnson 7+ Rebounds",
-   "result": "won",
-   "pnl": 0.25,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Golden State Warriors @ Los Angeles Lakers",
-   "pick": "Austin Reaves 20+ Points + Luka Doncic 25+ Points + Draymond Green 5+ Assists",
-   "result": "won",
-   "pnl": 0.25,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Minnesota Timberwolves @ Miami Heat",
-   "pick": "Giannis Antetokounmpo 20+ Points + Anthony Edwards 20+ Points + Bobby Portis 5+ Rebounds",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "pick": "Rhyne Howard 2+ Threes Made + 2 hidden legs",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:27",
     "close_price": null,
     "clv_pct": null
    }
@@ -2411,297 +2100,33 @@
     "close_price": null,
     "clv_pct": null
    }
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "FLA Panthers @ OTT Senators",
-   "pick": "Tim Stutzle: 1+ Points + Brady Tkachuk: 3+ Shots on Goal + Dylan Cozens: 1+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "Ferencvarosi TC v Torreeense",
-   "pick": "Torreeense ML",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "bet365",
-   "event": "MIL Bucks @ WAS Wizards",
-   "pick": "Kel'el Ware: 5+ Rebounds + Trae Young: 7+ Assists + Tyler Herro: 20+ Points",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Philadelphia Flyers @ Buffalo Sabres",
-   "pick": "Sabres ML + Tage Thompson U3.5 SOG + Rasmus Dahlin U0.5 pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Florida Panthers @ Ottawa Senators",
-   "pick": "Brady Tkachuk U3.5 SOG + Sam Reinhart O0.5 pts + Linus Ullmark O23.5 saves + Senators +1.5",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "pick": "Allisha Gray 15+ pts + Angel Reese 15+ pts + Gabby Williams 18+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Milwaukee Bucks @ Washington Wizards",
-   "pick": "Anthony Davis 20+ pts + Trae Young 20+ pts + Ryan Rollins 15+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "PointsBet",
-   "event": "Ipswich v Nottm Forest",
-   "pick": "Under 4.5 goals + Chris Wood 2+ shots + Abdoul Ouattara 1+ shots",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "PointsBet",
-   "event": "Kawhi Leonard Specials",
-   "pick": "Kawhi Leonard 40+ pts+reb+ast",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "PointsBet",
-   "event": "Milwaukee Bucks @ Washington Wizards",
-   "pick": "Anthony Davis 17+ pts + Trae Young 15+ pts + Tyler Herro 16+ pts",
-   "result": "won",
-   "pnl": 0.53,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "pick": "Brewers ML + Over 8.5",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Patriots ML + Over 52.5",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Atlanta Hawks @ Orlando Magic",
-   "pick": "Jalen Johnson 20+ pts + Franz Wagner 20+ pts + Nickeil Alexander-Walker 18+ pts + Paolo Banchero 21+ pts",
-   "result": "won",
-   "pnl": 2.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Milwaukee Bucks @ Washington Wizards",
-   "pick": "Tyler Herro 22+ pts + Ryan Rollins 16+ pts + Trae Young 18+ pts + Anthony Davis 20+ pts",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "Caesars",
-   "event": "Aston Villa v Viking / Real Madrid v RB Leipzig",
-   "pick": "Nicolas Jackson AGS + Tammy Abraham AGS (SGP) + Carlos Espi AGS",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Caleb Williams 225+ pass yds + Drake Maye 2+ pass TD + Caleb Williams 2+ pass TD + Rhamondre Stevenson 40+ rush yds",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Milwaukee Bucks @ Washington Wizards",
-   "pick": "AJ Green 2+ threes",
-   "result": "won",
-   "pnl": 0.15,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Florida Panthers @ Ottawa Senators",
-   "pick": "Matthew Tkachuk 2+ SOG + Carter Verhaeghe 2+ SOG + Brady Tkachuk 3+ SOG",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Atlanta Hawks @ Orlando Magic",
-   "pick": "Franz Wagner 30+ pts+reb+ast",
-   "result": "won",
-   "pnl": 0.16,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Milwaukee Bucks @ Washington Wizards",
-   "pick": "Trae Young 18+ pts + Anthony Davis 20+ pts + Tyler Herro 20+ pts",
-   "result": "won",
-   "pnl": 0.91,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Golden State Valkyries @ Atlanta Dream",
-   "pick": "Gabby Williams 19+ pts + Rhyne Howard 15+ pts + Allisha Gray 15+ pts",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": true,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "DraftKings",
-   "event": "Chicago Bulls @ Toronto Raptors",
-   "pick": "Scottie Barnes 30+ pts+reb+ast",
-   "result": "won",
-   "pnl": 0.21,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
-  },
-  {
-   "date": "2026-10-21",
-   "book": "theScore",
-   "event": "Lille v Galatasaray",
-   "pick": "Under 3.5 Total Goals + Yes Both Teams To Score + Under 10.5 Total Corners",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": null
   }
  ],
- "pnl_total": 109.46,
+ "pnl_total": 109.81,
  "unsettled": {
-  "n": 17,
-  "cash_stake": 13.7,
-  "max_payout": 291.12,
+  "n": 16,
+  "cash_stake": 13.2,
+  "max_payout": 290.27,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 13.7,
+ "open_stake": 13.2,
  "recs": {
   "stats": {
    "overall": {
     "n": 146,
-    "w": 46,
+    "w": 47,
     "l": 68,
     "p": 0,
-    "pending": 32,
-    "win_pct": 40.4,
-    "units": 22.63,
-    "roi_pct": 24.3,
-    "roi_n": 93,
+    "pending": 31,
+    "win_pct": 40.9,
+    "units": 23.33,
+    "roi_pct": 24.8,
+    "roi_n": 94,
     "exp_roi_pct": 9.5,
-    "exp_wins": 39.4,
-    "exp_wins_n": 113,
-    "wins_with_fair": 45
+    "exp_wins": 39.9,
+    "exp_wins_n": 114,
+    "wins_with_fair": 46
    },
    "by_promo": {
     "Bet Reset $5": {
@@ -2781,18 +2206,18 @@
     },
     "cash": {
      "n": 44,
-     "w": 19,
+     "w": 20,
      "l": 23,
      "p": 0,
-     "pending": 2,
-     "win_pct": 45.2,
-     "units": 15.3,
-     "roi_pct": 36.4,
-     "roi_n": 42,
+     "pending": 1,
+     "win_pct": 46.5,
+     "units": 16.0,
+     "roi_pct": 37.2,
+     "roi_n": 43,
      "exp_roi_pct": 5.3,
-     "exp_wins": 15.7,
-     "exp_wins_n": 42,
-     "wins_with_fair": 19
+     "exp_wins": 16.2,
+     "exp_wins_n": 43,
+     "wins_with_fair": 20
     },
     "live boost": {
      "n": 1,
@@ -2933,18 +2358,18 @@
     },
     "NHL": {
      "n": 13,
-     "w": 7,
+     "w": 8,
      "l": 5,
      "p": 0,
-     "pending": 1,
-     "win_pct": 58.3,
-     "units": 2.61,
-     "roi_pct": 21.8,
-     "roi_n": 12,
-     "exp_roi_pct": 11.1,
-     "exp_wins": 5.8,
-     "exp_wins_n": 12,
-     "wins_with_fair": 7
+     "pending": 0,
+     "win_pct": 61.5,
+     "units": 3.32,
+     "roi_pct": 25.5,
+     "roi_n": 13,
+     "exp_roi_pct": 10.5,
+     "exp_wins": 6.4,
+     "exp_wins_n": 13,
+     "wins_with_fair": 8
     },
     "SOCCER": {
      "n": 2,
@@ -3025,18 +2450,18 @@
    "by_placed": {
     "yes": {
      "n": 80,
-     "w": 31,
+     "w": 32,
      "l": 48,
      "p": 0,
-     "pending": 1,
-     "win_pct": 39.2,
-     "units": 27.74,
-     "roi_pct": 43.3,
-     "roi_n": 64,
-     "exp_roi_pct": 11.8,
-     "exp_wins": 26.6,
-     "exp_wins_n": 78,
-     "wins_with_fair": 30
+     "pending": 0,
+     "win_pct": 40.0,
+     "units": 28.44,
+     "roi_pct": 43.8,
+     "roi_n": 65,
+     "exp_roi_pct": 11.7,
+     "exp_wins": 27.2,
+     "exp_wins_n": 79,
+     "wins_with_fair": 31
     },
     "no": {
      "n": 66,
@@ -3227,11 +2652,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "DET 4-3 EDM (Final/SO)",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-27|Detroit Red Wings @ Edmonton Oilers|Detroit Red Wings +1.5)",
-    "units": null
+    "units": 0.7
    },
    {
     "rec_id": "a5337ed6",
@@ -6746,9 +6171,27 @@
       "result": "won"
      }
     ]
+   },
+   {
+    "bet_id": "0a3a4d16",
+    "book": "Caesars",
+    "event": "NFL multi (DAL@PHI / BAL@BUF / ATL@TB)",
+    "pick": "Javonte Williams anytime TD (-170) + Derrick Henry anytime TD (-218) + Bijan Robinson anytime TD (-182)",
+    "stake": "0.50",
+    "reason": "no ESPN game matched",
+    "legs": []
    }
   ],
   "last_settled": [
+   {
+    "bet_id": "0579a4e1",
+    "book": "FanDuel",
+    "pick": "Detroit Red Wings +1.5",
+    "result": "won",
+    "pnl": 0.35,
+    "final": "DET 4-3 EDM",
+    "at": "2026-10-27 00:24"
+   },
    {
     "bet_id": "628f8da7",
     "book": "bet365",
@@ -6964,27 +6407,18 @@
     "pnl": 0.0,
     "final": "CAR 1-2 PAL",
     "at": "2026-10-25 11:52"
-   },
-   {
-    "bet_id": "e3ec8310",
-    "book": "bet365",
-    "pick": "Brewers +1.5 + Rays +1.5 + Under 7.5",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "TB 4-5 MIL",
-    "at": "2026-10-24 23:49"
    }
   ],
-  "last_change_at": "2026-10-26 23:19 ET"
+  "last_change_at": "2026-10-27 00:24 ET"
  },
- "open_live_n": 14,
+ "open_live_n": 13,
  "open_stake_by_book": {
   "bet365": 0.4,
   "Caesars": 30.5,
   "DraftKings": 0.1,
-  "FanDuel": 1.6,
+  "FanDuel": 1.1,
   "PointsBet": 12.5
  },
- "hash": "f3c84ddea9ef63ad710734e9683d732d03f58a39",
- "generated_at": "2026-10-26T23:29:06-04:00"
+ "hash": "a95457f4e46497233c1066f8e3f5548ff8d0a9aa",
+ "generated_at": "2026-10-27T00:24:12-04:00"
 }
