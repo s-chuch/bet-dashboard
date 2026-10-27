@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "c0dd912a",
+   "book": "bet365",
+   "pick": "Anthony Edwards 20+ Points + Donovan Mitchell 20+ Points + LaMelo Ball 15+ Points",
+   "result": "lost",
+   "pnl": -0.4,
+   "final": "MIN 125-127 CLE",
+   "at": "2026-10-26 22:01"
+  },
+  {
    "bet_id": "c3e92bb3",
    "book": "bet365",
    "pick": "Artemi Panarin 1+ Points + Adrian Kempe 2+ Shots on Goal + Artemi Panarin 3+ Shots on Goal",
@@ -216,17 +225,8 @@
    "pnl": -0.4,
    "final": "TOR 7-2 EDM",
    "at": "2026-10-24 21:47"
-  },
-  {
-   "bet_id": "e0f0a593",
-   "book": "FanDuel",
-   "pick": "Giannis Antetokounmpo 15+ Points + Brandon Miller 15+ Points + Bam Adebayo 15+ Points + Naz Reid 15+ Points",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "MIA 110-115 CHA",
-   "at": "2026-10-24 20:40"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 21:51 ET"
+ "last_change_at": "2026-10-26 22:01 ET"
 }
