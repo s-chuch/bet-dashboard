@@ -14,6 +14,8 @@ CASES = [
     ("Tijuana", "Match Result (bonus bet $2.50)", {"type": "ml", "team": "Tijuana"}),
     ("OKC Thunder to win NBA Cup", "Futures", {"type": "unknown"}),
     ("Philadelphia 76ers", "Moneyline (NBA No Sweat bonus bet $1.00)", {"type": "ml", "team": "Philadelphia 76ers"}), ("San Francisco 49ers", "Moneyline", {"type": "ml"}),
+    ("Gabby Williams 2+ Threes Made", "", {"type": "prop", "stat": "threes", "min": 2}), ("Angel Reese 10+ Rebounds Recorded", "", {"stat": "reb"}),
+    ("Caitlin Clark 5+ 3-Pointers Made", "", {"stat": "threes"}), ("A'ja Wilson 25+ Points Scored", "", {"stat": "pts"}),
     ("Celtics ML", "Moneyline", {"type": "ml"}), ("Raptors +4.5", "Spread", {"type": "spread", "line": 4.5}),
 ]
 fails = 0
@@ -21,4 +23,10 @@ for t, mk, want in CASES:
     got = build.parse_leg(t, mk)
     bad = {k: got.get(k) for k, v in want.items() if got.get(k) != v}
     if bad: fails += 1; print("FAIL", t, "->", got)
-print(f"{len(CASES) - fails}/{len(CASES)} passed"); sys.exit(1 if fails else 0)
+PM = [("Gabby Williams", "Grant Williams", False), ("Gabby Williams", "Gabby Williams", True), ("Gabby Williams", "Gabrielle Williams", True),
+      ("J. Carter", "Jalen Carter", True), ("Matt Smith", "Matthew Smith", True), ("Jimmy Butler", "James Butler", True), ("Kawhi Leonard", "Kawhi Leonard", True),
+      ("Casemiro", "Casemiro", True), ("Allan", "Allan Saint-Maximin", True), ("Wemby", "Victor Wembanyama", False), ("Tatum", "Jayson Tatum", True)]
+pm_fail = [x for x in PM if bool(build.player_match(x[0], x[1])) != x[2]]
+for x in pm_fail: print("FAIL player_match", x)
+fails += len(pm_fail)
+print(f"{len(CASES) + len(PM) - fails}/{len(CASES) + len(PM)} passed"); sys.exit(1 if fails else 0)

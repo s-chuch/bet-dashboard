@@ -144,7 +144,7 @@ PROP_STATS = [
 ]
 
 def _prop_stat(words):
-    w = words.strip()
+    w = re.sub(r"\s+(?:made|scored|recorded|total)$|^total\s+", "", words.strip(), flags=re.I).strip()   # "Threes Made", "Points Scored"
     for rx, st in PROP_STATS:
         if re.fullmatch(rx, w, re.I): return st
     return None
@@ -235,11 +235,22 @@ def name_parts(s):
     if not w: return None, None
     return (w[0][0] if len(w) > 1 else None), w[-1]
 
+NICK = {"jimmy": "james", "bobby": "robert", "bob": "robert", "billy": "william", "bill": "william", "ted": "edward", "tony": "anthony", "chuck": "charles",
+        "hank": "henry", "jack": "john", "ricky": "richard", "dick": "richard", "peggy": "margaret", "liz": "elizabeth", "beth": "elizabeth"}
+def first_name_ok(bet_name, full_name):
+    """A full first name on the slip ("Gabby") must agree with the roster's ("Grant" no, "Gabrielle" yes); initials and one-word names are not checked."""
+    b = norm(bet_name or ""); r = [x for x in norm(full_name or "") if x not in SUFFIX]
+    if len(b) < 2 or not r or len(b[0]) < 3: return True
+    x, y = b[0], r[0]
+    if len(y) < 2: return True
+    return x.startswith(y) or y.startswith(x) or NICK.get(x) == y or NICK.get(y) == x or x[:2] == y[:2] and x[:3] == y[:3]
+
 def player_match(bet_name, full_name):
     fi, last = name_parts(bet_name)
     if not last: return False
     w = [x for x in norm(full_name or "") if x not in SUFFIX]
     if not w: return False
+    if fi is not None and not first_name_ok(bet_name, full_name): return False
     if fi is None and last == w[0]: return True   # one-word names a book prints ("Allan", "Casemiro"): the first name counts
     if w[-1] != last and last not in w[1:]: return False
     return fi is None or w[0][0] == fi
@@ -271,9 +282,13 @@ def resolve_props(bet):
             else: L["pcands"] = [a["name"] for _, a in hits]
 
 PLAYER_PATHS = ["basketball/nba", "hockey/nhl", "football/nfl", "baseball/mlb", "basketball/wnba"]
-def find_player_game(player, date):
-    """Player-only bets ("Kawhi Leonard Specials"): the one game on that day whose roster has exactly this player."""
+def find_player_game(player, date, hint=None):
+    """Player-only bets ("Kawhi Leonard Specials"): the one game on that day whose roster has exactly this player.
+    hint = the game the bet's own event names: if the player is on one of its rosters that game wins, before any league scan."""
     if not player or not date: return None
+    if hint and name_parts(player)[0] and len(name_parts(player)[1] or "") > 2:
+        for t in hint["snapshot"]["teams"]:
+            if any(player_match(player, a["name"]) for a in team_roster(hint["path"], t.get("id"))): return hint
     hits = []
     for path in PLAYER_PATHS:
         for ev in fetch(sb_url(path, date.strftime("%Y%m%d"))).get("events", []):
@@ -388,6 +403,7 @@ def build_bet(row):
     is_multi = bool(re.search(r"parlay|sgp|leg", market + " " + pick, re.I))
     leg_texts = [x for x in re.split(r"\s+\+\s+", pick) if x]
     same_game = bool(re.search(r"\s@\s|\svs\.?\s|\sv\s", ev_clean, re.I))
+    same_game_ev = same_game   # the event names a game, even when the legs end up looked up one by one
     if is_multi and len(leg_texts) < 2:
         ev_legs = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]
         if len(ev_legs) > 1 or not same_game:   # "A @ B" with legs not logged: keep the game link so the score still shows
@@ -437,10 +453,18 @@ def build_bet(row):
                 if pm: bet["match"] = pm; bet["start"] = ""   # the slip time was the placement time: take the game's start
             except Exception as e: print("player game lookup failed", e, file=sys.stderr)
         elif len(players) > 1 and all(L.get("type") == "prop" for L in legs):   # a parlay of players from different games: each leg gets its own game
+            hint = None
+            if same_game_ev:
+                try: hint = find_game([team_alias(re.sub(r"\s+(Women|W)$", "", t.strip())) for t in re.split(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", ev_clean, flags=re.I)], paths, date,
+                                      bool(re.search(r"NWSL|WNBA|\bWomen\b", ev_raw + " " + market)))
+                except Exception as e: print("event game lookup failed", e, file=sys.stderr)
             for L in legs:
                 try:
-                    L["match"] = find_player_game(L.get("player"), date)
+                    L["match"] = find_player_game(L.get("player"), date, hint)
                 except Exception as e: print("player game lookup failed", e, file=sys.stderr)
+            if hint and all((L.get("match") or {}).get("id") == hint["id"] for L in legs):   # every player is in the event's game: one match for the whole bet
+                bet["match"] = hint
+                for L in legs: L.pop("match", None)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
     if m and not str(bet.get("start") or "").strip() and ET:   # kickoff missing on the slip: take it from the matched game
         try:

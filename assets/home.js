@@ -436,7 +436,7 @@ const PROP={ // stat -> [value(stats, ctx), unit]
   tb:[(s,c)=>c.plays&&s.hits!=null?(s._single||0)+2*(s._double||0)+3*(s._triple||0)+4*(s["_home-run"]||0):null,"TB"]};
 const STATRX=[[/fouls?\s*(?:drawn|won|suffered)|was fouled|fouled/i,"foulsD"],[/fouls?(?:\s*(?:committed|conceded))?|free kicks? conceded/i,"foulsC"],
   [/shots?\s*on\s*(?:target|goal)|\bsot\b/i,"sot"],[/(?:total\s+)?shots?/i,"shots"],[/tackles?/i,"tackles"],[/offsides?/i,"offsides"],[/yellow|bookings?|carded|cards?/i,"cards"],
-  [/saves?/i,"saves"],[/assists?/i,"assists"],[/goals?/i,"goals"]];
+  [/saves?/i,"saves"],[/assists?/i,"assists"],[/goals?/i,"goals"],[/threes?|3\s*pm|3-?\s*pointers?|three\s*pointers?/i,"threes"],[/rebounds?|\breb\b/i,"reb"],[/points?|\bpts\b/i,"pts"]];
 function inferStat(L){const w=String(L.stat_raw||"").trim();if(w){for(const[rx,k]of STATRX)if(rx.test(w))return k}return null}
 function propStatus(L,g,matchId){L=L.stat?L:{...L,stat:inferStat(L)};
   if(!L.player)return{s:"?",lbl:"?",n:"stat not found (player not named in the bet log)"};
