@@ -144,7 +144,7 @@ PROP_STATS = [
 ]
 
 def _prop_stat(words):
-    w = re.sub(r"\s+(?:made|scored|recorded|total)$|^total\s+", "", words.strip(), flags=re.I).strip()   # "Threes Made", "Points Scored"
+    w = re.sub(r"\s+(?:made|scored|recorded)$", "", words.strip(), flags=re.I).strip()   # "Threes Made", "Points Scored"
     for rx, st in PROP_STATS:
         if re.fullmatch(rx, w, re.I): return st
     return None

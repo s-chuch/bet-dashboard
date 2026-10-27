@@ -15,7 +15,7 @@ CASES = [
     ("OKC Thunder to win NBA Cup", "Futures", {"type": "unknown"}),
     ("Philadelphia 76ers", "Moneyline (NBA No Sweat bonus bet $1.00)", {"type": "ml", "team": "Philadelphia 76ers"}), ("San Francisco 49ers", "Moneyline", {"type": "ml"}),
     ("Gabby Williams 2+ Threes Made", "", {"type": "prop", "stat": "threes", "min": 2}), ("Angel Reese 10+ Rebounds Recorded", "", {"stat": "reb"}),
-    ("Caitlin Clark 5+ 3-Pointers Made", "", {"stat": "threes"}), ("A'ja Wilson 25+ Points Scored", "", {"stat": "pts"}),
+    ("Caitlin Clark 5+ 3-Pointers Made", "", {"stat": "threes"}), ("Chandler Simpson 1+ Total Bases", "", {"stat": "tb"}), ("Yandy Diaz 2+ Total Bases", "", {"stat": "tb"}), ("Luka Doncic 8+ Total Rebounds", "", {"type": "prop"}), ("A'ja Wilson 25+ Points Scored", "", {"stat": "pts"}),
     ("Celtics ML", "Moneyline", {"type": "ml"}), ("Raptors +4.5", "Spread", {"type": "spread", "line": 4.5}),
 ]
 fails = 0
