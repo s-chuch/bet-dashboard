@@ -2,6 +2,24 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "f94e9069",
+   "book": "FanDuel",
+   "pick": "Charlotte Hornets -1.5",
+   "result": "won",
+   "pnl": 0.71,
+   "final": "WSH 103-110 CHA",
+   "at": "2026-10-26 21:26"
+  },
+  {
+   "bet_id": "ae6fff5d",
+   "book": "FanDuel",
+   "pick": "Charlotte Hornets ML",
+   "result": "won",
+   "pnl": 0.57,
+   "final": "WSH 103-110 CHA",
+   "at": "2026-10-26 21:26"
+  },
+  {
    "bet_id": "6a8a8c79",
    "book": "PointsBet",
    "pick": "Philadelphia 76ers",
@@ -207,26 +225,8 @@
    "pnl": -1.0,
    "final": "MIA 110-115 CHA",
    "at": "2026-10-24 20:40"
-  },
-  {
-   "bet_id": "e65b4c69",
-   "book": "Caesars",
-   "pick": "Fluff Bothwell anytime TD + John Mateer 260+ pass yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "OU 23-15 MSST",
-   "at": "2026-10-24 18:54"
-  },
-  {
-   "bet_id": "9be2483a",
-   "book": "bet365",
-   "pick": "Oregon ML + Jordon Davison anytime TD + Collin Dixon 40+ Receiving Yards",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "ORE 10-21 ILL",
-   "at": "2026-10-24 18:08"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 18:26 ET"
+ "last_change_at": "2026-10-26 21:26 ET"
 }
