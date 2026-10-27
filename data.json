@@ -1712,7 +1712,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T12:06Z"
+     "t": "2026-10-27T12:07Z"
     }
    },
    "sport": "NBA",
@@ -2893,11 +2893,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 148,
+    "n": 149,
     "w": 47,
     "l": 68,
     "p": 0,
-    "pending": 33,
+    "pending": 34,
     "win_pct": 40.9,
     "units": 23.33,
     "roi_pct": 24.8,
@@ -2984,11 +2984,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 46,
+     "n": 47,
      "w": 20,
      "l": 23,
      "p": 0,
-     "pending": 3,
+     "pending": 4,
      "win_pct": 46.5,
      "units": 16.0,
      "roi_pct": 37.2,
@@ -3091,11 +3091,11 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 29,
+     "n": 30,
      "w": 8,
      "l": 14,
      "p": 0,
-     "pending": 7,
+     "pending": 8,
      "win_pct": 36.4,
      "units": -2.77,
      "roi_pct": -14.6,
@@ -3243,11 +3243,11 @@
      "wins_with_fair": 31
     },
     "no": {
-     "n": 66,
+     "n": 67,
      "w": 15,
      "l": 20,
      "p": 0,
-     "pending": 31,
+     "pending": 32,
      "win_pct": 42.9,
      "units": -5.11,
      "roi_pct": -17.6,
@@ -3276,6 +3276,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "1fd5cd6b",
+    "rec_date": "2026-10-27",
+    "rec_time_et": "08:07",
+    "sport": "NBA",
+    "event": "Brooklyn Nets @ Boston Celtics",
+    "market": "cash",
+    "selection": "Brooklyn Nets to win",
+    "book": "bet365",
+    "rec_price": "+425",
+    "eff_price": "+425",
+    "fair_pct": "19.54",
+    "ev_pct": "2.58",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: +410",
+    "units": null
+   },
    {
     "rec_id": "9f70efc0",
     "rec_date": "2026-10-27",
@@ -7244,6 +7267,6 @@
   "FanDuel": 1.3,
   "PointsBet": 12.5
  },
- "hash": "29791da3707a6add1efa1845faf98f863ee3bc83",
- "generated_at": "2026-10-27T08:06:16-04:00"
+ "hash": "cabcfecd56f30ba4af07534b674c6541471a7f7e",
+ "generated_at": "2026-10-27T08:07:21-04:00"
 }
