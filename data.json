@@ -647,10 +647,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 83.0,
+     "clock": 61.0,
      "state": "in",
      "completed": false,
-     "detail": "1:23 - 3rd",
+     "detail": "1:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -1317,9 +1317,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1493,
-     "away": 0.8507,
-     "spread": 0.02,
+     "home": 0.1263,
+     "away": 0.8737,
+     "spread": 0.01,
      "t": "2026-10-27T02:33Z"
     }
    },
@@ -1366,10 +1366,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 83.0,
+     "clock": 61.0,
      "state": "in",
      "completed": false,
-     "detail": "1:23 - 3rd",
+     "detail": "1:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -2036,9 +2036,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1493,
-     "away": 0.8507,
-     "spread": 0.02,
+     "home": 0.1263,
+     "away": 0.8737,
+     "spread": 0.01,
      "t": "2026-10-27T02:33Z"
     }
    },
@@ -2112,10 +2112,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 83.0,
+     "clock": 61.0,
      "state": "in",
      "completed": false,
-     "detail": "1:23 - 3rd",
+     "detail": "1:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -2782,9 +2782,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1493,
-     "away": 0.8507,
-     "spread": 0.02,
+     "home": 0.1263,
+     "away": 0.8737,
+     "spread": 0.01,
      "t": "2026-10-27T02:33Z"
     }
    },
@@ -3630,10 +3630,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 83.0,
+     "clock": 61.0,
      "state": "in",
      "completed": false,
-     "detail": "1:23 - 3rd",
+     "detail": "1:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -4300,9 +4300,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1493,
-     "away": 0.8507,
-     "spread": 0.02,
+     "home": 0.1263,
+     "away": 0.8737,
+     "spread": 0.01,
      "t": "2026-10-27T02:33Z"
     }
    },
@@ -9991,6 +9991,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "e02abfa11babf0d04cd9840c51b1ee402402144e",
- "generated_at": "2026-10-26T22:33:21-04:00"
+ "hash": "ca80cb8ab1835f8906d06ec678f5a4d6713b9094",
+ "generated_at": "2026-10-26T22:33:39-04:00"
 }
