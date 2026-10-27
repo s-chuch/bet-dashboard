@@ -1443,7 +1443,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T19:09Z"
+       "t": "2026-10-27T19:12Z"
       }
      },
      "pteam": "BAL",
@@ -2138,7 +2138,7 @@
        "home": 0.545,
        "away": 0.455,
        "spread": 0.01,
-       "t": "2026-10-27T19:09Z"
+       "t": "2026-10-27T19:12Z"
       }
      },
      "pteam": "ATL",
@@ -2860,7 +2860,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NBA",
@@ -3670,7 +3670,7 @@
      "home": 0.8535,
      "away": 0.1465,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NBA",
@@ -4412,7 +4412,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NBA",
@@ -5161,7 +5161,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NBA",
@@ -5442,7 +5442,7 @@
      "home": 0.475,
      "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NHL",
@@ -6197,7 +6197,7 @@
      "home": 0.8535,
      "away": 0.1465,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "NBA",
@@ -6527,7 +6527,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-27T19:09Z"
+     "t": "2026-10-27T19:12Z"
     }
    },
    "sport": "MLB",
@@ -7681,11 +7681,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 149,
+    "n": 151,
     "w": 47,
     "l": 68,
     "p": 0,
-    "pending": 34,
+    "pending": 36,
     "win_pct": 40.9,
     "units": 23.33,
     "roi_pct": 24.8,
@@ -7772,11 +7772,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 47,
+     "n": 49,
      "w": 20,
      "l": 23,
      "p": 0,
-     "pending": 4,
+     "pending": 6,
      "win_pct": 46.5,
      "units": 16.0,
      "roi_pct": 37.2,
@@ -7894,11 +7894,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 32,
+     "n": 33,
      "w": 9,
      "l": 19,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 32.1,
      "units": 11.87,
      "roi_pct": 42.4,
@@ -7924,11 +7924,11 @@
      "wins_with_fair": 7
     },
     "NHL": {
-     "n": 13,
+     "n": 14,
      "w": 8,
      "l": 5,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 61.5,
      "units": 3.32,
      "roi_pct": 25.5,
@@ -8031,11 +8031,11 @@
      "wins_with_fair": 31
     },
     "no": {
-     "n": 66,
+     "n": 68,
      "w": 15,
      "l": 20,
      "p": 0,
-     "pending": 31,
+     "pending": 33,
      "win_pct": 42.9,
      "units": -5.11,
      "roi_pct": -17.6,
@@ -8064,6 +8064,52 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "5ee37163",
+    "rec_date": "2026-10-27",
+    "rec_time_et": "15:12",
+    "sport": "NCAAF",
+    "event": "Sam Houston State Bearkats @ Missouri State Bears",
+    "market": "Total",
+    "selection": "Under 53.5",
+    "book": "theScore",
+    "rec_price": "-110",
+    "eff_price": "-110",
+    "fair_pct": "54.12",
+    "ev_pct": "3.32",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan; Pinnacle alt line; yes at -110 or better",
+    "units": null
+   },
+   {
+    "rec_id": "f9cb3668",
+    "rec_date": "2026-10-27",
+    "rec_time_et": "15:12",
+    "sport": "NHL",
+    "event": "Montreal Canadiens @ St. Louis Blues",
+    "market": "Moneyline",
+    "selection": "Montreal Canadiens to win",
+    "book": "theScore",
+    "rec_price": "+105",
+    "eff_price": "+105",
+    "fair_pct": "51.27",
+    "ev_pct": "5.10",
+    "stake": "0.15",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "rec.py add",
+    "notes": "3:07 PM scan; yes at +101 or better",
+    "units": null
+   },
    {
     "rec_id": "1fd5cd6b",
     "rec_date": "2026-10-27",
@@ -12008,6 +12054,6 @@
   "FanDuel": 2.8,
   "PointsBet": 12.5
  },
- "hash": "9f6f149795af9662021dc9313a3ee25297041627",
- "generated_at": "2026-10-27T15:09:31-04:00"
+ "hash": "7794ecb9ea9f94fcc1670476b1000b08dc04998b",
+ "generated_at": "2026-10-27T15:12:55-04:00"
 }
