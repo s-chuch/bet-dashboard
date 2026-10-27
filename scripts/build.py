@@ -152,6 +152,7 @@ def _prop_stat(words):
 def parse_leg(text, market):
     t = text.strip()
     t = re.sub(r"\s*\((?:SGP|same game|boosted|boost|bonus)[^)]*\)\s*$", "", t, flags=re.I).strip() or t   # trailing slip notes like "(SGP)"
+    t = re.sub(r"\s*\([+-]\d{2,4}\)\s*$", "", t).strip() or t   # the price some slips print after a leg: "Kelce anytime TD (-170)"
     t = re.sub(r"\s+alt(?:ernate)?\.?\s+(?:spread|total|line)s?$", "", t, flags=re.I).strip() or t   # "Over 48.5 alt total"
     t = re.sub(r"\s*\(3-?way\)\s*$", "", t, flags=re.I).strip() or t                                  # "Volkanovski ML (3-way)"
     if re.fullmatch(r"draw|tie|the draw", t, re.I): return {"type": "draw", "text": t}   # 3-way soccer market
@@ -193,7 +194,7 @@ def parse_leg(text, market):
     # "First TD Scorer" / "Last TD Scorer" / "2nd TD": a different market from anytime TD (it depends on scoring ORDER), so it
     # must NOT be read as "anytime TD for a player called 'McCaffrey First'". Left ungraded: settled by hand.
     m = re.match(r"^(.+?)\s+(?:first|1st|last|2nd|second)\s+(?:TD|touchdown)(?:\s+scorer)?$", t, re.I)
-    if m: return {"type": "unknown", "text": t, "note": "first/last TD scorer: settle by hand", "player": m[1].strip()}
+    if m: return {"type": "unknown", "text": t, "note": "first/last TD scorer: graded from ESPN scoring plays once the game is final", "player": m[1].strip()}
     # "J. Carter TD", "Kelce anytime TD"
     m = re.match(r"^(.+?)\s+(?:anytime\s+)?(?:TD|touchdown)(?:\s+scorer)?$|^(.+?)\s+ATT?D$", t, re.I)
     if m: return {"type": "prop", "player": (m[1] or m[2]).strip(), "stat": "td", "op": "min", "min": 1, "text": t}
@@ -282,13 +283,33 @@ def resolve_props(bet):
             else: L["pcands"] = [a["name"] for _, a in hits]
 
 PLAYER_PATHS = ["basketball/nba", "hockey/nhl", "football/nfl", "baseball/mlb", "basketball/wnba"]
+def event_games(ev_clean, ctx, paths, date):
+    """Games named by a slip's event: 'A @ B', or several joined by ' / ' (abbreviations allowed: 'DAL@PHI / BAL@BUF')."""
+    out = []
+    women = bool(re.search(r"NWSL|WNBA|\bWomen\b", ctx))
+    inner = re.search(r"\(([^)]*@[^)]*)\)", ev_clean)   # "NFL multi (DAL@PHI / BAL@BUF)": the games are in the brackets
+    for seg in re.split(r"\s*/\s*|\s*;\s*", inner[1] if inner else re.sub(r"\s*\([^)]*\)", "", ev_clean)):
+        names = [team_alias(re.sub(r"\s+(Women|W)$", "", x.strip())) for x in re.split(r"\s*@\s*|\s+vs\.?\s+|\s+v\s+", seg.strip()) if x.strip()]
+        if len(names) != 2: continue
+        g = None
+        try:
+            g = find_game(names, paths, date, women)
+            if not g and date and len(re.split(r"\s*/\s*|\s*;\s*", inner[1] if inner else "")) > 1:   # a multi-game slip can name games later in the week
+                for k in (3, 6, 9):
+                    g = find_game(names, paths, date + datetime.timedelta(days=k), women)
+                    if g: break
+        except Exception as e: print("event game lookup failed", e, file=sys.stderr)
+        if g and all(g["id"] != o["id"] for o in out): out.append(g)
+    return out
+
 def find_player_game(player, date, hint=None):
     """Player-only bets ("Kawhi Leonard Specials"): the one game on that day whose roster has exactly this player.
     hint = the game the bet's own event names: if the player is on one of its rosters that game wins, before any league scan."""
     if not player or not date: return None
     if hint and name_parts(player)[0] and len(name_parts(player)[1] or "") > 2:
-        for t in hint["snapshot"]["teams"]:
-            if any(player_match(player, a["name"]) for a in team_roster(hint["path"], t.get("id"))): return hint
+        for h in (hint if isinstance(hint, list) else [hint]):
+            for t in h["snapshot"]["teams"]:
+                if any(player_match(player, a["name"]) for a in team_roster(h["path"], t.get("id"))): return h
     hits = []
     for path in PLAYER_PATHS:
         for ev in fetch(sb_url(path, date.strftime("%Y%m%d"))).get("events", []):
@@ -453,17 +474,13 @@ def build_bet(row):
                 if pm: bet["match"] = pm; bet["start"] = ""   # the slip time was the placement time: take the game's start
             except Exception as e: print("player game lookup failed", e, file=sys.stderr)
         elif len(players) > 1 and all(L.get("type") == "prop" for L in legs):   # a parlay of players from different games: each leg gets its own game
-            hint = None
-            if same_game_ev:
-                try: hint = find_game([team_alias(re.sub(r"\s+(Women|W)$", "", t.strip())) for t in re.split(r"\s+@\s+|\s+vs\.?\s+|\s+v\s+", ev_clean, flags=re.I)], paths, date,
-                                      bool(re.search(r"NWSL|WNBA|\bWomen\b", ev_raw + " " + market)))
-                except Exception as e: print("event game lookup failed", e, file=sys.stderr)
+            hint = event_games(ev_raw, ev_raw + " " + market, paths, date)   # the games the slip's own event names, e.g. "DAL@PHI / BAL@BUF / ATL@TB"
             for L in legs:
                 try:
                     L["match"] = find_player_game(L.get("player"), date, hint)
                 except Exception as e: print("player game lookup failed", e, file=sys.stderr)
-            if hint and all((L.get("match") or {}).get("id") == hint["id"] for L in legs):   # every player is in the event's game: one match for the whole bet
-                bet["match"] = hint
+            if len(hint) == 1 and all((L.get("match") or {}).get("id") == hint[0]["id"] for L in legs):   # every player is in the event's game: one match for the whole bet
+                bet["match"] = hint[0]
                 for L in legs: L.pop("match", None)
     m = bet["match"] or next((L.get("match") for L in legs if L.get("match")), None)
     if m and not str(bet.get("start") or "").strip() and ET:   # kickoff missing on the slip: take it from the matched game

@@ -50,6 +50,8 @@ def parse_leg(t, market):
         return {"type": "gamestat", "stat": st, "side": "over" if m[1].lower().startswith("o") else "under", "line": float(m[2]), "text": t}
     m = re.match(r"^(.+?)\s+(?:ATTD|anytime TD scorer|anytime touchdown scorer)$", t, re.I)
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "td", "op": "min", "min": 1, "text": t}
+    m = re.match(r"^(.+?)\s+(first|last)\s+(?:TD|touchdown)(?:\s+scorer)?$", t, re.I)
+    if m: return {"type": "prop", "player": m[1].strip(), "stat": m[2].lower() + "td", "op": "min", "min": 1, "text": t}
     m = re.match(r"^(.+?)\s+to hit an? (?:HR|home run)$", t, re.I)
     if m: return {"type": "prop", "player": m[1].strip(), "stat": "hr", "op": "min", "min": 1, "text": t}
     m = re.match(r"^(.+?)\s+(\d+)\+\s*(K|Ks|strikeouts)$", t, re.I)
@@ -208,6 +210,39 @@ def _soccer_squad_dnp(name, games):
         return False
     return False
 
+_TD_SCORER = re.compile(r"^([A-Za-z][A-Za-z.'\- ]*?)\s+\d+\s+Yd\b", re.I)
+def td_scorers(s):
+    """Scorers of the game's touchdowns in order, from ESPN's scoringPlays ('Saquon Barkley 8 Yd Rush (...)', 'CeeDee Lamb 9 Yd pass from ...').
+    A play whose scorer can't be read comes back as None."""
+    out = []
+    for p in s.get("scoringPlays", []) or []:
+        ty = p.get("type") or {}; txt = str(p.get("text") or "")
+        if not (ty.get("abbreviation") == "TD" or "touchdown" in str(ty.get("text", "")).lower()): continue
+        m = _TD_SCORER.match(txt.strip()); out.append(m[1].strip() if m else None)
+    return out
+
+def _game_roster_dnp(name, games):
+    """ESPN's own per-game roster flag: returns a note when ESPN lists this exact player (matched by athlete id, not name) as didNotPlay.
+    Anything else (no unique id, no roster, fetch failure, flag false or missing) returns None and the caller sends the leg to review."""
+    try:
+        for m, s, st in games:
+            if soccer(m): continue
+            ids = {}
+            for t in m["snapshot"]["teams"]:
+                for a in P.team_roster(m["path"], t["id"]):
+                    if a.get("id") and P.player_match(name, a["name"]): ids[str(a["id"])] = t["id"]
+            if len(ids) != 1: continue
+            pid, tid = next(iter(ids.items()))
+            sp, lg = m["path"].split("/", 1)
+            r = P.fetch(f"https://sports.core.api.espn.com/v2/sports/{sp}/leagues/{lg}/events/{m['id']}/competitions/{m['id']}/competitors/{tid}/roster")
+            for e in r.get("entries", []) or []:
+                if str(e.get("playerId")) == pid:
+                    if e.get("didNotPlay") is True: return f"ESPN game roster lists player {pid} as didNotPlay (event {m['id']})"
+                    return None
+    except Exception:
+        return None
+    return None
+
 def cmp(val, L):
     if L["op"] == "min": return "won" if val >= L["min"] else "lost"
     if val == L["line"]: return "push"
@@ -219,6 +254,13 @@ def grade_leg(L, games, book, ctx):
     t = L["type"]
     if t == "unknown" or (t == "prop" and not L.get("stat")):
         raise Review(f'leg "{L["text"]}": market/stat not recognised')
+    if t == "prop" and L.get("stat") in ("firsttd", "lasttd"):
+        if len(games) != 1: raise Review(f'leg "{L["text"]}": first/last TD needs exactly one game')
+        scorers = td_scorers(games[0][1])
+        if not scorers: raise Review(f'leg "{L["text"]}": no touchdown in ESPN scoringPlays (void or no TD? check by hand)')
+        who = scorers[0] if L["stat"] == "firsttd" else scorers[-1]
+        if not who: raise Review(f'leg "{L["text"]}": ESPN scoringPlays does not name the scorer')
+        return "won" if P.player_match(L["player"], who) else "lost"
     if t == "prop":
         cands = []
         for m, s, st in games:
@@ -227,7 +269,12 @@ def grade_leg(L, games, book, ctx):
         if len(cands) == 0 and _soccer_squad_dnp(L["player"], games):
             return "void"   # on the team's season roster but not in the matchday squad: never played
         if len(cands) == 0:
-            raise Review(f'leg "{L["text"]}": player "{L["player"]}" not in any box score (DNP void, or name mismatch?)')
+            note = _game_roster_dnp(L["player"], games)
+            if note:
+                print("void leg:", L["text"], "-", note, file=sys.stderr)
+                if isinstance(ctx, dict): ctx.setdefault("notes", []).append(f'{L["text"]}: {note}')
+                return "void"
+            raise Review(f'leg "{L["text"]}": player "{L["player"]}" not in any box score and ESPN\'s game roster does not list him as didNotPlay (name mismatch?)')
         if len({c[2]["id"] or c[2]["name"] for c in cands}) > 1:
             bw = [w for w in P.norm(L["player"]) if w not in P.SUFFIX]
             if len(bw) > 1 and len(bw[0]) > 1:   # full first name given: keep exact first+last matches
