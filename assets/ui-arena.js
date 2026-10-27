@@ -30,8 +30,8 @@
       if (status === 'LOST' || !gs.some(gLive)) return;
       var v = betLive(b, status, ls), p = status === 'WON' ? 1 : (v && v.p != null ? v.p : null);
       var legs = ls.map(function (x) {
-        var lp = legP(b, x.L, x.s, x);
-        return { x: x, p: x.s === 'WON' ? 1 : x.s === 'LOST' ? 0 : lp, st: x.s };
+        var lp = legP(b, x.L, x.s, x), push = x.s === 'PUSH' && x.g && x.g.completed, est = !push && x.s !== 'WON' && x.s !== 'LOST' && lp == null;
+        return { x: x, p: x.s === 'WON' ? 1 : x.s === 'LOST' ? 0 : est ? 0.5 : lp, st: x.s, est: est, push: push };
       });
       var bet = { b: b, bi: bi, status: status, ls: ls, p: p, legs: legs };
       bets.push(bet);
@@ -52,10 +52,17 @@
   }
 
   // ---------- pieces ----------
+  // [away, draw, home] chances; soccer feeds only carry home/away, so the remainder is the draw
+  function threeWay(g, path) {
+    var q = probs[g.id], h = q.home, a = q.away != null ? q.away : (/^soccer/.test(path) ? null : 1 - h), d = q.tie != null ? q.tie : 0;
+    if (a == null) a = Math.max(0, 1 - h);
+    if (/^soccer/.test(path) && q.tie == null && q.away != null) d = Math.max(0, 1 - h - a);
+    return [a, d, h];
+  }
   function hasP(g) { var q = probs[g.id]; return q && g.state === 'in' && q.home != null; }
-  function tug(g) {
+  function tug(g, path) {
     var S = sides(g); if (!S || !hasP(g)) return '';
-    var q = probs[g.id], h = q.home, a = q.away != null ? q.away : 1 - h, d = q.tie != null ? q.tie : 0;
+    var w = threeWay(g, path), a = w[0], d = w[1], h = w[2];
     var A = S[0], H = S[1], pa = Math.round(a * 100), ph = Math.round(h * 100), pd = Math.round(d * 100);
     return '<div class="ar-tug"><div class="ar-lab"><span>' + E(A.abbr) + ' <em>' + pa + '%</em></span>' + (pd ? '<span>Draw <em>' + pd + '%</em></span>' : '') +
       '<span>' + E(H.abbr) + ' <em>' + ph + '%</em></span></div><div class="ar-bar"><span style="width:' + pa + '%;background:' + tc(A) + '"></span>' +
@@ -68,9 +75,9 @@
     var prev = LASTSCORE[g.id], now = sc.join('-'), pop = seeded && prev && prev !== now;
     LASTSCORE[g.id] = now;
     function cell(i) { return '<b class="ar-pts ' + (sc[i] === mx && sc[0] !== sc[1] ? 'lead' : 'trail') + (pop && String(prev).split('-')[i] !== String(sc[i]) ? ' pop' : '') + '">' + (sc[i] == null ? '' : sc[i]) + '</b>'; }
-    return '<div class="ar-score"><div class="ar-tm">' + LiveUI.badge(S[0]) + '<span class="ar-nm">' + E(S[0].short || S[0].name) + '</span></div>' +
+    return '<div class="ar-score"><div class="ar-tm">' + LiveUI.badge(S[0]) + '<span class="ar-nm" title="' + E(S[0].name) + '">' + E(S[0].short || S[0].name) + '</span></div>' +
       '<div class="ar-mid">' + cell(0) + '<span class="ar-dash">–</span>' + cell(1) + '</div>' +
-      '<div class="ar-tm r">' + LiveUI.badge(S[1]) + '<span class="ar-nm">' + E(S[1].short || S[1].name) + '</span></div></div>';
+      '<div class="ar-tm r">' + LiveUI.badge(S[1]) + '<span class="ar-nm" title="' + E(S[1].name) + '">' + E(S[1].short || S[1].name) + '</span></div></div>';
   }
   function lastPlay(e) {
     var g = e.g, S = summaries[e.id], txt = '';
@@ -144,6 +151,12 @@
   // ---------- bet slips ----------
   function tone(p, st) { return st === 'WON' ? 'hit' : p == null ? 'neu' : p >= 0.55 ? 'win' : p <= 0.45 ? 'lose' : 'neu'; }
   function priceOf(b) { return b.boosted_price && b.boosted_price !== b.price ? b.price + ' → ' + b.boosted_price : (b.price || ''); }
+  // the "a × b × c" explanation, only when it really equals the bet's chance (Over/Under bands on one total are merged by betLive)
+  function product(bt) {
+    var ls = bt.legs.filter(function (l) { return !l.push; }), prod = ls.reduce(function (a, l) { return a * (l.p == null ? 0.5 : l.p); }, 1);
+    if (bt.p == null || Math.abs(prod - bt.p) > 0.005) return '';
+    return ': ' + ls.map(function (l) { return (l.est ? '~' : '') + pct(l.p); }).join(' × ');
+  }
   function slipHTML(bt, e) {
     var b = bt.b, p = bt.p, cls = tone(p, bt.status), n = b.legs.length;
     var h = '<div class="ar-slip ' + cls + '" data-bi="' + bt.bi + '"><span class="ar-ring" style="--p:' + (p == null ? 0 : Math.round(p * 100)) + '"><i>' + (cls === 'hit' ? '✓' : '') + '</i></span>' +
@@ -151,11 +164,11 @@
       '<div class="ar-odd"><strong>' + pct(p) + '</strong><small>' + (n > 1 ? 'all ' + n + ' legs hit' : 'chance to win') + '</small></div>';
     if (n > 1) {
       h += '<ul class="ar-legs">' + bt.legs.map(function (l) {
-        var k = l.st === 'WON' ? 'hit' : l.st === 'LOST' ? 'l' : l.p == null ? 'n' : l.p >= 0.55 ? 'w' : l.p <= 0.45 ? 'l' : 'n';
+        var k = l.st === 'WON' ? 'hit' : l.st === 'LOST' ? 'l' : l.push || l.p == null ? 'n' : l.p >= 0.55 ? 'w' : l.p <= 0.45 ? 'l' : 'n';
         var lg = l.x.g, vs = lg && lg.teams ? lg.teams.map(function (t) { return t.abbr; }).join(' @ ') : '';
-        return '<li class="' + k + '"><i>' + (l.st === 'WON' ? '✓' : '') + '</i><span class="ar-lg">' + E(l.x.L.text || l.x.lbl || '') + '<small>' + E((l.x.n || '') + (vs && vs !== (e.g.teams || []).map(function (t) { return t.abbr; }).join(' @ ') ? (l.x.n ? ' · ' : '') + vs : '')) + '</small></span><span class="ar-lp">' + pct(l.p) + '</span></li>';
+        return '<li class="' + k + '"><i>' + (l.st === 'WON' ? '✓' : '') + '</i><span class="ar-lg">' + E(l.x.L.text || l.x.lbl || '') + '<small>' + E((l.x.n || '') + (vs && vs !== (e.g.teams || []).map(function (t) { return t.abbr; }).join(' @ ') ? (l.x.n ? ' · ' : '') + vs : '')) + '</small></span><span class="ar-lp">' + (l.push ? 'push' : (l.est ? '~' : '') + pct(l.p)) + '</span></li>';
       }).join('') +
-        '<li class="ov"><span class="ar-lg">Overall chance this slip wins<small>every leg must hit: ' + bt.legs.map(function (l) { return pct(l.p); }).join(' × ') + '</small></span><span class="ar-lp">' + pct(p) + '</span></li></ul>';
+        '<li class="ov"><span class="ar-lg">Overall chance this slip wins<small>every leg must hit' + product(bt) + '</small></span><span class="ar-lp">' + pct(p) + '</span></li></ul>';
     }
     return h + '</div>';
   }
@@ -163,22 +176,22 @@
   // ---------- total band ----------
   function totals(M) {
     var L = M.bets.filter(function (x) { return x.p != null; }), n = L.length; if (!n) return null;
-    var risk = 0, ew = 0, best = 0, ex = 0, dist = { 0: 1 }, money_ok = true;
+    var risk = 0, ew = 0, best = 0, ex = 0, dist = { 0: 1 }, money_ok = true, cnt = n;
     L.forEach(function (x) {
       var b = x.b, st = b.cash_stake != null ? b.cash_stake : (b.stake || 0), tw = b.to_win;
-      ew += x.p; risk += st;
-      if (tw == null) { money_ok = false; return; }
+      if (tw == null) { money_ok = false; cnt--; return; }
+      ew += x.p; if (x.status !== 'WON') risk += st;
       best += tw; ex += x.p * tw - (1 - x.p) * st;
-      var nd = {};
+      var nd = {};   // net outcomes in 25-cent buckets, tiny branches dropped: keeps the table small on big slates
       Object.keys(dist).forEach(function (k) {
-        var v = dist[k], w = Math.round((+k + tw) * 100) / 100, l = Math.round((+k - st) * 100) / 100;
-        if (x.p > 0) nd[w] = (nd[w] || 0) + v * x.p;
-        if (x.p < 1) nd[l] = (nd[l] || 0) + v * (1 - x.p);
+        var v = dist[k], w = Math.round((+k + tw) * 4) / 4, l = Math.round((+k - st) * 4) / 4;
+        if (x.p > 0 && v * x.p > 1e-9) nd[w] = (nd[w] || 0) + v * x.p;
+        if (x.p < 1 && v * (1 - x.p) > 1e-9) nd[l] = (nd[l] || 0) + v * (1 - x.p);
       });
       dist = nd;
     });
     var ahead = 0; Object.keys(dist).forEach(function (k) { if (+k > 0) ahead += dist[k]; });
-    return { n: n, ew: ew, risk: risk, ex: ex, best: best, ahead: ahead, money: money_ok };
+    return cnt ? { n: cnt, ew: ew, risk: risk, ex: ex, best: best, ahead: ahead, money: money_ok } : null;
   }
   function totHTML(M) {
     var T = totals(M); if (!T) return '';
@@ -196,7 +209,7 @@
     var g = e.g, pre = g.state !== 'in';
     return '<article class="ar-tile" data-g="' + E(e.id) + '" aria-label="' + E((g.teams || []).map(function (t) { return t.name; }).join(' at ')) + '">' +
       '<div class="ar-hd"><span class="' + (pre ? 'ar-soon' : 'ar-live') + '"><i></i>' + (pre ? 'Starting' : 'Live') + '</span><span>' + E(league(e.m)) + ' · ' + E(g.detail || '') + '</span></div>' +
-      scoreRow(g) + visual(e) + tug(g) + lastPlay(e) +
+      scoreRow(g) + visual(e) + tug(g, e.m.path) + lastPlay(e) +
       '<div class="ar-slips">' + e.bets.map(function (bt) { return slipHTML(bt, e); }).join('') + '</div></article>';
   }
 
@@ -218,20 +231,20 @@
     var pre = g.state !== 'in', sc = S.map(function (t) { return pre ? null : num(t.score); });
     var mx = Math.max(sc[0] == null ? -1 : sc[0], sc[1] == null ? -1 : sc[1]);
     var rows = S.map(function (t, i) {
-      return '<div class="ar-mr">' + LiveUI.badge(t) + '<span class="ar-n">' + E(t.short || t.name) + '</span><b class="' + (sc[i] === mx && sc[0] !== sc[1] ? 'w' : '') + '">' + (sc[i] == null ? '' : sc[i]) + '</b></div>';
+      return '<span class="ar-mr">' + LiveUI.badge(t) + '<span class="ar-n">' + E(t.short || t.name) + '</span><b class="' + (sc[i] === mx && sc[0] !== sc[1] ? 'w' : '') + '">' + (sc[i] == null ? '' : sc[i]) + '</b></span>';
     }).join('');
     var bar = '';
     if (hasP(g)) {
-      var q = probs[g.id], h = q.home, a = q.away != null ? q.away : 1 - h, d = q.tie != null ? q.tie : 0;
-      bar = '<div class="ar-mb"><span style="width:' + a * 100 + '%;background:' + tc(S[0]) + '"></span>' + (d ? '<span style="width:' + d * 100 + '%;background:var(--dim)"></span>' : '') + '<span style="width:' + h * 100 + '%;background:' + tc(S[1]) + '"></span></div>';
+      var w = threeWay(g, e.m.path), a = w[0], d = w[1], h = w[2];
+      bar = '<span class="ar-mb"><span style="width:' + a * 100 + '%;background:' + tc(S[0]) + '"></span>' + (d ? '<span style="width:' + d * 100 + '%;background:var(--dim)"></span>' : '') + '<span style="width:' + h * 100 + '%;background:' + tc(S[1]) + '"></span></span>';
     }
     var oneAway = e.bets.some(function (bt) { var live = bt.legs.filter(function (l) { return l.st !== 'WON'; }).length; return bt.b.legs.length > 1 && live === 1; });
     var pcs = e.bets.map(function (bt) {
       var k = tone(bt.p, bt.status);
       return '<em class="ar-pc ' + (k === 'hit' ? 'win' : k) + '">' + pct(bt.p) + (bt.b.legs.length > 1 ? '<span class="ar-lc">' + bt.b.legs.length + 'L</span>' : '') + '</em>';
     }).join('');
-    return '<button type="button" class="ar-mt' + (oneAway ? ' hot' : '') + '" data-g="' + E(e.id) + '" title="Double-click for the full game"><div class="ar-mh"><span>' + E(league(e.m)) + ' · ' + E(g.detail || '') + '</span><span class="ar-lv"><i></i></span></div>' +
-      rows + bar + '<div class="ar-mf"><span class="ar-sit">' + E(situation(e)) + '</span><span class="ar-pcs">' + pcs + '</span></div></button>';
+    return '<button type="button" class="ar-mt' + (oneAway ? ' hot' : '') + '" data-g="' + E(e.id) + '" title="Double-click for the full game"><span class="ar-mh"><span>' + E(league(e.m)) + ' · ' + E(g.detail || '') + '</span><span class="ar-lv"><i></i></span></span>' +
+      rows + bar + '<span class="ar-mf"><span class="ar-sit" title="' + E(situation(e)) + '">' + E(situation(e)) + '</span><span class="ar-pcs">' + pcs + '</span></span></button>';
   }
   function gridHTML(M) {
     var win = 0, lose = 0, away = 0;
@@ -246,7 +259,7 @@
 
   // ---------- host: switch, container, render ----------
   function setMode(m, keep) {
-    mode = m;
+    mode = m; LASTSCORE = {}; LASTPLAY = {};
     if (!keep) { try { localStorage.setItem(KEY, m); } catch (e) {} }
     apply();
   }
@@ -258,12 +271,18 @@
     paint(true);
   }
   function paint(force) {
-    if (!view || mode === 'cards') return;
+    if (!view) return;
+    view.hidden = mode === 'cards'; if (hostSec) hostSec.classList.toggle('am-on', mode !== 'cards');
+    if (mode === 'cards') return;
     var M = model = buildModel(), h;
     if (!M || !M.games.length) h = '<div class="meta">Nothing live right now.</div>';
     else h = totHTML(M) + (mode === 'grid' ? gridHTML(M) : '<div class="ar-grid">' + M.games.map(tileHTML).join('') + '</div>');
     if (mode === 'arena') h = backBtn() + h;
-    if (force || h !== lastHTML) { lastHTML = h; view.innerHTML = h; }
+    if (force || h !== lastHTML) {
+      var ae = document.activeElement, fg = ae && view.contains(ae) && ae.closest('.ar-mt,.ar-back,.ar-slip'), fk = fg && (fg.dataset.g ? '.ar-mt[data-g="' + fg.dataset.g + '"]' : fg.classList.contains('ar-back') ? '.ar-back' : null);
+      lastHTML = h; view.innerHTML = h;
+      if (fk) { var nf = view.querySelector(fk); if (nf) nf.focus({ preventScroll: true }); }
+    }
     seeded = true;
   }
   var cameFromGrid = false;
@@ -290,11 +309,11 @@
     else { lastTap = { id: id, t: now }; say('Double-click to open the full game'); }
   }
   function onKey(ev) {
-    if (ev.key !== 'Enter') return;
-    var t = ev.target.closest && ev.target.closest('.ar-mt'); if (t) openGame(t.dataset.g);
+    if (ev.key !== 'Enter' && ev.key !== ' ') return;
+    var t = ev.target.closest && ev.target.closest('.ar-mt'); if (t) { ev.preventDefault(); openGame(t.dataset.g); }
   }
   function init() {
-    hostSec = document.getElementById('sec-live'); var body = hostSec && hostSec.querySelector('.secbody'); if (!body) return false;
+    hostSec = document.getElementById('sec-live'); if (hostSec && hostSec.querySelector('.ar-seg')) return false; var body = hostSec && hostSec.querySelector('.secbody'); if (!body) return false;
     seg = document.createElement('div'); seg.className = 'ar-seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Live view');
     seg.innerHTML = MODES.map(function (m) { return '<button type="button" data-m="' + m + '" aria-pressed="false">' + m[0].toUpperCase() + m.slice(1) + '</button>'; }).join('');
     seg.addEventListener('click', function (ev) { var b = ev.target.closest('button'); if (b) { cameFromGrid = false; setMode(b.dataset.m); } });
