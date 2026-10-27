@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "c3e92bb3",
+   "book": "bet365",
+   "pick": "Artemi Panarin 1+ Points + Adrian Kempe 2+ Shots on Goal + Artemi Panarin 3+ Shots on Goal",
+   "result": "won",
+   "pnl": 0.9,
+   "final": "LA 6-3 NYR",
+   "at": "2026-10-26 21:51"
+  },
+  {
    "bet_id": "f94e9069",
    "book": "FanDuel",
    "pick": "Charlotte Hornets -1.5",
@@ -216,17 +225,8 @@
    "pnl": -0.5,
    "final": "MIA 110-115 CHA",
    "at": "2026-10-24 20:40"
-  },
-  {
-   "bet_id": "9fd9a5aa",
-   "book": "PointsBet",
-   "pick": "Giannis Antetokounmpo Over 28.5 points + Brandon Miller Over 22.5 points",
-   "result": "lost",
-   "pnl": -1.0,
-   "final": "MIA 110-115 CHA",
-   "at": "2026-10-24 20:40"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 21:26 ET"
+ "last_change_at": "2026-10-26 21:51 ET"
 }
