@@ -97,7 +97,7 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-25,PointsBet,Torino v Como (Italian Serie A),Tue Oct 27 03:45 PM ET,Match Result (bonus bet $2.50; receipt #265TZDXS),Draw,+280,,2.50 (bonus),7.00,,,open,,9552cc6f,,
 2026-10-25,PointsBet,Dallas Cowboys @ Philadelphia Eagles (NFL),Mon Oct 26 08:15 PM ET,SGP 3-leg (profit boost; receipt #B26K9CEAR),CeeDee Lamb 60+ rec yds + Devonta Smith 40+ rec yds + George Pickens 40+ rec yds,+110,+117,0.50,0.58,,,open,,38cdf546,,
 2026-10-25,PointsBet,Detroit Pistons @ Philadelphia 76ers (NBA),Sun Oct 25 07:45 PM ET,Moneyline (NBA No Sweat bonus bet $1.00; receipt #26VC61MC),Philadelphia 76ers,+105,,1.00 (bonus),1.05,,,lost,0.00,6a8a8c79,2026-10-26 18:26,auto
-2026-10-26,FanDuel,Chicago Bulls @ Boston Celtics,"Mon Oct 26, 7:30 PM ET",Moneyline,Chicago Bulls ML,+590,,0.50,2.95,,,open,,7b4b7086,,
+2026-10-26,FanDuel,Chicago Bulls @ Boston Celtics,"Mon Oct 26, 7:30 PM ET",Moneyline,Chicago Bulls ML,+590,,0.50,2.95,,,lost,-0.50,7b4b7086,2026-10-26 22:20,auto
 2026-10-26,FanDuel,Washington Wizards @ Charlotte Hornets,"Mon Oct 26, 7:00 PM ET",Spread,Charlotte Hornets -1.5,-112,,0.80,0.71,,,won,0.71,f94e9069,2026-10-26 21:26,auto
 2026-10-26,FanDuel,Washington Wizards @ Charlotte Hornets,"Mon Oct 26, 7:00 PM ET",Moneyline,Charlotte Hornets ML,-122,,0.70,0.57,,,won,0.57,ae6fff5d,2026-10-26 21:26,auto
 2026-10-26,FanDuel,Osasuna @ Sevilla,"Mon Oct 26, 4:00 PM ET",Spread,Sevilla -1.5,+285,,0.50,1.43,,,won,1.43,024598cc,2026-10-26 18:19,auto

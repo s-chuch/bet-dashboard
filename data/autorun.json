@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "7b4b7086",
+   "book": "FanDuel",
+   "pick": "Chicago Bulls ML",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "CHI 99-134 BOS",
+   "at": "2026-10-26 22:20"
+  },
+  {
    "bet_id": "ea264435",
    "book": "bet365",
    "pick": "Gabby Williams 2+ Threes Made + Angel Reese 10+ Rebounds + Jordin Canada 5+ Assists",
@@ -216,17 +225,8 @@
    "pnl": -0.5,
    "final": "MISS 27-34 TEX",
    "at": "2026-10-24 23:34"
-  },
-  {
-   "bet_id": "1c6e8a75",
-   "book": "bet365",
-   "pick": "Kentucky +9.5 + Over 52.5 + Vanderbilt +10.0",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "VAN 17-34 UK",
-   "at": "2026-10-24 22:49"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 22:18 ET"
+ "last_change_at": "2026-10-26 22:20 ET"
 }

@@ -505,7 +505,7 @@
      "home": 0.755,
      "away": 0.245,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "NHL",
@@ -647,10 +647,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 338.0,
+     "clock": 301.0,
      "state": "in",
      "completed": false,
-     "detail": "5:38 - 3rd",
+     "detail": "5:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -1317,10 +1317,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "NFL",
@@ -1330,87 +1330,6 @@
    "start_ts": "2026-10-27T00:15Z",
    "clv": {
     "placed_at": "2026-10-25 19:36",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "7b4b7086",
-   "date": "2026-10-26",
-   "book": "FanDuel",
-   "event": "Chicago Bulls @ Boston Celtics",
-   "market": "Moneyline",
-   "pick": "Chicago Bulls ML",
-   "start": "Mon Oct 26, 7:30 PM ET",
-   "price": "+590",
-   "boosted_price": "",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 2.95,
-   "ev_pct": "4.68",
-   "fair_pct": "15.51",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Chicago Bulls",
-     "women": false,
-     "text": "Chicago Bulls ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261026",
-    "groups": null,
-    "id": "401909870",
-    "snapshot": {
-     "date": "2026-10-26T23:30Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "2",
-       "name": "Boston Celtics",
-       "abbr": "BOS",
-       "short": "Celtics",
-       "nick": "Celtics",
-       "location": "Boston",
-       "home": true,
-       "score": "134"
-      },
-      {
-       "id": "4",
-       "name": "Chicago Bulls",
-       "abbr": "CHI",
-       "short": "Bulls",
-       "nick": "Bulls",
-       "location": "Chicago",
-       "home": false,
-       "score": "99"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-26 18:19 ET",
-     "ml_home": 0.8471,
-     "spread_home_line": -14.5,
-     "spread_home_fair": 0.4884,
-     "total_line": 232.5,
-     "total_over_fair": 0.5125
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.5,
-   "payout": 3.45,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-26 07:57",
     "close_price": null,
     "clv_pct": null
    }
@@ -1447,10 +1366,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 338.0,
+     "clock": 301.0,
      "state": "in",
      "completed": false,
-     "detail": "5:38 - 3rd",
+     "detail": "5:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -2117,10 +2036,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "NFL",
@@ -2193,10 +2112,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 338.0,
+     "clock": 301.0,
      "state": "in",
      "completed": false,
-     "detail": "5:38 - 3rd",
+     "detail": "5:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -2863,10 +2782,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "NFL",
@@ -3305,7 +3224,7 @@
      "home": 0.005,
      "away": 0.995,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "MLB",
@@ -3711,10 +3630,10 @@
     "snapshot": {
      "date": "2026-10-27T00:15Z",
      "period": 3,
-     "clock": 338.0,
+     "clock": 301.0,
      "state": "in",
      "completed": false,
-     "detail": "5:38 - 3rd",
+     "detail": "5:01 - 3rd",
      "teams": [
       {
        "id": "21",
@@ -4381,10 +4300,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-27T02:18Z"
+     "t": "2026-10-27T02:20Z"
     }
    },
    "sport": "NFL",
@@ -4543,6 +4462,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-26 07:58",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "book": "FanDuel",
+   "event": "Chicago Bulls @ Boston Celtics",
+   "pick": "Chicago Bulls ML",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 07:57",
     "close_price": null,
     "clv_pct": null
    }
@@ -5787,15 +5721,15 @@
    "clv": null
   }
  ],
- "pnl_total": 109.78,
+ "pnl_total": 109.28,
  "unsettled": {
-  "n": 20,
-  "cash_stake": 15.1,
-  "max_payout": 296.71,
+  "n": 19,
+  "cash_stake": 14.6,
+  "max_payout": 293.26,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.1,
+ "open_stake": 14.6,
  "recs": {
   "stats": {
    "overall": {
@@ -9822,6 +9756,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "7b4b7086",
+    "book": "FanDuel",
+    "pick": "Chicago Bulls ML",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "CHI 99-134 BOS",
+    "at": "2026-10-26 22:20"
+   },
+   {
     "bet_id": "ea264435",
     "book": "bet365",
     "pick": "Gabby Williams 2+ Threes Made + Angel Reese 10+ Rebounds + Jordin Canada 5+ Assists",
@@ -10036,18 +9979,9 @@
     "pnl": -0.5,
     "final": "MISS 27-34 TEX",
     "at": "2026-10-24 23:34"
-   },
-   {
-    "bet_id": "1c6e8a75",
-    "book": "bet365",
-    "pick": "Kentucky +9.5 + Over 52.5 + Vanderbilt +10.0",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "VAN 17-34 UK",
-    "at": "2026-10-24 22:49"
    }
   ],
-  "last_change_at": "2026-10-26 22:18 ET"
+  "last_change_at": "2026-10-26 22:20 ET"
  },
  "open_live_n": 19,
  "open_stake_by_book": {
@@ -10057,6 +9991,6 @@
   "FanDuel": 1.6,
   "PointsBet": 13.0
  },
- "hash": "1b898420dea4582b6c7c30c57b6e3b90b8e685c5",
- "generated_at": "2026-10-26T22:18:42-04:00"
+ "hash": "be6168c2ead6da7b71a623e9b0c596739b43d89f",
+ "generated_at": "2026-10-26T22:20:10-04:00"
 }
