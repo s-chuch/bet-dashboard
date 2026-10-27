@@ -1,16 +1,15 @@
 {
- "needs_review": [
+ "needs_review": [],
+ "last_settled": [
   {
    "bet_id": "6a8a8c79",
    "book": "PointsBet",
-   "event": "Detroit Pistons @ Philadelphia 76ers (NBA)",
    "pick": "Philadelphia 76ers",
-   "stake": "1.00 (bonus)",
-   "reason": "leg \"Philadelphia 76ers\": market/stat not recognised",
-   "legs": []
-  }
- ],
- "last_settled": [
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "DET 106-93 PHI",
+   "at": "2026-10-26 18:26"
+  },
   {
    "bet_id": "024598cc",
    "book": "FanDuel",
@@ -226,17 +225,8 @@
    "pnl": -0.4,
    "final": "ORE 10-21 ILL",
    "at": "2026-10-24 18:08"
-  },
-  {
-   "bet_id": "605a8aad",
-   "book": "FanDuel",
-   "pick": "Jack Hughes 1+ Points + Jack Hughes 2+ Shots on Goal + Timo Meier 2+ Shots on Goal + Adrian Kempe 2+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "LA 1-3 NJ",
-   "at": "2026-10-24 17:55"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-26 18:19 ET"
+ "last_change_at": "2026-10-26 18:26 ET"
 }
