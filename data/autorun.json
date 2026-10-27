@@ -1,57 +1,24 @@
 {
- "needs_review": [
+ "needs_review": [],
+ "last_settled": [
   {
    "bet_id": "38cdf546",
    "book": "PointsBet",
-   "event": "Dallas Cowboys @ Philadelphia Eagles (NFL)",
    "pick": "CeeDee Lamb 60+ rec yds + Devonta Smith 40+ rec yds + George Pickens 40+ rec yds",
-   "stake": "0.50",
-   "reason": "leg \"Devonta Smith 40+ rec yds\": player \"Devonta Smith\" not in any box score (DNP void, or name mismatch?)",
-   "legs": [
-    {
-     "leg": "CeeDee Lamb 60+ rec yds",
-     "result": "won"
-    }
-   ]
+   "result": "void",
+   "pnl": 0.0,
+   "final": "DAL 38-21 PHI",
+   "at": "2026-10-27 08:42"
   },
   {
    "bet_id": "ac03f4a5",
    "book": "DraftKings",
-   "event": "Dallas Cowboys @ Philadelphia Eagles (NFL)",
    "pick": "Javonte Williams First TD Scorer",
-   "stake": "0.20",
-   "reason": "leg \"Javonte Williams First TD Scorer\": market/stat not recognised",
-   "legs": []
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "DAL 38-21 PHI",
+   "at": "2026-10-27 08:42"
   },
-  {
-   "bet_id": "0a3a4d16",
-   "book": "Caesars",
-   "event": "NFL multi (DAL@PHI / BAL@BUF / ATL@TB)",
-   "pick": "Javonte Williams anytime TD (-170) + Derrick Henry anytime TD (-218) + Bijan Robinson anytime TD (-182)",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "f9e33ec4",
-   "book": "FanDuel",
-   "event": "Sacramento Kings @ San Antonio Spurs",
-   "pick": "Sacramento Kings ML",
-   "stake": "0.20",
-   "reason": "no ESPN game matched",
-   "legs": []
-  },
-  {
-   "bet_id": "5ff31714",
-   "book": "DraftKings",
-   "event": "Brooklyn Nets @ Boston Celtics",
-   "pick": "Brooklyn Nets ML",
-   "stake": "0.30",
-   "reason": "no ESPN game matched",
-   "legs": []
-  }
- ],
- "last_settled": [
   {
    "bet_id": "d5b8bad5",
    "book": "bet365",
@@ -258,26 +225,8 @@
    "pnl": -0.5,
    "final": "TB 43-13 CAR",
    "at": "2026-10-25 15:49"
-  },
-  {
-   "bet_id": "d7e25555",
-   "book": "bet365",
-   "pick": "Steelers ML + Aaron Rodgers 200+ Passing Yards + Tyler Shough 225+ Passing Yards",
-   "result": "won",
-   "pnl": 0.66,
-   "final": "PIT 16-10 NO",
-   "at": "2026-10-25 12:35"
-  },
-  {
-   "bet_id": "d54a26b4",
-   "book": "FanDuel",
-   "pick": "Steelers ML + Tyler Shough 225+ pass yds + DK Metcalf 60+ rec yds + Devaughn Vele 40+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "PIT 16-10 NO",
-   "at": "2026-10-25 12:35"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-27 08:38 ET"
+ "last_change_at": "2026-10-27 08:42 ET"
 }
