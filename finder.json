@@ -1,7 +1,7 @@
 {
  "ok": true,
- "scanned_et": "Mon Oct 26, 2026 8:51 PM ET",
- "scanned_utc": "2026-10-27T00:51:53+00:00",
+ "scanned_et": "Mon Oct 26, 2026 10:03 PM ET",
+ "scanned_utc": "2026-10-27T02:03:02+00:00",
  "window_hours": 36,
  "rules": {
   "bet_ev_pct": 2.0,
@@ -25,9 +25,9 @@
   ]
  },
  "balances": {
-  "FanDuel": 152.65,
+  "FanDuel": 155.43,
   "DraftKings": 62.03,
-  "bet365": 79.41,
+  "bet365": 80.71,
   "theScore": 27.63
  },
  "counts": {
@@ -59,22 +59,22 @@
    "prices": 37
   },
   "nhl": {
-   "games": 12,
-   "unmatched": 0,
-   "exposed": 2,
+   "games": 11,
+   "unmatched": 1,
+   "exposed": 0,
    "no_pin_line": 0,
    "not_confirmed": 0,
    "bet365_short": 35,
-   "prices": 203
+   "prices": 205
   },
   "nba": {
-   "games": 6,
-   "unmatched": 2,
-   "exposed": 2,
+   "games": 4,
+   "unmatched": 3,
+   "exposed": 1,
    "no_pin_line": 0,
    "not_confirmed": 0,
-   "bet365_short": 11,
-   "prices": 37
+   "bet365_short": 0,
+   "prices": 0
   },
   "wnba": {
    "games": 0,
@@ -96,10 +96,10 @@
   }
  },
  "totals": {
-  "prices": 324,
+  "prices": 289,
   "bet": 3,
   "skip": 1,
-  "no": 320
+  "no": 285
  },
  "bets": [
   {
@@ -221,8 +221,8 @@
    "three_way": false,
    "pin_prices": "home +139 / away -161",
    "pin_line_type": "main",
-   "balance": 152.65,
-   "stake": 0.76,
+   "balance": 155.43,
+   "stake": 0.78,
    "stake_pct": 0.5,
    "ev_dollars": 0.01,
    "wins_if": "Boston Bruins win, or lose by less than 1.5 goals.",
@@ -244,25 +244,25 @@
    "book": "FanDuel",
    "book_app": "FanDuel",
    "odds": 410,
-   "fair_pct": 18.77,
-   "fair_odds": 433,
-   "ev_pct": -4.28,
+   "fair_pct": 18.74,
+   "fair_odds": 434,
+   "ev_pct": -4.44,
    "class": "NO",
-   "kill_price": 455,
+   "kill_price": 456,
    "caution": "3-way moneyline (a draw loses): cash needs +4% EV.",
    "skip_reason": "",
    "three_way": true,
-   "pin_prices": "home -296 / away +940 / draw +413",
+   "pin_prices": "home -297 / away +945 / draw +414",
    "pin_line_type": "main",
-   "balance": 152.65,
-   "stake": 0.76,
+   "balance": 155.43,
+   "stake": 0.78,
    "stake_pct": 0.5,
    "ev_dollars": -0.03,
    "wins_if": "The match is tied after 90 minutes plus stoppage time.",
    "key": "2026-10-27|Cagliari @ Roma|Draw",
-   "bonus_ret_pct": 77.0,
+   "bonus_ret_pct": 76.8,
    "yes_at": 410,
-   "bonus_floor": 320
+   "bonus_floor": 321
   }
  ],
  "boost_pool": [
@@ -343,7 +343,7 @@
    "selection": "Draw",
    "book_app": "theScore Bet",
    "odds": 270,
-   "fair_pct": 26.39,
+   "fair_pct": 26.37,
    "fair_odds": 279,
    "wins_if": "The match is tied after 90 minutes plus stoppage time.",
    "three_way": true,
@@ -559,13 +559,30 @@
    "market": "Moneyline",
    "app_market": "Moneyline",
    "selection": "New Jersey Devils to win",
-   "book_app": "bet365",
+   "book_app": "DraftKings",
    "odds": 105,
    "fair_pct": 46.87,
    "fair_odds": 113,
    "wins_if": "New Jersey Devils win the game, including overtime/extra innings.",
    "three_way": false,
-   "bet365_odds": 105
+   "bet365_odds": 102
+  },
+  {
+   "key": "2026-10-28|New Jersey Devils @ Dallas Stars|Dallas Stars -1.5",
+   "league": "NHL",
+   "event": "New Jersey Devils @ Dallas Stars",
+   "start_et": "Tue Oct 27, 8:00 PM ET",
+   "start_utc": "2026-10-28T00:00:00.000Z",
+   "market": "Spread",
+   "app_market": "Puck Line",
+   "selection": "Dallas Stars -1.5",
+   "book_app": "bet365",
+   "odds": 210,
+   "fair_pct": 30.99,
+   "fair_odds": 223,
+   "wins_if": "Dallas Stars win by more than 1.5 goals.",
+   "three_way": false,
+   "bet365_odds": 210
   },
   {
    "key": "2026-10-27|Columbus Blue Jackets @ Philadelphia Flyers|Columbus Blue Jackets -1.5",
@@ -602,23 +619,6 @@
    "bet365_odds": 108
   },
   {
-   "key": "2026-10-27|Lazio @ Sassuolo|Lazio to win",
-   "league": "SOCCER",
-   "event": "Lazio @ Sassuolo",
-   "start_et": "Tue Oct 27, 1:30 PM ET",
-   "start_utc": "2026-10-27T17:30:00.000Z",
-   "market": "Moneyline",
-   "app_market": "Match Result (3-way, 90 min)",
-   "selection": "Lazio to win",
-   "book_app": "bet365",
-   "odds": 115,
-   "fair_pct": 44.43,
-   "fair_odds": 125,
-   "wins_if": "Lazio win in 90 minutes plus stoppage time (a draw loses).",
-   "three_way": true,
-   "bet365_odds": 115
-  },
-  {
    "key": "2026-10-28|Buffalo Sabres @ San Jose Sharks|Buffalo Sabres -1.5",
    "league": "NHL",
    "event": "Buffalo Sabres @ San Jose Sharks",
@@ -634,6 +634,23 @@
    "wins_if": "Buffalo Sabres win by more than 1.5 goals.",
    "three_way": false,
    "bet365_odds": 175
+  },
+  {
+   "key": "2026-10-27|Lazio @ Sassuolo|Lazio to win",
+   "league": "SOCCER",
+   "event": "Lazio @ Sassuolo",
+   "start_et": "Tue Oct 27, 1:30 PM ET",
+   "start_utc": "2026-10-27T17:30:00.000Z",
+   "market": "Moneyline",
+   "app_market": "Match Result (3-way, 90 min)",
+   "selection": "Lazio to win",
+   "book_app": "bet365",
+   "odds": 115,
+   "fair_pct": 44.39,
+   "fair_odds": 125,
+   "wins_if": "Lazio win in 90 minutes plus stoppage time (a draw loses).",
+   "three_way": true,
+   "bet365_odds": 115
   },
   {
    "key": "2026-10-28|New York Islanders @ Nashville Predators|New York Islanders to win",
@@ -670,20 +687,20 @@
    "bet365_odds": 101
   },
   {
-   "key": "2026-10-27|Golden State Warriors @ Denver Nuggets|Golden State Warriors to win",
-   "league": "NBA",
-   "event": "Golden State Warriors @ Denver Nuggets",
-   "start_et": "Mon Oct 26, 10:00 PM ET",
-   "start_utc": "2026-10-27T02:00:00.000Z",
+   "key": "2026-10-27|Lazio @ Sassuolo|Sassuolo to win",
+   "league": "SOCCER",
+   "event": "Lazio @ Sassuolo",
+   "start_et": "Tue Oct 27, 1:30 PM ET",
+   "start_utc": "2026-10-27T17:30:00.000Z",
    "market": "Moneyline",
-   "app_market": "Moneyline",
-   "selection": "Golden State Warriors to win",
+   "app_market": "Match Result (3-way, 90 min)",
+   "selection": "Sassuolo to win",
    "book_app": "bet365",
    "odds": 225,
-   "fair_pct": 29.28,
+   "fair_pct": 29.24,
    "fair_odds": 242,
-   "wins_if": "Golden State Warriors win the game, including overtime/extra innings.",
-   "three_way": false,
+   "wins_if": "Sassuolo win in 90 minutes plus stoppage time (a draw loses).",
+   "three_way": true,
    "bet365_odds": 225
   },
   {
@@ -721,23 +738,6 @@
    "bet365_odds": 101
   },
   {
-   "key": "2026-10-27|Lazio @ Sassuolo|Sassuolo to win",
-   "league": "SOCCER",
-   "event": "Lazio @ Sassuolo",
-   "start_et": "Tue Oct 27, 1:30 PM ET",
-   "start_utc": "2026-10-27T17:30:00.000Z",
-   "market": "Moneyline",
-   "app_market": "Match Result (3-way, 90 min)",
-   "selection": "Sassuolo to win",
-   "book_app": "bet365",
-   "odds": 225,
-   "fair_pct": 29.18,
-   "fair_odds": 243,
-   "wins_if": "Sassuolo win in 90 minutes plus stoppage time (a draw loses).",
-   "three_way": true,
-   "bet365_odds": 225
-  },
-  {
    "key": "2026-10-28|Ottawa Senators @ Vegas Golden Knights|Vegas Golden Knights -1.5",
    "league": "NHL",
    "event": "Ottawa Senators @ Vegas Golden Knights",
@@ -772,6 +772,23 @@
    "bet365_odds": 113
   },
   {
+   "key": "2026-10-27|Lazio @ Sassuolo|Under 2.5",
+   "league": "SOCCER",
+   "event": "Lazio @ Sassuolo",
+   "start_et": "Tue Oct 27, 1:30 PM ET",
+   "start_utc": "2026-10-27T17:30:00.000Z",
+   "market": "Total",
+   "app_market": "Total Goals",
+   "selection": "Under 2.5",
+   "book_app": "DraftKings",
+   "odds": 125,
+   "fair_pct": 41.91,
+   "fair_odds": 139,
+   "wins_if": "Both teams combine for 2 or fewer goals.",
+   "three_way": false,
+   "bet365_odds": 120
+  },
+  {
    "key": "2026-10-28|Vancouver Canucks @ Anaheim Ducks|Under 6.5",
    "league": "NHL",
    "event": "Vancouver Canucks @ Anaheim Ducks",
@@ -787,23 +804,6 @@
    "wins_if": "Both teams combine for 6 or fewer goals.",
    "three_way": false,
    "bet365_odds": 100
-  },
-  {
-   "key": "2026-10-27|Lazio @ Sassuolo|Under 2.5",
-   "league": "SOCCER",
-   "event": "Lazio @ Sassuolo",
-   "start_et": "Tue Oct 27, 1:30 PM ET",
-   "start_utc": "2026-10-27T17:30:00.000Z",
-   "market": "Total",
-   "app_market": "Total Goals",
-   "selection": "Under 2.5",
-   "book_app": "DraftKings",
-   "odds": 125,
-   "fair_pct": 41.85,
-   "fair_odds": 139,
-   "wins_if": "Both teams combine for 2 or fewer goals.",
-   "three_way": false,
-   "bet365_odds": 120
   },
   {
    "key": "2026-10-27|Cagliari @ Roma|Under 2.5",
@@ -831,13 +831,13 @@
    "market": "Spread",
    "app_market": "Puck Line",
    "selection": "Nashville Predators -1.5",
-   "book_app": "DraftKings",
+   "book_app": "bet365",
    "odds": 200,
    "fair_pct": 31.3,
    "fair_odds": 219,
    "wins_if": "Nashville Predators win by more than 1.5 goals.",
    "three_way": false,
-   "bet365_odds": 195
+   "bet365_odds": 200
   },
   {
    "key": "2026-10-27|Lazio @ Sassuolo|Lazio -0.5",
@@ -854,6 +854,23 @@
    "fair_odds": 124,
    "wins_if": "Lazio win by more than 0.5 goals.",
    "three_way": false
+  },
+  {
+   "key": "2026-10-28|Montreal Canadiens @ St. Louis Blues|St. Louis Blues -1.5",
+   "league": "NHL",
+   "event": "Montreal Canadiens @ St. Louis Blues",
+   "start_et": "Tue Oct 27, 8:00 PM ET",
+   "start_utc": "2026-10-28T00:00:00.000Z",
+   "market": "Spread",
+   "app_market": "Puck Line",
+   "selection": "St. Louis Blues -1.5",
+   "book_app": "bet365",
+   "odds": 210,
+   "fair_pct": 30.22,
+   "fair_odds": 231,
+   "wins_if": "St. Louis Blues win by more than 1.5 goals.",
+   "three_way": false,
+   "bet365_odds": 210
   },
   {
    "key": "2026-10-28|Florida Panthers @ Winnipeg Jets|Florida Panthers -1.5",
@@ -873,23 +890,6 @@
    "bet365_odds": 190
   },
   {
-   "key": "2026-10-28|New Jersey Devils @ Dallas Stars|Dallas Stars -1.5",
-   "league": "NHL",
-   "event": "New Jersey Devils @ Dallas Stars",
-   "start_et": "Tue Oct 27, 8:00 PM ET",
-   "start_utc": "2026-10-28T00:00:00.000Z",
-   "market": "Spread",
-   "app_market": "Puck Line",
-   "selection": "Dallas Stars -1.5",
-   "book_app": "bet365",
-   "odds": 200,
-   "fair_pct": 30.99,
-   "fair_odds": 223,
-   "wins_if": "Dallas Stars win by more than 1.5 goals.",
-   "three_way": false,
-   "bet365_odds": 200
-  },
-  {
    "key": "2026-10-28|Montreal Canadiens @ St. Louis Blues|Under 5.5",
    "league": "NHL",
    "event": "Montreal Canadiens @ St. Louis Blues",
@@ -903,39 +903,6 @@
    "fair_pct": 43.22,
    "fair_odds": 131,
    "wins_if": "Both teams combine for 5 or fewer goals.",
-   "three_way": false
-  },
-  {
-   "key": "2026-10-28|Montreal Canadiens @ St. Louis Blues|St. Louis Blues -1.5",
-   "league": "NHL",
-   "event": "Montreal Canadiens @ St. Louis Blues",
-   "start_et": "Tue Oct 27, 8:00 PM ET",
-   "start_utc": "2026-10-28T00:00:00.000Z",
-   "market": "Spread",
-   "app_market": "Puck Line",
-   "selection": "St. Louis Blues -1.5",
-   "book_app": "bet365",
-   "odds": 205,
-   "fair_pct": 30.22,
-   "fair_odds": 231,
-   "wins_if": "St. Louis Blues win by more than 1.5 goals.",
-   "three_way": false,
-   "bet365_odds": 205
-  },
-  {
-   "key": "2026-10-27|Memphis Grizzlies @ Utah Jazz|Utah Jazz -1.5",
-   "league": "NBA",
-   "event": "Memphis Grizzlies @ Utah Jazz",
-   "start_et": "Mon Oct 26, 9:00 PM ET",
-   "start_utc": "2026-10-27T01:00:00.000Z",
-   "market": "Spread",
-   "app_market": "Spread",
-   "selection": "Utah Jazz -1.5",
-   "book_app": "DraftKings",
-   "odds": 100,
-   "fair_pct": 46.04,
-   "fair_odds": 117,
-   "wins_if": "Utah Jazz win by more than 1.5 points.",
    "three_way": false
   },
   {
@@ -957,10 +924,7 @@
  ],
  "notes": [
   "mlb: skipped Milwaukee Brewers @ Tampa Bay Rays (you already have a bet on it)",
-  "nhl: skipped Detroit Red Wings @ Edmonton Oilers (you already have a bet on it)",
-  "nhl: skipped Los Angeles Kings @ Chicago Blackhawks (you already have a bet on it)",
   "nba: skipped Brooklyn Nets @ Boston Celtics (you already have a bet on it)",
-  "nba: skipped Sacramento Kings @ San Antonio Spurs (you already have a bet on it)",
   "soccer: skipped Como @ Torino (you already have a bet on it)",
   "0 price(s) hidden: you skipped them in Bet Finder today"
  ],
