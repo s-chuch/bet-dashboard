@@ -1,16 +1,15 @@
 {
- "needs_review": [
-  {
-   "bet_id": "18a957e1",
-   "book": "Caesars",
-   "event": "Lyon v Angers (French Ligue 1)",
-   "pick": "Angers",
-   "stake": "5.00 (bonus)",
-   "reason": "ESPN summary unavailable for soccer/fra.1 401876418",
-   "legs": []
-  }
- ],
+ "needs_review": [],
  "last_settled": [
+  {
+   "bet_id": "9552cc6f",
+   "book": "PointsBet",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "COMO 3-1 TOR",
+   "at": "2026-10-27 17:44"
+  },
   {
    "bet_id": "38cdf546",
    "book": "PointsBet",
@@ -226,17 +225,8 @@
    "pnl": 3.7,
    "final": "NYG 27-21 HOU",
    "at": "2026-10-25 16:22"
-  },
-  {
-   "bet_id": "3731f13d",
-   "book": "FanDuel",
-   "pick": "Panthers ML + Bryce Young 175+ pass yds + Baker Mayfield 150+ pass yds + Tetairoa McMillan 25+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "TB 43-13 CAR",
-   "at": "2026-10-25 15:49"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-27 17:26 ET"
+ "last_change_at": "2026-10-27 17:44 ET"
 }

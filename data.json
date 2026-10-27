@@ -254,75 +254,6 @@
    "clv": null
   },
   {
-   "bet_id": "9552cc6f",
-   "date": "2026-10-25",
-   "book": "PointsBet",
-   "event": "Torino v Como",
-   "market": "Match Result (bonus bet $2.50; receipt #265TZDXS)",
-   "pick": "Draw",
-   "start": "Tue Oct 27 03:45 PM ET",
-   "price": "+280",
-   "boosted_price": "",
-   "stake": 2.5,
-   "stake_note": "",
-   "to_win": 7.0,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "draw",
-     "text": "Draw"
-    }
-   ],
-   "match": {
-    "path": "soccer/ita.1",
-    "date": "20261027",
-    "groups": null,
-    "id": "401874786",
-    "snapshot": {
-     "date": "2026-10-27T19:45Z",
-     "period": 2,
-     "clock": 4680.0,
-     "state": "in",
-     "completed": false,
-     "detail": "78'",
-     "teams": [
-      {
-       "id": "239",
-       "name": "Torino",
-       "abbr": "TOR",
-       "short": "Torino",
-       "nick": "Torino",
-       "location": "Torino",
-       "home": true,
-       "score": "1"
-      },
-      {
-       "id": "2572",
-       "name": "Como",
-       "abbr": "COMO",
-       "short": "Como",
-       "nick": "Como",
-       "location": "Como",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 7.0,
-   "payout_est": false,
-   "start_ts": "2026-10-27T19:45Z",
-   "clv": {
-    "placed_at": "2026-10-25 19:36",
-    "close_price": "+302",
-    "clv_pct": -5.48
-   }
-  },
-  {
    "bet_id": "1e699888",
    "date": "2026-10-26",
    "book": "Caesars",
@@ -1443,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T21:27Z"
+       "t": "2026-10-27T21:44Z"
       }
      },
      "pteam": "BAL",
@@ -2135,10 +2066,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.5505,
-       "away": 0.4495,
-       "spread": 0.01,
-       "t": "2026-10-27T21:27Z"
+       "home": 0.5477,
+       "away": 0.4523,
+       "spread": 0.02,
+       "t": "2026-10-27T21:44Z"
       }
      },
      "pteam": "ATL",
@@ -2860,7 +2791,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NBA",
@@ -3670,7 +3601,7 @@
      "home": 0.845,
      "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NBA",
@@ -4412,7 +4343,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NBA",
@@ -5161,7 +5092,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NBA",
@@ -5442,7 +5373,7 @@
      "home": 0.475,
      "away": 0.525,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NHL",
@@ -6197,7 +6128,7 @@
      "home": 0.845,
      "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "NBA",
@@ -6527,7 +6458,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-27T21:26Z"
+     "t": "2026-10-27T21:44Z"
     }
    },
    "sport": "MLB",
@@ -6751,6 +6682,21 @@
     "placed_at": "2026-10-25 19:36",
     "close_price": null,
     "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "book": "PointsBet",
+   "event": "Torino v Como",
+   "pick": "Draw",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 2.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 19:36",
+    "close_price": "+302",
+    "clv_pct": -5.48
    }
   },
   {
@@ -7671,9 +7617,9 @@
  ],
  "pnl_total": 109.21,
  "unsettled": {
-  "n": 21,
+  "n": 20,
   "cash_stake": 15.0,
-  "max_payout": 300.26,
+  "max_payout": 293.26,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -11816,18 +11762,17 @@
   ]
  },
  "auto": {
-  "needs_review": [
-   {
-    "bet_id": "18a957e1",
-    "book": "Caesars",
-    "event": "Lyon v Angers (French Ligue 1)",
-    "pick": "Angers",
-    "stake": "5.00 (bonus)",
-    "reason": "ESPN summary unavailable for soccer/fra.1 401876418",
-    "legs": []
-   }
-  ],
+  "needs_review": [],
   "last_settled": [
+   {
+    "bet_id": "9552cc6f",
+    "book": "PointsBet",
+    "pick": "Draw",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "COMO 3-1 TOR",
+    "at": "2026-10-27 17:44"
+   },
    {
     "bet_id": "38cdf546",
     "book": "PointsBet",
@@ -12043,27 +11988,18 @@
     "pnl": 3.7,
     "final": "NYG 27-21 HOU",
     "at": "2026-10-25 16:22"
-   },
-   {
-    "bet_id": "3731f13d",
-    "book": "FanDuel",
-    "pick": "Panthers ML + Bryce Young 175+ pass yds + Baker Mayfield 150+ pass yds + Tetairoa McMillan 25+ rec yds",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "TB 43-13 CAR",
-    "at": "2026-10-25 15:49"
    }
   ],
-  "last_change_at": "2026-10-27 17:26 ET"
+  "last_change_at": "2026-10-27 17:44 ET"
  },
- "open_live_n": 21,
+ "open_live_n": 20,
  "open_stake_by_book": {
   "bet365": 1.0,
   "Caesars": 30.5,
   "DraftKings": 0.7,
   "FanDuel": 2.8,
-  "PointsBet": 12.5
+  "PointsBet": 10.0
  },
- "hash": "ba11cc6580acd516cbd03adf07abfc44569f7777",
- "generated_at": "2026-10-27T17:27:02-04:00"
+ "hash": "e673bc7b95037b356feef8177ac3a367d0400e9d",
+ "generated_at": "2026-10-27T17:44:22-04:00"
 }
