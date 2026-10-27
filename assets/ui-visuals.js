@@ -138,4 +138,5 @@
     } catch (e) {}
   }
   if (window.LiveUI && window.LiveUI.afterRender) window.LiveUI.afterRender.push(decorate);
+  if (window.LiveUI) window.LiveUI.visual = build;   // reused by ui-arena
 })();
