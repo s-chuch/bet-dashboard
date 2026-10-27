@@ -490,3 +490,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-27 08:03,FanDuel,f9e33ec4,stake,-0.20,stake
 2026-10-27 08:05,bet365,5a50cd2d,stake,-0.30,stake
 2026-10-27 08:10,DraftKings,5ff31714,stake,-0.30,stake
+2026-10-27 08:38,bet365,d5b8bad5,settled,0.00,"lost, no return"

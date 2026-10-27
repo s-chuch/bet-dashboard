@@ -24,20 +24,6 @@
    "legs": []
   },
   {
-   "bet_id": "d5b8bad5",
-   "book": "bet365",
-   "event": "Milwaukee Brewers @ Tampa Bay Rays (MLB)",
-   "pick": "Yandy Diaz 1+ Hits + Chandler Simpson 1+ Total Bases + Freddy Peralta 3+ Strikeouts",
-   "stake": "0.40",
-   "reason": "leg \"Chandler Simpson 1+ Total Bases\": market/stat not recognised",
-   "legs": [
-    {
-     "leg": "Yandy Diaz 1+ Hits",
-     "result": "won"
-    }
-   ]
-  },
-  {
    "bet_id": "0a3a4d16",
    "book": "Caesars",
    "event": "NFL multi (DAL@PHI / BAL@BUF / ATL@TB)",
@@ -45,9 +31,36 @@
    "stake": "0.50",
    "reason": "no ESPN game matched",
    "legs": []
+  },
+  {
+   "bet_id": "f9e33ec4",
+   "book": "FanDuel",
+   "event": "Sacramento Kings @ San Antonio Spurs",
+   "pick": "Sacramento Kings ML",
+   "stake": "0.20",
+   "reason": "no ESPN game matched",
+   "legs": []
+  },
+  {
+   "bet_id": "5ff31714",
+   "book": "DraftKings",
+   "event": "Brooklyn Nets @ Boston Celtics",
+   "pick": "Brooklyn Nets ML",
+   "stake": "0.30",
+   "reason": "no ESPN game matched",
+   "legs": []
   }
  ],
  "last_settled": [
+  {
+   "bet_id": "d5b8bad5",
+   "book": "bet365",
+   "pick": "Yandy Diaz 1+ Hits + Chandler Simpson 1+ Total Bases + Freddy Peralta 3+ Strikeouts",
+   "result": "lost",
+   "pnl": -0.4,
+   "final": "MIL 10-1 TB",
+   "at": "2026-10-27 08:38"
+  },
   {
    "bet_id": "0579a4e1",
    "book": "FanDuel",
@@ -263,17 +276,8 @@
    "pnl": -0.5,
    "final": "PIT 16-10 NO",
    "at": "2026-10-25 12:35"
-  },
-  {
-   "bet_id": "3ce5384a",
-   "book": "PointsBet",
-   "pick": "Carrarese",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "CAR 1-2 PAL",
-   "at": "2026-10-25 11:52"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-27 00:24 ET"
+ "last_change_at": "2026-10-27 08:38 ET"
 }
