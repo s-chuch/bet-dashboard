@@ -148,13 +148,13 @@
     $('bonus').innerHTML = b.length ? '<p class="muted small">Use one bonus bet at a time. Ranked by return on the bonus (you keep only the profit).</p>' + b.map(bonusCard).join('') : '<p class="empty">No +300 to +500 price returns 60%+ of face in this scan.</p>';
   }
 
-  // ---------- Profit boost helper: book + boost % -> +100..+300 picks ranked by boosted EV ----------
+  // ---------- Profit boost helper: book + boost % -> +100..+299 picks ranked by boosted EV ----------
   var POOL = [];
   function dec(a) { return a > 0 ? 1 + a / 100 : 1 + 100 / -a; }
   function renderBoost() {
     var book = $('bb-book').value, pctv = Number($('bb-pct').value), out = $('boost');
     if (!(pctv > 0 && pctv <= 200)) { out.innerHTML = '<p class="empty err">Enter a boost between 1 and 200%.</p>'; return; }
-    if (!POOL.length) { out.innerHTML = '<p class="empty">No +100 to +300 prices in this scan.</p>'; return; }
+    if (!POOL.length) { out.innerHTML = '<p class="empty">No +100 to +299 prices in this scan.</p>'; return; }
     var rows = POOL.map(function (p) {
       var price = book === 'bet365' && p.bet365_odds != null ? p.bet365_odds : p.odds, f = p.fair_pct / 100;
       var ev = f * (1 + (dec(price) - 1) * (1 + pctv / 100)) - 1;
@@ -164,9 +164,9 @@
     out.innerHTML = rows.length ? rows.map(function (x, i) {
       var p = x.p, boosted = Math.round((dec(x.price) - 1) * (1 + pctv / 100) * 100);
       return '<article class="pick near"><h4>' + esc('#' + (i + 1) + ' ' + p.league + ': ' + p.selection + ' (' + p.event + ')') + '</h4><p>' + esc(p.app_market) + ' \u00b7 ' +
-        (x.b365 ? 'bet365 ' : 'best feed price (' + esc(p.book_app) + ') ') + am(x.price) + ' \u2192 boosted ' + am(boosted) + ' \u00b7 fair ' + am(p.fair_odds) + ' \u00b7 <span class="ev">+' + (x.ev * 100).toFixed(1) + '% boosted EV</span></p>' +
+        (x.b365 ? 'bet365 ' : 'best feed price (' + esc(p.book_app) + ') ') + am(x.price) + ' \u2192 boosted ' + am(boosted) + ' \u00b7 fair ' + am(p.fair_odds) + ' \u00b7 <span class="ev">+' + (x.ev * 100).toFixed(1) + '% boosted EV</span> \u00b7 <span class="small muted">boost rule \u2713 straight, +100 to +299</span></p>' +
         '<p class="small muted">' + (book === 'bet365' ? '' : 'Check ' + esc(book) + '\u2019s own price: ') + 'still +2% if its unboosted price is ' + (x.need >= 100 ? am(x.need) : '+100') + ' or longer. ' + esc(p.start_et) + (p.three_way ? ' \u00b7 3-way: a draw loses' : '') + '</p>' + act(p, 'boost', book, x.price, '', pctv) + '</article>';
-    }).join('') : '<p class="empty">No +100 to +300 pick is +EV even with this boost.</p>';
+    }).join('') : '<p class="empty">No +100 to +299 pick is +EV even with this boost.</p>';
   }
 
   function render(d) {

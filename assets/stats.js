@@ -444,6 +444,10 @@
     var b = obj(g.bonus);
     $('plan-note').textContent = (b.n ? 'Bonus bets: ' + money(b.returned) + ' back from ' + money(b.face) + ' face (' + (b.conv_pct == null ? '\u2013' : Math.round(b.conv_pct) + '%') + '; good is 60%+). ' : '') + 'ROI is on cash staked; bonus bets risk no cash. ' + (g.note || '');
     var c = obj(g.clv), ch = $('clv'); clear(ch);
+    var cv = obj(c.coverage), rc = obj(g.rec_coverage);
+    var covLine = (cv.straight != null ? 'Close on file: ' + num(cv.straight_with_close) + ' of ' + num(cv.straight) + ' straight bets (' + num(cv.proxy_closes) + ' are ESPN-final proxies, not Pinnacle) \u00b7 open price logged: ' + num(cv.open_price_logged) + ' of ' + num(cv.bets) + ' bets. ' : '') +
+      (rc.bets != null ? 'Bets with no rec: ' + num(rc.no_rec) + ' of ' + num(rc.bets) + ' (' + num(rc.no_rec_7d) + ' in the last 7 days).' : '');
+    if (covLine) ch.appendChild(el('div', { class: 'small muted', text: covLine }));
     if (!num(c.n)) { ch.appendChild(el('div', { class: 'empty', text: 'No closing lines captured yet. Straight ML / spread / total bets get one in the hour before start (' + num(c.tracked) + ' bets have a logged time).' })); return; }
     ch.appendChild(el('div', { class: 'pt', text: c.n + ' bets graded \u00b7 average CLV ' + pct(c.avg, true) + ' \u00b7 beat the close ' + Math.round(num(c.beat_pct)) + '% (' + c.beat + '/' + c.n + ')' }));
     arr(c.recent).forEach(function (x) {

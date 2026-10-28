@@ -10,8 +10,9 @@ Every bet event is keyed (bet_id, event_type); writing the same key twice is a n
   python3 ledger.py settle <bet_id> won|lost|push|void|cashout [--cashout X] [--pnl X]
   python3 ledger.py anchor BOOK AMT "note"       # app balance from Shawn; resets that book
   python3 ledger.py adjust BOOK AMT "note"       # manual +/- correction (deposit, withdrawal, bonus)
-  python3 ledger.py log date=.. book=.. event=.. start_et=.. market=.. pick=.. price=.. stake=.. to_win=.. [..] [--force]
-                                                 # append a bet row (duplicate guard) + deduct stake
+  python3 ledger.py log date=.. book=.. event=.. start_et=.. market=.. pick=.. price=.. stake=.. to_win=.. [fair_pct=.. ev_pct=..] [--force] [--no-rec]
+                                                 # append a bet row (duplicate guard) + deduct stake; links/creates its rec,
+                                                 # records the open price for CLV, and WARNs when no rec/fair %/EV can be recorded
   python3 ledger.py dupes                        # duplicate audit of bets.csv
 """
 import csv, sys, os, re, hashlib, datetime
@@ -216,8 +217,10 @@ def main(a):
             print(f"REJECTED duplicate: matches {clash[0]['bet_id']} ({clash[0]['book']} | {clash[0]['event']} | "
                   f"{clash[0]['pick']} | ${clash[0]['stake']}). Re-run with --force if it really is a second bet."); sys.exit(2)
         rows.append(r); assign_ids(rows); place(rows, led, r); print(f"logged {r['bet_id']}")
+        if "--no-rec" not in a:   # rule 3: every bet gets a rec (+ fair %/EV) at placement; warns when it cannot. add_bets.py links Finder bets itself.
+            import rec as RC; RC.log_time_link(r)
         try:
-            import clv; clv.record_placed(r["bet_id"])   # placed_at for CLV/timing (data/clv.csv; bets.csv untouched)
+            import clv; clv.record_placed(r["bet_id"], bet=r)   # placed_at + open prices for CLV (data/clv.csv; bets.csv untouched)
         except Exception as e: print("clv placed_at not recorded:", e)
     else: sys.exit(__doc__)
     save_bets(rows, cols); write_balances(led); show()

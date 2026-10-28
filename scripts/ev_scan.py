@@ -16,6 +16,8 @@ Usage: python3 scripts/ev_scan.py [--out finder.json] [--hours 36] [--leagues ml
 import argparse, csv, datetime as dt, difflib, json, math, os, re, sys, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rules as BR      # boost rule (flag/warn only)
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 try:
     from zoneinfo import ZoneInfo
@@ -32,7 +34,7 @@ SPORT = {"mlb": ("BASEBALL", "MLB"), "nfl": ("FOOTBALL", "NFL"), "ncaaf": ("FOOT
 THR, STAKE_PCT = 0.02, 0.005
 THR_3WAY = 0.04            # cash 3-way (90-minute) moneylines need +4% EV (Oct 22 game plan)
 BONUS_MIN, BONUS_MAX, BONUS_FLOOR = 300, 500, 0.60   # bonus-bet section: +300..+500, playable while return >= 60% of face
-BOOST_MIN, BOOST_MAX = 100, 300                      # profit-boost helper pool
+BOOST_MIN, BOOST_MAX = 100, 299                      # profit-boost helper pool = the boost rule's preferred range (RULES.md rule 2)
 
 # ---------- math ----------
 def implied(a): return -a / (-a + 100) if a < 0 else 100 / (a + 100)
@@ -295,13 +297,16 @@ def scan(leagues, hours, root=ROOT):
         cur = pool.get(k)
         if cur is None or r["odds"] > cur["odds"]:
             pool[k] = {x: r[x] for x in ("key", "league", "event", "start_et", "start_utc", "market", "app_market", "selection", "book_app", "odds", "fair_pct", "fair_odds", "wins_if", "three_way")}
+            pool[k]["boost_rule"], pool[k]["boost_rule_msg"] = BR.boost_check(1, r["odds"])   # straight at +100..+299 -> preferred
         if r["book"] == "bet365": pool[k]["bet365_odds"] = max(r["odds"], pool[k].get("bet365_odds") or -9999)
     boost_pool = sorted(pool.values(), key=lambda p: -p["fair_pct"] * am2dec(p["odds"]))[:150]
     bets = [r for r in rows if r["class"] == "BET"]
     near = [r for r in rows if r["class"] == "SKIP"][:10]   # includes 3-way MLs between +2% and +4% (skip_reason says why)
     return {"ok": True, "scanned_et": now.strftime("%a %b %d, %Y %-I:%M %p ET"), "scanned_utc": now.astimezone(dt.timezone.utc).isoformat(timespec="seconds"),
             "window_hours": hours, "rules": {"bet_ev_pct": THR * 100, "stake_pct": STAKE_PCT * 100, "books": list(BOOK_APP.values()), "bet365_min_odds": 100,
-                      "three_way_ev_pct": THR_3WAY * 100, "bonus_range": [BONUS_MIN, BONUS_MAX], "bonus_floor_pct": BONUS_FLOOR * 100, "boost_range": [BOOST_MIN, BOOST_MAX]},
+                      "three_way_ev_pct": THR_3WAY * 100, "bonus_range": [BONUS_MIN, BONUS_MAX], "bonus_floor_pct": BONUS_FLOOR * 100, "boost_range": [BOOST_MIN, BOOST_MAX],
+                      "boost_rule": {"preferred": "straight or 2-leg, unboosted price +100 to +299", "flagged": "plain cash favourites and 3-leg SGPs unless the promo requires 3 legs (bet365 boosts, FanDuel NBA/NHL boosts)",
+                                     "flagged_min_ev_pct": BR.FLAG_MIN_EV, "action": "flag/warn only, never blocks"}},
             "balances": {b: bal.get(b) for b in BOOKS.values()}, "counts": counts,
             "totals": {"prices": len(rows), "bet": len(bets), "skip": sum(r["class"] == "SKIP" for r in rows), "no": sum(r["class"] == "NO" for r in rows)},
             "bets": bets, "near_misses": near, "bonus": bonus, "boost_pool": boost_pool, "notes": notes, "errors": errors}
@@ -311,7 +316,12 @@ def main():
     ap.add_argument("--out", default=os.path.join(ROOT, "finder.json"))
     ap.add_argument("--hours", type=float, default=36)
     ap.add_argument("--leagues", default="mlb,nfl,ncaaf,nhl,nba,wnba,soccer")
+    ap.add_argument("--check-boost", action="store_true", help="offline: print the boost-rule verdict for --legs/--price/--ev/--book/--sport")
+    ap.add_argument("--legs", type=int, default=1); ap.add_argument("--price", type=int); ap.add_argument("--ev", type=float)
+    ap.add_argument("--book", default=""); ap.add_argument("--sport", default="")
     a = ap.parse_args()
+    if a.check_boost:
+        st, msg = BR.boost_check(a.legs, a.price, a.ev, a.book, a.sport); print(f"{st}: {msg}"); return
     res = scan(a.leagues.split(","), a.hours)
     with open(a.out, "w", encoding="utf-8") as f: json.dump(res, f, indent=1)
     if not res.get("ok"): print(res["error"], file=sys.stderr); sys.exit(1)

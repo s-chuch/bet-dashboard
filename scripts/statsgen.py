@@ -170,6 +170,14 @@ def game_plan(rows):
     try:
         import clv as C; cs = C.summary(rows)
     except Exception: cs = {"n": 0, "avg": None, "beat": 0, "beat_pct": None, "tracked": 0}
+    cov = cs.get("coverage") or {}
+    no_rec = [r for r in rows if r.get("bet_id") not in rec_ids]; no_rec_wk = [r for r in no_rec if (r.get("date") or "") >= cut]
+    no_ev = [r for r in rows if not (r.get("ev_pct") or "").strip()]; no_fair = [r for r in rows if not (r.get("fair_pct") or "").strip()]
+    try:
+        import rules as BR
+        bchk = [(r, BR.boost_check_bet(r)) for r in wk]; bchk = [(r, c) for r, c in bchk if c]
+    except Exception: bchk = []
+    b_flag = [r for r, c in bchk if c[0] in ("flagged_low_ev", "flagged_no_ev")]
     A = agg
     def line(rs): a = A(rs); return f"{a['bets']} bets, {money(a['pnl'])}" + (f" ({a['roi']:+.1f}% ROI)" if a["staked"] else "")
     rules = [
@@ -189,7 +197,12 @@ def game_plan(rows):
          "track": f"bet365 + Hard Rock boosts: {line(b3h)}.", "ok": A(b3h)["pnl"] >= 0},
         {"n": 7, "rule": "Log every bet when placed so CLV (vs Pinnacle's closing no-vig line) is tracked; confirm unconfirmed prices.",
          "track": (f"CLV on {cs['n']} bet(s): avg {cs['avg']:+.1f}%, beat the close {cs['beat_pct']:.0f}%." if cs["n"] else "No closing lines captured yet.")
+                  + (f" Closing price on file for {cov['straight_with_close']} of {cov['straight']} straight bets (+{cov['proxy_closes']} ESPN-final proxies); open price logged for {cov['open_price_logged']} of {cov['bets']} bets." if cov else "")
                   + f" Bets with an unconfirmed price: {len(unconf)}.", "ok": len(unconf) == 0},
+        {"n": 8, "rule": "Boost rule: boost straights or 2-leg bets at +100 to +299. Avoid cash favourites and 3-leg SGPs unless the promo requires 3 legs (bet365, FanDuel NBA/NHL); otherwise +2% EV at the model price.",
+         "track": f"Boosted bets in the last 7 days: {len(bchk)}; flagged below the +2% bar or with no EV logged: {len(b_flag)}.", "ok": len(b_flag) == 0},
+        {"n": 9, "rule": "Every bet links to a rec with fair % and EV at placement; skips are logged.",
+         "track": f"Bets with no rec: {len(no_rec)} of {len(rows)} ({len(no_rec_wk)} in the last 7 days). No EV logged: {len(no_ev)}. No fair %: {len(no_fair)}.", "ok": len(no_rec_wk) == 0},
     ]
     followed = [r for r in st if r.get("bet_id") in rec_ids]; own = [r for r in st if r.get("bet_id") not in rec_ids]
     band_order = ["Fav -150 or shorter", "-149 to +150", "+151 to +400", "+401 or longer", "Price unconfirmed"]
@@ -202,6 +215,7 @@ def game_plan(rows):
             "by_legs": group([r for r in st if market_bucket(r) == "Parlay/SGP"], lambda r: f"{legs_n(r)} legs", "key"),
             "bonus": {"n": len(bonus), "face": r2(face), "returned": r2(ret), "conv_pct": conv},
             "clv": cs, "unconfirmed": len(unconf),
+            "rec_coverage": {"bets": len(rows), "no_rec": len(no_rec), "no_rec_7d": len(no_rec_wk), "no_ev": len(no_ev), "no_fair": len(no_fair)},
             "unconfirmed_list": [{"bet_id": r.get("bet_id", ""), "date": r["date"], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r.get("event") or ""),
                                   "market": r.get("market", ""), "pick": r["pick"], "price": r.get("price", ""), "boosted_price": r.get("boosted_price", ""),
                                   "stake": r.get("stake", ""), "result": r.get("result", ""), "pnl": r2(num(r.get("pnl")))}
