@@ -2194,10 +2194,10 @@
     "snapshot": {
      "date": "2026-10-28T03:00Z",
      "period": 4,
-     "clock": 509.0,
+     "clock": 472.0,
      "state": "in",
      "completed": false,
-     "detail": "8:29 - 4th",
+     "detail": "7:52 - 4th",
      "teams": [
       {
        "id": "13",
@@ -2217,7 +2217,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "111"
+       "score": "114"
       }
      ]
     },
@@ -2893,8 +2893,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.32,
-     "away": 0.68,
+     "home": 0.2513,
+     "away": 0.7487,
      "spread": 0.02,
      "t": "2026-10-28T05:30Z"
     }
@@ -8288,6 +8288,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "4f4f20d2328799b8f14ea0349feca2d01db0360a",
- "generated_at": "2026-10-28T01:30:11-04:00"
+ "hash": "8375383fa0aedebea3c91524b8887cdb1f13a500",
+ "generated_at": "2026-10-28T01:30:31-04:00"
 }
