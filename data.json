@@ -453,11 +453,11 @@
     "id": "401874773",
     "snapshot": {
      "date": "2026-10-28T17:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "17530",
@@ -1398,7 +1398,7 @@
        "home": 0.6219,
        "away": 0.3781,
        "spread": 0.02,
-       "t": "2026-10-28T17:20Z"
+       "t": "2026-10-28T18:15Z"
       }
      },
      "pteam": "BAL",
@@ -2093,7 +2093,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T17:20Z"
+       "t": "2026-10-28T18:15Z"
       }
      },
      "pteam": "ATL",
@@ -7857,6 +7857,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "ab4e9eaa7068470dd873cab639d5a66768d15d5e",
- "generated_at": "2026-10-28T13:20:19-04:00"
+ "hash": "218928c3b3fb0674a9ba6e51d346fda57ab7fca8",
+ "generated_at": "2026-10-28T14:15:44-04:00"
 }
