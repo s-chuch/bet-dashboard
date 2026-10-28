@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "20beee2f",
+   "book": "FanDuel",
+   "pick": "Philadelphia Flyers ML + Over 5.5 total goals + Philadelphia Flyers Over 3.5 team total (alt)",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "CBJ 4-3 PHI",
+   "at": "2026-10-27 21:40"
+  },
+  {
    "bet_id": "9552cc6f",
    "book": "PointsBet",
    "pick": "Draw",
@@ -216,17 +225,8 @@
    "pnl": -5.0,
    "final": "FLA 3-2 CHI",
    "at": "2026-10-25 17:49"
-  },
-  {
-   "bet_id": "cfd5b49a",
-   "book": "FanDuel",
-   "pick": "New York Giants",
-   "result": "won",
-   "pnl": 3.7,
-   "final": "NYG 27-21 HOU",
-   "at": "2026-10-25 16:22"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-27 17:44 ET"
+ "last_change_at": "2026-10-27 21:40 ET"
 }
