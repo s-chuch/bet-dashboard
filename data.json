@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 80.81,
-   "updated": "2026-10-27 22:25"
+   "balance": 80.51,
+   "updated": "2026-10-28 09:47"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 662.1,
+ "total": 661.8,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -1395,10 +1395,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.615,
-       "away": 0.385,
+       "home": 0.6188,
+       "away": 0.3812,
        "spread": 0.01,
-       "t": "2026-10-28T12:18Z"
+       "t": "2026-10-28T13:47Z"
       }
      },
      "pteam": "BAL",
@@ -2093,7 +2093,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T12:18Z"
+       "t": "2026-10-28T13:47Z"
       }
      },
      "pteam": "ATL",
@@ -2181,6 +2181,78 @@
    "start_ts": null,
    "clv": {
     "placed_at": "2026-10-27 08:05",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "bet_id": "6600dad9",
+   "date": "2026-10-28",
+   "book": "bet365",
+   "event": "Orlando City @ Chicago Fire",
+   "market": "Moneyline",
+   "pick": "Orlando City ML",
+   "start": "Wed Oct 28, 8:30 PM ET",
+   "price": "+450",
+   "boosted_price": "",
+   "stake": 0.3,
+   "stake_note": "",
+   "to_win": 1.35,
+   "ev_pct": "5.02",
+   "fair_pct": "20",
+   "multi": false,
+   "legs": [
+    {
+     "type": "ml",
+     "team": "Orlando City SC",
+     "women": false,
+     "text": "Orlando City ML",
+     "team_ok": true
+    }
+   ],
+   "match": {
+    "path": "soccer/usa.1",
+    "date": "20261028",
+    "groups": null,
+    "id": "761911",
+    "snapshot": {
+     "date": "2026-10-29T00:30Z",
+     "period": null,
+     "clock": 0.0,
+     "state": "pre",
+     "completed": false,
+     "detail": "Scheduled",
+     "teams": [
+      {
+       "id": "182",
+       "name": "Chicago Fire FC",
+       "abbr": "CHI",
+       "short": "Chicago",
+       "nick": "Chicago Fire FC",
+       "location": "Chicago Fire FC",
+       "home": true,
+       "score": "0"
+      },
+      {
+       "id": "12011",
+       "name": "Orlando City SC",
+       "abbr": "ORL",
+       "short": "Orlando",
+       "nick": "Orlando City SC",
+       "location": "Orlando City SC",
+       "home": false,
+       "score": "0"
+      }
+     ]
+    }
+   },
+   "sport": "Soccer",
+   "cash_stake": 0.3,
+   "payout": 1.65,
+   "payout_est": false,
+   "start_ts": null,
+   "clv": {
+    "placed_at": "2026-10-28 09:46",
     "close_price": null,
     "clv_pct": null
    }
@@ -3195,21 +3267,21 @@
  ],
  "pnl_total": 108.08,
  "unsettled": {
-  "n": 13,
-  "cash_stake": 12.4,
-  "max_payout": 281.9,
+  "n": 14,
+  "cash_stake": 12.7,
+  "max_payout": 283.55,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 12.4,
+ "open_stake": 12.7,
  "recs": {
   "stats": {
    "overall": {
-    "n": 158,
+    "n": 159,
     "w": 49,
     "l": 77,
     "p": 0,
-    "pending": 32,
+    "pending": 33,
     "win_pct": 38.9,
     "units": 17.29,
     "roi_pct": 16.6,
@@ -3296,11 +3368,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 53,
+     "n": 54,
      "w": 22,
      "l": 29,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 43.1,
      "units": 11.96,
      "roi_pct": 23.5,
@@ -3463,11 +3535,11 @@
      "wins_with_fair": 9
     },
     "SOCCER": {
-     "n": 3,
+     "n": 4,
      "w": 2,
      "l": 0,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": 100.0,
      "units": 3.95,
      "roi_pct": 197.5,
@@ -3540,11 +3612,11 @@
    },
    "by_placed": {
     "yes": {
-     "n": 88,
+     "n": 89,
      "w": 32,
      "l": 55,
      "p": 0,
-     "pending": 1,
+     "pending": 2,
      "win_pct": 36.8,
      "units": 22.44,
      "roi_pct": 31.6,
@@ -3588,6 +3660,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "ff591a0d",
+    "rec_date": "2026-10-28",
+    "rec_time_et": "09:47",
+    "sport": "SOCCER",
+    "event": "Orlando City @ Chicago Fire",
+    "market": "Moneyline",
+    "selection": "Orlando City to win",
+    "book": "bet365",
+    "rec_price": "+425",
+    "eff_price": "+450",
+    "fair_pct": "20",
+    "ev_pct": "5.02",
+    "stake": "0.30",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "logged from Bet Finder (key 2026-10-29|Orlando City @ Chicago Fire|Orlando City to win)",
+    "units": null
+   },
    {
     "rec_id": "5ee37163",
     "rec_date": "2026-10-27",
@@ -7731,14 +7826,14 @@
   ],
   "last_change_at": "2026-10-28 02:00 ET"
  },
- "open_live_n": 13,
+ "open_live_n": 14,
  "open_stake_by_book": {
-  "bet365": 0.7,
+  "bet365": 1.0,
   "Caesars": 30.5,
   "DraftKings": 0.1,
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "aa44e6ae77d84c4e1297f65ad0a57d6c01b9ba83",
- "generated_at": "2026-10-28T08:18:59-04:00"
+ "hash": "cf5093070bfefba9773cbcc9b305554ac6a1c515",
+ "generated_at": "2026-10-28T09:47:10-04:00"
 }
