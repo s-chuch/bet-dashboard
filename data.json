@@ -2923,7 +2923,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "106"
+       "score": "107"
       },
       {
        "id": "17",
@@ -3598,9 +3598,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.455,
-     "away": 0.545,
-     "spread": 0.03,
+     "home": 0.5,
+     "away": 0.5,
+     "spread": 0.02,
      "t": "2026-10-28T01:47Z"
     }
    },
@@ -5169,7 +5169,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "106"
+       "score": "107"
       },
       {
        "id": "17",
@@ -5844,9 +5844,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.455,
-     "away": 0.545,
-     "spread": 0.03,
+     "home": 0.5,
+     "away": 0.5,
+     "spread": 0.02,
      "t": "2026-10-28T01:47Z"
     }
    },
@@ -6174,8 +6174,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.465,
-     "away": 0.535,
+     "home": 0.435,
+     "away": 0.565,
      "spread": 0.01,
      "t": "2026-10-28T01:47Z"
     }
@@ -11734,6 +11734,6 @@
   "FanDuel": 2.3,
   "PointsBet": 10.0
  },
- "hash": "5902f0a300471208421ae2f41be8cc56cd7552d5",
- "generated_at": "2026-10-27T21:47:28-04:00"
+ "hash": "e92bd8553b1321594f77d9229f4428c376bb0df4",
+ "generated_at": "2026-10-27T21:47:49-04:00"
 }
