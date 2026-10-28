@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-28T02:43Z"
+       "t": "2026-10-28T03:38Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2069,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T02:43Z"
+       "t": "2026-10-28T03:38Z"
       }
      },
      "pteam": "ATL",
@@ -2193,11 +2193,11 @@
     "id": "401909880",
     "snapshot": {
      "date": "2026-10-28T03:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 145.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/27 - 11:00 PM EDT",
+     "detail": "2:25 - 1st",
      "teams": [
       {
        "id": "13",
@@ -2207,7 +2207,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": true,
-       "score": "0"
+       "score": "33"
       },
       {
        "id": "22",
@@ -2217,7 +2217,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "0"
+       "score": "26"
       }
      ]
     },
@@ -2893,10 +2893,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.525,
-     "away": 0.475,
+     "home": 0.645,
+     "away": 0.355,
      "spread": 0.01,
-     "t": "2026-10-28T02:43Z"
+     "t": "2026-10-28T03:38Z"
     }
    },
    "sport": "NBA",
@@ -2948,11 +2948,11 @@
     "id": "401908045",
     "snapshot": {
      "date": "2026-10-28T00:00Z",
-     "period": 8,
+     "period": 11,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Bot 8th",
+     "detail": "Top 11th",
      "teams": [
       {
        "id": "30",
@@ -3223,10 +3223,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.485,
-     "away": 0.515,
+     "home": 0.545,
+     "away": 0.455,
      "spread": 0.01,
-     "t": "2026-10-28T02:43Z"
+     "t": "2026-10-28T03:38Z"
     }
    },
    "sport": "MLB",
@@ -4471,18 +4471,18 @@
   "stats": {
    "overall": {
     "n": 151,
-    "w": 47,
+    "w": 49,
     "l": 70,
     "p": 0,
-    "pending": 34,
-    "win_pct": 40.2,
-    "units": 21.33,
-    "roi_pct": 22.2,
-    "roi_n": 96,
-    "exp_roi_pct": 9.5,
-    "exp_wins": 40.2,
-    "exp_wins_n": 116,
-    "wins_with_fair": 46
+    "pending": 32,
+    "win_pct": 41.2,
+    "units": 23.29,
+    "roi_pct": 23.8,
+    "roi_n": 98,
+    "exp_roi_pct": 9.4,
+    "exp_wins": 41.3,
+    "exp_wins_n": 118,
+    "wins_with_fair": 48
    },
    "by_promo": {
     "Bet Reset $5": {
@@ -4562,18 +4562,18 @@
     },
     "cash": {
      "n": 49,
-     "w": 20,
+     "w": 22,
      "l": 25,
      "p": 0,
-     "pending": 4,
-     "win_pct": 44.4,
-     "units": 14.0,
-     "roi_pct": 31.1,
-     "roi_n": 45,
-     "exp_roi_pct": 5.5,
-     "exp_wins": 16.5,
-     "exp_wins_n": 45,
-     "wins_with_fair": 20
+     "pending": 2,
+     "win_pct": 46.8,
+     "units": 15.96,
+     "roi_pct": 34.0,
+     "roi_n": 47,
+     "exp_roi_pct": 5.4,
+     "exp_wins": 17.6,
+     "exp_wins_n": 47,
+     "wins_with_fair": 22
     },
     "live boost": {
      "n": 1,
@@ -4684,18 +4684,18 @@
     },
     "NCAAF": {
      "n": 33,
-     "w": 9,
+     "w": 10,
      "l": 19,
      "p": 0,
-     "pending": 5,
-     "win_pct": 32.1,
-     "units": 11.87,
-     "roi_pct": 42.4,
-     "roi_n": 28,
-     "exp_roi_pct": 11.8,
-     "exp_wins": 9.1,
-     "exp_wins_n": 28,
-     "wins_with_fair": 9
+     "pending": 4,
+     "win_pct": 34.5,
+     "units": 12.78,
+     "roi_pct": 44.1,
+     "roi_n": 29,
+     "exp_roi_pct": 11.6,
+     "exp_wins": 9.7,
+     "exp_wins_n": 29,
+     "wins_with_fair": 10
     },
     "NFL": {
      "n": 18,
@@ -4714,18 +4714,18 @@
     },
     "NHL": {
      "n": 14,
-     "w": 8,
+     "w": 9,
      "l": 5,
      "p": 0,
-     "pending": 1,
-     "win_pct": 61.5,
-     "units": 3.32,
-     "roi_pct": 25.5,
-     "roi_n": 13,
-     "exp_roi_pct": 10.5,
-     "exp_wins": 6.4,
-     "exp_wins_n": 13,
-     "wins_with_fair": 8
+     "pending": 0,
+     "win_pct": 64.3,
+     "units": 4.37,
+     "roi_pct": 31.2,
+     "roi_n": 14,
+     "exp_roi_pct": 10.1,
+     "exp_wins": 6.9,
+     "exp_wins_n": 14,
+     "wins_with_fair": 9
     },
     "SOCCER": {
      "n": 3,
@@ -4821,18 +4821,18 @@
     },
     "no": {
      "n": 68,
-     "w": 15,
+     "w": 17,
      "l": 20,
      "p": 0,
-     "pending": 33,
-     "win_pct": 42.9,
-     "units": -5.11,
-     "roi_pct": -17.6,
-     "roi_n": 29,
+     "pending": 31,
+     "win_pct": 45.9,
+     "units": -3.15,
+     "roi_pct": -10.2,
+     "roi_n": 31,
      "exp_roi_pct": 4.5,
-     "exp_wins": 12.8,
-     "exp_wins_n": 35,
-     "wins_with_fair": 15
+     "exp_wins": 13.8,
+     "exp_wins_n": 37,
+     "wins_with_fair": 17
     }
    },
    "friend": {
@@ -4870,11 +4870,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "SHSU 3-24 MOST (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan; Pinnacle alt line; yes at -110 or better",
-    "units": null
+    "units": 0.91
    },
    {
     "rec_id": "f9cb3668",
@@ -4893,11 +4893,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "won",
+    "final_score": "MTL 2-0 STL (Final)",
     "source": "rec.py add",
     "notes": "3:07 PM scan; yes at +101 or better",
-    "units": null
+    "units": 1.05
    },
    {
     "rec_id": "1fd5cd6b",
@@ -8843,6 +8843,6 @@
   "FanDuel": 1.6,
   "PointsBet": 10.0
  },
- "hash": "c25313cfaac1e7c03a91a49852559b8ee2ec138f",
- "generated_at": "2026-10-27T22:43:19-04:00"
+ "hash": "870c704217b634268892207c4f49431ecc54a81f",
+ "generated_at": "2026-10-27T23:38:37-04:00"
 }
