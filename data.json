@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-28T01:40Z"
+       "t": "2026-10-28T01:47Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2069,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T01:40Z"
+       "t": "2026-10-28T01:47Z"
       }
      },
      "pteam": "ATL",
@@ -2122,10 +2122,10 @@
     "snapshot": {
      "date": "2026-10-28T00:00Z",
      "period": 3,
-     "clock": 330.0,
+     "clock": 219.0,
      "state": "in",
      "completed": false,
-     "detail": "5:30 - 3rd",
+     "detail": "3:39 - 3rd",
      "teams": [
       {
        "id": "24",
@@ -2135,7 +2135,7 @@
        "nick": "Spurs",
        "location": "San Antonio",
        "home": true,
-       "score": "97"
+       "score": "100"
       },
       {
        "id": "23",
@@ -2145,7 +2145,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": false,
-       "score": "71"
+       "score": "76"
       }
      ]
     },
@@ -2791,7 +2791,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "NBA",
@@ -2910,10 +2910,10 @@
     "snapshot": {
      "date": "2026-10-27T23:30Z",
      "period": 4,
-     "clock": 345.0,
+     "clock": 165.0,
      "state": "in",
      "completed": false,
-     "detail": "5:45 - 4th",
+     "detail": "2:45 - 4th",
      "teams": [
       {
        "id": "2",
@@ -2923,7 +2923,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "99"
+       "score": "106"
       },
       {
        "id": "17",
@@ -2933,7 +2933,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "99"
+       "score": "109"
       }
      ]
     },
@@ -3598,10 +3598,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
-     "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "home": 0.455,
+     "away": 0.545,
+     "spread": 0.03,
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "NBA",
@@ -3674,10 +3674,10 @@
     "snapshot": {
      "date": "2026-10-28T00:00Z",
      "period": 3,
-     "clock": 330.0,
+     "clock": 219.0,
      "state": "in",
      "completed": false,
-     "detail": "5:30 - 3rd",
+     "detail": "3:39 - 3rd",
      "teams": [
       {
        "id": "24",
@@ -3687,7 +3687,7 @@
        "nick": "Spurs",
        "location": "San Antonio",
        "home": true,
-       "score": "97"
+       "score": "100"
       },
       {
        "id": "23",
@@ -3697,7 +3697,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": false,
-       "score": "71"
+       "score": "76"
       }
      ]
     },
@@ -4343,7 +4343,7 @@
      "home": 0.995,
      "away": 0.005,
      "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "NBA",
@@ -5092,7 +5092,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "NBA",
@@ -5156,10 +5156,10 @@
     "snapshot": {
      "date": "2026-10-27T23:30Z",
      "period": 4,
-     "clock": 345.0,
+     "clock": 165.0,
      "state": "in",
      "completed": false,
-     "detail": "5:45 - 4th",
+     "detail": "2:45 - 4th",
      "teams": [
       {
        "id": "2",
@@ -5169,7 +5169,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "99"
+       "score": "106"
       },
       {
        "id": "17",
@@ -5179,7 +5179,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "99"
+       "score": "109"
       }
      ]
     },
@@ -5844,10 +5844,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.655,
-     "away": 0.345,
-     "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "home": 0.455,
+     "away": 0.545,
+     "spread": 0.03,
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "NBA",
@@ -5903,7 +5903,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 5th",
+     "detail": "Bot 5th",
      "teams": [
       {
        "id": "30",
@@ -6177,7 +6177,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-28T01:40Z"
+     "t": "2026-10-28T01:47Z"
     }
    },
    "sport": "MLB",
@@ -11734,6 +11734,6 @@
   "FanDuel": 2.3,
   "PointsBet": 10.0
  },
- "hash": "50a1fb1bb91a3f20539c7a47ffc0043f5b1968fb",
- "generated_at": "2026-10-27T21:40:20-04:00"
+ "hash": "5902f0a300471208421ae2f41be8cc56cd7552d5",
+ "generated_at": "2026-10-27T21:47:28-04:00"
 }
