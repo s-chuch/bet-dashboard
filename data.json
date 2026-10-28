@@ -66,7 +66,11 @@
    "payout": 0.47,
    "payout_est": false,
    "start_ts": "2026-12-12T00:00Z",
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "d46d9fcb",
@@ -96,7 +100,11 @@
    "payout": 2.6,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "537c5a5e",
@@ -126,7 +134,11 @@
    "payout": 6.5,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "8d3075bb",
@@ -156,7 +168,11 @@
    "payout": 2.0,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "5db8dfe1",
@@ -221,7 +237,11 @@
    "payout": 90.0,
    "payout_est": false,
    "start_ts": "2026-10-31T20:00Z",
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "bf9a8c79",
@@ -251,7 +271,11 @@
    "payout": 1.33,
    "payout_est": false,
    "start_ts": null,
-   "clv": null
+   "clv": {
+    "placed_at": null,
+    "close_price": null,
+    "clv_pct": null
+   }
   },
   {
    "bet_id": "1e699888",
@@ -1371,10 +1395,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.6219,
-       "away": 0.3781,
-       "spread": 0.02,
-       "t": "2026-10-28T10:39Z"
+       "home": 0.6188,
+       "away": 0.3812,
+       "spread": 0.01,
+       "t": "2026-10-28T11:18Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2093,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T10:39Z"
+       "t": "2026-10-28T11:18Z"
       }
      },
      "pteam": "ATL",
@@ -3181,18 +3205,18 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 151,
+    "n": 158,
     "w": 49,
-    "l": 70,
+    "l": 77,
     "p": 0,
     "pending": 32,
-    "win_pct": 41.2,
-    "units": 23.29,
-    "roi_pct": 23.8,
-    "roi_n": 98,
-    "exp_roi_pct": 9.4,
-    "exp_wins": 41.3,
-    "exp_wins_n": 118,
+    "win_pct": 38.9,
+    "units": 17.29,
+    "roi_pct": 16.6,
+    "roi_n": 104,
+    "exp_roi_pct": 9.9,
+    "exp_wins": 42.8,
+    "exp_wins_n": 125,
     "wins_with_fair": 48
    },
    "by_promo": {
@@ -3227,18 +3251,18 @@
      "wins_with_fair": 2
     },
     "bonus bet": {
-     "n": 18,
+     "n": 19,
      "w": 6,
-     "l": 12,
+     "l": 13,
      "p": 0,
      "pending": 0,
-     "win_pct": 33.3,
+     "win_pct": 31.6,
      "units": 0,
      "roi_pct": null,
      "roi_n": 0,
      "exp_roi_pct": null,
-     "exp_wins": 2.9,
-     "exp_wins_n": 18,
+     "exp_wins": 3.1,
+     "exp_wins_n": 19,
      "wins_with_fair": 6
     },
     "bonus bet $15 (min +300)": {
@@ -3272,48 +3296,48 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 49,
+     "n": 53,
      "w": 22,
-     "l": 25,
+     "l": 29,
      "p": 0,
      "pending": 2,
-     "win_pct": 46.8,
-     "units": 15.96,
-     "roi_pct": 34.0,
-     "roi_n": 47,
-     "exp_roi_pct": 5.4,
-     "exp_wins": 17.6,
-     "exp_wins_n": 47,
+     "win_pct": 43.1,
+     "units": 11.96,
+     "roi_pct": 23.5,
+     "roi_n": 51,
+     "exp_roi_pct": 5.7,
+     "exp_wins": 18.3,
+     "exp_wins_n": 51,
      "wins_with_fair": 22
     },
     "live boost": {
-     "n": 1,
+     "n": 2,
      "w": 0,
-     "l": 1,
+     "l": 2,
      "p": 0,
      "pending": 0,
      "win_pct": 0.0,
-     "units": -1.0,
+     "units": -2.0,
      "roi_pct": -100.0,
-     "roi_n": 1,
-     "exp_roi_pct": 41.0,
-     "exp_wins": 0.3,
-     "exp_wins_n": 1,
+     "roi_n": 2,
+     "exp_roi_pct": 24.4,
+     "exp_wins": 0.7,
+     "exp_wins_n": 2,
      "wins_with_fair": 0
     },
     "profit boost": {
-     "n": 16,
+     "n": 17,
      "w": 9,
-     "l": 7,
+     "l": 8,
      "p": 0,
      "pending": 0,
-     "win_pct": 56.2,
-     "units": 14.54,
-     "roi_pct": 90.9,
-     "roi_n": 16,
-     "exp_roi_pct": 36.3,
-     "exp_wins": 5.9,
-     "exp_wins_n": 15,
+     "win_pct": 52.9,
+     "units": 13.54,
+     "roi_pct": 79.6,
+     "roi_n": 17,
+     "exp_roi_pct": 38.1,
+     "exp_wins": 6.1,
+     "exp_wins_n": 16,
      "wins_with_fair": 8
     },
     "qualifying bet for 5x$20": {
@@ -3379,33 +3403,33 @@
      "wins_with_fair": 3
     },
     "NBA": {
-     "n": 30,
+     "n": 35,
      "w": 8,
-     "l": 16,
+     "l": 21,
      "p": 0,
      "pending": 6,
-     "win_pct": 33.3,
-     "units": -4.77,
-     "roi_pct": -22.7,
-     "roi_n": 21,
-     "exp_roi_pct": 7.6,
-     "exp_wins": 9.4,
-     "exp_wins_n": 24,
+     "win_pct": 27.6,
+     "units": -8.77,
+     "roi_pct": -35.1,
+     "roi_n": 25,
+     "exp_roi_pct": 9.6,
+     "exp_wins": 10.4,
+     "exp_wins_n": 29,
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 33,
+     "n": 35,
      "w": 10,
-     "l": 19,
+     "l": 21,
      "p": 0,
      "pending": 4,
-     "win_pct": 34.5,
-     "units": 12.78,
-     "roi_pct": 44.1,
-     "roi_n": 29,
-     "exp_roi_pct": 11.6,
-     "exp_wins": 9.7,
-     "exp_wins_n": 29,
+     "win_pct": 32.3,
+     "units": 10.78,
+     "roi_pct": 34.8,
+     "roi_n": 31,
+     "exp_roi_pct": 11.7,
+     "exp_wins": 10.2,
+     "exp_wins_n": 31,
      "wins_with_fair": 10
     },
     "NFL": {
@@ -3516,33 +3540,33 @@
    },
    "by_placed": {
     "yes": {
-     "n": 83,
+     "n": 88,
      "w": 32,
-     "l": 50,
+     "l": 55,
      "p": 0,
      "pending": 1,
-     "win_pct": 39.0,
-     "units": 26.44,
-     "roi_pct": 39.5,
-     "roi_n": 67,
-     "exp_roi_pct": 11.6,
-     "exp_wins": 27.5,
-     "exp_wins_n": 81,
+     "win_pct": 36.8,
+     "units": 22.44,
+     "roi_pct": 31.6,
+     "roi_n": 71,
+     "exp_roi_pct": 12.4,
+     "exp_wins": 28.6,
+     "exp_wins_n": 86,
      "wins_with_fair": 31
     },
     "no": {
-     "n": 68,
+     "n": 70,
      "w": 17,
-     "l": 20,
+     "l": 22,
      "p": 0,
      "pending": 31,
-     "win_pct": 45.9,
-     "units": -3.15,
-     "roi_pct": -10.2,
-     "roi_n": 31,
+     "win_pct": 43.6,
+     "units": -5.15,
+     "roi_pct": -15.6,
+     "roi_n": 33,
      "exp_roi_pct": 4.5,
-     "exp_wins": 13.8,
-     "exp_wins_n": 37,
+     "exp_wins": 14.2,
+     "exp_wins_n": 39,
      "wins_with_fair": 17
     }
    },
@@ -3626,11 +3650,11 @@
     "stake": "",
     "promo": "cash",
     "friend": "no",
-    "placed": "yes",
+    "placed": "no",
     "result": "lost",
     "final_score": "BKN 124-125 BOS (Final/OT)",
     "source": "finder",
-    "notes": "SKIPPED in Bet Finder: +410",
+    "notes": "SKIPPED in Bet Finder: +410; bet 5ff31714 was placed at DraftKings, not bet365: moved to rec ca41d960",
     "units": -1.0
    },
    {
@@ -3677,6 +3701,29 @@
     "final_score": "SAC 103-130 SA (Final)",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-28|Sacramento Kings @ San Antonio Spurs|Sacramento Kings to win)",
+    "units": -1.0
+   },
+   {
+    "rec_id": "ca41d960",
+    "rec_date": "2026-10-27",
+    "rec_time_et": "",
+    "sport": "NBA",
+    "event": "Brooklyn Nets @ Boston Celtics",
+    "market": "Moneyline",
+    "selection": "Brooklyn Nets to win",
+    "book": "DraftKings",
+    "rec_price": "+425",
+    "eff_price": "+425",
+    "fair_pct": "19.54",
+    "ev_pct": "2.58",
+    "stake": "0.30",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "BKN 124-125 BOS (Final/OT)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec 1fd5cd6b (the bet was placed at DraftKings, the rec was for bet365)",
     "units": -1.0
    },
    {
@@ -3810,11 +3857,57 @@
     "stake": "",
     "promo": "cash",
     "friend": "no",
-    "placed": "yes",
+    "placed": "no",
     "result": "lost",
     "final_score": "CHI 99-134 BOS (Final)",
     "source": "finder",
-    "notes": "SKIPPED in Bet Finder: +525",
+    "notes": "SKIPPED in Bet Finder: +525; bet 7b4b7086 was placed at FanDuel, not DraftKings: moved to rec ec84e021; bet 0d3d206e was placed at Caesars, not DraftKings: moved to rec 429a747a",
+    "units": -1.0
+   },
+   {
+    "rec_id": "429a747a",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "",
+    "sport": "NBA",
+    "event": "Chicago Bulls @ Boston Celtics",
+    "market": "Moneyline (bonus bet $5.00; bet id b0b14200-d17d-11f1-bbaa-9190\u2026)",
+    "selection": "Chicago Bulls to win",
+    "book": "Caesars",
+    "rec_price": "+550",
+    "eff_price": "+550",
+    "fair_pct": "15.51",
+    "ev_pct": "85.3",
+    "stake": "5.00 (bonus)",
+    "promo": "bonus bet",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "CHI 99-134 BOS (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec f3374acf (the bet was placed at Caesars, the rec was for DraftKings); fair % copied from rec f3374acf (same selection and game)",
+    "units": 0.0
+   },
+   {
+    "rec_id": "ec84e021",
+    "rec_date": "2026-10-26",
+    "rec_time_et": "",
+    "sport": "NBA",
+    "event": "Chicago Bulls @ Boston Celtics",
+    "market": "Moneyline",
+    "selection": "Chicago Bulls to win",
+    "book": "FanDuel",
+    "rec_price": "+590",
+    "eff_price": "+590",
+    "fair_pct": "15.51",
+    "ev_pct": "7.02",
+    "stake": "0.50",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "CHI 99-134 BOS (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec f3374acf (the bet was placed at FanDuel, the rec was for DraftKings); fair % copied from rec f3374acf (same selection and game)",
     "units": -1.0
    },
    {
@@ -5930,7 +6023,7 @@
     "result": "won",
     "final_score": "AVE 1-1 CES (FT)",
     "source": "bets.csv (priced pick he placed)",
-    "notes": "",
+    "notes": "unlinked bet a0031feb: a different game (Cienciano v UTC Cajamarca (Peru Liga 1))",
     "units": 2.25
    },
    {
@@ -6252,7 +6345,7 @@
     "result": "lost",
     "final_score": "KENT 2-29 USF (Final)",
     "source": "bets.csv (priced pick he placed)",
-    "notes": "merged (one rec per selection per day): theScore Moneyline + FanDuel Moneyline",
+    "notes": "merged (one rec per selection per day): theScore Moneyline + FanDuel Moneyline; bet 14bfbcf9 was placed at FanDuel, not theScore: moved to rec 8c0575b7",
     "units": -1.0
    },
    {
@@ -6277,6 +6370,29 @@
     "source": "bets.csv (priced pick he placed)",
     "notes": "",
     "units": null
+   },
+   {
+    "rec_id": "8c0575b7",
+    "rec_date": "2026-10-16",
+    "rec_time_et": "",
+    "sport": "NCAAF",
+    "event": "Kent State @ South Florida",
+    "market": "Moneyline",
+    "selection": "Kent State ML",
+    "book": "FanDuel",
+    "rec_price": "+980",
+    "eff_price": "+980",
+    "fair_pct": "11.24",
+    "ev_pct": "21.35",
+    "stake": "0.80",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "KENT 2-29 USF (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec 5dd07ebb (the bet was placed at FanDuel, the rec was for theScore)",
+    "units": -1.0
    },
    {
     "rec_id": "8d2533a4",
@@ -6597,7 +6713,7 @@
     "result": "lost",
     "final_score": "PHX 103-123 SA (Final)",
     "source": "bets.csv (priced pick he placed)",
-    "notes": "merged (one rec per selection per day): bet365 Moneyline + FanDuel Moneyline",
+    "notes": "merged (one rec per selection per day): bet365 Moneyline + FanDuel Moneyline; bet 35753496 was placed at FanDuel, not bet365: moved to rec 524728ca",
     "units": -1.0
    },
    {
@@ -6668,6 +6784,29 @@
     "source": "bets.csv (priced pick he placed)",
     "notes": "",
     "units": 2.68
+   },
+   {
+    "rec_id": "524728ca",
+    "rec_date": "2026-10-14",
+    "rec_time_et": "",
+    "sport": "NBA",
+    "event": "Phoenix Suns @ San Antonio Spurs",
+    "market": "Moneyline",
+    "selection": "Phoenix Suns",
+    "book": "FanDuel",
+    "rec_price": "+320",
+    "eff_price": "+320",
+    "fair_pct": "24.81",
+    "ev_pct": "4.22",
+    "stake": "0.79",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "PHX 103-123 SA (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec 03b14c2d (the bet was placed at FanDuel, the rec was for bet365)",
+    "units": -1.0
    },
    {
     "rec_id": "7e44f9fa",
@@ -6758,7 +6897,30 @@
     "result": "lost",
     "final_score": "FIU 24-27 JXST (Final)",
     "source": "bets.csv (priced pick he placed)",
-    "notes": "price approx (unconfirmed in tracker); merged (one rec per selection per day): Caesars Moneyline (100% profit boost) + DraftKings Moneyline (25% live profit boost)",
+    "notes": "price approx (unconfirmed in tracker); merged (one rec per selection per day): Caesars Moneyline (100% profit boost) + DraftKings Moneyline (25% live profit boost); bet c205ec20 was placed at DraftKings, not Caesars: moved to rec 57ab51e1",
+    "units": -1.0
+   },
+   {
+    "rec_id": "57ab51e1",
+    "rec_date": "2026-10-13",
+    "rec_time_et": "",
+    "sport": "NCAAF",
+    "event": "FIU @ Jacksonville State",
+    "market": "Moneyline (25% live profit boost)",
+    "selection": "FIU ML",
+    "book": "DraftKings",
+    "rec_price": "+124",
+    "eff_price": "+155",
+    "fair_pct": "42.3",
+    "ev_pct": "7.8",
+    "stake": "0.50 (unconfirmed)",
+    "promo": "live boost",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "FIU 24-27 JXST (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec 510ab24b (the bet was placed at DraftKings, the rec was for Caesars); price approx (unconfirmed in tracker)",
     "units": -1.0
    },
    {
@@ -6782,6 +6944,29 @@
     "final_score": "",
     "source": "bets.csv (priced pick he placed)",
     "notes": "price approx (unconfirmed in tracker)",
+    "units": -1.0
+   },
+   {
+    "rec_id": "5ed950b1",
+    "rec_date": "2026-10-13",
+    "rec_time_et": "",
+    "sport": "NBA",
+    "event": "Knicks @ Raptors",
+    "market": "Moneyline (100% profit boost)",
+    "selection": "Knicks ML",
+    "book": "Caesars",
+    "rec_price": "+304",
+    "eff_price": "+608",
+    "fair_pct": "23.3",
+    "ev_pct": "",
+    "stake": "25.00",
+    "promo": "profit boost",
+    "friend": "no",
+    "placed": "yes",
+    "result": "lost",
+    "final_score": "NY 98-148 TOR (Final)",
+    "source": "fix_data_quirks.py (split)",
+    "notes": "split from rec b6420427 (the bet was placed at Caesars, the rec was for Hard Rock); price approx (unconfirmed in tracker)",
     "units": -1.0
    },
    {
@@ -6896,7 +7081,7 @@
     "result": "lost",
     "final_score": "NY 98-148 TOR (Final)",
     "source": "bets.csv (priced pick he placed)",
-    "notes": "price approx (unconfirmed in tracker); merged (one rec per selection per day): Hard Rock Moneyline (bonus bet $20) + Caesars Moneyline (100% profit boost)",
+    "notes": "price approx (unconfirmed in tracker); merged (one rec per selection per day): Hard Rock Moneyline (bonus bet $20) + Caesars Moneyline (100% profit boost); bet daaa3777 was placed at Caesars, not Hard Rock: moved to rec 5ed950b1",
     "units": 0.0
    },
    {
@@ -7554,6 +7739,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "fd12afe9e791ef3628d14f30091f874fff6f2b3d",
- "generated_at": "2026-10-28T06:39:46-04:00"
+ "hash": "0e76d740a198ad48c3e36ad0b742d0100c239853",
+ "generated_at": "2026-10-28T07:18:18-04:00"
 }
