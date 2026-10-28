@@ -2,6 +2,24 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "f9e33ec4",
+   "book": "FanDuel",
+   "pick": "Sacramento Kings ML",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "SAC 103-130 SA",
+   "at": "2026-10-27 22:42"
+  },
+  {
+   "bet_id": "5ff31714",
+   "book": "DraftKings",
+   "pick": "Brooklyn Nets ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "BKN 124-125 BOS",
+   "at": "2026-10-27 22:42"
+  },
+  {
    "bet_id": "f8ca8f30",
    "book": "FanDuel",
    "pick": "Boston Celtics -12.5 + Over 223.5 alt total + Boston Celtics Over 118.5 team total",
@@ -207,26 +225,8 @@
    "pnl": 0.0,
    "final": "KC 3-20 SEA",
    "at": "2026-10-25 23:16"
-  },
-  {
-   "bet_id": "c4db9120",
-   "book": "FanDuel",
-   "pick": "Lakers ML + Luka Doncic 20+ Points + Lauri Markkanen 15+ Points + Austin Reaves 20+ Points",
-   "result": "won",
-   "pnl": 0.96,
-   "final": "LAL 132-123 UTAH",
-   "at": "2026-10-25 19:37"
-  },
-  {
-   "bet_id": "bf9db4ab",
-   "book": "FanDuel",
-   "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "RMA 2-1 BAR",
-   "at": "2026-10-25 18:01"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-27 22:31 ET"
+ "last_change_at": "2026-10-27 22:42 ET"
 }

@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-28T02:32Z"
+       "t": "2026-10-28T02:43Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2069,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T02:32Z"
+       "t": "2026-10-28T02:42Z"
       }
      },
      "pteam": "ATL",
@@ -2085,87 +2085,6 @@
    "start_ts": "2026-10-27T00:15Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "f9e33ec4",
-   "date": "2026-10-27",
-   "book": "FanDuel",
-   "event": "Sacramento Kings @ San Antonio Spurs",
-   "market": "Moneyline",
-   "pick": "Sacramento Kings ML",
-   "start": "Tue Oct 27, 8:00 PM ET",
-   "price": "+1040",
-   "boosted_price": "",
-   "stake": 0.2,
-   "stake_note": "",
-   "to_win": 2.08,
-   "ev_pct": "18.23",
-   "fair_pct": "10.37",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Sacramento Kings",
-     "women": false,
-     "text": "Sacramento Kings ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261027",
-    "groups": null,
-    "id": "401909879",
-    "snapshot": {
-     "date": "2026-10-28T00:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "24",
-       "name": "San Antonio Spurs",
-       "abbr": "SA",
-       "short": "Spurs",
-       "nick": "Spurs",
-       "location": "San Antonio",
-       "home": true,
-       "score": "130"
-      },
-      {
-       "id": "23",
-       "name": "Sacramento Kings",
-       "abbr": "SAC",
-       "short": "Kings",
-       "nick": "Kings",
-       "location": "Sacramento",
-       "home": false,
-       "score": "103"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-27 15:09 ET",
-     "ml_home": 0.9098,
-     "spread_home_line": -18.5,
-     "spread_home_fair": 0.507,
-     "total_line": 232.0,
-     "total_over_fair": 0.5092
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.2,
-   "payout": 2.28,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-27 08:03",
     "close_price": null,
     "clv_pct": null
    }
@@ -2238,87 +2157,6 @@
    "start_ts": null,
    "clv": {
     "placed_at": "2026-10-27 08:05",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "5ff31714",
-   "date": "2026-10-27",
-   "book": "DraftKings",
-   "event": "Brooklyn Nets @ Boston Celtics",
-   "market": "Moneyline",
-   "pick": "Brooklyn Nets ML",
-   "start": "Tue Oct 27, 7:30 PM ET",
-   "price": "+425",
-   "boosted_price": "",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 1.27,
-   "ev_pct": "2.58",
-   "fair_pct": "19.54",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Brooklyn Nets",
-     "women": false,
-     "text": "Brooklyn Nets ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "basketball/nba",
-    "date": "20261027",
-    "groups": null,
-    "id": "401909877",
-    "snapshot": {
-     "date": "2026-10-27T23:30Z",
-     "period": 5,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final/OT",
-     "teams": [
-      {
-       "id": "2",
-       "name": "Boston Celtics",
-       "abbr": "BOS",
-       "short": "Celtics",
-       "nick": "Celtics",
-       "location": "Boston",
-       "home": true,
-       "score": "125"
-      },
-      {
-       "id": "17",
-       "name": "Brooklyn Nets",
-       "abbr": "BKN",
-       "short": "Nets",
-       "nick": "Nets",
-       "location": "Brooklyn",
-       "home": false,
-       "score": "124"
-      }
-     ]
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-27 15:09 ET",
-     "ml_home": 0.838,
-     "spread_home_line": -12.5,
-     "spread_home_fair": 0.493,
-     "total_line": 222.0,
-     "total_over_fair": 0.5092
-    }
-   },
-   "sport": "NBA",
-   "cash_stake": 0.3,
-   "payout": 1.57,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-27 08:10",
     "close_price": null,
     "clv_pct": null
    }
@@ -3058,7 +2896,7 @@
      "home": 0.525,
      "away": 0.475,
      "spread": 0.01,
-     "t": "2026-10-28T02:31Z"
+     "t": "2026-10-28T02:42Z"
     }
    },
    "sport": "NBA",
@@ -3068,8 +2906,8 @@
    "start_ts": "2026-10-28T03:10Z",
    "clv": {
     "placed_at": "2026-10-27 15:03",
-    "close_price": "+110",
-    "clv_pct": -2.42
+    "close_price": "+108",
+    "clv_pct": -1.51
    }
   },
   {
@@ -3114,7 +2952,7 @@
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "Top 8th",
+     "detail": "Bot 8th",
      "teams": [
       {
        "id": "30",
@@ -3385,10 +3223,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.545,
-     "away": 0.455,
+     "home": 0.485,
+     "away": 0.515,
      "spread": 0.01,
-     "t": "2026-10-28T02:31Z"
+     "t": "2026-10-28T02:42Z"
     }
    },
    "sport": "MLB",
@@ -3445,6 +3283,36 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-27 14:24",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "book": "DraftKings",
+   "event": "Brooklyn Nets @ Boston Celtics",
+   "pick": "Brooklyn Nets ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "stake": 0.3,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-27 08:10",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "book": "FanDuel",
+   "event": "Sacramento Kings @ San Antonio Spurs",
+   "pick": "Sacramento Kings ML",
+   "result": "lost",
+   "pnl": -0.2,
+   "stake": 0.2,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-27 08:03",
     "close_price": null,
     "clv_pct": null
    }
@@ -4590,30 +4458,30 @@
    }
   }
  ],
- "pnl_total": 108.61,
+ "pnl_total": 108.11,
  "unsettled": {
-  "n": 17,
-  "cash_stake": 13.7,
-  "max_payout": 288.54,
+  "n": 15,
+  "cash_stake": 13.2,
+  "max_payout": 284.69,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 13.7,
+ "open_stake": 13.2,
  "recs": {
   "stats": {
    "overall": {
     "n": 151,
     "w": 47,
-    "l": 68,
+    "l": 70,
     "p": 0,
-    "pending": 36,
-    "win_pct": 40.9,
-    "units": 23.33,
-    "roi_pct": 24.8,
-    "roi_n": 94,
+    "pending": 34,
+    "win_pct": 40.2,
+    "units": 21.33,
+    "roi_pct": 22.2,
+    "roi_n": 96,
     "exp_roi_pct": 9.5,
-    "exp_wins": 39.9,
-    "exp_wins_n": 114,
+    "exp_wins": 40.2,
+    "exp_wins_n": 116,
     "wins_with_fair": 46
    },
    "by_promo": {
@@ -4695,16 +4563,16 @@
     "cash": {
      "n": 49,
      "w": 20,
-     "l": 23,
+     "l": 25,
      "p": 0,
-     "pending": 6,
-     "win_pct": 46.5,
-     "units": 16.0,
-     "roi_pct": 37.2,
-     "roi_n": 43,
-     "exp_roi_pct": 5.3,
-     "exp_wins": 16.2,
-     "exp_wins_n": 43,
+     "pending": 4,
+     "win_pct": 44.4,
+     "units": 14.0,
+     "roi_pct": 31.1,
+     "roi_n": 45,
+     "exp_roi_pct": 5.5,
+     "exp_wins": 16.5,
+     "exp_wins_n": 45,
      "wins_with_fair": 20
     },
     "live boost": {
@@ -4802,16 +4670,16 @@
     "NBA": {
      "n": 30,
      "w": 8,
-     "l": 14,
+     "l": 16,
      "p": 0,
-     "pending": 8,
-     "win_pct": 36.4,
-     "units": -2.77,
-     "roi_pct": -14.6,
-     "roi_n": 19,
-     "exp_roi_pct": 7.4,
-     "exp_wins": 9.1,
-     "exp_wins_n": 22,
+     "pending": 6,
+     "win_pct": 33.3,
+     "units": -4.77,
+     "roi_pct": -22.7,
+     "roi_n": 21,
+     "exp_roi_pct": 7.6,
+     "exp_wins": 9.4,
+     "exp_wins_n": 24,
      "wins_with_fair": 8
     },
     "NCAAF": {
@@ -4939,16 +4807,16 @@
     "yes": {
      "n": 83,
      "w": 32,
-     "l": 48,
+     "l": 50,
      "p": 0,
-     "pending": 3,
-     "win_pct": 40.0,
-     "units": 28.44,
-     "roi_pct": 43.8,
-     "roi_n": 65,
-     "exp_roi_pct": 11.7,
-     "exp_wins": 27.2,
-     "exp_wins_n": 79,
+     "pending": 1,
+     "win_pct": 39.0,
+     "units": 26.44,
+     "roi_pct": 39.5,
+     "roi_n": 67,
+     "exp_roi_pct": 11.6,
+     "exp_wins": 27.5,
+     "exp_wins_n": 81,
      "wins_with_fair": 31
     },
     "no": {
@@ -5048,11 +4916,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "BKN 124-125 BOS (Final/OT)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: +410",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "9f70efc0",
@@ -5094,11 +4962,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "SAC 103-130 SA (Final)",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-28|Sacramento Kings @ San Antonio Spurs|Sacramento Kings to win)",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "57e7164e",
@@ -8740,6 +8608,24 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "f9e33ec4",
+    "book": "FanDuel",
+    "pick": "Sacramento Kings ML",
+    "result": "lost",
+    "pnl": -0.2,
+    "final": "SAC 103-130 SA",
+    "at": "2026-10-27 22:42"
+   },
+   {
+    "bet_id": "5ff31714",
+    "book": "DraftKings",
+    "pick": "Brooklyn Nets ML",
+    "result": "lost",
+    "pnl": -0.3,
+    "final": "BKN 124-125 BOS",
+    "at": "2026-10-27 22:42"
+   },
+   {
     "bet_id": "f8ca8f30",
     "book": "FanDuel",
     "pick": "Boston Celtics -12.5 + Over 223.5 alt total + Boston Celtics Over 118.5 team total",
@@ -8945,27 +8831,9 @@
     "pnl": 0.0,
     "final": "KC 3-20 SEA",
     "at": "2026-10-25 23:16"
-   },
-   {
-    "bet_id": "c4db9120",
-    "book": "FanDuel",
-    "pick": "Lakers ML + Luka Doncic 20+ Points + Lauri Markkanen 15+ Points + Austin Reaves 20+ Points",
-    "result": "won",
-    "pnl": 0.96,
-    "final": "LAL 132-123 UTAH",
-    "at": "2026-10-25 19:37"
-   },
-   {
-    "bet_id": "bf9db4ab",
-    "book": "FanDuel",
-    "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "RMA 2-1 BAR",
-    "at": "2026-10-25 18:01"
    }
   ],
-  "last_change_at": "2026-10-27 22:31 ET"
+  "last_change_at": "2026-10-27 22:42 ET"
  },
  "open_live_n": 15,
  "open_stake_by_book": {
@@ -8975,6 +8843,6 @@
   "FanDuel": 1.6,
   "PointsBet": 10.0
  },
- "hash": "b4e54eff72c01f8cf35739fe766678f6848ac746",
- "generated_at": "2026-10-27T22:32:46-04:00"
+ "hash": "9628294b78e388a21d1ae2840d22a43fcdc1ce27",
+ "generated_at": "2026-10-27T22:43:00-04:00"
 }
