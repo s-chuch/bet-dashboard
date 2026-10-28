@@ -1398,7 +1398,7 @@
        "home": 0.6188,
        "away": 0.3812,
        "spread": 0.01,
-       "t": "2026-10-28T13:47Z"
+       "t": "2026-10-28T13:48Z"
       }
      },
      "pteam": "BAL",
@@ -2093,7 +2093,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T13:47Z"
+       "t": "2026-10-28T13:48Z"
       }
      },
      "pteam": "ATL",
@@ -3277,11 +3277,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 159,
+    "n": 160,
     "w": 49,
     "l": 77,
     "p": 0,
-    "pending": 33,
+    "pending": 34,
     "win_pct": 38.9,
     "units": 17.29,
     "roi_pct": 16.6,
@@ -3368,11 +3368,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 54,
+     "n": 55,
      "w": 22,
      "l": 29,
      "p": 0,
-     "pending": 3,
+     "pending": 4,
      "win_pct": 43.1,
      "units": 11.96,
      "roi_pct": 23.5,
@@ -3490,11 +3490,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 35,
+     "n": 36,
      "w": 10,
      "l": 21,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 32.3,
      "units": 10.78,
      "roi_pct": 34.8,
@@ -3627,11 +3627,11 @@
      "wins_with_fair": 31
     },
     "no": {
-     "n": 70,
+     "n": 71,
      "w": 17,
      "l": 22,
      "p": 0,
-     "pending": 31,
+     "pending": 32,
      "win_pct": 43.6,
      "units": -5.15,
      "roi_pct": -15.6,
@@ -3660,6 +3660,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "46308e3a",
+    "rec_date": "2026-10-28",
+    "rec_time_et": "09:48",
+    "sport": "NCAAF",
+    "event": "Jacksonville State Gamecocks @ New Mexico State Aggies",
+    "market": "cash",
+    "selection": "New Mexico State Aggies +3.5",
+    "book": "theScore",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "52.79",
+    "ev_pct": "3.07",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: -115",
+    "units": null
+   },
    {
     "rec_id": "ff591a0d",
     "rec_date": "2026-10-28",
@@ -7834,6 +7857,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "cf5093070bfefba9773cbcc9b305554ac6a1c515",
- "generated_at": "2026-10-28T09:47:10-04:00"
+ "hash": "3a6e832919946de2bb2fd0541476df016be398be",
+ "generated_at": "2026-10-28T09:48:55-04:00"
 }
