@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-28T03:38Z"
+       "t": "2026-10-28T04:30Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2069,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T03:38Z"
+       "t": "2026-10-28T04:30Z"
       }
      },
      "pteam": "ATL",
@@ -2193,11 +2193,11 @@
     "id": "401909880",
     "snapshot": {
      "date": "2026-10-28T03:00Z",
-     "period": 1,
-     "clock": 145.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "2:25 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "13",
@@ -2207,7 +2207,7 @@
        "nick": "Lakers",
        "location": "Los Angeles",
        "home": true,
-       "score": "33"
+       "score": "73"
       },
       {
        "id": "22",
@@ -2217,7 +2217,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "26"
+       "score": "68"
       }
      ]
     },
@@ -2893,10 +2893,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.645,
-     "away": 0.355,
+     "home": 0.635,
+     "away": 0.365,
      "spread": 0.01,
-     "t": "2026-10-28T03:38Z"
+     "t": "2026-10-28T04:30Z"
     }
    },
    "sport": "NBA",
@@ -2909,339 +2909,24 @@
     "close_price": "+108",
     "clv_pct": -1.51
    }
-  },
+  }
+ ],
+ "settled_recent": [
   {
-   "bet_id": "810ebd70",
    "date": "2026-10-27",
    "book": "FanDuel",
    "event": "Milwaukee Brewers @ Tampa Bay Rays",
-   "market": "SGP 2-leg (30% profit boost; bet id O/0979720/0000692)",
    "pick": "Milwaukee Brewers ML + Over 7.5 total runs",
-   "start": "Tue Oct 27 08:00 PM ET",
-   "price": "+234",
-   "boosted_price": "+303",
+   "result": "lost",
+   "pnl": -0.5,
    "stake": 0.5,
-   "stake_note": "",
-   "to_win": 1.52,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Milwaukee Brewers",
-     "women": false,
-     "text": "Milwaukee Brewers ML",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 7.5,
-     "text": "Over 7.5 total runs"
-    }
-   ],
-   "match": {
-    "path": "baseball/mlb",
-    "date": "20261027",
-    "groups": null,
-    "id": "401908045",
-    "snapshot": {
-     "date": "2026-10-28T00:00Z",
-     "period": 11,
-     "clock": 0.0,
-     "state": "in",
-     "completed": false,
-     "detail": "Top 11th",
-     "teams": [
-      {
-       "id": "30",
-       "name": "Tampa Bay Rays",
-       "abbr": "TB",
-       "short": "Rays",
-       "nick": "Rays",
-       "location": "Tampa Bay",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "8",
-       "name": "Milwaukee Brewers",
-       "abbr": "MIL",
-       "short": "Brewers",
-       "nick": "Brewers",
-       "location": "Milwaukee",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    },
-    "pregame": {
-     "home": 47.7,
-     "away": 52.3
-    },
-    "pin": {
-     "src": "Pinnacle no-vig",
-     "pulled": "2026-10-27 15:09 ET",
-     "ml_home": 0.4802,
-     "spread_home_line": 1.5,
-     "spread_home_fair": 0.6054,
-     "total_line": 7.0,
-     "total_over_fair": 0.5161
-    },
-    "pm": {
-     "slug": "mlb-mil-tb-2026-10-27",
-     "title": "Milwaukee Brewers vs. Tampa Bay Rays",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Milwaukee Brewers",
-        "Tampa Bay Rays"
-       ],
-       "tokens": [
-        "55940625347352481449753210156354803236395389743050386205458481632439347704061",
-        "3951991447574051357592377131497865761576624110419168939889727177891024587195"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Milwaukee Brewers"
-       ],
-       "tokens": [
-        "65332259253700239992869144930922832197412353268604507804156016442903372414092",
-        "40944824008221972160072158698357670566081406037410420478184466427664688726731"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Milwaukee Brewers"
-       ],
-       "tokens": [
-        "37433195766549337607075802890012900782292202196777631529731510530922379974349",
-        "2967136964934624318114564847798938963745276331754223530305170194598563623649"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Milwaukee Brewers"
-       ],
-       "tokens": [
-        "115484297743547318491675014673742292424682825818437966432791526903934359375420",
-        "33164230976691377788257869452402846081870107892055837873215442376341192748597"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Tampa Bay Rays",
-        "Milwaukee Brewers"
-       ],
-       "tokens": [
-        "93409985639941606892939826064581211548449775142933871371941601450217000695755",
-        "96961836568755420066766667715113878089240310354887072643853543907998716594012"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Milwaukee Brewers",
-        "Tampa Bay Rays"
-       ],
-       "tokens": [
-        "55849222718183517108260785549810225791750170988069247240351101831010283273305",
-        "103728429209231886796506239739174785924095111393192718942385715574151053684479"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Milwaukee Brewers",
-        "Tampa Bay Rays"
-       ],
-       "tokens": [
-        "64900666836240537898190356012327540078052939529456732388592969939513417796297",
-        "43983115166221122119984039809908857785442471090821875060438554934506948411589"
-       ]
-      },
-      {
-       "line": -4.5,
-       "outcomes": [
-        "Milwaukee Brewers",
-        "Tampa Bay Rays"
-       ],
-       "tokens": [
-        "10820048874348516132520706052627224303604250268519990443181869762030578190762",
-        "13666330968882231289457718385924532939737125085338443699125079665931068262757"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "86094314498162745041371491052636804608258199812035951225701932280265452176750",
-        "63801450529357285316839533239190989018185647159344182851892794835537585885814"
-       ]
-      },
-      {
-       "line": 0.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "26441168810881109107200212858404430974557183840093382732140829654982489146046",
-        "78039318494193127409669862506146583769962106788335309437188866567267430392301"
-       ]
-      },
-      {
-       "line": 10.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "43395748450734425009907711522924851373294950503408818628092693765278779776725",
-        "107387465460250647375398241802109646306538531217638853765590497665137192223898"
-       ]
-      },
-      {
-       "line": 1.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "102828946746234515222654213991052007742403536268559553045380833091409366444617",
-        "38828809281723889430499605502557789794408342346652827708518477133155411966877"
-       ]
-      },
-      {
-       "line": 2.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "107171140039162089353146157015661683513308903937575718964534365723548212359781",
-        "109433561654280042082915361002109513519807000783763421360335871254945161170735"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "105004314291814320703520836875120172849253562810412900024684402369106453170204",
-        "9489791369160275397537491509766980427577987656086798531411500239037991524012"
-       ]
-      },
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "94092206357628624519815241075751419572864101918474662377508757594529063762477",
-        "2481888230354789214406333254858699070899749805232255161782344708643550638986"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "16492655196314125579306378410187363338764270405746521143785457719739745562546",
-        "37247140621226519471743251195893092131272541935243372749292029271949262046283"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "71333993340981100842236809149105125708748772157182455698395273132995503949586",
-        "48443505708443206751037660044838087346201798521211267085906402316172803883983"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "3692479131941432046648560773665476403090921472577763541323119328506729431391",
-        "41210150916438625342674883767156376553495230042472763943866378329700712759807"
-       ]
-      },
-      {
-       "line": 9.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "22414336065845923267659900455976921151440392189243441039750943425702500041975",
-        "33068883181259468491228158960772735007920511919314135482007743699726701587321"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Milwaukee Brewers",
-       "Tampa Bay Rays"
-      ],
-      "tokens": [
-       "7577535600076294260991020415184328474123945516249499417902681873767213894820",
-       "108204019193137492910261151404957478615905365075462697430572743848427289145385"
-      ]
-     }
-    },
-    "an": {
-     "id": 303726,
-     "home_team_id": 189,
-     "away_team_id": 208
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.5505,
-     "away": 0.4495,
-     "spread": 0.01,
-     "t": "2026-10-28T03:38Z"
-    }
-   },
-   "sport": "MLB",
-   "cash_stake": 0.5,
-   "payout": 2.02,
-   "payout_est": false,
-   "start_ts": "2026-10-28T00:00Z",
+   "auto": true,
    "clv": {
     "placed_at": "2026-10-27 15:01",
     "close_price": null,
     "clv_pct": null
    }
-  }
- ],
- "settled_recent": [
+  },
   {
    "date": "2026-10-27",
    "book": "FanDuel",
@@ -4216,257 +3901,17 @@
     "close_price": null,
     "clv_pct": null
    }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Drake Maye 310+ Passing Yards",
-   "result": "won",
-   "pnl": 0.31,
-   "stake": 0.1,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 20:17",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "Caesars",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "D'Andre Swift 2+ Touchdowns",
-   "result": "lost",
-   "pnl": -0.1,
-   "stake": 0.1,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 20:16",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "D'Andre Swift First TD Scorer + A.J. Brown 25+ rec yds",
-   "result": "won",
-   "pnl": 1.06,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-22 19:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "Denver Nuggets @ Oklahoma City Thunder",
-   "pick": "Nikola Jokic 12+ reb + Isaiah Hartenstein 7+ reb + Jalen Williams 5+ reb + Chet Holmgren 7+ reb",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 19:51",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Rhamondre Stevenson 40+ rush yds + D'Andre Swift 50+ rush yds + Roschon Johnson 25+ rush yds",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 19:48",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "DraftKings",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Drake Maye 210+ Passing Yards + Caleb Williams 210+ Passing Yards",
-   "result": "won",
-   "pnl": 0.3,
-   "stake": 0.3,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-22 19:46",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "FanDuel",
-   "event": "Denver Nuggets @ Oklahoma City Thunder",
-   "pick": "Denver Nuggets",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 19:44",
-    "close_price": "+267",
-    "clv_pct": -0.66
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "FanDuel",
-   "event": "Vegas Golden Knights @ St. Louis Blues",
-   "pick": "Jack Eichel 2+ Shots on Goal + Jimmy Snuggerud 2+ Shots on Goal + Over 4.5 Alternate Total Goals",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-22 19:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "FanDuel",
-   "event": "Philadelphia 76ers @ Cleveland Cavaliers",
-   "pick": "Philadelphia 76ers +6.5",
-   "result": "won",
-   "pnl": 0.7,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 19:42",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "bet365",
-   "event": "Denver Nuggets @ Oklahoma City Thunder",
-   "pick": "Shai Gilgeous-Alexander: 25+ Points + Nikola Jokic: 20+ Points + Jamal Murray: 5+ Assists",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 18:50",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "bet365",
-   "event": "San Jose Sharks @ Ottawa Senators",
-   "pick": "Macklin Celebrini: 1+ Points + Tim Stutzle: 1+ Points + Dylan Cozens: 2+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 18:49",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "bet365",
-   "event": "Anaheim Ducks @ New Jersey Devils",
-   "pick": "Jack Hughes: 1+ Points + Jesper Bratt: 1+ Points + Timo Meier: 2+ Shots on Goal",
-   "result": "won",
-   "pnl": 0.51,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 18:47",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "Caesars",
-   "event": "Minnesota Wild @ Calgary Flames",
-   "pick": "Calgary Flames -1.5",
-   "result": "lost",
-   "pnl": -1.0,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 20:23",
-    "close_price": "+443",
-    "clv_pct": -20.01
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "Hard Rock",
-   "event": "Detroit Red Wings @ Vancouver Canucks",
-   "pick": "Vancouver Canucks -1.5",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 20.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 20:25",
-    "close_price": "+364",
-    "clv_pct": -3.05
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "FanDuel",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Chicago Bears +6.5 + Caleb Williams 175+ pass yds + Over 40.5 + Drake Maye 200+ pass yds",
-   "result": "won",
-   "pnl": 1.6,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 19:40",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "book": "bet365",
-   "event": "New England Patriots @ Chicago Bears",
-   "pick": "Bears ML + Over 50.5",
-   "result": "won",
-   "pnl": 18.0,
-   "stake": 10.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-22 18:55",
-    "close_price": null,
-    "clv_pct": null
-   }
   }
  ],
- "pnl_total": 108.11,
+ "pnl_total": 107.61,
  "unsettled": {
-  "n": 15,
-  "cash_stake": 13.2,
-  "max_payout": 284.69,
+  "n": 14,
+  "cash_stake": 12.7,
+  "max_payout": 282.67,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 13.2,
+ "open_stake": 12.7,
  "recs": {
   "stats": {
    "overall": {
@@ -8608,6 +8053,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "810ebd70",
+    "book": "FanDuel",
+    "pick": "Milwaukee Brewers ML + Over 7.5 total runs",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "MIL 3-4 TB",
+    "at": "2026-10-28 00:30"
+   },
+   {
     "bet_id": "f9e33ec4",
     "book": "FanDuel",
     "pick": "Sacramento Kings ML",
@@ -8822,27 +8276,18 @@
     "pnl": -0.5,
     "final": "KC 3-20 SEA",
     "at": "2026-10-25 23:16"
-   },
-   {
-    "bet_id": "e5353699",
-    "book": "FanDuel",
-    "pick": "Kansas City Chiefs",
-    "result": "lost",
-    "pnl": 0.0,
-    "final": "KC 3-20 SEA",
-    "at": "2026-10-25 23:16"
    }
   ],
-  "last_change_at": "2026-10-27 22:42 ET"
+  "last_change_at": "2026-10-28 00:30 ET"
  },
- "open_live_n": 15,
+ "open_live_n": 14,
  "open_stake_by_book": {
   "bet365": 0.7,
   "Caesars": 30.5,
   "DraftKings": 0.4,
-  "FanDuel": 1.6,
+  "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "b17f61aa9d446b140e735d922e7691091eed30a4",
- "generated_at": "2026-10-27T23:38:59-04:00"
+ "hash": "87b5866b227f8ff9a48a659f146792573a68ba0f",
+ "generated_at": "2026-10-28T00:30:37-04:00"
 }
