@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "0df2d5ca",
+   "book": "Caesars",
+   "pick": "Venezia",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "INT 2-0 VEN",
+   "at": "2026-10-28 15:22"
+  },
+  {
    "bet_id": "1259f1a1",
    "book": "DraftKings",
    "pick": "Portland Trail Blazers ML",
@@ -216,17 +225,8 @@
    "pnl": 0.57,
    "final": "MEM 123-112 SAC",
    "at": "2026-10-25 23:31"
-  },
-  {
-   "bet_id": "f2b81794",
-   "book": "Caesars",
-   "pick": "Kansas City Chiefs",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "KC 3-20 SEA",
-   "at": "2026-10-25 23:16"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-28 02:00 ET"
+ "last_change_at": "2026-10-28 15:22 ET"
 }

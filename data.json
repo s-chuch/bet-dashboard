@@ -422,78 +422,6 @@
    }
   },
   {
-   "bet_id": "0df2d5ca",
-   "date": "2026-10-26",
-   "book": "Caesars",
-   "event": "Venezia v Inter Milan",
-   "market": "Match Result (bonus bet $5.00; bet id 5c080530-d17e-11f1-bbc9-29b9\u2026)",
-   "pick": "Venezia",
-   "start": "Wed Oct 28 01:30 PM ET",
-   "price": "+625",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 31.25,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Venezia",
-     "women": false,
-     "text": "Venezia",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/ita.1",
-    "date": "20261028",
-    "groups": null,
-    "id": "401874773",
-    "snapshot": {
-     "date": "2026-10-28T17:30Z",
-     "period": 2,
-     "clock": 5100.0,
-     "state": "in",
-     "completed": false,
-     "detail": "85'",
-     "teams": [
-      {
-       "id": "17530",
-       "name": "Venezia",
-       "abbr": "VEN",
-       "short": "Venezia",
-       "nick": "Venezia",
-       "location": "Venezia",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "110",
-       "name": "Internazionale",
-       "abbr": "INT",
-       "short": "Inter Milan",
-       "nick": "Internazionale",
-       "location": "Internazionale",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 31.25,
-   "payout_est": false,
-   "start_ts": "2026-10-28T17:30Z",
-   "clv": {
-    "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "e6892b99",
    "date": "2026-10-26",
    "book": "Caesars",
@@ -1398,7 +1326,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-28T19:12Z"
+       "t": "2026-10-28T19:22Z"
       }
      },
      "pteam": "BAL",
@@ -2093,7 +2021,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-28T19:12Z"
+       "t": "2026-10-28T19:22Z"
       }
      },
      "pteam": "ATL",
@@ -2377,6 +2305,21 @@
     "placed_at": "2026-10-26 18:19",
     "close_price": "+130",
     "clv_pct": -13.22
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "book": "Caesars",
+   "event": "Venezia v Inter Milan",
+   "pick": "Venezia",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 5.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 18:19",
+    "close_price": null,
+    "clv_pct": null
    }
   },
   {
@@ -3267,9 +3210,9 @@
  ],
  "pnl_total": 108.08,
  "unsettled": {
-  "n": 14,
+  "n": 13,
   "cash_stake": 12.7,
-  "max_payout": 283.55,
+  "max_payout": 252.3,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -7622,6 +7565,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "0df2d5ca",
+    "book": "Caesars",
+    "pick": "Venezia",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "INT 2-0 VEN",
+    "at": "2026-10-28 15:22"
+   },
+   {
     "bet_id": "1259f1a1",
     "book": "DraftKings",
     "pick": "Portland Trail Blazers ML",
@@ -7836,27 +7788,18 @@
     "pnl": 0.57,
     "final": "MEM 123-112 SAC",
     "at": "2026-10-25 23:31"
-   },
-   {
-    "bet_id": "f2b81794",
-    "book": "Caesars",
-    "pick": "Kansas City Chiefs",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "KC 3-20 SEA",
-    "at": "2026-10-25 23:16"
    }
   ],
-  "last_change_at": "2026-10-28 02:00 ET"
+  "last_change_at": "2026-10-28 15:22 ET"
  },
- "open_live_n": 14,
+ "open_live_n": 13,
  "open_stake_by_book": {
   "bet365": 1.0,
-  "Caesars": 30.5,
+  "Caesars": 25.5,
   "DraftKings": 0.1,
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "6217788a2fdabc05904fef48ccac64b3b7e3546d",
- "generated_at": "2026-10-28T15:12:02-04:00"
+ "hash": "ed99008885f8ca5ed823b412d03f4b363e13b398",
+ "generated_at": "2026-10-28T15:22:40-04:00"
 }
