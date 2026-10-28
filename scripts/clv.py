@@ -7,6 +7,13 @@
   close_price    that probability as American odds (the "fair closing price")
   clv_pct        fair_close * decimal(price taken) - 1, in %.  Positive = you beat the close.
                  Uses the book price, not a boosted price, so boosts don't inflate CLV.
+Rule 1 (RULES.md): every bet records its price at placement and its close, boosted and unboosted kept apart:
+  open_price_unboosted / open_price_boosted    book prices when the bet was logged (boosted blank if no boost)
+  close_price_unboosted                        fair (no-vig) closing price of the bet's side, american
+  close_price_boosted                          that fair close with the same boost % applied (what the boost "should" have paid)
+  clv_unboosted_pct / clv_boosted_pct          fair_close * decimal(open price) - 1, for the unboosted / boosted open price
+  close_source                                 pinnacle (autorun capture, <=60 min before the start) or espn_dk_final (backfill
+                                               proxy: no-vig of ESPN's final DraftKings line; NOT Pinnacle, kept out of clv_pct / the headline CLV)
 
 Only straight Moneyline / Spread / Total bets that match a Pinnacle game and line exactly are graded.
 Autorun calls capture() every full pass; a bet starting within the next CAPTURE_MIN minutes gets its row
@@ -17,7 +24,9 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from common import DATA, now_et, read_csv, all_bets
 
 CLV = os.path.join(DATA, "clv.csv")
-COLS = ["bet_id", "placed_at", "close_at", "close_fair_pct", "close_price", "clv_pct", "note"]
+COLS = ["bet_id", "placed_at", "close_at", "close_fair_pct", "close_price", "clv_pct", "note",
+        "open_price_unboosted", "open_price_boosted", "close_price_unboosted", "close_price_boosted",
+        "clv_unboosted_pct", "clv_boosted_pct", "close_source"]
 CAPTURE_MIN = 60
 SIDS = [15, 19, 4, 3, 29]   # football, hockey, basketball, baseball, soccer
 
@@ -31,12 +40,26 @@ def save(m):
             w.writerow({c: m[k].get(c, "") for c in COLS})
     os.replace(tmp, CLV)
 
-def record_placed(bet_id, when=None):
-    """Called right after a bet is logged. Never overwrites an existing placed_at."""
+def clean_price(s):
+    """'+325' -> 325; anything else ('unconfirmed (~+120)', '~+155', 'boosted x2 profit', blank) -> None."""
+    m = re.fullmatch(r"\s*([+-]\d{3,5})\s*", str(s or "").replace("\u2212", "-")); return int(m[1]) if m else None
+
+def open_prices(bet):
+    """(unboosted, boosted) american price at placement, from a bets.csv-style row. Blank string when not a clean price."""
+    u, b = clean_price(bet.get("price")), clean_price(bet.get("boosted_price"))
+    return (f"{u:+d}" if u is not None else ""), (f"{b:+d}" if b is not None else "")
+
+def record_placed(bet_id, when=None, bet=None):
+    """Called right after a bet is logged. Never overwrites an existing placed_at / open price."""
     if not bet_id: return
-    m = load(); r = m.setdefault(bet_id, {"bet_id": bet_id})
+    m = load(); r = m.setdefault(bet_id, {"bet_id": bet_id}); ch = False
     if not r.get("placed_at"):
-        r["placed_at"] = when or now_et().strftime("%Y-%m-%d %H:%M"); save(m)
+        r["placed_at"] = when or now_et().strftime("%Y-%m-%d %H:%M"); ch = True
+    if bet:
+        u, b = open_prices(bet)
+        if u and not r.get("open_price_unboosted"): r["open_price_unboosted"] = u; ch = True
+        if b and not r.get("open_price_boosted"): r["open_price_boosted"] = b; ch = True
+    if ch: save(m)
 
 # ---------- parsing a straight bet ----------
 def american(s):
@@ -118,6 +141,20 @@ def close_fair(r, g):
 
 def clv_pct(fair, price): return round((fair * am2dec(price) - 1) * 100, 2)
 
+def boosted_dec(dec_price, pct): return 1 + (dec_price - 1) * (1 + pct / 100.0)
+
+def close_fields(r, fair, source="pinnacle"):
+    """The rule-1 close columns for bet row r given the fair (no-vig) closing probability of its side."""
+    from common import boost_pct
+    ou, ob = open_prices(r); fdec = 1 / fair
+    pct = boost_pct(r.get("market", ""), r.get("price", ""), r.get("boosted_price", "")) if (ob or "boost" in (r.get("market") or "").lower()) else None
+    out = {"close_price_unboosted": f"{dec2am(fdec):+d}", "close_price_boosted": "", "clv_unboosted_pct": "", "clv_boosted_pct": "", "close_source": source}
+    if ou: out["clv_unboosted_pct"] = f"{clv_pct(fair, int(ou)):.2f}"
+    if pct: out["close_price_boosted"] = f"{dec2am(boosted_dec(fdec, pct)):+d}"
+    if ob: out["clv_boosted_pct"] = f"{clv_pct(fair, int(ob)):.2f}"
+    elif pct and ou: out["clv_boosted_pct"] = f"{round((fair * boosted_dec(am2dec(int(ou)), pct) - 1) * 100, 2):.2f}"   # boost % from the market text
+    return out
+
 def capture(dry=False, now=None, fetch=None, verbose=True):
     now = now or now_et()
     cands = []
@@ -153,26 +190,50 @@ def capture(dry=False, now=None, fetch=None, verbose=True):
         price = american(r["price"])
         row.update({"close_at": now.strftime("%Y-%m-%d %H:%M"), "close_fair_pct": f"{fair * 100:.2f}",
                     "close_price": f"{dec2am(1 / fair):+d}", "clv_pct": f"{clv_pct(fair, price):.2f}", "note": ""})
+        row.update(close_fields(r, fair)); ou, ob = open_prices(r)
+        if ou and not row.get("open_price_unboosted"): row["open_price_unboosted"] = ou
+        if ob and not row.get("open_price_boosted"): row["open_price_boosted"] = ob
         n += 1
         if verbose: print(f"clv {r['bet_id']} {r['pick'][:40]} @ {price:+d}: close fair {dec2am(1/fair):+d} -> CLV {row['clv_pct']}%")
     if not dry: save(m)
     return n
 
+def is_pinnacle(c): return (c.get("close_source") or "pinnacle") == "pinnacle"
+
 def summary(rows=None):
-    """CLV summary over every bet with a captured close."""
-    m = load(); byid = {r["bet_id"]: r for r in (rows or all_bets())}
+    """CLV summary over every bet with a captured Pinnacle close (headline), plus coverage of closes / open prices."""
+    m = load(); allr = list(rows or all_bets()); byid = {r["bet_id"]: r for r in allr}
     xs = []
     for k, c in m.items():
-        if c.get("clv_pct") and k in byid:
+        if c.get("clv_pct") and k in byid and is_pinnacle(c):
             try: xs.append((float(c["clv_pct"]), byid[k]))
             except ValueError: pass
-    if not xs: return {"n": 0, "avg": None, "beat": 0, "beat_pct": None, "tracked": sum(1 for c in m.values() if c.get("placed_at"))}
+    strt = [r for r in allr if straight(r)]
+    has_close = lambda i: bool((m.get(i) or {}).get("close_price_unboosted") or (m.get(i) or {}).get("clv_pct"))
+    cov = {"bets": len(allr), "straight": len(strt), "straight_with_close": sum(has_close(r["bet_id"]) for r in strt),
+           "proxy_closes": sum(1 for c in m.values() if (c.get("close_source") or "") == "espn_dk_final"),
+           "open_price_logged": sum(1 for c in m.values() if c.get("open_price_unboosted")), "placed_at_logged": sum(1 for c in m.values() if c.get("placed_at"))}
+    base = {"coverage": cov, "tracked": cov["placed_at_logged"]}
+    if not xs: return {"n": 0, "avg": None, "beat": 0, "beat_pct": None, **base}
     beat = sum(1 for v, _ in xs if v > 0)
     return {"n": len(xs), "avg": round(sum(v for v, _ in xs) / len(xs), 2), "beat": beat,
-            "beat_pct": round(beat / len(xs) * 100, 1), "tracked": sum(1 for c in m.values() if c.get("placed_at")),
+            "beat_pct": round(beat / len(xs) * 100, 1), **base,
             "recent": [{"bet_id": r["bet_id"], "pick": r["pick"][:60], "book": r["book"], "price": r["price"],
                         "close_price": m[r["bet_id"]]["close_price"], "clv_pct": v}
                        for v, r in sorted(xs, key=lambda x: x[1].get("date", ""), reverse=True)[:10]]}
+
+def missing_closes(rows=None, now=None):
+    """Reminder list: straight bets (already started or settled) with no closing price on file."""
+    now = now or now_et(); m = load(); out = []
+    for r in (rows or all_bets()):
+        if not straight(r): continue
+        c = m.get(r["bet_id"]) or {}
+        if c.get("close_price_unboosted") or c.get("clv_pct"): continue
+        st = parse_start(r)
+        if (r.get("result") or "").strip().lower() in ("open", "") and st and st > now: continue   # not started yet: capture() will get it
+        out.append({"bet_id": r["bet_id"], "date": r["date"], "book": r["book"], "pick": r["pick"][:50], "event": r["event"][:50],
+                    "start_et": r.get("start_et", ""), "why": c.get("note") or ("no placed_at row (logged before CLV tracking)" if not c else "no close captured (not graded within 60 min of the start)")})
+    return out
 
 if __name__ == "__main__":
     from common import lock

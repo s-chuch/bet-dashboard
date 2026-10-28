@@ -123,11 +123,11 @@ def link_rec(b, f, bet_id):
     try:
         import rec as RC
         rows = RC.load(); new = rec_row(b, f, True, bet_id, "logged from Bet Finder" + (f" (key {f['key']})" if f.get("key") else ""))
-        hit = next((x for x in rows if new["game_start_et"] and RC.same_rec(x, new)), None)
+        hit = next((x for x in rows if new["game_start_et"] and RC.same_rec_book(x, new)), None)   # same book only: never a rec at another sportsbook
         if hit:
             hit["placed"] = "yes"; hit["bet_ids"] = ";".join([x for x in hit["bet_ids"].split(";") if x] + [bet_id]); print(f"rec linked: {hit['rec_id']}")
         else:
-            RC.add(rows, new, quiet=True); print("rec added for finder pick")
+            RC.add(rows, new, quiet=True, by_book=True); print("rec added for finder pick")
         RC.save(rows)
     except Exception as e: print(f"::warning::rec link failed: {e}")
 
@@ -143,10 +143,10 @@ def record_skip(r):
     try:
         import rec as RC
         recs = RC.load(); new = rec_row({"event": r["event"], "book": r["book"], "price": r["price"]}, f, False, "", "SKIPPED in Bet Finder: " + reason)
-        hit = next((x for x in recs if new["game_start_et"] and RC.same_rec(x, new)), None)
+        hit = next((x for x in recs if new["game_start_et"] and RC.same_rec_book(x, new)), None)
         if hit:
             if hit["placed"] != "yes" and "SKIPPED" not in hit["notes"]: hit["notes"] = "; ".join(filter(None, [hit["notes"], new["notes"]]))
-        else: RC.add(recs, new, quiet=True)
+        else: RC.add(recs, new, quiet=True, by_book=True)
         RC.save(recs)
     except Exception as e: print(f"::warning::skip rec note failed: {e}")
     print(f"skipped: {r['book']} | {f['key'][:60]} ({reason})")
@@ -178,11 +178,13 @@ def main():
                 dup += 1; print(f"skipped duplicate (same as {twin.get('bet_id') or 'an earlier row of this upload'}): {r['book']} | {r['pick'][:60]}"); continue
             if f.get("fair") and not r.get("fair_pct"): r["fair_pct"] = f["fair"]     # keep the Finder's fair chance and EV on the bet itself,
             if f.get("ev") and not r.get("ev_pct"): r["ev_pct"] = f["ev"]             # so the slip can colour the price by what it was worth
-            argv = ["log"] + [f"{k}={v}" for k, v in r.items() if v != ""] + (["--force"] if force else [])
+            argv = ["log"] + [f"{k}={v}" for k, v in r.items() if v != ""] + (["--force"] if force else []) + (["--no-rec"] if f.get("selection") else [])   # Finder bets are linked by link_rec below
             buf = io.StringIO()
             try:
                 with contextlib.redirect_stdout(buf): LG.main(argv)
                 added += 1; known.append(dict(r)); print(f"added: {r['book']} | {r['pick'][:60]}")
+                for ln in buf.getvalue().splitlines():   # rec link / rule-3 and boost-rule warnings from ledger log
+                    if ln.startswith(("rec ", "WARNING", "BOOST RULE", "boost rule")): print(ln)
                 m = re.search(r"^logged ([0-9a-f]{6,16})$", buf.getvalue(), re.M)
                 if m and f:
                     if f.get("placed_at"):

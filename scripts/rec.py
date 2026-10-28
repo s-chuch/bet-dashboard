@@ -4,6 +4,7 @@
   python3 rec.py add --sport NFL --event "Away @ Home" --start "2026-10-18 13:00" --market Moneyline \
         --selection "Away Team" --book theScore --price +250 [--fair 30.1 --ev 4.2 --stake 0.2 \
         --promo cash|profit boost|bonus bet|No Sweat|rollover|live boost --eff-price +325 --friend --note ...]
+  python3 rec.py skip --rec-id ID --note "why"   # log why a recommended pick was not played
   python3 rec.py grade        # sync placed recs from bets.csv + grade unplaced recs whose game is final (ESPN)
   python3 rec.py stats [--json out.json]
   python3 rec.py backfill     # one-off rebuild from history (bets.csv + scan outputs + chat picks)
@@ -70,8 +71,17 @@ def same_rec(a, b):
     if ka in ("total", "spread"):
         la = re.findall(r"\d+(?:\.\d+)?", a["selection"]); lb = re.findall(r"\d+(?:\.\d+)?", b["selection"])
         if la[-1:] != lb[-1:]: return False
-    ea, eb = selwords(evclean(a["event"])), selwords(evclean(b["event"]))
+    ea, eb = selwords(evclean(a["event"])) - EV_STOP, selwords(evclean(b["event"])) - EV_STOP
     return bool(ea & eb)
+EV_STOP = {"v", "vs", "at", "sc", "cf", "ac", "fk"}   # separators/filler: 'Cesena v Avellino' and 'Cienciano v UTC Cajamarca' share only 'v'
+def bkey(s): return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+def same_rec_book(a, b):
+    """same_rec AND the same sportsbook: a rec at one book is never linked to a bet at another book.
+    Multi-leg bets never dedupe by selection words; they match only on the identical selection text, book and day."""
+    if bkey(a.get("book")) != bkey(b.get("book")) or not bkey(a.get("book")): return False
+    if kind(a["market"], a["selection"]) == "multi" and kind(b["market"], b["selection"]) == "multi":
+        return a["game_start_et"][:10] == b["game_start_et"][:10] and bkey(a["selection"]) == bkey(b["selection"])
+    return same_rec(a, b)
 def evclean(e): return re.sub(r"\b(london|ncaaf|nfl|nba|nhl|mlb)\b", " ", re.sub(r"\s*\([^)]*\)", "", e), flags=re.I)
 
 # ---------------------------------------------------------------- grading
@@ -233,28 +243,100 @@ def dash_payload(rows):
             | {"units": None if units(r) is None else round(units(r), 2)} for r in recent]}
 
 # ---------------------------------------------------------------- add / backfill
-def add(rows, r, quiet=False):
+def add(rows, r, quiet=False, by_book=False):
+    """append a rec unless one already covers the same selection & game day. by_book=True: only a rec at the SAME sportsbook counts as a duplicate."""
     r = {k: r.get(k, "") for k in COLS}
-    if not r["rec_id"]: r["rec_id"] = rid(r["game_start_et"][:10], r["selection"], r["event"])
+    if not r["rec_id"]: r["rec_id"] = rid(r["game_start_et"][:10], r["selection"], r["event"], *([r["book"]] if by_book else []))
     r["friend"] = r["friend"] or "no"; r["placed"] = r["placed"] or "no"; r["result"] = r["result"] or "pending"
     for x in rows:
-        if same_rec(x, r):
+        if (same_rec_book if by_book else same_rec)(x, r):
             if not quiet: print("duplicate of", x["rec_id"], x["selection"], "- not added")
             return x
+    while any(x["rec_id"] == r["rec_id"] for x in rows): r["rec_id"] = rid(r["rec_id"], "x")   # rec_id stays unique
     rows.append(r)
     if not quiet: print("added", r["rec_id"], r["selection"])
     return r
 
+def _ids(r): return [x for x in r["bet_ids"].split(";") if x]
+def _cand(b):
+    d = P.parse_date(b)
+    return {"game_start_et": d.strftime("%Y-%m-%d %H:%M") if d else b.get("date", ""), "market": b["market"], "selection": b["pick"],
+            "event": b["event"], "book": b["book"]}
 def link_placed(rows):
-    """mark recs that match a bet in bets.csv (same selection & game day) as placed"""
+    """mark recs that match a bet in bets.csv (same selection, game day AND book) as placed.
+    A bet is linked to at most one rec, and never to a rec at a different book."""
+    linked = {i for r in rows for i in _ids(r)}
     for b in all_bets():
+        if b["bet_id"] in linked: continue
         d = P.parse_date(b)
         if not d: continue
-        cand = {"game_start_et": d.strftime("%Y-%m-%d %H:%M"), "market": b["market"], "selection": b["pick"], "event": b["event"]}
+        cand = _cand(b)
         for r in rows:
             if r["friend"] == "yes": continue
-            if same_rec(r, cand) and b["bet_id"] not in r["bet_ids"].split(";"):
-                r["bet_ids"] = ";".join([x for x in r["bet_ids"].split(";") if x] + [b["bet_id"]]); r["placed"] = "yes"
+            if same_rec_book(r, cand):
+                r["bet_ids"] = ";".join(_ids(r) + [b["bet_id"]]); r["placed"] = "yes"; linked.add(b["bet_id"]); break
+
+# ---------------------------------------------------------------- link a bet to a rec at log time (rule 3)
+def clean_am(s):
+    """american price from a clean field ('+325'); None for 'unconfirmed (~+120)', '~+155', 'boosted x2 profit', blank."""
+    m = re.fullmatch(r"\s*([+-]\d{3,5})\s*", str(s or "").replace("\u2212", "-")); return int(m[1]) if m else None
+def ev_calc(fair_pct, eff_am, promo="cash"):
+    """EV % at the logged price: fair*decimal-1 (bonus bets: fair*(decimal-1)). None if either input is missing."""
+    p = fnum(fair_pct); d = dec(eff_am)
+    if p is None or d is None: return None
+    return round((p / 100 * (d - 1) if promo == "bonus bet" else p / 100 * d - 1) * 100, 2)
+def eff_of(b, promo):
+    pr, bp = clean_am(b.get("price")), clean_am(b.get("boosted_price"))
+    return (bp if bp and promo in ("profit boost", "live boost") else pr), pr
+def complete_bet(b, rec=None):
+    """Fill a bet's blank fair_pct (from its rec) and blank ev_pct (computed at the bet's own price). Never overwrites. True if changed."""
+    ch = False
+    promo = promo_of(" ".join([b.get("event", ""), b.get("market", ""), b.get("pick", ""), b.get("stake", "")]))
+    if not (b.get("fair_pct") or "").strip() and rec and (rec.get("fair_pct") or "").strip():
+        b["fair_pct"] = rec["fair_pct"]; ch = True
+    if not (b.get("ev_pct") or "").strip() and (b.get("fair_pct") or "").strip():
+        eff, _ = eff_of(b, promo); ev = ev_calc(b["fair_pct"], eff, promo)
+        if ev is not None: b["ev_pct"] = f"{ev:g}"; ch = True
+    return ch
+def rec_from_bet(b, source="ledger log (auto)", note=""):
+    """a placed rec built from a bet that carries its own fair % (never invents fair/EV)."""
+    cand = _cand(b); promo = promo_of(" ".join([b["event"], b["market"], b["pick"], b.get("stake", "")]))
+    eff, pr = eff_of(b, promo); fmt = lambda a: f"{a:+d}" if a is not None else ""
+    return {"rec_date": b["date"], "rec_time_et": now_et().strftime("%H:%M"), "sport": "",
+            "event": re.sub(r"\s*\((?:NFL|NBA|NHL|MLB|NCAAF|Soccer[^)]*)\)", "", b["event"]), "game_start_et": cand["game_start_et"],
+            "market": b["market"], "selection": b["pick"], "book": b["book"], "rec_price": fmt(pr), "eff_price": fmt(eff),
+            "fair_pct": b.get("fair_pct", ""), "ev_pct": b.get("ev_pct", ""), "stake": b.get("stake", ""), "promo": promo,
+            "friend": "no", "placed": "yes", "bet_ids": b["bet_id"], "result": "pending", "source": source, "notes": note}
+def link_bet(rows, b, create=True):
+    """Link one freshly logged bet to a rec in `rows` (same selection, game day and book). Returns (status, rec):
+    'already' | 'linked' | 'created' | 'none'. A rec is created only when the bet carries its own fair %. Mutates rows and b."""
+    for r in rows:
+        if b["bet_id"] in _ids(r): complete_bet(b, r); return "already", r
+    cand = _cand(b)
+    hit = next((r for r in rows if r["friend"] != "yes" and same_rec_book(r, cand)), None)
+    if hit:
+        hit["bet_ids"] = ";".join(_ids(hit) + [b["bet_id"]]); hit["placed"] = "yes"; complete_bet(b, hit); return "linked", hit
+    complete_bet(b)
+    if create and (b.get("fair_pct") or "").strip():
+        new = rec_from_bet(b); new = {k: new.get(k, "") for k in COLS}
+        new["rec_id"] = rid(new["game_start_et"][:10], new["selection"], new["event"], new["book"]); new["friend"] = "no"
+        rows.append(new); return "created", new
+    return "none", None
+def log_time_link(b):
+    """Called by `ledger.py log` for every new bet: link/create its rec, fill fair/EV, print warnings (never fails the log)."""
+    try:
+        rows = load(); st, r = link_bet(rows, b)
+        if st in ("linked", "created"): save(rows)
+        if st == "linked": print(f"rec linked: {r['rec_id']} ({r['book']} {r['selection']})")
+        elif st == "created": print(f"rec created: {r['rec_id']} ({r['book']} {r['selection']}, fair {r['fair_pct']}%, EV {r['ev_pct'] or '?'}%)")
+        else: print(f"WARNING: no rec linked for {b['bet_id']} ({b['book']} | {b['pick'][:50]}): no matching rec at this book and no fair % given. "
+                    "Log it with fair_pct=.. (EV is then computed) so it gets a rec, or note why it has none.")
+        if not (b.get("fair_pct") or "").strip(): print(f"WARNING: no fair % / EV recorded for {b['bet_id']}")
+        elif not (b.get("ev_pct") or "").strip(): print(f"WARNING: no EV recorded for {b['bet_id']} (price not a clean american price)")
+        import rules; bc = rules.boost_check_bet(b)
+        if bc: print(bc[1])
+    except Exception as e:
+        print(f"WARNING: rec link failed for {b.get('bet_id')}: {e}")
 
 LINE = re.compile(r"^BET\s+(-?[\d.]+)% \| (\w+) (\w{3} \w{3} \d{2} \d{2}:\d{2} [AP]M) ET \| (.+?) \| ([A-Za-z ]+?): (.+?) \| (.+?) ([+-]\d+) \| Pin\((\w+)\) (.+?) \| fair ([\d.]+)%")
 def scan_tops():
@@ -357,8 +439,8 @@ def backfill():
     return rows
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["add", "grade", "stats", "backfill"])
-    for a in ("sport", "event", "start", "market", "selection", "book", "price", "eff-price", "fair", "ev", "stake", "promo", "note", "json", "rec-date", "rec-time"):
+    ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["add", "grade", "stats", "backfill", "skip"])
+    for a in ("sport", "event", "start", "market", "selection", "book", "price", "eff-price", "fair", "ev", "stake", "promo", "note", "json", "rec-date", "rec-time", "rec-id"):
         ap.add_argument("--" + a, default="")
     ap.add_argument("--friend", action="store_true"); ap.add_argument("--placed", action="store_true")
     a = ap.parse_args()
@@ -374,6 +456,11 @@ if __name__ == "__main__":
                    "promo": a.promo or "cash", "friend": "yes" if a.friend else "no", "placed": "yes" if a.placed else "no",
                    "source": "rec.py add", "notes": a.note})
         link_placed(rows); save(rows)
+    elif a.cmd == "skip":   # rule 3: record why a recommended pick was not played: rec.py skip --rec-id ID --note "price moved"
+        rows = load(); hit = next((x for x in rows if x["rec_id"] == a.rec_id), None)
+        if not hit: sys.exit(f"no rec {a.rec_id}")
+        if hit["placed"] == "yes": sys.exit(f"rec {a.rec_id} is linked to a placed bet; not a skip")
+        hit["notes"] = "; ".join(filter(None, [hit["notes"], "SKIPPED: " + (a.note or "no reason given")])); save(rows); print("skip noted on", a.rec_id)
     elif a.cmd == "grade":
         rows = load(); link_placed(rows); grade(rows); save(rows)
     else:
