@@ -1374,7 +1374,7 @@
        "home": 0.625,
        "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-27T23:56Z"
+       "t": "2026-10-28T00:51Z"
       }
      },
      "pteam": "BAL",
@@ -2069,7 +2069,7 @@
        "home": 0.5505,
        "away": 0.4495,
        "spread": 0.01,
-       "t": "2026-10-27T23:56Z"
+       "t": "2026-10-28T00:51Z"
       }
      },
      "pteam": "ATL",
@@ -2121,11 +2121,11 @@
     "id": "401909879",
     "snapshot": {
      "date": "2026-10-28T00:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 403.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/27 - 8:00 PM EDT",
+     "detail": "6:43 - 2nd",
      "teams": [
       {
        "id": "24",
@@ -2135,7 +2135,7 @@
        "nick": "Spurs",
        "location": "San Antonio",
        "home": true,
-       "score": "0"
+       "score": "59"
       },
       {
        "id": "23",
@@ -2145,7 +2145,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": false,
-       "score": "0"
+       "score": "38"
       }
      ]
     },
@@ -2788,10 +2788,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.925,
-     "away": 0.075,
+     "home": 0.985,
+     "away": 0.015,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NBA",
@@ -2909,11 +2909,11 @@
     "id": "401909877",
     "snapshot": {
      "date": "2026-10-27T23:30Z",
-     "period": 1,
-     "clock": 270.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:30 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "2",
@@ -2923,7 +2923,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "16"
+       "score": "56"
       },
       {
        "id": "17",
@@ -2933,7 +2933,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "16"
+       "score": "61"
       }
      ]
     },
@@ -3598,10 +3598,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.825,
-     "away": 0.175,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NBA",
@@ -3673,11 +3673,11 @@
     "id": "401909879",
     "snapshot": {
      "date": "2026-10-28T00:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 403.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/27 - 8:00 PM EDT",
+     "detail": "6:43 - 2nd",
      "teams": [
       {
        "id": "24",
@@ -3687,7 +3687,7 @@
        "nick": "Spurs",
        "location": "San Antonio",
        "home": true,
-       "score": "0"
+       "score": "59"
       },
       {
        "id": "23",
@@ -3697,7 +3697,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": false,
-       "score": "0"
+       "score": "38"
       }
      ]
     },
@@ -4340,10 +4340,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.925,
-     "away": 0.075,
+     "home": 0.985,
+     "away": 0.015,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NBA",
@@ -5092,7 +5092,7 @@
      "home": 0.535,
      "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NBA",
@@ -5154,11 +5154,11 @@
     "id": "401892585",
     "snapshot": {
      "date": "2026-10-27T23:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "15",
@@ -5168,7 +5168,7 @@
        "nick": "Flyers",
        "location": "Philadelphia",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "29",
@@ -5381,10 +5381,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.065,
-     "away": 0.935,
+     "home": 0.085,
+     "away": 0.915,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NHL",
@@ -5447,11 +5447,11 @@
     "id": "401909877",
     "snapshot": {
      "date": "2026-10-27T23:30Z",
-     "period": 1,
-     "clock": 270.0,
+     "period": 2,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "4:30 - 1st",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "2",
@@ -5461,7 +5461,7 @@
        "nick": "Celtics",
        "location": "Boston",
        "home": true,
-       "score": "16"
+       "score": "56"
       },
       {
        "id": "17",
@@ -5471,7 +5471,7 @@
        "nick": "Nets",
        "location": "Brooklyn",
        "home": false,
-       "score": "16"
+       "score": "61"
       }
      ]
     },
@@ -6136,10 +6136,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.825,
-     "away": 0.175,
+     "home": 0.685,
+     "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "NBA",
@@ -6191,11 +6191,11 @@
     "id": "401908045",
     "snapshot": {
      "date": "2026-10-28T00:00Z",
-     "period": 1,
+     "period": 3,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/27 - 8:00 PM EDT",
+     "detail": "Top 3rd",
      "teams": [
       {
        "id": "30",
@@ -6205,7 +6205,7 @@
        "nick": "Rays",
        "location": "Tampa Bay",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "8",
@@ -6466,10 +6466,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.475,
-     "away": 0.525,
+     "home": 0.535,
+     "away": 0.465,
      "spread": 0.01,
-     "t": "2026-10-27T23:56Z"
+     "t": "2026-10-28T00:51Z"
     }
    },
    "sport": "MLB",
@@ -12011,6 +12011,6 @@
   "FanDuel": 2.8,
   "PointsBet": 10.0
  },
- "hash": "689efeea77f5969dfb00e982f13ece2155b48ef8",
- "generated_at": "2026-10-27T19:56:21-04:00"
+ "hash": "57bd4160886045f46c67a49da972893f028dc27e",
+ "generated_at": "2026-10-27T20:51:37-04:00"
 }
