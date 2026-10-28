@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "1259f1a1",
+   "book": "DraftKings",
+   "pick": "Portland Trail Blazers ML",
+   "result": "won",
+   "pnl": 0.47,
+   "final": "POR 136-129 LAL",
+   "at": "2026-10-28 02:00"
+  },
+  {
    "bet_id": "810ebd70",
    "book": "FanDuel",
    "pick": "Milwaukee Brewers ML + Over 7.5 total runs",
@@ -216,17 +225,8 @@
    "pnl": -0.5,
    "final": "KC 3-20 SEA",
    "at": "2026-10-25 23:16"
-  },
-  {
-   "bet_id": "c3fa6c28",
-   "book": "FanDuel",
-   "pick": "Seahawks -2.5 + Seahawks 1H -0.5 + Seahawks Over 21.5 team total + Jaxon Smith-Njigba anytime TD",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "KC 3-20 SEA",
-   "at": "2026-10-25 23:16"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-28 00:30 ET"
+ "last_change_at": "2026-10-28 02:00 ET"
 }
