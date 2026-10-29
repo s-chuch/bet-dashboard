@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T02:10Z"
+       "t": "2026-10-29T02:11Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T02:10Z"
+       "t": "2026-10-29T02:11Z"
       }
      },
      "pteam": "ATL",
@@ -2087,7 +2087,7 @@
        "nick": "Chicago Fire FC",
        "location": "Chicago Fire FC",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "12011",
@@ -2406,10 +2406,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.055,
-     "away": 0.945,
+     "home": 0.0545,
+     "away": 0.9455,
      "spread": 0.01,
-     "t": "2026-10-29T02:10Z"
+     "t": "2026-10-29T02:11Z"
     }
    },
    "sport": "MLB",
@@ -8129,6 +8129,6 @@
   "FanDuel": 1.6,
   "PointsBet": 10.0
  },
- "hash": "98585841f414058ed3be5b39e64bf08329c5ccfe",
- "generated_at": "2026-10-28T22:10:48-04:00"
+ "hash": "7b72bf6e40eed235e5d57cb3ca5b496b91bca8a0",
+ "generated_at": "2026-10-28T22:11:28-04:00"
 }
