@@ -1326,7 +1326,7 @@
        "home": 0.6212,
        "away": 0.3788,
        "spread": 0.01,
-       "t": "2026-10-29T03:14Z"
+       "t": "2026-10-29T03:15Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T03:14Z"
+       "t": "2026-10-29T03:15Z"
       }
      },
      "pteam": "ATL",
@@ -3153,16 +3153,16 @@
    "overall": {
     "n": 162,
     "w": 50,
-    "l": 78,
+    "l": 79,
     "p": 0,
-    "pending": 34,
-    "win_pct": 39.1,
-    "units": 20.79,
-    "roi_pct": 19.6,
-    "roi_n": 106,
-    "exp_roi_pct": 9.9,
-    "exp_wins": 43.2,
-    "exp_wins_n": 127,
+    "pending": 33,
+    "win_pct": 38.8,
+    "units": 19.79,
+    "roi_pct": 18.5,
+    "roi_n": 107,
+    "exp_roi_pct": 9.8,
+    "exp_wins": 43.7,
+    "exp_wins_n": 128,
     "wins_with_fair": 49
    },
    "by_promo": {
@@ -3244,16 +3244,16 @@
     "cash": {
      "n": 57,
      "w": 23,
-     "l": 30,
+     "l": 31,
      "p": 0,
-     "pending": 4,
-     "win_pct": 43.4,
-     "units": 15.46,
-     "roi_pct": 29.2,
-     "roi_n": 53,
+     "pending": 3,
+     "win_pct": 42.6,
+     "units": 14.46,
+     "roi_pct": 26.8,
+     "roi_n": 54,
      "exp_roi_pct": 5.8,
-     "exp_wins": 18.7,
-     "exp_wins_n": 53,
+     "exp_wins": 19.2,
+     "exp_wins_n": 54,
      "wins_with_fair": 23
     },
     "live boost": {
@@ -3366,16 +3366,16 @@
     "NCAAF": {
      "n": 36,
      "w": 10,
-     "l": 21,
+     "l": 22,
      "p": 0,
-     "pending": 5,
-     "win_pct": 32.3,
-     "units": 10.78,
-     "roi_pct": 34.8,
-     "roi_n": 31,
-     "exp_roi_pct": 11.7,
-     "exp_wins": 10.2,
-     "exp_wins_n": 31,
+     "pending": 4,
+     "win_pct": 31.2,
+     "units": 9.78,
+     "roi_pct": 30.6,
+     "roi_n": 32,
+     "exp_roi_pct": 11.5,
+     "exp_wins": 10.7,
+     "exp_wins_n": 32,
      "wins_with_fair": 10
     },
     "NFL": {
@@ -3503,16 +3503,16 @@
     "no": {
      "n": 73,
      "w": 17,
-     "l": 22,
+     "l": 23,
      "p": 0,
-     "pending": 34,
-     "win_pct": 43.6,
-     "units": -5.15,
-     "roi_pct": -15.6,
-     "roi_n": 33,
-     "exp_roi_pct": 4.5,
-     "exp_wins": 14.2,
-     "exp_wins_n": 39,
+     "pending": 33,
+     "win_pct": 42.5,
+     "units": -6.15,
+     "roi_pct": -18.1,
+     "roi_n": 34,
+     "exp_roi_pct": 4.4,
+     "exp_wins": 14.7,
+     "exp_wins_n": 40,
      "wins_with_fair": 17
     }
    },
@@ -3597,11 +3597,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "JXST 24-0 NMSU (Final)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: -115",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "ff591a0d",
@@ -7777,6 +7777,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "ca6c4e509079982370099f58c0b5d0d784d784b3",
- "generated_at": "2026-10-28T23:14:41-04:00"
+ "hash": "87fed64d384a53711c646d1c289ba833bbbb23bf",
+ "generated_at": "2026-10-28T23:15:21-04:00"
 }
