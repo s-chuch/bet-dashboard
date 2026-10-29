@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T00:29Z"
+       "t": "2026-10-29T00:31Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T00:29Z"
+       "t": "2026-10-29T00:31Z"
       }
      },
      "pteam": "ATL",
@@ -3220,11 +3220,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 161,
+    "n": 162,
     "w": 49,
     "l": 77,
     "p": 0,
-    "pending": 35,
+    "pending": 36,
     "win_pct": 38.9,
     "units": 17.29,
     "roi_pct": 16.6,
@@ -3311,11 +3311,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 56,
+     "n": 57,
      "w": 22,
      "l": 29,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 43.1,
      "units": 11.96,
      "roi_pct": 23.5,
@@ -3478,11 +3478,11 @@
      "wins_with_fair": 9
     },
     "SOCCER": {
-     "n": 4,
+     "n": 5,
      "w": 2,
      "l": 0,
      "p": 0,
-     "pending": 2,
+     "pending": 3,
      "win_pct": 100.0,
      "units": 3.95,
      "roi_pct": 197.5,
@@ -3570,11 +3570,11 @@
      "wins_with_fair": 31
     },
     "no": {
-     "n": 72,
+     "n": 73,
      "w": 17,
      "l": 22,
      "p": 0,
-     "pending": 33,
+     "pending": 34,
      "win_pct": 43.6,
      "units": -5.15,
      "roi_pct": -15.6,
@@ -3603,6 +3603,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "1b4fc3d6",
+    "rec_date": "2026-10-28",
+    "rec_time_et": "20:31",
+    "sport": "SOCCER",
+    "event": "Lecce @ Frosinone Calcio",
+    "market": "cash",
+    "selection": "Over 3.5",
+    "book": "theScore",
+    "rec_price": "+115",
+    "eff_price": "+115",
+    "fair_pct": "47.87",
+    "ev_pct": "2.91",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "00733ae0",
     "rec_date": "2026-10-28",
@@ -7823,6 +7846,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "a4437a850762cfdf6f4918e3b192c59a882fc2fc",
- "generated_at": "2026-10-28T20:29:58-04:00"
+ "hash": "c7cd4b9b3ee4c2c10ac6854d288434e07e9f2a84",
+ "generated_at": "2026-10-28T20:31:41-04:00"
 }
