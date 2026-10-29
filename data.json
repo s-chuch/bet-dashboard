@@ -1323,10 +1323,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.6212,
-       "away": 0.3788,
+       "home": 0.625,
+       "away": 0.375,
        "spread": 0.01,
-       "t": "2026-10-29T03:15Z"
+       "t": "2026-10-29T05:01Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T03:15Z"
+       "t": "2026-10-29T05:01Z"
       }
      },
      "pteam": "ATL",
@@ -2924,216 +2924,6 @@
    "auto": false,
    "clv": {
     "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "FanDuel",
-   "event": "North Carolina Central @ Delaware State",
-   "pick": "Delaware State ML + Over 48.5 alt total",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "Caesars",
-   "event": "Portland Trail Blazers @ Sacramento Kings",
-   "pick": "Sacramento Kings",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": "+370",
-    "clv_pct": -5.4
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "Caesars",
-   "event": "Ole Miss Rebels @ Texas Longhorns",
-   "pick": "Texas Longhorns ML + Kewan Lacy anytime TD",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Arsenal v Everton",
-   "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
-   "result": "won",
-   "pnl": 0.63,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Montreal Canadiens @ Chicago Blackhawks",
-   "pick": "Cole Caufield 1+ Points + Lane Hutson 1+ Points + Patrick Kane 2+ Shots on Goal",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Montreal Alouettes @ Toronto Argonauts",
-   "pick": "Over 36.5 + Argonauts +19.0 + Alouettes ML",
-   "result": "won",
-   "pnl": 0.75,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Winnipeg Blue Bombers @ BC Lions",
-   "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Chicago Bulls @ Milwaukee Bucks",
-   "pick": "Josh Giddey 7+ Assists + Tyler Herro 5+ Assists + Leonard Miller 3+ Rebounds",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "bet365",
-   "event": "Alexander Volkanovski v Movsar Evloev",
-   "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "FanDuel",
-   "event": "NFL Week 7 multi",
-   "pick": "Tyler Shough 175+ pass yds + Daniel Jones 125+ pass yds + Brock Purdy 150+ pass yds + Deshaun Watson 150+ pass yds + Geno Smith 175+ pass yds + Baker Mayfield 150+ pass yds",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.0,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "DraftKings",
-   "event": "Minnesota Timberwolves @ Orlando Magic",
-   "pick": "Rudy Gobert 14+ Rebounds",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "DraftKings",
-   "event": "Montreal Alouettes @ Toronto Argonauts",
-   "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "DraftKings",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "pick": "Jake Bauers 2+ Total Bases",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "book": "DraftKings",
-   "event": "Toronto Raptors @ Washington Wizards",
-   "pick": "Anthony Davis 13+ Rebounds",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
     "close_price": null,
     "clv_pct": null
    }
@@ -7777,6 +7567,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "87fed64d384a53711c646d1c289ba833bbbb23bf",
- "generated_at": "2026-10-28T23:15:21-04:00"
+ "hash": "73cde05978daa41100713977dbaf56233c620d74",
+ "generated_at": "2026-10-29T01:01:55-04:00"
 }
