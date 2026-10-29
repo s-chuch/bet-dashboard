@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T21:37Z"
+       "t": "2026-10-29T21:38Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T21:37Z"
+       "t": "2026-10-29T21:38Z"
       }
      },
      "pteam": "ATL",
@@ -2790,7 +2790,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NBA",
@@ -3061,7 +3061,7 @@
      "home": 0.6386,
      "away": 0.3614,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NHL",
@@ -3778,7 +3778,7 @@
      "home": 0.635,
      "away": 0.365,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NFL",
@@ -4055,7 +4055,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NHL",
@@ -4772,7 +4772,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NCAAF",
@@ -5483,7 +5483,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NFL",
@@ -6194,7 +6194,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-29T21:37Z"
+     "t": "2026-10-29T21:38Z"
     }
    },
    "sport": "NFL",
@@ -7108,11 +7108,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 172,
+    "n": 173,
     "w": 51,
     "l": 80,
     "p": 0,
-    "pending": 41,
+    "pending": 42,
     "win_pct": 38.9,
     "units": 19.94,
     "roi_pct": 18.3,
@@ -7199,11 +7199,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 60,
+     "n": 61,
      "w": 24,
      "l": 32,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 42.9,
      "units": 14.61,
      "roi_pct": 26.1,
@@ -7336,11 +7336,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 37,
+     "n": 38,
      "w": 10,
      "l": 22,
      "p": 0,
-     "pending": 5,
+     "pending": 6,
      "win_pct": 31.2,
      "units": 9.78,
      "roi_pct": 30.6,
@@ -7473,11 +7473,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 76,
+     "n": 77,
      "w": 18,
      "l": 24,
      "p": 0,
-     "pending": 34,
+     "pending": 35,
      "win_pct": 42.9,
      "units": -6.0,
      "roi_pct": -16.7,
@@ -7506,6 +7506,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "8d3ffcb5",
+    "rec_date": "2026-10-29",
+    "rec_time_et": "17:38",
+    "sport": "NCAAF",
+    "event": "Troy Trojans @ James Madison Dukes",
+    "market": "cash",
+    "selection": "Over 49.5",
+    "book": "theScore",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "55.18",
+    "ev_pct": "7.74",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "e1272d9f",
     "rec_date": "2026-10-29",
@@ -11979,6 +12002,6 @@
   "FanDuel": 2.1,
   "PointsBet": 15.0
  },
- "hash": "e230d1f5ed30f4a3494353d008c648bb5092423a",
- "generated_at": "2026-10-29T17:37:49-04:00"
+ "hash": "57953ea96b04e5bb2e100277a5e16ce40b4f4e54",
+ "generated_at": "2026-10-29T17:38:40-04:00"
 }
