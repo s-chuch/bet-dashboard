@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T01:28Z"
+       "t": "2026-10-29T01:33Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T01:28Z"
+       "t": "2026-10-29T01:33Z"
       }
      },
      "pteam": "ATL",
@@ -2075,9 +2075,9 @@
      "date": "2026-10-28T23:30Z",
      "period": 2,
      "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'",
+     "state": "post",
+     "completed": true,
+     "detail": "FT",
      "teams": [
       {
        "id": "21300",
@@ -2149,7 +2149,7 @@
      "clock": 2700.0,
      "state": "in",
      "completed": false,
-     "detail": "45'+2'",
+     "detail": "HT",
      "teams": [
       {
        "id": "182",
@@ -2218,11 +2218,11 @@
     "id": "401892596",
     "snapshot": {
      "date": "2026-10-28T23:30Z",
-     "period": 2,
-     "clock": 0.0,
+     "period": 3,
+     "clock": 1110.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 2nd",
+     "detail": "18:30 - 3rd",
      "teams": [
       {
        "id": "23",
@@ -2428,7 +2428,7 @@
      "home": 0.955,
      "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-29T01:28Z"
+     "t": "2026-10-29T01:33Z"
     }
    },
    "sport": "NHL",
@@ -2504,7 +2504,7 @@
        "nick": "Brewers",
        "location": "Milwaukee",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     },
@@ -2735,10 +2735,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2327,
-     "away": 0.7673,
+     "home": 0.185,
+     "away": 0.815,
      "spread": 0.01,
-     "t": "2026-10-29T01:28Z"
+     "t": "2026-10-29T01:33Z"
     }
    },
    "sport": "MLB",
@@ -8420,14 +8420,14 @@
   ],
   "last_change_at": "2026-10-28 21:28 ET"
  },
- "open_live_n": 15,
+ "open_live_n": 14,
  "open_stake_by_book": {
-  "bet365": 1.0,
+  "bet365": 0.7,
   "Caesars": 25.5,
   "DraftKings": 0.1,
   "FanDuel": 2.1,
   "PointsBet": 10.0
  },
- "hash": "0e6f089bd0aafc7d91fb1da8d03b9dc269c35b19",
- "generated_at": "2026-10-28T21:28:14-04:00"
+ "hash": "7ac70eff71bae082faa0099f6010f57a0953e7ae",
+ "generated_at": "2026-10-28T21:33:17-04:00"
 }
