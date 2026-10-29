@@ -513,3 +513,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-28 09:47,bet365,6600dad9,stake,-0.30,stake
 2026-10-28 15:22,Caesars,0df2d5ca,settled,0.00,"lost, no return"
 2026-10-28 20:37,FanDuel,9a3bbd09,stake,-0.50,stake
+2026-10-28 20:37,FanDuel,4cd67cd6,stake,-0.50,stake
