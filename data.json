@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-28T23:39Z"
+       "t": "2026-10-29T00:26Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-28T23:39Z"
+       "t": "2026-10-29T00:26Z"
       }
      },
      "pteam": "ATL",
@@ -2073,11 +2073,11 @@
     "id": "761907",
     "snapshot": {
      "date": "2026-10-28T23:30Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'",
      "teams": [
       {
        "id": "21300",
@@ -2087,7 +2087,7 @@
        "nick": "Charlotte FC",
        "location": "Charlotte FC",
        "home": true,
-       "score": "0"
+       "score": "1"
       },
       {
        "id": "9720",
@@ -7800,6 +7800,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "efe7760520f68a8e3f06eca3ab13ebb50d3d9eed",
- "generated_at": "2026-10-28T19:39:17-04:00"
+ "hash": "cacc0b3195e3cf9bb4c5b9e1f0dd2160972ecc38",
+ "generated_at": "2026-10-28T20:26:07-04:00"
 }
