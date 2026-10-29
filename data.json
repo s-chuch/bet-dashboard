@@ -7108,11 +7108,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 174,
+    "n": 175,
     "w": 51,
     "l": 80,
     "p": 0,
-    "pending": 43,
+    "pending": 44,
     "win_pct": 38.9,
     "units": 19.94,
     "roi_pct": 18.3,
@@ -7199,11 +7199,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 62,
+     "n": 63,
      "w": 24,
      "l": 32,
      "p": 0,
-     "pending": 6,
+     "pending": 7,
      "win_pct": 42.9,
      "units": 14.61,
      "roi_pct": 26.1,
@@ -7336,11 +7336,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 39,
+     "n": 40,
      "w": 10,
      "l": 22,
      "p": 0,
-     "pending": 7,
+     "pending": 8,
      "win_pct": 31.2,
      "units": 9.78,
      "roi_pct": 30.6,
@@ -7473,11 +7473,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 78,
+     "n": 79,
      "w": 18,
      "l": 24,
      "p": 0,
-     "pending": 36,
+     "pending": 37,
      "win_pct": 42.9,
      "units": -6.0,
      "roi_pct": -16.7,
@@ -7506,6 +7506,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "720990c6",
+    "rec_date": "2026-10-29",
+    "rec_time_et": "17:39",
+    "sport": "NCAAF",
+    "event": "Baylor Bears @ UCF Knights",
+    "market": "cash",
+    "selection": "UCF Knights to win",
+    "book": "FanDuel",
+    "rec_price": "+110",
+    "eff_price": "+110",
+    "fair_pct": "49.08",
+    "ev_pct": "3.08",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "e5edc341",
     "rec_date": "2026-10-29",
@@ -12025,6 +12048,6 @@
   "FanDuel": 2.1,
   "PointsBet": 15.0
  },
- "hash": "5b38f19b2402017a7fd1f1908715a1cb163636ff",
- "generated_at": "2026-10-29T17:39:18-04:00"
+ "hash": "7333b9fdbbe1ea336f21b216fc3a93692610303c",
+ "generated_at": "2026-10-29T17:39:46-04:00"
 }
