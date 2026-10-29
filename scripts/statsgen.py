@@ -13,6 +13,9 @@ def num(s):
     m = re.search(r"-?\d+(?:\.\d+)?", str(s or "").replace(",", "")); return float(m[0]) if m else 0.0
 def r2(x): return round(float(x), 2)
 def is_settled(r): return (r.get("result") or "").strip().lower() not in ("open", "")
+def is_early_payout(r): return str(r.get("early_payout") or "").strip() in ("1", "true", "yes")
+# Note: early-payout bets stay in results/ROI but should be excluded from any model-accuracy / calibration checks
+# (fair_pct vs actual outcome). Filter with `not is_early_payout(r)` when computing those.
 def is_bonus(r): return "bonus" in (r.get("stake") or "").lower() or bool(re.search(r"bonus bet|free bet|no sweat token", r.get("market") or "", re.I))
 def cash_stake(r): return 0.0 if is_bonus(r) else num(r.get("stake"))
 def american(s):

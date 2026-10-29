@@ -7,7 +7,7 @@ Every bet event is keyed (bet_id, event_type); writing the same key twice is a n
   python3 ledger.py show
   python3 ledger.py sync                         # safe to run any number of times
   python3 ledger.py place <bet_id>               # deduct stake (no-op if already applied)
-  python3 ledger.py settle <bet_id> won|lost|push|void|cashout [--cashout X] [--pnl X]
+  python3 ledger.py settle <bet_id> won|lost|push|void|cashout [--cashout X] [--pnl X] [--early-payout] [--trigger "score"]
   python3 ledger.py anchor BOOK AMT "note"       # app balance from Shawn; resets that book
   python3 ledger.py adjust BOOK AMT "note"       # manual +/- correction (deposit, withdrawal, bonus)
   python3 ledger.py log date=.. book=.. event=.. start_et=.. market=.. pick=.. price=.. stake=.. to_win=.. [fair_pct=.. ev_pct=..] [--force] [--no-rec]
@@ -33,7 +33,7 @@ def num(s):
 def load_bets():
     with open(BETS, newline="") as f:
         rd = csv.DictReader(f); rows = list(rd); cols = list(rd.fieldnames)
-    for c in ("bet_id", "settled_at"):
+    for c in ("bet_id", "settled_at", "notes", "early_payout", "early_payout_trigger"):
         if c not in cols: cols.append(c)
     for r in rows:
         for c in cols: r.setdefault(c, "")
@@ -126,8 +126,9 @@ def settle_amount(r, result, cashout=None):
     if result == "cashout": return float(cashout), float(cashout) - (0 if bonus else stake)
     return 0.0, (0.0 if bonus else -stake)  # lost
 
-def settle(rows, led, r, result, cashout=None, pnl=None, force_result=False):
-    """force_result=True: row already carries its result (sync path)."""
+def settle(rows, led, r, result, cashout=None, pnl=None, force_result=False, early_payout=False, trigger=""):
+    """force_result=True: row already carries its result (sync path).
+    early_payout=True + trigger: marks an early cash-out style win (bet365 Early Payout etc.)."""
     if r["settled_at"] or has(led, r["bet_id"], "return") or has(led, r["bet_id"], "settled"):
         print(f"already settled: {r['bet_id']} {r['book']} {r['pick'][:50]}"); return False
     if not force_result and r["result"].strip().lower() not in ("open", ""):
@@ -136,6 +137,13 @@ def settle(rows, led, r, result, cashout=None, pnl=None, force_result=False):
         print(f"REFUSED {r['bet_id']}: won but to_win unknown; pass --pnl X"); return False
     if result == "cashout" and cashout is None:
         print(f"REFUSED {r['bet_id']}: cashout needs --cashout X"); return False
+    if early_payout:
+        if r.get("book", "").strip().lower() != "bet365":
+            print(f"REFUSED {r['bet_id']}: early-payout only for bet365"); return False
+        if "moneyline" not in (r.get("market") or "").lower() and "ml" not in (r.get("pick") or "").lower():
+            print(f"REFUSED {r['bet_id']}: early-payout only for pre-game moneylines"); return False
+        if not trigger:
+            print(f"REFUSED {r['bet_id']}: --trigger required with --early-payout"); return False
     place(rows, led, r)  # make sure the stake is on the ledger first (no-op if already)
     ret, p = settle_amount(r, result, cashout)
     if pnl is not None:
@@ -146,6 +154,13 @@ def settle(rows, led, r, result, cashout=None, pnl=None, force_result=False):
     if not force_result or not r["pnl"]:
         r["pnl"] = f"{p:.2f}"
     r["result"] = result; r["settled_at"] = now()
+    if early_payout:
+        r["early_payout"] = "1"
+        r["early_payout_trigger"] = trigger
+        note = f"early payout {trigger}"
+        r["notes"] = (r.get("notes") or "").strip()
+        if note not in r["notes"]:
+            r["notes"] = (r["notes"] + "; " + note).strip("; ")
     return True
 
 def sync(quiet=False):
@@ -203,8 +218,17 @@ def main(a):
         r = find(rows, a[1]); res = a[2].lower()
         if res not in SETTLED: sys.exit("result must be won|lost|push|void|cashout")
         opt = lambda k: float(a[a.index(k) + 1]) if k in a else None
-        if settle(rows, led, r, res, cashout=opt("--cashout"), pnl=opt("--pnl")):
-            print(f"settled {r['bet_id']} {res} pnl {r['pnl']}")
+        early = "--early-payout" in a
+        trig = ""
+        if "--trigger" in a:
+            idx = a.index("--trigger")
+            if idx + 1 >= len(a) or a[idx + 1].startswith("-"):
+                sys.exit("error: --trigger requires a score text")
+            trig = a[idx + 1]
+        if early and not trig:
+            sys.exit("error: --trigger required with --early-payout")
+        if settle(rows, led, r, res, cashout=opt("--cashout"), pnl=opt("--pnl"), early_payout=early, trigger=trig):
+            print(f"settled {r['bet_id']} {res} pnl {r['pnl']}" + (" (early payout)" if early else ""))
     elif cmd == "log":
         kv = dict(x.split("=", 1) for x in a[1:] if "=" in x)
         r = {c: "" for c in cols}; r.update(kv); r.setdefault("result", "open"); r["result"] = r["result"] or "open"

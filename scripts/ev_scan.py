@@ -31,6 +31,9 @@ LEAGUES = {"mlb": (3, ["MLB"]), "nfl": (15, ["NFL"]), "ncaaf": (15, ["NCAA"]), "
 SPORT = {"mlb": ("BASEBALL", "MLB"), "nfl": ("FOOTBALL", "NFL"), "ncaaf": ("FOOTBALL", "NCAAF"),
          "nhl": ("HOCKEY", "NHL"), "nba": ("BASKETBALL", "NBA"), "wnba": ("BASKETBALL", "WNBA"),
          "soccer": ("SOCCER", "SOCCER")}
+# bet365 Early Payout triggers (pre-game ML straights only; NHL/NCAAF unverified)
+EARLY_TRIGGERS = {"soccer": "2 goals", "nba": "20 pts", "mlb": "5 runs", "nfl": "17 pts",
+                  "nhl": "3 goals", "ncaaf": "17 pts"}
 THR, STAKE_PCT = 0.02, 0.005
 THR_3WAY = 0.04            # cash 3-way (90-minute) moneylines need +4% EV (Oct 22 game plan)
 BONUS_MIN, BONUS_MAX, BONUS_FLOOR = 300, 500, 0.60   # bonus-bet section: +300..+500, playable while return >= 60% of face
@@ -212,7 +215,12 @@ def evaluate(lg, an, pin, stats, bal):
                      "pin_line_type": "alt" if pmk["alt"] else "main",
                      "balance": b, "stake": stake, "stake_pct": STAKE_PCT * 100,
                      "ev_dollars": round(stake * ev, 2) if stake is not None else None,
-                     "wins_if": wins_if(lg, market, side, team, value, three_way and market == "Moneyline")})
+                     "wins_if": wins_if(lg, market, side, team, value, three_way and market == "Moneyline"),
+                     "early_payout_eligible": False, "early_payout_trigger": ""})
+        # flag bet365 pre-game moneyline straights in qualifying leagues (tie-breaker note only, not in headline EV)
+        if book == "bet365" and market == "Moneyline" and lg in EARLY_TRIGGERS and not three_way:
+            rows[-1]["early_payout_eligible"] = True
+            rows[-1]["early_payout_trigger"] = EARLY_TRIGGERS[lg]
     ok = lambda o: not o.get("is_live") and o.get("line_status", "normal") == "normal" and o.get("odds") is not None
     for bid, per in an["markets"].items():
         try: bid = int(bid)

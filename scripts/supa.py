@@ -1,7 +1,7 @@
 """Supabase helpers shared by the server-side scripts (publish_snapshots, process_requests). Service key from env only."""
 import csv, json, os, re, sys, urllib.request, urllib.error, collections, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
-BET_COLS = "date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,ev_pct,result,pnl,bet_id,settled_at,settled_by".split(",")
+BET_COLS = "date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,ev_pct,result,pnl,bet_id,settled_at,settled_by,notes,early_payout,early_payout_trigger".split(",")
 LED_COLS = "ts_et,book,bet_id,event_type,amount,note".split(",")
 REC_COLS = "rec_id,rec_date,rec_time_et,sport,event,game_start_et,market,selection,book,rec_price,eff_price,fair_pct,ev_pct,stake,promo,friend,placed,bet_ids,result,final_score,source,notes".split(",")
 SKIP_COLS = ["date_et", "ts_et", "key", "book", "reason"]
