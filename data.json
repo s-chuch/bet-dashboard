@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T20:57Z"
+       "t": "2026-10-29T21:37Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T20:57Z"
+       "t": "2026-10-29T21:37Z"
       }
      },
      "pteam": "ATL",
@@ -2790,7 +2790,7 @@
      "home": 0.685,
      "away": 0.315,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NBA",
@@ -3061,7 +3061,7 @@
      "home": 0.6386,
      "away": 0.3614,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NHL",
@@ -3778,7 +3778,7 @@
      "home": 0.635,
      "away": 0.365,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NFL",
@@ -4052,10 +4052,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.4697,
-     "away": 0.5303,
+     "home": 0.465,
+     "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NHL",
@@ -4772,7 +4772,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NCAAF",
@@ -5483,7 +5483,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NFL",
@@ -6194,7 +6194,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-29T20:57Z"
+     "t": "2026-10-29T21:37Z"
     }
    },
    "sport": "NFL",
@@ -7108,11 +7108,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 171,
+    "n": 172,
     "w": 51,
     "l": 80,
     "p": 0,
-    "pending": 40,
+    "pending": 41,
     "win_pct": 38.9,
     "units": 19.94,
     "roi_pct": 18.3,
@@ -7199,11 +7199,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 59,
+     "n": 60,
      "w": 24,
      "l": 32,
      "p": 0,
-     "pending": 3,
+     "pending": 4,
      "win_pct": 42.9,
      "units": 14.61,
      "roi_pct": 26.1,
@@ -7381,11 +7381,11 @@
      "wins_with_fair": 9
     },
     "SOCCER": {
-     "n": 6,
+     "n": 7,
      "w": 4,
      "l": 2,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 66.7,
      "units": 7.6,
      "roi_pct": 126.7,
@@ -7473,11 +7473,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 75,
+     "n": 76,
      "w": 18,
      "l": 24,
      "p": 0,
-     "pending": 33,
+     "pending": 34,
      "win_pct": 42.9,
      "units": -6.0,
      "roi_pct": -16.7,
@@ -7506,6 +7506,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "e1272d9f",
+    "rec_date": "2026-10-29",
+    "rec_time_et": "17:37",
+    "sport": "SOCCER",
+    "event": "Paris Saint-Germain @ Le Havre",
+    "market": "cash",
+    "selection": "Le Havre to win",
+    "book": "bet365",
+    "rec_price": "+1000",
+    "eff_price": "+1000",
+    "fair_pct": "9.96",
+    "ev_pct": "9.61",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "72999d0f",
     "rec_date": "2026-10-29",
@@ -11956,6 +11979,6 @@
   "FanDuel": 2.1,
   "PointsBet": 15.0
  },
- "hash": "4c9c021ef5167ddc981979b6b2d3ce7aee7d4323",
- "generated_at": "2026-10-29T16:57:09-04:00"
+ "hash": "e230d1f5ed30f4a3494353d008c648bb5092423a",
+ "generated_at": "2026-10-29T17:37:49-04:00"
 }
