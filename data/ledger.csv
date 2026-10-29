@@ -516,3 +516,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-28 20:37,FanDuel,4cd67cd6,stake,-0.50,stake
 2026-10-28 20:37,FanDuel,c4c0b873,stake,-0.50,stake
 2026-10-28 21:28,FanDuel,9a3bbd09,return,1.21,won
+2026-10-28 21:33,bet365,5a50cd2d,settled,0.00,"lost, no return"

@@ -2042,78 +2042,6 @@
    }
   },
   {
-   "bet_id": "5a50cd2d",
-   "date": "2026-10-27",
-   "book": "bet365",
-   "event": "CF Montreal @ Charlotte FC",
-   "market": "Moneyline",
-   "pick": "CF Montreal ML",
-   "start": "Wed Oct 28, 7:30 PM ET",
-   "price": "+550",
-   "boosted_price": "",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 1.65,
-   "ev_pct": "13.31",
-   "fair_pct": "17.43",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "CF Montr\u00e9al",
-     "women": false,
-     "text": "CF Montreal ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/usa.1",
-    "date": "20261028",
-    "groups": null,
-    "id": "761907",
-    "snapshot": {
-     "date": "2026-10-28T23:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "post",
-     "completed": true,
-     "detail": "FT",
-     "teams": [
-      {
-       "id": "21300",
-       "name": "Charlotte FC",
-       "abbr": "CLT",
-       "short": "Charlotte",
-       "nick": "Charlotte FC",
-       "location": "Charlotte FC",
-       "home": true,
-       "score": "4"
-      },
-      {
-       "id": "9720",
-       "name": "CF Montr\u00e9al",
-       "abbr": "MTL",
-       "short": "CF Montr\u00e9al",
-       "nick": "CF Montr\u00e9al",
-       "location": "CF Montr\u00e9al",
-       "home": false,
-       "score": "0"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.3,
-   "payout": 1.95,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-27 08:05",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "6600dad9",
    "date": "2026-10-28",
    "book": "bet365",
@@ -2219,10 +2147,10 @@
     "snapshot": {
      "date": "2026-10-28T23:30Z",
      "period": 3,
-     "clock": 1110.0,
+     "clock": 1106.0,
      "state": "in",
      "completed": false,
-     "detail": "18:30 - 3rd",
+     "detail": "18:26 - 3rd",
      "teams": [
       {
        "id": "23",
@@ -2855,6 +2783,21 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-27 08:10",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "book": "bet365",
+   "event": "CF Montreal @ Charlotte FC",
+   "pick": "CF Montreal ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "stake": 0.3,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-27 08:05",
     "close_price": null,
     "clv_pct": null
    }
@@ -3790,30 +3733,30 @@
    }
   }
  ],
- "pnl_total": 108.79,
+ "pnl_total": 108.49,
  "unsettled": {
-  "n": 15,
-  "cash_stake": 13.7,
-  "max_payout": 254.97,
+  "n": 14,
+  "cash_stake": 13.4,
+  "max_payout": 253.02,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 13.7,
+ "open_stake": 13.4,
  "recs": {
   "stats": {
    "overall": {
     "n": 162,
     "w": 49,
-    "l": 77,
+    "l": 78,
     "p": 0,
-    "pending": 36,
-    "win_pct": 38.9,
-    "units": 17.29,
-    "roi_pct": 16.6,
-    "roi_n": 104,
+    "pending": 35,
+    "win_pct": 38.6,
+    "units": 16.29,
+    "roi_pct": 15.5,
+    "roi_n": 105,
     "exp_roi_pct": 9.9,
-    "exp_wins": 42.8,
-    "exp_wins_n": 125,
+    "exp_wins": 43.0,
+    "exp_wins_n": 126,
     "wins_with_fair": 48
    },
    "by_promo": {
@@ -3895,16 +3838,16 @@
     "cash": {
      "n": 57,
      "w": 22,
-     "l": 29,
+     "l": 30,
      "p": 0,
-     "pending": 6,
-     "win_pct": 43.1,
-     "units": 11.96,
-     "roi_pct": 23.5,
-     "roi_n": 51,
-     "exp_roi_pct": 5.7,
-     "exp_wins": 18.3,
-     "exp_wins_n": 51,
+     "pending": 5,
+     "win_pct": 42.3,
+     "units": 10.96,
+     "roi_pct": 21.1,
+     "roi_n": 52,
+     "exp_roi_pct": 5.8,
+     "exp_wins": 18.5,
+     "exp_wins_n": 52,
      "wins_with_fair": 22
     },
     "live boost": {
@@ -4062,16 +4005,16 @@
     "SOCCER": {
      "n": 5,
      "w": 2,
-     "l": 0,
+     "l": 1,
      "p": 0,
-     "pending": 3,
-     "win_pct": 100.0,
-     "units": 3.95,
-     "roi_pct": 197.5,
-     "roi_n": 2,
-     "exp_roi_pct": 4.2,
-     "exp_wins": 0.8,
-     "exp_wins_n": 2,
+     "pending": 2,
+     "win_pct": 66.7,
+     "units": 2.95,
+     "roi_pct": 98.3,
+     "roi_n": 3,
+     "exp_roi_pct": 7.2,
+     "exp_wins": 0.9,
+     "exp_wins_n": 3,
      "wins_with_fair": 2
     },
     "Soccer": {
@@ -4139,16 +4082,16 @@
     "yes": {
      "n": 89,
      "w": 32,
-     "l": 55,
+     "l": 56,
      "p": 0,
-     "pending": 2,
-     "win_pct": 36.8,
-     "units": 22.44,
-     "roi_pct": 31.6,
-     "roi_n": 71,
+     "pending": 1,
+     "win_pct": 36.4,
+     "units": 21.44,
+     "roi_pct": 29.8,
+     "roi_n": 72,
      "exp_roi_pct": 12.4,
-     "exp_wins": 28.6,
-     "exp_wins_n": 86,
+     "exp_wins": 28.8,
+     "exp_wins_n": 87,
      "wins_with_fair": 31
     },
     "no": {
@@ -4363,11 +4306,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "MTL 0-4 CLT (FT)",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-28|CF Montreal @ Charlotte FC|CF Montreal to win)",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "472ddb5d",
@@ -8193,6 +8136,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "5a50cd2d",
+    "book": "bet365",
+    "pick": "CF Montreal ML",
+    "result": "lost",
+    "pnl": -0.3,
+    "final": "MTL 0-4 CLT",
+    "at": "2026-10-28 21:33"
+   },
+   {
     "bet_id": "9a3bbd09",
     "book": "FanDuel",
     "pick": "Cleveland Cavaliers ML",
@@ -8407,18 +8359,9 @@
     "pnl": 0.0,
     "final": "DET 106-93 PHI",
     "at": "2026-10-26 18:26"
-   },
-   {
-    "bet_id": "024598cc",
-    "book": "FanDuel",
-    "pick": "Sevilla -1.5",
-    "result": "won",
-    "pnl": 1.43,
-    "final": "OSA 0-2 SEV",
-    "at": "2026-10-26 18:19"
    }
   ],
-  "last_change_at": "2026-10-28 21:28 ET"
+  "last_change_at": "2026-10-28 21:33 ET"
  },
  "open_live_n": 14,
  "open_stake_by_book": {
@@ -8428,6 +8371,6 @@
   "FanDuel": 2.1,
   "PointsBet": 10.0
  },
- "hash": "7ac70eff71bae082faa0099f6010f57a0953e7ae",
- "generated_at": "2026-10-28T21:33:17-04:00"
+ "hash": "89d927af8f21ab077662a8eaa5e9afe3a22c088b",
+ "generated_at": "2026-10-28T21:33:40-04:00"
 }

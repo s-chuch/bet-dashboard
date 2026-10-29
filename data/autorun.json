@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "5a50cd2d",
+   "book": "bet365",
+   "pick": "CF Montreal ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "MTL 0-4 CLT",
+   "at": "2026-10-28 21:33"
+  },
+  {
    "bet_id": "9a3bbd09",
    "book": "FanDuel",
    "pick": "Cleveland Cavaliers ML",
@@ -216,17 +225,8 @@
    "pnl": 0.0,
    "final": "DET 106-93 PHI",
    "at": "2026-10-26 18:26"
-  },
-  {
-   "bet_id": "024598cc",
-   "book": "FanDuel",
-   "pick": "Sevilla -1.5",
-   "result": "won",
-   "pnl": 1.43,
-   "final": "OSA 0-2 SEV",
-   "at": "2026-10-26 18:19"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-28 21:28 ET"
+ "last_change_at": "2026-10-28 21:33 ET"
 }
