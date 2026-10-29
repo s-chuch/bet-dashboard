@@ -72,3 +72,4 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-29,bet365,Sacramento Kings @ New Orleans Pelicans (NBA),Thu Oct 29 08:10 PM ET,SGP 3-leg (30% profit boost),New Orleans Pelicans ML + Over 225.5 + Under 245.5,+190,+245,0.40,0.98,30.3,4.5,open,,3d02188f,,
 2026-10-29,bet365,New York Islanders @ Minnesota Wild (NHL),Thu Oct 29 08:07 PM ET,SGP 3-leg (50% profit boost),New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5,+390,+585,1.00,5.85,,,open,,1762b7a2,,
 2026-10-29,bet365,Carolina Panthers @ Green Bay Packers (NFL),Thu Oct 29 08:15 PM ET,SGP 2-leg (Safety Net: stake back as bonus up to $10),Carolina Panthers ML + Under 46.5,+390,,1.00,3.90,18,45.6,open,,e5fc922f,,
+2026-10-29,FanDuel,Ottawa Senators @ Los Angeles Kings (NHL),Thu Oct 29 10:09 PM ET,SGP 4-leg (50% profit boost; bet id O/0979720/0000697),Ottawa Senators +1.5 + Los Angeles Kings +1.5 + Over 3.5 + Under 5.5,+438,+657,0.50,3.29,15.2,15.1,open,,43564ae1,,
