@@ -525,3 +525,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-29 15:26,bet365,e5fc922f,stake,-1.00,stake
 2026-10-29 15:45,FanDuel,43564ae1,stake,-0.50,stake
 2026-10-29 15:45,FanDuel,a8c38f67,stake,-0.50,stake
+2026-10-29 16:52,PointsBet,7cbe88f2,stake,0.00,"bonus bet token, no cash deducted"
