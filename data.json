@@ -2941,11 +2941,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 163,
+    "n": 164,
     "w": 50,
     "l": 80,
     "p": 0,
-    "pending": 33,
+    "pending": 34,
     "win_pct": 38.5,
     "units": 18.79,
     "roi_pct": 17.4,
@@ -3032,11 +3032,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 58,
+     "n": 59,
      "w": 23,
      "l": 32,
      "p": 0,
-     "pending": 3,
+     "pending": 4,
      "win_pct": 41.8,
      "units": 13.46,
      "roi_pct": 24.5,
@@ -3154,11 +3154,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 36,
+     "n": 37,
      "w": 10,
      "l": 22,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 31.2,
      "units": 9.78,
      "roi_pct": 30.6,
@@ -3291,11 +3291,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 74,
+     "n": 75,
      "w": 17,
      "l": 24,
      "p": 0,
-     "pending": 33,
+     "pending": 34,
      "win_pct": 41.5,
      "units": -7.15,
      "roi_pct": -20.4,
@@ -3324,6 +3324,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "adc35592",
+    "rec_date": "2026-10-29",
+    "rec_time_et": "07:41",
+    "sport": "NCAAF",
+    "event": "Troy Trojans @ James Madison Dukes",
+    "market": "cash",
+    "selection": "James Madison Dukes -18.5",
+    "book": "FanDuel",
+    "rec_price": "-105",
+    "eff_price": "-105",
+    "fair_pct": "52.3",
+    "ev_pct": "2.11",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "f8f6d010",
     "rec_date": "2026-10-29",
@@ -7590,6 +7613,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "515614b92e38fb3e3b51653948ffde7e6ef4c642",
- "generated_at": "2026-10-29T07:41:21-04:00"
+ "hash": "49d853dab31c8f5f95d0e85f3d82765541333256",
+ "generated_at": "2026-10-29T07:41:35-04:00"
 }
