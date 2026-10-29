@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "4cd67cd6",
+   "book": "FanDuel",
+   "pick": "Washington Capitals -2.5",
+   "result": "won",
+   "pnl": 0.75,
+   "final": "PHI 2-5 WSH",
+   "at": "2026-10-28 22:10"
+  },
+  {
    "bet_id": "5a50cd2d",
    "book": "bet365",
    "pick": "CF Montreal ML",
@@ -216,17 +225,8 @@
    "pnl": 0.57,
    "final": "WSH 103-110 CHA",
    "at": "2026-10-26 21:26"
-  },
-  {
-   "bet_id": "6a8a8c79",
-   "book": "PointsBet",
-   "pick": "Philadelphia 76ers",
-   "result": "lost",
-   "pnl": 0.0,
-   "final": "DET 106-93 PHI",
-   "at": "2026-10-26 18:26"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-28 21:33 ET"
+ "last_change_at": "2026-10-28 22:10 ET"
 }
