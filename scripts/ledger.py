@@ -138,10 +138,17 @@ def settle(rows, led, r, result, cashout=None, pnl=None, force_result=False, ear
     if result == "cashout" and cashout is None:
         print(f"REFUSED {r['bet_id']}: cashout needs --cashout X"); return False
     if early_payout:
-        if r.get("book", "").strip().lower() != "bet365":
+        book = (r.get("book") or "").strip().lower()
+        market = (r.get("market") or "").lower()
+        pick = (r.get("pick") or "").lower()
+        if book != "bet365":
             print(f"REFUSED {r['bet_id']}: early-payout only for bet365"); return False
-        if "moneyline" not in (r.get("market") or "").lower() and "ml" not in (r.get("pick") or "").lower():
-            print(f"REFUSED {r['bet_id']}: early-payout only for pre-game moneylines"); return False
+        if "sgp" in market or "parlay" in market or "sgp" in pick or "parlay" in pick:
+            print(f"REFUSED {r['bet_id']}: early-payout not for SGPs or parlays"); return False
+        if "live" in market or "live" in pick:
+            print(f"REFUSED {r['bet_id']}: early-payout not for live bets"); return False
+        if "moneyline" not in market and not market.strip() in ("ml", "money line", "money-line"):
+            print(f"REFUSED {r['bet_id']}: early-payout only for moneyline market"); return False
         if not trigger:
             print(f"REFUSED {r['bet_id']}: --trigger required with --early-payout"); return False
     place(rows, led, r)  # make sure the stake is on the ledger first (no-op if already)

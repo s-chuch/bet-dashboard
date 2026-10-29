@@ -218,9 +218,13 @@ def evaluate(lg, an, pin, stats, bal):
                      "wins_if": wins_if(lg, market, side, team, value, three_way and market == "Moneyline"),
                      "early_payout_eligible": False, "early_payout_trigger": ""})
         # flag bet365 pre-game moneyline straights in qualifying leagues (tie-breaker note only, not in headline EV)
-        if book == "bet365" and market == "Moneyline" and lg in EARLY_TRIGGERS and not three_way:
-            rows[-1]["early_payout_eligible"] = True
-            rows[-1]["early_payout_trigger"] = EARLY_TRIGGERS[lg]
+        # soccer moneylines are 3-way; still eligible for early payout
+        if book == "bet365" and market == "Moneyline" and lg in EARLY_TRIGGERS:
+            if lg != "soccer" and three_way:
+                pass  # non-soccer 3-way not eligible
+            else:
+                rows[-1]["early_payout_eligible"] = True
+                rows[-1]["early_payout_trigger"] = EARLY_TRIGGERS[lg]
     ok = lambda o: not o.get("is_live") and o.get("line_status", "normal") == "normal" and o.get("odds") is not None
     for bid, per in an["markets"].items():
         try: bid = int(bid)
