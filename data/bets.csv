@@ -70,3 +70,4 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-28,FanDuel,Philadelphia Flyers @ Washington Capitals (NHL),Wed Oct 28 07:30 PM ET,Puck Line (50% profit boost; bet id O/0979720/0000694),Washington Capitals -2.5,+100,+150,0.50,0.75,,,won,0.75,4cd67cd6,2026-10-28 22:10,auto
 2026-10-28,FanDuel,Milwaukee Brewers @ Tampa Bay Rays (MLB),Wed Oct 28 08:00 PM ET,SGP 2-leg (30% profit boost; bet id O/0979720/0000695),Milwaukee Brewers ML + Under 6.5 total runs,+142,+184,0.50,0.92,,,won,0.92,c4c0b873,2026-10-28 23:14,auto
 2026-10-29,bet365,Sacramento Kings @ New Orleans Pelicans (NBA),Thu Oct 29 08:10 PM ET,SGP 3-leg (30% profit boost),New Orleans Pelicans ML + Over 225.5 + Under 245.5,+190,+245,0.40,0.98,30.3,4.5,open,,3d02188f,,
+2026-10-29,bet365,New York Islanders @ Minnesota Wild (NHL),Thu Oct 29 08:07 PM ET,SGP 3-leg (50% profit boost),New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5,+390,+585,1.00,5.85,,,open,,1762b7a2,,
