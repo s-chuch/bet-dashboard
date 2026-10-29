@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-29T00:26Z"
+       "t": "2026-10-29T00:29Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-29T00:26Z"
+       "t": "2026-10-29T00:29Z"
       }
      },
      "pteam": "ATL",
@@ -2077,7 +2077,7 @@
      "clock": 2700.0,
      "state": "in",
      "completed": false,
-     "detail": "45'",
+     "detail": "HT",
      "teams": [
       {
        "id": "21300",
@@ -3220,11 +3220,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 160,
+    "n": 161,
     "w": 49,
     "l": 77,
     "p": 0,
-    "pending": 34,
+    "pending": 35,
     "win_pct": 38.9,
     "units": 17.29,
     "roi_pct": 16.6,
@@ -3311,11 +3311,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 55,
+     "n": 56,
      "w": 22,
      "l": 29,
      "p": 0,
-     "pending": 4,
+     "pending": 5,
      "win_pct": 43.1,
      "units": 11.96,
      "roi_pct": 23.5,
@@ -3463,11 +3463,11 @@
      "wins_with_fair": 7
     },
     "NHL": {
-     "n": 14,
+     "n": 15,
      "w": 9,
      "l": 5,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 64.3,
      "units": 4.37,
      "roi_pct": 31.2,
@@ -3570,11 +3570,11 @@
      "wins_with_fair": 31
     },
     "no": {
-     "n": 71,
+     "n": 72,
      "w": 17,
      "l": 22,
      "p": 0,
-     "pending": 32,
+     "pending": 33,
      "win_pct": 43.6,
      "units": -5.15,
      "roi_pct": -15.6,
@@ -3603,6 +3603,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "00733ae0",
+    "rec_date": "2026-10-28",
+    "rec_time_et": "20:29",
+    "sport": "NHL",
+    "event": "New York Islanders @ Minnesota Wild",
+    "market": "cash",
+    "selection": "Under 5.5",
+    "book": "bet365",
+    "rec_price": "+120",
+    "eff_price": "+120",
+    "fair_pct": "47.65",
+    "ev_pct": "4.82",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: +100",
+    "units": null
+   },
    {
     "rec_id": "46308e3a",
     "rec_date": "2026-10-28",
@@ -7800,6 +7823,6 @@
   "FanDuel": 1.1,
   "PointsBet": 10.0
  },
- "hash": "cacc0b3195e3cf9bb4c5b9e1f0dd2160972ecc38",
- "generated_at": "2026-10-28T20:26:07-04:00"
+ "hash": "a4437a850762cfdf6f4918e3b192c59a882fc2fc",
+ "generated_at": "2026-10-28T20:29:58-04:00"
 }
