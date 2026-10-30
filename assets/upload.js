@@ -454,6 +454,13 @@
     });
     var body = JSON.stringify({ ref: 'main', inputs: { bets: JSON.stringify(rows) } });
     if (body.length > 60000) { $('sendmsg').textContent = 'Too many bets for one send. Send fewer at a time.'; return; }
+    if (window.Outbox) {   // hand the bets to the outbox: it finishes the send and follows the run on any page, so you can leave
+      Outbox.add(rows.length, body);
+      S.drafts = S.drafts.filter(function (d) { return !d.on; }); S.items = S.items.filter(function (x) { return x.state !== 'done'; });
+      renderQueue(); renderDrafts(true);
+      $('sendmsg').dataset.keep = '1'; $('sendmsg').textContent = 'Sent ' + rows.length + '. GitHub adds them in the background, so you can leave this page. The chip at the top shows when they are in.';
+      setTimeout(function () { delete $('sendmsg').dataset.keep; }, 12000); updateSend(); return;
+    }
     S.sending = true; $('sendmsg').dataset.keep = '1'; $('sendmsg').textContent = 'Sending…'; updateSend();
     var t0 = Date.now();
     fetch(REPO_API + '/actions/workflows/add-bets.yml/dispatches', { method: 'POST', headers: { 'Authorization': 'Bearer ' + getTok(), 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' }, body: body, cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' })
