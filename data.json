@@ -2095,10 +2095,10 @@
     "snapshot": {
      "date": "2026-10-30T02:00Z",
      "period": 2,
-     "clock": 267.0,
+     "clock": 257.0,
      "state": "in",
      "completed": false,
-     "detail": "4:27 - 2nd",
+     "detail": "4:17 - 2nd",
      "teams": [
       {
        "id": "8",
@@ -2301,8 +2301,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.9848,
-     "away": 0.0152,
+     "home": 0.985,
+     "away": 0.015,
      "spread": 0.01,
      "t": "2026-10-30T03:39Z"
     }
@@ -10390,6 +10390,6 @@
   "FanDuel": 2.1,
   "PointsBet": 15.0
  },
- "hash": "682ab98be57b472018db9facc865f355088e218b",
- "generated_at": "2026-10-29T23:39:24-04:00"
+ "hash": "cc6371f550c875d84636f276dc67cb07c2a040e1",
+ "generated_at": "2026-10-29T23:39:47-04:00"
 }
