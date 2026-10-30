@@ -44,6 +44,7 @@
     cutP = DB.getUser().then(function (u) {
       if (!u) { lsSet(CUT_KEY, null); applyToken(false); return false; }
       return DB.client.from('profiles').select('rules').maybeSingle().then(function (r) {
+        if (r.error) return lsGet(CUT_KEY) === '1';     /* query failed: keep the cached answer rather than flipping it to false */
         var on = !!(r.data && r.data.rules && r.data.rules.cutover === true || r.data && r.data.rules && r.data.rules.cutover === 'true');
         lsSet(CUT_KEY, on ? '1' : null); applyToken(on); return on;
       });
@@ -77,10 +78,11 @@
       return DB.cutover().then(function (on) {
         if (!on) return realFetch(input, init);
         return DB.client.from('snapshots').select('payload').eq('kind', snap[1]).maybeSingle().then(function (r) {
-          if (r.error || !r.data) return realFetch(input, init);     /* no snapshot yet: public file */
+          /* cut-over users never fall back to the public files (they hold the owner's data): report unavailable instead */
+          if (r.error || !r.data) return json({ error: 'snapshot_unavailable', message: 'Your data is not available yet.' }, r.error ? 503 : 404);
           return json(r.data.payload);
-        });
-      }).catch(function () { return realFetch(input, init); });
+        }, function () { return json({ error: 'snapshot_unavailable', message: 'Your data is not available right now.' }, 503); });
+      }, function () { return realFetch(input, init); });
     }
     var gh = GHWF.exec(u);
     if (gh) {

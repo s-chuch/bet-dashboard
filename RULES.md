@@ -31,13 +31,13 @@ Rule text shown on the Stats page (Game plan, rules 7–9) comes from `scripts/s
 
 ## 3. Every bet links to a rec with fair % and EV at placement; skips are logged
 
-- `ledger.py log` now, for every new bet (skip with `--no-rec`; `add_bets.py` does that for Finder bets because it links them itself):
+- `ledger.py log` now, for every new bet (skip with `--no-rec`; `add_bets.py` does that for Finder bets because it links them itself, and it runs the boost-rule check on them directly, warning only):
   1. links it to an existing rec for the same selection, game day **and sportsbook**;
   2. otherwise creates a rec when the bet carries `fair_pct=` (EV is computed at the bet's own price, boosted price for profit boosts; not computed for unconfirmed prices);
   3. fills a blank `fair_pct` from the linked rec and a blank `ev_pct` from fair % and price (never overwrites);
   4. prints `WARNING: no rec linked ...` / `WARNING: no fair % / EV recorded` when it cannot. Pass `fair_pct=` (and `ev_pct=` if you have it) when logging a bet that did not come from the Finder.
 - Linking is now book-aware: `rec.link_placed`, the Finder link and the skip log only match a rec at the same sportsbook, a bet links to at most one rec, and the event match ignores the shared `v` in `X v Y` names (that caused a bet to link to the wrong soccer draw rec).
-- Skips: the Finder Skip button writes `data/finder_skips.csv` and a `placed=no` rec noted `SKIPPED in Bet Finder: <reason>`. `python3 scripts/rec.py skip --rec-id ID --note "why"` does the same for any other recommended pick that was not played.
+- Skips: the Finder Skip button writes `data/finder_skips.csv` and a `placed=no` rec noted `SKIPPED in Bet Finder: <reason>`. `python3 scripts/rec.py skip --rec-id ID --note "why"` only appends `SKIPPED: <note>` to the notes of an existing unplaced rec (it does not write `finder_skips.csv`) and refuses a rec linked to a placed bet.
 - Audit / reminder list: `python3 scripts/audit.py [--since YYYY-MM-DD] [--json out.json]` (read only) lists bets with no rec, no fair %, no EV, no `start_et`, no close, a double link, or a rec at a different book.
 - One-off clean-up of old data: `python3 scripts/fix_data_quirks.py [--apply]` (dry run by default, idempotent).
 - Stats page: the CLV card shows closing-price coverage and bets with no rec; game plan rule 9 tracks it.

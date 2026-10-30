@@ -185,6 +185,11 @@ def main():
                 added += 1; known.append(dict(r)); print(f"added: {r['book']} | {r['pick'][:60]}")
                 for ln in buf.getvalue().splitlines():   # rec link / rule-3 and boost-rule warnings from ledger log
                     if ln.startswith(("rec ", "WARNING", "BOOST RULE", "boost rule")): print(ln)
+                if f.get("selection"):   # ledger ran with --no-rec, which also skips its boost-rule check: run it here (warning only, never creates a rec)
+                    try:
+                        import rules; bc = rules.boost_check_bet(r)
+                        if bc: print(bc[1])
+                    except Exception as e: print(f"::warning::boost rule check failed: {e}")
                 m = re.search(r"^logged ([0-9a-f]{6,16})$", buf.getvalue(), re.M)
                 if m and f:
                     if f.get("placed_at"):

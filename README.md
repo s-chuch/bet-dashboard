@@ -1,12 +1,23 @@
 # bet-dashboard — Shawn's bet tracker (runs itself on GitHub)
 
-Live site: hosted on Cloudflare Pages behind a login (see **Private hosting** below; before that, https://s-chuch.github.io/bet-dashboard/ on GitHub Pages). Three static pages, all
-vanilla JS from `assets/`, all reading the generated JSON in the repo root:
+Live site: hosted on Cloudflare Pages behind a login (see **Private hosting** below; before that, https://s-chuch.github.io/bet-dashboard/ on GitHub Pages). Static pages, all
+vanilla JS from `assets/`, reading the generated JSON in the repo root (or, for accounts cut over to Supabase, per-user snapshots):
 | Page | Shows | Reads |
 |---|---|---|
 | `index.html` (Live) | open bets with live scores, balances, needs-review, settled in the last 5 days, picks, health badge | `data.json` + live ESPN/Polymarket/Action Network + GitHub Actions API |
 | `stats.html` (Stats) | totals, streaks, daily P&L, by book/market/odds/weekday, boosted vs regular, bankroll replay, picks record | `stats.json` |
-| `log.html` (Logs) | archived bets, ledger activity, autorun run history | `archive.json`, `log.json`, GitHub Actions API |
+| `log.html` (Log) | archived bets, ledger activity, autorun run history, manual settle / set balance | `archive.json`, `log.json`, GitHub Actions API |
+| `upload.html` (Upload) | screenshots of bet slips -> bets (see **Upload bets**) | dispatches `add-bets.yml` |
+| `finder.html` (Finder) | +EV picks from `scripts/ev_scan.py` with Log it / Skip buttons | `finder.json` |
+| `settings.html` (Settings) | account and personal settings | Supabase `profiles` |
+| `login.html` (Login) | emailed sign-in link (invite-only) | Supabase auth |
+
+**Supabase (multi-user, in progress).** `assets/db.js` signs users in and, once an account's `profiles.rules.cutover` is true, serves the
+`data/stats/log/archive` JSON from that user's Supabase `snapshots` rows instead of the public files (a cut-over user never falls back to the
+owner's public files) and turns Upload / manual settle / set balance into rows in `requests`. `scripts/process_requests.py` is the server-side
+worker that picks those requests up and applies them (via `scripts/user_ops.py`, which reuses `add_bets.py`, `manual_settle.py`, `set_balance.py`); `scripts/publish_snapshots.py` writes the snapshots.
+Non-cut-over accounts behave exactly as described below.
+
 **This repo is the source of truth.** Nothing runs on a schedule anywhere else (no box cron/systemd).
 
 ## What runs where
