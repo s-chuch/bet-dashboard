@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "1352efb7",
+   "book": "theScore",
+   "pick": "Chicago Blackhawks +1.5",
+   "result": "lost",
+   "pnl": -0.2,
+   "final": "CHI 1-4 DET",
+   "at": "2026-10-29 22:08"
+  },
+  {
    "bet_id": "c4c0b873",
    "book": "FanDuel",
    "pick": "Milwaukee Brewers ML + Under 6.5 total runs",
@@ -216,17 +225,8 @@
    "pnl": 0.9,
    "final": "LA 6-3 NYR",
    "at": "2026-10-26 21:51"
-  },
-  {
-   "bet_id": "f94e9069",
-   "book": "FanDuel",
-   "pick": "Charlotte Hornets -1.5",
-   "result": "won",
-   "pnl": 0.71,
-   "final": "WSH 103-110 CHA",
-   "at": "2026-10-26 21:26"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-28 23:14 ET"
+ "last_change_at": "2026-10-29 22:08 ET"
 }
