@@ -121,9 +121,9 @@
   // free OpenRouter models that accept images, best readers first
   function getOrModels() {
     if (S.orModels) return Promise.resolve(S.orModels);
-    return fetch(OR + 'auth/key', { headers: { Authorization: 'Bearer ' + getOr() }, credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
+    return tfetch(OR + 'auth/key', { headers: { Authorization: 'Bearer ' + getOr() }, credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
       if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { throw new Error('OpenRouter did not accept the key (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 100) : '') + ')'); });
-      return fetch(OR + 'models', { credentials: 'omit', referrerPolicy: 'no-referrer' });
+      return tfetch(OR + 'models', { credentials: 'omit', referrerPolicy: 'no-referrer' });
     }).then(function (r) { if (!r.ok) throw new Error('OpenRouter model list failed (HTTP ' + r.status + ')'); return r.json(); }).then(function (j) {
       var free = (j.data || []).filter(function (m) {
         var a = m.architecture || {}, pr = m.pricing || {};
@@ -146,13 +146,20 @@
     return out.filter(function (x, i) { return x && out.indexOf(x) === i; });
   }
   var VTX = 'https://aiplatform.googleapis.com/v1/publishers/google/models/';
+  // every AI call gets a deadline: without one a stalled request leaves the picture on "Reading" forever instead of trying the next reader
+  function tfetch(url, opt, ms) {
+    ms = ms || (/\/models(\?|$)|auth\/key/.test(url) && !/:generateContent/.test(url) ? 20000 : 60000);   // listing calls are quick; reading a picture can take a while
+    var c = typeof AbortController === 'function' ? new AbortController() : null, t = c ? setTimeout(function () { c.abort(); }, ms) : 0;
+    if (c) opt = Object.assign({}, opt, { signal: c.signal });
+    return fetch(url, opt).then(function (r) { clearTimeout(t); return r; }, function (e) { clearTimeout(t); throw e && e.name === 'AbortError' ? new Error('no answer after ' + Math.round(ms / 1000) + 's') : e; });
+  }
   function gerr(r, what) { return r.json().catch(function () { return {}; }).then(function (j) { throw new Error(what + ' (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 140) : '') + ')'); }); }
   function vtxProbe(key) {   // newer Google keys (AQ.…) work on the Vertex AI "express" endpoint instead of the Gemini Developer API
     var cands = ['gemini-2.5-flash', 'gemini-2.0-flash'], i = 0, last = null;
     function next() {
       if (i >= cands.length) return Promise.reject(last || new Error('no Gemini model available for this key'));
       var m = cands[i++];
-      return fetch(VTX + m + ':generateContent?key=' + encodeURIComponent(key), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: 'Reply with the word ok.' }] }], generationConfig: { maxOutputTokens: 8 } }), credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      return tfetch(VTX + m + ':generateContent?key=' + encodeURIComponent(key), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: 'Reply with the word ok.' }] }], generationConfig: { maxOutputTokens: 8 } }), credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
         if (r.ok) { S.kind = 'vtx'; return [m === 'gemini-2.5-flash' ? 'gemini-2.5-pro' : m, m]; }
         if (r.status === 404) return next();
         return gerr(r, 'Google did not accept the key');
@@ -164,7 +171,7 @@
     if (S.models) return Promise.resolve(S.models);
     var key = getAi();
     function done(ms) { S.models = ms; S.model = ms[0]; var e = $('ai-model'); if (e) e.textContent = '(' + ms.join(' → ') + ')'; return ms; }
-    return fetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(key), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+    return tfetch(GEM + 'models?pageSize=200&key=' + encodeURIComponent(key), { cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
       if (r.ok) return r.json().then(function (j) { var ms = pickModels(j.models); if (!ms.length) throw new Error('no Gemini model available for this key'); S.kind = 'gem'; return done(ms); });
       return r.json().catch(function () { return {}; }).then(function (j) {
         var g1 = 'Gemini API: HTTP ' + r.status + (j.error && j.error.message ? ' ' + String(j.error.message).slice(0, 90) : '') + (j.error && j.error.details && j.error.details[0] && j.error.details[0].reason ? ' [' + j.error.details[0].reason + ']' : '');
@@ -224,7 +231,7 @@
       var vtx = S.kind === 'vtx';
       var body = { contents: [{ role: 'user', parts: [{ text: text }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
       if (noThink && /flash/.test(model)) body.generationConfig.thinkingConfig = { thinkingBudget: 0 };   // quick pass: no extra "thinking" time
-      return fetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      return tfetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
         if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { var e = new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); e.status = r.status; throw e; });
         return r.json();
       }).then(function (j) {
@@ -241,7 +248,7 @@
     function go(json) {
       var body = { model: model, temperature: 0, max_tokens: 3000, messages: [{ role: 'user', content: [{ type: 'text', text: text }, { type: 'image_url', image_url: { url: 'data:image/jpeg;base64,' + b64 } }] }] };
       if (json) body.response_format = { type: 'json_object' };
-      return fetch(OR + 'chat/completions', { method: 'POST', headers: { 'Authorization': 'Bearer ' + getOr(), 'Content-Type': 'application/json', 'X-Title': 'Bet Tracker' }, body: JSON.stringify(body), credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
+      return tfetch(OR + 'chat/completions', { method: 'POST', headers: { 'Authorization': 'Bearer ' + getOr(), 'Content-Type': 'application/json', 'X-Title': 'Bet Tracker' }, body: JSON.stringify(body), credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (j) {
           if (!r.ok || j.error) { var e = new Error(((j.error && j.error.message) || 'HTTP ' + r.status).toString().slice(0, 140)); e.status = r.status; e.badFormat = /response_format|json/i.test(e.message); throw e; }
           var t = (((j.choices || [])[0] || {}).message || {}).content || '';
@@ -338,7 +345,8 @@
     }
   }
   function startItem(it) {
-    it.state = 'read'; it.msg = ''; renderQueue();
+    it.state = 'read'; it.msg = aiOn() ? 'Contacting the AI…' : ''; it.t0 = Date.now(); renderQueue();
+    if (!S.tick) S.tick = setInterval(function () { if (S.items.some(function (x) { return x.state === 'read'; })) renderQueue(true); else { clearInterval(S.tick); S.tick = 0; } }, 1000);
     var job = aiOn() ? aiRead(it).then(function (rows) {
       rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
     }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
@@ -482,10 +490,10 @@
   }
 
   /* ---------- rendering ---------- */
-  function renderQueue() {
-    saveSoon();
+  function renderQueue(quiet) {
+    if (quiet !== true) saveSoon();
     $('queue').innerHTML = S.items.map(function (it) {
-      var st = it.state === 'copy' ? 'Opening…' : it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ('Reading… ' + (it.pct || 0) + '%') : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
+      var st = it.state === 'copy' ? 'Opening…' : it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ((it.pct || !it.msg ? 'Reading… ' + (it.pct || 0) + '%' : esc(it.msg)) + (it.t0 ? ' · ' + Math.round((Date.now() - it.t0) / 1000) + 's' : '')) : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
       return '<div class="qi">' + (it.url ? '<img alt="" src="' + esc(it.url) + '">' : '<span style="width:48px"></span>') + '<div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">' + (it.file ? 'Re-read' : 'Choose again') + '</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
     }).join('');
   }
