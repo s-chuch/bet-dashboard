@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T00:51Z"
+       "t": "2026-10-30T01:47Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T00:51Z"
+       "t": "2026-10-30T01:47Z"
       }
      },
      "pteam": "ATL",
@@ -2085,11 +2085,11 @@
     "id": "401909894",
     "snapshot": {
      "date": "2026-10-30T00:00Z",
-     "period": 2,
-     "clock": 510.0,
+     "period": 3,
+     "clock": 235.0,
      "state": "in",
      "completed": false,
-     "detail": "8:30 - 2nd",
+     "detail": "3:55 - 3rd",
      "teams": [
       {
        "id": "3",
@@ -2099,7 +2099,7 @@
        "nick": "Pelicans",
        "location": "New Orleans",
        "home": true,
-       "score": "38"
+       "score": "90"
       },
       {
        "id": "23",
@@ -2109,7 +2109,7 @@
        "nick": "Kings",
        "location": "Sacramento",
        "home": false,
-       "score": "34"
+       "score": "78"
       }
      ]
     },
@@ -2787,10 +2787,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7323,
-     "away": 0.2677,
+     "home": 0.925,
+     "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NBA",
@@ -2851,11 +2851,11 @@
     "id": "401892607",
     "snapshot": {
      "date": "2026-10-30T00:00Z",
-     "period": 1,
+     "period": 2,
      "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "End of 1st",
+     "detail": "End of 2nd",
      "teams": [
       {
        "id": "30",
@@ -2865,7 +2865,7 @@
        "nick": "Wild",
        "location": "Minnesota",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "12",
@@ -2875,7 +2875,7 @@
        "nick": "Islanders",
        "location": "New York",
        "home": false,
-       "score": "1"
+       "score": "2"
       }
      ]
     },
@@ -3058,10 +3058,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.625,
-     "away": 0.375,
+     "home": 0.595,
+     "away": 0.405,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NHL",
@@ -3114,10 +3114,10 @@
     "snapshot": {
      "date": "2026-10-30T00:15Z",
      "period": 2,
-     "clock": 900.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 2nd",
+     "detail": "Halftime",
      "teams": [
       {
        "id": "9",
@@ -3127,7 +3127,7 @@
        "nick": "Packers",
        "location": "Green Bay",
        "home": true,
-       "score": "6"
+       "score": "20"
       },
       {
        "id": "29",
@@ -3137,7 +3137,7 @@
        "nick": "Panthers",
        "location": "Carolina",
        "home": false,
-       "score": "3"
+       "score": "10"
       }
      ]
     },
@@ -3775,10 +3775,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.535,
-     "away": 0.465,
+     "home": 0.845,
+     "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NFL",
@@ -4055,7 +4055,7 @@
      "home": 0.465,
      "away": 0.535,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NHL",
@@ -4772,7 +4772,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NCAAF",
@@ -5483,7 +5483,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NFL",
@@ -6194,7 +6194,7 @@
      "home": 0.845,
      "away": 0.155,
      "spread": 0.01,
-     "t": "2026-10-30T00:51Z"
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NFL",
@@ -6241,11 +6241,11 @@
     "id": "401892600",
     "snapshot": {
      "date": "2026-10-29T23:30Z",
-     "period": 2,
-     "clock": 693.0,
+     "period": 3,
+     "clock": 672.0,
      "state": "in",
      "completed": false,
-     "detail": "11:33 - 2nd",
+     "detail": "11:12 - 3rd",
      "teams": [
       {
        "id": "5",
@@ -6255,7 +6255,7 @@
        "nick": "Red Wings",
        "location": "Detroit",
        "home": true,
-       "score": "1"
+       "score": "2"
       },
       {
        "id": "4",
@@ -6448,10 +6448,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5436,
-     "away": 0.4564,
-     "spread": 0.05,
-     "t": "2026-10-30T00:51Z"
+     "home": 0.7839,
+     "away": 0.2161,
+     "spread": 0.04,
+     "t": "2026-10-30T01:47Z"
     }
    },
    "sport": "NHL",
@@ -12306,6 +12306,6 @@
   "PointsBet": 15.0,
   "theScore": 0.2
  },
- "hash": "4bdceea4e18a7b3b5b77d719ae89f5c126ef0d54",
- "generated_at": "2026-10-29T20:51:58-04:00"
+ "hash": "020361b987e8cc4a8c371bd906fd8c4e828fa4ac",
+ "generated_at": "2026-10-29T21:47:25-04:00"
 }
