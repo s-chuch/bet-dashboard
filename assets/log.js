@@ -60,7 +60,7 @@ function prepBets(){
     if(res==='push'||res==='voided'||res==='void')res='void';else if(res==='win')res='won';else if(res==='loss')res='lost';
     var d=String(b.date||'');
     return {i:i,id:String(b.bet_id||''),date:d,ym:d.slice(0,7),book:String(b.book||''),event:String(b.event||''),market:String(b.market||''),pick:String(b.pick||''),
-      price:b.price,bprice:b.boosted_price,stake:num(b.stake),to_win:num(b.to_win),result:res,pnl:num(b.pnl),settled_at:b.settled_at||'',settled_by:b.settled_by||'',
+      price:b.price,bprice:b.boosted_price,stake:num(b.stake),bonus:!!b.bonus,to_win:num(b.to_win),result:res,pnl:num(b.pnl),settled_at:b.settled_at||'',settled_by:b.settled_by||'',
       hay:(String(b.pick||'')+' '+(b.event||'')+' '+(b.book||'')+' '+(b.market||'')).toLowerCase()}})}
 function renderSub(){var a=S.arch,l=S.log,bits=[];
   if(a&&a.generated_at)bits.push('Archive updated '+ago(a.generated_at));
@@ -94,7 +94,7 @@ function applyFilters(){
     return s==='old'?b.i-a.i:a.i-b.i});
   return r}
 function stats(list){var w=0,l=0,v=0,st=0,p=0;list.forEach(function(b){if(b.result==='won')w++;else if(b.result==='lost')l++;else v++;
-  if(b.result!=='void')st+=b.stake;p+=b.pnl});return {n:list.length,w:w,l:l,v:v,staked:st,pnl:p,roi:st>0?p/st*100:null}}
+  if(b.result!=='void'&&!b.bonus)st+=b.stake;p+=b.pnl});return {n:list.length,w:w,l:l,v:v,staked:st,pnl:p,roi:st>0?p/st*100:null}}
 function rec(s){return s.w+'-'+s.l+(s.v?'-'+s.v:'')}
 function renderSummary(s){
   var tiles=[['Bets',String(s.n),''],['Record',rec(s),s.n?((s.w+s.l)?Math.round(s.w/(s.w+s.l)*100)+'% win':''):''],['Staked',money(s.staked),''],
@@ -137,7 +137,7 @@ $('reset').addEventListener('click',function(){S.q='';S.book=S.res=S.month='all'
 function csvCell(v){var s=String(v==null?'':v);if(typeof v!=='number'&&/^[=+\-@\t\r]/.test(s))s="'"+s;return /[",\n\r]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
 $('csv').addEventListener('click',function(){
   var f=S.filtered;if(!f.length){return}
-  var head=['bet_id','date','book','event','market','pick','price','boosted_price','stake','to_win','result','pnl','settled_at','settled_by'];
+  var head=['bet_id','date','book','event','market','pick','price','boosted_price','stake','to_win','result','pnl','settled_at','settled_by','bonus'];
   var raw=arr(S.arch&&S.arch.bets);
   var lines=[head.join(',')];f.forEach(function(b){var o=raw[b.i]||{};lines.push(head.map(function(h){return csvCell(h==='result'?b.result:o[h])}).join(','))});
   var blob=new Blob(['\ufeff'+lines.join('\r\n')+'\r\n'],{type:'text/csv;charset=utf-8'});

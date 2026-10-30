@@ -247,7 +247,7 @@
     function kpi(l, v, s, c, sm) {
       return el('div', { class: 'kpi' }, [el('div', { class: 'l', text: l }), el('div', { class: 'v ' + (c || '') + (sm ? ' sm' : ''), text: v }), s ? el('div', { class: 's', text: s }) : null]);
     }
-    k1.appendChild(kpi('Staked', money(ST), ranged ? label : 'Avg ' + money(t.avg_stake) + ' / bet'));
+    k1.appendChild(kpi('Staked', money(ST), ranged ? label : 'Avg ' + money(t.avg_stake) + ' / bet' + (has(t.roi_cash) ? ' · ROI ' + pct(t.roi_cash, true) + ' on cash only' : '')));
     var wl = el('div', { class: 'kpi' }, [el('div', { class: 'l', text: 'Avg win / loss' }),
       el('div', { class: 'v sm' }, [el('span', { class: 'pos', text: pnl(t.avg_win) }), el('span', { class: 'dim', text: ' / ' }), el('span', { class: 'neg', text: pnl(-Math.abs(num(t.avg_loss))) })]),
       el('div', { class: 's', text: ranged ? 'per settled bet · all time' : 'per settled bet' })]);
@@ -370,10 +370,10 @@
       var z = el('div', { class: 'zero' }); z.style.left = zp + '%';
       track.appendChild(z); track.appendChild(bar);
       var name = String(r[key]);
-      var rec = num(r.won) + '-' + num(r.lost) + ' · ' + (m === 'pnl' ? 'ROI ' + pct(r.roi, true) : pnl(r.pnl)) + ' · ' + num(r.bets) + ' bets';
-      var valTxt = m === 'pnl' ? pnl(v) : pct(v, true);
+      var rec = num(r.won) + '-' + num(r.lost) + ' · ' + (m === 'pnl' ? 'ROI ' + (num(r.staked) ? pct(r.roi, true) : '–') : pnl(r.pnl)) + ' · ' + num(r.bets) + ' bets';
+      var valTxt = m === 'pnl' ? pnl(v) : (m === 'roi' && !num(r.staked) ? '–' : pct(v, true));
       var row = el('div', { class: 'brow', role: 'group', 'aria-label': name + ': ' + valTxt + ', ' + rec }, [
-        el('div', { class: 'nm', title: name }, [document.createTextNode(name), el('span', { class: 'rec', text: num(r.won) + '-' + num(r.lost) + ' · ' + pct(r.win_rate) + ' win' })]),
+        el('div', { class: 'nm', title: name }, [document.createTextNode(name), el('span', { class: 'rec', text: num(r.won) + '-' + num(r.lost) + ' · ' + (num(r.won) + num(r.lost) ? pct(r.win_rate) + ' win' : 'no graded bets') })]),
         track,
         el('div', { class: 'val ' + cls(v), text: valTxt })
       ]);

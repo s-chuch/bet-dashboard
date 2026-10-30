@@ -7,14 +7,38 @@ Called from build.build() and standalone: python3 scripts/build.py --static
 """
 import csv, json, math, os, re, sys, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-from common import REPO, DATA, LEDGER, RECS, AUTO, ARCHIVE_LOG, ARCHIVE_DAYS, all_bets, archive_rows, read_csv
+from common import REPO, DATA, LEDGER, RECS, AUTO, ARCHIVE_LOG, ARCHIVE_DAYS, all_bets, archive_rows, read_csv, now_et
 
 def num(s):
-    m = re.search(r"-?\d+(?:\.\d+)?", str(s or "").replace(",", "")); return float(m[0]) if m else 0.0
+    """First number in s; a minus sign (ASCII, U+2212, en/em dash) counts even when it sits before the $: '-$5.00' is -5."""
+    m = re.search(r"(-?)\s*\$?\s*(\d+(?:\.\d+)?)", str(s or "").replace(",", "").replace("\u2212", "-").replace("\u2013", "-").replace("\u2014", "-"))
+    return -float(m[2]) if m and m[1] else float(m[2]) if m else 0.0
 def r2(x): return round(float(x), 2)
 def is_settled(r): return (r.get("result") or "").strip().lower() not in ("open", "")
 def is_bonus(r): return "bonus" in (r.get("stake") or "").lower() or bool(re.search(r"bonus bet|free bet|no sweat token", r.get("market") or "", re.I))
 def cash_stake(r): return 0.0 if is_bonus(r) else num(r.get("stake"))
+_MON = {m: i + 1 for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split())}
+def chrono_key(r):
+    """Sort key by game start. start_et comes in several shapes ('Sat Oct 17 07:00 PM ET', 'Mon Oct 26, 9:30 PM ET',
+    '2026-10-03 13:09', '2026-10-03') and has no year, so the year comes from the bet date. Unparseable -> end of the bet date."""
+    d = (r.get("date") or "")[:10]; t = (r.get("start_et") or "").strip()
+    try: base = datetime.date.fromisoformat(d)
+    except ValueError: return (d, 1, "", r.get("bet_id", ""))
+    when = None
+    m = re.match(r"(\d{4})-(\d\d)-(\d\d)(?:[ T](\d\d?):(\d\d))?", t)
+    if m: when = datetime.datetime(int(m[1]), int(m[2]), int(m[3]), int(m[4] or 0), int(m[5] or 0))
+    else:
+        m = re.search(r"([A-Za-z]{3})[a-z]*\.? (\d{1,2}),? (\d{1,2}):(\d\d) ?([AP]M)", t, re.I)
+        if m and m[1].lower() in _MON:
+            hr = int(m[3]) % 12 + (12 if m[5].upper() == "PM" else 0)
+            try:
+                when = datetime.datetime(base.year, _MON[m[1].lower()], int(m[2]), hr, int(m[4]))
+                gap = (when.date() - base).days
+                if gap < -180: when = when.replace(year=base.year + 1)
+                elif gap > 180: when = when.replace(year=base.year - 1)
+            except ValueError: when = None
+    if when is None: when = datetime.datetime.combine(base, datetime.time(23, 59))
+    return (when.isoformat(), 0, "", r.get("bet_id", ""))
 def american(s):
     s = str(s or "").replace("−", "-")
     if re.search(r"\bx\d", s, re.I): return None   # "boosted x2 profit" is a label, not a price
@@ -76,7 +100,7 @@ def market_bucket(r):
 def odds_bucket(r):
     a = american(r.get("boosted_price"))
     if a is None: a = american(r.get("price"))
-    if a is None: return None
+    if a is None: return "Price unknown"
     if a < 100: return "Favourites (<+100)"
     if a < 300: return "+100 to +299"
     if a < 600: return "+300 to +599"
@@ -151,7 +175,7 @@ def by_money(st):
 
 def game_plan(rows):
     st = [r for r in rows if is_settled(r)]
-    cut = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    cut = (now_et().date() - datetime.timedelta(days=7)).isoformat()
     wk = [r for r in rows if (r.get("date") or "") >= cut]
     recs = read_csv(RECS)[0]; rec_ids = set()
     for x in recs:
@@ -223,12 +247,15 @@ def game_plan(rows):
             "note": "Small sample: treat splits under ~30 bets as signals, not proof."}
 
 def build_stats(rows, led):
-    st = sorted([r for r in rows if is_settled(r)], key=lambda r: (r["date"], r.get("start_et", ""), r.get("bet_id", "")))
+    st = sorted([r for r in rows if is_settled(r)], key=chrono_key)
     opn = [r for r in rows if not is_settled(r)]
     a = agg(st)
-    wins = [num(r["pnl"]) for r in st if r["result"].lower() == "won"]; losses = [num(r["pnl"]) for r in st if r["result"].lower() == "lost"]
+    cash = [r for r in st if not is_bonus(r)]; bon = [r for r in st if is_bonus(r)]
+    ac = agg(cash)   # bonus bets risk no cash, so their winnings are reported apart from cash P&L / ROI
+    wins = [num(r["pnl"]) for r in cash if r["result"].lower() == "won"]; losses = [num(r["pnl"]) for r in cash if r["result"].lower() == "lost"]
     totals = {"bets": a["bets"], "won": a["won"], "lost": a["lost"], "push_void": a["bets"] - a["won"] - a["lost"],
               "win_rate": a["win_rate"], "staked": a["staked"], "returned": r2(a["staked"] + a["pnl"]), "pnl": a["pnl"], "roi": a["roi"],
+              "pnl_cash": ac["pnl"], "roi_cash": ac["roi"], "bonus_n": len(bon), "bonus_pnl": r2(sum(num(r["pnl"]) for r in bon)),
               "avg_stake": r2(a["staked"] / a["bets"]) if a["bets"] else 0.0,
               "avg_win": r2(sum(wins) / len(wins)) if wins else 0.0, "avg_loss": r2(sum(losses) / len(losses)) if losses else 0.0,
               "open": len(opn), "open_stake": r2(sum(cash_stake(r) for r in opn)),
@@ -258,7 +285,7 @@ def build_stats(rows, led):
     def wd(r):
         try: return days[datetime.date.fromisoformat(r["date"]).weekday()]
         except Exception: return None
-    odds_order = ["Favourites (<+100)", "+100 to +299", "+300 to +599", "+600+"]
+    odds_order = ["Favourites (<+100)", "+100 to +299", "+300 to +599", "+600+", "Price unknown"]
     bo = [r for r in st if (r.get("boosted_price") or "").strip()]; reg = [r for r in st if not (r.get("boosted_price") or "").strip()]
     return {"generated_at": now_iso(), "totals": totals, "streak": streak, "daily": daily,
             "by_book": group(st, lambda r: r["book"], "book"),
@@ -274,7 +301,8 @@ def build_archive(arch):
         bets.append({"bet_id": r["bet_id"], "date": r["date"], "book": r["book"], "event": r["event"], "market": r["market"],
                      "pick": r["pick"], "price": american(r["price"]), "boosted_price": american(r.get("boosted_price")),
                      "stake": r2(num(r["stake"])), "to_win": r2(num(r["to_win"])), "result": r["result"],
-                     "pnl": r2(num(r["pnl"])), "settled_at": r.get("settled_at", ""), "settled_by": r.get("settled_by", "")})
+                     "pnl": r2(num(r["pnl"])), "settled_at": r.get("settled_at", ""), "settled_by": r.get("settled_by", ""),
+                     "bonus": is_bonus(r)})
     return {"generated_at": now_iso(), "cutoff_days": ARCHIVE_DAYS, "count": len(bets),
             "months": sorted({b["date"][:7] for b in bets}, reverse=True), "bets": bets}
 
