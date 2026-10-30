@@ -16,14 +16,8 @@
 <nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html" aria-current="page">Upload</a><a href="finder.html">Bet Finder</a><a href="settings.html">Settings</a></div></div></nav>
 <main class="wrap">
   <h1 class="page-title">Upload bets</h1>
-  <p class="page-sub">Drop screenshots of your bet slips from any app. The text is read on your phone (the pictures never leave it), you check the rows, then they go into the tracker.</p>
+  <p class="page-sub">Drop screenshots of your bet slips from any app. They are read automatically (on the server when you are signed in and it is set up, otherwise in this browser), you check the rows, then they go into the tracker.</p>
 
-  <section class="panel" id="confirm" hidden>
-    <h3>Prices to confirm</h3>
-    <p class="muted small">These bets were logged with a guessed price (“unconfirmed ~price”). Open each one in the app’s bet history and send the real price, stake and payout. Results already settled stay as they are.</p>
-    <div id="confirm-rows"></div>
-    <button class="btn sm" id="cfm-hide" type="button">Ignore these and hide this list</button>
-  </section>
   <section class="panel" id="ai"></section>
   <section class="panel" id="gh"></section>
 
@@ -47,6 +41,6 @@
 </main>
 <script src="assets/vendor/supabase/supabase.js"></script><script src="assets/db.js?v=4"></script><script src="assets/outbox.js?v=2"></script><script src="assets/vendor/tesseract/tesseract.min.js"></script>
 <script src="assets/slipparse.js"></script>
-<script src="assets/upload.js?v=20261030-6"></script>
+<script src="assets/upload.js?v=20261030-7"></script>
 </body>
 </html>
