@@ -60,3 +60,4 @@ date,book,event,start_et,market,pick,price,boosted_price,stake,to_win,fair_pct,e
 2026-10-29,theScore,Chicago Blackhawks @ Detroit Red Wings (NHL),Thu Oct 29 07:30 PM ET,Game Spread (wager id MU5ptZfMx6f8RlxG6t1zNaA7tsE=),Chicago Blackhawks +1.5,-180,,0.20,0.11,,,lost,-0.20,1352efb7,2026-10-29 22:08,auto
 2026-10-30,DraftKings,Orlando Magic @ Toronto Raptors (NBA),Fri Oct 30 07:40 PM ET,Moneyline (50% profit boost; bet id DK639289815361363954),Orlando Magic ML,+180,+270,0.30,0.81,34.4,27.3,open,,83a79f48,,
 2026-10-30,DraftKings,Orlando Magic @ Toronto Raptors (NBA),Fri Oct 30 07:40 PM ET,Moneyline (30% NBA Cup any-bet boost; bet id DK639289817658555643),Orlando Magic ML,+180,+234,0.30,0.70,34.4,14.9,open,,83a79f48-2,,
+2026-10-30,DraftKings,"Villanova @ Notre Dame (NCAAB, Rome)",Sun Nov 01 09:30 AM ET,Spread (30% Threes Overseas boost; bet id DK639289819941554852),Notre Dame +7.5,-110,+119,0.30,0.35,,,open,,331c7141,,
