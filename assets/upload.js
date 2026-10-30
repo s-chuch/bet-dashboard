@@ -653,9 +653,10 @@
     el.innerHTML = '<span>Your account names (friend check):</span> <input type="text" id="own-in" value="' + esc(owners().join(', ')) + '" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:160px"> <button class="btn sm" type="button" id="own-save">Save</button>';
     $('own-save').onclick = function () { var v = $('own-in').value.split(',').map(function (x) { return x.trim(); }).filter(Boolean); if (v.length) setOwners(v); renderOwners(); };
   }
-  if (window.DB && DB.ready) DB.getUser().then(function (u) {      /* signed in: the account's slip names come from its profile */
+  var SB = window.DB;   /* the Supabase client; the local DB above is the IndexedDB handle */
+  if (SB && SB.ready) SB.getUser().then(function (u) {      /* signed in: the account's slip names come from its profile */
     if (!u) return;
-    DB.client.from('profiles').select('slip_owner_names').eq('user_id', u.id).maybeSingle().then(function (r) {
+    SB.client.from('profiles').select('slip_owner_names').eq('user_id', u.id).maybeSingle().then(function (r) {
       var n = r.data && r.data.slip_owner_names; if (Array.isArray(n) && n.length) { setOwners(n); renderOwners(); }
     });
   });
