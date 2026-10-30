@@ -37,6 +37,10 @@
 .brow:last-child{border-bottom:0}
 .brow .nm{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .brow .rec{font-size:11px;color:var(--mut);font-weight:400;display:block;overflow:hidden;text-overflow:ellipsis}
+.clvr{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;padding:9px 0;border-bottom:1px solid var(--line)}
+.clvr:last-child{border-bottom:0}
+.clvr .who{display:grid;gap:2px;min-width:0}.clvr .who b{font-size:13px;font-weight:600;overflow-wrap:anywhere}.clvr .who small{font-size:11px;color:var(--mut)}
+.clvr .cv{display:grid;justify-items:end;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}.clvr .cv small{font-size:11px;font-weight:600}
 .brow .val{font-size:13px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;min-width:64px}
 .track{position:relative;height:12px;background:rgba(255,255,255,.04);border-radius:6px}
 .track .zero{position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--line2)}

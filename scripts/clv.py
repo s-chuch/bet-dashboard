@@ -216,10 +216,16 @@ def summary(rows=None):
     base = {"coverage": cov, "tracked": cov["placed_at_logged"]}
     if not xs: return {"n": 0, "avg": None, "beat": 0, "beat_pct": None, **base}
     beat = sum(1 for v, _ in xs if v > 0)
+    def boosted(bid):   # CLV of the boosted price (the same fair close, the boosted open price); None when the bet was not boosted
+        try: return float(m[bid].get("clv_boosted_pct")) if m[bid].get("open_price_boosted") and m[bid].get("clv_boosted_pct") else None
+        except ValueError: return None
+    bx = [x for x in (boosted(r["bet_id"]) for _, r in xs) if x is not None]
     return {"n": len(xs), "avg": round(sum(v for v, _ in xs) / len(xs), 2), "beat": beat,
             "beat_pct": round(beat / len(xs) * 100, 1), **base,
+            "boost": {"n": len(bx), "avg": round(sum(bx) / len(bx), 2), "beat": sum(1 for x in bx if x > 0)} if bx else None,
             "recent": [{"bet_id": r["bet_id"], "pick": r["pick"][:60], "book": r["book"], "price": r["price"],
-                        "close_price": m[r["bet_id"]]["close_price"], "clv_pct": v}
+                        "close_price": m[r["bet_id"]]["close_price"], "clv_pct": v,
+                        "price_boosted": m[r["bet_id"]].get("open_price_boosted") or "", "clv_boosted_pct": boosted(r["bet_id"])}
                        for v, r in sorted(xs, key=lambda x: x[1].get("date", ""), reverse=True)[:10]]}
 
 def missing_closes(rows=None, now=None):

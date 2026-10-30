@@ -444,15 +444,22 @@
     var b = obj(g.bonus);
     $('plan-note').textContent = (b.n ? 'Bonus bets: ' + money(b.returned) + ' back from ' + money(b.face) + ' face (' + (b.conv_pct == null ? '\u2013' : Math.round(b.conv_pct) + '%') + '; good is 60%+). ' : '') + 'ROI is on cash staked; bonus bets risk no cash. ' + (g.note || '');
     var c = obj(g.clv), ch = $('clv'); clear(ch);
-    var cv = obj(c.coverage), rc = obj(g.rec_coverage);
-    var covLine = (cv.straight != null ? 'Close on file: ' + num(cv.straight_with_close) + ' of ' + num(cv.straight) + ' straight bets (' + num(cv.proxy_closes) + ' are ESPN-final proxies, not Pinnacle) \u00b7 open price logged: ' + num(cv.open_price_logged) + ' of ' + num(cv.bets) + ' bets. ' : '') +
-      (rc.bets != null ? 'Bets with no rec: ' + num(rc.no_rec) + ' of ' + num(rc.bets) + ' (' + num(rc.no_rec_7d) + ' in the last 7 days).' : '');
-    if (covLine) ch.appendChild(el('div', { class: 'small muted', text: covLine }));
-    if (!num(c.n)) { ch.appendChild(el('div', { class: 'empty', text: 'No closing lines captured yet. Straight ML / spread / total bets get one in the hour before start (' + num(c.tracked) + ' bets have a logged time).' })); return; }
-    ch.appendChild(el('div', { class: 'pt', text: c.n + ' bets graded \u00b7 average CLV ' + pct(c.avg, true) + ' \u00b7 beat the close ' + Math.round(num(c.beat_pct)) + '% (' + c.beat + '/' + c.n + ')' }));
-    arr(c.recent).forEach(function (x) {
-      ch.appendChild(el('div', { class: 'brow' }, [el('span', { class: 'nm', text: x.book + ' \u00b7 ' + x.pick }), el('span', { class: 'rec', text: x.price + ' vs close ' + x.close_price }), el('span', { class: 'val ' + cls(x.clv_pct), text: pct(x.clv_pct, true) })]));
+    var cv = obj(c.coverage), rc = obj(g.rec_coverage), ng = num(c.n);
+    ch.appendChild(el('p', { class: 'small muted', text: 'CLV compares the price you got with the market’s final price: Pinnacle’s last line before the game, with the bookmaker’s margin removed. Green means you got more than the bet was worth, red means the market ended up better than your price. Over many bets it predicts profit better than wins and losses do.' }));
+    if (cv.straight != null) ch.appendChild(el('p', { class: 'small muted', text: 'Only single bets (moneyline, spread, total) can be graded: ' + num(cv.straight) + ' so far. ' + num(cv.straight_with_close) + ' have a closing price saved, but ' + num(cv.proxy_closes) + ' of those are only a stand-in from ESPN’s DraftKings line, so they are left out' + (ng ? '. That leaves ' + ng + ' graded.' : '.') }));
+    if (cv.open_price_logged != null || rc.bets != null) ch.appendChild(el('p', { class: 'small muted', text: 'Record keeping: ' + (cv.open_price_logged != null ? 'your price was logged on ' + num(cv.open_price_logged) + ' of ' + num(cv.bets) + ' bets. ' : '') + (rc.bets != null ? num(rc.no_rec) + ' of ' + num(rc.bets) + ' bets have no recommendation logged (' + num(rc.no_rec_7d) + ' in the last 7 days). This does not affect CLV.' : '') }));
+    if (!ng) { ch.appendChild(el('div', { class: 'empty', text: 'No closing lines captured yet. Straight ML / spread / total bets get one in the hour before start (' + num(c.tracked) + ' bets have a logged time).' })); return; }
+    ch.appendChild(el('div', { class: 'pt', text: ng + ' graded · average ' + pct(c.avg, true) + ' · beat the close on ' + num(c.beat) + ' of ' + ng + ' (' + Math.round(num(c.beat_pct)) + '%)' }));
+    ch.appendChild(el('p', { class: 'small muted', text: 'Small sample, so do not read too much into it. A few percent below zero is normal, because a bookmaker’s price already includes its margin.' + (obj(c.boost).n ? ' Boosted bets (' + num(c.boost.n) + ' of these) average ' + pct(c.boost.avg, true) + ' using the boosted price, and beat the close on ' + num(c.boost.beat) + '. The numbers above use the normal, unboosted price.' : '') }));
+    var rows = arr(c.recent);
+    rows.forEach(function (x) {
+      var bst = x.clv_boosted_pct != null;
+      ch.appendChild(el('div', { class: 'clvr' }, [
+        el('div', { class: 'who' }, [el('b', { text: String(x.pick || '') }), el('small', { text: x.book + ' · you got ' + x.price + (bst && x.price_boosted ? ' (boosted ' + x.price_boosted + ')' : '') + ' · market closed at ' + x.close_price })]),
+        el('div', { class: 'cv ' + cls(x.clv_pct) }, [document.createTextNode(pct(x.clv_pct, true)), bst ? el('small', { class: cls(x.clv_boosted_pct), text: 'boosted ' + pct(x.clv_boosted_pct, true) }) : null])
+      ]));
     });
+    if (rows.length && ng > rows.length) ch.appendChild(el('p', { class: 'small muted', text: 'Showing the ' + rows.length + ' most recent of ' + ng + '.' }));
   }
 
   function renderAll() {
