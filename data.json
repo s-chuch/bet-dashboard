@@ -17,8 +17,8 @@
   },
   {
    "book": "bet365",
-   "balance": 79.76,
-   "updated": "2026-10-29 15:26"
+   "balance": 86.61,
+   "updated": "2026-10-29 22:43"
   },
   {
    "book": "DraftKings",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 660.23,
+ "total": 667.08,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -2042,93 +2042,6 @@
    }
   },
   {
-   "bet_id": "1762b7a2",
-   "date": "2026-10-29",
-   "book": "bet365",
-   "event": "New York Islanders @ Minnesota Wild",
-   "market": "SGP 3-leg (50% profit boost)",
-   "pick": "New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5",
-   "start": "Thu Oct 29 08:07 PM ET",
-   "price": "+390",
-   "boosted_price": "+585",
-   "stake": 1.0,
-   "stake_note": "",
-   "to_win": 5.85,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": true,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "New York Islanders",
-     "line": 1.5,
-     "women": false,
-     "text": "New York Islanders +1.5",
-     "team_ok": true
-    },
-    {
-     "type": "spread",
-     "team": "Minnesota Wild",
-     "line": 1.5,
-     "women": false,
-     "text": "Minnesota Wild +1.5",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 5.5,
-     "text": "Over 5.5"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261029",
-    "groups": null,
-    "id": "401892607",
-    "snapshot": {
-     "date": "2026-10-30T00:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final/OT",
-     "teams": [
-      {
-       "id": "30",
-       "name": "Minnesota Wild",
-       "abbr": "MIN",
-       "short": "Wild",
-       "nick": "Wild",
-       "location": "Minnesota",
-       "home": true,
-       "score": "3"
-      },
-      {
-       "id": "12",
-       "name": "New York Islanders",
-       "abbr": "NYI",
-       "short": "Islanders",
-       "nick": "Islanders",
-       "location": "New York",
-       "home": false,
-       "score": "4"
-      }
-     ]
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 1.0,
-   "payout": 6.85,
-   "payout_est": false,
-   "start_ts": "2026-10-30T00:07Z",
-   "clv": {
-    "placed_at": "2026-10-29 15:26",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
    "bet_id": "e5fc922f",
    "date": "2026-10-29",
    "book": "bet365",
@@ -2899,10 +2812,10 @@
     "snapshot": {
      "date": "2026-10-30T02:00Z",
      "period": 1,
-     "clock": 68.0,
+     "clock": 36.0,
      "state": "in",
      "completed": false,
-     "detail": "1:08 - 1st",
+     "detail": "0:36 - 1st",
      "teams": [
       {
        "id": "8",
@@ -3105,9 +3018,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.4796,
-     "away": 0.5204,
-     "spread": 0.04,
+     "home": 0.4798,
+     "away": 0.5202,
+     "spread": 0.05,
      "t": "2026-10-30T02:43Z"
     }
    },
@@ -5281,6 +5194,21 @@
   {
    "date": "2026-10-29",
    "book": "bet365",
+   "event": "New York Islanders @ Minnesota Wild",
+   "pick": "New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5",
+   "result": "won",
+   "pnl": 5.85,
+   "stake": 1.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-29 15:26",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "book": "bet365",
    "event": "Sacramento Kings @ New Orleans Pelicans",
    "pick": "New Orleans Pelicans ML + Over 225.5 + Under 245.5",
    "result": "lost",
@@ -6179,15 +6107,15 @@
    }
   }
  ],
- "pnl_total": 110.91,
+ "pnl_total": 116.76,
  "unsettled": {
-  "n": 18,
-  "cash_stake": 17.1,
-  "max_payout": 287.34,
+  "n": 17,
+  "cash_stake": 16.1,
+  "max_payout": 280.49,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 17.1,
+ "open_stake": 16.1,
  "recs": {
   "stats": {
    "overall": {
@@ -10896,6 +10824,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "1762b7a2",
+    "book": "bet365",
+    "pick": "New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5",
+    "result": "won",
+    "pnl": 5.85,
+    "final": "NYI 4-3 MIN",
+    "at": "2026-10-29 22:43"
+   },
+   {
     "bet_id": "3d02188f",
     "book": "bet365",
     "pick": "New Orleans Pelicans ML + Over 225.5 + Under 245.5",
@@ -11110,18 +11047,9 @@
     "pnl": 0.0,
     "final": "CHI 99-134 BOS",
     "at": "2026-10-26 22:01"
-   },
-   {
-    "bet_id": "c0dd912a",
-    "book": "bet365",
-    "pick": "Anthony Edwards 20+ Points + Donovan Mitchell 20+ Points + LaMelo Ball 15+ Points",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "MIN 125-127 CLE",
-    "at": "2026-10-26 22:01"
    }
   ],
-  "last_change_at": "2026-10-29 22:25 ET"
+  "last_change_at": "2026-10-29 22:43 ET"
  },
  "open_live_n": 17,
  "open_stake_by_book": {
@@ -11131,6 +11059,6 @@
   "FanDuel": 2.1,
   "PointsBet": 15.0
  },
- "hash": "7720c4012ef05e7468a963ebf502982977eea83e",
- "generated_at": "2026-10-29T22:43:27-04:00"
+ "hash": "5f7f3217ce02349f80268552d77fe44751dbf4d7",
+ "generated_at": "2026-10-29T22:43:57-04:00"
 }

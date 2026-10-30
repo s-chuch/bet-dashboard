@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "1762b7a2",
+   "book": "bet365",
+   "pick": "New York Islanders +1.5 + Minnesota Wild +1.5 + Over 5.5",
+   "result": "won",
+   "pnl": 5.85,
+   "final": "NYI 4-3 MIN",
+   "at": "2026-10-29 22:43"
+  },
+  {
    "bet_id": "3d02188f",
    "book": "bet365",
    "pick": "New Orleans Pelicans ML + Over 225.5 + Under 245.5",
@@ -216,17 +225,8 @@
    "pnl": 0.0,
    "final": "CHI 99-134 BOS",
    "at": "2026-10-26 22:01"
-  },
-  {
-   "bet_id": "c0dd912a",
-   "book": "bet365",
-   "pick": "Anthony Edwards 20+ Points + Donovan Mitchell 20+ Points + LaMelo Ball 15+ Points",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "MIN 125-127 CLE",
-   "at": "2026-10-26 22:01"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-29 22:25 ET"
+ "last_change_at": "2026-10-29 22:43 ET"
 }
