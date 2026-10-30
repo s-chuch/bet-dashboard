@@ -525,11 +525,11 @@
     "id": "401882817",
     "snapshot": {
      "date": "2026-10-30T20:00Z",
-     "period": null,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 2700.0,
+     "state": "in",
      "completed": false,
-     "detail": "Scheduled",
+     "detail": "45'+1'",
      "teams": [
       {
        "id": "102",
@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T19:26Z"
+       "t": "2026-10-30T20:46Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T19:26Z"
+       "t": "2026-10-30T20:46Z"
       }
      },
      "pteam": "ATL",
@@ -2694,7 +2694,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3405,7 +3405,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NFL",
@@ -4116,7 +4116,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NFL",
@@ -4919,10 +4919,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6616,
-     "away": 0.3384,
+     "home": 0.655,
+     "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NBA",
@@ -5725,10 +5725,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6616,
-     "away": 0.3384,
+     "home": 0.655,
+     "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NBA",
@@ -6608,10 +6608,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.6616,
-     "away": 0.3384,
+     "home": 0.655,
+     "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T19:26Z"
+     "t": "2026-10-30T20:46Z"
     }
    },
    "sport": "NBA",
@@ -7319,7 +7319,7 @@
        "home": 0.235,
        "away": 0.765,
        "spread": 0.01,
-       "t": "2026-10-30T19:26Z"
+       "t": "2026-10-30T20:46Z"
       }
      }
     },
@@ -8034,16 +8034,16 @@
    "overall": {
     "n": 177,
     "w": 51,
-    "l": 87,
+    "l": 88,
     "p": 0,
-    "pending": 39,
-    "win_pct": 37.0,
-    "units": 13.94,
-    "roi_pct": 12.1,
-    "roi_n": 115,
+    "pending": 38,
+    "win_pct": 36.7,
+    "units": 12.94,
+    "roi_pct": 11.2,
+    "roi_n": 116,
     "exp_roi_pct": 9.7,
-    "exp_wins": 46.7,
-    "exp_wins_n": 137,
+    "exp_wins": 46.8,
+    "exp_wins_n": 138,
     "wins_with_fair": 50
    },
    "by_promo": {
@@ -8125,16 +8125,16 @@
     "cash": {
      "n": 64,
      "w": 24,
-     "l": 35,
+     "l": 36,
      "p": 0,
-     "pending": 5,
-     "win_pct": 40.7,
-     "units": 11.61,
-     "roi_pct": 19.7,
-     "roi_n": 59,
+     "pending": 4,
+     "win_pct": 40.0,
+     "units": 10.61,
+     "roi_pct": 17.7,
+     "roi_n": 60,
      "exp_roi_pct": 5.7,
-     "exp_wins": 21.4,
-     "exp_wins_n": 59,
+     "exp_wins": 21.5,
+     "exp_wins_n": 60,
      "wins_with_fair": 24
     },
     "live boost": {
@@ -8307,16 +8307,16 @@
     "SOCCER": {
      "n": 7,
      "w": 4,
-     "l": 2,
+     "l": 3,
      "p": 0,
-     "pending": 1,
-     "win_pct": 66.7,
-     "units": 7.6,
-     "roi_pct": 126.7,
-     "roi_n": 6,
-     "exp_roi_pct": 5.8,
-     "exp_wins": 1.8,
-     "exp_wins_n": 6,
+     "pending": 0,
+     "win_pct": 57.1,
+     "units": 6.6,
+     "roi_pct": 94.3,
+     "roi_n": 7,
+     "exp_roi_pct": 6.4,
+     "exp_wins": 1.9,
+     "exp_wins_n": 7,
      "wins_with_fair": 4
     },
     "Soccer": {
@@ -8399,16 +8399,16 @@
     "no": {
      "n": 80,
      "w": 18,
-     "l": 27,
+     "l": 28,
      "p": 0,
-     "pending": 35,
-     "win_pct": 40.0,
-     "units": -9.0,
-     "roi_pct": -23.1,
-     "roi_n": 39,
-     "exp_roi_pct": 4.4,
-     "exp_wins": 16.9,
-     "exp_wins_n": 45,
+     "pending": 34,
+     "win_pct": 39.1,
+     "units": -10.0,
+     "roi_pct": -25.0,
+     "roi_n": 40,
+     "exp_roi_pct": 4.6,
+     "exp_wins": 17.0,
+     "exp_wins_n": 46,
      "wins_with_fair": 18
     }
    },
@@ -8562,11 +8562,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "PSG 5-1 HAC (FT)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: odds wrong/moved",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "72999d0f",
@@ -13018,6 +13018,6 @@
   "FanDuel": 1.1,
   "PointsBet": 15.0
  },
- "hash": "83cf98c30226971ee12578efe042fb96dfdda25a",
- "generated_at": "2026-10-30T15:26:05-04:00"
+ "hash": "355e420fc55b2fb89b533f707248da8af7d4acc4",
+ "generated_at": "2026-10-30T16:46:12-04:00"
 }
