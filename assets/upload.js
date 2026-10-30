@@ -107,7 +107,11 @@
       '<a target="_blank" rel="noopener noreferrer" href="https://aistudio.google.com/apikey">Get a free key ↗</a><div style="display:flex;gap:8px;margin-top:6px"><input type="text" id="ai-in" placeholder="Paste Google key" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="ai-save">Save</button></div><p id="ai-err" class="small neg"></p>') + '</div>';
     h += '<div class="aiRow" style="margin-top:10px"><b>OpenRouter</b> ' + (o ? '<span class="pos">On ✓</span> <span class="muted" id="or-model"></span> <button class="btn sm" type="button" id="or-off">Remove</button>' :
       '<a target="_blank" rel="noopener noreferrer" href="https://openrouter.ai/settings/keys">Get a free key ↗</a><div style="display:flex;gap:8px;margin-top:6px"><input type="text" id="or-in" placeholder="Paste OpenRouter key (sk-or-…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1"><button class="btn pri" type="button" id="or-save">Save</button></div><p id="or-err" class="small neg"></p>') + '</div>';
+    var sd = window.DB;
+    if (sd && sd.ready) h += '<div class="aiRow" style="margin-top:10px"><b>Server</b> ' + (sd.user ? '<label class="small"><input type="checkbox" id="bg-on"' + (bgOn() || BG.off ? ' checked' : '') + '> Read pictures on the server, so you can leave the page and approve later</label>' + (BG.off ? '<div class="small muted">The server reader is not available right now, so pictures are read in this browser.</div>' : '')
+      : '<span class="muted small">Sign in to have pictures read on the server while you do something else.</span> <a class="small" href="login.html?next=upload.html">Sign in</a>') + '</div>';
     el.innerHTML = h;
+    if ($('bg-on')) $('bg-on').onchange = function () { try { localStorage.setItem('bt.bg', this.checked ? 'on' : 'off'); } catch (e) {} BG.off = false; };
     if (k) { $('ai-off').onclick = function () { setAi(''); renderAi(); }; if (S.models) $('ai-model').textContent = '(' + S.models.join(' → ') + ')'; }
     else $('ai-save').onclick = function () {
       var v = $('ai-in').value.trim();
@@ -341,6 +345,58 @@
       addDraftFrom(it, why);
     });
   }
+  /* ---------- background reading on the server (Supabase) ----------
+     Signed in: the picture goes to private storage, a job is queued and the read-slip function reads it with the server's key, so the
+     page can be closed. Results are picked up by importReady() on this page (and counted by the nav chip on every page). If the server
+     reader is unreachable (not set up yet, offline) the picture is read in the browser as before. */
+  var BG = { off: false };
+  function bgOn() {
+    var d = window.DB; if (BG.off || !d || !d.ready || !d.user) return false;
+    try { return localStorage.getItem('bt.bg') !== 'off'; } catch (e) { return true; }
+  }
+  function uuid() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) { var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 3 | 8)).toString(16); });
+  }
+  function b64blob(b64) { var bin = atob(b64), a = new Uint8Array(bin.length); for (var i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i); return new Blob([a], { type: 'image/jpeg' }); }
+  function bgCleanup(jobId, path) {
+    var d = window.DB; if (!d || !d.client) return;
+    try { d.client.from('slip_jobs').delete().eq('id', jobId).then(function () {}, function () {}); d.client.storage.from('slips').remove([path]).then(function () {}, function () {}); } catch (e) {}
+  }
+  function bgRead(it) {   // resolves once the picture is safely on its way to the server reader
+    var d = window.DB, jobId = uuid(), path = d.user.id + '/' + jobId + '.jpg';
+    it.msg = 'Sending to the server…'; renderQueue();
+    return shrink(it.file, 2600, 0.88).then(function (b64) {
+      return d.client.storage.from('slips').upload(path, b64blob(b64), { contentType: 'image/jpeg', upsert: false });
+    }).then(function (r) {
+      if (r.error) throw new Error(r.error.message || 'upload failed');
+      return d.client.from('slip_jobs').insert({ id: jobId, name: it.name, path: path });
+    }).then(function (r) {
+      if (r.error) { bgCleanup(jobId, path); throw new Error(r.error.message || 'could not queue the job'); }
+      return d.client.functions.invoke('read-slip', { body: { job_id: jobId, prompt: promptText('', '') } });
+    }).then(function (r) {
+      if (r.error) { bgCleanup(jobId, path); throw new Error(r.error.message || 'the server reader did not start'); }
+      it.jobId = jobId; it.state = 'bg'; it.msg = '';
+      if (window.Outbox && Outbox.slipAdd) Outbox.slipAdd(jobId, it.name);
+    });
+  }
+  function importReady() {   // finished server reads become drafts here, waiting for your approval
+    var d = window.DB; if (!d || !d.ready || !d.user) return;
+    d.client.from('slip_jobs').select('id,name,status,result,error').in('status', ['done', 'error']).then(function (r) {
+      if (r.error || !r.data || !r.data.length) return;
+      r.data.forEach(function (j) {
+        var it = S.items.filter(function (x) { return x.jobId === j.id; })[0];
+        if (j.status === 'done' && !S.drafts.some(function (x) { return x.jobId === j.id; })) {
+          var rows = Array.isArray(j.result) ? j.result : [];
+          rows.forEach(function (row) { var n = S.drafts.length; addDraftParsed(j.name || 'screenshot', fromAi(row), 'Read on the server', '', it ? it.id : undefined); if (S.drafts.length > n) S.drafts[S.drafts.length - 1].jobId = j.id; });
+          if (it) { if (rows.length) { it.state = 'done'; it.pct = 100; } else { it.state = 'err'; it.msg = 'The server found no bet in this picture. Tap Re-read, or Remove.'; } }
+        } else if (j.status === 'error' && it) { it.state = 'err'; it.msg = 'Server reading failed: ' + String(j.error || 'unknown reason').slice(0, 120) + '. Tap Re-read to try again.'; }
+        if (window.Outbox && Outbox.slipDrop) Outbox.slipDrop(j.id);
+        setTimeout(function () { d.client.from('slip_jobs').delete().eq('id', j.id).then(function () {}, function () {}); }, 2000);   // after the drafts are saved on this phone
+      });
+      renderQueue(); renderDrafts(true);
+    }, function () {});
+  }
   function runQueue() {
     S.active = S.active || 0;
     while (S.active < 3) {
@@ -352,11 +408,14 @@
   function startItem(it) {
     it.state = 'read'; it.msg = aiOn() ? 'Contacting the AI…' : ''; it.t0 = Date.now(); renderQueue();
     if (!S.tick) S.tick = setInterval(function () { if (S.items.some(function (x) { return x.state === 'read'; })) renderQueue(true); else { clearInterval(S.tick); S.tick = 0; } }, 1000);
-    var job = aiOn() ? aiRead(it).then(function (rows) {
-      rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
-    }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
-      : ocrRead(it, 'Basic reader (no AI key). Add a free key above for full automatic reading.');
-    job.then(function () { it.state = 'done'; it.pct = 100; }).catch(function (e) { var m = String(e && e.message ? e.message : e); it.state = 'err'; if (/could not be read|NotReadable|Code=8|could not open/i.test(m)) { it.file = null; it.msg = NO_OPEN; } else it.msg = 'Could not read this picture (' + m + ')'; })
+    var local = function (why) {
+      return aiOn() ? aiRead(it).then(function (rows) {
+        rows.forEach(function (r) { addDraftParsed(it.name, fromAi(r), 'Read by AI', '', it.id); });
+      }).catch(function (e) { it.msg = ''; return ocrRead(it, 'AI reading failed (' + (e && e.message ? e.message : e) + '), so the basic reader was used. Check every field.'); })
+        : ocrRead(it, why || 'Basic reader (no AI key). Add a free key above for full automatic reading.');
+    };
+    var job = bgOn() ? bgRead(it).catch(function (e) { BG.off = true; it.msg = ''; it.t0 = Date.now(); return local('Basic reader (the server reader is not available: ' + (e && e.message ? e.message : e) + '). Check every field.'); }) : local();
+    job.then(function () { if (it.state !== 'bg') { it.state = 'done'; it.pct = 100; } }).catch(function (e) { var m = String(e && e.message ? e.message : e); it.state = 'err'; if (/could not be read|NotReadable|Code=8|could not open/i.test(m)) { it.file = null; it.msg = NO_OPEN; } else it.msg = 'Could not read this picture (' + m + ')'; })
       .then(function () {
         S.active--; renderQueue(); renderDrafts(); runQueue();
         if (!S.items.some(function (x) { return x.state === 'wait' || x.state === 'read'; })) { var m = $('sendmsg'); if (m && /^Picked up/.test(m.textContent)) { delete m.dataset.keep; m.textContent = ''; updateSend(); } }
@@ -505,7 +564,7 @@
   function renderQueue(quiet) {
     if (quiet !== true) saveSoon();
     $('queue').innerHTML = S.items.map(function (it) {
-      var st = it.state === 'copy' ? 'Opening…' : it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ((it.pct || !it.msg ? 'Reading… ' + (it.pct || 0) + '%' : esc(it.msg)) + (it.t0 ? ' · ' + Math.round((Date.now() - it.t0) / 1000) + 's' : '')) : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
+      var st = it.state === 'copy' ? 'Opening…' : it.state === 'wait' ? 'Waiting…' : it.state === 'read' ? ((it.pct || !it.msg ? 'Reading… ' + (it.pct || 0) + '%' : esc(it.msg)) + (it.t0 ? ' · ' + Math.round((Date.now() - it.t0) / 1000) + 's' : '')) : it.state === 'bg' ? 'Reading on the server. You can leave this page.' : it.state === 'done' ? 'Read ✓' : esc(it.msg || 'Failed');
       return '<div class="qi">' + (it.url ? '<img alt="" src="' + esc(it.url) + '">' : '<span style="width:48px"></span>') + '<div><div class="nm">' + esc(it.name) + '</div><div class="st">' + st + '</div>' + (it.state === 'read' ? '<div class="bar"><i style="width:' + (it.pct || 0) + '%"></i></div>' : '') + '</div><div style="display:flex;flex-direction:column;gap:6px">' + (it.state === 'done' || it.state === 'err' ? '<button class="btn sm x pri" type="button" data-rr="' + it.id + '">' + (it.file ? 'Re-read' : 'Choose again') + '</button>' : '') + '<button class="btn sm x" type="button" data-rm="' + it.id + '">Remove</button></div></div>';
     }).join('');
   }
@@ -522,7 +581,7 @@
     $('review').hidden = !S.drafts.length;
     $('rows').innerHTML = S.drafts.map(function (d) {
       var rs = (d.kind === 'placed' || d.kind === 'open' || d.kind === 'settled') ? reasons(d) : [], mc = mathOf(d);
-      var tag = d.foreign && d.foreign.length ? '<span class="tag bad">someone else\'s account?</span>' : rs.length ? '<span class="tag bad">can\'t add yet</span>' : d.kind === 'settled' ? '<span class="tag warn">settled: ' + esc(d.result || '?') + '</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">' + (d.note === 'Read by AI' ? 'AI read ✓' : 'looks good') + '</span>');
+      var tag = d.foreign && d.foreign.length ? '<span class="tag bad">someone else\'s account?</span>' : rs.length ? '<span class="tag bad">can\'t add yet</span>' : d.kind === 'settled' ? '<span class="tag warn">settled: ' + esc(d.result || '?') + '</span>' : d.kind === 'other' ? '<span class="tag bad">not a slip</span>' : d.dup ? '<span class="tag warn">looks like a duplicate' + (d.on ? ' — will be added anyway' : ' — skipped') + '</span>' : (d.warnings.length ? '<span class="tag warn">check</span>' : '<span class="tag ok">' + (/^Read (by AI|on the server)$/.test(d.note || '') ? 'AI read ✓' : 'looks good') + '</span>');
       var resSel = d.kind === 'settled' ? '<label class="fld' + (problems(d).result ? ' bad' : '') + '"><span>Result</span><select data-d="' + d.id + '" data-k="result"><option value="">Choose…</option>' + ['won', 'lost', 'push', 'void'].map(function (x) { return '<option' + (x === d.result ? ' selected' : '') + '>' + x + '</option>'; }).join('') + '</select></label>' : '';
       var form = (d.kind === 'placed' || d.kind === 'open' || d.kind === 'settled') ? '<div class="grid">' + resSel + fld(d, 'book', 'Book') + fld(d, 'date', 'Date placed', '', '') + fld(d, 'stake', 'Stake', '', 'num') + fld(d, 'to_win', 'To win', '', 'num') +
         fld(d, 'event', 'Event', 'full') + fld(d, 'pick', 'Pick (legs joined by +)', 'full') + fld(d, 'market', 'Market', 'half') + fld(d, 'start', 'Start (ET)', 'half') + fld(d, 'price', 'Odds', '', '') + fld(d, 'boosted', 'Boosted odds', '', '') + '</div>' : '';
@@ -597,6 +656,7 @@
     var id = e.target && e.target.getAttribute && e.target.getAttribute('data-rm'); if (!id) return;
     var it = S.items.filter(function (x) { return String(x.id) === id; })[0]; if (!it || it.state === 'read') return;
     try { if (it.url) URL.revokeObjectURL(it.url); } catch (x) {}
+    if (it.jobId && window.DB && DB.user) { bgCleanup(it.jobId, DB.user.id + '/' + it.jobId + '.jpg'); if (window.Outbox && Outbox.slipDrop) Outbox.slipDrop(it.jobId); }
     S.items = S.items.filter(function (x) { return x !== it; }); S.drafts = S.drafts.filter(function (d) { return d.file !== it.name; });
     renderQueue(); renderDrafts();
   });
@@ -642,7 +702,7 @@
         if (!S.items.length && !S.drafts.length) { st.delete('state'); return; }
         st.put({
           nextId: S.nextId,
-          items: S.items.map(function (it) { return { id: it.id, name: it.name, file: it.file instanceof Blob ? it.file : null, state: it.state === 'err' || it.state === 'done' ? it.state : (it.file ? 'wait' : 'err'), msg: it.state === 'err' || !it.file ? (it.msg || NO_OPEN) : '' }; }),
+          items: S.items.map(function (it) { return { id: it.id, name: it.name, file: it.file instanceof Blob ? it.file : null, state: it.state === 'err' || it.state === 'done' || (it.state === 'bg' && it.jobId) ? it.state : (it.file ? 'wait' : 'err'), jobId: it.state === 'bg' ? it.jobId : undefined, msg: it.state === 'err' || !it.file ? (it.msg || NO_OPEN) : '' }; }),
           drafts: S.drafts.map(function (d) { var o = {}; Object.keys(d).forEach(function (k) { if (k !== '_seen') o[k] = d[k]; }); return o; })
         }, 'state');
       } catch (e) {}
@@ -655,7 +715,7 @@
       S.items = (st.items || []).map(function (it) {
         var ok = it.file instanceof Blob && it.file.size > 0, u = '';
         if (ok) try { u = URL.createObjectURL(it.file); } catch (e) { ok = false; }
-        return { id: it.id, file: ok ? it.file : null, name: it.name, url: u, state: ok ? it.state : 'err', msg: ok ? (it.msg || '') : 'This picture is no longer on this page. Tap Choose again.', pct: it.state === 'done' && ok ? 100 : 0 };
+        return { id: it.id, jobId: it.jobId, file: ok ? it.file : null, name: it.name, url: u, state: ok ? it.state : 'err', msg: ok ? (it.msg || '') : 'This picture is no longer on this page. Tap Choose again.', pct: it.state === 'done' && ok ? 100 : 0 };
       });
       S.drafts = (st.drafts || []);
       var n = S.items.filter(function (x) { return x.state === 'wait'; }).length;
@@ -666,7 +726,8 @@
   window.addEventListener('beforeunload', function (e) {
     if (S.items.some(function (x) { return x.state === 'read' || x.state === 'wait'; })) { e.preventDefault(); e.returnValue = ''; }
   });
-  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') runQueue(); });
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') { runQueue(); importReady(); } });
+  if (window.Outbox && Outbox.on) Outbox.on(function () { if (Outbox.slipsReady && Outbox.slipsReady()) importReady(); });
 
   function renderOwners() {
     var el = $('owners'); if (!el) return;
@@ -675,7 +736,8 @@
   }
   var SB = window.DB;   /* the Supabase client; the local DB above is the IndexedDB handle */
   if (SB && SB.ready) SB.getUser().then(function (u) {      /* signed in: the account's slip names come from its profile */
-    if (!u) return;
+    renderAi(); if (!u) return;
+    importReady();
     SB.client.from('profiles').select('slip_owner_names').eq('user_id', u.id).maybeSingle().then(function (r) {
       var n = r.data && r.data.slip_owner_names; if (Array.isArray(n) && n.length) { setOwners(n); renderOwners(); }
     });
