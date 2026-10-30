@@ -1,16 +1,15 @@
 {
- "needs_review": [
+ "needs_review": [],
+ "last_settled": [
   {
    "bet_id": "a8c38f67",
    "book": "FanDuel",
-   "event": "NHL 3-leg parlay: Utah Mammoth @ Pittsburgh Penguins / Buffalo Sabres @ Anaheim Ducks / Vancouver Canucks @ San Jose Sharks",
    "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
-   "stake": "0.50",
-   "reason": "no ESPN game matched",
-   "legs": []
-  }
- ],
- "last_settled": [
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "UTA 4-3 PIT; BUF 7-6 ANA; VAN 2-3 SJ",
+   "at": "2026-10-30 14:33"
+  },
   {
    "bet_id": "43564ae1",
    "book": "FanDuel",
@@ -226,17 +225,8 @@
    "pnl": 0.58,
    "final": "DAL 38-21 PHI",
    "at": "2026-10-26 23:19"
-  },
-  {
-   "bet_id": "7b4b7086",
-   "book": "FanDuel",
-   "pick": "Chicago Bulls ML",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "CHI 99-134 BOS",
-   "at": "2026-10-26 22:20"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-30 00:56 ET"
+ "last_change_at": "2026-10-30 14:33 ET"
 }

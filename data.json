@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T18:03Z"
+       "t": "2026-10-30T18:33Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T18:03Z"
+       "t": "2026-10-30T18:33Z"
       }
      },
      "pteam": "ATL",
@@ -2037,56 +2037,6 @@
    "start_ts": "2026-10-27T00:15Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "a8c38f67",
-   "date": "2026-10-29",
-   "book": "FanDuel",
-   "event": "NHL 3-leg parlay: Utah Mammoth @ Pittsburgh Penguins / Buffalo Sabres @ Anaheim Ducks / Vancouver Canucks @ San Jose Sharks",
-   "market": "Parlay 3-leg (40% profit boost; bet id 0/0979720/0000696)",
-   "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
-   "start": "Thu Oct 29 07:09 PM ET",
-   "price": "+585",
-   "boosted_price": "+819",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 4.1,
-   "ev_pct": "25.3",
-   "fair_pct": "13.6",
-   "multi": true,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Utah Mammoth",
-     "line": -1.5,
-     "women": false,
-     "text": "Utah Mammoth -1.5"
-    },
-    {
-     "type": "spread",
-     "team": "Anaheim Ducks",
-     "line": 1.5,
-     "women": false,
-     "text": "Anaheim Ducks +1.5"
-    },
-    {
-     "type": "ml",
-     "team": "San Jose Sharks",
-     "women": false,
-     "text": "San Jose Sharks ML"
-    }
-   ],
-   "match": null,
-   "sport": null,
-   "cash_stake": 0.5,
-   "payout": 4.6,
-   "payout_est": false,
-   "start_ts": "2026-10-29T23:09Z",
-   "clv": {
-    "placed_at": "2026-10-29 15:45",
     "close_price": null,
     "clv_pct": null
    }
@@ -2744,7 +2694,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T18:03Z"
+     "t": "2026-10-30T18:33Z"
     }
    },
    "sport": "NCAAF",
@@ -3455,7 +3405,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T18:03Z"
+     "t": "2026-10-30T18:33Z"
     }
    },
    "sport": "NFL",
@@ -4166,7 +4116,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-30T18:03Z"
+     "t": "2026-10-30T18:33Z"
     }
    },
    "sport": "NFL",
@@ -4195,6 +4145,21 @@
     "placed_at": "2026-10-29 17:40",
     "close_price": "-175",
     "clv_pct": -0.96
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "book": "FanDuel",
+   "event": "NHL 3-leg parlay: Utah Mammoth @ Pittsburgh Penguins / Buffalo Sabres @ Anaheim Ducks / Vancouver Canucks @ San Jose Sharks",
+   "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-29 15:45",
+    "close_price": null,
+    "clv_pct": null
    }
   },
   {
@@ -4843,30 +4808,30 @@
    }
   }
  ],
- "pnl_total": 115.26,
+ "pnl_total": 114.76,
  "unsettled": {
-  "n": 15,
-  "cash_stake": 14.6,
-  "max_payout": 271.8,
+  "n": 14,
+  "cash_stake": 14.1,
+  "max_payout": 267.2,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 14.6,
+ "open_stake": 14.1,
  "recs": {
   "stats": {
    "overall": {
     "n": 176,
     "w": 51,
-    "l": 86,
+    "l": 87,
     "p": 0,
-    "pending": 39,
-    "win_pct": 37.2,
-    "units": 14.94,
-    "roi_pct": 13.1,
-    "roi_n": 114,
-    "exp_roi_pct": 9.6,
-    "exp_wins": 46.6,
-    "exp_wins_n": 136,
+    "pending": 38,
+    "win_pct": 37.0,
+    "units": 13.94,
+    "roi_pct": 12.1,
+    "roi_n": 115,
+    "exp_roi_pct": 9.7,
+    "exp_wins": 46.7,
+    "exp_wins_n": 137,
     "wins_with_fair": 50
    },
    "by_promo": {
@@ -4978,16 +4943,16 @@
     "profit boost": {
      "n": 20,
      "w": 9,
-     "l": 10,
+     "l": 11,
      "p": 0,
-     "pending": 1,
-     "win_pct": 47.4,
-     "units": 11.54,
-     "roi_pct": 60.7,
-     "roi_n": 19,
-     "exp_roi_pct": 35.0,
-     "exp_wins": 6.5,
-     "exp_wins_n": 18,
+     "pending": 0,
+     "win_pct": 45.0,
+     "units": 10.54,
+     "roi_pct": 52.7,
+     "roi_n": 20,
+     "exp_roi_pct": 34.5,
+     "exp_wins": 6.7,
+     "exp_wins_n": 19,
      "wins_with_fair": 8
     },
     "qualifying bet for 5x$20": {
@@ -5025,16 +4990,16 @@
     "?": {
      "n": 7,
      "w": 0,
-     "l": 3,
+     "l": 4,
      "p": 0,
-     "pending": 4,
+     "pending": 3,
      "win_pct": 0.0,
-     "units": -2.0,
+     "units": -3.0,
      "roi_pct": -100.0,
-     "roi_n": 2,
-     "exp_roi_pct": 9.8,
-     "exp_wins": 0.6,
-     "exp_wins_n": 3,
+     "roi_n": 3,
+     "exp_roi_pct": 15.0,
+     "exp_wins": 0.8,
+     "exp_wins_n": 4,
      "wins_with_fair": 0
     },
     "Basketball": {
@@ -5207,16 +5172,16 @@
     "yes": {
      "n": 96,
      "w": 33,
-     "l": 59,
+     "l": 60,
      "p": 0,
-     "pending": 4,
-     "win_pct": 35.9,
-     "units": 23.94,
-     "roi_pct": 31.9,
-     "roi_n": 75,
-     "exp_roi_pct": 12.3,
-     "exp_wins": 29.7,
-     "exp_wins_n": 91,
+     "pending": 3,
+     "win_pct": 35.5,
+     "units": 22.94,
+     "roi_pct": 30.2,
+     "roi_n": 76,
+     "exp_roi_pct": 12.4,
+     "exp_wins": 29.8,
+     "exp_wins_n": 92,
      "wins_with_fair": 32
     },
     "no": {
@@ -5454,11 +5419,11 @@
     "promo": "profit boost",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "ledger log (auto)",
     "notes": "",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "bb1543a0",
@@ -9580,18 +9545,17 @@
   ]
  },
  "auto": {
-  "needs_review": [
+  "needs_review": [],
+  "last_settled": [
    {
     "bet_id": "a8c38f67",
     "book": "FanDuel",
-    "event": "NHL 3-leg parlay: Utah Mammoth @ Pittsburgh Penguins / Buffalo Sabres @ Anaheim Ducks / Vancouver Canucks @ San Jose Sharks",
     "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
-    "stake": "0.50",
-    "reason": "no ESPN game matched",
-    "legs": []
-   }
-  ],
-  "last_settled": [
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "UTA 4-3 PIT; BUF 7-6 ANA; VAN 2-3 SJ",
+    "at": "2026-10-30 14:33"
+   },
    {
     "bet_id": "43564ae1",
     "book": "FanDuel",
@@ -9807,27 +9771,18 @@
     "pnl": 0.58,
     "final": "DAL 38-21 PHI",
     "at": "2026-10-26 23:19"
-   },
-   {
-    "bet_id": "7b4b7086",
-    "book": "FanDuel",
-    "pick": "Chicago Bulls ML",
-    "result": "lost",
-    "pnl": -0.5,
-    "final": "CHI 99-134 BOS",
-    "at": "2026-10-26 22:20"
    }
   ],
-  "last_change_at": "2026-10-30 00:56 ET"
+  "last_change_at": "2026-10-30 14:33 ET"
  },
- "open_live_n": 15,
+ "open_live_n": 14,
  "open_stake_by_book": {
   "bet365": 0.4,
   "Caesars": 27.5,
   "DraftKings": 0.1,
-  "FanDuel": 1.6,
+  "FanDuel": 1.1,
   "PointsBet": 15.0
  },
- "hash": "9ca59ae43d35bf34814e3c23d031ea9a8b9ab8bc",
- "generated_at": "2026-10-30T14:03:06-04:00"
+ "hash": "72d0f739d26ef3cdfc9d5dbc24b8b5b7e0c9dcfe",
+ "generated_at": "2026-10-30T14:33:53-04:00"
 }
