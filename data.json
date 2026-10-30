@@ -1326,7 +1326,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T04:35Z"
+       "t": "2026-10-30T04:57Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +2021,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T04:35Z"
+       "t": "2026-10-30T04:57Z"
       }
      },
      "pteam": "ATL",
@@ -2037,283 +2037,6 @@
    "start_ts": "2026-10-27T00:15Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "43564ae1",
-   "date": "2026-10-29",
-   "book": "FanDuel",
-   "event": "Ottawa Senators @ Los Angeles Kings",
-   "market": "SGP 4-leg (50% profit boost; bet id O/0979720/0000697)",
-   "pick": "Ottawa Senators +1.5 + Los Angeles Kings +1.5 + Over 3.5 + Under 5.5",
-   "start": "Thu Oct 29 10:09 PM ET",
-   "price": "+438",
-   "boosted_price": "+657",
-   "stake": 0.5,
-   "stake_note": "",
-   "to_win": 3.29,
-   "ev_pct": "15.1",
-   "fair_pct": "15.2",
-   "multi": true,
-   "legs": [
-    {
-     "type": "spread",
-     "team": "Ottawa Senators",
-     "line": 1.5,
-     "women": false,
-     "text": "Ottawa Senators +1.5",
-     "team_ok": true
-    },
-    {
-     "type": "spread",
-     "team": "Los Angeles Kings",
-     "line": 1.5,
-     "women": false,
-     "text": "Los Angeles Kings +1.5",
-     "team_ok": true
-    },
-    {
-     "type": "total",
-     "side": "over",
-     "line": 3.5,
-     "text": "Over 3.5"
-    },
-    {
-     "type": "total",
-     "side": "under",
-     "line": 5.5,
-     "text": "Under 5.5"
-    }
-   ],
-   "match": {
-    "path": "hockey/nhl",
-    "date": "20261029",
-    "groups": null,
-    "id": "401892609",
-    "snapshot": {
-     "date": "2026-10-30T02:00Z",
-     "period": 3,
-     "clock": 446.0,
-     "state": "in",
-     "completed": false,
-     "detail": "7:26 - 3rd",
-     "teams": [
-      {
-       "id": "8",
-       "name": "Los Angeles Kings",
-       "abbr": "LA",
-       "short": "Kings",
-       "nick": "Kings",
-       "location": "Los Angeles",
-       "home": true,
-       "score": "5"
-      },
-      {
-       "id": "14",
-       "name": "Ottawa Senators",
-       "abbr": "OTT",
-       "short": "Senators",
-       "nick": "Senators",
-       "location": "Ottawa",
-       "home": false,
-       "score": "3"
-      }
-     ]
-    },
-    "pm": {
-     "slug": "nhl-ott-lak-2026-10-29",
-     "title": "Senators vs. Kings",
-     "spreads": [
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Kings",
-        "Senators"
-       ],
-       "tokens": [
-        "34184780635716367748854964629281665750139004530789669905396209746502313816750",
-        "107024398807982974364663980646524994494869133086144162025516765995001775665332"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Kings",
-        "Senators"
-       ],
-       "tokens": [
-        "32077962534330896112383920982538255729665426739303360668602539413602501638769",
-        "37808137972628520175089564469626468811145931705912171780785485760960414945282"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Kings",
-        "Senators"
-       ],
-       "tokens": [
-        "36357149737549249917335485107971601261461931260747582979033794813816631531460",
-        "76333224763500406170365911133153404311182291417712059048407669120278372887784"
-       ]
-      },
-      {
-       "line": -3.5,
-       "outcomes": [
-        "Senators",
-        "Kings"
-       ],
-       "tokens": [
-        "62627822463323456263146347325675582144241063924629588454148220860467305672153",
-        "105270612038365342473787138914944655516442086073833538001673710691229152279932"
-       ]
-      },
-      {
-       "line": -1.5,
-       "outcomes": [
-        "Senators",
-        "Kings"
-       ],
-       "tokens": [
-        "30565495985104108320291023714727808413617029777092362387736423724420289292476",
-        "25096485097925427839353148310739538006114840916080136775592510426904755515642"
-       ]
-      },
-      {
-       "line": -2.5,
-       "outcomes": [
-        "Senators",
-        "Kings"
-       ],
-       "tokens": [
-        "59137902869099584406941816343426098808277853063897751976975340737621728276942",
-        "56288981635051382642944870441399988406439125184558971760915531111220791703795"
-       ]
-      }
-     ],
-     "totals": [
-      {
-       "line": 4.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "114386927865671409307699234401736583402463894195705065611976070122168726914785",
-        "84836370472056071806477056699294270008843650784288399699288195799587533143058"
-       ]
-      },
-      {
-       "line": 5.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "72502555309482514683699001847777657161838857383401612428807406272843800624998",
-        "58004077238951706349386796227569480763643180637040464417510370387617001134683"
-       ]
-      },
-      {
-       "line": 6.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "86918088073737038073909864283580375427012100814011364550440504405624179567178",
-        "92285801658578859449547029885332480497797188854162496821548114755987713387020"
-       ]
-      },
-      {
-       "line": 7.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "58670778932226448456354797836089022276814602541886808367745548543225575908188",
-        "8069985488596067451918540691216079234489807209610073969333109746493225213655"
-       ]
-      },
-      {
-       "line": 2.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "102202003475412722429231049328623829139147555153599591657977399658859104086169",
-        "8759567037560912432060172479903915487597160589796526804223856891215500248913"
-       ]
-      },
-      {
-       "line": 3.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "45815309056707776398958744706889968962318296909456260611461522733295611159772",
-        "66933427073710589476697805833610343260942679175843162986573846864004377129072"
-       ]
-      },
-      {
-       "line": 9.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "31182931489964476519358996362929216516413408950567221807465427967423264439970",
-        "107140615364843287247986212370879988249214434736869453604386259430906664408354"
-       ]
-      },
-      {
-       "line": 8.5,
-       "outcomes": [
-        "Over",
-        "Under"
-       ],
-       "tokens": [
-        "71846296338300002746914568756807266637978389558618707461444251155766919011713",
-        "32543877849405512702503384794095344162657653933087280852515227612915534010220"
-       ]
-      }
-     ],
-     "ml": {
-      "outcomes": [
-       "Senators",
-       "Kings"
-      ],
-      "tokens": [
-       "33292501242101657683501449144711122502330590152252756854328573035275179116508",
-       "89066501822358026942375813576604137742850241826772306584188838257752111122599"
-      ]
-     }
-    },
-    "an": {
-     "id": 293511,
-     "home_team_id": 217,
-     "away_team_id": 230
-    },
-    "kal": {
-     "src": "Kalshi",
-     "home": 0.81,
-     "away": 0.19,
-     "spread": 0.02,
-     "t": "2026-10-30T04:35Z"
-    }
-   },
-   "sport": "NHL",
-   "cash_stake": 0.5,
-   "payout": 3.79,
-   "payout_est": false,
-   "start_ts": "2026-10-30T02:09Z",
-   "clv": {
-    "placed_at": "2026-10-29 15:45",
     "close_price": null,
     "clv_pct": null
    }
@@ -3021,7 +2744,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T04:35Z"
+     "t": "2026-10-30T04:57Z"
     }
    },
    "sport": "NCAAF",
@@ -3732,7 +3455,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T04:35Z"
+     "t": "2026-10-30T04:57Z"
     }
    },
    "sport": "NFL",
@@ -4443,7 +4166,7 @@
      "home": 0.8535,
      "away": 0.1465,
      "spread": 0.01,
-     "t": "2026-10-30T04:35Z"
+     "t": "2026-10-30T04:57Z"
     }
    },
    "sport": "NFL",
@@ -4472,6 +4195,21 @@
     "placed_at": "2026-10-29 17:40",
     "close_price": "-175",
     "clv_pct": -0.96
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "book": "FanDuel",
+   "event": "Ottawa Senators @ Los Angeles Kings",
+   "pick": "Ottawa Senators +1.5 + Los Angeles Kings +1.5 + Over 3.5 + Under 5.5",
+   "result": "lost",
+   "pnl": -0.5,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-29 15:45",
+    "close_price": null,
+    "clv_pct": null
    }
   },
   {
@@ -5105,30 +4843,30 @@
    }
   }
  ],
- "pnl_total": 115.76,
+ "pnl_total": 115.26,
  "unsettled": {
-  "n": 16,
-  "cash_stake": 15.1,
-  "max_payout": 275.59,
+  "n": 15,
+  "cash_stake": 14.6,
+  "max_payout": 271.8,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 15.1,
+ "open_stake": 14.6,
  "recs": {
   "stats": {
    "overall": {
     "n": 176,
     "w": 51,
-    "l": 85,
+    "l": 86,
     "p": 0,
-    "pending": 40,
-    "win_pct": 37.5,
-    "units": 15.94,
-    "roi_pct": 14.1,
-    "roi_n": 113,
-    "exp_roi_pct": 9.5,
-    "exp_wins": 46.4,
-    "exp_wins_n": 135,
+    "pending": 39,
+    "win_pct": 37.2,
+    "units": 14.94,
+    "roi_pct": 13.1,
+    "roi_n": 114,
+    "exp_roi_pct": 9.6,
+    "exp_wins": 46.6,
+    "exp_wins_n": 136,
     "wins_with_fair": 50
    },
    "by_promo": {
@@ -5240,16 +4978,16 @@
     "profit boost": {
      "n": 20,
      "w": 9,
-     "l": 9,
+     "l": 10,
      "p": 0,
-     "pending": 2,
-     "win_pct": 50.0,
-     "units": 12.54,
-     "roi_pct": 69.7,
-     "roi_n": 18,
-     "exp_roi_pct": 36.1,
-     "exp_wins": 6.4,
-     "exp_wins_n": 17,
+     "pending": 1,
+     "win_pct": 47.4,
+     "units": 11.54,
+     "roi_pct": 60.7,
+     "roi_n": 19,
+     "exp_roi_pct": 35.0,
+     "exp_wins": 6.5,
+     "exp_wins_n": 18,
      "wins_with_fair": 8
     },
     "qualifying bet for 5x$20": {
@@ -5287,16 +5025,16 @@
     "?": {
      "n": 7,
      "w": 0,
-     "l": 2,
+     "l": 3,
      "p": 0,
-     "pending": 5,
+     "pending": 4,
      "win_pct": 0.0,
-     "units": -1.0,
+     "units": -2.0,
      "roi_pct": -100.0,
-     "roi_n": 1,
-     "exp_roi_pct": 4.5,
-     "exp_wins": 0.5,
-     "exp_wins_n": 2,
+     "roi_n": 2,
+     "exp_roi_pct": 9.8,
+     "exp_wins": 0.6,
+     "exp_wins_n": 3,
      "wins_with_fair": 0
     },
     "Basketball": {
@@ -5469,16 +5207,16 @@
     "yes": {
      "n": 96,
      "w": 33,
-     "l": 58,
+     "l": 59,
      "p": 0,
-     "pending": 5,
-     "win_pct": 36.3,
-     "units": 24.94,
-     "roi_pct": 33.7,
-     "roi_n": 74,
-     "exp_roi_pct": 12.2,
-     "exp_wins": 29.5,
-     "exp_wins_n": 90,
+     "pending": 4,
+     "win_pct": 35.9,
+     "units": 23.94,
+     "roi_pct": 31.9,
+     "roi_n": 75,
+     "exp_roi_pct": 12.3,
+     "exp_wins": 29.7,
+     "exp_wins_n": 91,
      "wins_with_fair": 32
     },
     "no": {
@@ -5739,11 +5477,11 @@
     "promo": "profit boost",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
+    "result": "lost",
     "final_score": "",
     "source": "ledger log (auto)",
     "notes": "",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "53d3e261",
@@ -9855,6 +9593,15 @@
   ],
   "last_settled": [
    {
+    "bet_id": "43564ae1",
+    "book": "FanDuel",
+    "pick": "Ottawa Senators +1.5 + Los Angeles Kings +1.5 + Over 3.5 + Under 5.5",
+    "result": "lost",
+    "pnl": -0.5,
+    "final": "OTT 5-6 LA",
+    "at": "2026-10-30 00:56"
+   },
+   {
     "bet_id": "e5fc922f",
     "book": "bet365",
     "pick": "Carolina Panthers ML + Under 46.5",
@@ -10069,27 +9816,18 @@
     "pnl": -0.5,
     "final": "CHI 99-134 BOS",
     "at": "2026-10-26 22:20"
-   },
-   {
-    "bet_id": "ea264435",
-    "book": "bet365",
-    "pick": "Gabby Williams 2+ Threes Made + Angel Reese 10+ Rebounds + Jordin Canada 5+ Assists",
-    "result": "lost",
-    "pnl": -0.4,
-    "final": "ATL 55-64 GS",
-    "at": "2026-10-26 22:18"
    }
   ],
-  "last_change_at": "2026-10-29 23:25 ET"
+  "last_change_at": "2026-10-30 00:56 ET"
  },
- "open_live_n": 16,
+ "open_live_n": 15,
  "open_stake_by_book": {
   "bet365": 0.4,
   "Caesars": 27.5,
   "DraftKings": 0.1,
-  "FanDuel": 2.1,
+  "FanDuel": 1.6,
   "PointsBet": 15.0
  },
- "hash": "28f98f95defb84651380283bceda71848e8f0c0c",
- "generated_at": "2026-10-30T00:35:36-04:00"
+ "hash": "b63ac7c6a8bcedb2da6747365e6b3a378a5092af",
+ "generated_at": "2026-10-30T00:57:11-04:00"
 }

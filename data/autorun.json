@@ -12,6 +12,15 @@
  ],
  "last_settled": [
   {
+   "bet_id": "43564ae1",
+   "book": "FanDuel",
+   "pick": "Ottawa Senators +1.5 + Los Angeles Kings +1.5 + Over 3.5 + Under 5.5",
+   "result": "lost",
+   "pnl": -0.5,
+   "final": "OTT 5-6 LA",
+   "at": "2026-10-30 00:56"
+  },
+  {
    "bet_id": "e5fc922f",
    "book": "bet365",
    "pick": "Carolina Panthers ML + Under 46.5",
@@ -226,17 +235,8 @@
    "pnl": -0.5,
    "final": "CHI 99-134 BOS",
    "at": "2026-10-26 22:20"
-  },
-  {
-   "bet_id": "ea264435",
-   "book": "bet365",
-   "pick": "Gabby Williams 2+ Threes Made + Angel Reese 10+ Rebounds + Jordin Canada 5+ Assists",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "ATL 55-64 GS",
-   "at": "2026-10-26 22:18"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-29 23:25 ET"
+ "last_change_at": "2026-10-30 00:56 ET"
 }
