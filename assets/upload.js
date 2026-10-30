@@ -57,14 +57,19 @@
   function slim(b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; }
   // whole history like the server (scripts/add_bets.py uses all_bets(): live + settled + archived)
   // bets logged with a guessed "unconfirmed (~price)" price (stats.json game_plan.unconfirmed_list): flagged so they get confirmed
+  var CFM_KEY = 'bt.cfm.hide';   // bet ids the user chose to ignore (this phone only); a new unconfirmed bet still shows
+  function cfmGone() { try { var v = JSON.parse(localStorage.getItem(CFM_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
   function loadUnconfirmed() {
     fetch('stats.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (st) {
-      var list = ((st && st.game_plan) || {}).unconfirmed_list || [], box = document.getElementById('confirm');
+      var gone = cfmGone(), all = ((st && st.game_plan) || {}).unconfirmed_list || [], box = document.getElementById('confirm');
+      var list = all.filter(function (b) { return gone.indexOf(b.bet_id) < 0; });
       if (!box || !list.length) return;
       document.getElementById('confirm-rows').innerHTML = list.map(function (b) {
         var res = b.result === 'open' ? 'open' : b.result + ' ' + (b.pnl >= 0 ? '+' : '\u2212') + '$' + Math.abs(b.pnl).toFixed(2);
         return '<div class="cfm"><b>\u26a0 ' + esc(b.date.slice(5) + ' ' + b.book) + '</b> \u00b7 ' + esc(b.pick) + '<div class="muted small">' + esc(b.market) + ' \u00b7 price ' + esc(b.price || '?') + ' \u00b7 stake ' + esc(b.stake) + ' \u00b7 ' + esc(res) + ' \u00b7 id ' + esc(b.bet_id) + '</div></div>';
       }).join('');
+      var hb = document.getElementById('cfm-hide');
+      if (hb) hb.onclick = function () { try { localStorage.setItem(CFM_KEY, JSON.stringify(gone.concat(list.map(function (b) { return b.bet_id; })))); } catch (e) {} box.hidden = true; };
       box.hidden = false;
     }).catch(function () {});
   }
