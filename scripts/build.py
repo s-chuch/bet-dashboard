@@ -423,7 +423,7 @@ def build_bet(row):
     paths = candidate_paths(ev_raw, market)
     is_multi = bool(re.search(r"parlay|sgp|leg", market + " " + pick, re.I))
     leg_texts = [x for x in re.split(r"\s+\+\s+", pick) if x]
-    same_game = bool(re.search(r"\s@\s|\svs\.?\s|\sv\s", ev_clean, re.I))
+    same_game = bool(re.search(r"\s@\s|\svs\.?\s|\sv\s", ev_clean, re.I)) and not re.search(r"\s/\s|;", ev_clean)   # "A @ B / C @ D" is several games
     same_game_ev = same_game   # the event names a game, even when the legs end up looked up one by one
     if is_multi and len(leg_texts) < 2:
         ev_legs = [x for x in re.split(r"\s+\+\s+", ev_clean) if x]

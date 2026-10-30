@@ -25,7 +25,7 @@ function pickSit(si){if(!si)return null;const o={};for(const[k,v]of Object.entri
     if(typeof v!=="object")o[k]=v;else if((k==="batter"||k==="pitcher")&&v.athlete)o[k]={n:v.athlete.shortName||v.athlete.displayName,s:v.summary||""};
     else if(/fouls|bonus/i.test(k))o[k]=v}return o}
 const key=m=>m.path+"|"+m.date+"|"+(m.groups||"");
-function gameFor(m){if(!m)return null;if(!games[m.id]&&m.snapshot)m.snapshot.id=m.id;return games[m.id]||m.snapshot}
+function gameFor(m){if(!m)return null;if(!games[m.id]&&m.snapshot)m.snapshot.id=m.id;const g=games[m.id]||m.snapshot;return g&&g.teams&&g.teams.length>=2?g:null}   // a game without both sides is treated as absent
 function tfetch(u,o,ms){const ac=new AbortController(),t=setTimeout(()=>ac.abort(),ms||8000);return fetch(u,{...(o||{}),signal:ac.signal}).finally(()=>clearTimeout(t))}
 async function getJSON(u){const r=await tfetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
 const CLK={}, RS={};
@@ -1005,8 +1005,8 @@ const saveUI=()=>{try{localStorage.setItem("bd_open",JSON.stringify([...OPEN]));
 const fmtLine=v=>(v>0?"+":"")+v;
 function shortLabel(b,g){
   const team=t=>{if(!g)return null;const i=sideIdx(g,t);return i<0?null:g.teams[i]};
-  const aw=g&&g.teams.find(t=>!t.home),hm=g&&g.teams.find(t=>t.home), matchup=g?`${aw.abbr}/${hm.abbr}`:"";
-  if(b.multi)return b.match?`SGP ${g?aw.abbr+" @ "+hm.abbr:""} · ${b.legs.length} legs`:`${b.legs.length}-leg parlay`;
+  const aw=g&&g.teams.find(t=>!t.home),hm=g&&g.teams.find(t=>t.home), matchup=aw&&hm?`${aw.abbr}/${hm.abbr}`:"";
+  if(b.multi)return b.match?`SGP ${aw&&hm?aw.abbr+" @ "+hm.abbr:""} · ${b.legs.length} legs`:`${b.legs.length}-leg parlay`;
   const L=b.legs[0];if(!L)return b.pick;
   if(L.type==="ml"){const t=team(L.team);return `${t?(t.nick||t.short||t.name):L.team} ML`}
   if(L.type==="spread"){const t=team(L.team);return `${t?t.abbr:L.team} ${fmtLine(L.line)}`}
@@ -1032,7 +1032,7 @@ function needLines(b){const ls=b.legs.map(L=>needLeg(L,b.sport)).filter(Boolean)
 function rowScore(b,g,legStats){
   const start=x=>{const d=new Date(x.date),today=etDay(Date.now())===etDay(x.date);
     return d.toLocaleString("en-US",{timeZone:TZ,...(today?{}:{weekday:"short"}),hour:"numeric",minute:"2-digit"})};
-  const one=x=>{if(!x)return"";const aw=x.teams.find(t=>!t.home),hm=x.teams.find(t=>t.home);
+  const one=x=>{if(!x)return"";const aw=(x.teams||[]).find(t=>!t.home),hm=(x.teams||[]).find(t=>t.home);if(!aw||!hm)return rawStart(b.start);
     if(x.state==="pre")return `${start(x)}<small>${today(x)?"Today":"Starts"} ET</small>`;
     return `${esc(aw.abbr)} ${esc(aw.score)}–${esc(hm.score)} ${esc(hm.abbr)}<small>${x.completed?"Final":`${stIcon(x)}<span data-clk="${esc(x.id)}" data-sep=" ">${esc(clockText(x," "))}</span>`}</small>`};
   const today=x=>etDay(Date.now())===etDay(x.date);
