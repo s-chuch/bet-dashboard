@@ -1087,8 +1087,9 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
     const graded=status==="WON"||status==="LOST"||(status==="PUSH"&&allFinal);
     // At risk / payout come from DATA.unsettled (all bets still open in the tracker, finals included); FINAL_BI = final-but-unsettled
     if(allFinal)FINAL_BI.add(D.open.indexOf(b));
-    if(graded&&b.date===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}
-    const ts0=b.start_ts?Date.parse(b.start_ts):NaN,ts=isFinite(ts0)?ts0:(isFinite(t)?t:null);const BK={book:b.book,stake:(b.cash_stake!=null?b.cash_stake:(b.stake||0)),ts};const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
+    const ts0=b.start_ts?Date.parse(b.start_ts):NaN,ts=isFinite(ts0)?ts0:(isFinite(t)?t:null);
+    // "tonight" counts what finished today (the game's day), not what was placed today: a bet from last week that wins tonight still counts
+    if(graded&&(ts!=null?etDay(ts):b.date)===TODAY){if(status==="WON"){if(b.to_win!=null)tonight+=b.to_win;else tonightTBC++}else if(status==="LOST")tonight-=b.stake||0}const BK={book:b.book,stake:(b.cash_stake!=null?b.cash_stake:(b.stake||0)),ts};const toFinal=()=>{if(!FINSEEN.has(k)){FINSEEN.add(k);if(OPEN.delete(k))html=html.replace(" open\"","\"");saveUI()}};
     if(status==="LOST"){toFinal();lostCards.push({html,...BK});lostPending+=b.stake||0}
     else if(gs.some(gLive))liveCards.push({html,...BK});
     else if(gs.length&&gs.length===(b.match?1:b.legs.length)&&gs.every(g=>g.completed)){toFinal();wonCards.push({html,...BK});if(status==="WON")wonPending+=b.to_win||0}
@@ -1096,7 +1097,7 @@ function render(){try{renderReview();renderFeeds()}catch(e){}
   // per-book "(wagered)" = cash stake of ALL unsettled bets of that book (bonus bets 0); Total equals the At-risk tile
   const WAG={};for(const x of D.open)WAG[bkey(x.book)]=(WAG[bkey(x.book)]||0)+(x.cash_stake||0);const wagT=Object.values(WAG).reduce((a,v)=>a+v,0);
   setHTML($("bal"),D.balances.map(b=>`<div><span class="bn">${esc(b.book)}</span><span class="bv"><b>${money(b.balance)}</b><i class="wag">(${money(WAG[bkey(b.book)]||0)})</i></span></div>`).join("")+`<div class="tot"><span class="bn">Total</span><span class="bv"><b>${money(D.total)}</b><i class="wag">(${money(wagT)})</i></span></div>`);
-  for(const x of D.settled_recent||[])if(x.date===TODAY&&x.pnl!=null)tonight+=x.pnl;
+  for(const x of D.settled_recent||[])if((x.settled_at?x.settled_at.slice(0,10):x.date)===TODAY&&x.pnl!=null)tonight+=x.pnl;
   const sg=v=>(v>=0?"+":"−")+money(Math.abs(v));
   $("sum").innerHTML=`<div>At risk<b>${money(D.unsettled.cash_stake)}</b><small>${D.unsettled.n} unsettled bet${D.unsettled.n===1?"":"s"}${FINAL_BI.size?` · ${FINAL_BI.size} final, awaiting settle`:""}</small></div><div>Tonight so far<b class="${tonight>=0?"pos":"neg"}">${sg(tonight)}</b><small>${tonightTBC?`+ ${tonightTBC} win TBC`:"today's bets, live-graded"}</small></div><div>Potential payout<b id="expPay">…</b><small id="expSub"></small></div><div>Expected P&amp;L (est.)<b id="expPL">…</b><small>probability-weighted, our estimate</small></div><div class="wide">Tracker P&amp;L<b class="${D.pnl_total>=0?"pos":"neg"}">${sg(D.pnl_total)}</b><small>settled, all time</small></div>`;
   const sy=window.scrollY;   // patch only what changed, keep the reader's scroll position

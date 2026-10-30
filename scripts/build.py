@@ -755,10 +755,11 @@ def build(verbose=True):
     balances.sort(key=lambda b: -(b["balance"] or 0))
     total = round(sum(b["balance"] or 0 for b in balances), 2)
     recent_cut = (now_et().date() - datetime.timedelta(days=5)).isoformat()
-    settled = [{"date": r["date"], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r["event"]),
+    # recent = placed OR settled in the window, so a bet placed days ago that settles today still shows (and counts toward "tonight")
+    settled = [{"date": r["date"], "settled_at": (r.get("settled_at") or "")[:16], "book": r["book"], "event": re.sub(r"\s*\([^)]*\)", "", r["event"]),
                 "pick": r["pick"], "result": r["result"], "pnl": num(r["pnl"]), "stake": num(r["stake"]),
                 "auto": "auto" in (r.get("settled_by") or ""), "clv": _clv(r.get("bet_id"))}
-               for r in rows if r["result"].strip().lower() not in ("open", "") and r["date"] >= recent_cut]
+               for r in rows if r["result"].strip().lower() not in ("open", "") and (r["date"] >= recent_cut or (r.get("settled_at") or "")[:10] >= recent_cut)]
     pnl_total = round(sum(num(r["pnl"]) or 0 for r in rows if r["result"].strip().lower() not in ("open", "")), 2)
     auto = json.load(open(AUTO)) if os.path.exists(AUTO) else {}
     data = {"balances": balances, "total": total, "open": bets, "settled_recent": settled[::-1],
