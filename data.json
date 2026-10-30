@@ -2086,10 +2086,10 @@
     "snapshot": {
      "date": "2026-10-30T00:00Z",
      "period": 2,
-     "clock": 516.0,
+     "clock": 510.0,
      "state": "in",
      "completed": false,
-     "detail": "8:36 - 2nd",
+     "detail": "8:30 - 2nd",
      "teams": [
       {
        "id": "3",
@@ -2099,7 +2099,7 @@
        "nick": "Pelicans",
        "location": "New Orleans",
        "home": true,
-       "score": "36"
+       "score": "38"
       },
       {
        "id": "23",
@@ -2787,8 +2787,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.725,
-     "away": 0.275,
+     "home": 0.7323,
+     "away": 0.2677,
      "spread": 0.01,
      "t": "2026-10-30T00:51Z"
     }
@@ -6242,10 +6242,10 @@
     "snapshot": {
      "date": "2026-10-29T23:30Z",
      "period": 2,
-     "clock": 726.0,
+     "clock": 693.0,
      "state": "in",
      "completed": false,
-     "detail": "12:06 - 2nd",
+     "detail": "11:33 - 2nd",
      "teams": [
       {
        "id": "5",
@@ -6448,9 +6448,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.559,
-     "away": 0.441,
-     "spread": 0.03,
+     "home": 0.5436,
+     "away": 0.4564,
+     "spread": 0.05,
      "t": "2026-10-30T00:51Z"
     }
    },
@@ -12306,6 +12306,6 @@
   "PointsBet": 15.0,
   "theScore": 0.2
  },
- "hash": "f708432a581e720b576b497705560d8d97474801",
- "generated_at": "2026-10-29T20:51:22-04:00"
+ "hash": "4bdceea4e18a7b3b5b77d719ae89f5c126ef0d54",
+ "generated_at": "2026-10-29T20:51:58-04:00"
 }
