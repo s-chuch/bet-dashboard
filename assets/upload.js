@@ -375,7 +375,11 @@
       if (r.error) { bgCleanup(jobId, path); throw new Error(r.error.message || 'could not queue the job'); }
       return d.client.functions.invoke('read-slip', { body: { job_id: jobId, prompt: promptText('', '') } });
     }).then(function (r) {
-      if (r.error) { bgCleanup(jobId, path); throw new Error(r.error.message || 'the server reader did not start'); }
+      if (r.error) {
+        bgCleanup(jobId, path);
+        var ctx = r.error.context, why = ctx && typeof ctx.json === 'function' ? ctx.json().then(function (j) { return j && j.error; }, function () { return ''; }) : Promise.resolve('');
+        return why.then(function (m) { throw new Error(m || r.error.message || 'the server reader did not start'); });
+      }
       it.jobId = jobId; it.state = 'bg'; it.msg = '';
       if (window.Outbox && Outbox.slipAdd) Outbox.slipAdd(jobId, it.name);
     });

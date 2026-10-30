@@ -5,6 +5,7 @@ When this is on, the page uploads your bet-slip screenshot, a server function re
 ## Deploy (one time)
 
 1. Open the Supabase dashboard, SQL editor, paste the whole of `supabase/004_slip_jobs.sql` and run it. It is safe to run twice. It creates the `slip_jobs` table and the private `slips` storage bucket.
+   Then do the same with `supabase/005_slip_limit.sql`: it adds the daily limit (60 reads per person per day; see step 4 to change it).
 2. Install the Supabase CLI (https://supabase.com/docs/guides/cli). On Mac: `brew install supabase/tap/supabase`. On Windows: `scoop install supabase`. Or use `npx supabase ...` instead of `supabase` in the commands below.
 3. Log in and link the project (from the repo folder):
    ```
@@ -18,6 +19,10 @@ When this is on, the page uploads your bet-slip screenshot, a server function re
    Optional: choose the models, tried in order (default `gemini-2.5-flash,gemini-2.5-pro`):
    ```
    supabase secrets set READ_SLIP_MODELS=gemini-2.5-flash,gemini-2.5-pro
+   ```
+   Optional: change the daily limit per person (default 60, `0` switches reading off):
+   ```
+   supabase secrets set READ_SLIP_DAILY_LIMIT=40
    ```
    The key lives only in Supabase. Never put it in the repo, in a page, or in a commit.
 5. Deploy the function:
@@ -44,6 +49,7 @@ Delete the function: `supabase functions delete read-slip`. The page then falls 
 
 ## Cost and limits
 
+- Each signed-in person can read at most `READ_SLIP_DAILY_LIMIT` pictures a day (default 60). Past that the page quietly reads in the browser instead. Close public sign-ups in Supabase, Authentication, Providers/Sign In, if you do not want strangers to have accounts at all.
 - Gemini free tier has daily and per-minute request caps. If a model is busy or over its limit (429 or 5xx) or takes longer than 45 seconds, the next model in the list is tried. If all fail, the job ends as `error` and you can retry or add the bets by hand.
 - Images up to 12 MB (jpeg, png, webp). At most 30 rows are kept per slip. The prompt may be up to 20,000 characters.
 - Supabase Edge Functions and Storage free quotas are far above personal use.
