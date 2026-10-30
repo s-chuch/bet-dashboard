@@ -67,6 +67,21 @@ rc, a, d, o = run([v(pick="Eps ML", event="Eps @ Zed", market="Moneyline", price
 check("finder boosted preferred price prints boost rule OK", rc == 0 and a == 1 and "boost rule OK" in o, o)
 rc, a, d, o = run([v(pick="Plain ML", event="Plain @ Zed", market="Moneyline", price="+150", stake="1.00", to_win="1.50", **dict(FIND, selection="Plain ML", key="k-boost-3"))])
 check("finder unboosted bet prints no boost-rule line", rc == 0 and a == 1 and "boost rule" not in o.lower(), o)
+# same bet worded differently: abbreviations in a re-upload of a bet the box already logged
+sys.path.insert(0, os.path.join(tmp, "scripts"))
+import add_bets as AB
+mag = {"date": today, "book": "DraftKings", "event": "Orlando Magic @ Toronto Raptors (NBA)", "pick": "Orlando Magic ML", "stake": "0.30", "to_win": "0.81", "price": "+180", "boosted_price": "+270"}
+def alias(**kw): return dict({"date": today, "book": "DraftKings", "event": "ORL Magic @ TOR Raptors", "pick": "ORL Magic", "stake": "0.3", "to_win": "0.81"}, **kw)
+check("abbreviated re-upload of the same bet is a duplicate", AB.same_bet(alias(), mag))
+check("a different boost (different payout) is not a duplicate", not AB.same_bet(alias(to_win="0.70"), mag))
+check("another team at the same payout is not a duplicate", not AB.same_bet(alias(event="BOS Celtics @ NYK Knicks", pick="BOS Celtics"), mag))
+check("a different stake is not a duplicate", not AB.same_bet(alias(stake="0.5"), mag))
+check("a different book is not a duplicate", not AB.same_bet(alias(book="Caesars"), mag))
+yday = (datetime.date.today() - datetime.timedelta(days=3)).isoformat()
+check("same payout days apart is not a duplicate", not AB.same_bet(alias(date=yday), mag))
+check("two boosts on one game (different payouts) are two bets", not AB.same_bet(dict(mag, to_win="0.70"), mag))
+check("same wording, payout within a cent, is the same bet", AB.same_bet(dict(mag, to_win="0.80"), mag))
+check("pure abbreviation matches its full name", AB.same_bet(alias(event="ORL @ TOR", pick="ORL"), mag))
 rows = open(os.path.join(tmp, "data/bets.csv"), newline="").read().count("\r\n")
 shutil.rmtree(tmp, ignore_errors=True)
 print("FAILED: " + ", ".join(fails) if fails else "all passed"); sys.exit(1 if fails else 0)

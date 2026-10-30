@@ -44,9 +44,29 @@ def same_bet(a, b):
         if abs(float(str(a["stake"]).split(" ")[0]) - float(str(b["stake"]).split(" ")[0])) > 0.005: return False
         if abs((datetime.date.fromisoformat(a["date"]) - datetime.date.fromisoformat(b["date"])).days) > 3: return False
     except (ValueError, KeyError): return False
+    ta, tb = _money(a.get("to_win")), _money(b.get("to_win"))
+    if ta and tb and abs(ta - tb) > max(0.02, 0.05 * max(ta, tb)): return False   # both show a payout and it clearly differs (another boost): a different bet
     wa, na = sig(a); wb, nb = sig(b)
     if na != nb or not wa or not wb: return False
-    return len(wa & wb) / min(len(wa), len(wb)) >= 0.75
+    if len(wa & wb) / min(len(wa), len(wb)) >= 0.75: return True
+    return same_payout(a, b, wa, wb)
+
+def _money(x):
+    try: return float(str(x).split(" ")[0])
+    except (ValueError, TypeError): return None
+
+def same_payout(a, b, wa, wb):
+    """Same bet worded differently ('ORL Magic @ TOR Raptors' vs 'Orlando Magic @ Toronto Raptors (NBA)'): the stake is already equal,
+    so the same payout on the same or next day, with the names matching once abbreviations count, is the same bet.
+    A different boost pays a different amount, so two boosted bets on one game are not mistaken for each other."""
+    ta, tb = _money(a.get("to_win")), _money(b.get("to_win"))
+    if not ta or not tb or abs(ta - tb) > 0.02: return False
+    try:
+        if abs((datetime.date.fromisoformat(a["date"]) - datetime.date.fromisoformat(b["date"])).days) > 1: return False
+    except (ValueError, KeyError): return False
+    small, big = (wa, wb) if len(wa) <= len(wb) else (wb, wa)
+    alias = lambda x, y: x == y or (min(len(x), len(y)) >= 3 and (x.startswith(y) or y.startswith(x)))   # 'orl' ~ 'orlando'
+    return sum(any(alias(x, y) for y in big) for x in small) / len(small) >= 0.75
 
 def die(msg, code=2):
     print((f"::error::add bets refused: {msg}") if os.environ.get("GITHUB_ACTIONS") else f"REFUSED: {msg}", flush=True)

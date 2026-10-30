@@ -50,11 +50,18 @@
     if (String(a.book).trim().toLowerCase() !== String(b.book).trim().toLowerCase()) return false;
     if (Math.abs((parseFloat(a.stake) || 0) - (parseFloat(b.stake) || 0)) > 0.005) return false;
     var da = Date.parse(a.date), db = Date.parse(b.date); if (isNaN(da) || isNaN(db) || Math.abs(da - db) > 3 * 864e5) return false;
+    var wa = parseFloat(a.to_win), wb = parseFloat(b.to_win);
+    if (wa > 0 && wb > 0 && Math.abs(wa - wb) > Math.max(0.02, 0.05 * Math.max(wa, wb))) return false;   // both show a payout and it clearly differs (another boost): a different bet
     var x = sig(a), y = sig(b); if (x.n !== y.n || !x.w.length || !y.w.length) return false;
     var hit = x.w.filter(function (k) { return y.w.indexOf(k) >= 0; }).length;
-    return hit / Math.min(x.w.length, y.w.length) >= 0.75;
+    if (hit / Math.min(x.w.length, y.w.length) >= 0.75) return true;
+    // same bet worded differently ("ORL Magic" vs "Orlando Magic"): same payout on the same or next day with a shared team name or abbreviation (as add_bets.py same_payout)
+    var ta = parseFloat(a.to_win), tb = parseFloat(b.to_win); if (!(ta > 0) || !(tb > 0) || Math.abs(ta - tb) > 0.02 || Math.abs(da - db) > 864e5) return false;
+    var sm = x.w.length <= y.w.length ? x.w : y.w, bg = sm === x.w ? y.w : x.w;
+    var al = function (p, q) { return p === q || (Math.min(p.length, q.length) >= 3 && (p.indexOf(q) === 0 || q.indexOf(p) === 0)); };   // 'orl' ~ 'orlando'
+    return sm.filter(function (p) { return bg.some(function (q) { return al(p, q); }); }).length / sm.length >= 0.75;
   }
-  function slim(b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, date: b.date }; }
+  function slim(b) { return { book: b.book, event: b.event, pick: b.pick, stake: b.stake, to_win: b.to_win, date: b.date }; }
   // whole history like the server (scripts/add_bets.py uses all_bets(): live + settled + archived)
   function loadExisting() {
     fetch('archive.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (a) {
