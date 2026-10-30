@@ -2,8 +2,8 @@
  "balances": [
   {
    "book": "Caesars",
-   "balance": 208.34,
-   "updated": "2026-10-30 15:19"
+   "balance": 233.34,
+   "updated": "2026-10-30 17:52"
   },
   {
    "book": "FanDuel",
@@ -36,7 +36,7 @@
    "updated": "2026-10-20 16:53"
   }
  ],
- "total": 665.38,
+ "total": 690.38,
  "open": [
   {
    "bet_id": "9c0f1d9f",
@@ -491,78 +491,6 @@
     "placed_at": "2026-10-26 18:19",
     "close_price": null,
     "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "41aadad4",
-   "date": "2026-10-26",
-   "book": "Caesars",
-   "event": "Villarreal v Espanyol",
-   "market": "Match Result (bonus bet $5.00; bet id c54fc5a0-d17e-11f1-bbaa-91908\u2026)",
-   "pick": "Espanyol",
-   "start": "Fri Oct 30 04:00 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 25.0,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Espanyol",
-     "women": false,
-     "text": "Espanyol",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261030",
-    "groups": null,
-    "id": "401882817",
-    "snapshot": {
-     "date": "2026-10-30T20:00Z",
-     "period": 2,
-     "clock": 5100.0,
-     "state": "in",
-     "completed": false,
-     "detail": "85'",
-     "teams": [
-      {
-       "id": "102",
-       "name": "Villarreal",
-       "abbr": "VIL",
-       "short": "Villarreal",
-       "nick": "Villarreal",
-       "location": "Villarreal",
-       "home": true,
-       "score": "0"
-      },
-      {
-       "id": "88",
-       "name": "Espanyol",
-       "abbr": "ESP",
-       "short": "Espanyol",
-       "nick": "Espanyol",
-       "location": "Espanyol",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 25.0,
-   "payout_est": false,
-   "start_ts": "2026-10-30T20:00Z",
-   "clv": {
-    "placed_at": "2026-10-26 18:19",
-    "close_price": "+699",
-    "clv_pct": -24.87
    }
   },
   {
@@ -1326,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T21:42Z"
+       "t": "2026-10-30T21:52Z"
       }
      },
      "pteam": "BAL",
@@ -2021,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T21:42Z"
+       "t": "2026-10-30T21:52Z"
       }
      },
      "pteam": "ATL",
@@ -2694,7 +2622,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NCAAF",
@@ -3405,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NFL",
@@ -4116,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NFL",
@@ -4922,7 +4850,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NBA",
@@ -5728,7 +5656,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NBA",
@@ -6611,7 +6539,7 @@
      "home": 0.655,
      "away": 0.345,
      "spread": 0.01,
-     "t": "2026-10-30T21:42Z"
+     "t": "2026-10-30T21:52Z"
     }
    },
    "sport": "NBA",
@@ -7319,7 +7247,7 @@
        "home": 0.235,
        "away": 0.765,
        "spread": 0.01,
-       "t": "2026-10-30T21:42Z"
+       "t": "2026-10-30T21:52Z"
       }
      }
     },
@@ -7627,6 +7555,21 @@
     "placed_at": "2026-10-26 18:19",
     "close_price": "+130",
     "clv_pct": -13.22
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "book": "Caesars",
+   "event": "Villarreal v Espanyol",
+   "pick": "Espanyol",
+   "result": "won",
+   "pnl": 25.0,
+   "stake": 5.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 18:19",
+    "close_price": "+699",
+    "clv_pct": -24.87
    }
   },
   {
@@ -8020,11 +7963,11 @@
    }
   }
  ],
- "pnl_total": 114.76,
+ "pnl_total": 139.76,
  "unsettled": {
-  "n": 19,
+  "n": 18,
   "cash_stake": 15.8,
-  "max_payout": 275.14,
+  "max_payout": 250.14,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -12783,6 +12726,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "41aadad4",
+    "book": "Caesars",
+    "pick": "Espanyol",
+    "result": "won",
+    "pnl": 25.0,
+    "final": "ESP 1-0 VIL",
+    "at": "2026-10-30 17:52"
+   },
+   {
     "bet_id": "a8c38f67",
     "book": "FanDuel",
     "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
@@ -12997,27 +12949,18 @@
     "pnl": -0.4,
     "final": "DAL 38-21 PHI",
     "at": "2026-10-26 23:19"
-   },
-   {
-    "bet_id": "5b1eb75f",
-    "book": "Caesars",
-    "pick": "Over 45.5",
-    "result": "won",
-    "pnl": 0.58,
-    "final": "DAL 38-21 PHI",
-    "at": "2026-10-26 23:19"
    }
   ],
-  "last_change_at": "2026-10-30 14:33 ET"
+  "last_change_at": "2026-10-30 17:52 ET"
  },
- "open_live_n": 19,
+ "open_live_n": 18,
  "open_stake_by_book": {
   "bet365": 0.4,
-  "Caesars": 28.0,
+  "Caesars": 23.0,
   "DraftKings": 1.3,
   "FanDuel": 1.1,
   "PointsBet": 15.0
  },
- "hash": "bccd307e77f9ed6a3986498beeb7f9d085c5679e",
- "generated_at": "2026-10-30T17:42:25-04:00"
+ "hash": "94662820dc4dd3daa153eb8fe9f5455b3d6f5f1e",
+ "generated_at": "2026-10-30T17:52:52-04:00"
 }

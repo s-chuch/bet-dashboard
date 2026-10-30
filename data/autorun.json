@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "41aadad4",
+   "book": "Caesars",
+   "pick": "Espanyol",
+   "result": "won",
+   "pnl": 25.0,
+   "final": "ESP 1-0 VIL",
+   "at": "2026-10-30 17:52"
+  },
+  {
    "bet_id": "a8c38f67",
    "book": "FanDuel",
    "pick": "Utah Mammoth -1.5 (+208) + Anaheim Ducks +1.5 (-148) + San Jose Sharks ML (-129)",
@@ -216,17 +225,8 @@
    "pnl": -0.4,
    "final": "DAL 38-21 PHI",
    "at": "2026-10-26 23:19"
-  },
-  {
-   "bet_id": "5b1eb75f",
-   "book": "Caesars",
-   "pick": "Over 45.5",
-   "result": "won",
-   "pnl": 0.58,
-   "final": "DAL 38-21 PHI",
-   "at": "2026-10-26 23:19"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-30 14:33 ET"
+ "last_change_at": "2026-10-30 17:52 ET"
 }
