@@ -530,3 +530,4 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-29 16:56,Caesars,b369f42f,stake,-2.00,stake
 2026-10-29 17:40,theScore,1352efb7,stake,-0.20,stake
 2026-10-29 22:08,theScore,1352efb7,settled,0.00,"lost, no return"
+2026-10-29 22:25,bet365,3d02188f,settled,0.00,"lost, no return"
