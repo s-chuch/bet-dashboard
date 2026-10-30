@@ -3,7 +3,7 @@
 // Then (EdgeRuntime.waitUntil) the job goes queued -> reading -> done|error, and the image is always deleted.
 // Secrets (Supabase secrets, never in the repo): GEMINI_API_KEY; optional READ_SLIP_MODELS.
 import { createClient } from 'jsr:@supabase/supabase-js@2';
-import { geminiText, isRetryableStatus, parseModels, readWithFallback } from './logic.ts';
+import { geminiText, isRetryableStatus, parseLimit, parseModels, readWithFallback } from './logic.ts';
 
 declare const EdgeRuntime: { waitUntil(p: Promise<unknown>): void };
 
@@ -109,6 +109,10 @@ Deno.serve(async (req: Request) => {
   }
 
   const admin = createClient(url, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!, { auth: { persistSession: false } });
+  // Daily cap per user (005_slip_limit.sql). If that SQL has not been run yet the function is missing: allow the read rather than break reading.
+  const { data: allowed, error: le } = await admin.rpc('slip_use', { p_user: u.user.id, p_limit: parseLimit(Deno.env.get('READ_SLIP_DAILY_LIMIT')) });
+  if (!le && allowed === false) return json({ ok: false, error: 'daily limit reached' }, 429, cors);
+
   // Claim the job atomically so a double call cannot run twice.
   const { data: claimed } = await admin.from('slip_jobs').update({ status: 'reading' }).eq('id', jobId).eq('status', 'queued').select('id');
   if (!claimed || claimed.length !== 1) return json({ ok: false, error: 'job already started' }, 409, cors);

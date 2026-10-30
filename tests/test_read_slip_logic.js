@@ -45,4 +45,13 @@ await t('total failure gives short error', async () => {
   const r = await L.readWithFallback(['m1'], async () => { throw e; });
   assert.equal(r.ok, false); assert.match(r.error, /timeout/);
 });
+await t('parseLimit', () => {
+  assert.equal(L.parseLimit(undefined), 60);
+  assert.equal(L.parseLimit(''), 60);
+  assert.equal(L.parseLimit('25'), 25);
+  assert.equal(L.parseLimit('0'), 0);
+  assert.equal(L.parseLimit('-3'), 60);
+  assert.equal(L.parseLimit('abc'), 60);
+  assert.equal(L.parseLimit('2.5'), 60);
+});
 console.log('ok ' + n + ' tests');

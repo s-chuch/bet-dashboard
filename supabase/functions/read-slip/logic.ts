@@ -62,3 +62,10 @@ export async function readWithFallback(
   }
   return { ok: false, error: 'Could not read the screenshot (' + (last || 'no model available') + '). Try again or add the bets manually.' };
 }
+
+export const DEFAULT_DAILY_LIMIT = 60;
+/** READ_SLIP_DAILY_LIMIT secret -> reads allowed per user per day. Missing or invalid -> 60; 0 switches reading off. */
+export function parseLimit(env?: string | null): number {
+  const n = Number(String(env ?? '').trim());
+  return String(env ?? '').trim() !== '' && Number.isInteger(n) && n >= 0 && n <= 100000 ? n : DEFAULT_DAILY_LIMIT;
+}
