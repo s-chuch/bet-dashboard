@@ -24,9 +24,10 @@ on:
 # Deny everything by default; the job grants only what it needs.
 permissions: {}
 
-# shared with autorun so the two never overlap
+# own group (not "autorun"): GitHub keeps only ONE pending run per group, so sharing it let a busy autorun cancel a queued manual run.
+# The push retry loop (fetch/reset/push) makes overlapping with an autorun safe.
 concurrency:
-  group: autorun
+  group: bet-writes
   cancel-in-progress: false
 
 defaults:

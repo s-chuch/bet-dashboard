@@ -119,15 +119,18 @@ def players_of(s, m):
             keys = c.get("keys") or []; cat = c.get("name") or ("batting" if "atBats" in keys else "pitching" if "earnedRuns" in keys else "")
             for a in c.get("athletes", []):
                 ath = a.get("athlete", {}); q = P_(ath.get("id"), ath.get("displayName"), tm)
+                if a.get("didNotPlay") and not a.get("stats"): q["dnp"] = True   # ESPN's own flag, checked BEFORE the empty-stats skip
                 if not a.get("stats"): continue
                 q["cats"].add(cat)
-                if a.get("didNotPlay"): q["played"] = False
                 for k, v in zip(keys, a["stats"]):
                     q["stats"][f"{cat}.{k}"] = v
                     if "-" in k and "-" in str(v):   # "hits-atBats" style
                         for kk, vv in zip(k.split("-"), str(v).split("-")): q["stats"].setdefault(f"{cat}.{kk}", vv)
                     if "/" in k and "/" in str(v):
                         for kk, vv in zip(k.split("/"), str(v).split("/")): q["stats"].setdefault(f"{cat}.{kk}", vv)
+    for q in out.values():
+        # didNotPlay with no real stats anywhere -> did not play; any real stat line means he played
+        if q.pop("dnp", False) and not q["stats"]: q["played"] = False
     return list(out.values())
 
 def mlb_hit_types(s):
@@ -201,6 +204,10 @@ def _soccer_squad_dnp(name, games):
             if not soccer(m): continue
             squad = players_of(s, m)
             if len(squad) < 14: continue                      # no real matchday squad published
+            # spelling differences (accents, "Jr", short names) must not read as "absent": if ANY squad member shares a name
+            # word with the slip's name, he may be that player under another spelling -> not provably a DNP -> review
+            bw = {w for w in P.norm(name) if w not in P.SUFFIX and len(w) >= 3}
+            if any(bw & {w for w in P.norm(q["name"] or "") if w not in P.SUFFIX} for q in squad): continue
             hits = set()
             for t in m["snapshot"]["teams"]:
                 for a in P.team_roster(m["path"], t["id"]):
@@ -211,15 +218,28 @@ def _soccer_squad_dnp(name, games):
     return False
 
 _TD_SCORER = re.compile(r"^([A-Za-z][A-Za-z.'\- ]*?)\s+\d+\s+Yd\b", re.I)
-def td_scorers(s):
-    """Scorers of the game's touchdowns in order, from ESPN's scoringPlays ('Saquon Barkley 8 Yd Rush (...)', 'CeeDee Lamb 9 Yd pass from ...').
-    A play whose scorer can't be read comes back as None."""
+def _td_plays(s):
+    """[(text, scorer-or-None)] for each touchdown scoring play, in order (ESPN puts 'Touchdown' in type.text, not in text)."""
     out = []
     for p in s.get("scoringPlays", []) or []:
         ty = p.get("type") or {}; txt = str(p.get("text") or "")
-        if not (ty.get("abbreviation") == "TD" or "touchdown" in str(ty.get("text", "")).lower()): continue
-        m = _TD_SCORER.match(txt.strip()); out.append(m[1].strip() if m else None)
+        if not (ty.get("abbreviation") == "TD" or "touchdown" in str(ty.get("text") or "").lower()): continue
+        m = _TD_SCORER.match(txt.strip()); out.append((txt, m[1].strip() if m else None))
     return out
+
+def td_scorers(s):
+    """Scorers of the game's touchdowns in order, from ESPN's scoringPlays ('Saquon Barkley 8 Yd Rush (...)', 'CeeDee Lamb 9 Yd pass from ...').
+    A play whose scorer can't be read comes back as None."""
+    return [who for _, who in _td_plays(s)]
+
+def _named_in_td_play(name, s):
+    """True when `name` is the scorer of a TD play, or (scorer unreadable) his last name appears in that play's text."""
+    last = P.name_parts(name)[1]
+    for txt, who in _td_plays(s):
+        if who is not None:
+            if P.player_match(name, who): return True
+        elif last and last in P.norm(txt): return True
+    return False
 
 def _game_roster_dnp(name, games):
     """ESPN's own per-game roster flag: returns a note when ESPN lists this exact player (matched by athlete id, not name) as didNotPlay.
@@ -260,7 +280,22 @@ def grade_leg(L, games, book, ctx):
         if not scorers: raise Review(f'leg "{L["text"]}": no touchdown in ESPN scoringPlays (void or no TD? check by hand)')
         who = scorers[0] if L["stat"] == "firsttd" else scorers[-1]
         if not who: raise Review(f'leg "{L["text"]}": ESPN scoringPlays does not name the scorer')
-        return "won" if P.player_match(L["player"], who) else "lost"
+        if P.player_match(L["player"], who): return "won"
+        if _named_in_td_play(L["player"], games[0][1]): return "lost"    # he scored, just not first/last
+        # not the scorer and never named in a TD play: "lost" is only right if he actually played
+        m0, s0, _ = games[0]
+        if not m0["path"].startswith("football"): raise Review(f'leg "{L["text"]}": first/last TD only graded for football')
+        hits = [pl for pl in players_of(s0, m0) if P.player_match(L["player"], pl["name"])]
+        if len({h["id"] or h["name"] for h in hits}) > 1: raise Review(f'leg "{L["text"]}": "{L["player"]}" matches several players')
+        if hits:
+            if hits[0]["played"]: return "lost"
+            return "void"       # ESPN box score flags him didNotPlay
+        note = _game_roster_dnp(L["player"], games)
+        if note:
+            print("void leg:", L["text"], "-", note, file=sys.stderr)
+            if isinstance(ctx, dict): ctx.setdefault("notes", []).append(f'{L["text"]}: {note}')
+            return "void"
+        raise Review(f'leg "{L["text"]}": "{L["player"]}" did not score first/last and is not in the box score; cannot confirm he played (name mismatch or DNP?)')
     if t == "prop":
         cands = []
         for m, s, st in games:
@@ -291,8 +326,7 @@ def grade_leg(L, games, book, ctx):
         val = stat_value(L["stat"], pl, s, m)
         if val is None: raise Review(f'leg "{L["text"]}": stat {L["stat"]} missing for {pl["name"]}')
         if L["stat"] == "td" and val == 0:
-            nm = P.name_parts(pl["name"])[1]
-            if any(nm in P.norm(p.get("text", "")) and "touchdown" in p.get("text", "").lower() for p in s.get("scoringPlays", [])):
+            if _named_in_td_play(pl["name"], s):
                 raise Review(f'leg "{L["text"]}": {pl["name"]} named in a TD scoring play but no rush/rec/return TD')
         return cmp(val, L)
     # team / game legs: pick the game
