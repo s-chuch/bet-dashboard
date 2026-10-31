@@ -345,8 +345,8 @@
    "start_ts": "2026-10-31T17:30Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
+    "close_price": "+781",
+    "clv_pct": -20.55
    }
   },
   {
@@ -489,8 +489,8 @@
    "start_ts": "2026-10-31T17:30Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
+    "close_price": "+813",
+    "clv_pct": -23.33
    }
   },
   {
@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T15:20Z"
+       "t": "2026-10-31T17:12Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T15:20Z"
+       "t": "2026-10-31T17:12Z"
       }
      },
      "pteam": "ATL",
@@ -2001,11 +2001,11 @@
     "id": "401862816",
     "snapshot": {
      "date": "2026-10-31T16:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 734.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 12:00 PM EDT",
+     "detail": "12:14 - 2nd",
      "teams": [
       {
        "id": "58",
@@ -2025,7 +2025,7 @@
        "nick": "Blazers",
        "location": "UAB",
        "home": false,
-       "score": "0"
+       "score": "10"
       }
      ]
     },
@@ -2619,10 +2619,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.7277,
-     "away": 0.2723,
+     "home": 0.5,
+     "away": 0.5,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -2632,8 +2632,8 @@
    "start_ts": "2026-10-31T16:00Z",
    "clv": {
     "placed_at": "2026-10-29 16:52",
-    "close_price": "+257",
-    "clv_pct": -1.99
+    "close_price": "+256",
+    "clv_pct": -1.66
    }
   },
   {
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NFL",
@@ -4829,7 +4829,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T15:20Z"
+       "t": "2026-10-31T17:12Z"
       }
      }
     },
@@ -5725,7 +5725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -6612,7 +6612,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -6658,11 +6658,11 @@
     "id": "401858507",
     "snapshot": {
      "date": "2026-10-31T16:30Z",
-     "period": 0,
+     "period": 1,
      "clock": 0.0,
-     "state": "pre",
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 12:30 PM EDT",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "164",
@@ -6672,7 +6672,7 @@
        "nick": "Scarlet Knights",
        "location": "Rutgers",
        "home": true,
-       "score": "0"
+       "score": "3"
       },
       {
        "id": "130",
@@ -6682,7 +6682,7 @@
        "nick": "Wolverines",
        "location": "Michigan",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -7430,10 +7430,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.145,
-     "away": 0.855,
+     "home": 0.085,
+     "away": 0.915,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -8100,7 +8100,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -8987,7 +8987,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -9033,11 +9033,11 @@
     "id": "401866452",
     "snapshot": {
      "date": "2026-10-31T16:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 198.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 12:00 PM EDT",
+     "detail": "3:18 - 2nd",
      "teams": [
       {
        "id": "2711",
@@ -9047,7 +9047,7 @@
        "nick": "Broncos",
        "location": "Western Michigan",
        "home": true,
-       "score": "0"
+       "score": "14"
       },
       {
        "id": "189",
@@ -9057,7 +9057,7 @@
        "nick": "Falcons",
        "location": "Bowling Green",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -9651,10 +9651,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.835,
-     "away": 0.165,
+     "home": 0.865,
+     "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -10475,7 +10475,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -10521,11 +10521,11 @@
     "id": "401858278",
     "snapshot": {
      "date": "2026-10-31T16:00Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 2,
+     "clock": 376.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 12:00 PM EDT",
+     "detail": "6:16 - 2nd",
      "teams": [
       {
        "id": "183",
@@ -10535,7 +10535,7 @@
        "nick": "Orange",
        "location": "Syracuse",
        "home": true,
-       "score": "0"
+       "score": "13"
       },
       {
        "id": "2567",
@@ -10545,7 +10545,7 @@
        "nick": "Mustangs",
        "location": "SMU",
        "home": false,
-       "score": "0"
+       "score": "10"
       }
      ]
     },
@@ -11150,10 +11150,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.2426,
-     "away": 0.7574,
+     "home": 0.375,
+     "away": 0.625,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -11974,7 +11974,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -12791,7 +12791,7 @@
      "home": 0.265,
      "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NBA",
@@ -13458,7 +13458,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NCAAF",
@@ -14169,7 +14169,7 @@
      "home": 0.705,
      "away": 0.295,
      "spread": 0.01,
-     "t": "2026-10-31T15:20Z"
+     "t": "2026-10-31T17:12Z"
     }
    },
    "sport": "NFL",
@@ -15910,11 +15910,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 191,
+    "n": 193,
     "w": 53,
     "l": 90,
     "p": 0,
-    "pending": 48,
+    "pending": 50,
     "win_pct": 37.1,
     "units": 14.55,
     "roi_pct": 12.1,
@@ -16001,11 +16001,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 78,
+     "n": 80,
      "w": 25,
      "l": 38,
      "p": 0,
-     "pending": 15,
+     "pending": 17,
      "win_pct": 39.7,
      "units": 9.52,
      "roi_pct": 15.1,
@@ -16138,11 +16138,11 @@
      "wins_with_fair": 9
     },
     "NCAAF": {
-     "n": 55,
+     "n": 56,
      "w": 11,
      "l": 26,
      "p": 0,
-     "pending": 18,
+     "pending": 19,
      "win_pct": 29.7,
      "units": 6.69,
      "roi_pct": 18.1,
@@ -16183,11 +16183,11 @@
      "wins_with_fair": 9
     },
     "SOCCER": {
-     "n": 7,
+     "n": 8,
      "w": 4,
      "l": 3,
      "p": 0,
-     "pending": 0,
+     "pending": 1,
      "win_pct": 57.1,
      "units": 6.6,
      "roi_pct": 94.3,
@@ -16275,11 +16275,11 @@
      "wins_with_fair": 33
     },
     "no": {
-     "n": 85,
+     "n": 87,
      "w": 19,
      "l": 30,
      "p": 0,
-     "pending": 36,
+     "pending": 38,
      "win_pct": 38.8,
      "units": -11.09,
      "roi_pct": -25.8,
@@ -16308,6 +16308,52 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "5238a9ee",
+    "rec_date": "2026-10-31",
+    "rec_time_et": "13:12",
+    "sport": "NCAAF",
+    "event": "Mississippi State Bulldogs @ Texas Longhorns",
+    "market": "cash",
+    "selection": "Mississippi State Bulldogs to win",
+    "book": "theScore",
+    "rec_price": "+1000",
+    "eff_price": "+1000",
+    "fair_pct": "9.92",
+    "ev_pct": "9.1",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
+   {
+    "rec_id": "ff76678a",
+    "rec_date": "2026-10-31",
+    "rec_time_et": "13:11",
+    "sport": "SOCCER",
+    "event": "Auxerre @ Strasbourg",
+    "market": "cash",
+    "selection": "Auxerre to win",
+    "book": "bet365",
+    "rec_price": "+333",
+    "eff_price": "+333",
+    "fair_pct": "24.17",
+    "ev_pct": "4.66",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "06efadcc",
     "rec_date": "2026-10-30",
@@ -21218,6 +21264,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "14f1dd35bbb4c15cc80fef037dee9648ddf58746",
- "generated_at": "2026-10-31T11:20:45-04:00"
+ "hash": "b54b9ba0095375bdd866606d99a06c2f301f19a4",
+ "generated_at": "2026-10-31T13:12:13-04:00"
 }
