@@ -72,7 +72,6 @@ bet_id,placed_at,close_at,close_fair_pct,close_price,clv_pct,note,open_price_unb
 55dd52df,,,,,,"proxy close: no-vig ESPN final DraftKings line, not Pinnacle",+225,,+229,,-1.15,,espn_dk_final
 5919fefa,,,,,,"proxy close: no-vig ESPN final DraftKings line, not Pinnacle",+115,,+146,,-12.57,,espn_dk_final
 5c5ab743,,,,,,"proxy close: no-vig ESPN final DraftKings line, not Pinnacle",+155,,+161,,-2.12,,espn_dk_final
-5db8dfe1,,,,,,,+800,,,,,,
 5df01cb0,,,,,,,+525,+658,,,,,
 5febfd46,,,,,,"proxy close: no-vig ESPN final DraftKings line, not Pinnacle",+650,,+1700,,-58.33,,espn_dk_final
 622539ce,,,,,,,+111,+155,,,,,
@@ -288,7 +287,7 @@ ae6fff5d,2026-10-26 07:59,,,,,,-122,,,,,,
 0a3a4d16,2026-10-26 18:19,,,,,,+258,+310,,,,,
 0d3d206e,2026-10-26 18:19,2026-10-26 19:24,14.96,+569,-2.77,,+550,,+568,,-2.76,,pinnacle
 0df2d5ca,2026-10-26 18:19,,,,,no Pinnacle game match,+625,,,,,,
-18a957e1,2026-10-26 18:19,,,,,,+575,,,,,,
+18a957e1,2026-10-26 18:19,,,,,no Pinnacle game match,+575,,,,,,
 1e699888,2026-10-26 18:19,2026-10-31 13:12,11.35,+781,-20.55,,+600,,+781,,-20.55,,pinnacle
 41aadad4,2026-10-26 18:19,2026-10-30 15:50,12.52,+699,-24.87,,+500,,+699,,-24.87,,pinnacle
 5b1eb75f,2026-10-26 18:19,2026-10-26 19:46,43.39,+130,-13.22,,+100,+115,+130,+150,-13.22,-6.71,pinnacle
@@ -337,3 +336,4 @@ c4616af3,2026-10-30 21:55,,,,,,+475,,,,,,
 094c6cf9,2026-10-31 11:14,,,,,,+200,+260,,,,,
 3d639418,2026-10-31 11:14,2026-10-31 14:38,30.95,+223,14.53,,+270,+405,+223,+335,14.53,56.32,pinnacle
 c5ec1ae6,2026-10-31 11:14,,,,,,+205,+267,,,,,
+5db8dfe1,,2026-10-31 15:27,8.10,+1135,-27.13,,+800,,+1135,,-27.13,,pinnacle
