@@ -2619,8 +2619,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.5297,
-     "away": 0.4703,
+     "home": 0.495,
+     "away": 0.505,
      "spread": 0.01,
      "t": "2026-10-31T16:46Z"
     }
@@ -6659,10 +6659,10 @@
     "snapshot": {
      "date": "2026-10-31T16:30Z",
      "period": 1,
-     "clock": 443.0,
+     "clock": 441.0,
      "state": "in",
      "completed": false,
-     "detail": "7:23 - 1st",
+     "detail": "7:21 - 1st",
      "teams": [
       {
        "id": "164",
@@ -6682,7 +6682,7 @@
        "nick": "Wolverines",
        "location": "Michigan",
        "home": false,
-       "score": "0"
+       "score": "6"
       }
      ]
     },
@@ -7430,8 +7430,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.085,
-     "away": 0.915,
+     "home": 0.065,
+     "away": 0.935,
      "spread": 0.01,
      "t": "2026-10-31T16:46Z"
     }
@@ -9034,10 +9034,10 @@
     "snapshot": {
      "date": "2026-10-31T16:00Z",
      "period": 2,
-     "clock": 879.0,
+     "clock": 839.0,
      "state": "in",
      "completed": false,
-     "detail": "14:39 - 2nd",
+     "detail": "13:59 - 2nd",
      "teams": [
       {
        "id": "2711",
@@ -9651,9 +9651,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.8,
-     "away": 0.2,
-     "spread": 0.04,
+     "home": 0.825,
+     "away": 0.175,
+     "spread": 0.01,
      "t": "2026-10-31T16:46Z"
     }
    },
@@ -11150,9 +11150,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.265,
-     "away": 0.735,
-     "spread": 0.01,
+     "home": 0.2714,
+     "away": 0.7286,
+     "spread": 0.02,
      "t": "2026-10-31T16:46Z"
     }
    },
@@ -21218,6 +21218,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "65981f4256c938d54dfdf0adcfc749aebc99ef70",
- "generated_at": "2026-10-31T12:46:27-04:00"
+ "hash": "e87e7431b84cb562807c382d13c947a0f56ee537",
+ "generated_at": "2026-10-31T12:46:58-04:00"
 }
