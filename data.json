@@ -239,8 +239,8 @@
    "start_ts": "2026-10-31T20:00Z",
    "clv": {
     "placed_at": null,
-    "close_price": "+1135",
-    "clv_pct": -27.13
+    "close_price": "+1188",
+    "clv_pct": -30.15
    }
   },
   {
@@ -1110,7 +1110,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T19:29Z"
+       "t": "2026-10-31T19:34Z"
       }
      },
      "pteam": "BAL",
@@ -1805,7 +1805,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T19:29Z"
+       "t": "2026-10-31T19:34Z"
       }
      },
      "pteam": "ATL",
@@ -2522,7 +2522,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NFL",
@@ -3233,7 +3233,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NFL",
@@ -4018,7 +4018,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T19:29Z"
+       "t": "2026-10-31T19:34Z"
       }
      }
     },
@@ -4914,7 +4914,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -5798,10 +5798,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.905,
+     "away": 0.095,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -5848,10 +5848,10 @@
     "snapshot": {
      "date": "2026-10-31T16:30Z",
      "period": 4,
-     "clock": 258.0,
+     "clock": 143.0,
      "state": "in",
      "completed": false,
-     "detail": "4:18 - 4th",
+     "detail": "2:23 - 4th",
      "teams": [
       {
        "id": "164",
@@ -6619,10 +6619,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.095,
-     "away": 0.905,
+     "home": 0.025,
+     "away": 0.975,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -7289,7 +7289,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -8173,10 +8173,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.915,
-     "away": 0.085,
+     "home": 0.905,
+     "away": 0.095,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -8186,78 +8186,6 @@
    "start_ts": null,
    "clv": {
     "placed_at": "2026-10-30 21:52",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "a6e1ebb8",
-   "date": "2026-10-30",
-   "book": "FanDuel",
-   "event": "Bowling Green Falcons @ Western Michigan Broncos",
-   "market": "Moneyline",
-   "pick": "Bowling Green Falcons ML",
-   "start": "Sat Oct 31, 12:00 PM ET",
-   "price": "+500",
-   "boosted_price": "",
-   "stake": 0.3,
-   "stake_note": "",
-   "to_win": 1.5,
-   "ev_pct": "8.65",
-   "fair_pct": "18.11",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Bowling Green Falcons",
-     "women": false,
-     "text": "Bowling Green Falcons ML",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "football/college-football",
-    "date": "20261031",
-    "groups": null,
-    "id": "401866452",
-    "snapshot": {
-     "date": "2026-10-31T16:00Z",
-     "period": 4,
-     "clock": 0.0,
-     "state": "post",
-     "completed": true,
-     "detail": "Final",
-     "teams": [
-      {
-       "id": "2711",
-       "name": "Western Michigan Broncos",
-       "abbr": "WMU",
-       "short": "W Michigan",
-       "nick": "Broncos",
-       "location": "Western Michigan",
-       "home": true,
-       "score": "23"
-      },
-      {
-       "id": "189",
-       "name": "Bowling Green Falcons",
-       "abbr": "BGSU",
-       "short": "Bowling Green",
-       "nick": "Falcons",
-       "location": "Bowling Green",
-       "home": false,
-       "score": "10"
-      }
-     ]
-    }
-   },
-   "sport": "NCAAF",
-   "cash_stake": 0.3,
-   "payout": 1.8,
-   "payout_est": false,
-   "start_ts": null,
-   "clv": {
-    "placed_at": "2026-10-30 21:53",
     "close_price": null,
     "clv_pct": null
    }
@@ -9069,7 +8997,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -9116,10 +9044,10 @@
     "snapshot": {
      "date": "2026-10-31T16:00Z",
      "period": 4,
-     "clock": 19.0,
+     "clock": 9.0,
      "state": "in",
      "completed": false,
-     "detail": "0:19 - 4th",
+     "detail": "0:09 - 4th",
      "teams": [
       {
        "id": "183",
@@ -9129,7 +9057,7 @@
        "nick": "Orange",
        "location": "Syracuse",
        "home": true,
-       "score": "23"
+       "score": "30"
       },
       {
        "id": "2567",
@@ -9744,10 +9672,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.675,
-     "away": 0.325,
+     "home": 0.955,
+     "away": 0.045,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -9793,11 +9721,11 @@
     "id": "401871059",
     "snapshot": {
      "date": "2026-10-31T19:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 894.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 3:30 PM EDT",
+     "detail": "14:54 - 1st",
      "teams": [
       {
        "id": "2335",
@@ -10565,10 +10493,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.835,
-     "away": 0.165,
+     "home": 0.825,
+     "away": 0.175,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -10615,10 +10543,10 @@
     "snapshot": {
      "date": "2026-10-31T19:00Z",
      "period": 1,
-     "clock": 186.0,
+     "clock": 113.0,
      "state": "in",
      "completed": false,
-     "detail": "3:06 - 1st",
+     "detail": "1:53 - 1st",
      "teams": [
       {
        "id": "26",
@@ -10628,7 +10556,7 @@
        "nick": "Jazz",
        "location": "Utah",
        "home": true,
-       "score": "7"
+       "score": "12"
       },
       {
        "id": "22",
@@ -11382,10 +11310,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.105,
-     "away": 0.895,
+     "home": 0.1667,
+     "away": 0.8333,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NBA",
@@ -12052,7 +11980,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NCAAF",
@@ -12763,7 +12691,7 @@
      "home": 0.705,
      "away": 0.295,
      "spread": 0.01,
-     "t": "2026-10-31T19:29Z"
+     "t": "2026-10-31T19:34Z"
     }
    },
    "sport": "NFL",
@@ -13933,6 +13861,22 @@
   },
   {
    "date": "2026-10-30",
+   "settled_at": "2026-10-31 15:34",
+   "book": "FanDuel",
+   "event": "Bowling Green Falcons @ Western Michigan Broncos",
+   "pick": "Bowling Green Falcons ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "stake": 0.3,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-30 21:53",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-30",
    "settled_at": "2026-10-30 18:49",
    "book": "DraftKings",
    "event": "ORL Magic @ TOR Raptors",
@@ -14540,30 +14484,30 @@
    }
   }
  ],
- "pnl_total": 141.27,
+ "pnl_total": 140.97,
  "unsettled": {
-  "n": 24,
-  "cash_stake": 18.66,
-  "max_payout": 177.88,
+  "n": 23,
+  "cash_stake": 18.36,
+  "max_payout": 176.08,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
- "open_stake": 18.66,
+ "open_stake": 18.36,
  "recs": {
   "stats": {
    "overall": {
     "n": 193,
     "w": 53,
-    "l": 91,
+    "l": 92,
     "p": 0,
-    "pending": 49,
-    "win_pct": 36.8,
-    "units": 14.55,
-    "roi_pct": 12.1,
-    "roi_n": 120,
+    "pending": 48,
+    "win_pct": 36.6,
+    "units": 13.55,
+    "roi_pct": 11.2,
+    "roi_n": 121,
     "exp_roi_pct": 9.7,
-    "exp_wins": 49.0,
-    "exp_wins_n": 143,
+    "exp_wins": 49.2,
+    "exp_wins_n": 144,
     "wins_with_fair": 52
    },
    "by_promo": {
@@ -14645,16 +14589,16 @@
     "cash": {
      "n": 80,
      "w": 25,
-     "l": 38,
+     "l": 39,
      "p": 0,
-     "pending": 17,
-     "win_pct": 39.7,
-     "units": 9.52,
-     "roi_pct": 15.1,
-     "roi_n": 63,
-     "exp_roi_pct": 5.6,
-     "exp_wins": 23.1,
-     "exp_wins_n": 63,
+     "pending": 16,
+     "win_pct": 39.1,
+     "units": 8.52,
+     "roi_pct": 13.3,
+     "roi_n": 64,
+     "exp_roi_pct": 5.7,
+     "exp_wins": 23.3,
+     "exp_wins_n": 64,
      "wins_with_fair": 25
     },
     "live boost": {
@@ -14782,16 +14726,16 @@
     "NCAAF": {
      "n": 57,
      "w": 11,
-     "l": 27,
+     "l": 28,
      "p": 0,
-     "pending": 19,
-     "win_pct": 28.9,
-     "units": 6.69,
-     "roi_pct": 18.1,
-     "roi_n": 37,
-     "exp_roi_pct": 10.5,
-     "exp_wins": 13.7,
-     "exp_wins_n": 38,
+     "pending": 18,
+     "win_pct": 28.2,
+     "units": 5.69,
+     "roi_pct": 15.0,
+     "roi_n": 38,
+     "exp_roi_pct": 10.4,
+     "exp_wins": 13.9,
+     "exp_wins_n": 39,
      "wins_with_fair": 11
     },
     "NFL": {
@@ -14904,16 +14848,16 @@
     "yes": {
      "n": 106,
      "w": 34,
-     "l": 61,
+     "l": 62,
      "p": 0,
-     "pending": 11,
-     "win_pct": 35.8,
-     "units": 25.64,
-     "roi_pct": 33.3,
-     "roi_n": 77,
+     "pending": 10,
+     "win_pct": 35.4,
+     "units": 24.64,
+     "roi_pct": 31.6,
+     "roi_n": 78,
      "exp_roi_pct": 12.6,
-     "exp_wins": 30.4,
-     "exp_wins_n": 94,
+     "exp_wins": 30.6,
+     "exp_wins_n": 95,
      "wins_with_fair": 33
     },
     "no": {
@@ -15151,11 +15095,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "yes",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "BGSU 10-23 WMU (Final)",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-31|Bowling Green Falcons @ Western Michigan Broncos|Bowling Green Falcons to win)",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "d54f97f8",
@@ -19671,6 +19615,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "a6e1ebb8",
+    "book": "FanDuel",
+    "pick": "Bowling Green Falcons ML",
+    "result": "lost",
+    "pnl": -0.3,
+    "final": "BGSU 10-23 WMU",
+    "at": "2026-10-31 15:34"
+   },
+   {
     "bet_id": "1e699888",
     "book": "Caesars",
     "pick": "Borussia Dortmund",
@@ -19885,18 +19838,9 @@
     "pnl": -0.5,
     "final": "CBJ 4-3 PHI",
     "at": "2026-10-27 21:40"
-   },
-   {
-    "bet_id": "9552cc6f",
-    "book": "PointsBet",
-    "pick": "Draw",
-    "result": "lost",
-    "pnl": 0.0,
-    "final": "COMO 3-1 TOR",
-    "at": "2026-10-27 17:44"
    }
   ],
-  "last_change_at": "2026-10-31 15:29 ET"
+  "last_change_at": "2026-10-31 15:34 ET"
  },
  "open_live_n": 23,
  "open_stake_by_book": {
@@ -19906,6 +19850,6 @@
   "FanDuel": 2.8,
   "PointsBet": 12.5
  },
- "hash": "f60fffe7feb429106c4bbd4d76a889b97289906a",
- "generated_at": "2026-10-31T15:29:40-04:00"
+ "hash": "796950249f1a5e9959770854dad6811a0b037952",
+ "generated_at": "2026-10-31T15:34:16-04:00"
 }
