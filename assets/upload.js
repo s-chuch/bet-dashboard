@@ -141,7 +141,9 @@
       .filter(function (n) { return /^gemini-/.test(n) && !/lite|image|tts|live|audio|thinking|exp|preview|8b|embed|robotics|computer|customtools/.test(n); });
     var pick = function (re) { return names.filter(function (n) { return re.test(n); }).sort().reverse()[0]; };
     var pro = pick(/^gemini-(\d+(\.\d+)?)-pro$/) || pick(/^gemini-pro-latest$/), flash = pick(/^gemini-(\d+(\.\d+)?)-flash$/) || pick(/^gemini-flash-latest$/) || pick(/flash/);
-    var out = [pro, flash];
+    // the newest Flash can be slow or overloaded: keep the previous generation too, so the quick pass has a second fast reader
+    var flashes = names.filter(function (n) { return /^gemini-(\d+(\.\d+)?)-flash$/.test(n); }).sort().reverse(), prev = flashes.filter(function (n) { return n !== flash; })[0];
+    var out = [pro, flash, prev];
     return out.filter(function (x, i) { return x && out.indexOf(x) === i; });
   }
   var VTX = 'https://aiplatform.googleapis.com/v1/publishers/google/models/';
@@ -235,7 +237,7 @@
       var vtx = S.kind === 'vtx';
       var body = { contents: [{ role: 'user', parts: [{ text: text }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
       if (noThink && /flash/.test(model)) body.generationConfig.thinkingConfig = { thinkingBudget: 0 };   // quick pass: no extra "thinking" time
-      return tfetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }).then(function (r) {
+      return tfetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }, quick ? 30000 : 60000).then(function (r) {
         if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { var e = new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); e.status = r.status; throw e; });
         return r.json();
       }).then(function (j) {
