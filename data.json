@@ -14292,11 +14292,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 186,
+    "n": 187,
     "w": 51,
     "l": 88,
     "p": 0,
-    "pending": 47,
+    "pending": 48,
     "win_pct": 36.7,
     "units": 12.94,
     "roi_pct": 11.2,
@@ -14383,11 +14383,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 73,
+     "n": 74,
      "w": 24,
      "l": 36,
      "p": 0,
-     "pending": 13,
+     "pending": 14,
      "win_pct": 40.0,
      "units": 10.61,
      "roi_pct": 17.7,
@@ -14520,11 +14520,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 50,
+     "n": 51,
      "w": 10,
      "l": 24,
      "p": 0,
-     "pending": 16,
+     "pending": 17,
      "win_pct": 29.4,
      "units": 7.78,
      "roi_pct": 22.9,
@@ -14657,11 +14657,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 82,
+     "n": 83,
      "w": 18,
      "l": 28,
      "p": 0,
-     "pending": 36,
+     "pending": 37,
      "win_pct": 39.1,
      "units": -10.0,
      "roi_pct": -25.0,
@@ -14711,6 +14711,29 @@
     "final_score": "",
     "source": "finder",
     "notes": "logged from Bet Finder (key 2026-10-31|New Mexico Lobos @ San Jose State Spartans|San Jose State Spartans to win)",
+    "units": null
+   },
+   {
+    "rec_id": "b6e01283",
+    "rec_date": "2026-10-30",
+    "rec_time_et": "21:54",
+    "sport": "NCAAF",
+    "event": "Purdue Boilermakers @ Penn State Nittany Lions",
+    "market": "cash",
+    "selection": "Purdue Boilermakers +10.5",
+    "book": "FanDuel",
+    "rec_price": "-102",
+    "eff_price": "-102",
+    "fair_pct": "51.64",
+    "ev_pct": "2.26",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
     "units": null
    },
    {
@@ -19485,6 +19508,6 @@
   "FanDuel": 2.6,
   "PointsBet": 15.0
  },
- "hash": "95f6cf8a16630a06fd300386967a148ae7de280c",
- "generated_at": "2026-10-30T21:54:29-04:00"
+ "hash": "1b1036c305cc4437dd95bc56b73c608af14e14e6",
+ "generated_at": "2026-10-30T21:54:58-04:00"
 }
