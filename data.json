@@ -278,78 +278,6 @@
    }
   },
   {
-   "bet_id": "1e699888",
-   "date": "2026-10-26",
-   "book": "Caesars",
-   "event": "Bayern Munich v Borussia Dortmund",
-   "market": "Match Result (bonus bet $10.00; bet id 387cbf20-d17e-11f1-bbaa-91908\u2026)",
-   "pick": "Borussia Dortmund",
-   "start": "Sat Oct 31 01:30 PM ET",
-   "price": "+600",
-   "boosted_price": "",
-   "stake": 10.0,
-   "stake_note": "",
-   "to_win": 60.0,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "Borussia Dortmund",
-     "women": false,
-     "text": "Borussia Dortmund",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/ger.1",
-    "date": "20261031",
-    "groups": null,
-    "id": "401884754",
-    "snapshot": {
-     "date": "2026-10-31T17:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+5'",
-     "teams": [
-      {
-       "id": "132",
-       "name": "Bayern Munich",
-       "abbr": "MUN",
-       "short": "Bayern",
-       "nick": "Bayern Munich",
-       "location": "Bayern Munich",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "124",
-       "name": "Borussia Dortmund",
-       "abbr": "DOR",
-       "short": "Dortmund",
-       "nick": "Borussia Dortmund",
-       "location": "Borussia Dortmund",
-       "home": false,
-       "score": "2"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 60.0,
-   "payout_est": false,
-   "start_ts": "2026-10-31T17:30Z",
-   "clv": {
-    "placed_at": "2026-10-26 18:19",
-    "close_price": "+781",
-    "clv_pct": -20.55
-   }
-  },
-  {
    "bet_id": "18a957e1",
    "date": "2026-10-26",
    "book": "Caesars",
@@ -6691,9 +6619,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.1364,
-     "away": 0.8636,
-     "spread": 0.03,
+     "home": 0.095,
+     "away": 0.905,
+     "spread": 0.01,
      "t": "2026-10-31T19:29Z"
     }
    },
@@ -10687,10 +10615,10 @@
     "snapshot": {
      "date": "2026-10-31T19:00Z",
      "period": 1,
-     "clock": 209.0,
+     "clock": 186.0,
      "state": "in",
      "completed": false,
-     "detail": "3:29 - 1st",
+     "detail": "3:06 - 1st",
      "teams": [
       {
        "id": "26",
@@ -11454,8 +11382,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.115,
-     "away": 0.885,
+     "home": 0.105,
+     "away": 0.895,
      "spread": 0.01,
      "t": "2026-10-31T19:29Z"
     }
@@ -14421,6 +14349,22 @@
   },
   {
    "date": "2026-10-26",
+   "settled_at": "2026-10-31 15:29",
+   "book": "Caesars",
+   "event": "Bayern Munich v Borussia Dortmund",
+   "pick": "Borussia Dortmund",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 10.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 18:19",
+    "close_price": "+781",
+    "clv_pct": -20.55
+   }
+  },
+  {
+   "date": "2026-10-26",
    "settled_at": "2026-10-26 22:01",
    "book": "Caesars",
    "event": "Chicago Bulls @ Boston Celtics",
@@ -14598,9 +14542,9 @@
  ],
  "pnl_total": 141.27,
  "unsettled": {
-  "n": 25,
+  "n": 24,
   "cash_stake": 18.66,
-  "max_payout": 237.88,
+  "max_payout": 177.88,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -19727,6 +19671,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "1e699888",
+    "book": "Caesars",
+    "pick": "Borussia Dortmund",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "DOR 2-2 MUN",
+    "at": "2026-10-31 15:29"
+   },
+   {
     "bet_id": "e6892b99",
     "book": "Caesars",
     "pick": "Malaga",
@@ -19941,27 +19894,18 @@
     "pnl": 0.0,
     "final": "COMO 3-1 TOR",
     "at": "2026-10-27 17:44"
-   },
-   {
-    "bet_id": "38cdf546",
-    "book": "PointsBet",
-    "pick": "CeeDee Lamb 60+ rec yds + Devonta Smith 40+ rec yds + George Pickens 40+ rec yds",
-    "result": "void",
-    "pnl": 0.0,
-    "final": "DAL 38-21 PHI",
-    "at": "2026-10-27 08:42"
    }
   ],
   "last_change_at": "2026-10-31 15:29 ET"
  },
- "open_live_n": 24,
+ "open_live_n": 23,
  "open_stake_by_book": {
   "bet365": 1.26,
-  "Caesars": 18.0,
+  "Caesars": 8.0,
   "DraftKings": 1.3,
   "FanDuel": 2.8,
   "PointsBet": 12.5
  },
- "hash": "9f62d0b1141d10c0d0a6a0275af41268cd75e44a",
- "generated_at": "2026-10-31T15:29:18-04:00"
+ "hash": "f60fffe7feb429106c4bbd4d76a889b97289906a",
+ "generated_at": "2026-10-31T15:29:40-04:00"
 }
