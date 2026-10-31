@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T02:11Z"
+       "t": "2026-10-31T03:51Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T02:11Z"
+       "t": "2026-10-31T03:51Z"
       }
      },
      "pteam": "ATL",
@@ -2622,7 +2622,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NFL",
@@ -4829,7 +4829,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T02:11Z"
+       "t": "2026-10-31T03:51Z"
       }
      }
     },
@@ -5725,7 +5725,7 @@
      "home": 0.935,
      "away": 0.065,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -6612,7 +6612,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -7433,7 +7433,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -8100,7 +8100,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -8987,7 +8987,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -9654,7 +9654,7 @@
      "home": 0.8267,
      "away": 0.1733,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -10475,7 +10475,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -11153,7 +11153,7 @@
      "home": 0.235,
      "away": 0.765,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -11974,7 +11974,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T02:11Z"
+     "t": "2026-10-31T03:51Z"
     }
    },
    "sport": "NCAAF",
@@ -14213,16 +14213,16 @@
    "overall": {
     "n": 191,
     "w": 52,
-    "l": 88,
+    "l": 90,
     "p": 0,
-    "pending": 51,
-    "win_pct": 37.1,
-    "units": 15.64,
-    "roi_pct": 13.4,
-    "roi_n": 117,
-    "exp_roi_pct": 9.8,
-    "exp_wins": 47.2,
-    "exp_wins_n": 139,
+    "pending": 49,
+    "win_pct": 36.6,
+    "units": 13.64,
+    "roi_pct": 11.5,
+    "roi_n": 119,
+    "exp_roi_pct": 9.7,
+    "exp_wins": 48.2,
+    "exp_wins_n": 141,
     "wins_with_fair": 51
    },
    "by_promo": {
@@ -14304,16 +14304,16 @@
     "cash": {
      "n": 78,
      "w": 24,
-     "l": 36,
+     "l": 38,
      "p": 0,
-     "pending": 18,
-     "win_pct": 40.0,
-     "units": 10.61,
-     "roi_pct": 17.7,
-     "roi_n": 60,
+     "pending": 16,
+     "win_pct": 38.7,
+     "units": 8.61,
+     "roi_pct": 13.9,
+     "roi_n": 62,
      "exp_roi_pct": 5.7,
-     "exp_wins": 21.5,
-     "exp_wins_n": 60,
+     "exp_wins": 22.6,
+     "exp_wins_n": 62,
      "wins_with_fair": 24
     },
     "live boost": {
@@ -14441,16 +14441,16 @@
     "NCAAF": {
      "n": 55,
      "w": 10,
-     "l": 24,
+     "l": 26,
      "p": 0,
-     "pending": 21,
-     "win_pct": 29.4,
-     "units": 7.78,
-     "roi_pct": 22.9,
-     "roi_n": 34,
-     "exp_roi_pct": 11.1,
-     "exp_wins": 11.8,
-     "exp_wins_n": 34,
+     "pending": 19,
+     "win_pct": 27.8,
+     "units": 5.78,
+     "roi_pct": 16.0,
+     "roi_n": 36,
+     "exp_roi_pct": 10.6,
+     "exp_wins": 12.9,
+     "exp_wins_n": 36,
      "wins_with_fair": 10
     },
     "NFL": {
@@ -14578,16 +14578,16 @@
     "no": {
      "n": 85,
      "w": 18,
-     "l": 28,
+     "l": 30,
      "p": 0,
-     "pending": 39,
-     "win_pct": 39.1,
-     "units": -10.0,
-     "roi_pct": -25.0,
-     "roi_n": 40,
-     "exp_roi_pct": 4.6,
-     "exp_wins": 17.0,
-     "exp_wins_n": 46,
+     "pending": 37,
+     "win_pct": 37.5,
+     "units": -12.0,
+     "roi_pct": -28.6,
+     "roi_n": 42,
+     "exp_roi_pct": 4.5,
+     "exp_wins": 18.1,
+     "exp_wins_n": 48,
      "wins_with_fair": 18
     }
    },
@@ -14994,11 +14994,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "BAY 41-9 UCF (Final)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: odds wrong/moved",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "e5edc341",
@@ -15017,11 +15017,11 @@
     "promo": "cash",
     "friend": "no",
     "placed": "no",
-    "result": "pending",
-    "final_score": "",
+    "result": "lost",
+    "final_score": "BAY 41-9 UCF (Final)",
     "source": "finder",
     "notes": "SKIPPED in Bet Finder: odds wrong/moved",
-    "units": null
+    "units": -1.0
    },
    {
     "rec_id": "8d3ffcb5",
@@ -19519,6 +19519,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "96cf043cb94707fd841c9e4edf356a24ff61ae35",
- "generated_at": "2026-10-30T22:11:03-04:00"
+ "hash": "0264e0f3c6f7f6afcd3b4a8dc74b6bfe7e0c2d3d",
+ "generated_at": "2026-10-30T23:51:27-04:00"
 }
