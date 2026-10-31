@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T01:56Z"
+       "t": "2026-10-31T01:57Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T01:56Z"
+       "t": "2026-10-31T01:57Z"
       }
      },
      "pteam": "ATL",
@@ -2622,7 +2622,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NFL",
@@ -4091,10 +4091,10 @@
     "snapshot": {
      "date": "2026-10-30T23:30Z",
      "period": 4,
-     "clock": 197.0,
+     "clock": 178.0,
      "state": "in",
      "completed": false,
-     "detail": "3:17 - 4th",
+     "detail": "2:58 - 4th",
      "teams": [
       {
        "id": "28",
@@ -4114,7 +4114,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": false,
-       "score": "115"
+       "score": "117"
       }
      ]
     },
@@ -4847,10 +4847,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.145,
-     "away": 0.855,
+     "home": 0.075,
+     "away": 0.925,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NBA",
@@ -4897,10 +4897,10 @@
     "snapshot": {
      "date": "2026-10-30T23:30Z",
      "period": 4,
-     "clock": 197.0,
+     "clock": 178.0,
      "state": "in",
      "completed": false,
-     "detail": "3:17 - 4th",
+     "detail": "2:58 - 4th",
      "teams": [
       {
        "id": "28",
@@ -4920,7 +4920,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": false,
-       "score": "115"
+       "score": "117"
       }
      ]
     },
@@ -5653,10 +5653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.145,
-     "away": 0.855,
+     "home": 0.075,
+     "away": 0.925,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NBA",
@@ -6441,7 +6441,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T01:56Z"
+       "t": "2026-10-31T01:57Z"
       }
      }
     },
@@ -7337,7 +7337,7 @@
      "home": 0.935,
      "away": 0.065,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -8224,7 +8224,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -9045,7 +9045,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -9712,7 +9712,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -10599,7 +10599,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -11266,7 +11266,7 @@
      "home": 0.8267,
      "away": 0.1733,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -12087,7 +12087,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -12765,7 +12765,7 @@
      "home": 0.235,
      "away": 0.765,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -13586,7 +13586,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T01:56Z"
+     "t": "2026-10-31T01:57Z"
     }
    },
    "sport": "NCAAF",
@@ -15791,11 +15791,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 190,
+    "n": 191,
     "w": 51,
     "l": 88,
     "p": 0,
-    "pending": 51,
+    "pending": 52,
     "win_pct": 36.7,
     "units": 12.94,
     "roi_pct": 11.2,
@@ -15882,11 +15882,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 77,
+     "n": 78,
      "w": 24,
      "l": 36,
      "p": 0,
-     "pending": 17,
+     "pending": 18,
      "win_pct": 40.0,
      "units": 10.61,
      "roi_pct": 17.7,
@@ -16019,11 +16019,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 54,
+     "n": 55,
      "w": 10,
      "l": 24,
      "p": 0,
-     "pending": 20,
+     "pending": 21,
      "win_pct": 29.4,
      "units": 7.78,
      "roi_pct": 22.9,
@@ -16156,11 +16156,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 84,
+     "n": 85,
      "w": 18,
      "l": 28,
      "p": 0,
-     "pending": 38,
+     "pending": 39,
      "win_pct": 39.1,
      "units": -10.0,
      "roi_pct": -25.0,
@@ -16189,6 +16189,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "06efadcc",
+    "rec_date": "2026-10-30",
+    "rec_time_et": "21:56",
+    "sport": "NCAAF",
+    "event": "Arizona State Sun Devils @ BYU Cougars",
+    "market": "cash",
+    "selection": "Arizona State Sun Devils to win",
+    "book": "theScore",
+    "rec_price": "+600",
+    "eff_price": "+600",
+    "fair_pct": "15.05",
+    "ev_pct": "5.32",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "4cfc0dd5",
     "rec_date": "2026-10-30",
@@ -21076,6 +21099,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "e7430fa3866bb000771ad2e74bdbcd75faa97942",
- "generated_at": "2026-10-30T21:56:42-04:00"
+ "hash": "018953a7516fa1b98ba336892b52ff5106089d2d",
+ "generated_at": "2026-10-30T21:57:04-04:00"
 }
