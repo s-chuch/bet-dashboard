@@ -2,6 +2,15 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "e6892b99",
+   "book": "Caesars",
+   "pick": "Malaga",
+   "result": "lost",
+   "pnl": 0.0,
+   "final": "MCF 1-2 BET",
+   "at": "2026-10-31 15:29"
+  },
+  {
    "bet_id": "7cbe88f2",
    "book": "PointsBet",
    "pick": "UAB Blazers ML",
@@ -216,17 +225,8 @@
    "pnl": 0.0,
    "final": "DAL 38-21 PHI",
    "at": "2026-10-27 08:42"
-  },
-  {
-   "bet_id": "ac03f4a5",
-   "book": "DraftKings",
-   "pick": "Javonte Williams First TD Scorer",
-   "result": "lost",
-   "pnl": -0.2,
-   "final": "DAL 38-21 PHI",
-   "at": "2026-10-27 08:42"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-31 15:27 ET"
+ "last_change_at": "2026-10-31 15:29 ET"
 }

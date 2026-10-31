@@ -313,7 +313,7 @@
      "clock": 5400.0,
      "state": "in",
      "completed": false,
-     "detail": "90'+3'",
+     "detail": "90'+5'",
      "teams": [
       {
        "id": "132",
@@ -419,78 +419,6 @@
     "placed_at": "2026-10-26 18:19",
     "close_price": null,
     "clv_pct": null
-   }
-  },
-  {
-   "bet_id": "e6892b99",
-   "date": "2026-10-26",
-   "book": "Caesars",
-   "event": "Real Betis v Malaga",
-   "market": "Match Result (bonus bet $5.00; bet id 722be5c0-d17e-11f1-af1d-57e9a\u2026)",
-   "pick": "Malaga",
-   "start": "Sat Oct 31 01:30 PM ET",
-   "price": "+600",
-   "boosted_price": "",
-   "stake": 5.0,
-   "stake_note": "",
-   "to_win": 30.0,
-   "ev_pct": "",
-   "fair_pct": "",
-   "multi": false,
-   "legs": [
-    {
-     "type": "ml",
-     "team": "M\u00e1laga",
-     "women": false,
-     "text": "Malaga",
-     "team_ok": true
-    }
-   ],
-   "match": {
-    "path": "soccer/esp.1",
-    "date": "20261031",
-    "groups": null,
-    "id": "401882825",
-    "snapshot": {
-     "date": "2026-10-31T17:30Z",
-     "period": 2,
-     "clock": 5400.0,
-     "state": "in",
-     "completed": false,
-     "detail": "90'+2'",
-     "teams": [
-      {
-       "id": "244",
-       "name": "Real Betis",
-       "abbr": "BET",
-       "short": "Betis",
-       "nick": "Real Betis",
-       "location": "Real Betis",
-       "home": true,
-       "score": "2"
-      },
-      {
-       "id": "99",
-       "name": "M\u00e1laga",
-       "abbr": "MCF",
-       "short": "M\u00e1laga",
-       "nick": "M\u00e1laga",
-       "location": "M\u00e1laga",
-       "home": false,
-       "score": "1"
-      }
-     ]
-    }
-   },
-   "sport": "Soccer",
-   "cash_stake": 0.0,
-   "payout": 30.0,
-   "payout_est": false,
-   "start_ts": "2026-10-31T17:30Z",
-   "clv": {
-    "placed_at": "2026-10-26 18:19",
-    "close_price": "+813",
-    "clv_pct": -23.33
    }
   },
   {
@@ -1254,7 +1182,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T19:27Z"
+       "t": "2026-10-31T19:29Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1877,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T19:27Z"
+       "t": "2026-10-31T19:29Z"
       }
      },
      "pteam": "ATL",
@@ -2666,7 +2594,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NFL",
@@ -3377,7 +3305,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NFL",
@@ -4162,7 +4090,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T19:27Z"
+       "t": "2026-10-31T19:29Z"
       }
      }
     },
@@ -5058,7 +4986,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -5945,7 +5873,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -5992,10 +5920,10 @@
     "snapshot": {
      "date": "2026-10-31T16:30Z",
      "period": 4,
-     "clock": 263.0,
+     "clock": 258.0,
      "state": "in",
      "completed": false,
-     "detail": "4:23 - 4th",
+     "detail": "4:18 - 4th",
      "teams": [
       {
        "id": "164",
@@ -6763,10 +6691,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.095,
-     "away": 0.905,
-     "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "home": 0.1364,
+     "away": 0.8636,
+     "spread": 0.03,
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -7433,7 +7361,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -8320,7 +8248,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -9213,7 +9141,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -9260,10 +9188,10 @@
     "snapshot": {
      "date": "2026-10-31T16:00Z",
      "period": 4,
-     "clock": 27.0,
+     "clock": 19.0,
      "state": "in",
      "completed": false,
-     "detail": "0:27 - 4th",
+     "detail": "0:19 - 4th",
      "teams": [
       {
        "id": "183",
@@ -9888,10 +9816,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.731,
-     "away": 0.269,
-     "spread": 0.02,
-     "t": "2026-10-31T19:27Z"
+     "home": 0.675,
+     "away": 0.325,
+     "spread": 0.01,
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -10712,7 +10640,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -10759,10 +10687,10 @@
     "snapshot": {
      "date": "2026-10-31T19:00Z",
      "period": 1,
-     "clock": 266.0,
+     "clock": 209.0,
      "state": "in",
      "completed": false,
-     "detail": "4:26 - 1st",
+     "detail": "3:29 - 1st",
      "teams": [
       {
        "id": "26",
@@ -10782,7 +10710,7 @@
        "nick": "Trail Blazers",
        "location": "Portland",
        "home": false,
-       "score": "18"
+       "score": "23"
       }
      ]
     },
@@ -11526,10 +11454,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.155,
-     "away": 0.845,
+     "home": 0.115,
+     "away": 0.885,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NBA",
@@ -12196,7 +12124,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NCAAF",
@@ -12907,7 +12835,7 @@
      "home": 0.705,
      "away": 0.295,
      "spread": 0.01,
-     "t": "2026-10-31T19:27Z"
+     "t": "2026-10-31T19:29Z"
     }
    },
    "sport": "NFL",
@@ -14461,6 +14389,22 @@
   },
   {
    "date": "2026-10-26",
+   "settled_at": "2026-10-31 15:29",
+   "book": "Caesars",
+   "event": "Real Betis v Malaga",
+   "pick": "Malaga",
+   "result": "lost",
+   "pnl": 0.0,
+   "stake": 5.0,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-26 18:19",
+    "close_price": "+813",
+    "clv_pct": -23.33
+   }
+  },
+  {
+   "date": "2026-10-26",
    "settled_at": "2026-10-28 15:22",
    "book": "Caesars",
    "event": "Venezia v Inter Milan",
@@ -14654,9 +14598,9 @@
  ],
  "pnl_total": 141.27,
  "unsettled": {
-  "n": 26,
+  "n": 25,
   "cash_stake": 18.66,
-  "max_payout": 267.88,
+  "max_payout": 237.88,
   "payout_tbc": 0,
   "payout_estimated": 0
  },
@@ -19783,6 +19727,15 @@
   "needs_review": [],
   "last_settled": [
    {
+    "bet_id": "e6892b99",
+    "book": "Caesars",
+    "pick": "Malaga",
+    "result": "lost",
+    "pnl": 0.0,
+    "final": "MCF 1-2 BET",
+    "at": "2026-10-31 15:29"
+   },
+   {
     "bet_id": "7cbe88f2",
     "book": "PointsBet",
     "pick": "UAB Blazers ML",
@@ -19997,27 +19950,18 @@
     "pnl": 0.0,
     "final": "DAL 38-21 PHI",
     "at": "2026-10-27 08:42"
-   },
-   {
-    "bet_id": "ac03f4a5",
-    "book": "DraftKings",
-    "pick": "Javonte Williams First TD Scorer",
-    "result": "lost",
-    "pnl": -0.2,
-    "final": "DAL 38-21 PHI",
-    "at": "2026-10-27 08:42"
    }
   ],
-  "last_change_at": "2026-10-31 15:27 ET"
+  "last_change_at": "2026-10-31 15:29 ET"
  },
- "open_live_n": 25,
+ "open_live_n": 24,
  "open_stake_by_book": {
   "bet365": 1.26,
-  "Caesars": 23.0,
+  "Caesars": 18.0,
   "DraftKings": 1.3,
   "FanDuel": 2.8,
   "PointsBet": 12.5
  },
- "hash": "0f407ec44a0aee71ce4ba80189772c01df56d0eb",
- "generated_at": "2026-10-31T15:27:14-04:00"
+ "hash": "9f62d0b1141d10c0d0a6a0275af41268cd75e44a",
+ "generated_at": "2026-10-31T15:29:18-04:00"
 }
