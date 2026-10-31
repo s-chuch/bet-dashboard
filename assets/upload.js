@@ -237,7 +237,7 @@
       var vtx = S.kind === 'vtx';
       var body = { contents: [{ role: 'user', parts: [{ text: text }, vtx ? { inlineData: { mimeType: 'image/jpeg', data: b64 } } : { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }], generationConfig: { temperature: 0, responseMimeType: 'application/json' } };
       if (noThink && /flash/.test(model)) body.generationConfig.thinkingConfig = { thinkingBudget: 0 };   // quick pass: no extra "thinking" time
-      return tfetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }, quick ? 30000 : 60000).then(function (r) {
+      return tfetch((vtx ? VTX : GEM + 'models/') + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(getAi()), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' }, quick && /flash/.test(model) ? 30000 : 60000).then(function (r) {
         if (!r.ok) return r.json().catch(function () { return {}; }).then(function (j) { var e = new Error((j.error && j.error.message ? j.error.message : 'HTTP ' + r.status).slice(0, 160)); e.status = r.status; throw e; });
         return r.json();
       }).then(function (j) {
@@ -248,11 +248,16 @@
         return arr;
       });
     }
-    return go().catch(function (e) { if (noThink && e.status === 400) { noThink = false; return go(); } throw e; });
+    return go().catch(function (e) {
+      if (noThink && e.status === 400) { noThink = false; return go(); }
+      // "high demand" (503) is a short spike: wait a moment and ask the same model once more before moving on
+      if ((e.status === 503 || e.status === 429) && tries < 2) { it.msg = 'Google is busy, trying ' + model + ' again…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 3000); }).then(go); }
+      throw e;
+    });
   }
   function callOr(model, b64, text, it) {
     function go(json) {
-      var body = { model: model, temperature: 0, max_tokens: 3000, messages: [{ role: 'user', content: [{ type: 'text', text: text }, { type: 'image_url', image_url: { url: 'data:image/jpeg;base64,' + b64 } }] }] };
+      var body = { model: model, temperature: 0, max_tokens: 4500, messages: [{ role: 'user', content: [{ type: 'text', text: text }, { type: 'image_url', image_url: { url: 'data:image/jpeg;base64,' + b64 } }] }] };
       if (json) body.response_format = { type: 'json_object' };
       return tfetch(OR + 'chat/completions', { method: 'POST', headers: { 'Authorization': 'Bearer ' + getOr(), 'Content-Type': 'application/json', 'X-Title': 'Bet Tracker' }, body: JSON.stringify(body), credentials: 'omit', referrerPolicy: 'no-referrer', cache: 'no-store' }).then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (j) {
@@ -298,7 +303,7 @@
       it._or = r[1];
       return Promise.all([shrink(it.file), it._or.length ? shrink(it.file, 1568, 0.85) : Promise.resolve('')]).then(function (imgs) {
         var b64 = imgs[0]; it._small = imgs[1];
-        return tryModels(fast, b64, promptText('', ''), it, true).then(function (rows) {
+        return tryModels(fast.concat(models.filter(function (m) { return fast.indexOf(m) < 0; })), b64, promptText('', ''), it, true).then(function (rows) {
           var bad = inconsistent(rows);
           if (!bad.length) return rows;
           it.msg = 'Double-checking the numbers…'; renderQueue();
