@@ -542,3 +542,14 @@ ts_et,book,bet_id,event_type,amount,note
 2026-10-30 15:19,Caesars,71c15afe,stake,-0.50,stake
 2026-10-30 17:52,Caesars,41aadad4,return,25.00,won
 2026-10-30 18:49,DraftKings,7c47050e,return,0.30,void
+2026-10-30 21:48,FanDuel,1ddd3c9a,stake,-0.20,stake
+2026-10-30 21:49,FanDuel,a7f98f2d,stake,-0.20,stake
+2026-10-30 21:51,FanDuel,56be034c,stake,-0.30,stake
+2026-10-30 21:51,FanDuel,8e36bff6,stake,-0.20,stake
+2026-10-30 21:52,bet365,4949d245,stake,-0.43,stake
+2026-10-30 21:53,FanDuel,a6e1ebb8,stake,-0.30,stake
+2026-10-30 21:54,FanDuel,02d11458,stake,-0.30,stake
+2026-10-30 21:55,FanDuel,fe92c542,stake,-0.50,stake
+2026-10-30 21:55,bet365,c4616af3,stake,-0.43,stake
+2026-10-30 22:08,DraftKings,83a79f48,return,1.11,won
+2026-10-30 22:08,DraftKings,83a79f48-2,return,1.00,won
