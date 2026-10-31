@@ -33,6 +33,28 @@
     return '<article class="pick near">' + header(r) + '<p><b>' + esc(r.book_app) + '</b> ' + am(r.odds) + ' \u00b7 fair ' + am(r.fair_odds) + ' \u00b7 ' + r.ev_pct + '% EV \u00b7 needs ' + am(r.kill_price) + ' \u00b7 ' + esc(r.start_et) + '</p>' + (r.skip_reason ? '<p class="caution small">' + esc(r.skip_reason) + '</p>' : '') + '</article>';
   }
 
+  // ---------- bets you already have: never recommended again, listed as played ----------
+  var OPEN = [], GENERIC = { fc: 1, cf: 1, sc: 1, united: 1, city: 1, state: 1, team: 1, club: 1, real: 1, sporting: 1, athletic: 1, the: 1 };
+  function reEsc(x) { return x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function loadOpen() {   // open bets from data.json: catches a bet logged since the last scan (the scan itself also excludes them)
+    return fetch('data.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (d) {
+      OPEN = (d.open || []).map(function (b) { return { bet_id: b.bet_id, book: b.book, pick: b.pick || '', event: b.event || '', stake: b.stake, price: b.price || '', boosted_price: b.boosted_price || '', text: ((b.event || '') + ' ' + (b.pick || '')).toLowerCase() }; });
+    }).catch(function () {});
+  }
+  function playedOn(r) {
+    var keys = [r.home, r.away].map(function (v) { return String(v || '').toLowerCase().trim(); }).filter(function (v) { return v.length > 3 && !GENERIC[v]; });
+    return OPEN.filter(function (b) { return keys.some(function (k) { return new RegExp('(^|[^a-z])' + reEsc(k) + '([^a-z]|$)').test(b.text); }); });
+  }
+  function samePick(sel, b) {
+    var t = String(sel || '').replace(/ to win$/, '').trim().toLowerCase(); return !!t && new RegExp('(^|[^a-z0-9])' + reEsc(t) + '([^a-z0-9]|$)').test(String(b.pick || '').toLowerCase());
+  }
+  function playedCard(r) {
+    var ps = r.played || [], same = ps.some(function (p) { return p.same_pick; });
+    return '<article class="pick played"><span class="tag ok">' + (same ? 'Played \u2713' : 'Same game') + '</span>' + header(r) + '<p class="small"><b>' +
+      (same ? 'You already played this bet.' : 'You already have a bet on this game, so it is not recommended.') + '</b> Finder price now: ' + esc(r.book_app) + ' ' + am(r.odds) + ' \u00b7 +' + r.ev_pct + '% EV \u00b7 ' + esc(r.start_et) + '</p><ul>' +
+      ps.map(function (p) { return '<li><b>' + esc(p.book) + ':</b> ' + esc(p.pick) + ' \u00b7 $' + esc(String(p.stake).replace(/^\$/, '')) + ' at ' + esc(p.price) + (p.boosted_price ? ' (boosted ' + esc(p.boosted_price) + ')' : '') + '</li>'; }).join('') + '</ul></article>';
+  }
+
   // ---------- Log it / Skip on every pick card (dispatches add-bets.yml, the same path as the Upload page) ----------
   var CARDS = [], SKIPKEY = 'bt.finder.skips', SERVER_SKIPS = {};
   function etParts(d) {
@@ -174,18 +196,26 @@
     if (!d || !d.ok) { $('scan-time').textContent = d && d.scanned_et ? d.scanned_et : 'never'; $('bets').innerHTML = '<p class="empty err">' + esc(d && d.error ? 'Last scan failed: ' + d.error : 'No scan yet. Tap Scan now.') + '</p>'; return; }
     $('scan-time').textContent = d.scanned_et;
     renderBonus(d); POOL = (d.boost_pool || []).filter(function (r) { return !skipped(r); }); renderBoost();
-    var bl = d.bets.filter(function (r) { return !skipped(r); });
-    $('bets').innerHTML = bl.length ? bl.map(full).join('') : '<p class="empty">Nothing reached +2% EV in this scan. No filler bets.</p>';
-    $('near').innerHTML = d.near_misses.length ? d.near_misses.map(short).join('') : '<p class="empty">None.</p>';
+    var bl = [], played = (d.played || []).slice(), seen = {};
+    played.forEach(function (r) { seen[keyOf(r)] = 1; });
+    d.bets.filter(function (r) { return !skipped(r); }).forEach(function (r) {
+      var m = playedOn(r);
+      if (!m.length) return bl.push(r);
+      if (!seen[keyOf(r)]) { seen[keyOf(r)] = 1; played.push(Object.assign({}, r, { played: m.map(function (b) { return { bet_id: b.bet_id, book: b.book, pick: b.pick, stake: b.stake, price: b.price, boosted_price: b.boosted_price, same_pick: samePick(r.selection, b) }; }) })); }
+    });
+    $('bets').innerHTML = bl.length ? bl.map(full).join('') : '<p class="empty">Nothing reached +2% EV in this scan' + (played.length ? ' that you have not already played' : '') + '. No filler bets.</p>';
+    $('played').innerHTML = played.length ? played.map(playedCard).join('') : '<p class="empty">None. You have no bet on a game the scan found +EV.</p>';
+    var near = d.near_misses.filter(function (r) { return !playedOn(r).length; });
+    $('near').innerHTML = near.length ? near.map(short).join('') : '<p class="empty">None.</p>';
     var c = d.counts || {}, rows = Object.keys(c).map(function (k) { var s = c[k]; return '<li>' + esc(k.toUpperCase()) + ': ' + s.games + ' games, ' + s.prices + ' prices compared, ' + s.exposed + ' skipped (your bets), ' + s.not_confirmed + ' not confirmed by Pinnacle</li>'; });
-    $('details').innerHTML = 'Next ' + d.window_hours + ' hours. ' + d.totals.prices + ' prices compared: ' + d.totals.bet + ' bet, ' + d.totals.skip + ' skip, ' + d.totals.no + ' no.<ul>' + rows.join('') + '</ul>' +
+    $('details').innerHTML = 'Next ' + d.window_hours + ' hours. ' + d.totals.prices + ' prices compared: ' + d.totals.bet + ' bet' + (d.totals.played ? ' (' + d.totals.played + ' already played)' : '') + ', ' + d.totals.skip + ' skip, ' + d.totals.no + ' no.<ul>' + rows.join('') + '</ul>' +
       (d.errors && d.errors.length ? '<p class="err">' + d.errors.map(esc).join('<br>') + '</p>' : '');
   }
   function load(fresh) {
     var url = fresh ? REPO_API + '/contents/finder.json?ref=main&t=' + Date.now() : 'finder.json?t=' + Date.now();
     var o = fresh ? { headers: { 'Accept': 'application/vnd.github.raw+json' }, cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer' } : { cache: 'no-store' };
     if (fresh && getTok()) o.headers.Authorization = 'Bearer ' + getTok();
-    return loadSkips().then(function () { return fetch(url, o); }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(render)
+    return Promise.all([loadSkips(), loadOpen()]).then(function () { return fetch(url, o); }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(render)
       .catch(function () { if (!fresh) render(null); });
   }
   function renderTok() {

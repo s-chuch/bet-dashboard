@@ -33,6 +33,21 @@ class T(unittest.TestCase):
         self.assertTrue(E.exposed({"full_name": "Atlanta Dream"}, {"full_name": "Chicago Sky"}, o))
         self.assertFalse(E.exposed({"full_name": "Kent State Golden Flashes"}, {"full_name": "Ohio Bobcats"}, o))
         self.assertFalse(E.exposed({"full_name": "Dream FC"}, {"full_name": "X"}, o) and False)
+    def test_played(self):
+        # what the Finder shows as "played": only open bets, with the side compared to the recommendation
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as f:
+            f.write("date,book,event,pick,stake,price,boosted_price,bet_id,result\n"
+                    "2026-10-30,DraftKings,Orlando Magic @ Toronto Raptors (NBA),Orlando Magic ML,0.30,+180,+270,83a79f48,open\n"
+                    "2026-10-30,Caesars,Kent State @ USF,Kent State ML,5.00,+120,,k1,lost\n")
+        ob = E.open_bets(f.name)
+        self.assertEqual([b["bet_id"] for b in ob], ["83a79f48"])        # the settled bet is not "played"
+        mag, ras = {"full_name": "Orlando Magic"}, {"full_name": "Toronto Raptors"}
+        self.assertEqual(len(E.played_on(mag, ras, ob)), 1)
+        self.assertEqual(E.played_on({"full_name": "Kent State Golden Flashes"}, {"full_name": "South Florida Bulls"}, ob), [])
+        self.assertTrue(E.same_pick("Orlando Magic to win", ob[0]))      # the side you took
+        self.assertFalse(E.same_pick("Toronto Raptors to win", ob[0]))   # the other side of the same game
+        self.assertTrue(E.same_pick("Over 5.5", {"pick": "Over 5.5 + Magic ML"}))
+        self.assertFalse(E.same_pick("", ob[0]))
     def test_wins_if(self):
         self.assertIn("45 or more", E.wins_if("ncaaf", "Total", "over", None, 44.5, False))
         self.assertIn("more than 1.5", E.wins_if("nhl", "Spread", "home", "Leafs", -1.5, False))

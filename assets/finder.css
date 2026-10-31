@@ -32,3 +32,6 @@
 .act .btn{white-space:normal}
 .act .a-log[data-armed="1"]{background:var(--win);color:#0b0d12}
 .pick.logged{border-color:var(--win)}.pick.skipping{opacity:.55}
+.pick.played{border-color:var(--win);opacity:.92}
+.pick.played p{margin:0 0 6px;font-size:13px;color:var(--mut)}
+.pick .tag.ok{display:inline-block;float:right;margin-left:8px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--win);border:1px solid var(--win);border-radius:999px;padding:2px 8px}
