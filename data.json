@@ -4847,9 +4847,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
-     "spread": 0.01,
+     "home": 0.398,
+     "away": 0.602,
+     "spread": 0.02,
      "t": "2026-10-31T01:49Z"
     }
    },
@@ -5653,9 +5653,9 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.395,
-     "away": 0.605,
-     "spread": 0.01,
+     "home": 0.398,
+     "away": 0.602,
+     "spread": 0.02,
      "t": "2026-10-31T01:49Z"
     }
    },
@@ -10429,11 +10429,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 179,
+    "n": 180,
     "w": 51,
     "l": 88,
     "p": 0,
-    "pending": 40,
+    "pending": 41,
     "win_pct": 36.7,
     "units": 12.94,
     "roi_pct": 11.2,
@@ -10520,11 +10520,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 66,
+     "n": 67,
      "w": 24,
      "l": 36,
      "p": 0,
-     "pending": 6,
+     "pending": 7,
      "win_pct": 40.0,
      "units": 10.61,
      "roi_pct": 17.7,
@@ -10657,11 +10657,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 43,
+     "n": 44,
      "w": 10,
      "l": 24,
      "p": 0,
-     "pending": 9,
+     "pending": 10,
      "win_pct": 29.4,
      "units": 7.78,
      "roi_pct": 22.9,
@@ -10794,11 +10794,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 80,
+     "n": 81,
      "w": 18,
      "l": 28,
      "p": 0,
-     "pending": 34,
+     "pending": 35,
      "win_pct": 39.1,
      "units": -10.0,
      "roi_pct": -25.0,
@@ -10827,6 +10827,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "1190faa1",
+    "rec_date": "2026-10-30",
+    "rec_time_et": "21:49",
+    "sport": "NCAAF",
+    "event": "Nevada Wolf Pack @ UCLA Bruins",
+    "market": "cash",
+    "selection": "Nevada Wolf Pack to win",
+    "book": "theScore",
+    "rec_price": "+1200",
+    "eff_price": "+1200",
+    "fair_pct": "8.98",
+    "ev_pct": "16.71",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "23159435",
     "rec_date": "2026-10-30",
@@ -15461,6 +15484,6 @@
   "FanDuel": 1.5,
   "PointsBet": 15.0
  },
- "hash": "aa556c7a895355150f5ef3fa26635689dba8d768",
- "generated_at": "2026-10-30T21:49:29-04:00"
+ "hash": "d0473d64fea8b3548c192fea2d4430dd9043137f",
+ "generated_at": "2026-10-30T21:49:53-04:00"
 }
