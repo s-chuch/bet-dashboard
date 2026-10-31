@@ -284,6 +284,31 @@
   }
 
   /* ---------- FanDuel ---------- */
+  // Parlay of totals on different games: each leg is 'Over 2.5 Goals -142' / 'OVER/UNDER 2.5 GOALS' / 'Udinese v Roma 1:00PM ET'.
+  // Written like the tracker's other multi-game parlays: 'Udinese vs Roma Over 2.5 (-142)'. OCR often loses the minus sign, so an unsigned price is left out rather than guessed.
+  function fdTotals(L) {
+    var legs = [], games = [], start = null, i, m, g, gm, price;
+    for (i = 0; i < L.length; i++) {
+      m = /^(Over|Under)\s+(\d+(?:\.\d+)?)\s+[A-Za-z]+\s*([+\-\u2212]?\d{2,4})?$/i.exec(clean(L[i]));
+      if (!m || !/^OVER\/UNDER\b/.test(L[i + 1] || '')) continue;
+      g = /^(.+?)\s+(@|v|vs)\s+(.+?)\s+(\d{1,2}:\d\d\s?[AP]M(?:\s?ET)?)$/i.exec(clean(L[i + 2] || ''));
+      if (!g) continue;
+      gm = g[2] === '@' ? teamFull(g[1]) + ' @ ' + teamFull(g[3]) : g[1] + ' vs ' + g[3];
+      price = m[3] && /^[+\-\u2212]/.test(m[3]) ? ' (' + m[3].replace('\u2212', '-') + ')' : '';
+      legs.push(gm + ' ' + m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() + ' ' + m[2] + price);
+      if (games.indexOf(gm) < 0) games.push(gm);
+      start = start || g[4];
+    }
+    return legs.length >= 2 && games.length >= 2 ? { legs: legs, event: legs.length + '-leg parlay: ' + games.join(' / '), start: start } : null;
+  }
+  function inferBoost(cands, d0) {   // a price on the slip + the real payout fit a boost of 5, 10 ... 100 %: take it only when it fits within 2.5 points
+    for (var i = 0; i < (cands || []).length; i++) {
+      var c = parseInt(cands[i], 10); if (!(Math.abs(c) >= 100)) continue;
+      var pm = c > 0 ? c / 100 : 100 / -c, pct = (d0 / pm - 1) * 100, k = Math.round(pct / 5) * 5;
+      if (k >= 5 && k <= 100 && Math.abs(pct - k) <= 2.5) return { pct: k, price: amer(pm) };
+    }
+    return null;
+  }
   function parseFanDuel(L, t) {
     var res = /^(WON|LOST)$/m.exec(t);
     var r = blank(/Bet Placed|bet has been placed/i.test(t) ? 'placed' : (res ? 'settled' : 'open'), 'FanDuel'), w = r.warnings;
@@ -303,12 +328,14 @@
     var hi = L.findIndex(function (x) { return /Parlay|Moneyline|Spread/i.test(x) && oddsIn(x).length; });
     var cands = hi >= 0 ? oddsIn(L[hi]) : [];
     var si = L.findIndex(function (x) { return /@|\sv\s/.test(x) && /\d{1,2}:\d\d\s?[AP]M/i.test(x); });
-    if (si >= 0) {
+    var mg = fdTotals(L);
+    if (mg) { r.event = mg.event; r.start_text = mg.start; }
+    else if (si >= 0) {
       var m = /^(.+?)\s+(@|v)\s+(.+?)\s+(\d{1,2}:\d\d\s?[AP]M(?:\s?ET)?)/i.exec(clean(L[si]));
       if (m) { r.event = m[2] === '@' ? teamFull(m[1]) + ' @ ' + teamFull(m[3]) : m[1] + ' vs ' + m[3]; /* FanDuel prints 'v', tracker uses 'vs' */ r.start_text = m[4]; }
     }
     var ctx = ctxOf(r.event), end = wi >= 0 ? wi : L.length, legs = [], i, d, sub, c;
-    for (i = 1; i < end; i++) {
+    for (i = 1; i < end && !mg; i++) {
       d = L[i].replace(/^.*?(?=[A-Z]{3,})/, '');
       if (!d || d !== d.toUpperCase() || !/MONEYLINE|SPREAD|POINTS|ASSISTS|REBOUNDS|SHOTS|YARDS|TOUCHDOWN|\bTD\b|GOALS?|RECEPTIONS|HITS|SAVES|STRIKEOUTS/.test(d)) continue;
       sub = cleanName(L[i - 1], t);
@@ -317,7 +344,8 @@
       else c = { t: 'player', sub: sub, stat: d };
       legs.push(makeLeg(c, c.t === 'player' ? numPlus(d) || d : sub, ctx, w));
     }
-    r.legs = legs;
+    r.legs = mg ? mg.legs : legs;
+    if (mg) legs = mg.legs;
     if (!legs.length) w.push('no legs recognised');
     var boost = /PROFIT BOOST/i.test(t), d0 = r.to_win != null ? r.to_win / r.stake : null;
     if (boost) r.boost_pct = ((/PROFIT BOOST\s*(\d{2,3})\s*%/i.exec(t)) || [])[1] * 1 || null;
@@ -325,7 +353,9 @@
       var p = pickOdds(cands, d0, r.stake, w);
       if (boost) {
         r.boosted_price = p;
-        if (r.boost_pct) r.price = amer(d0 / (1 + r.boost_pct / 100));
+        var inf = r.boost_pct ? null : inferBoost(cands, d0);   // OCR often drops the boost badge's %: the pre-boost price on the slip and the payout give it back
+        if (inf) { r.boost_pct = inf.pct; r.price = inf.price; w.push('boost ' + inf.pct + '% worked out from the pre-boost price ' + inf.price + ' and the payout; check it'); }
+        else if (r.boost_pct) r.price = amer(d0 / (1 + r.boost_pct / 100));
         else { r.price = null; w.push('profit boost % not readable; pre-boost price left blank'); }
       } else r.price = p;
     } else if (cands.length) w.push('odds on slip unverified: ' + cands.join(', '));
