@@ -2,6 +2,24 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "56be034c",
+   "book": "FanDuel",
+   "pick": "Rutgers Scarlet Knights ML",
+   "result": "lost",
+   "pnl": -0.3,
+   "final": "MICH 28-21 RUTG",
+   "at": "2026-10-31 16:00"
+  },
+  {
+   "bet_id": "fe92c542",
+   "book": "FanDuel",
+   "pick": "Syracuse Orange ML",
+   "result": "won",
+   "pnl": 1.55,
+   "final": "SMU 27-30 SYR",
+   "at": "2026-10-31 16:00"
+  },
+  {
    "bet_id": "a6e1ebb8",
    "book": "FanDuel",
    "pick": "Bowling Green Falcons ML",
@@ -207,26 +225,8 @@
    "pnl": -0.5,
    "final": "BKN 124-125 BOS",
    "at": "2026-10-27 22:31"
-  },
-  {
-   "bet_id": "ccb8d094",
-   "book": "bet365",
-   "pick": "Victor Wembanyama 20+ Points + De'Aaron Fox 5+ Assists + Victor Wembanyama 10+ Rebounds",
-   "result": "won",
-   "pnl": 0.4,
-   "final": "SAC 103-130 SA",
-   "at": "2026-10-27 22:25"
-  },
-  {
-   "bet_id": "20beee2f",
-   "book": "FanDuel",
-   "pick": "Philadelphia Flyers ML + Over 5.5 total goals + Philadelphia Flyers Over 3.5 team total (alt)",
-   "result": "lost",
-   "pnl": -0.5,
-   "final": "CBJ 4-3 PHI",
-   "at": "2026-10-27 21:40"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-31 15:34 ET"
+ "last_change_at": "2026-10-31 16:00 ET"
 }
