@@ -57,6 +57,17 @@ check('bet365 settled', B365_SETTLED, { kind: 'settled', result: 'won', returned
   price: '+110', boosted_price: '+143', stake: 0.2, to_win: 0.29, boost_pct: 30,
   pick: 'Beckett Sennecke 2+ SOG + Pavel Dorofeyev 2+ SOG + Cutter Gauthier 3+ SOG' });
 
+// FanDuel parlay of totals on four different games (real OCR; the minus signs on the first two prices were lost by OCR)
+var FD_MULTI = ['My Bets', 'Open Settled Saved', '4 leg parlay +626', '(®) PROFIT BOOST',
+  'Over 2.5 Goals Over/Under 2.5 Goals, Over 2.5 Goals Over/ A', 'Under 2.5 Goals, Over 3.5 Goals Over/Under 3.5 Goals, Over...',
+  'Over 2.5 Goals 142', 'OVER/UNDER 2.5 GOALS', 'Udinese v Roma 1:00PM ET', 'Over 2.5 Goals 116', 'OVER/UNDER 2.5 GOALS', 'Tottenham v Crystal Palace 1:30PM ET',
+  'Over 3.5 Goals -132', 'OVER/UNDER 3.5 GOALS', 'Bayern Munich v Dortmund 1:30PM ET', 'Over 2.5 Goals -118', 'OVER/UNDER 2.5 GOALS', 'AC Milan v Inter 3:45PM ET',
+  '$0.20 $2.08', 'TOTAL WAGER TOTAL PAYOUT', 'a & al Q', 'Home Rewards My Bets Casino All Sports'].join('\n');
+var fdm = check('fanduel multi-game totals', FD_MULTI, { kind: 'open', book: 'FanDuel', start_text: '1:00PM ET', stake: 0.2, to_win: 1.88, price: '+626', boosted_price: '+940', boost_pct: 50,
+  event: '4-leg parlay: Udinese vs Roma / Tottenham vs Crystal Palace / Bayern Munich vs Dortmund / AC Milan vs Inter',
+  pick: 'Udinese vs Roma Over 2.5 + Tottenham vs Crystal Palace Over 2.5 + Bayern Munich vs Dortmund Over 3.5 (-132) + AC Milan vs Inter Over 2.5 (-118)' });
+eq('fanduel multi: no leg could be unread', fdm.warnings.filter(function (x) { return /could not normalise/.test(x); }), []);
+eq('fanduel multi: four legs', fdm.legs.length, 4);
 var FD = [
   '2:03 4 al 5G EX)', 'My Bets', 'Open Settled Saved', '@ Substituted players determined by Opta x', 'Go to Opta',
   'ON ont @ Live Cash Out', 'Same Game Parlay" +424', '@ PROFIT BOOST',
@@ -67,6 +78,7 @@ var fd = check('fanduel', FD, { kind: 'open', book: 'FanDuel', event: 'Boston Ce
   pick: 'Celtics ML + Jayson Tatum 20+ pts + Cade Cunningham 15+ pts', stake: 0.5, to_win: 1.21 });
 eq('fanduel odds near +241', Math.abs(parseInt(fd.boosted_price, 10) - 241) <= 2, true); // wrong header (+424) rejected, derived from payout
 eq('fanduel price unknown -> null', fd.price, null);
+eq('fanduel same-game slip is not read as multi-game', /-leg parlay: /.test(fd.event || ''), false);
 
 var PB_RECEIPT = [
   '3:03 NX all 5G', '< BACK', 'Betslip ra', 'BET RECEIPTS', 'Bet Placed', 'Same Game Parlay +440', 'ISGP}', '% Legs +210',
