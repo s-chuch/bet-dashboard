@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-30T23:30Z"
+       "t": "2026-10-31T00:04Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-30T23:30Z"
+       "t": "2026-10-31T00:04Z"
       }
      },
      "pteam": "ATL",
@@ -2622,7 +2622,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-30T23:30Z"
+     "t": "2026-10-31T00:04Z"
     }
    },
    "sport": "NCAAF",
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-30T23:30Z"
+     "t": "2026-10-31T00:03Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-30T23:30Z"
+     "t": "2026-10-31T00:03Z"
     }
    },
    "sport": "NFL",
@@ -4090,11 +4090,11 @@
     "id": "401909281",
     "snapshot": {
      "date": "2026-10-30T23:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 165.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/30 - 7:30 PM EDT",
+     "detail": "2:45 - 1st",
      "teams": [
       {
        "id": "28",
@@ -4104,7 +4104,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "0"
+       "score": "16"
       },
       {
        "id": "19",
@@ -4114,7 +4114,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": false,
-       "score": "0"
+       "score": "20"
       }
      ]
     },
@@ -4847,10 +4847,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.5891,
+     "away": 0.4109,
      "spread": 0.01,
-     "t": "2026-10-30T23:30Z"
+     "t": "2026-10-31T00:03Z"
     }
    },
    "sport": "NBA",
@@ -4896,11 +4896,11 @@
     "id": "401909281",
     "snapshot": {
      "date": "2026-10-30T23:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 165.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/30 - 7:30 PM EDT",
+     "detail": "2:45 - 1st",
      "teams": [
       {
        "id": "28",
@@ -4910,7 +4910,7 @@
        "nick": "Raptors",
        "location": "Toronto",
        "home": true,
-       "score": "0"
+       "score": "16"
       },
       {
        "id": "19",
@@ -4920,7 +4920,7 @@
        "nick": "Magic",
        "location": "Orlando",
        "home": false,
-       "score": "0"
+       "score": "20"
       }
      ]
     },
@@ -5653,10 +5653,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.665,
-     "away": 0.335,
+     "home": 0.5891,
+     "away": 0.4109,
      "spread": 0.01,
-     "t": "2026-10-30T23:30Z"
+     "t": "2026-10-31T00:03Z"
     }
    },
    "sport": "NBA",
@@ -6438,10 +6438,10 @@
       },
       "kal": {
        "src": "Kalshi",
-       "home": 0.235,
-       "away": 0.765,
+       "home": 0.2374,
+       "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-30T23:30Z"
+       "t": "2026-10-31T00:04Z"
       }
      }
     },
@@ -13641,6 +13641,6 @@
   "FanDuel": 1.1,
   "PointsBet": 15.0
  },
- "hash": "a3e5b428a4ca104604cd856000395f927507a495",
- "generated_at": "2026-10-30T19:30:34-04:00"
+ "hash": "d700e598a7fb3093855bb20e609af4351e13c413",
+ "generated_at": "2026-10-30T20:04:10-04:00"
 }
