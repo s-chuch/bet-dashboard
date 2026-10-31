@@ -345,8 +345,8 @@
    "start_ts": "2026-10-31T17:30Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
+    "close_price": "+807",
+    "clv_pct": -22.86
    }
   },
   {
@@ -489,8 +489,8 @@
    "start_ts": "2026-10-31T17:30Z",
    "clv": {
     "placed_at": "2026-10-26 18:19",
-    "close_price": null,
-    "clv_pct": null
+    "close_price": "+811",
+    "clv_pct": -23.2
    }
   },
   {
@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T16:09Z"
+       "t": "2026-10-31T16:46Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T16:09Z"
+       "t": "2026-10-31T16:46Z"
       }
      },
      "pteam": "ATL",
@@ -2002,10 +2002,10 @@
     "snapshot": {
      "date": "2026-10-31T16:00Z",
      "period": 1,
-     "clock": 900.0,
+     "clock": 81.0,
      "state": "in",
      "completed": false,
-     "detail": "15:00 - 1st",
+     "detail": "1:21 - 1st",
      "teams": [
       {
        "id": "58",
@@ -2025,7 +2025,7 @@
        "nick": "Blazers",
        "location": "UAB",
        "home": false,
-       "score": "0"
+       "score": "10"
       }
      ]
     },
@@ -2619,10 +2619,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.705,
-     "away": 0.295,
+     "home": 0.5297,
+     "away": 0.4703,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NFL",
@@ -4829,7 +4829,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T16:09Z"
+       "t": "2026-10-31T16:46Z"
       }
      }
     },
@@ -5725,7 +5725,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -6612,7 +6612,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -6658,11 +6658,11 @@
     "id": "401858507",
     "snapshot": {
      "date": "2026-10-31T16:30Z",
-     "period": 0,
-     "clock": 0.0,
-     "state": "pre",
+     "period": 1,
+     "clock": 443.0,
+     "state": "in",
      "completed": false,
-     "detail": "10/31 - 12:30 PM EDT",
+     "detail": "7:23 - 1st",
      "teams": [
       {
        "id": "164",
@@ -7430,10 +7430,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.145,
-     "away": 0.855,
+     "home": 0.085,
+     "away": 0.915,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -8100,7 +8100,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -8987,7 +8987,7 @@
      "home": 0.915,
      "away": 0.085,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -9033,11 +9033,11 @@
     "id": "401866452",
     "snapshot": {
      "date": "2026-10-31T16:00Z",
-     "period": 1,
-     "clock": 652.0,
+     "period": 2,
+     "clock": 879.0,
      "state": "in",
      "completed": false,
-     "detail": "10:52 - 1st",
+     "detail": "14:39 - 2nd",
      "teams": [
       {
        "id": "2711",
@@ -9047,7 +9047,7 @@
        "nick": "Broncos",
        "location": "Western Michigan",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "189",
@@ -9057,7 +9057,7 @@
        "nick": "Falcons",
        "location": "Bowling Green",
        "home": false,
-       "score": "0"
+       "score": "7"
       }
      ]
     },
@@ -9651,10 +9651,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.791,
-     "away": 0.209,
+     "home": 0.8,
+     "away": 0.2,
      "spread": 0.04,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -10475,7 +10475,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -10522,10 +10522,10 @@
     "snapshot": {
      "date": "2026-10-31T16:00Z",
      "period": 1,
-     "clock": 753.0,
+     "clock": 0.0,
      "state": "in",
      "completed": false,
-     "detail": "12:33 - 1st",
+     "detail": "End of 1st",
      "teams": [
       {
        "id": "183",
@@ -10535,7 +10535,7 @@
        "nick": "Orange",
        "location": "Syracuse",
        "home": true,
-       "score": "0"
+       "score": "7"
       },
       {
        "id": "2567",
@@ -10545,7 +10545,7 @@
        "nick": "Mustangs",
        "location": "SMU",
        "home": false,
-       "score": "0"
+       "score": "10"
       }
      ]
     },
@@ -11150,10 +11150,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.3265,
-     "away": 0.6735,
-     "spread": 0.02,
-     "t": "2026-10-31T16:09Z"
+     "home": 0.265,
+     "away": 0.735,
+     "spread": 0.01,
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -11974,7 +11974,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -12791,7 +12791,7 @@
      "home": 0.265,
      "away": 0.735,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NBA",
@@ -13458,7 +13458,7 @@
      "home": 0.315,
      "away": 0.685,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NCAAF",
@@ -14169,7 +14169,7 @@
      "home": 0.705,
      "away": 0.295,
      "spread": 0.01,
-     "t": "2026-10-31T16:09Z"
+     "t": "2026-10-31T16:46Z"
     }
    },
    "sport": "NFL",
@@ -21218,6 +21218,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "7d37866ea2d29847ed51ef4a9828a734d5ab29bd",
- "generated_at": "2026-10-31T12:09:24-04:00"
+ "hash": "65981f4256c938d54dfdf0adcfc749aebc99ef70",
+ "generated_at": "2026-10-31T12:46:27-04:00"
 }
