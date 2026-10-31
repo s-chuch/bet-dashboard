@@ -1254,7 +1254,7 @@
        "home": 0.615,
        "away": 0.385,
        "spread": 0.01,
-       "t": "2026-10-31T03:51Z"
+       "t": "2026-10-31T04:51Z"
       }
      },
      "pteam": "BAL",
@@ -1949,7 +1949,7 @@
        "home": 0.555,
        "away": 0.445,
        "spread": 0.01,
-       "t": "2026-10-31T03:51Z"
+       "t": "2026-10-31T04:51Z"
       }
      },
      "pteam": "ATL",
@@ -2622,7 +2622,7 @@
      "home": 0.7376,
      "away": 0.2624,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -3333,7 +3333,7 @@
      "home": 0.745,
      "away": 0.255,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NFL",
@@ -4044,7 +4044,7 @@
      "home": 0.865,
      "away": 0.135,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NFL",
@@ -4829,7 +4829,7 @@
        "home": 0.2374,
        "away": 0.7626,
        "spread": 0.01,
-       "t": "2026-10-31T03:51Z"
+       "t": "2026-10-31T04:51Z"
       }
      }
     },
@@ -5725,7 +5725,7 @@
      "home": 0.935,
      "away": 0.065,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -6612,7 +6612,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -7433,7 +7433,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -8100,7 +8100,7 @@
      "home": 0.775,
      "away": 0.225,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -8987,7 +8987,7 @@
      "home": 0.925,
      "away": 0.075,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -9651,10 +9651,10 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.8267,
-     "away": 0.1733,
+     "home": 0.835,
+     "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -10475,7 +10475,7 @@
      "home": 0.145,
      "away": 0.855,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -11153,7 +11153,7 @@
      "home": 0.235,
      "away": 0.765,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -11974,7 +11974,7 @@
      "home": 0.835,
      "away": 0.165,
      "spread": 0.01,
-     "t": "2026-10-31T03:51Z"
+     "t": "2026-10-31T04:51Z"
     }
    },
    "sport": "NCAAF",
@@ -11991,337 +11991,65 @@
  ],
  "settled_recent": [
   {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 18:28",
-   "book": "bet365",
-   "event": "Crystal Palace v Newcastle",
-   "pick": "Harvey Barnes to score or assist + Over 1.5 + Nico Gonzalez 1+ fouls committed",
-   "result": "won",
-   "pnl": 0.9,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 18:28",
-   "book": "bet365",
-   "event": "Athletic Club v Getafe",
-   "pick": "Gorka Guruzeta 2+ shots + Maroan Sannadi 2+ shots + Inaki Williams 3+ shots",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 23:16",
-   "book": "Caesars",
-   "event": "Kansas City Chiefs @ Seattle Seahawks",
-   "pick": "Kansas City Chiefs",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-24 14:39",
-    "close_price": "+141",
-    "clv_pct": -6.08
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:37",
-   "book": "FanDuel",
-   "event": "Tampa Bay Rays @ Milwaukee Brewers",
-   "pick": "Chandler Simpson 1+ hits + Under 0.5 1st inning runs",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:29",
-   "book": "Caesars",
-   "event": "NBA multi",
-   "pick": "Jalen Johnson double double + Joel Embiid double double + Evan Mobley double double",
-   "result": "won",
-   "pnl": 2.04,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:28",
-   "book": "Caesars",
-   "event": "NHL multi",
-   "pick": "Connor McDavid anytime goal scorer + Kirill Kaprizov anytime goal scorer + David Pastrnak anytime goal scorer",
-   "result": "lost",
-   "pnl": -0.2,
-   "stake": 0.2,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:38",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:22",
-   "book": "bet365",
-   "event": "Columbus Crew v Toronto FC",
-   "pick": "Columbus Crew ML (3-way) + Over 1.5 + Josef Martinez 1+ Shots on Target",
-   "result": "won",
-   "pnl": 0.52,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:54",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:37",
-   "book": "FanDuel",
-   "event": "Edmonton Elks @ Saskatchewan Roughriders",
-   "pick": "Elks +15.5 + Over 37.5 + Roughriders ML",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:23",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 00:36",
-   "book": "FanDuel",
-   "event": "UFC multi",
-   "pick": "Aaron Pico ML + Petr Yan ML + Alexander Volkanovski ML",
-   "result": "won",
-   "pnl": 2.84,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:21",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "settled_at": "2026-10-25 18:31",
-   "book": "Caesars",
-   "event": "UFC multi",
-   "pick": "Alexander Volkov ML + Lone'er Kavanagh ML",
-   "result": "won",
-   "pnl": 1.32,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-24 14:38",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 18:31",
-   "book": "FanDuel",
-   "event": "NFL Week 7 multi",
-   "pick": "Tyler Shough 175+ pass yds + Daniel Jones 125+ pass yds + Brock Purdy 150+ pass yds + Deshaun Watson 150+ pass yds + Geno Smith 175+ pass yds + Baker Mayfield 150+ pass yds",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.0,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 00:24",
-   "book": "bet365",
-   "event": "Arsenal v Everton",
-   "pick": "Over 20.5 match shots + Over 5.5 shots on target + Over 23.5 free kicks",
-   "result": "won",
-   "pnl": 0.63,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 00:24",
-   "book": "bet365",
-   "event": "Alexander Volkanovski v Movsar Evloev",
-   "pick": "Volkanovski ML (3-way) + Volkanovski most strikes landed + Volkanovski most sig strikes landed",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 00:25",
-   "book": "bet365",
-   "event": "Winnipeg Blue Bombers @ BC Lions",
-   "pick": "Blue Bombers ML + BC Lions +24.5 + Over 46.5",
-   "result": "lost",
-   "pnl": -0.4,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 00:34",
-   "book": "DraftKings",
-   "event": "Montreal Alouettes @ Toronto Argonauts",
-   "pick": "Alouettes ML + Argonauts +14.5 alt spread + Under 50.5",
-   "result": "lost",
-   "pnl": -0.3,
-   "stake": 0.3,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "settled_at": "2026-10-25 00:27",
-   "book": "bet365",
-   "event": "Montreal Alouettes @ Toronto Argonauts",
-   "pick": "Over 36.5 + Argonauts +19.0 + Alouettes ML",
-   "result": "won",
-   "pnl": 0.75,
-   "stake": 0.4,
-   "auto": false,
-   "clv": {
-    "placed_at": "2026-10-23 18:24",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "settled_at": "2026-10-25 18:31",
-   "book": "Caesars",
-   "event": "Bengals @ Ravens / 49ers @ Falcons / Cowboys @ Eagles",
-   "pick": "Derrick Henry ATTD + Bijan Robinson ATTD + Javonte Williams ATTD",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": null,
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "settled_at": "2026-10-25 00:37",
-   "book": "Caesars",
-   "event": "NE Patriots @ CHI Bears / PIT Steelers @ NO Saints / TB Buccaneers @ CAR Panthers",
-   "pick": "D'Andre Swift ATTD + Jaylen Warren ATTD + Chuba Hubbard ATTD",
-   "result": "void",
-   "pnl": 0.0,
-   "stake": 0.5,
-   "auto": false,
-   "clv": {
-    "placed_at": null,
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "settled_at": "2026-10-25 16:22",
-   "book": "FanDuel",
-   "event": "New York Giants @ Houston Texans",
-   "pick": "New York Giants",
-   "result": "won",
-   "pnl": 3.7,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": null,
-    "close_price": "+365",
-    "clv_pct": 1.05
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "settled_at": "2026-10-25 11:52",
+   "date": "2026-10-25",
+   "settled_at": "2026-10-27 17:44",
    "book": "PointsBet",
-   "event": "Palermo v Carrarese",
-   "pick": "Carrarese",
+   "event": "Torino v Como",
+   "pick": "Draw",
    "result": "lost",
    "pnl": 0.0,
    "stake": 2.5,
    "auto": true,
    "clv": {
-    "placed_at": null,
-    "close_price": "+563",
-    "clv_pct": -1.99
+    "placed_at": "2026-10-25 19:36",
+    "close_price": "+302",
+    "clv_pct": -5.48
    }
   },
   {
-   "date": "2026-10-19",
-   "settled_at": "2026-10-25 18:31",
-   "book": "Caesars",
-   "event": "Miami Dolphins @ New York Jets",
-   "pick": "NY Jets U26.5 team pts + NY Jets ML + 1st TD in 1st quarter",
+   "date": "2026-10-25",
+   "settled_at": "2026-10-26 18:26",
+   "book": "PointsBet",
+   "event": "Detroit Pistons @ Philadelphia 76ers",
+   "pick": "Philadelphia 76ers",
    "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": false,
+   "pnl": 0.0,
+   "stake": 1.0,
+   "auto": true,
    "clv": {
-    "placed_at": null,
+    "placed_at": "2026-10-25 19:39",
+    "close_price": "+118",
+    "clv_pct": -6.11
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "settled_at": "2026-10-27 00:24",
+   "book": "FanDuel",
+   "event": "Detroit Red Wings @ Edmonton Oilers",
+   "pick": "Detroit Red Wings +1.5",
+   "result": "won",
+   "pnl": 0.35,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 16:08",
+    "close_price": null,
+    "clv_pct": null
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "settled_at": "2026-10-27 08:42",
+   "book": "PointsBet",
+   "event": "Dallas Cowboys @ Philadelphia Eagles",
+   "pick": "CeeDee Lamb 60+ rec yds + Devonta Smith 40+ rec yds + George Pickens 40+ rec yds",
+   "result": "void",
+   "pnl": 0.0,
+   "stake": 0.5,
+   "auto": true,
+   "clv": {
+    "placed_at": "2026-10-25 19:36",
     "close_price": null,
     "clv_pct": null
    }
@@ -13970,230 +13698,6 @@
    "auto": true,
    "clv": {
     "placed_at": "2026-10-26 07:57",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-26 18:26",
-   "book": "PointsBet",
-   "event": "Detroit Pistons @ Philadelphia 76ers",
-   "pick": "Philadelphia 76ers",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 1.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 19:39",
-    "close_price": "+118",
-    "clv_pct": -6.11
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-27 08:42",
-   "book": "PointsBet",
-   "event": "Dallas Cowboys @ Philadelphia Eagles",
-   "pick": "CeeDee Lamb 60+ rec yds + Devonta Smith 40+ rec yds + George Pickens 40+ rec yds",
-   "result": "void",
-   "pnl": 0.0,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 19:36",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-27 17:44",
-   "book": "PointsBet",
-   "event": "Torino v Como",
-   "pick": "Draw",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 2.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 19:36",
-    "close_price": "+302",
-    "clv_pct": -5.48
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 23:16",
-   "book": "FanDuel",
-   "event": "Kansas City Chiefs @ Seattle Seahawks",
-   "pick": "Kansas City Chiefs",
-   "result": "lost",
-   "pnl": 0.0,
-   "stake": 5.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 19:36",
-    "close_price": "+141",
-    "clv_pct": -2.75
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 23:16",
-   "book": "FanDuel",
-   "event": "Kansas City Chiefs @ Seattle Seahawks",
-   "pick": "Seahawks -2.5 + Seahawks 1H -0.5 + Seahawks Over 21.5 team total + Jaxon Smith-Njigba anytime TD",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 19:36",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-27 00:24",
-   "book": "FanDuel",
-   "event": "Detroit Red Wings @ Edmonton Oilers",
-   "pick": "Detroit Red Wings +1.5",
-   "result": "won",
-   "pnl": 0.35,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 16:08",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 18:01",
-   "book": "FanDuel",
-   "event": "Barcelona v Real Madrid",
-   "pick": "Barcelona ML (3-way) + Raphinha anytime goalscorer",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 10:56",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 15:49",
-   "book": "FanDuel",
-   "event": "Tampa Bay Buccaneers @ Carolina Panthers",
-   "pick": "Panthers ML + Bryce Young 175+ pass yds + Baker Mayfield 150+ pass yds + Tetairoa McMillan 25+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 10:58",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 19:37",
-   "book": "FanDuel",
-   "event": "Los Angeles Lakers @ Utah Jazz",
-   "pick": "Lakers ML + Luka Doncic 20+ Points + Lauri Markkanen 15+ Points + Austin Reaves 20+ Points",
-   "result": "won",
-   "pnl": 0.96,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 10:59",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 17:49",
-   "book": "FanDuel",
-   "event": "Florida Panthers @ Chicago Blackhawks",
-   "pick": "Panthers ML + Brady Tkachuk 2+ Shots on Goal + Connor Bedard 2+ Shots on Goal",
-   "result": "lost",
-   "pnl": -5.0,
-   "stake": 5.0,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 11:05",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 12:35",
-   "book": "FanDuel",
-   "event": "Pittsburgh Steelers @ New Orleans Saints",
-   "pick": "Steelers ML + Tyler Shough 225+ pass yds + DK Metcalf 60+ rec yds + Devaughn Vele 40+ rec yds",
-   "result": "lost",
-   "pnl": -0.5,
-   "stake": 0.5,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 11:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 12:35",
-   "book": "bet365",
-   "event": "Pittsburgh Steelers @ New Orleans Saints",
-   "pick": "Steelers ML + Aaron Rodgers 200+ Passing Yards + Tyler Shough 225+ Passing Yards",
-   "result": "won",
-   "pnl": 0.66,
-   "stake": 0.4,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 11:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 17:49",
-   "book": "bet365",
-   "event": "Florida Panthers @ Chicago Blackhawks",
-   "pick": "Matthew Tkachuk 1+ Points + Brady Tkachuk 1+ Points + Connor Bedard 1+ Points",
-   "result": "won",
-   "pnl": 0.8,
-   "stake": 0.4,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 11:44",
-    "close_price": null,
-    "clv_pct": null
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "settled_at": "2026-10-25 23:31",
-   "book": "bet365",
-   "event": "Memphis Grizzlies @ Sacramento Kings",
-   "pick": "Grizzlies ML + Ty Jerome 15+ Points + Zach LaVine 15+ Points",
-   "result": "won",
-   "pnl": 0.57,
-   "stake": 0.4,
-   "auto": true,
-   "clv": {
-    "placed_at": "2026-10-25 11:44",
     "close_price": null,
     "clv_pct": null
    }
@@ -19519,6 +19023,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "0264e0f3c6f7f6afcd3b4a8dc74b6bfe7e0c2d3d",
- "generated_at": "2026-10-30T23:51:27-04:00"
+ "hash": "731e28553fbccff58d4d42292743982588b12c2b",
+ "generated_at": "2026-10-31T00:51:36-04:00"
 }
