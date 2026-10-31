@@ -1,15 +1,5 @@
 {
- "needs_review": [
-  {
-   "bet_id": "1e699888",
-   "book": "Caesars",
-   "event": "Bayern Munich v Borussia Dortmund (German Bundesliga)",
-   "pick": "Borussia Dortmund",
-   "stake": "10.00 (bonus)",
-   "reason": "ESPN summary unavailable for soccer/all 401884754",
-   "legs": []
-  }
- ],
+ "needs_review": [],
  "last_settled": [
   {
    "bet_id": "41aadad4",
@@ -238,5 +228,5 @@
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-30 21:51 ET"
+ "last_change_at": "2026-10-30 21:52 ET"
 }
