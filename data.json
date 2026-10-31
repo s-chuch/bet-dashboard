@@ -4091,10 +4091,10 @@
     "snapshot": {
      "date": "2026-10-30T23:30Z",
      "period": 4,
-     "clock": 233.0,
+     "clock": 197.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 4th",
+     "detail": "3:17 - 4th",
      "teams": [
       {
        "id": "28",
@@ -4847,8 +4847,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.185,
-     "away": 0.815,
+     "home": 0.145,
+     "away": 0.855,
      "spread": 0.01,
      "t": "2026-10-31T01:56Z"
     }
@@ -4897,10 +4897,10 @@
     "snapshot": {
      "date": "2026-10-30T23:30Z",
      "period": 4,
-     "clock": 233.0,
+     "clock": 197.0,
      "state": "in",
      "completed": false,
-     "detail": "3:53 - 4th",
+     "detail": "3:17 - 4th",
      "teams": [
       {
        "id": "28",
@@ -5653,8 +5653,8 @@
     },
     "kal": {
      "src": "Kalshi",
-     "home": 0.185,
-     "away": 0.815,
+     "home": 0.145,
+     "away": 0.855,
      "spread": 0.01,
      "t": "2026-10-31T01:56Z"
     }
@@ -15791,11 +15791,11 @@
  "recs": {
   "stats": {
    "overall": {
-    "n": 189,
+    "n": 190,
     "w": 51,
     "l": 88,
     "p": 0,
-    "pending": 50,
+    "pending": 51,
     "win_pct": 36.7,
     "units": 12.94,
     "roi_pct": 11.2,
@@ -15882,11 +15882,11 @@
      "wins_with_fair": 0
     },
     "cash": {
-     "n": 76,
+     "n": 77,
      "w": 24,
      "l": 36,
      "p": 0,
-     "pending": 16,
+     "pending": 17,
      "win_pct": 40.0,
      "units": 10.61,
      "roi_pct": 17.7,
@@ -16019,11 +16019,11 @@
      "wins_with_fair": 8
     },
     "NCAAF": {
-     "n": 53,
+     "n": 54,
      "w": 10,
      "l": 24,
      "p": 0,
-     "pending": 19,
+     "pending": 20,
      "win_pct": 29.4,
      "units": 7.78,
      "roi_pct": 22.9,
@@ -16156,11 +16156,11 @@
      "wins_with_fair": 32
     },
     "no": {
-     "n": 83,
+     "n": 84,
      "w": 18,
      "l": 28,
      "p": 0,
-     "pending": 37,
+     "pending": 38,
      "win_pct": 39.1,
      "units": -10.0,
      "roi_pct": -25.0,
@@ -16189,6 +16189,29 @@
    "clv": "not available: no closing Pinnacle prices are stored"
   },
   "recent": [
+   {
+    "rec_id": "4cfc0dd5",
+    "rec_date": "2026-10-30",
+    "rec_time_et": "21:56",
+    "sport": "NCAAF",
+    "event": "Purdue Boilermakers @ Penn State Nittany Lions",
+    "market": "cash",
+    "selection": "Purdue Boilermakers to win",
+    "book": "bet365",
+    "rec_price": "+325",
+    "eff_price": "+325",
+    "fair_pct": "24.57",
+    "ev_pct": "4.42",
+    "stake": "",
+    "promo": "cash",
+    "friend": "no",
+    "placed": "no",
+    "result": "pending",
+    "final_score": "",
+    "source": "finder",
+    "notes": "SKIPPED in Bet Finder: odds wrong/moved",
+    "units": null
+   },
    {
     "rec_id": "66f88b8e",
     "rec_date": "2026-10-30",
@@ -21053,6 +21076,6 @@
   "FanDuel": 3.1,
   "PointsBet": 15.0
  },
- "hash": "228f46c99f7f4690d98f7a2ed47d973178dd0e62",
- "generated_at": "2026-10-30T21:56:17-04:00"
+ "hash": "e7430fa3866bb000771ad2e74bdbcd75faa97942",
+ "generated_at": "2026-10-30T21:56:42-04:00"
 }
