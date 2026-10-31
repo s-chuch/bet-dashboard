@@ -150,7 +150,12 @@
     ms = ms || (/\/models(\?|$)|auth\/key/.test(url) && !/:generateContent/.test(url) ? 20000 : 60000);   // listing calls are quick; reading a picture can take a while
     var c = typeof AbortController === 'function' ? new AbortController() : null, t = c ? setTimeout(function () { c.abort(); }, ms) : 0;
     if (c) opt = Object.assign({}, opt, { signal: c.signal });
-    return fetch(url, opt).then(function (r) { clearTimeout(t); return r; }, function (e) { clearTimeout(t); throw e && e.name === 'AbortError' ? new Error('no answer after ' + Math.round(ms / 1000) + 's') : e; });
+    var late = function (e) { clearTimeout(t); throw e && e.name === 'AbortError' ? new Error('no answer after ' + Math.round(ms / 1000) + 's') : e; };
+    return fetch(url, opt).then(function (r) {
+      // the deadline also covers reading the answer: some free models send the headers at once and then never finish the body
+      ['json', 'text'].forEach(function (m) { var f = r[m]; r[m] = function () { return f.call(r).then(function (v) { clearTimeout(t); return v; }, late); }; });
+      return r;
+    }, late);
   }
   function gerr(r, what) { return r.json().catch(function () { return {}; }).then(function (j) { throw new Error(what + ' (HTTP ' + r.status + (j.error && j.error.message ? ': ' + String(j.error.message).slice(0, 140) : '') + ')'); }); }
   function vtxProbe(key) {   // newer Google keys (AQ.…) work on the Vertex AI "express" endpoint instead of the Gemini Developer API
@@ -266,13 +271,15 @@
   function tryModels(models, b64, text, it, quick) {
     var chain = [];
     (models || []).forEach(function (m) { chain.push({ name: m, run: function () { return callModel(m, b64, text, it, quick); } }); });
-    var orMs = it._or || [];
+    var orMs = (it._or || []).slice(0, 3);   // the free models are slow and often busy: three tries are plenty
     orMs.forEach(function (m) { chain.push({ name: 'OpenRouter ' + m.replace(/:free$/, ''), run: function () { return callOr(m, it._small || b64, text, it); } }); });
-    var i = 0, last = null, errs = [];
+    var i = 0, last = null, errs = [], t00 = Date.now();
     function next() {
-      if (i >= chain.length) {
-        if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for the free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
-        if (last && errs.length > 1) last = new Error(errs.slice(0, 4).join(' | '));
+      var tooLong = i > 0 && Date.now() - t00 > 75000;   // one reading pass never runs longer than about two minutes
+      if (tooLong || i >= chain.length) {
+        if (tooLong) last = new Error('the AI readers did not answer in time' + (errs.length ? ' (' + errs.slice(0, 3).join(' | ') + ')' : ''));
+        else if (last && last.status === 429 && !it.waited) { it.waited = 1; it.msg = 'Waiting for the free-tier limit…'; renderQueue(); return new Promise(function (ok) { setTimeout(ok, 20000); }).then(function () { i = 0; return next(); }); }
+        if (!tooLong && last && errs.length > 1) last = new Error(errs.slice(0, 4).join(' | '));
         return Promise.reject(last || new Error('no reader available'));
       }
       var c = chain[i++]; it.msg = 'Reading with ' + c.name + '…'; renderQueue();
