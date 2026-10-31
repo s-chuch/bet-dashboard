@@ -2,6 +2,24 @@
  "needs_review": [],
  "last_settled": [
   {
+   "bet_id": "83a79f48",
+   "book": "DraftKings",
+   "pick": "Orlando Magic ML",
+   "result": "won",
+   "pnl": 0.81,
+   "final": "ORL 121-114 TOR",
+   "at": "2026-10-30 22:08"
+  },
+  {
+   "bet_id": "83a79f48-2",
+   "book": "DraftKings",
+   "pick": "Orlando Magic ML",
+   "result": "won",
+   "pnl": 0.7,
+   "final": "ORL 121-114 TOR",
+   "at": "2026-10-30 22:08"
+  },
+  {
    "bet_id": "41aadad4",
    "book": "Caesars",
    "pick": "Espanyol",
@@ -207,26 +225,8 @@
    "pnl": -0.4,
    "final": "MIL 10-1 TB",
    "at": "2026-10-27 08:38"
-  },
-  {
-   "bet_id": "0579a4e1",
-   "book": "FanDuel",
-   "pick": "Detroit Red Wings +1.5",
-   "result": "won",
-   "pnl": 0.35,
-   "final": "DET 4-3 EDM",
-   "at": "2026-10-27 00:24"
-  },
-  {
-   "bet_id": "628f8da7",
-   "book": "bet365",
-   "pick": "Saquon Barkley 60+ Rushing Yards + CeeDee Lamb 60+ Receiving Yards + CeeDee Lamb 6+ Receptions",
-   "result": "lost",
-   "pnl": -0.4,
-   "final": "DAL 38-21 PHI",
-   "at": "2026-10-26 23:19"
   }
  ],
  "errors": [],
- "last_change_at": "2026-10-30 21:52 ET"
+ "last_change_at": "2026-10-30 22:08 ET"
 }
