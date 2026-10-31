@@ -9,7 +9,7 @@ Rules:
   * Kill price = worst American price that still gives EV >= +2%.
   * bet365 picks must be +100 or longer (shorter prices are excluded).
   * Stake = 0.5% of that book's balance in data/balances.csv (read only).
-  * Games/teams with an open bet in data/bets.csv are excluded.
+  * Games/teams with an open bet in data/bets.csv are never recommended; a +EV price on one is listed under "played" with your bet.
 Output: finder.json (repo root, outside data/ so it does not trigger autorun).
 Usage: python3 scripts/ev_scan.py [--out finder.json] [--hours 36] [--leagues mlb,nfl,...]
 """
@@ -89,6 +89,18 @@ def open_events(path):
     except FileNotFoundError: pass
     return ev
 
+def open_bets(path):
+    """Open bets as dicts, to show what was already played (open_events() is the same list as search text only)."""
+    out = []
+    try:
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r.get("result") or "").strip().lower() in ("", "open"):
+                    out.append({k: (r.get(k) or "") for k in ("bet_id", "book", "pick", "event", "stake", "price", "boosted_price", "date")})
+                    out[-1]["text"] = (out[-1]["event"] + " " + out[-1]["pick"]).lower()
+    except FileNotFoundError: pass
+    return out
+
 GENERIC = {"fc", "cf", "sc", "united", "city", "state", "team", "club", "real", "sporting", "athletic", "the"}
 def team_keys(team):
     keys = set()
@@ -99,6 +111,15 @@ def team_keys(team):
 def exposed(home, away, opens):
     keys = team_keys(home) | team_keys(away)
     return any(re.search(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", e) for k in keys for e in opens)
+
+def played_on(home, away, bets):
+    """The open bets that touch this game (same test as exposed())."""
+    keys = team_keys(home) | team_keys(away)
+    return [b for b in bets if any(re.search(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", b["text"]) for k in keys)]
+def same_pick(selection, bet):
+    """True when the bet is on the side the Finder recommends (its team, or its Over/Under text, appears in the bet's pick)."""
+    sel = re.sub(r" to win$", "", selection or "").strip().lower(); pick = (bet.get("pick") or "").lower()
+    return bool(sel) and re.search(r"(?<![a-z0-9])" + re.escape(sel) + r"(?![a-z0-9])", pick) is not None
 
 # ---------- feeds ----------
 def get(url, headers=None):
@@ -249,7 +270,8 @@ def skipped_today(root, now):
 def scan(leagues, hours, root=ROOT):
     now = dt.datetime.now(ET); until = now + dt.timedelta(hours=hours)
     bal = balances(os.path.join(root, "data", "balances.csv"))
-    opens = open_events(os.path.join(root, "data", "bets.csv"))
+    obets = open_bets(os.path.join(root, "data", "bets.csv"))
+    played_rows = []   # recommendations on games you already have a bet on: shown as played, never recommended
     dates, d = [], now
     while d.date() <= until.date(): dates.append(d.strftime("%Y%m%d")); d += dt.timedelta(days=1)
     notes, rows, counts, errors = [], [], {}, []
@@ -271,10 +293,19 @@ def scan(leagues, hours, root=ROOT):
                 seen.add(g["id"]); t = parse_t(g["start"]).astimezone(ET)
                 if not (now < t <= until): continue
                 st["games"] += 1
-                if exposed(g["home"], g["away"], opens):
-                    st["exposed"] += 1; notes.append(f'{lg}: skipped {g["away"]["full_name"]} @ {g["home"]["full_name"]} (you already have a bet on it)'); continue
+                mine = played_on(g["home"], g["away"], obets)
+                if mine:
+                    st["exposed"] += 1; notes.append(f'{lg}: {g["away"]["full_name"]} @ {g["home"]["full_name"]}: you already have a bet on it')
                 p, s = match(g, pins)
-                if not p: st["unmatched"] += 1; continue
+                if not p:
+                    if not mine: st["unmatched"] += 1
+                    continue
+                if mine:
+                    for x in evaluate(lg, g, p, dict(st), bal):   # a copy: these prices are not part of the scan counts
+                        if x["class"] == "BET":
+                            x["played"] = [{**{k: b[k] for k in ("bet_id", "book", "pick", "stake", "price", "boosted_price", "date")}, "same_pick": same_pick(x["selection"], b)} for b in mine]
+                            played_rows.append(x)
+                    continue
                 r = evaluate(lg, g, p, st, bal); st["prices"] += len(r); rows += r
         counts[lg] = st
     skips = skipped_today(root, now)
@@ -282,6 +313,11 @@ def scan(leagues, hours, root=ROOT):
     if skips: notes.append(f"{sum(r['key'] in skips for r in rows)} price(s) hidden: you skipped them in Bet Finder today")
     rows = [r for r in rows if r["key"] not in skips]
     rows.sort(key=lambda r: -r["ev_pct"])
+    played, seen_pl = [], set()
+    for r in sorted(played_rows, key=lambda r: -r["ev_pct"]):
+        r["key"] = pick_key(r); k = (r["event"], r["market"], r["selection"])
+        if k not in seen_pl: seen_pl.add(k); played.append(r)
+    played = played[:15]
     bonus, seen_b = [], set()
     for r in sorted(rows, key=lambda r: -bonus_return(r["fair_pct"] / 100, r["odds"])):
         if not (BONUS_MIN <= r["odds"] <= BONUS_MAX): continue
@@ -308,8 +344,8 @@ def scan(leagues, hours, root=ROOT):
                       "boost_rule": {"preferred": "straight or 2-leg, unboosted price +100 to +299", "flagged": "plain cash favourites and 3-leg SGPs unless the promo requires 3 legs (bet365 boosts, FanDuel NBA/NHL boosts)",
                                      "flagged_min_ev_pct": BR.FLAG_MIN_EV, "action": "flag/warn only, never blocks"}},
             "balances": {b: bal.get(b) for b in BOOKS.values()}, "counts": counts,
-            "totals": {"prices": len(rows), "bet": len(bets), "skip": sum(r["class"] == "SKIP" for r in rows), "no": sum(r["class"] == "NO" for r in rows)},
-            "bets": bets, "near_misses": near, "bonus": bonus, "boost_pool": boost_pool, "notes": notes, "errors": errors}
+            "totals": {"prices": len(rows), "played": len(played), "bet": len(bets), "skip": sum(r["class"] == "SKIP" for r in rows), "no": sum(r["class"] == "NO" for r in rows)},
+            "bets": bets, "played": played, "near_misses": near, "bonus": bonus, "boost_pool": boost_pool, "notes": notes, "errors": errors}
 
 def main():
     ap = argparse.ArgumentParser()

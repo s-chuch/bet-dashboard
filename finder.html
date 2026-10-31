@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://jzlfbpxcqerwtiurzsmu.supabase.co 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
 <title>Bet Finder · Bet Tracker</title>
 <link rel="stylesheet" href="assets/site.css?v=20261030-1">
-<link rel="stylesheet" href="assets/finder.css?v=20261022-1915">
+<link rel="stylesheet" href="assets/finder.css?v=20261031-1">
 </head>
 <body>
 <nav class="site-nav" aria-label="Primary"><div class="in"><span class="brand">Bet Tracker</span><div class="links"><a href="index.html">Live</a><a href="stats.html">Stats</a><a href="log.html">Logs</a><a href="upload.html">Upload</a><a href="finder.html" aria-current="page">Bet Finder</a><a href="settings.html">Settings</a></div></div></nav>
@@ -25,6 +25,8 @@
   <p class="warn small">Prices change fast. Check the price in the app before placing. Hard Rock, Caesars and PointsBet aren't in the free odds feed, so they aren't scanned.</p>
   <h2 class="sec-title">Bets (+2% EV or more)</h2>
   <div id="bets"></div>
+  <h2 class="sec-title">Already played</h2>
+  <div id="played"></div>
   <h2 class="sec-title">Near misses (0 to 1.9%, skip)</h2>
   <div id="near"></div>
   <h2 class="sec-title">Bonus bet (+300 to +500)</h2>
@@ -40,6 +42,6 @@
   <h2 class="sec-title">Scan details</h2>
   <div id="details" class="panel small muted"></div>
 </main>
-<script src="assets/vendor/supabase/supabase.js"></script><script src="assets/db.js?v=4"></script><script src="assets/outbox.js?v=2"></script><script src="assets/finder.js?v=20261023-1"></script>
+<script src="assets/vendor/supabase/supabase.js"></script><script src="assets/db.js?v=4"></script><script src="assets/outbox.js?v=2"></script><script src="assets/finder.js?v=20261031-1"></script>
 </body>
 </html>
